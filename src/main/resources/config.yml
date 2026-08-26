@@ -44,7 +44,14 @@ commands:
   #
   # These are the names that usually carry a password or a private message.
   # Add your own if a plugin on your server owns something similar.
+  #
+  # The plugin's own command and its alias are always protected, whether or
+  # not they appear here, because they are not a matter of preference: a
+  # script answering /acraft could lie about what is loaded and what is
+  # trusted. They are listed anyway so the list reads as the whole set.
   protected:
+    - acraft
+    - ac
     - login
     - l
     - register

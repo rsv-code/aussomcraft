@@ -157,6 +157,16 @@ public class AussomCraftPlugin extends JavaPlugin implements ScriptLoader.Module
         for (String c : this.getConfig().getStringList("commands.protected")) {
             this.protectedCommands.add(c.trim().toLowerCase(Locale.ROOT));
         }
+
+        // This plugin's own command and its alias are protected whatever the
+        // config says. Which names a server wants to reserve is a matter of
+        // preference; these two are not. A script answering /acraft could
+        // report a tier it does not have and a trust store that is not
+        // there, which is the one lie this plugin cannot afford. Adding them
+        // here rather than relying on the file also covers every install
+        // whose config.yml was written before they were listed in it.
+        this.protectedCommands.add("acraft");
+        this.protectedCommands.add("ac");
         Path scriptDir = new File(this.getDataFolder(), SCRIPT_DIR).toPath();
         this.loader = new ScriptLoader(scriptDir, this.trust, this, this.getLogger(),
             this.watchdog, loadBudget);

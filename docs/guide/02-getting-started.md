@@ -4,11 +4,11 @@ This page gets you from nothing to a working script. Read it in order.
 
 ## 1. Install the plugin
 
-Put `AussomCraft-0.1.0.jar` into your server's `plugins` folder and start the
+Put `AussomCraft-0.1.1.jar` into your server's `plugins` folder and start the
 server. You should see a line like this in the console:
 
 ```
-[AussomCraft] Enabling AussomCraft v0.1.0
+[AussomCraft] Enabling AussomCraft v0.1.1
 ```
 
 The plugin makes a folder for itself the first time it runs:
@@ -261,7 +261,8 @@ console prints the line number. Look at that line and the one above it.
 
 ## 10. Commands you will use
 
-Type these in the console without a slash, or in chat with one.
+Type these in the console without a slash, or in chat with one. `ac` is a
+shorter way to write `acraft`, so `ac list` and `acraft list` are the same.
 
 | Command | What it does |
 | --- | --- |

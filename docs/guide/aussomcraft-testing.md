@@ -27,7 +27,7 @@ Layers 1 and 2 are `mvn test`. Layer 3 is a server you start by hand.
     src/main/java ......... the plugin
     src/test/java ......... layers 1 and 2          mvn test
     examples/*.aus ........ the scripts under test
-    target/AussomCraft-0.1.0.jar
+    target/AussomCraft-0.1.1.jar
          |
          | copy
          v
@@ -35,7 +35,7 @@ Layers 1 and 2 are `mvn test`. Layer 3 is a server you start by hand.
       paper.jar ........... Paper 26.2, needs JDK 25
       eula.txt
       plugins/
-        AussomCraft-0.1.0.jar
+        AussomCraft-0.1.1.jar
         AussomCraft/
           scripts/*.aus ... copied from examples/
           trust.yml ....... grants, written by /acraft trust
@@ -126,7 +126,7 @@ Local testing only. Never on a public server.
 
 ```bash
 cd ~/git/github/aussomcraft
-cp target/AussomCraft-0.1.0.jar testserver/plugins/
+cp target/AussomCraft-0.1.1.jar testserver/plugins/
 mkdir -p testserver/plugins/AussomCraft/scripts
 cp examples/*.aus testserver/plugins/AussomCraft/scripts/
 ```

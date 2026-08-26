@@ -16,25 +16,6 @@ Apache 2.0. See [License](#license).
 - Paper 26.2
 - Java 25, which Paper 26.2 requires
 
-## Build
-
-```bash
-mvn package
-```
-
-Expect around two minutes. The generated Paper API is 3,346 classes and
-about 3.1 million lines, which is what makes each tier a separate compiled
-API rather than a runtime check.
-
-Your `mvn` must run on JDK 25, or you will get `release version 25 not
-supported`:
-
-```bash
-JAVA_HOME=/path/to/jdk-25 mvn package
-```
-
-The jar lands at `target/AussomCraft-<version>.jar`. Drop it in `plugins/`.
-
 ## Guide
 
 New to this? Start with the [guide](docs/guide/), written for people who have
@@ -127,6 +108,8 @@ script does not change what it may do, and **editing one revokes its grant**.
 
 ## Commands
 
+`/ac` is a shorter alias for `/acraft`. Both names do the same thing.
+
 | Command | What it does |
 | --- | --- |
 | `/acraft reload` | reload every script |
@@ -204,6 +187,25 @@ aussom gendoc.aus
 That opens a window where you pick the tiers and the worker count. It
 clears and rebuilds `docs/host` and `docs/paper` only, so anything else
 under `docs/`, the guide included, is left alone.
+
+## Build
+
+```bash
+mvn package
+```
+
+Expect around two minutes. The generated Paper API is 3,346 classes and
+about 3.1 million lines, which is what makes each tier a separate compiled
+API rather than a runtime check.
+
+Your `mvn` must run on JDK 25, or you will get `release version 25 not
+supported`:
+
+```bash
+JAVA_HOME=/path/to/jdk-25 mvn package
+```
+
+The jar lands at `target/AussomCraft-<version>.jar`. Drop it in `plugins/`.
 
 ## Tests
 

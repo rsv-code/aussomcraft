@@ -9,7 +9,13 @@ website: https://github.com/rsv-code/aussomcraft
 commands:
   acraft:
     description: Manage AussomCraft scripts.
-    usage: /acraft <reload|list|trust|untrust|run>
+    usage: /acraft <reload|load|unload|list|trust|untrust>
+    # A shorter name to type. An alias is additive: acraft keeps working
+    # whatever happens to this one. If another plugin has already claimed
+    # 'ac', Bukkit gives the bare label to whoever registered first and
+    # this becomes /aussomcraft:ac, which costs the shortcut and nothing
+    # else.
+    aliases: [ac]
 
 permissions:
   aussomcraft.admin:

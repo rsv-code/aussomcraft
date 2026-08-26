@@ -36,6 +36,8 @@ import java.util.logging.LogRecord;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.provider.ValueSource;
+import org.junit.jupiter.params.ParameterizedTest;
 
 import org.mockbukkit.mockbukkit.MockBukkit;
 import org.mockbukkit.mockbukkit.ServerMock;
@@ -437,6 +439,58 @@ public class PluginIntegrationTest {
             "naming the file should load it");
         assertSame(before, this.plugin.getScripts().get("already.aus"),
             "loading one script must not disturb the others");
+    }
+
+    /**
+     * The short alias works and is the same command.
+     *
+     * An alias is additive, so this asserts both names, not just the new
+     * one: losing 'acraft' to a typo in plugin.yml would be worse than
+     * never having had the alias.
+     */
+    @Test
+    public void theShortAliasRunsTheSameCommand() throws Exception {
+        loadOnly("aliased.aus",
+            "class Main { public main() { return 0; } }\n");
+        this.plugin.unloadScript("aliased.aus");
+        assertNull(this.plugin.getScripts().get("aliased.aus"));
+
+        this.server.dispatchCommand(this.server.getConsoleSender(), "ac load aliased.aus");
+        assertNotNull(this.plugin.getScripts().get("aliased.aus"),
+            "/ac must reach the same handler as /acraft");
+
+        this.plugin.unloadScript("aliased.aus");
+        this.server.dispatchCommand(this.server.getConsoleSender(), "acraft load aliased.aus");
+        assertNotNull(this.plugin.getScripts().get("aliased.aus"),
+            "the long name must keep working; the alias is additive");
+    }
+
+    /**
+     * A script cannot register the plugin's own command or its alias.
+     *
+     * Bukkit would push the script to script:acraft anyway, since the plugin
+     * claims its names at enable and scripts load a tick later. The refusal
+     * is here so it is stated rather than incidental: a script answering
+     * /acraft could report a tier it does not have. Protected in code and
+     * not only in config.yml, because an install whose config was written
+     * before these were listed would otherwise be relying on load order.
+     */
+    @ParameterizedTest
+    @ValueSource(strings = { "acraft", "ac" })
+    public void aScriptCannotRegisterTheAdminCommand(String Name) throws Exception {
+        ScriptContext ctx = loadOnly("squat.aus",
+            "class Main {\n"
+          + "  public main() { store.set(\"ok\", cmd.register(\"" + Name + "\", ::go)); }\n"
+          + "  public go(Sender, Args) { store.set(\"ran\", true); }\n"
+          + "}\n");
+        assertNotNull(ctx, "the script itself should still load");
+        assertNull(ctx.getStore().get("ok"),
+            "cmd.register('" + Name + "') must fail rather than return a result");
+
+        // The admin command still answers, and answers to the plugin.
+        this.server.dispatchCommand(this.server.getConsoleSender(), Name + " list");
+        assertNull(ctx.getStore().get("ran"),
+            "/" + Name + " must not reach the script");
     }
 
     /** A failed reload leaves nothing running rather than the old version. */
