@@ -1,0 +1,25 @@
+name: AussomCraft
+version: '${project.version}'
+main: com.lehman.aussomcraft.AussomCraftPlugin
+api-version: '1.21'
+description: Write Paper server logic in the Aussom scripting language.
+author: Austin Lehman
+website: https://github.com/rsv-code/aussomcraft
+
+commands:
+  acraft:
+    description: Manage AussomCraft scripts.
+    usage: /acraft <reload|list|trust|untrust|run>
+
+permissions:
+  aussomcraft.admin:
+    description: Reload and list scripts.
+    default: op
+  aussomcraft.trust:
+    description: Grant a script the trusted tier, which gives it the Paper API.
+    default: op
+  aussomcraft.dangerous:
+    description: >
+      Grant a script the dangerous tier. A script there has full Java access
+      and can take over or take down the server.
+    default: op

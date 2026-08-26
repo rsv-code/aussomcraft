@@ -1,0 +1,46 @@
+/*
+ * Something Skript cannot reach.
+ *
+ * This script needs the dangerous profile, because it calls the Paper API
+ * directly through AJI, and AJI exists only at that tier. Grant it with:
+ *
+ *     /acraft trust 06-trusted-worldinfo.aus dangerous
+ *     /acraft reload
+ *
+ * Without the tier argument the grant is trusted, and a trusted engine has
+ * no aji module, so the script will not load.
+ *
+ * Editing this file revokes that grant.
+ */
+
+include aji;
+
+/**
+ * This class reports live world state read straight off the Bukkit API.
+ */
+class Main {
+    /**
+     * Registers the command.
+     */
+    public main() {
+        cmd.register("worldinfo", ::onWorldInfo);
+    }
+
+    /**
+     * Reports each world's name, time, and player count. None of these are
+     * exposed by the host externs, so this only works at the dangerous tier.
+     * @p Sender is the Player who ran the command.
+     * @p Args is a list of strings with what they typed.
+     */
+    public onWorldInfo(Sender, Args) {
+        if (Sender == null) {
+            return;
+        }
+        worlds = aji.invokeStatic("org.bukkit.Bukkit", "getWorlds");
+        for (w : worlds) {
+            Sender.sendMessage(w.invoke("getName")
+                + " time=" + w.invoke("getTime").toString()
+                + " players=" + w.invoke("getPlayers").size().toString());
+        }
+    }
+}

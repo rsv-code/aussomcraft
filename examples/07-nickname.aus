@@ -1,0 +1,72 @@
+/*
+ * A command that takes an argument.
+ *
+ * Runs untrusted. Try /nick Bob, then /nick on its own, then /nick clear.
+ */
+
+/**
+ * This class lets a player set a nickname and remembers it.
+ */
+class Main {
+    /**
+     * Registers the command and the join handler.
+     */
+    public main() {
+        cmd.register("nick", ::onNick);
+        events.on("PlayerJoinEvent", ::onJoin);
+    }
+
+    /**
+     * Sets, shows, or clears the sender's nickname.
+     *
+     * Args holds what the sender typed after the command, split on spaces,
+     * so /nick Sir Robin gives a list of two strings. Nothing checks how
+     * many there are for you, so reading Args[0] without asking whether
+     * Args has anything in it fails at run time and the command appears to
+     * do nothing.
+     *
+     * @p Sender is the Player who ran the command.
+     * @p Args is a list of strings with what they typed after the command.
+     */
+    public onNick(Sender, Args) {
+        if (Sender == null) {
+            return;
+        }
+        name = Sender.getName();
+
+        if (#Args == 0) {
+            held = store.get(name);
+            if (held == null) {
+                Sender.sendMessage("You have no nickname. Set one with /nick <name>.");
+            } else {
+                Sender.sendMessage("Your nickname is " + held + ".");
+            }
+            return;
+        }
+
+        if (Args[0] == "clear") {
+            store.remove(name);
+            Sender.sendMessage("Nickname cleared.");
+            return;
+        }
+
+        // Joined rather than taking Args[0] alone, so a nickname of more
+        // than one word is kept whole.
+        nick = Args.join(" ");
+        store.set(name, nick);
+        Sender.sendMessage("Your nickname is now " + nick + ".");
+    }
+
+    /**
+     * Greets a returning player by nickname, when they have set one.
+     *
+     * @p Evt is the PlayerJoinEvent.
+     */
+    public onJoin(Evt) {
+        name = Evt.getPlayer().getName();
+        held = store.get(name);
+        if (held != null) {
+            server.tell(name, "Welcome back, " + held + ".");
+        }
+    }
+}

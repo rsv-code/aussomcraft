@@ -1,0 +1,13 @@
+AussomCraft
+Copyright 2026 Austin Lehman
+
+This product is licensed under the Apache License, Version 2.0. See the
+LICENSE file for the full terms.
+
+The AussomCraft name and the artwork in the branding directory are
+trademarks of Austin Lehman. They are not licensed under the Apache
+License. See branding/README.md.
+
+This product bundles the third-party software listed in THIRD-PARTY.md.
+The notices required by those licenses are reproduced there and in
+META-INF/NOTICE inside the distributed jar.

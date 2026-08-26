@@ -1,0 +1,32 @@
+/*
+ * A block break handler.
+ *
+ * Runs untrusted. This one fires often, so it is a good place to see that
+ * a per-event handler keeps up.
+ */
+
+/**
+ * This class warns players who break a block worth protecting.
+ */
+class Main {
+    /** Block types worth saying something about. */
+    public watched = ["DIAMOND_ORE", "ANCIENT_DEBRIS", "BEACON", "DIRT"];
+
+    /**
+     * Registers the handler.
+     */
+    public main() {
+        events.on("BlockBreakEvent", ::onBreak);
+    }
+
+    /**
+     * Tells a player when they break something on the watch list.
+     * @p Evt is the BlockBreakEvent.
+     */
+    public onBreak(Evt) {
+        kind = Evt.getBlock().getType();
+        if (this.watched.contains(kind)) {
+            server.tell(Evt.getPlayer().getName(), "You broke " + kind + ".");
+        }
+    }
+}

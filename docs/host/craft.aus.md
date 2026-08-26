@@ -1,0 +1,187 @@
+# file: craft.aus
+
+## class: server
+
+[141:21] `static` (extern: com.lehman.aussomcraft.host.HostServer) **extends: object** 
+
+This static class reaches the server itself. It is deliberately small: in
+the untrusted profile it is the only way to reach the server at all, so
+everything on it is something an untrusted script is allowed to do.
+
+#### Methods
+
+- **broadcast** (`string Message`)
+
+	> Sends a message to every player on the server.
+
+	- **@p** `Message` is a string with the message to send.
+	- **@r** `A` bool with true on success.
+
+
+- **tell** (`string Name, string Message`)
+
+	> Sends a message to one player.
+
+	- **@p** `Name` is a string with the player name.
+	- **@p** `Message` is a string with the message to send.
+	- **@r** `A` bool with true when the player was online.
+
+
+- **getPlayer** (`string Name`)
+
+	> Looks up a player who is online. In the untrusted profile this is a map with name, uuid, world, x, y and z. In the trusted profile it is the Java Player object, which you can call with invoke().
+
+	- **@p** `Name` is a string with the player name.
+	- **@r** `The` player, or null when nobody by that name is online.
+
+
+- **getPlayers** ()
+
+	> Gets every player who is online.
+
+	- **@r** `A` list of players, in the same form getPlayer returns.
+
+
+- **scriptName** ()
+
+	> Gets the file name of the running script.
+
+	- **@r** `A` string with the script file name.
+
+
+
+
+## class: events
+
+[23:21] `static` (extern: com.lehman.aussomcraft.host.HostEvents) **extends: object** 
+
+This static class registers handlers for Minecraft server events. The
+event name may be a simple class name such as "PlayerJoinEvent", which is
+looked up in the usual Bukkit event packages, or a fully qualified name.
+A name that does not resolve to a Bukkit event is refused.
+
+#### Methods
+
+- **on** (`string EventName, callback ToCall, bool SeeCancelled = false`)
+
+	> Registers a callback to run when the named event fires. The callback is passed the event itself, as the generated shim for its type, so PlayerJoinEvent arrives as a PlayerJoinEvent and its methods are called directly: public onJoin(Evt) { server.broadcast(Evt.getPlayer().getName() + " joined."); } Which methods an event has depends on the tier the script runs at. The shape never changes between tiers, only the method list grows, so a script written untrusted keeps working when it is trusted. See the generated documentation for an event to find its methods.
+
+	- **@p** `EventName` is a string with the Bukkit event class name.
+	- **@p** `ToCall` is a callback to run when the event fires.
+	- **@p** `SeeCancelled` is an optional bool. Pass true to be called even for events another plugin has already cancelled. Defaults to false.
+	- **@r** `A` bool with true on success, or throws on a bad event name.
+
+
+
+
+## class: store
+
+[99:21] `static` (extern: com.lehman.aussomcraft.host.HostStore) **extends: object** 
+
+This static class holds values that survive a restart. The store belongs
+to one script and is keyed by that script's file name. Only strings,
+numbers, bools, lists and maps can be stored, because those are the
+values that can be written out and read back.
+
+#### Methods
+
+- **get** (`string Key`)
+
+	> Reads a stored value.
+
+	- **@p** `Key` is a string with the key to read.
+	- **@r** `The` stored value, or null when the key is not set.
+
+
+- **set** (`string Key, Value`)
+
+	> Writes a value. Setting a key to null removes it.
+
+	- **@p** `Key` is a string with the key to write.
+	- **@p** `Value` is the value to store.
+	- **@r** `A` bool with true on success.
+
+
+- **remove** (`string Key`)
+
+	> Removes a key.
+
+	- **@p** `Key` is a string with the key to remove.
+	- **@r** `A` bool with true when the key was set.
+
+
+- **has** (`string Key`)
+
+	> Checks whether a key is set.
+
+	- **@p** `Key` is a string with the key to check.
+	- **@r** `A` bool with true when the key is set.
+
+
+- **keys** ()
+
+	> Gets every key currently stored.
+
+	- **@r** `A` list of strings with the keys.
+
+
+
+
+## class: sched
+
+[68:21] `static` (extern: com.lehman.aussomcraft.host.HostScheduler) **extends: object** 
+
+This static class schedules work on the main server thread. One tick is
+one twentieth of a second, so twenty ticks is a second.
+
+#### Methods
+
+- **later** (`int Ticks, callback ToCall`)
+
+	> Runs a callback once, after a delay.
+
+	- **@p** `Ticks` is an int with how long to wait.
+	- **@p** `ToCall` is a callback to run.
+	- **@r** `An` int with the task id.
+
+
+- **repeat** (`int Ticks, callback ToCall`)
+
+	> Runs a callback over and over, once every period.
+
+	- **@p** `Ticks` is an int with the period.
+	- **@p** `ToCall` is a callback to run.
+	- **@r** `An` int with the task id.
+
+
+- **cancel** (`int TaskId`)
+
+	> Cancels a task this script started.
+
+	- **@p** `TaskId` is an int with the id returned by later or repeat.
+	- **@r** `An` int with the id that was cancelled.
+
+
+
+
+## class: cmd
+
+[53:21] `static` (extern: com.lehman.aussomcraft.host.HostCommands) **extends: object** 
+
+This static class registers server commands. Commands are registered with
+the server directly, so they work as soon as the script runs and go away
+when it is reloaded.
+
+#### Methods
+
+- **register** (`string Name, callback ToCall`)
+
+	> Registers a command. The callback is passed the sender and a list of the arguments the sender typed.
+
+	- **@p** `Name` is a string with the command name, without a leading slash.
+	- **@p** `ToCall` is a callback to run when the command is used.
+	- **@r** `A` bool with true when the command was registered.
+
+
+
+

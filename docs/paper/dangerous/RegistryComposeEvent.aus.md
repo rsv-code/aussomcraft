@@ -1,0 +1,42 @@
+# file: RegistryComposeEvent.aus
+
+## class: RegistryComposeEvent
+
+[19:14] (extern: com.lehman.aussomcraft.paper.gen.dangerous.RegistryComposeEventShim) **extends: object** 
+
+Generated shim for io.papermc.paper.registry.event.RegistryComposeEvent.
+Paper: https://jd.papermc.io/paper/1.21.10/io/papermc/paper/registry/event/RegistryComposeEvent.html
+In Paper this is a [RegistryEvent](RegistryEvent.aus.md).
+Every method it inherits is declared here too, so there is
+nothing to follow up to.
+Tier: dangerous. Do not edit.
+
+#### Methods
+
+- **\_\_opEq\_\_** (`A0`)
+
+
+- **getOrCreateTag** (`TagKey`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/io/papermc/paper/registry/event/RegistryComposeEvent.html#getOrCreateTag(io.papermc.paper.registry.tag.TagKey)
+
+	- **@p** `TagKey` is a [TagKey](TagKey.aus.md).
+	- **@r** `A` [Tag](Tag.aus.md).
+
+
+- **registry** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/io/papermc/paper/registry/event/RegistryComposeEvent.html#registry()
+
+	- **@r** `A` WritableRegistry.
+
+
+- **registryKey** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/io/papermc/paper/registry/event/RegistryComposeEvent.html#registryKey()
+
+	- **@r** `A` [RegistryKey](RegistryKey.aus.md).
+
+
+
+

@@ -1,0 +1,276 @@
+# Methods untrusted scripts may call.
+#
+# This is an allowlist and it is the whole untrusted API. A method not named
+# here is not generated at that tier, whatever the rules would otherwise say.
+#
+# Each line is a fully qualified class followed by one method name. That is
+# the point of the format: a bare method name does not name a method. Five
+# classes on this tier declare getName, and allowing the name allowed all
+# five at once. Naming the class means every line is a decision somebody
+# made about one method on one type.
+#
+# It also makes the file fail closed. Adding a class to UNTRUSTED_TYPES in
+# Rules.java now grants nothing until its methods are written here, where
+# before it silently admitted every listed name the class happened to have.
+#
+# It is short on purpose. The tier used to be every Bukkit event plus eleven
+# types, 2,481 declarations, and produced one security finding after another:
+# readable command text, the world seed, MiniMessage click events that run
+# commands, permission attachments. Every one was rule-consistent, because
+# rules match on name shape and what matters is capability. A surface small
+# enough to read in one sitting is worth more than a large one that is merely
+# gated.
+#
+# The contents come from design/untrusted-api-research.md: the ten things
+# small scripts actually do, of which the eight that are observation and
+# messaging belong here. The other two, changing the world and moving
+# players, are trusted.
+#
+# Before adding a line, read what Paper's own documentation says the method
+# does, not what it is called. See the "Judging What Paper API Does" section
+# of CLAUDE.md.
+#
+# Names are Paper's own, not the generated extern names, so overload renaming
+# does not matter here: sendMessage is written once even though the generator
+# emits sendMessage and sendMessage_ComponentLike from it.
+#
+# A listed method is still dropped if it takes arguments, unless it is one of
+# the messaging methods, or if it returns something this tier cannot express.
+# So a line here is permission, not a promise.
+#
+# One per line, grouped by class. Blank lines and # ignored.
+
+# ==== the things a script holds ===========================================
+
+# --- org.bukkit.entity.Player --------------------------------------------
+org.bukkit.entity.Player.getDisplayName
+org.bukkit.entity.Player.getExp
+org.bukkit.entity.Player.getFoodLevel
+org.bukkit.entity.Player.getGameMode
+org.bukkit.entity.Player.getHealth
+org.bukkit.entity.Player.getInventory
+org.bukkit.entity.Player.getLevel
+org.bukkit.entity.Player.getLocation
+org.bukkit.entity.Player.getName
+org.bukkit.entity.Player.getPitch
+org.bukkit.entity.Player.getPlayer
+org.bukkit.entity.Player.getType
+org.bukkit.entity.Player.getUniqueId
+org.bukkit.entity.Player.getWorld
+org.bukkit.entity.Player.getX
+org.bukkit.entity.Player.getY
+org.bukkit.entity.Player.getYaw
+org.bukkit.entity.Player.getZ
+org.bukkit.entity.Player.isDead
+org.bukkit.entity.Player.isEmpty
+org.bukkit.entity.Player.isFlying
+org.bukkit.entity.Player.isOnline
+org.bukkit.entity.Player.isSneaking
+org.bukkit.entity.Player.isSprinting
+org.bukkit.entity.Player.sendActionBar
+org.bukkit.entity.Player.sendMessage
+org.bukkit.entity.Player.sendPlainMessage
+
+# --- org.bukkit.entity.HumanEntity ---------------------------------------
+org.bukkit.entity.HumanEntity.getFoodLevel
+org.bukkit.entity.HumanEntity.getGameMode
+org.bukkit.entity.HumanEntity.getHealth
+org.bukkit.entity.HumanEntity.getInventory
+org.bukkit.entity.HumanEntity.getLocation
+org.bukkit.entity.HumanEntity.getName
+org.bukkit.entity.HumanEntity.getPitch
+org.bukkit.entity.HumanEntity.getType
+org.bukkit.entity.HumanEntity.getUniqueId
+org.bukkit.entity.HumanEntity.getWorld
+org.bukkit.entity.HumanEntity.getX
+org.bukkit.entity.HumanEntity.getY
+org.bukkit.entity.HumanEntity.getYaw
+org.bukkit.entity.HumanEntity.getZ
+org.bukkit.entity.HumanEntity.isDead
+org.bukkit.entity.HumanEntity.isEmpty
+org.bukkit.entity.HumanEntity.isSneaking
+org.bukkit.entity.HumanEntity.sendActionBar
+org.bukkit.entity.HumanEntity.sendMessage
+org.bukkit.entity.HumanEntity.sendPlainMessage
+
+# --- org.bukkit.entity.LivingEntity --------------------------------------
+org.bukkit.entity.LivingEntity.getHealth
+org.bukkit.entity.LivingEntity.getLocation
+org.bukkit.entity.LivingEntity.getName
+org.bukkit.entity.LivingEntity.getPitch
+org.bukkit.entity.LivingEntity.getType
+org.bukkit.entity.LivingEntity.getUniqueId
+org.bukkit.entity.LivingEntity.getWorld
+org.bukkit.entity.LivingEntity.getX
+org.bukkit.entity.LivingEntity.getY
+org.bukkit.entity.LivingEntity.getYaw
+org.bukkit.entity.LivingEntity.getZ
+org.bukkit.entity.LivingEntity.isDead
+org.bukkit.entity.LivingEntity.isEmpty
+org.bukkit.entity.LivingEntity.isSneaking
+org.bukkit.entity.LivingEntity.sendActionBar
+org.bukkit.entity.LivingEntity.sendMessage
+org.bukkit.entity.LivingEntity.sendPlainMessage
+
+# --- org.bukkit.entity.Entity --------------------------------------------
+org.bukkit.entity.Entity.getLocation
+org.bukkit.entity.Entity.getName
+org.bukkit.entity.Entity.getPitch
+org.bukkit.entity.Entity.getType
+org.bukkit.entity.Entity.getUniqueId
+org.bukkit.entity.Entity.getWorld
+org.bukkit.entity.Entity.getX
+org.bukkit.entity.Entity.getY
+org.bukkit.entity.Entity.getYaw
+org.bukkit.entity.Entity.getZ
+org.bukkit.entity.Entity.isDead
+org.bukkit.entity.Entity.isEmpty
+org.bukkit.entity.Entity.isSneaking
+org.bukkit.entity.Entity.sendActionBar
+org.bukkit.entity.Entity.sendMessage
+org.bukkit.entity.Entity.sendPlainMessage
+
+# --- org.bukkit.block.Block ----------------------------------------------
+org.bukkit.block.Block.getLocation
+org.bukkit.block.Block.getType
+org.bukkit.block.Block.getWorld
+org.bukkit.block.Block.getX
+org.bukkit.block.Block.getY
+org.bukkit.block.Block.getZ
+org.bukkit.block.Block.isEmpty
+
+# --- org.bukkit.World ----------------------------------------------------
+org.bukkit.World.getName
+org.bukkit.World.getPlayerCount
+org.bukkit.World.getPlayers
+org.bukkit.World.getTime
+org.bukkit.World.hasStorm
+org.bukkit.World.isThundering
+org.bukkit.World.sendActionBar
+org.bukkit.World.sendMessage
+
+# --- org.bukkit.Location -------------------------------------------------
+org.bukkit.Location.getBlock
+org.bukkit.Location.getPitch
+org.bukkit.Location.getWorld
+org.bukkit.Location.getX
+org.bukkit.Location.getY
+org.bukkit.Location.getYaw
+org.bukkit.Location.getZ
+
+# --- org.bukkit.inventory.PlayerInventory --------------------------------
+org.bukkit.inventory.PlayerInventory.getHolder
+org.bukkit.inventory.PlayerInventory.getItemInMainHand
+org.bukkit.inventory.PlayerInventory.getLocation
+org.bukkit.inventory.PlayerInventory.getSize
+org.bukkit.inventory.PlayerInventory.getType
+org.bukkit.inventory.PlayerInventory.isEmpty
+
+# --- org.bukkit.inventory.Inventory --------------------------------------
+org.bukkit.inventory.Inventory.getLocation
+org.bukkit.inventory.Inventory.getSize
+org.bukkit.inventory.Inventory.getType
+org.bukkit.inventory.Inventory.isEmpty
+
+# --- org.bukkit.inventory.ItemStack --------------------------------------
+org.bukkit.inventory.ItemStack.getAmount
+org.bukkit.inventory.ItemStack.getDurability
+org.bukkit.inventory.ItemStack.getLore
+org.bukkit.inventory.ItemStack.getType
+org.bukkit.inventory.ItemStack.hasItemMeta
+org.bukkit.inventory.ItemStack.isEmpty
+
+# ==== the events it can subscribe to ======================================
+
+# --- org.bukkit.event.player.PlayerJoinEvent -----------------------------
+org.bukkit.event.player.PlayerJoinEvent.getEventName
+org.bukkit.event.player.PlayerJoinEvent.getJoinMessage
+org.bukkit.event.player.PlayerJoinEvent.getPlayer
+org.bukkit.event.player.PlayerJoinEvent.isAsynchronous
+
+# --- org.bukkit.event.player.PlayerQuitEvent -----------------------------
+org.bukkit.event.player.PlayerQuitEvent.getEventName
+org.bukkit.event.player.PlayerQuitEvent.getPlayer
+org.bukkit.event.player.PlayerQuitEvent.getQuitMessage
+org.bukkit.event.player.PlayerQuitEvent.isAsynchronous
+
+# --- io.papermc.paper.event.player.AsyncChatEvent ------------------------
+io.papermc.paper.event.player.AsyncChatEvent.getEventName
+io.papermc.paper.event.player.AsyncChatEvent.getPlayer
+io.papermc.paper.event.player.AsyncChatEvent.isAsynchronous
+io.papermc.paper.event.player.AsyncChatEvent.isCancelled
+io.papermc.paper.event.player.AsyncChatEvent.message
+
+# --- org.bukkit.event.player.AsyncPlayerChatEvent ------------------------
+org.bukkit.event.player.AsyncPlayerChatEvent.getEventName
+org.bukkit.event.player.AsyncPlayerChatEvent.getMessage
+org.bukkit.event.player.AsyncPlayerChatEvent.getPlayer
+org.bukkit.event.player.AsyncPlayerChatEvent.isAsynchronous
+org.bukkit.event.player.AsyncPlayerChatEvent.isCancelled
+
+# --- org.bukkit.event.entity.PlayerDeathEvent ----------------------------
+org.bukkit.event.entity.PlayerDeathEvent.getDeathMessage
+org.bukkit.event.entity.PlayerDeathEvent.getEntity
+org.bukkit.event.entity.PlayerDeathEvent.getEventName
+org.bukkit.event.entity.PlayerDeathEvent.getPlayer
+org.bukkit.event.entity.PlayerDeathEvent.isAsynchronous
+org.bukkit.event.entity.PlayerDeathEvent.isCancelled
+
+# --- org.bukkit.event.player.PlayerRespawnEvent --------------------------
+org.bukkit.event.player.PlayerRespawnEvent.getEventName
+org.bukkit.event.player.PlayerRespawnEvent.getPlayer
+org.bukkit.event.player.PlayerRespawnEvent.isAsynchronous
+
+# --- org.bukkit.event.block.BlockBreakEvent ------------------------------
+org.bukkit.event.block.BlockBreakEvent.getBlock
+org.bukkit.event.block.BlockBreakEvent.getEventName
+org.bukkit.event.block.BlockBreakEvent.getPlayer
+org.bukkit.event.block.BlockBreakEvent.isAsynchronous
+org.bukkit.event.block.BlockBreakEvent.isCancelled
+
+# --- org.bukkit.event.block.BlockPlaceEvent ------------------------------
+org.bukkit.event.block.BlockPlaceEvent.getBlock
+org.bukkit.event.block.BlockPlaceEvent.getEventName
+org.bukkit.event.block.BlockPlaceEvent.getPlayer
+org.bukkit.event.block.BlockPlaceEvent.isAsynchronous
+org.bukkit.event.block.BlockPlaceEvent.isCancelled
+
+# --- org.bukkit.event.player.PlayerInteractEvent -------------------------
+org.bukkit.event.player.PlayerInteractEvent.getAction
+org.bukkit.event.player.PlayerInteractEvent.getClickedBlock
+org.bukkit.event.player.PlayerInteractEvent.getEventName
+org.bukkit.event.player.PlayerInteractEvent.getPlayer
+org.bukkit.event.player.PlayerInteractEvent.isAsynchronous
+org.bukkit.event.player.PlayerInteractEvent.isCancelled
+
+# --- org.bukkit.event.entity.EntityDamageByEntityEvent -------------------
+org.bukkit.event.entity.EntityDamageByEntityEvent.getDamage
+org.bukkit.event.entity.EntityDamageByEntityEvent.getEntity
+org.bukkit.event.entity.EntityDamageByEntityEvent.getEventName
+org.bukkit.event.entity.EntityDamageByEntityEvent.isAsynchronous
+org.bukkit.event.entity.EntityDamageByEntityEvent.isCancelled
+
+# --- org.bukkit.event.player.PlayerMoveEvent -----------------------------
+org.bukkit.event.player.PlayerMoveEvent.getEventName
+org.bukkit.event.player.PlayerMoveEvent.getFrom
+org.bukkit.event.player.PlayerMoveEvent.getPlayer
+org.bukkit.event.player.PlayerMoveEvent.getTo
+org.bukkit.event.player.PlayerMoveEvent.isAsynchronous
+org.bukkit.event.player.PlayerMoveEvent.isCancelled
+
+# --- org.bukkit.event.player.PlayerTeleportEvent -------------------------
+org.bukkit.event.player.PlayerTeleportEvent.getEventName
+org.bukkit.event.player.PlayerTeleportEvent.getFrom
+org.bukkit.event.player.PlayerTeleportEvent.getPlayer
+org.bukkit.event.player.PlayerTeleportEvent.getTo
+org.bukkit.event.player.PlayerTeleportEvent.isAsynchronous
+org.bukkit.event.player.PlayerTeleportEvent.isCancelled
+
+# --- org.bukkit.event.inventory.InventoryClickEvent ----------------------
+org.bukkit.event.inventory.InventoryClickEvent.getAction
+org.bukkit.event.inventory.InventoryClickEvent.getCurrentItem
+org.bukkit.event.inventory.InventoryClickEvent.getEventName
+org.bukkit.event.inventory.InventoryClickEvent.getInventory
+org.bukkit.event.inventory.InventoryClickEvent.getWhoClicked
+org.bukkit.event.inventory.InventoryClickEvent.isAsynchronous
+org.bukkit.event.inventory.InventoryClickEvent.isCancelled

@@ -1,0 +1,173 @@
+/* ==========================================================================
+   gendoc.css - JavaFX theme for the AussomCraft doc generator window.
+   Colors follow the Aussom website palette:
+     teal #1AABAB / teal-dark #0E7272, navy #1A1E2E / slate #252839,
+     gray-light #F2F4F7, text-dark #1C1C2A, text-muted #6B6E82.
+   ========================================================================== */
+
+.root {
+    -fx-font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    -fx-background-color: #1A1E2E;
+}
+
+/* ----- Header bar (navy) ------------------------------------------------- */
+.header {
+    -fx-background-color: #1A1E2E;
+}
+
+.title {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.subtitle {
+    -fx-text-fill: #9AA0B4;
+    -fx-font-size: 12px;
+}
+
+/* ----- Content (dark, matching the header) ------------------------------ */
+.content {
+    -fx-background-color: #1A1E2E;
+}
+
+.field-label {
+    -fx-text-fill: #E6E8EE;
+    -fx-font-size: 13px;
+}
+
+.info {
+    -fx-text-fill: #9AA0B4;
+    -fx-font-size: 12px;
+}
+
+.status {
+    -fx-text-fill: #1AABAB;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/* ----- Primary button (teal) -------------------------------------------- */
+.button.primary {
+    -fx-background-color: #1AABAB;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6px;
+    -fx-padding: 6px 22px;
+    -fx-cursor: hand;
+}
+
+.button.primary:hover {
+    -fx-background-color: #0E7272;
+}
+
+.button.primary:disabled {
+    -fx-background-color: #9AA0B4;
+    -fx-text-fill: #F2F4F7;
+    -fx-opacity: 1.0;
+    -fx-cursor: default;
+}
+
+/* ----- Thread selector (dark) ------------------------------------------- */
+.choice-box {
+    -fx-background-radius: 6px;
+    -fx-background-color: #252839;
+    -fx-border-color: #3A3E52;
+    -fx-border-radius: 6px;
+}
+
+.choice-box .label {
+    -fx-text-fill: #E6E8EE;
+}
+
+.choice-box .context-menu {
+    -fx-background-color: #252839;
+}
+
+.choice-box-popup .menu-item .label {
+    -fx-text-fill: #E6E8EE;
+}
+
+.choice-box-popup .menu-item:focused {
+    -fx-background-color: #1AABAB;
+}
+
+/* ----- Tier checkboxes (dark) ------------------------------------------- */
+.check-box {
+    -fx-text-fill: #E6E8EE;
+    -fx-font-size: 13px;
+}
+
+.check-box > .box {
+    -fx-background-color: #252839;
+    -fx-border-color: #3A3E52;
+    -fx-border-radius: 3px;
+    -fx-background-radius: 3px;
+}
+
+.check-box:selected > .box {
+    -fx-background-color: #1AABAB;
+    -fx-border-color: #1AABAB;
+}
+
+.check-box:selected > .box > .mark {
+    -fx-background-color: #FFFFFF;
+}
+
+.check-box:disabled {
+    -fx-opacity: 0.6;
+}
+
+/* ----- Stop button (red, so a running build reads as interruptible) ------ */
+.button.stop {
+    -fx-background-color: #C2453C;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6px;
+    -fx-padding: 6px 22px;
+    -fx-cursor: hand;
+}
+
+.button.stop:hover {
+    -fx-background-color: #93332C;
+}
+
+/* ----- Progress bar (teal fill) ----------------------------------------- */
+.progress-bar {
+    -fx-pref-height: 22px;
+}
+
+.progress-bar > .track {
+    -fx-background-color: #252839;
+    -fx-background-radius: 4px;
+}
+
+.progress-bar > .bar {
+    -fx-background-color: #1AABAB;
+    -fx-background-radius: 4px;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+/* ----- Log area (dark, monospace) --------------------------------------- */
+.log {
+    -fx-font-family: "Courier New", "Consolas", monospace;
+    -fx-font-size: 12px;
+    -fx-text-fill: #D5F2F2;
+    -fx-highlight-fill: #1AABAB;
+    -fx-border-color: #252839;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+}
+
+.log .content {
+    -fx-background-color: #12151F;
+    -fx-background-radius: 4px;
+}
+
+.log .scroll-pane,
+.log .scroll-pane .viewport {
+    -fx-background-color: transparent;
+}

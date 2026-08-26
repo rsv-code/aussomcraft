@@ -1,0 +1,33 @@
+/*
+ * A custom command.
+ *
+ * Runs untrusted. Try /where in game.
+ */
+
+/**
+ * This class registers a command that tells a player where they are.
+ */
+class Main {
+    /**
+     * Registers the command.
+     */
+    public main() {
+        cmd.register("where", ::onWhere);
+    }
+
+    /**
+     * Tells the sender their world and coordinates.
+     * @p Sender is the Player who ran the command.
+     * @p Args is a list of strings with what they typed after the command.
+     */
+    public onWhere(Sender, Args) {
+        if (Sender == null) {
+            return;
+        }
+        loc = Sender.getLocation();
+        blk = loc.getBlock();
+        where = loc.getWorld().getName() + " at " + blk.getX().toString()
+            + ", " + blk.getY().toString() + ", " + blk.getZ().toString();
+        Sender.sendMessage("You are in " + where);
+    }
+}

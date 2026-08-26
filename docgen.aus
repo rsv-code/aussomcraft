@@ -1,0 +1,517 @@
+/*
+ * Copyright 2026 Austin Lehman
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+include os;
+include file;
+include sys;
+include concurrent;
+include thread;
+include aji;
+
+/**
+ * One Aussom source file to document, and where its doc belongs.
+ */
+class DocRec {
+    /** Directory the source file lives in, with a trailing slash. */
+    public dir = "";
+
+    /** Output directory below docs, with a leading slash, or empty. */
+    public relDir = "";
+
+    /** The file name, for example Player.aus. */
+    public fname = "";
+
+    /**
+     * Builds a record.
+     * @p Dir is a string with the source directory.
+     * @p RelDir is a string with the output directory below docs.
+     * @p FName is a string with the file name.
+     * @r this object
+     */
+    public DocRec(string Dir, string RelDir, string FName) {
+        this.dir = Dir;
+        this.relDir = RelDir;
+        this.fname = FName;
+        return this;
+    }
+
+    /**
+     * Describes this record.
+     * @r A string with the record.
+     */
+    public toString() {
+        return this.dir + this.fname + " -> docs" + this.relDir;
+    }
+}
+
+/**
+ * Generates Markdown documentation for every Aussom class in this project.
+ *
+ * Each source file is handed to a child aussom process, which writes one
+ * Markdown file per source file. An index is written for the docs root and
+ * for each tier directory so the result reads on GitHub, which renders a
+ * README.md when a directory is opened.
+ *
+ * Markdown only. There is no HTML output and no stylesheet, because the docs
+ * are meant to be read in the repository browser.
+ */
+class DocGen {
+    /** The aussom command to shell out to. */
+    private aussomCmd = "aussom";
+
+    /** Where the docs are written. */
+    private docsDir = "docs";
+
+    /** The host API modules, which every script gets. */
+    private hostDir = "src/main/resources/com/lehman/aussomcraft/aus/";
+
+    /** The generated Paper API, one directory per tier. */
+    private paperDir = "src/main/resources/com/lehman/aussomcraft/aus/paper/";
+
+    /** Which tiers to document. */
+    private tiers = ["untrusted", "trusted", "dangerous"];
+
+    /** Work items, built by setup and consumed by build. */
+    private docRecs = [];
+
+    /** Worker threads. Zero means cores minus two. */
+    private numThreads = 0;
+
+    /** Milliseconds a worker may take on one file. Zero disables. */
+    private threadTimeout = 60000;
+
+    /** Whether the child process output is shown. */
+    private showChildOutput = false;
+
+    /** Called with (level, message). May be called from worker threads. */
+    private onLog = null;
+
+    /** Called with (completed, total, docRec). May be called from workers. */
+    private onItemComplete = null;
+
+    /** How many files are finished. */
+    private completed = null;
+
+    /** The next work item, shared by the workers. */
+    private nextIndex = null;
+
+    /** Counted down once per worker as it finishes. */
+    private done = null;
+
+    /** Set to stop the run. Workers finish the file in hand and then exit. */
+    private stopped = null;
+
+    /**
+     * Builds a generator.
+     * @r this object
+     */
+    public DocGen() {
+        this.completed = new AtomicLong(0);
+        this.stopped = new AtomicBool(false);
+        return this;
+    }
+
+    /**
+     * Asks the run to stop. Workers finish the file they are on and then
+     * exit, so a stop leaves whole files behind rather than a half written
+     * one. Safe to call from another thread.
+     * @r this object
+     */
+    public stop() { this.stopped.set(true); return this; }
+
+    /**
+     * Whether a stop has been asked for.
+     * @r A bool with true when stopping.
+     */
+    public isStopped() { return this.stopped.get(); }
+
+    /**
+     * Sets the number of worker threads.
+     * @p NumThreads is an int with the count, or 0 for the default.
+     * @r this object
+     */
+    public setNumThreads(int NumThreads) { this.numThreads = NumThreads; return this; }
+
+    /**
+     * Sets how long a worker may take on one file.
+     * @p Mills is an int with the timeout, or 0 for none.
+     * @r this object
+     */
+    public setThreadTimeout(int Mills) { this.threadTimeout = Mills; return this; }
+
+    /**
+     * Sets whether the child process output is shown.
+     * @p Show is a bool with true to show it.
+     * @r this object
+     */
+    public setShowChildOutput(bool Show) { this.showChildOutput = Show; return this; }
+
+    /**
+     * Sets where the docs are written.
+     * @p Dir is a string with the output directory.
+     * @r this object
+     */
+    public setDocsDir(string Dir) { this.docsDir = Dir; return this; }
+
+    /**
+     * Sets which tiers to document.
+     * @p Tiers is a list of tier name strings.
+     * @r this object
+     */
+    public setTiers(list Tiers) { this.tiers = Tiers; return this; }
+
+    /**
+     * Sets the log callback, called with a level and a message.
+     * @p Cb is a callback.
+     * @r this object
+     */
+    public setOnLog(callback Cb) { this.onLog = Cb; return this; }
+
+    /**
+     * Sets the progress callback, called with completed, total and a record.
+     * @p Cb is a callback.
+     * @r this object
+     */
+    public setOnItemComplete(callback Cb) { this.onItemComplete = Cb; return this; }
+
+    /**
+     * Gets how many files this run will write.
+     * @r An int with the total.
+     */
+    public getTotal() { return #this.docRecs; }
+
+    /**
+     * Gets how many files are finished.
+     * @r An int with the count.
+     */
+    public getCompleted() { return this.completed.get(); }
+
+    /**
+     * Gets the number of processor cores.
+     * @r An int with the core count.
+     */
+    public getCoreCount() {
+        try {
+            rt = aji.invokeStatic("java.lang.Runtime", "getRuntime");
+            cores = rt.invoke("availableProcessors");
+            if (cores < 1) { cores = 1; }
+            return cores;
+        } catch (e) {
+            this.log("warn", "Could not read the core count (" + e.getMessage()
+                + "); assuming 4.");
+            return 4;
+        }
+    }
+
+    /**
+     * Gets the default worker count.
+     *
+     * Two, not one per core. Each worker spawns a whole aussom process to
+     * document one file, so the work is a queue of JVM starts rather than
+     * arithmetic. Past a couple of workers the machine spends its time on
+     * contention instead of documents, and the whole box is pegged for no
+     * gain. The selector still goes up to the core count for anyone who
+     * wants to try otherwise.
+     * @r An int with the count.
+     */
+    public getDefaultThreadCount() {
+        return 2;
+    }
+
+    /**
+     * Runs the whole pipeline.
+     * @r this object
+     */
+    public generate() {
+        this.log("info", "Generating AussomCraft docs ...");
+        this.setup();
+        this.build();
+        this.finish();
+        if (this.isStopped()) {
+            this.log("warn", "Stopped after " + this.getCompleted() + " of "
+                + this.getTotal() + " files.");
+        }
+        return this;
+    }
+
+    /**
+     * Clears the docs directory and builds the work list.
+     * @r this object
+     */
+    public setup() {
+        this.removeAndRecreateDocsDirs();
+
+        this.log("info", "Collecting host modules from: " + this.hostDir);
+        this.addFilesIn(this.hostDir, "/host");
+
+        for (tier : this.tiers) {
+            dir = this.paperDir + tier + "/";
+            this.log("info", "Collecting " + tier + " modules from: " + dir);
+            this.addFilesIn(dir, "/paper/" + tier);
+        }
+
+        this.log("log", "Found " + #this.docRecs + " files to document.");
+        return this;
+    }
+
+    /**
+     * Generates every Markdown file, in parallel.
+     * @r this object
+     */
+    public build() {
+        threads = this.numThreads;
+        if (threads < 1) { threads = this.getDefaultThreadCount(); }
+        total = #this.docRecs;
+        if (total < 1) { return this; }
+        if (threads > total) { threads = total; }
+
+        this.log("log", "Writing " + total + " docs using " + threads
+            + " worker threads ...");
+        this.stopped.set(false);
+
+        // A worker pool built from Thread and the concurrent primitives the
+        // CLI ships. Workers pull the next index off a shared counter, so no
+        // work is handed out twice and a slow file does not hold up a whole
+        // slice of the list.
+        this.nextIndex = new AtomicLong(0);
+        this.done = new Latch(threads);
+
+        workers = [];
+        for (i = 0; i < threads; i++) {
+            t = new Thread();
+            t.setDaemon(true);
+            t.setName("docgen-" + i);
+            t.setOnRun(::runWorker);
+            workers @= t;
+        }
+        for (t : workers) { t.start(); }
+
+        // Wait for every worker to finish. The timeout is per wait, not per
+        // file, so a long run is not cut short.
+        while (this.done.getCount() > 0) {
+            this.done.await(500);
+        }
+        return this;
+    }
+
+    /**
+     * One worker. Takes the next file off the shared counter until the list
+     * is exhausted, then counts down.
+     */
+    public runWorker() {
+        total = #this.docRecs;
+        while (true) {
+            if (this.stopped.get()) { break; }
+            // incrementAndGet is one atomic step. Reading and then setting
+            // is two, and two workers racing there take the same index and
+            // document the same file twice while another is never done.
+            i = this.nextIndex.incrementAndGet() - 1;
+            if (i >= total) { break; }
+            try {
+                this.processDocRec(this.docRecs[i]);
+            } catch (e) {
+                this.log("err", "Worker failed on item " + i + ": " + e.getMessage());
+            }
+        }
+        this.done.countDown();
+    }
+
+    /**
+     * Writes the index files. Runs after a stop too, so whatever was written
+     * is still browsable.
+     * @r this object
+     */
+    public finish() {
+        this.log("info", "Writing index files.");
+        this.buildIndexes();
+        this.log("log", "Done.");
+        return this;
+    }
+
+    /**
+     * Documents one file with a child aussom process. Called on a worker
+     * thread, once per record.
+     * @p Rec is the DocRec to process.
+     */
+    public processDocRec(Rec) {
+        outDir = this.docsDir + Rec.relDir;
+        ret = this.exec([this.aussomCmd, "-d", "-o", outDir, Rec.dir + Rec.fname],
+            this.showChildOutput);
+
+        outFile = outDir + "/" + Rec.fname + ".md";
+        if (!file.exists(outFile)) {
+            this.log("err", "Failed to document '" + Rec.dir + Rec.fname
+                + "' (exec success=" + ret.success + ").");
+        } else {
+            this.log("info", "Wrote " + outFile);
+        }
+
+        done = this.completed.incrementAndGet();
+        if (this.onItemComplete != null) {
+            this.onItemComplete(done, #this.docRecs, Rec);
+        }
+    }
+
+    /**
+     * Adds every .aus file in a directory to the work list.
+     * @p Dir is a string with the directory, with a trailing slash.
+     * @p RelDir is a string with the output directory below docs.
+     */
+    private addFilesIn(string Dir, string RelDir) {
+        if (!file.exists(Dir)) {
+            this.log("warn", "No such directory: " + Dir);
+            return;
+        }
+        file.mkdirs(this.docsDir + RelDir);
+        for (f : file.ls(Dir)) {
+            if (f.isFile && f.name.endsWith(".aus")) {
+                this.docRecs @= new DocRec(Dir, RelDir, f.name);
+            }
+        }
+    }
+
+    /**
+     * Clears only the directories this generator writes.
+     *
+     * The docs directory also holds the hand written guide, so removing the
+     * whole thing would delete it on every run. Generated output lives in
+     * directories of its own, and only those are cleared.
+     */
+    private removeAndRecreateDocsDirs() {
+        for (d : ["/host", "/paper"]) {
+            path = this.docsDir + d;
+            if (file.exists(path)) {
+                this.log("info", "Clearing " + path);
+                file.rmr(path);
+            }
+        }
+        file.mkdirs(this.docsDir);
+    }
+
+    /**
+     * Writes a README.md for the docs root and for each documented
+     * directory. GitHub renders these when the directory is opened.
+     */
+    private buildIndexes() {
+        dirs = ["/host"];
+        for (tier : this.tiers) { dirs @= "/paper/" + tier; }
+
+        for (d : dirs) {
+            this.writeDirIndex(d);
+        }
+
+        md = "# AussomCraft Documentation\n\n";
+        md += "## Guide\n\n";
+        md += "New to this? The [guide](guide/) is written for people who have\n";
+        md += "not written code before. Start there.\n\n";
+        md += "## API reference\n\n";
+        md += "Generated from the Aussom sources. Do not edit.\n\n";
+        md += "## Host API\n\n";
+        md += "The externs every script gets: events, commands, the scheduler,\n";
+        md += "the per script store, and the server.\n\n";
+        md += "- [host](host/)\n\n";
+        md += "## Paper API\n\n";
+        md += "One page per Paper type, per tier. A tier is a superset of the\n";
+        md += "one below it, so a script written for a lower tier keeps working\n";
+        md += "when it is elevated.\n\n";
+        for (tier : this.tiers) {
+            md += "- [" + tier + "](paper/" + tier + "/) - "
+                + this.tierBlurb(tier) + "\n";
+        }
+        md += "\n";
+        file.write(this.docsDir + "/README.md", md);
+    }
+
+    /**
+     * Writes the index for one directory.
+     * @p RelDir is a string with the directory below docs.
+     */
+    private writeDirIndex(string RelDir) {
+        dir = this.docsDir + RelDir;
+        if (!file.exists(dir)) { return; }
+
+        names = [];
+        for (f : file.ls(dir)) {
+            if (f.isFile && f.name.endsWith(".md") && f.name != "README.md") {
+                names @= f.name;
+            }
+        }
+        names.sortAsc();
+
+        title = RelDir;
+        if (title.startsWith("/")) { title = title.substr(1, #title); }
+
+        md = "# " + title + "\n\n";
+        md += "" + #names + " modules. Generated, do not edit.\n\n";
+        for (n : names) {
+            label = n;
+            if (label.endsWith(".aus.md")) {
+                label = label.substr(0, #label - 7);
+            }
+            md += "- [" + label + "](" + n + ")\n";
+        }
+        md += "\n";
+        file.write(dir + "/README.md", md);
+    }
+
+    /**
+     * Gets the one line description of a tier.
+     * @p Tier is a string with the tier name.
+     * @r A string with the description.
+     */
+    private tierBlurb(string Tier) {
+        if (Tier == "untrusted") {
+            return "reading state and sending messages";
+        } else if (Tier == "trusted") {
+            return "the full Paper API, less anything that leaves the game world";
+        }
+        return "the rest, plus AJI";
+    }
+
+    /**
+     * Logs a message through the callback, or to the console.
+     * @p Level is a string with the level.
+     * @p Msg is a string with the message.
+     */
+    private log(Level, Msg) {
+        if (this.onLog != null) {
+            this.onLog(Level, Msg);
+        } else if (Level == "info") {
+            c.info(Msg);
+        } else if (Level == "warn") {
+            c.warn(Msg);
+        } else if (Level == "err") {
+            c.err(Msg);
+        } else {
+            c.log(Msg);
+        }
+    }
+
+    /**
+     * Runs a command with its arguments given separately.
+     *
+     * No shell. Building one command string would put file names through
+     * /bin/sh, and a file named with a semicolon or a backtick would then
+     * run as a command. The names here come from a directory listing, so
+     * they are not something this tool should be trusting.
+     * @p Args is a list with the command and its arguments.
+     * @p ShowOut is a bool with true to stream the output.
+     * @r The exec result.
+     */
+    private exec(list Args, ShowOut = false) {
+        return os.execRaw(Args, ShowOut);
+    }
+}

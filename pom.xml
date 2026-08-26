@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.lehman</groupId>
+    <artifactId>aussomcraft</artifactId>
+    <version>0.1.0</version>
+    <name>AussomCraft</name>
+
+    <properties>
+        <!--
+            Where generated modules point for Paper's own documentation.
+            Move this when paper.api.version moves; the version is part of
+            the path and an old one silently links to an old API.
+        -->
+        <paper.javadoc.base>https://jd.papermc.io/paper/1.21.10/</paper.javadoc.base>
+        <!--
+            Paper 26.2 requires Java 25 and ships class file version 69, so
+            this is not a preference. 'release' rather than source/target
+            because it also checks API usage against the named release,
+            which source/target does not.
+        -->
+        <maven.compiler.release>25</maven.compiler.release>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <aussom.base.version>1.4.5</aussom.base.version>
+        <paper.api.version>26.2.build.112-stable</paper.api.version>
+        <mockbukkit.version>4.116.1</mockbukkit.version>
+        <junit.version>5.11.4</junit.version>
+        <javaparser.version>3.26.4</javaparser.version>
+        <paper.api.jar>${settings.localRepository}/io/papermc/paper/paper-api/${paper.api.version}/paper-api-${paper.api.version}.jar</paper.api.jar>
+        <paper.api.sources.jar>${settings.localRepository}/io/papermc/paper/paper-api/${paper.api.version}/paper-api-${paper.api.version}-sources.jar</paper.api.sources.jar>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>papermc</id>
+            <url>https://repo.papermc.io/repository/maven-public/</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <!-- The interpreter. Shaded into the plugin jar; Paper does not provide it. -->
+        <dependency>
+            <groupId>io.gitlab.cupofcode</groupId>
+            <artifactId>aussom.base</artifactId>
+            <version>${aussom.base.version}</version>
+        </dependency>
+
+        <!-- Provided by the server at runtime. -->
+        <dependency>
+            <groupId>io.papermc.paper</groupId>
+            <artifactId>paper-api</artifactId>
+            <version>${paper.api.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!--
+            Build time only, for the generator. The compiled jar carries no
+            parameter names, so argument names and documentation come from
+            Paper's sources jar, which needs a real Java parser: the sources
+            use generics, annotations and nested types that a pattern match
+            would get wrong.
+        -->
+        <dependency>
+            <groupId>io.papermc.paper</groupId>
+            <artifactId>paper-api</artifactId>
+            <version>${paper.api.version}</version>
+            <classifier>sources</classifier>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.github.javaparser</groupId>
+            <artifactId>javaparser-core</artifactId>
+            <version>${javaparser.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!--
+            Test layer 2. Note this runs on the ordinary app class loader, so
+            getSystemClassLoader() can see org.bukkit here and cannot here.
+            Nothing about the class loader may be concluded from a MockBukkit
+            test. See design/aussomcraft-design-1.md section 9.
+        -->
+        <dependency>
+            <groupId>org.mockbukkit.mockbukkit</groupId>
+            <artifactId>mockbukkit-v26.2</artifactId>
+            <version>${mockbukkit.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <build>
+        <finalName>${project.name}-${project.version}</finalName>
+
+        <resources>
+            <!--
+                plugin.yml alone is filtered, so the version comes from the
+                pom. The .aus modules are deliberately left unfiltered: they
+                are source in another language and a ${...} in a script must
+                reach the parser as written.
+            -->
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+                <includes><include>plugin.yml</include></includes>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>false</filtering>
+                <excludes><exclude>plugin.yml</exclude></excludes>
+            </resource>
+            <!--
+                Apache 2.0 section 4(a) says a copy of the license travels
+                with the work. The shade's license transformer strips the
+                bundled libraries' copies on the assumption the project
+                ships its own, so without this the jar went out with no
+                license text at all.
+            -->
+            <resource>
+                <directory>${project.basedir}</directory>
+                <targetPath>META-INF</targetPath>
+                <filtering>false</filtering>
+                <includes>
+                    <include>LICENSE</include>
+                    <include>NOTICE</include>
+                    <include>THIRD-PARTY.md</include>
+                </includes>
+            </resource>
+        </resources>
+
+        <plugins>
+            <!--
+                Fail early and legibly when Maven is running on the wrong
+                JDK. Without this the first symptom is "release version 25
+                not supported", or worse a "wrong version 69.0" bad class
+                file error out of paper-api, neither of which says what to do.
+            -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <version>3.5.0</version>
+                <executions>
+                    <execution>
+                        <id>require-jdk-25</id>
+                        <goals><goal>enforce</goal></goals>
+                        <configuration>
+                            <rules>
+                                <requireJavaVersion>
+                                    <version>[25,)</version>
+                                    <message>
+AussomCraft needs JDK 25. Paper 26.2 ships class file version 69, which
+only a JDK 25 or newer javac can read, so this is not adjustable by
+lowering maven.compiler.release.
+
+Maven is currently running on a different JDK. Point it at 25, for example:
+
+    JAVA_HOME=/usr/lib/jvm/jdk-25 mvn clean package
+
+or set JAVA_HOME to a JDK 25 in your shell profile.
+                                    </message>
+                                </requireJavaVersion>
+                            </rules>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.13.0</version>
+            </plugin>
+
+            <!--
+                The generator is a build tool, not part of the plugin. It
+                lives in src/gen/java, compiles against paper-api, and is
+                filtered out of the shaded jar below.
+            -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>3.6.0</version>
+                <executions>
+                    <execution>
+                        <id>add-generator-source</id>
+                        <phase>generate-sources</phase>
+                        <goals><goal>add-source</goal></goals>
+                        <configuration>
+                            <sources><source>src/gen/java</source></sources>
+                        </configuration>
+                    </execution>
+                    <!--
+                        The untrusted allowlist lives here. It decides the
+                        whole untrusted API, so the generator must be able to
+                        read it; without it the tier comes out empty, which
+                        is the safe direction but very visible.
+                    -->
+                    <execution>
+                        <id>add-generator-resources</id>
+                        <phase>generate-sources</phase>
+                        <goals><goal>add-resource</goal></goals>
+                        <configuration>
+                            <resources>
+                                <resource><directory>src/gen/resources</directory></resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!--
+                Run with:
+                  mvn -Pgenerate process-classes
+
+                process-classes, not generate-sources: the generator is
+                itself compiled from src/gen/java, and it reads
+                untrusted-allowlist.txt off the class path, so both have to
+                be in target/classes before it runs. Bound to that phase in
+                the 'generate' profile below rather than run by hand, so the
+                allowlist it reads is always the one that was just edited.
+
+                Output is committed, so a Paper upgrade shows up as a diff.
+            -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.5.0</version>
+                <configuration>
+                    <mainClass>com.lehman.aussomcraft.gen.Generator</mainClass>
+                    <classpathScope>compile</classpathScope>
+                    <arguments>
+                        <argument>${paper.api.jar}</argument>
+                        <argument>${paper.api.sources.jar}</argument>
+                        <argument>src/main/java/com/lehman/aussomcraft/paper/gen</argument>
+                        <argument>src/main/resources/com/lehman/aussomcraft/aus/paper</argument>
+                        <argument>${paper.javadoc.base}</argument>
+                    </arguments>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.5.2</version>
+            </plugin>
+
+            <!--
+                One jar. aussom-base and its dependencies are bundled without
+                relocation on purpose: lang.aus names 'com.aussom.stdlib.ASys'
+                and friends literally in its extern class declarations, so
+                rewriting those packages would stop every engine from starting.
+                Paper isolates plugin class loaders, so an unrelocated
+                commons-codec cannot collide with another plugin's.
+            -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.6.0</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals><goal>shade</goal></goals>
+                        <configuration>
+                            <createDependencyReducedPom>false</createDependencyReducedPom>
+                            <filters>
+                                <filter>
+                                    <artifact>${project.groupId}:${project.artifactId}</artifact>
+                                    <excludes>
+                                        <exclude>com/lehman/aussomcraft/gen/**</exclude>
+                                        <!-- A build input, not something the plugin reads. -->
+                                        <exclude>untrusted-allowlist.txt</exclude>
+                                    </excludes>
+                                </filter>
+                                <filter>
+                                    <artifact>*:*</artifact>
+                                    <excludes>
+                                        <exclude>META-INF/*.SF</exclude>
+                                        <exclude>META-INF/*.DSA</exclude>
+                                        <exclude>META-INF/*.RSA</exclude>
+                                        <exclude>module-info.class</exclude>
+                                        <!--
+                                          The multi-release copy of the same
+                                          thing. Excluding only the top level
+                                          one left commons-cli and
+                                          commons-codec fighting over
+                                          META-INF/versions/9/module-info.class,
+                                          and the winner was whichever the
+                                          shade happened to read last.
+                                        -->
+                                        <exclude>META-INF/versions/*/module-info.class</exclude>
+                                    </excludes>
+                                </filter>
+                            </filters>
+                            <!--
+                              Every bundled library is Apache 2.0 except the
+                              CUP runtime, and Apache 2.0 section 4(d) says a
+                              NOTICE travels with the code. Without this the
+                              jar keeps one library's NOTICE and silently
+                              drops the rest.
+
+                              ApacheLicenseResourceTransformer is deliberately
+                              not used with it. It strips every
+                              META-INF/LICENSE*, including this project's own,
+                              which left the jar with no license text at all.
+                              The bundled libraries' copies are the same
+                              Apache 2.0 text, so letting them collide is
+                              harmless.
+                            -->
+                            <transformers>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ApacheNoticeResourceTransformer">
+                                    <projectName>AussomCraft</projectName>
+                                    <addHeader>false</addHeader>
+                                    <!--
+                                      These default to the Apache Software
+                                      Foundation, which would put the ASF's
+                                      name on this project's copyright line.
+                                    -->
+                                    <organizationName>Austin Lehman</organizationName>
+                                    <organizationURL>https://aussom-lang.com</organizationURL>
+                                    <inceptionYear>2026</inceptionYear>
+                                    <copyright>Copyright 2026 Austin Lehman</copyright>
+                                </transformer>
+                            </transformers>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <!--
+            Regenerates the Paper API: the typed shims under
+            src/main/java/com/lehman/aussomcraft/paper/gen and the Aussom
+            modules under src/main/resources/com/lehman/aussomcraft/aus/paper.
+
+            Off by default because an ordinary build must not rewrite files
+            that are committed.
+        -->
+        <profile>
+            <id>generate</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>exec-maven-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>generate-paper-api</id>
+                                <phase>process-classes</phase>
+                                <goals>
+                                    <goal>java</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+</project>

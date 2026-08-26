@@ -1,0 +1,56 @@
+/*
+ * A per player counter that survives a restart.
+ *
+ * Runs untrusted. The store belongs to this script and is written out when
+ * the server stops.
+ */
+
+/**
+ * This class counts how many times each player has joined.
+ */
+class Main {
+    /**
+     * Registers the handler and the command.
+     */
+    public main() {
+        events.on("PlayerJoinEvent", ::onJoin);
+        cmd.register("joins", ::onJoins);
+    }
+
+    /**
+     * Counts a join and tells the player their total.
+     * @p Evt is the PlayerJoinEvent.
+     */
+    public onJoin(Evt) {
+        name = Evt.getPlayer().getName();
+        count = this.countFor(name) + 1;
+        store.set(name, count);
+        server.tell(name, "Welcome back. That is visit number " + count.toString() + ".");
+    }
+
+    /**
+     * Reports the sender's join count.
+     * @p Sender is the Player who ran the command.
+     * @p Args is a list of strings with what they typed.
+     */
+    public onJoins(Sender, Args) {
+        if (Sender == null) {
+            return;
+        }
+        name = Sender.getName();
+        Sender.sendMessage("You have joined " + this.countFor(name).toString() + " times.");
+    }
+
+    /**
+     * Reads a player's stored count, treating an unset key as zero.
+     * @p Name is a string with the player name.
+     * @r An int with the count.
+     */
+    public countFor(string Name) {
+        held = store.get(Name);
+        if (held == null) {
+            return 0;
+        }
+        return held;
+    }
+}

@@ -1,0 +1,298 @@
+/*
+ * Copyright 2026 Austin Lehman
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+include fx;
+include fx.BorderPane;
+include fx.VBox;
+include fx.HBox;
+include fx.Label;
+include fx.Button;
+include fx.CheckBox;
+include fx.ProgressBar;
+include fx.TextArea;
+include fx.ChoiceBox;
+include fx.Insets;
+include thread;
+include docgen;
+
+/**
+ * Generates the AussomCraft Markdown documentation.
+ *
+ * Run it from the project root with the Aussom CLI installed:
+ *
+ *     aussom gendoc.aus
+ *
+ * The build runs on a background thread so the window stays responsive, and
+ * the DocGen hooks are marshalled back with fx.runLater. The docs directory
+ * is deleted and rebuilt, so nothing outlives a run.
+ */
+class GenDocApp {
+    private app = null;
+    private core = null;
+
+    private threadChoice = null;
+    private untrustedBox = null;
+    private trustedBox = null;
+    private dangerousBox = null;
+    private startButton = null;
+    private progressBar = null;
+    private statusLabel = null;
+    private infoLabel = null;
+    private logArea = null;
+
+    /** One of "idle", "running", "stopping", "done". */
+    private state = "idle";
+    private worker = null;
+
+    /**
+     * Builds the window and shows it.
+     * @p args is a list of command line arguments.
+     * @r An int with 0 for success.
+     */
+    public main(args) {
+        this.init();
+        this.app.show(true);
+        fx.shutdown();
+        return 0;
+    }
+
+    /**
+     * Builds the app and wires the pipeline without showing the window.
+     */
+    public init() {
+        this.core = new DocGen();
+        this.core.setShowChildOutput(false);
+        this.core.setThreadTimeout(0);
+        this.core.setOnLog(::onCoreLog);
+        this.core.setOnItemComplete(::onCoreItemComplete);
+
+        defThreads = this.core.getDefaultThreadCount();
+        maxThreads = this.core.getCoreCount();
+
+        this.app = fx.fxApp("Generate AussomCraft Docs", 780, 620);
+        this.app.setLayout(this.buildUi(defThreads, maxThreads).obj);
+        this.app.addStyleSheet("gendoc.css");
+    }
+
+    /**
+     * Gets the underlying app, for a test harness.
+     * @r The fxApp.
+     */
+    public getApp() { return this.app; }
+
+    /**
+     * Builds the root layout.
+     * @p DefThreads is an int with the default worker count.
+     * @p MaxThreads is an int with the core count.
+     * @r The root node.
+     */
+    private buildUi(DefThreads, MaxThreads) {
+        root = new BorderPane();
+        root.addStyleClass("root-pane");
+
+        header = new VBox();
+        header.addStyleClass("header");
+        header.setSpacing(2.0);
+        header.setPadding(new Insets(14.0));
+        title = new Label("Generate AussomCraft Docs");
+        title.addStyleClass("title");
+        subtitle = new Label("Markdown API documentation for every Aussom class in this project");
+        subtitle.addStyleClass("subtitle");
+        header.add([title, subtitle]);
+        root.setTop(header);
+
+        content = new VBox();
+        content.addStyleClass("content");
+        content.setSpacing(12.0);
+        content.setPadding(new Insets(16.0));
+
+        tiers = new HBox();
+        tiers.setSpacing(10.0);
+        tiers.setAlignment("CENTER_LEFT");
+        tiersLabel = new Label("Tiers:");
+        tiersLabel.addStyleClass("field-label");
+        this.untrustedBox = new CheckBox("untrusted");
+        this.untrustedBox.setSelected(true);
+        this.trustedBox = new CheckBox("trusted");
+        this.trustedBox.setSelected(true);
+        this.dangerousBox = new CheckBox("dangerous");
+        this.dangerousBox.setSelected(true);
+        tiers.add([tiersLabel, this.untrustedBox, this.trustedBox, this.dangerousBox]);
+
+        controls = new HBox();
+        controls.setSpacing(10.0);
+        controls.setAlignment("CENTER_LEFT");
+        threadsLabel = new Label("Worker threads:");
+        threadsLabel.addStyleClass("field-label");
+        items = [];
+        for (i = 1; i <= MaxThreads; i++) { items @= i; }
+        this.threadChoice = new ChoiceBox(items);
+        this.threadChoice.setValue(DefThreads);
+        this.startButton = new Button("Start");
+        this.startButton.addStyleClass("primary");
+        this.startButton.onClick(::onStartStop);
+        controls.add([threadsLabel, this.threadChoice, this.startButton]);
+
+        progressRow = new HBox();
+        progressRow.setSpacing(10.0);
+        progressRow.setAlignment("CENTER_LEFT");
+        this.progressBar = new ProgressBar();
+        this.progressBar.setProgress(0.0);
+        this.progressBar.setPrefWidth(560.0);
+        this.statusLabel = new Label("0 / 0");
+        this.statusLabel.addStyleClass("status");
+        progressRow.add([this.progressBar, this.statusLabel]);
+        progressRow.setHgrow(this.progressBar, "ALWAYS");
+
+        this.infoLabel = new Label("Idle - press Start to generate the docs into docs/.");
+        this.infoLabel.addStyleClass("info");
+
+        this.logArea = new TextArea();
+        this.logArea.setEditable(false);
+        this.logArea.setWrapText(false);
+        this.logArea.addStyleClass("log");
+
+        content.add([tiers, controls, progressRow, this.infoLabel, this.logArea]);
+        content.setVgrow(this.logArea, "ALWAYS");
+        root.setCenter(content);
+        return root;
+    }
+
+    /**
+     * Handles the button across the run: Start begins the build, and while a
+     * build is running the same button reads Stop and asks it to finish
+     * early.
+     * @p Evt is the button event.
+     */
+    public onStartStop(Evt = null) {
+        if (this.state == "idle") {
+            this.begin();
+        } else if (this.state == "running") {
+            this.core.stop();
+            this.startButton.setDisable(true);
+            this.startButton.setText("Stopping ...");
+            this.infoLabel.setText("Stopping - the files in hand will finish first.");
+            this.state = "stopping";
+        }
+    }
+
+    /**
+     * Starts the build on a background thread.
+     */
+    private begin() {
+        chosen = [];
+        if (this.untrustedBox.isSelected()) { chosen @= "untrusted"; }
+        if (this.trustedBox.isSelected()) { chosen @= "trusted"; }
+        if (this.dangerousBox.isSelected()) { chosen @= "dangerous"; }
+
+        this.core.setTiers(chosen);
+        n = this.threadChoice.getValue();
+        this.core.setNumThreads(n);
+
+        this.untrustedBox.setDisable(true);
+        this.trustedBox.setDisable(true);
+        this.dangerousBox.setDisable(true);
+        this.threadChoice.setDisable(true);
+        this.startButton.setText("Stop");
+        this.startButton.removeStyleClass("primary");
+        this.startButton.addStyleClass("stop");
+        this.infoLabel.setText("Generating with " + n + " worker threads ...");
+        this.state = "running";
+
+        this.worker = new Thread();
+        this.worker.setDaemon(true);
+        this.worker.setOnRun(::runBuild);
+        this.worker.start();
+    }
+
+    /**
+     * Runs the pipeline off the UI thread.
+     */
+    public runBuild() {
+        this.core.setup();
+        fx.runLater(::onSetupDone, this.core.getTotal());
+        this.core.build();
+        this.core.finish();
+        fx.runLater(::onBuildDone);
+    }
+
+    /**
+     * Shows the total once the work list is known.
+     * @p Total is an int with how many files will be written.
+     */
+    public onSetupDone(Total) {
+        this.statusLabel.setText("0 / " + Total);
+    }
+
+    /**
+     * Re-enables the window when the build finishes.
+     */
+    public onBuildDone() {
+        done = this.core.getCompleted();
+        this.startButton.removeStyleClass("stop");
+        this.startButton.addStyleClass("primary");
+        this.startButton.setText("Done");
+        this.startButton.setDisable(true);
+        if (this.core.isStopped()) {
+            this.infoLabel.setText("Stopped after " + done + " of "
+                + this.core.getTotal() + " files. Relaunch to run again.");
+        } else {
+            this.progressBar.setProgress(1.0);
+            this.infoLabel.setText("Wrote " + done
+                + " Markdown files to docs/. Relaunch to run again.");
+        }
+        this.state = "done";
+    }
+
+    /**
+     * Receives a log line from a worker thread.
+     * @p Level is a string with the level.
+     * @p Msg is a string with the message.
+     */
+    public onCoreLog(Level, Msg) {
+        fx.runLater(::appendLog, Level + ": " + Msg);
+    }
+
+    /**
+     * Receives progress from a worker thread.
+     * @p Done is an int with how many files are finished.
+     * @p Total is an int with how many there are.
+     * @p Rec is the DocRec that finished.
+     */
+    public onCoreItemComplete(Done, Total, Rec) {
+        fx.runLater(::updateProgress, Done, Total);
+    }
+
+    /**
+     * Appends a line to the log, on the UI thread.
+     * @p Line is a string with the line.
+     */
+    public appendLog(Line) {
+        this.logArea.appendText(Line + "\n");
+    }
+
+    /**
+     * Updates the bar and status, on the UI thread.
+     * @p Done is an int with how many files are finished.
+     * @p Total is an int with how many there are.
+     */
+    public updateProgress(Done, Total) {
+        if (Total > 0) {
+            this.progressBar.setProgress(Done.toDouble() / Total.toDouble());
+        }
+        this.statusLabel.setText("" + Done + " / " + Total);
+    }
+}

@@ -1,0 +1,34 @@
+/*
+ * Join and leave messages.
+ *
+ * Runs untrusted. Nothing here needs Java access.
+ */
+
+/**
+ * This class announces players joining and leaving.
+ */
+class Main {
+    /**
+     * Registers the two event handlers.
+     */
+    public main() {
+        events.on("PlayerJoinEvent", ::onJoin);
+        events.on("PlayerQuitEvent", ::onQuit);
+    }
+
+    /**
+     * Announces a player joining.
+     * @p Evt is the PlayerJoinEvent.
+     */
+    public onJoin(Evt) {
+        server.broadcast("[AussomCraft] " + Evt.getPlayer().getName() + " joined the server.");
+    }
+
+    /**
+     * Announces a player leaving.
+     * @p Evt is the PlayerQuitEvent.
+     */
+    public onQuit(Evt) {
+        server.broadcast("[AussomCraft] " + Evt.getPlayer().getName() + " left the server.");
+    }
+}

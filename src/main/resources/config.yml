@@ -1,0 +1,65 @@
+# AussomCraft configuration.
+
+watchdog:
+  # How long one handler run may take, in milliseconds, before it is
+  # cancelled. This bounds a runaway script; it does not prevent the stall,
+  # because the tick has already been held by the time it fires.
+  #
+  # One tick is 50ms. The default is five, which leaves room for the first
+  # run of a script: that one costs around 44ms in class loading and
+  # reflection before the JIT has seen the code, and a tighter budget kills
+  # handlers that are doing nothing wrong.
+  budget-ms: 250
+
+  # How many times a script may overrun before it is switched off. A script
+  # that overruns once has a bug; one that overruns every time is costing a
+  # tick each time.
+  max-cancels: 20
+
+  # How long a script's main may take when it loads, in milliseconds. A
+  # script does its setup once in main, so it is allowed to be slower than a
+  # handler, but it still has to finish: loading happens on the server
+  # thread, and a loop there would hang the server with nothing watching it.
+  load-budget-ms: 5000
+
+store:
+  # How much one script may keep in its store, in bytes. The store is held
+  # in memory and written to store.yml, and nothing else bounds how much a
+  # script saves: a handler can stay well inside its time budget while
+  # writing a little more every time it runs. A script cannot choose where
+  # that file goes, but without this it can decide how large it gets.
+  #
+  # One megabyte is room for tens of thousands of per-player entries.
+  max-bytes: 1048576
+
+commands:
+  # Command names a script may not register, unless it is dangerous.
+  #
+  # Bukkit already refuses a name another plugin owns, and scripts load after
+  # every plugin has registered, so a real owner always keeps its own
+  # commands. This covers what that does not: a sensitive name nobody happens
+  # to own on this server right now. A script could otherwise register
+  # "login" where no authentication plugin is installed, ask players to use
+  # it, and be handed what they type.
+  #
+  # These are the names that usually carry a password or a private message.
+  # Add your own if a plugin on your server owns something similar.
+  protected:
+    - login
+    - l
+    - register
+    - reg
+    - unregister
+    - changepassword
+    - changepass
+    - passwd
+    - password
+    - email
+    - msg
+    - tell
+    - whisper
+    - w
+    - m
+    - pm
+    - r
+    - reply

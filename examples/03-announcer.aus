@@ -1,0 +1,41 @@
+/*
+ * A scheduled announcer.
+ *
+ * Runs untrusted. One tick is a twentieth of a second, so 20 * 60 * 5 is
+ * five minutes.
+ */
+
+/**
+ * This class broadcasts a rotating message on a timer.
+ */
+class Main {
+    /** The messages to rotate through. */
+    public messages = [
+        "Remember to set your home with /sethome.",
+        "Be kind in chat.",
+        "Type /where to see your coordinates."
+    ];
+
+    /** Which message goes out next. */
+    public next = 0;
+
+    /**
+     * Starts the timer.
+     */
+    public main() {
+        // 20 ticks per second so this is 1 minute
+        sched.repeat(20 * 60 * 1, ::announce);
+    }
+
+    /**
+     * Broadcasts the next message and advances the counter. The counter is
+     * a member of this object, so it keeps its value between calls.
+     */
+    public announce() {
+        server.broadcast("[AussomCraft] " + this.messages[this.next]);
+        this.next = this.next + 1;
+        if (this.next >= this.messages.size()) {
+            this.next = 0;
+        }
+    }
+}
