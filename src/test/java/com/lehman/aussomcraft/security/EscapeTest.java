@@ -21,6 +21,7 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
 
 import java.io.InputStream;
 import java.nio.file.Files;
@@ -107,6 +108,37 @@ public class EscapeTest {
             log.err(String.valueOf(e.getMessage()));
         }
         return log.text();
+    }
+
+    /**
+     * Asserts a refusal came from the extern allowlist, and that the class
+     * it refused is still a real one.
+     *
+     * The gate matches on the name before the class is loaded, so a class
+     * that does not exist is refused with exactly the same message as one
+     * that does. The message alone therefore cannot tell a denial from a
+     * rename, which is why the class is loaded separately here. Without
+     * that, renaming a shim would leave this file refusing a name that is
+     * gone and passing on it. See design/lessons-learned.md, "A passing
+     * security test is not automatically evidence".
+     *
+     * @param Denial the message from refusal, or null when it was allowed
+     * @param Cls the binary name the script tried to bind
+     */
+    private void assertRefusedByExternGate(String Denial, String Cls) {
+        assertNotNull(Denial, "must not be able to name " + Cls);
+        assertTrue(Denial.contains("'" + Cls + "' is not permitted"),
+            "expected the extern allowlist to refuse " + Cls
+            + " by name, got: " + Denial);
+        assertTrue(Denial.contains("aussom.extern.allowed"),
+            "expected the refusal to name the 'aussom.extern.allowed' gate,"
+            + " got: " + Denial);
+        try {
+            Class.forName(Cls, false, LOADER);
+        } catch (ClassNotFoundException gone) {
+            fail(Cls + " no longer exists, so this test refuses a name that"
+                + " is gone and proves nothing. Point it at a current class.");
+        }
     }
 
     // ------------------------------------------------------------------
@@ -222,21 +254,20 @@ public class EscapeTest {
         "com.lehman.aussomcraft.paper.gen.dangerous.ServerShim",
     })
     public void untrustedCannotNameAnotherTiersShim(String Cls) throws Exception {
-        assertNotNull(refusal(engineFor(Profile.UNTRUSTED),
+        assertRefusedByExternGate(refusal(engineFor(Profile.UNTRUSTED),
             "extern class Escape : " + Cls + " {\n"
           + "    public extern setOp(A0);\n}\n"
-          + "class Main { public main() { return 0; } }\n"),
-            "untrusted must not be able to name " + Cls);
+          + "class Main { public main() { return 0; } }\n"), Cls);
     }
 
     /** Trusted cannot reach the dangerous shims either. */
     @Test
     public void trustedCannotNameTheDangerousShims() throws Exception {
-        assertNotNull(refusal(engineFor(Profile.TRUSTED),
-            "extern class Escape : com.lehman.aussomcraft.paper.gen.dangerous.ServerShim {\n"
+        String cls = "com.lehman.aussomcraft.paper.gen.dangerous.ServerShim";
+        assertRefusedByExternGate(refusal(engineFor(Profile.TRUSTED),
+            "extern class Escape : " + cls + " {\n"
           + "    public extern shutdown();\n}\n"
-          + "class Main { public main() { return 0; } }\n"),
-            "trusted must not be able to name the dangerous shims");
+          + "class Main { public main() { return 0; } }\n"), cls);
     }
 
     /**
@@ -251,10 +282,9 @@ public class EscapeTest {
     })
     public void noTierCanNameTheRuntime(String Cls) throws Exception {
         for (Profile p : Profile.values()) {
-            assertNotNull(refusal(engineFor(p),
+            assertRefusedByExternGate(refusal(engineFor(p),
                 "extern class Escape : " + Cls + " {\n}\n"
-              + "class Main { public main() { return 0; } }\n"),
-                p.getId() + " must not be able to name " + Cls);
+              + "class Main { public main() { return 0; } }\n"), Cls);
         }
     }
 
