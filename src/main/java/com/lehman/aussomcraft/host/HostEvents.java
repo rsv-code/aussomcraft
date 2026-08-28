@@ -132,7 +132,7 @@ public class HostEvents {
             EventPriority.NORMAL,
             (listener, event) -> {
                 AussomList cargs = new AussomList();
-                cargs.add(plugin.wrapEvent(ctx, event));
+                cargs.add(plugin.shimFor(ctx, event));
                 plugin.getRunner().run(ctx, cb, cargs, what);
             },
             plugin, ignoreCancelled);

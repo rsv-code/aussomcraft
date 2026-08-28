@@ -74,7 +74,7 @@ public class ProfilePolicyTest {
         SecurityManagerInt sm = p.newPolicy(LOADER);
         assertTrue(sm.getPropertyBoolean(AjiGate.ENFORCE, false),
             p.getId() + " must enforce the AJI allowlist");
-        assertTrue(sm.getPropertyBoolean(UntrustedPolicy.EXTERN_ENFORCE, false),
+        assertTrue(sm.getPropertyBoolean(ScriptPolicy.EXTERN_ENFORCE, false),
             p.getId() + " must enforce the extern allowlist");
     }
 
@@ -107,11 +107,11 @@ public class ProfilePolicyTest {
     @Test
     public void eachTierMayNameOnlyItsOwnShimPackage() {
         List<String> untrusted =
-            ((UntrustedPolicy) Profile.UNTRUSTED.newPolicy(LOADER)).getExternAllowed();
+            ((ScriptPolicy) Profile.UNTRUSTED.newPolicy(LOADER)).getExternAllowed();
         List<String> trusted =
-            ((UntrustedPolicy) Profile.TRUSTED.newPolicy(LOADER)).getExternAllowed();
+            ((ScriptPolicy) Profile.TRUSTED.newPolicy(LOADER)).getExternAllowed();
         List<String> dangerous =
-            ((UntrustedPolicy) Profile.DANGEROUS.newPolicy(LOADER)).getExternAllowed();
+            ((ScriptPolicy) Profile.DANGEROUS.newPolicy(LOADER)).getExternAllowed();
 
         assertEquals(
             List.of("com.aussom.stdlib.*", "com.aussom.types.*",
@@ -150,7 +150,7 @@ public class ProfilePolicyTest {
     @EnumSource(Profile.class)
     public void includesMayNotTraverseSymlinks(Profile p) {
         SecurityManagerInt sm = p.newPolicy(LOADER);
-        assertFalse(sm.getPropertyBoolean(UntrustedPolicy.SYMLINK_FOLLOW, true),
+        assertFalse(sm.getPropertyBoolean(ScriptPolicy.SYMLINK_FOLLOW, true),
             p.getId() + " must not follow symlinked includes");
     }
 

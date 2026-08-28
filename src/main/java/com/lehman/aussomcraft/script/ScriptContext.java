@@ -82,9 +82,6 @@ public class ScriptContext {
     /** This script's persistent store. */
     private final Map<String, Object> store = new ConcurrentHashMap<String, Object>();
 
-    /** True when the store has changed since it was last written. */
-    private volatile boolean storeDirty = false;
-
     /**
      * Roughly how many bytes the store holds, kept as writes happen.
      *
@@ -178,22 +175,6 @@ public class ScriptContext {
     /** @return this script's persistent store. */
     public Map<String, Object> getStore() {
         return this.store;
-    }
-
-    /** Marks the store as needing a write. */
-    public void markStoreDirty() {
-        this.storeDirty = true;
-    }
-
-    /**
-     * Clears the dirty flag and reports what it was.
-     *
-     * @return A boolean with true when the store needed writing.
-     */
-    public boolean clearStoreDirty() {
-        boolean was = this.storeDirty;
-        this.storeDirty = false;
-        return was;
     }
 
     /** @return true when this script has been switched off. */

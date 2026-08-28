@@ -82,12 +82,6 @@ public enum Profile {
      * @return A SecurityManagerInt carrying this profile's policy.
      */
     public SecurityManagerInt newPolicy(ClassLoader Loader) {
-        if (this == DANGEROUS) {
-            return new DangerousPolicy(Loader);
-        }
-        if (this == TRUSTED) {
-            return new TrustedPolicy(Loader);
-        }
-        return new UntrustedPolicy(Loader);
+        return new ScriptPolicy(Loader, this);
     }
 }

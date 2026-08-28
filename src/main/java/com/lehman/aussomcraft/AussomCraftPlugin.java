@@ -18,8 +18,6 @@ package com.lehman.aussomcraft;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
-import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
 import java.util.Locale;
 import java.util.ArrayList;
@@ -33,7 +31,6 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.YamlConfiguration;
-import org.bukkit.event.Event;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.aussom.types.AussomNull;
@@ -55,7 +52,7 @@ import com.lehman.aussomcraft.trust.TrustStore;
  *
  * @author Austin Lehman
  */
-public class AussomCraftPlugin extends JavaPlugin implements ScriptLoader.ModuleSource {
+public class AussomCraftPlugin extends JavaPlugin {
 
     /** Directory under the plugin's data folder where scripts live. */
     private static final String SCRIPT_DIR = "scripts";
@@ -116,10 +113,6 @@ public class AussomCraftPlugin extends JavaPlugin implements ScriptLoader.Module
     private Runner runner = null;
     private Watchdog watchdog = null;
 
-    /** Cached module source, read from the jar once. */
-    private String craftSource = null;
-    private String ajiSource = null;
-
     @Override
     public void onEnable() {
         // Every class name AJI resolves goes through this loader. The system
@@ -168,7 +161,7 @@ public class AussomCraftPlugin extends JavaPlugin implements ScriptLoader.Module
         this.protectedCommands.add("acraft");
         this.protectedCommands.add("ac");
         Path scriptDir = new File(this.getDataFolder(), SCRIPT_DIR).toPath();
-        this.loader = new ScriptLoader(scriptDir, this.trust, this, this.getLogger(),
+        this.loader = new ScriptLoader(scriptDir, this.trust, this.getLogger(),
             this.watchdog, loadBudget);
 
         AcraftCommand cmd = new AcraftCommand(this);
@@ -310,23 +303,12 @@ public class AussomCraftPlugin extends JavaPlugin implements ScriptLoader.Module
     }
 
     /**
-     * Wraps a Bukkit event for the script side.
-     *
-     * The event arrives as its generated shim, the same as any other Bukkit
-     * object. The shape deliberately does not change between profiles: only
-     * the method list on the shim differs, so a script written untrusted
-     * keeps working verbatim when it is elevated.
-     *
-     * @param Context the script the event is going to.
-     * @param TheEvent the event.
-     * @return An AussomType representing the event.
-     */
-    public AussomType wrapEvent(ScriptContext Context, Event TheEvent) {
-        return this.shimFor(Context, TheEvent);
-    }
-
-    /**
      * Wraps a Bukkit object in its generated shim.
+     *
+     * An event goes through here too, the same as any other Bukkit object.
+     * The shape deliberately does not change between profiles: only the
+     * method list on the shim differs, so a script written untrusted keeps
+     * working verbatim when it is elevated.
      *
      * The shim is looked up by the object's simple type name, which is what
      * the generator names its classes after. A tier that does not have that
@@ -395,35 +377,6 @@ public class AussomCraftPlugin extends JavaPlugin implements ScriptLoader.Module
     /** @return the directory scripts are read from. */
     public File getScriptDir() {
         return new File(this.getDataFolder(), SCRIPT_DIR);
-    }
-
-    @Override
-    public String craft() {
-        if (this.craftSource == null) {
-            this.craftSource = this.resource("/com/lehman/aussomcraft/aus/craft.aus");
-        }
-        return this.craftSource;
-    }
-
-    @Override
-    public String aji() {
-        if (this.ajiSource == null) {
-            this.ajiSource = this.resource("/com/lehman/aussomcraft/aus/aji.aus");
-        }
-        return this.ajiSource;
-    }
-
-    private String resource(String Name) {
-        try (InputStream in = this.getClass().getResourceAsStream(Name)) {
-            if (in == null) {
-                this.getLogger().severe("Missing bundled module '" + Name + "'.");
-                return "";
-            }
-            return new String(in.readAllBytes(), StandardCharsets.UTF_8);
-        } catch (IOException e) {
-            this.getLogger().severe("Could not read bundled module '" + Name + "'.");
-            return "";
-        }
     }
 
     /**
@@ -536,7 +489,6 @@ public class AussomCraftPlugin extends JavaPlugin implements ScriptLoader.Module
 
         boolean any = false;
         for (ScriptContext ctx : this.scripts.values()) {
-            ctx.clearStoreDirty();
             // Cleared unconditionally, so emptying a store persists. Writing
             // only non-empty stores left the old section on disk, and a
             // script that deleted a key got it back after a restart.

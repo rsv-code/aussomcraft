@@ -18,6 +18,7 @@ package com.lehman.aussomcraft.script;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
@@ -62,22 +63,19 @@ public class ScriptLoader {
     /** Where load messages go. */
     private final Logger log;
 
-    /** The Aussom source of the modules every script may include. */
-    private final ModuleSource modules;
-
     /**
      * Builds a loader.
      *
      * @param ScriptDir is the directory scripts are read from.
      * @param Trust is the grant store.
-     * @param Modules is the source of craft.aus and aji.aus.
      * @param Log is where load messages go.
+     * @param Dog is the watchdog bounding the one run of main.
+     * @param LoadBudgetMs is how long main may take.
      */
-    public ScriptLoader(Path ScriptDir, TrustStore Trust, ModuleSource Modules,
+    public ScriptLoader(Path ScriptDir, TrustStore Trust,
             Logger Log, Watchdog Dog, long LoadBudgetMs) {
         this.scriptDir = ScriptDir;
         this.trust = Trust;
-        this.modules = Modules;
         this.log = Log;
         this.watchdog = Dog;
         this.loadBudgetMs = LoadBudgetMs;
@@ -118,20 +116,6 @@ public class ScriptLoader {
         }
         Collections.sort(out);
         return out;
-    }
-
-    /**
-     * Loads one script: hashes it, looks up its grant, builds an engine
-     * under that profile, parses it and runs main().
-     *
-     * @param ScriptPath is the file to load.
-     * @param Forced is a profile to use instead of the granted one, or null
-     *        to use the grant. Only the run command passes one, and only
-     *        behind a permission.
-     * @return A ScriptContext, or null when the script failed to load.
-     */
-    public ScriptContext load(Path ScriptPath, Profile Forced) {
-        return this.load(ScriptPath, Forced, null);
     }
 
     /**
@@ -181,9 +165,9 @@ public class ScriptLoader {
         // Modules are registered one at a time rather than through a shared
         // resource include path. A shared path would make aji.aus findable
         // on an untrusted engine, and the point is that it is not there.
-        host.addModule("craft.aus", this.modules.craft());
+        host.addModule("craft.aus", module("craft.aus"));
         if (profile == Profile.DANGEROUS) {
-            host.addModule("aji.aus", this.modules.aji());
+            host.addModule("aji.aus", module("aji.aus"));
         }
 
         // The generated Paper API for this tier. Registering is cheap; only
@@ -201,7 +185,6 @@ public class ScriptLoader {
         if (InitialStore != null) {
             ctx.getStore().putAll(InitialStore);
             ctx.recountStore();
-            ctx.clearStoreDirty();
         }
 
         try {
@@ -355,17 +338,24 @@ public class ScriptLoader {
     }
 
     /**
-     * Where the loader gets the Aussom source of the host modules.
+     * The Aussom source of a host module, read from this jar.
      *
-     * An interface so a test can supply the modules from anywhere rather
-     * than needing them on the classpath in a particular place.
+     * @param Name is the module file name, such as craft.aus.
+     * @return A String with its source, or an empty one when it is missing.
      */
-    public interface ModuleSource {
-        /** @return the Aussom source of craft.aus. */
-        String craft();
-
-        /** @return the Aussom source of aji.aus. */
-        String aji();
+    private String module(String Name) {
+        String path = "/com/lehman/aussomcraft/aus/" + Name;
+        try (InputStream in = ScriptLoader.class.getResourceAsStream(path)) {
+            if (in == null) {
+                this.log.severe("Missing bundled module '" + Name + "'.");
+                return "";
+            }
+            return new String(in.readAllBytes(), StandardCharsets.UTF_8);
+        } catch (IOException e) {
+            this.log.severe("Could not read bundled module '" + Name + "': "
+                + e.getMessage());
+            return "";
+        }
     }
 
     /**

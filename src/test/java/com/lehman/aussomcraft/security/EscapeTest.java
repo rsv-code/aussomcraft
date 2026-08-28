@@ -24,9 +24,12 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 
 import java.io.InputStream;
+import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.Locale;
 
 import org.junit.jupiter.api.Test;
@@ -37,8 +40,11 @@ import org.junit.jupiter.params.provider.EnumSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import com.aussom.Engine;
+import com.aussom.Environment;
 import com.aussom.LoggingInt;
+import com.aussom.types.AussomType;
 
+import com.lehman.aussomcraft.host.Host;
 import com.lehman.aussomcraft.paper.PaperModules;
 import com.lehman.aussomcraft.profile.Profile;
 
@@ -285,6 +291,74 @@ public class EscapeTest {
             assertRefusedByExternGate(refusal(engineFor(p),
                 "extern class Escape : " + Cls + " {\n}\n"
               + "class Main { public main() { return 0; } }\n"), Cls);
+        }
+    }
+
+    // ------------------------------------------------------------------
+    // The host package, which every tier's allowlist grants in full
+    // ------------------------------------------------------------------
+
+    /**
+     * Host is nameable at every tier and must still yield nothing.
+     *
+     * The extern allowlist grants 'com.lehman.aussomcraft.host.*' at every
+     * tier, because the five Host* classes the script API is made of live
+     * there. Host itself is in that package and holds the static plugin
+     * handle, so reaching setPlugin would repoint every extern on the
+     * server, and plugin() would hand a script the plugin itself.
+     *
+     * Two separate things stop that. The class is final with a private
+     * constructor, and none of its methods matches the extern calling
+     * convention. This pins the first; hostExposesNoExternCallableMethods
+     * pins the second. The assertion names the private constructor rather
+     * than accepting any failure, because a misspelled class would fail too
+     * and would prove nothing.
+     */
+    @ParameterizedTest
+    @EnumSource(Profile.class)
+    public void hostItselfCannotBeConstructed(Profile p) throws Exception {
+        String out = runCapturing(engineFor(p),
+            "extern class H : com.lehman.aussomcraft.host.Host {\n"
+          + "    public extern setPlugin(A0);\n}\n"
+          + "class Main { public main() {\n"
+          + "  h = new H();\n"
+          + "  h.setPlugin(null);\n"
+          + "  return 0;\n} }\n");
+        assertTrue(out.contains("INSTANTIATION_FAILURE"),
+            p.getId() + " must not be able to construct Host. Got: " + out);
+        assertTrue(out.contains("private"),
+            p.getId() + " must fail on Host's private constructor, not on"
+            + " something else. Got: " + out);
+    }
+
+    /**
+     * No method on Host is reachable from a script.
+     *
+     * A script calls an extern method only when its Java signature is
+     * (Environment, ArrayList) returning AussomType. Host's methods are host
+     * side helpers and none has that shape, which is what keeps setPlugin
+     * and plugin() out of reach even though the class is on the allowlist.
+     *
+     * Structural rather than behavioural on purpose: it fails the moment
+     * somebody adds an extern shaped method to Host, which is the change
+     * that would open this up, rather than waiting for a script to exploit
+     * it.
+     */
+    @Test
+    public void hostExposesNoExternCallableMethods() {
+        for (Method m : Host.class.getDeclaredMethods()) {
+            if (!Modifier.isPublic(m.getModifiers())) {
+                continue;
+            }
+            Class<?>[] params = m.getParameterTypes();
+            boolean externShaped = params.length == 2
+                && params[0] == Environment.class
+                && params[1] == ArrayList.class
+                && m.getReturnType() == AussomType.class;
+            assertFalse(externShaped, "Host." + m.getName() + " is extern callable,"
+                + " so any script naming com.lehman.aussomcraft.host.Host could call"
+                + " it. Host holds the static plugin handle. Move this method onto"
+                + " one of the Host* classes or stop it being public.");
         }
     }
 

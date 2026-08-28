@@ -106,7 +106,6 @@ public class HostStore {
         AussomType value = args.get(1);
         if (value.isNull()) {
             ctx.getStore().remove(key);
-            ctx.markStoreDirty();
             return new AussomBool(true);
         }
         Object plain = Host.toJava(value);
@@ -138,7 +137,6 @@ public class HostStore {
 
         ctx.getStore().put(key, plain);
         ctx.addStoreBytes(now - was + keyCost);
-        ctx.markStoreDirty();
         return new AussomBool(true);
     }
 
@@ -162,7 +160,6 @@ public class HostStore {
         boolean had = gone != null;
         if (had) {
             ctx.addStoreBytes(-(Host.sizeOf(gone) + Host.sizeOf(key)));
-            ctx.markStoreDirty();
         }
         return new AussomBool(had);
     }

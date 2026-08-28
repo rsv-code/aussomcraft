@@ -16,7 +16,9 @@
 
 package com.lehman.aussomcraft.script;
 
+import java.util.ArrayList;
 import java.util.Deque;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedDeque;
@@ -53,8 +55,20 @@ public class Watchdog {
      * script could hang the server for good by looping after a nested call
      * returned.
      */
-    private final Map<ScriptContext, Deque<Long>> inFlight =
-        new ConcurrentHashMap<ScriptContext, Deque<Long>>();
+    private final Map<ScriptContext, Deque<Run>> inFlight =
+        new ConcurrentHashMap<ScriptContext, Deque<Run>>();
+
+    /**
+     * One run in flight: when it started, and what it is allowed.
+     *
+     * The budget travels with the run rather than in a map of its own,
+     * because main is allowed more time than a handler and that is the only
+     * thing that differs about it.
+     *
+     * @param startNanos is System.nanoTime when the run began.
+     * @param budgetNanos is how long this run may take.
+     */
+    private record Run(long startNanos, long budgetNanos) { }
 
     /** How long one run may take, in milliseconds. */
     private final long budgetMs;
@@ -113,15 +127,7 @@ public class Watchdog {
      * @param Context is the script being run.
      */
     public void enter(ScriptContext Context) {
-        Deque<Long> stack = this.inFlight.get(Context);
-        if (stack == null) {
-            stack = new ConcurrentLinkedDeque<Long>();
-            Deque<Long> raced = this.inFlight.putIfAbsent(Context, stack);
-            if (raced != null) {
-                stack = raced;
-            }
-        }
-        stack.addLast(Long.valueOf(System.nanoTime()));
+        this.enterWith(Context, this.budgetMs);
     }
 
     /**
@@ -135,18 +141,20 @@ public class Watchdog {
      * @param Context is the script being run.
      */
     public void excuse(ScriptContext Context) {
-        Deque<Long> stack = this.inFlight.get(Context);
+        Deque<Run> stack = this.inFlight.get(Context);
         if (stack == null) {
             return;
         }
         // Every run in flight waited on the same host work, including the
-        // outer ones, so they are all forgiven the same amount.
-        Long now = Long.valueOf(System.nanoTime());
-        int depth = stack.size();
-        stack.clear();
-        for (int i = 0; i < depth; i++) {
-            stack.addLast(now);
+        // outer ones, so they are all forgiven the same amount. Each keeps
+        // the budget it entered with.
+        long now = System.nanoTime();
+        List<Run> restarted = new ArrayList<Run>();
+        for (Run r : stack) {
+            restarted.add(new Run(now, r.budgetNanos()));
         }
+        stack.clear();
+        stack.addAll(restarted);
     }
 
     /**
@@ -157,12 +165,11 @@ public class Watchdog {
      * @return A boolean with true when this run was cancelled.
      */
     public boolean exit(ScriptContext Context) {
-        Deque<Long> stack = this.inFlight.get(Context);
+        Deque<Run> stack = this.inFlight.get(Context);
         if (stack != null) {
             stack.pollLast();
             if (stack.isEmpty()) {
                 this.inFlight.remove(Context);
-                this.special.remove(Context);
             }
         }
         boolean cancelled = Context.getHost().isCancelled();
@@ -208,27 +215,25 @@ public class Watchdog {
      * @param BudgetMs is how long this particular run may take.
      */
     public void enterWith(ScriptContext Context, long BudgetMs) {
-        this.enter(Context);
-        this.special.put(Context, Long.valueOf(BudgetMs));
+        Deque<Run> stack = this.inFlight.get(Context);
+        if (stack == null) {
+            stack = new ConcurrentLinkedDeque<Run>();
+            Deque<Run> raced = this.inFlight.putIfAbsent(Context, stack);
+            if (raced != null) {
+                stack = raced;
+            }
+        }
+        stack.addLast(new Run(System.nanoTime(), BudgetMs * 1000000L));
     }
-
-    /** Budgets that differ from the standard one, by script. */
-    private final Map<ScriptContext, Long> special =
-        new ConcurrentHashMap<ScriptContext, Long>();
 
     private void watch() {
         while (this.running) {
             long now = System.nanoTime();
-            for (Map.Entry<ScriptContext, Deque<Long>> e : this.inFlight.entrySet()) {
-                long budgetNanos = this.budgetMs * 1000000L;
-                Long own = this.special.get(e.getKey());
-                if (own != null) {
-                    budgetNanos = own.longValue() * 1000000L;
-                }
+            for (Map.Entry<ScriptContext, Deque<Run>> e : this.inFlight.entrySet()) {
                 // The oldest start is the outermost run, so this bounds the
                 // whole nest rather than only the innermost call.
-                Long oldest = e.getValue().peekFirst();
-                if (oldest != null && now - oldest.longValue() > budgetNanos) {
+                Run oldest = e.getValue().peekFirst();
+                if (oldest != null && now - oldest.startNanos() > oldest.budgetNanos()) {
                     // cancel() is idempotent and the run clears it on
                     // the way out, so raising it again on the next sweep of
                     // a still-running handler is harmless.
