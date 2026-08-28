@@ -25,7 +25,7 @@
         <maven.compiler.release>25</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <aussom.base.version>1.4.5</aussom.base.version>
+        <aussom.base.version>1.4.7</aussom.base.version>
         <paper.api.version>26.2.build.112-stable</paper.api.version>
         <mockbukkit.version>4.116.1</mockbukkit.version>
         <junit.version>5.11.4</junit.version>

@@ -16,7 +16,7 @@ mvn dependency:list -DincludeScope=runtime
 
 | Library | Version | License |
 |---|---|---|
-| [aussom.base](https://gitlab.com/cupofcode/aussom) | 1.4.5 | Apache License 2.0 |
+| [aussom.base](https://gitlab.com/cupofcode/aussom) | 1.4.7 | Apache License 2.0 |
 | [Apache Commons CLI](https://commons.apache.org/proper/commons-cli/) | 1.11.0 | Apache License 2.0 |
 | [Apache Commons Codec](https://commons.apache.org/proper/commons-codec/) | 1.22.1 | Apache License 2.0 |
 | [json-simple](https://code.google.com/archive/p/json-simple/) | 1.1.1 | Apache License 2.0 |
@@ -26,6 +26,16 @@ The Apache License 2.0 text is in the LICENSE file at the root of this
 project and in META-INF/LICENSE inside the jar. The NOTICE files of the
 Apache licensed libraries above are merged into META-INF/NOTICE inside the
 jar at build time.
+
+aussom.base 1.4.7 carries two files of its own. META-INF/LICENSE.txt is the
+Apache 2.0 text, and META-INF/THIRD-PARTY-NOTICES.txt covers the four
+libraries it brings with it. No shade transformer claims either path, so
+both travel into this jar unchanged and sit alongside the merged NOTICE.
+
+Three of the bundled libraries write META-INF/LICENSE.txt and the shade
+keeps one of them. That is harmless because all three are the same Apache
+2.0 text. This project's own copy is at META-INF/LICENSE, which is a
+different path, so nothing can displace it.
 
 ## Compiled against, not redistributed
 
