@@ -108,14 +108,6 @@ Tier: trusted. Do not edit.
 	- **@r** `A` [FurnaceRecipe](FurnaceRecipe.aus.md).
 
 
-- **setInput\_MaterialData** (`Input`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/FurnaceRecipe.html#setInput(org.bukkit.material.MaterialData)
-
-	- **@p** `Input` is a [MaterialData](MaterialData.aus.md).
-	- **@r** `A` [FurnaceRecipe](FurnaceRecipe.aus.md).
-
-
 - **setInput** (`Input, Data`)
 
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/FurnaceRecipe.html#setInput(org.bukkit.Material,int)

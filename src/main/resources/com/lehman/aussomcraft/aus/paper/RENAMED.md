@@ -11,7 +11,7 @@ given.
 Suffixes come from parameter names where those tell the group apart,
 and from parameter types where they do not.
 
-Total renamed: 7836
+Total renamed: 7820
 
 ```
 AbstractArrow.hasPermission(Permission)  ->  hasPermission_perm
@@ -2968,8 +2968,6 @@ FurnaceInventory.first(Material)  ->  first_material
 FurnaceInventory.first(Material)  ->  first_material
 FurnaceInventory.remove(Material)  ->  remove_material
 FurnaceInventory.remove(Material)  ->  remove_material
-FurnaceRecipe.setInput(MaterialData)  ->  setInput_MaterialData
-FurnaceRecipe.setInput(MaterialData)  ->  setInput_MaterialData
 Gate.isSupported(Location)  ->  isSupported_location
 Gate.isSupported(Location)  ->  isSupported_location
 Ghast.damage(double, Entity)  ->  damage_amount_source
@@ -5821,34 +5819,24 @@ Server.sendPlayerListHeaderAndFooter(ComponentLike, ComponentLike)  ->  sendPlay
 Server.unloadWorld(World, boolean)  ->  unloadWorld_world_save
 ShapedRecipe.setIngredient(char, Material)  ->  setIngredient_char_Material
 ShapedRecipe.setIngredient(char, Material)  ->  setIngredient_char_Material
-ShapedRecipe.setIngredient(char, MaterialData)  ->  setIngredient_char_MaterialData
-ShapedRecipe.setIngredient(char, MaterialData)  ->  setIngredient_char_MaterialData
 ShapedRecipe.setIngredient(char, RecipeChoice)  ->  setIngredient_char_RecipeChoice
 ShapedRecipe.setIngredient(char, RecipeChoice)  ->  setIngredient_char_RecipeChoice
 ShapelessRecipe.addIngredient(Material)  ->  addIngredient_Material
 ShapelessRecipe.addIngredient(Material)  ->  addIngredient_Material
-ShapelessRecipe.addIngredient(MaterialData)  ->  addIngredient_MaterialData
-ShapelessRecipe.addIngredient(MaterialData)  ->  addIngredient_MaterialData
 ShapelessRecipe.addIngredient(RecipeChoice)  ->  addIngredient_RecipeChoice
 ShapelessRecipe.addIngredient(RecipeChoice)  ->  addIngredient_RecipeChoice
-ShapelessRecipe.addIngredient(int, ItemStack)  ->  addIngredient_int_ItemStack
-ShapelessRecipe.addIngredient(int, ItemStack)  ->  addIngredient_int_ItemStack
-ShapelessRecipe.addIngredient(int, Material)  ->  addIngredient_int_Material
-ShapelessRecipe.addIngredient(int, Material)  ->  addIngredient_int_Material
-ShapelessRecipe.addIngredient(int, MaterialData)  ->  addIngredient_int_MaterialData
-ShapelessRecipe.addIngredient(int, MaterialData)  ->  addIngredient_int_MaterialData
+ShapelessRecipe.addIngredient(int, ItemStack)  ->  addIngredient_count_item
+ShapelessRecipe.addIngredient(int, ItemStack)  ->  addIngredient_count_item
+ShapelessRecipe.addIngredient(int, Material)  ->  addIngredient_count_ingredient
+ShapelessRecipe.addIngredient(int, Material)  ->  addIngredient_count_ingredient
 ShapelessRecipe.removeIngredient(Material)  ->  removeIngredient_Material
 ShapelessRecipe.removeIngredient(Material)  ->  removeIngredient_Material
-ShapelessRecipe.removeIngredient(MaterialData)  ->  removeIngredient_MaterialData
-ShapelessRecipe.removeIngredient(MaterialData)  ->  removeIngredient_MaterialData
 ShapelessRecipe.removeIngredient(RecipeChoice)  ->  removeIngredient_RecipeChoice
 ShapelessRecipe.removeIngredient(RecipeChoice)  ->  removeIngredient_RecipeChoice
-ShapelessRecipe.removeIngredient(int, ItemStack)  ->  removeIngredient_int_ItemStack
-ShapelessRecipe.removeIngredient(int, ItemStack)  ->  removeIngredient_int_ItemStack
-ShapelessRecipe.removeIngredient(int, Material)  ->  removeIngredient_int_Material
-ShapelessRecipe.removeIngredient(int, Material)  ->  removeIngredient_int_Material
-ShapelessRecipe.removeIngredient(int, MaterialData)  ->  removeIngredient_int_MaterialData
-ShapelessRecipe.removeIngredient(int, MaterialData)  ->  removeIngredient_int_MaterialData
+ShapelessRecipe.removeIngredient(int, ItemStack)  ->  removeIngredient_count_item
+ShapelessRecipe.removeIngredient(int, ItemStack)  ->  removeIngredient_count_item
+ShapelessRecipe.removeIngredient(int, Material)  ->  removeIngredient_count_ingredient
+ShapelessRecipe.removeIngredient(int, Material)  ->  removeIngredient_count_ingredient
 Shearable.hasPermission(Permission)  ->  hasPermission_perm
 Shearable.isPermissionSet(Permission)  ->  isPermissionSet_perm
 Shearable.sendActionBar(ComponentLike)  ->  sendActionBar_ComponentLike
@@ -7106,8 +7094,6 @@ Turtle.teleport(Location, TeleportCause)  ->  teleport_location_cause
 Turtle.teleport(Location, TeleportCause)  ->  teleport_location_cause
 TurtleEgg.isSupported(Location)  ->  isSupported_location
 TurtleEgg.isSupported(Location)  ->  isSupported_location
-UnsafeValues.fromLegacy(MaterialData)  ->  fromLegacy_MaterialData
-UnsafeValues.fromLegacy(MaterialData, boolean)  ->  fromLegacy_material_itempriority
 Vault.isSupported(Location)  ->  isSupported_location
 Vault.isSupported(Location)  ->  isSupported_location
 Vector.multiply(Vector)  ->  multiply_Vector
@@ -7642,8 +7628,6 @@ World.setBlockData(Vector, BlockData)  ->  setBlockData_Vector_BlockData
 World.setBlockData(Vector, BlockData)  ->  setBlockData_Vector_BlockData
 World.spawnEntity(Location, EntityType, SpawnReason)  ->  spawnEntity_loc_type_reason
 World.spawnEntity(Location, EntityType, SpawnReason)  ->  spawnEntity_loc_type_reason
-World.spawnFallingBlock(Location, MaterialData)  ->  spawnFallingBlock_Location_MaterialData
-World.spawnFallingBlock(Location, MaterialData)  ->  spawnFallingBlock_Location_MaterialData
 World.spawnParticle(Particle, Location, int, double, double, double, Object)  ->  spawnParticle_particle_location_count_offsetx_offsety_offsetz_data
 World.spawnParticle(Particle, Location, int, double, double, double, Object)  ->  spawnParticle_particle_location_count_offsetx_offsety_offsetz_data
 World.spawnParticle(Particle, Location, int, double, double, double, double, Object)  ->  spawnParticle_Particle_Location_int_double_double_double_double_Object

@@ -110,7 +110,7 @@ extern class Location : com.lehman.aussomcraft.paper.gen.trusted.LocationShim {
     /**
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/Location.html#addRotation(io.papermc.paper.math.Rotation)
      *
-     * @p Rotation is a [Rotation](Rotation.aus.md).
+     * @p Rotation is a MathRotation.
      * @r A [Location](Location.aus.md).
      */
     public extern addRotation(Rotation);
@@ -348,7 +348,7 @@ extern class Location : com.lehman.aussomcraft.paper.gen.trusted.LocationShim {
     /**
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/Location.html#getRotation()
      *
-     * @r A [Rotation](Rotation.aus.md).
+     * @r A MathRotation.
      */
     public extern getRotation();
 
@@ -502,7 +502,7 @@ extern class Location : com.lehman.aussomcraft.paper.gen.trusted.LocationShim {
     /**
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/Location.html#setRotation(io.papermc.paper.math.Rotation)
      *
-     * @p Rotation is a [Rotation](Rotation.aus.md).
+     * @p Rotation is a MathRotation.
      * @r A [Location](Location.aus.md).
      */
     public extern setRotation(Rotation);
@@ -591,7 +591,7 @@ extern class Location : com.lehman.aussomcraft.paper.gen.trusted.LocationShim {
     /**
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/Location.html#subtractRotation(io.papermc.paper.math.Rotation)
      *
-     * @p Rotation is a [Rotation](Rotation.aus.md).
+     * @p Rotation is a MathRotation.
      * @r A [Location](Location.aus.md).
      */
     public extern subtractRotation(Rotation);

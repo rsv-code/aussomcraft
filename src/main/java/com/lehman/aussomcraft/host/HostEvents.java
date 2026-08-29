@@ -121,8 +121,13 @@ public class HostEvents {
         // succeeded and an untrusted script read a staff channel through the
         // module for public chat.
         String tier = ctx.getProfile().getId();
-        if (!PaperModules.grantsClass(tier, cls.getName())
-                || !PaperModules.includeType(ctx.getHost(), tier, cls.getSimpleName())) {
+        // Both by binary name. Six Paper event types share a simple name
+        // with a Bukkit one, so asking by simple name would include the
+        // other type's module: subscribing to Paper's BellRingEvent would
+        // define Bukkit's.
+        String as = PaperModules.ausNameOf(tier, cls.getName());
+        if (as == null || !PaperModules.grantsClass(tier, cls.getName())
+                || !PaperModules.includeType(ctx.getHost(), tier, as)) {
             return new AussomException("events.on(): '" + name + "' is not available"
                 + " at the " + tier + " tier.");
         }

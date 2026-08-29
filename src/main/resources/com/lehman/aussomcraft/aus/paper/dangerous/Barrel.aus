@@ -6,12 +6,13 @@
  */
 
 /**
- * Generated shim for org.bukkit.block.data.type.Barrel.
+ * Generated shim for org.bukkit.block.Barrel.
  *
- * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Barrel.html
+ * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html
  *
- * In Paper this is a [Directional](Directional.aus.md) and
- * [Openable](Openable.aus.md).
+ * In Paper this is a [Container](Container.aus.md),
+ * [LootableBlockInventory](LootableBlockInventory.aus.md) and
+ * [Lidded](Lidded.aus.md).
  * Every method it inherits is declared here too, so there is
  * nothing to follow up to.
  *
@@ -21,234 +22,474 @@ extern class Barrel : com.lehman.aussomcraft.paper.gen.dangerous.BarrelShim {
     public extern __opEq__(A0);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Barrel.html#clone()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#canPlayerLoot(java.util.UUID)
      *
-     * @r A [BlockData](BlockData.aus.md).
+     * @p Player is a string.
+     * @r A bool.
      */
-    public extern clone();
+    public extern canPlayerLoot(Player);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Barrel.html#copyTo(org.bukkit.block.data.BlockData)
-     *
-     * @p Other is a [BlockData](BlockData.aus.md).
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#clearLootTable()
      */
-    public extern copyTo(Other);
+    public extern clearLootTable();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Barrel.html#createBlockState()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#close()
+     */
+    public extern close();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#copy()
      *
      * @r A [BlockState](BlockState.aus.md).
      */
-    public extern createBlockState();
+    public extern copy();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Barrel.html#getAsString()
-     *
-     * @r A string.
-     */
-    public extern getAsString();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Barrel.html#getAsString(boolean)
-     *
-     * @p HideUnspecified is a bool.
-     * @r A string.
-     */
-    public extern getAsString(HideUnspecified);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Barrel.html#getCollisionShape(org.bukkit.Location)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#copy(org.bukkit.Location)
      *
      * @p Location is a [Location](Location.aus.md).
-     * @r A [VoxelShape](VoxelShape.aus.md).
+     * @r A [BlockState](BlockState.aus.md).
      */
-    public extern getCollisionShape(Location);
+    public extern copy(Location);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Barrel.html#getDestroySpeed(org.bukkit.inventory.ItemStack)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#customName()
      *
-     * @p ItemStack is an [ItemStack](ItemStack.aus.md).
-     * @r A double.
+     * @r A Component.
      */
-    public extern getDestroySpeed(ItemStack);
+    public extern customName();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Barrel.html#getDestroySpeed(org.bukkit.inventory.ItemStack,boolean)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#customName(net.kyori.adventure.text.Component)
      *
-     * @p ItemStack is an [ItemStack](ItemStack.aus.md).
-     * @p ConsiderEnchants is a bool.
-     * @r A double.
+     * @p CustomName is a Component.
      */
-    public extern getDestroySpeed(ItemStack, ConsiderEnchants);
+    public extern customName(CustomName);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Barrel.html#getFaces()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#getBlock()
+     *
+     * @r A [Block](Block.aus.md).
+     */
+    public extern getBlock();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#getBlockData()
+     *
+     * @r A [BlockData](BlockData.aus.md).
+     */
+    public extern getBlockData();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#getChunk()
+     *
+     * @r A [Chunk](Chunk.aus.md).
+     */
+    public extern getChunk();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#getCustomName()
+     *
+     * @r A string.
+     */
+    public extern getCustomName();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#getDrops()
      *
      * @r A list.
      */
-    public extern getFaces();
+    public extern getDrops();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Barrel.html#getFacing()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#getDrops(org.bukkit.inventory.ItemStack)
      *
-     * @r A string naming a [BlockFace](BlockFace.aus.md).
+     * @p Tool is an [ItemStack](ItemStack.aus.md).
+     * @r A list.
      */
-    public extern getFacing();
+    public extern getDrops(Tool);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Barrel.html#getLightEmission()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#getDrops(org.bukkit.inventory.ItemStack,org.bukkit.entity.Entity)
+     *
+     * @p Tool is an [ItemStack](ItemStack.aus.md).
+     * @p Entity is an [Entity](Entity.aus.md).
+     * @r A list.
+     */
+    public extern getDrops(Tool, Entity);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#getInventory()
+     *
+     * @r An [Inventory](Inventory.aus.md).
+     */
+    public extern getInventory();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#getLastFilled()
      *
      * @r An int.
      */
-    public extern getLightEmission();
+    public extern getLastFilled();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Barrel.html#getMapColor()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#getLastLooted(org.bukkit.entity.Player)
      *
-     * @r A [Color](Color.aus.md).
+     * @p Player is a [Player](Player.aus.md).
+     * @r An int.
      */
-    public extern getMapColor();
+    public extern getLastLooted(Player);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Barrel.html#getMaterial()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#getLastLooted(java.util.UUID)
+     *
+     * @p Player is a string.
+     * @r An int.
+     */
+    public extern getLastLooted_UUID(Player);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#getLightLevel()
+     *
+     * @r An int.
+     */
+    public extern getLightLevel();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#getLocation()
+     *
+     * @r A [Location](Location.aus.md).
+     */
+    public extern getLocation();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#getLocation(org.bukkit.Location)
+     *
+     * @p Loc is a [Location](Location.aus.md).
+     * @r A [Location](Location.aus.md).
+     */
+    public extern getLocation(Loc);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#getLock()
+     *
+     * @r A string.
+     */
+    public extern getLock();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#getLootTable()
+     *
+     * @r A [LootTable](LootTable.aus.md).
+     */
+    public extern getLootTable();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#getMetadata(java.lang.String)
+     *
+     * @p MetadataKey is a string.
+     * @r A list.
+     */
+    public extern getMetadata(MetadataKey);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#getNextRefill()
+     *
+     * @r An int.
+     */
+    public extern getNextRefill();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#getPersistentDataContainer()
+     *
+     * @r A [PersistentDataContainer](PersistentDataContainer.aus.md).
+     */
+    public extern getPersistentDataContainer();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#getRawData()
+     *
+     * @r An int.
+     */
+    public extern getRawData();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#getSeed()
+     *
+     * @r An int.
+     */
+    public extern getSeed();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#getSnapshotInventory()
+     *
+     * @r An [Inventory](Inventory.aus.md).
+     */
+    public extern getSnapshotInventory();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#getType()
      *
      * @r A string naming a [Material](Material.aus.md).
      */
-    public extern getMaterial();
+    public extern getType();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Barrel.html#getPistonMoveReaction()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#getWorld()
      *
-     * @r A string naming a
-     * [PistonMoveReaction](PistonMoveReaction.aus.md).
+     * @r A [World](World.aus.md).
      */
-    public extern getPistonMoveReaction();
+    public extern getWorld();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Barrel.html#getPlacementMaterial()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#getX()
      *
-     * @r A string naming a [Material](Material.aus.md).
+     * @r An int.
      */
-    public extern getPlacementMaterial();
+    public extern getX();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Barrel.html#getSoundGroup()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#getY()
      *
-     * @r A [SoundGroup](SoundGroup.aus.md).
+     * @r An int.
      */
-    public extern getSoundGroup();
+    public extern getY();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Barrel.html#isFaceSturdy(org.bukkit.block.BlockFace,org.bukkit.block.BlockSupport)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#getZ()
      *
-     * @p Face is a string naming a [BlockFace](BlockFace.aus.md).
-     * @p Support is a string naming a
-     * [BlockSupport](BlockSupport.aus.md).
-     * @r A bool.
+     * @r An int.
      */
-    public extern isFaceSturdy(Face, Support);
+    public extern getZ();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Barrel.html#isOccluding()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#hasBeenFilled()
      *
      * @r A bool.
      */
-    public extern isOccluding();
+    public extern hasBeenFilled();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Barrel.html#isOpen()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#hasLootTable()
+     *
+     * @r A bool.
+     */
+    public extern hasLootTable();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#hasMetadata(java.lang.String)
+     *
+     * @p MetadataKey is a string.
+     * @r A bool.
+     */
+    public extern hasMetadata(MetadataKey);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#hasPendingRefill()
+     *
+     * @r A bool.
+     */
+    public extern hasPendingRefill();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#hasPlayerLooted(org.bukkit.entity.Player)
+     *
+     * @p Player is a [Player](Player.aus.md).
+     * @r A bool.
+     */
+    public extern hasPlayerLooted(Player);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#hasPlayerLooted(java.util.UUID)
+     *
+     * @p Player is a string.
+     * @r A bool.
+     */
+    public extern hasPlayerLooted_UUID(Player);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#isCollidable()
+     *
+     * @r A bool.
+     */
+    public extern isCollidable();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#isLocked()
+     *
+     * @r A bool.
+     */
+    public extern isLocked();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#isOpen()
      *
      * @r A bool.
      */
     public extern isOpen();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Barrel.html#isPreferredTool(org.bukkit.inventory.ItemStack)
-     *
-     * @p Tool is an [ItemStack](ItemStack.aus.md).
-     * @r A bool.
-     */
-    public extern isPreferredTool(Tool);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Barrel.html#isRandomlyTicked()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#isPlaced()
      *
      * @r A bool.
      */
-    public extern isRandomlyTicked();
+    public extern isPlaced();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Barrel.html#isReplaceable()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#isRefillEnabled()
      *
      * @r A bool.
      */
-    public extern isReplaceable();
+    public extern isRefillEnabled();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Barrel.html#isSupported(org.bukkit.block.Block)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#isSnapshot()
      *
-     * @p Block is a [Block](Block.aus.md).
      * @r A bool.
      */
-    public extern isSupported(Block);
+    public extern isSnapshot();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Barrel.html#isSupported(org.bukkit.Location)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#isSuffocating()
      *
-     * @p Location is a [Location](Location.aus.md).
      * @r A bool.
      */
-    public extern isSupported_location(Location);
+    public extern isSuffocating();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Barrel.html#matches(org.bukkit.block.data.BlockData)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#open()
+     */
+    public extern open();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#setBlockData(org.bukkit.block.data.BlockData)
      *
      * @p Data is a [BlockData](BlockData.aus.md).
+     */
+    public extern setBlockData(Data);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#setCustomName(java.lang.String)
+     *
+     * @p Name is a string.
+     */
+    public extern setCustomName(Name);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#setHasPlayerLooted(org.bukkit.entity.Player,boolean)
+     *
+     * @p Player is a [Player](Player.aus.md).
+     * @p Looted is a bool.
      * @r A bool.
      */
-    public extern matches(Data);
+    public extern setHasPlayerLooted(Player, Looted);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Barrel.html#merge(org.bukkit.block.data.BlockData)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#setHasPlayerLooted(java.util.UUID,boolean)
      *
-     * @p Data is a [BlockData](BlockData.aus.md).
-     * @r A [BlockData](BlockData.aus.md).
+     * @p Player is a string.
+     * @p Looted is a bool.
+     * @r A bool.
      */
-    public extern merge(Data);
+    public extern setHasPlayerLooted_UUID_boolean(Player, Looted);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Barrel.html#mirror(org.bukkit.block.structure.Mirror)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#setLock(java.lang.String)
      *
-     * @p Mirror is a string naming a [Mirror](Mirror.aus.md).
+     * @p Key is a string.
      */
-    public extern mirror(Mirror);
+    public extern setLock(Key);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Barrel.html#requiresCorrectToolForDrops()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#setLockItem(org.bukkit.inventory.ItemStack)
+     *
+     * @p Key is an [ItemStack](ItemStack.aus.md).
+     */
+    public extern setLockItem(Key);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#setLootTable(org.bukkit.loot.LootTable)
+     *
+     * @p Table is a [LootTable](LootTable.aus.md).
+     */
+    public extern setLootTable(Table);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#setLootTable(org.bukkit.loot.LootTable,long)
+     *
+     * @p Table is a [LootTable](LootTable.aus.md).
+     * @p Seed is an int.
+     */
+    public extern setLootTable(Table, Seed);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#setMetadata(java.lang.String,org.bukkit.metadata.MetadataValue)
+     *
+     * @p MetadataKey is a string.
+     * @p NewMetadataValue is a [MetadataValue](MetadataValue.aus.md).
+     */
+    public extern setMetadata(MetadataKey, NewMetadataValue);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#setNextRefill(long)
+     *
+     * @p RefillAt is an int.
+     * @r An int.
+     */
+    public extern setNextRefill(RefillAt);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#setRawData(byte)
+     *
+     * @p Data is an int.
+     */
+    public extern setRawData(Data);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#setSeed(long)
+     *
+     * @p Seed is an int.
+     */
+    public extern setSeed(Seed);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#setType(org.bukkit.Material)
+     *
+     * @p Type is a string naming a [Material](Material.aus.md).
+     */
+    public extern setType(Type);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#update()
      *
      * @r A bool.
      */
-    public extern requiresCorrectToolForDrops();
+    public extern update();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Barrel.html#rotate(org.bukkit.block.structure.StructureRotation)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#update(boolean)
      *
-     * @p Rotation is a string naming a
-     * [StructureRotation](StructureRotation.aus.md).
+     * @p Force is a bool.
+     * @r A bool.
      */
-    public extern rotate(Rotation);
+    public extern update(Force);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Barrel.html#setFacing(org.bukkit.block.BlockFace)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#update(boolean,boolean)
      *
-     * @p Facing is a string naming a [BlockFace](BlockFace.aus.md).
+     * @p Force is a bool.
+     * @p ApplyPhysics is a bool.
+     * @r A bool.
      */
-    public extern setFacing(Facing);
+    public extern update(Force, ApplyPhysics);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Barrel.html#setOpen(boolean)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Barrel.html#removeMetadata(java.lang.String,org.bukkit.plugin.Plugin)
      *
-     * @p Open is a bool.
+     * @p MetadataKey is a string.
+     * @p OwningPlugin is a [Plugin](Plugin.aus.md).
      */
-    public extern setOpen(Open);
+    public extern removeMetadata(MetadataKey, OwningPlugin);
 }

@@ -6,12 +6,13 @@
  */
 
 /**
- * Generated shim for org.bukkit.material.Stairs.
+ * Generated shim for org.bukkit.block.data.type.Stairs.
  *
- * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Stairs.html
+ * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Stairs.html
  *
- * In Paper this is a [Directional](Directional.aus.md) and
- * [MaterialData](MaterialData.aus.md).
+ * In Paper this is a [Bisected](Bisected.aus.md),
+ * [Directional](Directional.aus.md) and
+ * [Waterlogged](Waterlogged.aus.md).
  * Every method it inherits is declared here too, so there is
  * nothing to follow up to.
  *
@@ -21,109 +22,262 @@ extern class Stairs : com.lehman.aussomcraft.paper.gen.dangerous.StairsShim {
     public extern __opEq__(A0);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Stairs.html#clone()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Stairs.html#clone()
      *
-     * @r A [Stairs](Stairs.aus.md).
+     * @r A [BlockData](BlockData.aus.md).
      */
     public extern clone();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Stairs.html#equals(java.lang.Object)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Stairs.html#copyTo(org.bukkit.block.data.BlockData)
      *
-     * @p Obj is an Object.
-     * @r A bool.
+     * @p Other is a [BlockData](BlockData.aus.md).
      */
-    public extern equals(Obj);
+    public extern copyTo(Other);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Stairs.html#getAscendingDirection()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Stairs.html#createBlockState()
      *
-     * @r A string naming a [BlockFace](BlockFace.aus.md).
+     * @r A [BlockState](BlockState.aus.md).
      */
-    public extern getAscendingDirection();
+    public extern createBlockState();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Stairs.html#getData()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Stairs.html#getAsString()
      *
-     * @r An int.
+     * @r A string.
      */
-    public extern getData();
+    public extern getAsString();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Stairs.html#getDescendingDirection()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Stairs.html#getAsString(boolean)
      *
-     * @r A string naming a [BlockFace](BlockFace.aus.md).
+     * @p HideUnspecified is a bool.
+     * @r A string.
      */
-    public extern getDescendingDirection();
+    public extern getAsString(HideUnspecified);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Stairs.html#getFacing()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Stairs.html#getCollisionShape(org.bukkit.Location)
+     *
+     * @p Location is a [Location](Location.aus.md).
+     * @r A [VoxelShape](VoxelShape.aus.md).
+     */
+    public extern getCollisionShape(Location);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Stairs.html#getDestroySpeed(org.bukkit.inventory.ItemStack)
+     *
+     * @p ItemStack is an [ItemStack](ItemStack.aus.md).
+     * @r A double.
+     */
+    public extern getDestroySpeed(ItemStack);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Stairs.html#getDestroySpeed(org.bukkit.inventory.ItemStack,boolean)
+     *
+     * @p ItemStack is an [ItemStack](ItemStack.aus.md).
+     * @p ConsiderEnchants is a bool.
+     * @r A double.
+     */
+    public extern getDestroySpeed(ItemStack, ConsiderEnchants);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Stairs.html#getFaces()
+     *
+     * @r A list.
+     */
+    public extern getFaces();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Stairs.html#getFacing()
      *
      * @r A string naming a [BlockFace](BlockFace.aus.md).
      */
     public extern getFacing();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Stairs.html#getItemType()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Stairs.html#getHalf()
      *
-     * @r A string naming a [Material](Material.aus.md).
+     * @r A string naming a Bisected.Half.
      */
-    public extern getItemType();
+    public extern getHalf();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Stairs.html#hashCode()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Stairs.html#getLightEmission()
      *
      * @r An int.
      */
-    public extern hashCode();
+    public extern getLightEmission();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Stairs.html#isInverted()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Stairs.html#getMapColor()
+     *
+     * @r A [Color](Color.aus.md).
+     */
+    public extern getMapColor();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Stairs.html#getMaterial()
+     *
+     * @r A string naming a [Material](Material.aus.md).
+     */
+    public extern getMaterial();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Stairs.html#getPistonMoveReaction()
+     *
+     * @r A string naming a
+     * [PistonMoveReaction](PistonMoveReaction.aus.md).
+     */
+    public extern getPistonMoveReaction();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Stairs.html#getPlacementMaterial()
+     *
+     * @r A string naming a [Material](Material.aus.md).
+     */
+    public extern getPlacementMaterial();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Stairs.html#getShape()
+     *
+     * @r A string naming a Stairs.Shape.
+     */
+    public extern getShape();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Stairs.html#getSoundGroup()
+     *
+     * @r A [SoundGroup](SoundGroup.aus.md).
+     */
+    public extern getSoundGroup();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Stairs.html#isFaceSturdy(org.bukkit.block.BlockFace,org.bukkit.block.BlockSupport)
+     *
+     * @p Face is a string naming a [BlockFace](BlockFace.aus.md).
+     * @p Support is a string naming a
+     * [BlockSupport](BlockSupport.aus.md).
+     * @r A bool.
+     */
+    public extern isFaceSturdy(Face, Support);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Stairs.html#isOccluding()
      *
      * @r A bool.
      */
-    public extern isInverted();
+    public extern isOccluding();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Stairs.html#setData(byte)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Stairs.html#isPreferredTool(org.bukkit.inventory.ItemStack)
      *
-     * @p Data is an int.
+     * @p Tool is an [ItemStack](ItemStack.aus.md).
+     * @r A bool.
      */
-    public extern setData(Data);
+    public extern isPreferredTool(Tool);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Stairs.html#setFacingDirection(org.bukkit.block.BlockFace)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Stairs.html#isRandomlyTicked()
      *
-     * @p Face is a string naming a [BlockFace](BlockFace.aus.md).
+     * @r A bool.
      */
-    public extern setFacingDirection(Face);
+    public extern isRandomlyTicked();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Stairs.html#setInverted(boolean)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Stairs.html#isReplaceable()
      *
-     * @p Inv is a bool.
+     * @r A bool.
      */
-    public extern setInverted(Inv);
+    public extern isReplaceable();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Stairs.html#toItemStack()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Stairs.html#isSupported(org.bukkit.block.Block)
      *
-     * @r An [ItemStack](ItemStack.aus.md).
+     * @p Block is a [Block](Block.aus.md).
+     * @r A bool.
      */
-    public extern toItemStack();
+    public extern isSupported(Block);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Stairs.html#toItemStack(int)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Stairs.html#isSupported(org.bukkit.Location)
      *
-     * @p Amount is an int.
-     * @r An [ItemStack](ItemStack.aus.md).
+     * @p Location is a [Location](Location.aus.md).
+     * @r A bool.
      */
-    public extern toItemStack(Amount);
+    public extern isSupported_location(Location);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Stairs.html#toString()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Stairs.html#isWaterlogged()
      *
-     * @r A string.
+     * @r A bool.
      */
-    public extern toString();
+    public extern isWaterlogged();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Stairs.html#matches(org.bukkit.block.data.BlockData)
+     *
+     * @p Data is a [BlockData](BlockData.aus.md).
+     * @r A bool.
+     */
+    public extern matches(Data);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Stairs.html#merge(org.bukkit.block.data.BlockData)
+     *
+     * @p Data is a [BlockData](BlockData.aus.md).
+     * @r A [BlockData](BlockData.aus.md).
+     */
+    public extern merge(Data);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Stairs.html#mirror(org.bukkit.block.structure.Mirror)
+     *
+     * @p Mirror is a string naming a [Mirror](Mirror.aus.md).
+     */
+    public extern mirror(Mirror);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Stairs.html#requiresCorrectToolForDrops()
+     *
+     * @r A bool.
+     */
+    public extern requiresCorrectToolForDrops();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Stairs.html#rotate(org.bukkit.block.structure.StructureRotation)
+     *
+     * @p Rotation is a string naming a
+     * [StructureRotation](StructureRotation.aus.md).
+     */
+    public extern rotate(Rotation);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Stairs.html#setFacing(org.bukkit.block.BlockFace)
+     *
+     * @p Facing is a string naming a [BlockFace](BlockFace.aus.md).
+     */
+    public extern setFacing(Facing);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Stairs.html#setHalf(org.bukkit.block.data.Bisected.Half)
+     *
+     * @p Half is a string naming a Bisected.Half.
+     */
+    public extern setHalf(Half);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Stairs.html#setShape(org.bukkit.block.data.type.Stairs.Shape)
+     *
+     * @p Shape is a string naming a Stairs.Shape.
+     */
+    public extern setShape(Shape);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Stairs.html#setWaterlogged(boolean)
+     *
+     * @p Waterlogged is a bool.
+     */
+    public extern setWaterlogged(Waterlogged);
 }

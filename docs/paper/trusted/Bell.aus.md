@@ -2,12 +2,11 @@
 
 ## class: Bell
 
-[20:14] (extern: com.lehman.aussomcraft.paper.gen.trusted.BellShim) **extends: object** 
+[19:14] (extern: com.lehman.aussomcraft.paper.gen.trusted.BellShim) **extends: object** 
 
-Generated shim for org.bukkit.block.data.type.Bell.
-Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Bell.html
-In Paper this is a [Directional](Directional.aus.md) and
-[Powerable](Powerable.aus.md).
+Generated shim for org.bukkit.block.Bell.
+Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bell.html
+In Paper this is a [TileState](TileState.aus.md).
 Every method it inherits is declared here too, so there is
 nothing to follow up to.
 Tier: trusted. Do not edit.
@@ -17,247 +16,292 @@ Tier: trusted. Do not edit.
 - **\_\_opEq\_\_** (`A0`)
 
 
-- **clone** ()
+- **copy** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Bell.html#clone()
-
-	- **@r** `A` [BlockData](BlockData.aus.md).
-
-
-- **copyTo** (`Other`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Bell.html#copyTo(org.bukkit.block.data.BlockData)
-
-	- **@p** `Other` is a [BlockData](BlockData.aus.md).
-
-
-- **createBlockState** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Bell.html#createBlockState()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bell.html#copy()
 
 	- **@r** `A` [BlockState](BlockState.aus.md).
 
 
-- **getAsString** ()
+- **copy** (`Location`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Bell.html#getAsString()
-
-	- **@r** `A` string.
-
-
-- **getAsString** (`HideUnspecified`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Bell.html#getAsString(boolean)
-
-	- **@p** `HideUnspecified` is a bool.
-	- **@r** `A` string.
-
-
-- **getAttachment** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Bell.html#getAttachment()
-
-	- **@r** `A` string naming a Bell.Attachment.
-
-
-- **getCollisionShape** (`Location`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Bell.html#getCollisionShape(org.bukkit.Location)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bell.html#copy(org.bukkit.Location)
 
 	- **@p** `Location` is a [Location](Location.aus.md).
-	- **@r** `A` [VoxelShape](VoxelShape.aus.md).
+	- **@r** `A` [BlockState](BlockState.aus.md).
 
 
-- **getDestroySpeed** (`ItemStack`)
+- **getBlock** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Bell.html#getDestroySpeed(org.bukkit.inventory.ItemStack)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bell.html#getBlock()
 
-	- **@p** `ItemStack` is an [ItemStack](ItemStack.aus.md).
-	- **@r** `A` double.
-
-
-- **getDestroySpeed** (`ItemStack, ConsiderEnchants`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Bell.html#getDestroySpeed(org.bukkit.inventory.ItemStack,boolean)
-
-	- **@p** `ItemStack` is an [ItemStack](ItemStack.aus.md).
-	- **@p** `ConsiderEnchants` is a bool.
-	- **@r** `A` double.
+	- **@r** `A` [Block](Block.aus.md).
 
 
-- **getFaces** ()
+- **getBlockData** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Bell.html#getFaces()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bell.html#getBlockData()
+
+	- **@r** `A` [BlockData](BlockData.aus.md).
+
+
+- **getChunk** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bell.html#getChunk()
+
+	- **@r** `A` [Chunk](Chunk.aus.md).
+
+
+- **getDrops** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bell.html#getDrops()
 
 	- **@r** `A` list.
 
 
-- **getFacing** ()
+- **getDrops** (`Tool`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Bell.html#getFacing()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bell.html#getDrops(org.bukkit.inventory.ItemStack)
 
-	- **@r** `A` string naming a [BlockFace](BlockFace.aus.md).
+	- **@p** `Tool` is an [ItemStack](ItemStack.aus.md).
+	- **@r** `A` list.
 
 
-- **getLightEmission** ()
+- **getDrops** (`Tool, Entity`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Bell.html#getLightEmission()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bell.html#getDrops(org.bukkit.inventory.ItemStack,org.bukkit.entity.Entity)
+
+	- **@p** `Tool` is an [ItemStack](ItemStack.aus.md).
+	- **@p** `Entity` is an [Entity](Entity.aus.md).
+	- **@r** `A` list.
+
+
+- **getLightLevel** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bell.html#getLightLevel()
 
 	- **@r** `An` int.
 
 
-- **getMapColor** ()
+- **getLocation** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Bell.html#getMapColor()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bell.html#getLocation()
 
-	- **@r** `A` [Color](Color.aus.md).
+	- **@r** `A` [Location](Location.aus.md).
 
 
-- **getMaterial** ()
+- **getLocation** (`Loc`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Bell.html#getMaterial()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bell.html#getLocation(org.bukkit.Location)
+
+	- **@p** `Loc` is a [Location](Location.aus.md).
+	- **@r** `A` [Location](Location.aus.md).
+
+
+- **getMetadata** (`MetadataKey`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bell.html#getMetadata(java.lang.String)
+
+	- **@p** `MetadataKey` is a string.
+	- **@r** `A` list.
+
+
+- **getPersistentDataContainer** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bell.html#getPersistentDataContainer()
+
+	- **@r** `A` [PersistentDataContainer](PersistentDataContainer.aus.md).
+
+
+- **getRawData** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bell.html#getRawData()
+
+	- **@r** `An` int.
+
+
+- **getResonatingTicks** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bell.html#getResonatingTicks()
+
+	- **@r** `An` int.
+
+
+- **getShakingTicks** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bell.html#getShakingTicks()
+
+	- **@r** `An` int.
+
+
+- **getType** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bell.html#getType()
 
 	- **@r** `A` string naming a [Material](Material.aus.md).
 
 
-- **getPistonMoveReaction** ()
+- **getWorld** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Bell.html#getPistonMoveReaction()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bell.html#getWorld()
 
-	- **@r** `A` string naming a [PistonMoveReaction](PistonMoveReaction.aus.md).
-
-
-- **getPlacementMaterial** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Bell.html#getPlacementMaterial()
-
-	- **@r** `A` string naming a [Material](Material.aus.md).
+	- **@r** `A` [World](World.aus.md).
 
 
-- **getSoundGroup** ()
+- **getX** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Bell.html#getSoundGroup()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bell.html#getX()
 
-	- **@r** `A` [SoundGroup](SoundGroup.aus.md).
+	- **@r** `An` int.
 
 
-- **isFaceSturdy** (`Face, Support`)
+- **getY** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Bell.html#isFaceSturdy(org.bukkit.block.BlockFace,org.bukkit.block.BlockSupport)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bell.html#getY()
 
-	- **@p** `Face` is a string naming a [BlockFace](BlockFace.aus.md).
-	- **@p** `Support` is a string naming a [BlockSupport](BlockSupport.aus.md).
+	- **@r** `An` int.
+
+
+- **getZ** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bell.html#getZ()
+
+	- **@r** `An` int.
+
+
+- **hasMetadata** (`MetadataKey`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bell.html#hasMetadata(java.lang.String)
+
+	- **@p** `MetadataKey` is a string.
 	- **@r** `A` bool.
 
 
-- **isOccluding** ()
+- **isCollidable** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Bell.html#isOccluding()
-
-	- **@r** `A` bool.
-
-
-- **isPowered** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Bell.html#isPowered()
-
-	- **@r** `A` bool.
-
-
-- **isPreferredTool** (`Tool`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Bell.html#isPreferredTool(org.bukkit.inventory.ItemStack)
-
-	- **@p** `Tool` is an [ItemStack](ItemStack.aus.md).
-	- **@r** `A` bool.
-
-
-- **isRandomlyTicked** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Bell.html#isRandomlyTicked()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bell.html#isCollidable()
 
 	- **@r** `A` bool.
 
 
-- **isReplaceable** ()
+- **isPlaced** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Bell.html#isReplaceable()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bell.html#isPlaced()
 
 	- **@r** `A` bool.
 
 
-- **isSupported** (`Block`)
+- **isResonating** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Bell.html#isSupported(org.bukkit.block.Block)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bell.html#isResonating()
 
-	- **@p** `Block` is a [Block](Block.aus.md).
 	- **@r** `A` bool.
 
 
-- **isSupported\_location** (`Location`)
+- **isShaking** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Bell.html#isSupported(org.bukkit.Location)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bell.html#isShaking()
 
-	- **@p** `Location` is a [Location](Location.aus.md).
 	- **@r** `A` bool.
 
 
-- **matches** (`Data`)
+- **isSnapshot** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Bell.html#matches(org.bukkit.block.data.BlockData)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bell.html#isSnapshot()
+
+	- **@r** `A` bool.
+
+
+- **isSuffocating** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bell.html#isSuffocating()
+
+	- **@r** `A` bool.
+
+
+- **ring** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bell.html#ring()
+
+	- **@r** `A` bool.
+
+
+- **ring** (`Direction`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bell.html#ring(org.bukkit.block.BlockFace)
+
+	- **@p** `Direction` is a string naming a [BlockFace](BlockFace.aus.md).
+	- **@r** `A` bool.
+
+
+- **ring\_entity** (`Entity`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bell.html#ring(org.bukkit.entity.Entity)
+
+	- **@p** `Entity` is an [Entity](Entity.aus.md).
+	- **@r** `A` bool.
+
+
+- **ring** (`Entity, Direction`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bell.html#ring(org.bukkit.entity.Entity,org.bukkit.block.BlockFace)
+
+	- **@p** `Entity` is an [Entity](Entity.aus.md).
+	- **@p** `Direction` is a string naming a [BlockFace](BlockFace.aus.md).
+	- **@r** `A` bool.
+
+
+- **setBlockData** (`Data`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bell.html#setBlockData(org.bukkit.block.data.BlockData)
 
 	- **@p** `Data` is a [BlockData](BlockData.aus.md).
+
+
+- **setMetadata** (`MetadataKey, NewMetadataValue`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bell.html#setMetadata(java.lang.String,org.bukkit.metadata.MetadataValue)
+
+	- **@p** `MetadataKey` is a string.
+	- **@p** `NewMetadataValue` is a [MetadataValue](MetadataValue.aus.md).
+
+
+- **setRawData** (`Data`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bell.html#setRawData(byte)
+
+	- **@p** `Data` is an int.
+
+
+- **setType** (`Type`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bell.html#setType(org.bukkit.Material)
+
+	- **@p** `Type` is a string naming a [Material](Material.aus.md).
+
+
+- **update** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bell.html#update()
+
 	- **@r** `A` bool.
 
 
-- **merge** (`Data`)
+- **update** (`Force`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Bell.html#merge(org.bukkit.block.data.BlockData)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bell.html#update(boolean)
 
-	- **@p** `Data` is a [BlockData](BlockData.aus.md).
-	- **@r** `A` [BlockData](BlockData.aus.md).
-
-
-- **mirror** (`Mirror`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Bell.html#mirror(org.bukkit.block.structure.Mirror)
-
-	- **@p** `Mirror` is a string naming a [Mirror](Mirror.aus.md).
-
-
-- **requiresCorrectToolForDrops** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Bell.html#requiresCorrectToolForDrops()
-
+	- **@p** `Force` is a bool.
 	- **@r** `A` bool.
 
 
-- **rotate** (`Rotation`)
+- **update** (`Force, ApplyPhysics`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Bell.html#rotate(org.bukkit.block.structure.StructureRotation)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bell.html#update(boolean,boolean)
 
-	- **@p** `Rotation` is a string naming a [StructureRotation](StructureRotation.aus.md).
-
-
-- **setAttachment** (`Attachment`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Bell.html#setAttachment(org.bukkit.block.data.type.Bell.Attachment)
-
-	- **@p** `Attachment` is a string naming a Bell.Attachment.
-
-
-- **setFacing** (`Facing`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Bell.html#setFacing(org.bukkit.block.BlockFace)
-
-	- **@p** `Facing` is a string naming a [BlockFace](BlockFace.aus.md).
-
-
-- **setPowered** (`Powered`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Bell.html#setPowered(boolean)
-
-	- **@p** `Powered` is a bool.
+	- **@p** `Force` is a bool.
+	- **@p** `ApplyPhysics` is a bool.
+	- **@r** `A` bool.
 
 
 

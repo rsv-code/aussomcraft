@@ -52,13 +52,6 @@ Tier: dangerous. Do not edit.
 	- **@r** `A` [Chunk](Chunk.aus.md).
 
 
-- **getData** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/io/papermc/paper/block/MovingPiston.html#getData()
-
-	- **@r** `A` [MaterialData](MaterialData.aus.md).
-
-
 - **getDirection** ()
 
 	> Paper: https://jd.papermc.io/paper/1.21.10/io/papermc/paper/block/MovingPiston.html#getDirection()
@@ -231,13 +224,6 @@ Tier: dangerous. Do not edit.
 	> Paper: https://jd.papermc.io/paper/1.21.10/io/papermc/paper/block/MovingPiston.html#setBlockData(org.bukkit.block.data.BlockData)
 
 	- **@p** `Data` is a [BlockData](BlockData.aus.md).
-
-
-- **setData** (`Data`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/io/papermc/paper/block/MovingPiston.html#setData(org.bukkit.material.MaterialData)
-
-	- **@p** `Data` is a [MaterialData](MaterialData.aus.md).
 
 
 - **setMetadata** (`MetadataKey, NewMetadataValue`)

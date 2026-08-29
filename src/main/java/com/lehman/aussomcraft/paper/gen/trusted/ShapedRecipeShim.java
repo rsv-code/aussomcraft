@@ -219,25 +219,6 @@ public class ShapedRecipeShim extends PaperObj {
         }
     }
 
-    public AussomType setIngredient_char_MaterialData(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.inventory.ShapedRecipe self = (org.bukkit.inventory.ShapedRecipe) this.getObj();
-            if (self == null) {
-                return Marshal.detached("setIngredient_char_MaterialData");
-            }
-            if (n == 2) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.ShapedRecipe) self).setIngredient(Marshal.argChar(args, 0), (org.bukkit.material.MaterialData) Marshal.typed(args, 1, org.bukkit.material.MaterialData.class)));
-            }
-            return Marshal.wrongArity("setIngredient_char_MaterialData", n);
-        } catch (Throwable e) {
-            return Marshal.failed("setIngredient_char_MaterialData", e);
-        }
-    }
-
     public AussomType setIngredient_char_RecipeChoice(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {

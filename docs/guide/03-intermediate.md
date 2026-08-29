@@ -21,18 +21,29 @@ class Main {
 }
 ```
 
-Reload, then type `/hello` in the game.
+Reload, then type `/hello.aus:hello` in the game.
 
-Two names are taken already and you cannot use them. Anything a plugin on
-your server has registered stays with that plugin, and a short list of names
-that usually carry a password or a private message, `login` and `msg` among
-them, is refused outright. The console tells you if you hit either. Both are
-there so a script you have not read cannot answer a command your players
-type out of habit.
+That prefix is your script's file name, and an untrusted script always gets
+it. Type `/hello` on its own and nothing happens.
+
+The reason is what a plain `/hello` would let a script you have not read do.
+It could register a name your server does not have, `/verify` or `/support`
+or `/login`, tell your players to use it, and read whatever they type after
+it. A short list of names is refused outright and anything a plugin already
+owns stays with that plugin, but neither of those can cover a name nobody
+happens to have taken yet. So an unapproved script does not get plain names
+at all.
+
+Trust the script and it gets the plain name. `/acraft trust hello.aus`, then
+reload, and `/hello` works. That is the same decision you make about
+everything else at that level: you have read it, so it can do what it says.
+
+The console prints the name a script actually got, so you never have to
+guess.
 
 Your function gets two things. `Sender` is whoever typed the command.
 `Args` is a list of anything they typed after it. If someone types
-`/hello there friend`, then `Args` holds `there` and `friend`.
+`/hello.aus:hello there friend`, then `Args` holds `there` and `friend`.
 
 Using the extra words:
 
@@ -257,20 +268,72 @@ write files on your computer, cannot use the network, and cannot control the
 server itself. Those need the dangerous level, which is covered in
 [Advanced](04-advanced.md).
 
-## Using types that are not built in
+## Types you have not seen before
 
-Most things you need are ready to use: players, blocks, worlds, locations,
-items, inventories. If you need something less common, add one line at the
-top of your file:
+There is nothing to do here, and that is the point.
+
+When something reaches your script, whether it is a player, a block, an
+inventory, an item, or a type you have never used, the server works out
+what it is and hands it to you ready to use. You do not declare it, import
+it, or ask for it. Call the methods and read the documentation for that
+type when you want to know what it offers.
+
+The same is true for events. Subscribing to one is all it takes.
+
+There is an `include` keyword, and you can write it:
 
 ```
-include paper.trusted.Chunk;
+include Chunk;
 ```
 
-That is the tier name, then the type name. If your script is untrusted, use
-`paper.untrusted.` instead.
+It is optional. All it does is get that type ready when the script loads
+rather than the first time one turns up, which nobody will notice. Write it
+if you like naming what a script works with; leave it out and everything
+still works.
 
-You will know you need this if the console says a class was not found.
+One thing to know if you do write it: just the type name. You do not write
+your script's level, and you should not try to. The server decides which
+set of types that name points at, so the same line gives an untrusted script
+the untrusted `Chunk` and a trusted script the trusted one. That is what
+lets a script be raised a level without editing it, and it means a script
+cannot ask for a level it was not given.
+
+The one place an include is genuinely required is the dangerous level, for
+`Bukkit` and anything like it. Those are not things the server ever hands
+you, so naming them is the only way to reach them. That is covered in the
+advanced guide.
+
+## Splitting a script across files
+
+Once a script is trusted or dangerous, it can pull in another `.aus` file
+sitting beside it in the `scripts/` folder. Use the file name without the
+`.aus`:
+
+```
+include helper;
+```
+
+That reads `scripts/helper.aus` and makes its classes available, the same
+as if you had pasted them into your own file. It is useful when two scripts
+share a chunk of code, or when one script grows long enough to be worth
+splitting up.
+
+Three things to know.
+
+The file has to be in the same folder as the script including it. There is
+no way to reach a folder above it or beside it; the include name cannot
+contain `..`, and the server will not follow a shortcut (a symbolic link)
+out of the folder.
+
+The included file runs at your script's level, not its own. Including a
+file does not borrow permissions from anywhere. If your trusted script
+includes a file that tries to do something only the dangerous level allows,
+it still fails.
+
+Untrusted scripts cannot do this at all. An untrusted script is meant to be
+one file you can read start to finish, and an include is how that stops
+being true. If you try it, the console says the include was not found and
+the script does not load. Make the script trusted if you need it.
 
 ## A complete example
 

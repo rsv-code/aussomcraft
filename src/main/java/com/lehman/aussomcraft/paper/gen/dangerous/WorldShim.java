@@ -4765,25 +4765,6 @@ public class WorldShim extends PaperObj {
         }
     }
 
-    public AussomType spawnFallingBlock_Location_MaterialData(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.World self = (org.bukkit.World) this.getObj();
-            if (self == null) {
-                return Marshal.detached("spawnFallingBlock_Location_MaterialData");
-            }
-            if (n == 2) {
-                return Marshal.wrap(env, ((org.bukkit.World) self).spawnFallingBlock((org.bukkit.Location) Marshal.typed(args, 0, org.bukkit.Location.class), (org.bukkit.material.MaterialData) Marshal.typed(args, 1, org.bukkit.material.MaterialData.class)));
-            }
-            return Marshal.wrongArity("spawnFallingBlock_Location_MaterialData", n);
-        } catch (Throwable e) {
-            return Marshal.failed("spawnFallingBlock_Location_MaterialData", e);
-        }
-    }
-
     public AussomType spawnParticle(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {

@@ -2,11 +2,12 @@
 
 ## class: Crafter
 
-[19:14] (extern: com.lehman.aussomcraft.paper.gen.dangerous.CrafterShim) **extends: object** 
+[20:14] (extern: com.lehman.aussomcraft.paper.gen.dangerous.CrafterShim) **extends: object** 
 
-Generated shim for org.bukkit.block.data.type.Crafter.
-Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html
-In Paper this is a [BlockData](BlockData.aus.md).
+Generated shim for org.bukkit.block.Crafter.
+Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html
+In Paper this is a [Container](Container.aus.md) and
+[LootableBlockInventory](LootableBlockInventory.aus.md).
 Every method it inherits is declared here too, so there is
 nothing to follow up to.
 Tier: dangerous. Do not edit.
@@ -16,240 +17,504 @@ Tier: dangerous. Do not edit.
 - **\_\_opEq\_\_** (`A0`)
 
 
-- **clone** ()
+- **canPlayerLoot** (`Player`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#clone()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#canPlayerLoot(java.util.UUID)
 
-	- **@r** `A` [BlockData](BlockData.aus.md).
-
-
-- **copyTo** (`Other`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#copyTo(org.bukkit.block.data.BlockData)
-
-	- **@p** `Other` is a [BlockData](BlockData.aus.md).
+	- **@p** `Player` is a string.
+	- **@r** `A` bool.
 
 
-- **createBlockState** ()
+- **clearLootTable** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#createBlockState()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#clearLootTable()
+
+
+
+- **copy** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#copy()
 
 	- **@r** `A` [BlockState](BlockState.aus.md).
 
 
-- **getAsString** ()
+- **copy** (`Location`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#getAsString()
-
-	- **@r** `A` string.
-
-
-- **getAsString** (`HideUnspecified`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#getAsString(boolean)
-
-	- **@p** `HideUnspecified` is a bool.
-	- **@r** `A` string.
-
-
-- **getCollisionShape** (`Location`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#getCollisionShape(org.bukkit.Location)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#copy(org.bukkit.Location)
 
 	- **@p** `Location` is a [Location](Location.aus.md).
-	- **@r** `A` [VoxelShape](VoxelShape.aus.md).
+	- **@r** `A` [BlockState](BlockState.aus.md).
 
 
-- **getDestroySpeed** (`ItemStack`)
+- **customName** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#getDestroySpeed(org.bukkit.inventory.ItemStack)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#customName()
 
-	- **@p** `ItemStack` is an [ItemStack](ItemStack.aus.md).
-	- **@r** `A` double.
-
-
-- **getDestroySpeed** (`ItemStack, ConsiderEnchants`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#getDestroySpeed(org.bukkit.inventory.ItemStack,boolean)
-
-	- **@p** `ItemStack` is an [ItemStack](ItemStack.aus.md).
-	- **@p** `ConsiderEnchants` is a bool.
-	- **@r** `A` double.
+	- **@r** `A` Component.
 
 
-- **getLightEmission** ()
+- **customName** (`CustomName`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#getLightEmission()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#customName(net.kyori.adventure.text.Component)
+
+	- **@p** `CustomName` is a Component.
+
+
+- **getBlock** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getBlock()
+
+	- **@r** `A` [Block](Block.aus.md).
+
+
+- **getBlockData** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getBlockData()
+
+	- **@r** `A` [BlockData](BlockData.aus.md).
+
+
+- **getChunk** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getChunk()
+
+	- **@r** `A` [Chunk](Chunk.aus.md).
+
+
+- **getCraftingTicks** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getCraftingTicks()
 
 	- **@r** `An` int.
 
 
-- **getMapColor** ()
+- **getCustomName** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#getMapColor()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getCustomName()
 
-	- **@r** `A` [Color](Color.aus.md).
-
-
-- **getMaterial** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#getMaterial()
-
-	- **@r** `A` string naming a [Material](Material.aus.md).
+	- **@r** `A` string.
 
 
-- **getOrientation** ()
+- **getDrops** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#getOrientation()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getDrops()
 
-	- **@r** `An` string naming an [Orientation](Orientation.aus.md).
-
-
-- **getPistonMoveReaction** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#getPistonMoveReaction()
-
-	- **@r** `A` string naming a [PistonMoveReaction](PistonMoveReaction.aus.md).
+	- **@r** `A` list.
 
 
-- **getPlacementMaterial** ()
+- **getDrops** (`Tool`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#getPlacementMaterial()
-
-	- **@r** `A` string naming a [Material](Material.aus.md).
-
-
-- **getSoundGroup** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#getSoundGroup()
-
-	- **@r** `A` [SoundGroup](SoundGroup.aus.md).
-
-
-- **isCrafting** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#isCrafting()
-
-	- **@r** `A` bool.
-
-
-- **isFaceSturdy** (`Face, Support`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#isFaceSturdy(org.bukkit.block.BlockFace,org.bukkit.block.BlockSupport)
-
-	- **@p** `Face` is a string naming a [BlockFace](BlockFace.aus.md).
-	- **@p** `Support` is a string naming a [BlockSupport](BlockSupport.aus.md).
-	- **@r** `A` bool.
-
-
-- **isOccluding** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#isOccluding()
-
-	- **@r** `A` bool.
-
-
-- **isPreferredTool** (`Tool`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#isPreferredTool(org.bukkit.inventory.ItemStack)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getDrops(org.bukkit.inventory.ItemStack)
 
 	- **@p** `Tool` is an [ItemStack](ItemStack.aus.md).
+	- **@r** `A` list.
+
+
+- **getDrops** (`Tool, Entity`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getDrops(org.bukkit.inventory.ItemStack,org.bukkit.entity.Entity)
+
+	- **@p** `Tool` is an [ItemStack](ItemStack.aus.md).
+	- **@p** `Entity` is an [Entity](Entity.aus.md).
+	- **@r** `A` list.
+
+
+- **getInventory** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getInventory()
+
+	- **@r** `An` [Inventory](Inventory.aus.md).
+
+
+- **getLastFilled** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getLastFilled()
+
+	- **@r** `An` int.
+
+
+- **getLastLooted** (`Player`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getLastLooted(org.bukkit.entity.Player)
+
+	- **@p** `Player` is a [Player](Player.aus.md).
+	- **@r** `An` int.
+
+
+- **getLastLooted\_UUID** (`Player`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getLastLooted(java.util.UUID)
+
+	- **@p** `Player` is a string.
+	- **@r** `An` int.
+
+
+- **getLightLevel** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getLightLevel()
+
+	- **@r** `An` int.
+
+
+- **getLocation** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getLocation()
+
+	- **@r** `A` [Location](Location.aus.md).
+
+
+- **getLocation** (`Loc`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getLocation(org.bukkit.Location)
+
+	- **@p** `Loc` is a [Location](Location.aus.md).
+	- **@r** `A` [Location](Location.aus.md).
+
+
+- **getLock** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getLock()
+
+	- **@r** `A` string.
+
+
+- **getLootTable** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getLootTable()
+
+	- **@r** `A` [LootTable](LootTable.aus.md).
+
+
+- **getMetadata** (`MetadataKey`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getMetadata(java.lang.String)
+
+	- **@p** `MetadataKey` is a string.
+	- **@r** `A` list.
+
+
+- **getNextRefill** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getNextRefill()
+
+	- **@r** `An` int.
+
+
+- **getPersistentDataContainer** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getPersistentDataContainer()
+
+	- **@r** `A` [PersistentDataContainer](PersistentDataContainer.aus.md).
+
+
+- **getRawData** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getRawData()
+
+	- **@r** `An` int.
+
+
+- **getSeed** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getSeed()
+
+	- **@r** `An` int.
+
+
+- **getSnapshotInventory** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getSnapshotInventory()
+
+	- **@r** `An` [Inventory](Inventory.aus.md).
+
+
+- **getType** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getType()
+
+	- **@r** `A` string naming a [Material](Material.aus.md).
+
+
+- **getWorld** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getWorld()
+
+	- **@r** `A` [World](World.aus.md).
+
+
+- **getX** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getX()
+
+	- **@r** `An` int.
+
+
+- **getY** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getY()
+
+	- **@r** `An` int.
+
+
+- **getZ** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getZ()
+
+	- **@r** `An` int.
+
+
+- **hasBeenFilled** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#hasBeenFilled()
+
 	- **@r** `A` bool.
 
 
-- **isRandomlyTicked** ()
+- **hasLootTable** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#isRandomlyTicked()
-
-	- **@r** `A` bool.
-
-
-- **isReplaceable** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#isReplaceable()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#hasLootTable()
 
 	- **@r** `A` bool.
 
 
-- **isSupported** (`Block`)
+- **hasMetadata** (`MetadataKey`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#isSupported(org.bukkit.block.Block)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#hasMetadata(java.lang.String)
 
-	- **@p** `Block` is a [Block](Block.aus.md).
+	- **@p** `MetadataKey` is a string.
 	- **@r** `A` bool.
 
 
-- **isSupported\_location** (`Location`)
+- **hasPendingRefill** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#isSupported(org.bukkit.Location)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#hasPendingRefill()
 
-	- **@p** `Location` is a [Location](Location.aus.md).
+	- **@r** `A` bool.
+
+
+- **hasPlayerLooted** (`Player`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#hasPlayerLooted(org.bukkit.entity.Player)
+
+	- **@p** `Player` is a [Player](Player.aus.md).
+	- **@r** `A` bool.
+
+
+- **hasPlayerLooted\_UUID** (`Player`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#hasPlayerLooted(java.util.UUID)
+
+	- **@p** `Player` is a string.
+	- **@r** `A` bool.
+
+
+- **isCollidable** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#isCollidable()
+
+	- **@r** `A` bool.
+
+
+- **isLocked** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#isLocked()
+
+	- **@r** `A` bool.
+
+
+- **isPlaced** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#isPlaced()
+
+	- **@r** `A` bool.
+
+
+- **isRefillEnabled** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#isRefillEnabled()
+
+	- **@r** `A` bool.
+
+
+- **isSlotDisabled** (`Slot`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#isSlotDisabled(int)
+
+	- **@p** `Slot` is an int.
+	- **@r** `A` bool.
+
+
+- **isSnapshot** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#isSnapshot()
+
+	- **@r** `A` bool.
+
+
+- **isSuffocating** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#isSuffocating()
+
 	- **@r** `A` bool.
 
 
 - **isTriggered** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#isTriggered()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#isTriggered()
 
 	- **@r** `A` bool.
 
 
-- **matches** (`Data`)
+- **setBlockData** (`Data`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#matches(org.bukkit.block.data.BlockData)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#setBlockData(org.bukkit.block.data.BlockData)
 
 	- **@p** `Data` is a [BlockData](BlockData.aus.md).
+
+
+- **setCraftingTicks** (`Ticks`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#setCraftingTicks(int)
+
+	- **@p** `Ticks` is an int.
+
+
+- **setCustomName** (`Name`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#setCustomName(java.lang.String)
+
+	- **@p** `Name` is a string.
+
+
+- **setHasPlayerLooted** (`Player, Looted`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#setHasPlayerLooted(org.bukkit.entity.Player,boolean)
+
+	- **@p** `Player` is a [Player](Player.aus.md).
+	- **@p** `Looted` is a bool.
 	- **@r** `A` bool.
 
 
-- **merge** (`Data`)
+- **setHasPlayerLooted\_UUID\_boolean** (`Player, Looted`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#merge(org.bukkit.block.data.BlockData)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#setHasPlayerLooted(java.util.UUID,boolean)
 
-	- **@p** `Data` is a [BlockData](BlockData.aus.md).
-	- **@r** `A` [BlockData](BlockData.aus.md).
-
-
-- **mirror** (`Mirror`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#mirror(org.bukkit.block.structure.Mirror)
-
-	- **@p** `Mirror` is a string naming a [Mirror](Mirror.aus.md).
-
-
-- **requiresCorrectToolForDrops** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#requiresCorrectToolForDrops()
-
+	- **@p** `Player` is a string.
+	- **@p** `Looted` is a bool.
 	- **@r** `A` bool.
 
 
-- **rotate** (`Rotation`)
+- **setLock** (`Key`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#rotate(org.bukkit.block.structure.StructureRotation)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#setLock(java.lang.String)
 
-	- **@p** `Rotation` is a string naming a [StructureRotation](StructureRotation.aus.md).
-
-
-- **setCrafting** (`Crafting`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#setCrafting(boolean)
-
-	- **@p** `Crafting` is a bool.
+	- **@p** `Key` is a string.
 
 
-- **setOrientation** (`Orientation`)
+- **setLockItem** (`Key`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#setOrientation(org.bukkit.block.Orientation)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#setLockItem(org.bukkit.inventory.ItemStack)
 
-	- **@p** `Orientation` is an string naming an [Orientation](Orientation.aus.md).
+	- **@p** `Key` is an [ItemStack](ItemStack.aus.md).
+
+
+- **setLootTable** (`Table`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#setLootTable(org.bukkit.loot.LootTable)
+
+	- **@p** `Table` is a [LootTable](LootTable.aus.md).
+
+
+- **setLootTable** (`Table, Seed`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#setLootTable(org.bukkit.loot.LootTable,long)
+
+	- **@p** `Table` is a [LootTable](LootTable.aus.md).
+	- **@p** `Seed` is an int.
+
+
+- **setMetadata** (`MetadataKey, NewMetadataValue`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#setMetadata(java.lang.String,org.bukkit.metadata.MetadataValue)
+
+	- **@p** `MetadataKey` is a string.
+	- **@p** `NewMetadataValue` is a [MetadataValue](MetadataValue.aus.md).
+
+
+- **setNextRefill** (`RefillAt`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#setNextRefill(long)
+
+	- **@p** `RefillAt` is an int.
+	- **@r** `An` int.
+
+
+- **setRawData** (`Data`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#setRawData(byte)
+
+	- **@p** `Data` is an int.
+
+
+- **setSeed** (`Seed`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#setSeed(long)
+
+	- **@p** `Seed` is an int.
+
+
+- **setSlotDisabled** (`Slot, Disabled`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#setSlotDisabled(int,boolean)
+
+	- **@p** `Slot` is an int.
+	- **@p** `Disabled` is a bool.
 
 
 - **setTriggered** (`Triggered`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#setTriggered(boolean)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#setTriggered(boolean)
 
 	- **@p** `Triggered` is a bool.
+
+
+- **setType** (`Type`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#setType(org.bukkit.Material)
+
+	- **@p** `Type` is a string naming a [Material](Material.aus.md).
+
+
+- **update** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#update()
+
+	- **@r** `A` bool.
+
+
+- **update** (`Force`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#update(boolean)
+
+	- **@p** `Force` is a bool.
+	- **@r** `A` bool.
+
+
+- **update** (`Force, ApplyPhysics`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#update(boolean,boolean)
+
+	- **@p** `Force` is a bool.
+	- **@p** `ApplyPhysics` is a bool.
+	- **@r** `A` bool.
+
+
+- **removeMetadata** (`MetadataKey, OwningPlugin`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#removeMetadata(java.lang.String,org.bukkit.plugin.Plugin)
+
+	- **@p** `MetadataKey` is a string.
+	- **@p** `OwningPlugin` is a [Plugin](Plugin.aus.md).
 
 
 

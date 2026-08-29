@@ -114,14 +114,6 @@ extern class FurnaceRecipe : com.lehman.aussomcraft.paper.gen.trusted.FurnaceRec
     public extern setInput(Input);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/FurnaceRecipe.html#setInput(org.bukkit.material.MaterialData)
-     *
-     * @p Input is a [MaterialData](MaterialData.aus.md).
-     * @r A [FurnaceRecipe](FurnaceRecipe.aus.md).
-     */
-    public extern setInput_MaterialData(Input);
-
-    /**
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/FurnaceRecipe.html#setInput(org.bukkit.Material,int)
      *
      * @p Input is a string naming a [Material](Material.aus.md).

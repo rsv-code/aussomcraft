@@ -90,11 +90,22 @@ makes, and a Paper upgrade adds nothing to it on its own.
 The API is the same at every tier: a script written untrusted keeps working
 when it is elevated.
 
-Untrusted can read the game world and public chat. It cannot read command
-text, from a player, the console, or RCON, so a script nobody has vetted
-cannot see the password in `/login`, or anyone's `/msg`, or what an operator
-is doing. Public chat is readable because it is already public to everyone
-in range.
+Untrusted can read the game world and chat. It cannot read command text,
+from a player, the console, or RCON, so a script nobody has vetted cannot
+see the password in `/login`, or the text of anyone's `/msg`, or what an
+operator is doing.
+
+Chat is the exception, and it is broader than it sounds. A handler receives
+every chat event on the server, not only messages near the script's player,
+and it receives them at normal priority, which is before a plugin running
+later can narrow who sees them. A script may also ask for cancelled events,
+so a channel another plugin implements by cancelling a chat event, a staff
+or party or local channel, is visible too.
+
+So the rule is: an untrusted script sees all chat that passes through a
+standard chat event, whoever it was meant for. If your server carries
+anything private that way, treat chat as readable by every script you have
+installed, or keep those scripts off that server.
 
 A script cannot answer a command it does not own. Bukkit keeps a name with
 whoever registered it first, and scripts load after every plugin has, so a
@@ -170,7 +181,7 @@ mvn -Pgenerate process-classes
 **Use `mvn clean` after editing or restoring a generated file by hand.**
 Maven recompiles on timestamps, and a file restored from a copy can be older
 than the class already built from it, so the old class is kept and the build
-silently runs code that is no longer in the source. With 3,346 generated
+silently runs code that is no longer in the source. With 3,083 generated
 classes this is easy to do and hard to see: the build succeeds and the tests
 report on something you already reverted.
 
@@ -191,18 +202,24 @@ under `docs/`, the guide included, is left alone.
 ## Build
 
 ```bash
-mvn package
+mvn verify
 ```
 
-Expect around two minutes. The generated Paper API is 3,346 classes and
+Expect around two minutes. The generated Paper API is 3,083 classes and
 about 3.1 million lines, which is what makes each tier a separate compiled
 API rather than a runtime check.
+
+Use `verify` rather than `package`. Every Aussom module reaches an engine
+through an include path, and those only resolve inside the packaged jar, so
+the tests that run a script are integration tests bound to the phase after
+`package`. `mvn package` builds the jar and skips them, which is a green
+build that never ran them.
 
 Your `mvn` must run on JDK 25, or you will get `release version 25 not
 supported`:
 
 ```bash
-JAVA_HOME=/path/to/jdk-25 mvn package
+JAVA_HOME=/path/to/jdk-25 mvn verify
 ```
 
 The jar lands at `target/AussomCraft-<version>.jar`. Drop it in `plugins/`.
@@ -210,13 +227,19 @@ The jar lands at `target/AussomCraft-<version>.jar`. Drop it in `plugins/`.
 ## Tests
 
 ```bash
-mvn test
+mvn verify
 ```
+
+| Command | Runs | What it covers |
+| --- | --- | --- |
+| `mvn test` | surefire | the rules, the generated surface, the trust store, the watchdog |
+| `mvn verify` | surefire, then the jar, then failsafe | the above plus everything that runs a script |
 
 Three layers. Plain JUnit for the rules and the generated surface,
 MockBukkit for the plumbing that needs a server, and a pass on a real
 Paper server for the class loader, which is the one thing MockBukkit
-cannot speak to.
+cannot speak to. The first two are `mvn verify`; the third is a server you
+start by hand.
 
 ## Branding
 

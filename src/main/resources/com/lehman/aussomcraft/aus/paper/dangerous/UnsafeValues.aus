@@ -39,14 +39,6 @@ extern class UnsafeValues : com.lehman.aussomcraft.paper.gen.dangerous.UnsafeVal
     public extern fromLegacy(Material);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/UnsafeValues.html#fromLegacy(org.bukkit.material.MaterialData)
-     *
-     * @p Material is a [MaterialData](MaterialData.aus.md).
-     * @r A string naming a [Material](Material.aus.md).
-     */
-    public extern fromLegacy_MaterialData(Material);
-
-    /**
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/UnsafeValues.html#fromLegacy(org.bukkit.Material,byte)
      *
      * @p Material is a string naming a [Material](Material.aus.md).
@@ -54,15 +46,6 @@ extern class UnsafeValues : com.lehman.aussomcraft.paper.gen.dangerous.UnsafeVal
      * @r A [BlockData](BlockData.aus.md).
      */
     public extern fromLegacy(Material, Data);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/UnsafeValues.html#fromLegacy(org.bukkit.material.MaterialData,boolean)
-     *
-     * @p Material is a [MaterialData](MaterialData.aus.md).
-     * @p ItemPriority is a bool.
-     * @r A string naming a [Material](Material.aus.md).
-     */
-    public extern fromLegacy_material_itempriority(Material, ItemPriority);
 
     /**
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/UnsafeValues.html#get(io.papermc.paper.registry.RegistryKey,org.bukkit.NamespacedKey)

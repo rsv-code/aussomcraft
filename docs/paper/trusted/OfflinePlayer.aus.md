@@ -219,7 +219,7 @@ Tier: trusted. Do not edit.
 
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/OfflinePlayer.html#getPlayerProfile()
 
-	- **@r** `A` [PlayerProfile](PlayerProfile.aus.md).
+	- **@r** `A` ProfilePlayerProfile.
 
 
 - **getRespawnLocation** ()

@@ -6,11 +6,12 @@
  */
 
 /**
- * Generated shim for org.bukkit.block.data.type.Crafter.
+ * Generated shim for org.bukkit.block.Crafter.
  *
- * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html
+ * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html
  *
- * In Paper this is a [BlockData](BlockData.aus.md).
+ * In Paper this is a [Container](Container.aus.md) and
+ * [LootableBlockInventory](LootableBlockInventory.aus.md).
  * Every method it inherits is declared here too, so there is
  * nothing to follow up to.
  *
@@ -20,242 +21,501 @@ extern class Crafter : com.lehman.aussomcraft.paper.gen.dangerous.CrafterShim {
     public extern __opEq__(A0);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#clone()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#canPlayerLoot(java.util.UUID)
      *
-     * @r A [BlockData](BlockData.aus.md).
+     * @p Player is a string.
+     * @r A bool.
      */
-    public extern clone();
+    public extern canPlayerLoot(Player);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#copyTo(org.bukkit.block.data.BlockData)
-     *
-     * @p Other is a [BlockData](BlockData.aus.md).
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#clearLootTable()
      */
-    public extern copyTo(Other);
+    public extern clearLootTable();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#createBlockState()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#copy()
      *
      * @r A [BlockState](BlockState.aus.md).
      */
-    public extern createBlockState();
+    public extern copy();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#getAsString()
-     *
-     * @r A string.
-     */
-    public extern getAsString();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#getAsString(boolean)
-     *
-     * @p HideUnspecified is a bool.
-     * @r A string.
-     */
-    public extern getAsString(HideUnspecified);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#getCollisionShape(org.bukkit.Location)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#copy(org.bukkit.Location)
      *
      * @p Location is a [Location](Location.aus.md).
-     * @r A [VoxelShape](VoxelShape.aus.md).
+     * @r A [BlockState](BlockState.aus.md).
      */
-    public extern getCollisionShape(Location);
+    public extern copy(Location);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#getDestroySpeed(org.bukkit.inventory.ItemStack)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#customName()
      *
-     * @p ItemStack is an [ItemStack](ItemStack.aus.md).
-     * @r A double.
+     * @r A Component.
      */
-    public extern getDestroySpeed(ItemStack);
+    public extern customName();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#getDestroySpeed(org.bukkit.inventory.ItemStack,boolean)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#customName(net.kyori.adventure.text.Component)
      *
-     * @p ItemStack is an [ItemStack](ItemStack.aus.md).
-     * @p ConsiderEnchants is a bool.
-     * @r A double.
+     * @p CustomName is a Component.
      */
-    public extern getDestroySpeed(ItemStack, ConsiderEnchants);
+    public extern customName(CustomName);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#getLightEmission()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getBlock()
+     *
+     * @r A [Block](Block.aus.md).
+     */
+    public extern getBlock();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getBlockData()
+     *
+     * @r A [BlockData](BlockData.aus.md).
+     */
+    public extern getBlockData();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getChunk()
+     *
+     * @r A [Chunk](Chunk.aus.md).
+     */
+    public extern getChunk();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getCraftingTicks()
      *
      * @r An int.
      */
-    public extern getLightEmission();
+    public extern getCraftingTicks();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#getMapColor()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getCustomName()
      *
-     * @r A [Color](Color.aus.md).
+     * @r A string.
      */
-    public extern getMapColor();
+    public extern getCustomName();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#getMaterial()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getDrops()
      *
-     * @r A string naming a [Material](Material.aus.md).
+     * @r A list.
      */
-    public extern getMaterial();
+    public extern getDrops();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#getOrientation()
-     *
-     * @r An string naming an [Orientation](Orientation.aus.md).
-     */
-    public extern getOrientation();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#getPistonMoveReaction()
-     *
-     * @r A string naming a
-     * [PistonMoveReaction](PistonMoveReaction.aus.md).
-     */
-    public extern getPistonMoveReaction();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#getPlacementMaterial()
-     *
-     * @r A string naming a [Material](Material.aus.md).
-     */
-    public extern getPlacementMaterial();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#getSoundGroup()
-     *
-     * @r A [SoundGroup](SoundGroup.aus.md).
-     */
-    public extern getSoundGroup();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#isCrafting()
-     *
-     * @r A bool.
-     */
-    public extern isCrafting();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#isFaceSturdy(org.bukkit.block.BlockFace,org.bukkit.block.BlockSupport)
-     *
-     * @p Face is a string naming a [BlockFace](BlockFace.aus.md).
-     * @p Support is a string naming a
-     * [BlockSupport](BlockSupport.aus.md).
-     * @r A bool.
-     */
-    public extern isFaceSturdy(Face, Support);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#isOccluding()
-     *
-     * @r A bool.
-     */
-    public extern isOccluding();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#isPreferredTool(org.bukkit.inventory.ItemStack)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getDrops(org.bukkit.inventory.ItemStack)
      *
      * @p Tool is an [ItemStack](ItemStack.aus.md).
-     * @r A bool.
+     * @r A list.
      */
-    public extern isPreferredTool(Tool);
+    public extern getDrops(Tool);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#isRandomlyTicked()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getDrops(org.bukkit.inventory.ItemStack,org.bukkit.entity.Entity)
+     *
+     * @p Tool is an [ItemStack](ItemStack.aus.md).
+     * @p Entity is an [Entity](Entity.aus.md).
+     * @r A list.
+     */
+    public extern getDrops(Tool, Entity);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getInventory()
+     *
+     * @r An [Inventory](Inventory.aus.md).
+     */
+    public extern getInventory();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getLastFilled()
+     *
+     * @r An int.
+     */
+    public extern getLastFilled();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getLastLooted(org.bukkit.entity.Player)
+     *
+     * @p Player is a [Player](Player.aus.md).
+     * @r An int.
+     */
+    public extern getLastLooted(Player);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getLastLooted(java.util.UUID)
+     *
+     * @p Player is a string.
+     * @r An int.
+     */
+    public extern getLastLooted_UUID(Player);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getLightLevel()
+     *
+     * @r An int.
+     */
+    public extern getLightLevel();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getLocation()
+     *
+     * @r A [Location](Location.aus.md).
+     */
+    public extern getLocation();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getLocation(org.bukkit.Location)
+     *
+     * @p Loc is a [Location](Location.aus.md).
+     * @r A [Location](Location.aus.md).
+     */
+    public extern getLocation(Loc);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getLock()
+     *
+     * @r A string.
+     */
+    public extern getLock();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getLootTable()
+     *
+     * @r A [LootTable](LootTable.aus.md).
+     */
+    public extern getLootTable();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getMetadata(java.lang.String)
+     *
+     * @p MetadataKey is a string.
+     * @r A list.
+     */
+    public extern getMetadata(MetadataKey);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getNextRefill()
+     *
+     * @r An int.
+     */
+    public extern getNextRefill();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getPersistentDataContainer()
+     *
+     * @r A [PersistentDataContainer](PersistentDataContainer.aus.md).
+     */
+    public extern getPersistentDataContainer();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getRawData()
+     *
+     * @r An int.
+     */
+    public extern getRawData();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getSeed()
+     *
+     * @r An int.
+     */
+    public extern getSeed();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getSnapshotInventory()
+     *
+     * @r An [Inventory](Inventory.aus.md).
+     */
+    public extern getSnapshotInventory();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getType()
+     *
+     * @r A string naming a [Material](Material.aus.md).
+     */
+    public extern getType();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getWorld()
+     *
+     * @r A [World](World.aus.md).
+     */
+    public extern getWorld();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getX()
+     *
+     * @r An int.
+     */
+    public extern getX();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getY()
+     *
+     * @r An int.
+     */
+    public extern getY();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#getZ()
+     *
+     * @r An int.
+     */
+    public extern getZ();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#hasBeenFilled()
      *
      * @r A bool.
      */
-    public extern isRandomlyTicked();
+    public extern hasBeenFilled();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#isReplaceable()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#hasLootTable()
      *
      * @r A bool.
      */
-    public extern isReplaceable();
+    public extern hasLootTable();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#isSupported(org.bukkit.block.Block)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#hasMetadata(java.lang.String)
      *
-     * @p Block is a [Block](Block.aus.md).
+     * @p MetadataKey is a string.
      * @r A bool.
      */
-    public extern isSupported(Block);
+    public extern hasMetadata(MetadataKey);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#isSupported(org.bukkit.Location)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#hasPendingRefill()
      *
-     * @p Location is a [Location](Location.aus.md).
      * @r A bool.
      */
-    public extern isSupported_location(Location);
+    public extern hasPendingRefill();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#isTriggered()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#hasPlayerLooted(org.bukkit.entity.Player)
+     *
+     * @p Player is a [Player](Player.aus.md).
+     * @r A bool.
+     */
+    public extern hasPlayerLooted(Player);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#hasPlayerLooted(java.util.UUID)
+     *
+     * @p Player is a string.
+     * @r A bool.
+     */
+    public extern hasPlayerLooted_UUID(Player);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#isCollidable()
+     *
+     * @r A bool.
+     */
+    public extern isCollidable();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#isLocked()
+     *
+     * @r A bool.
+     */
+    public extern isLocked();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#isPlaced()
+     *
+     * @r A bool.
+     */
+    public extern isPlaced();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#isRefillEnabled()
+     *
+     * @r A bool.
+     */
+    public extern isRefillEnabled();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#isSlotDisabled(int)
+     *
+     * @p Slot is an int.
+     * @r A bool.
+     */
+    public extern isSlotDisabled(Slot);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#isSnapshot()
+     *
+     * @r A bool.
+     */
+    public extern isSnapshot();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#isSuffocating()
+     *
+     * @r A bool.
+     */
+    public extern isSuffocating();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#isTriggered()
      *
      * @r A bool.
      */
     public extern isTriggered();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#matches(org.bukkit.block.data.BlockData)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#setBlockData(org.bukkit.block.data.BlockData)
      *
      * @p Data is a [BlockData](BlockData.aus.md).
+     */
+    public extern setBlockData(Data);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#setCraftingTicks(int)
+     *
+     * @p Ticks is an int.
+     */
+    public extern setCraftingTicks(Ticks);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#setCustomName(java.lang.String)
+     *
+     * @p Name is a string.
+     */
+    public extern setCustomName(Name);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#setHasPlayerLooted(org.bukkit.entity.Player,boolean)
+     *
+     * @p Player is a [Player](Player.aus.md).
+     * @p Looted is a bool.
      * @r A bool.
      */
-    public extern matches(Data);
+    public extern setHasPlayerLooted(Player, Looted);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#merge(org.bukkit.block.data.BlockData)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#setHasPlayerLooted(java.util.UUID,boolean)
      *
-     * @p Data is a [BlockData](BlockData.aus.md).
-     * @r A [BlockData](BlockData.aus.md).
-     */
-    public extern merge(Data);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#mirror(org.bukkit.block.structure.Mirror)
-     *
-     * @p Mirror is a string naming a [Mirror](Mirror.aus.md).
-     */
-    public extern mirror(Mirror);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#requiresCorrectToolForDrops()
-     *
+     * @p Player is a string.
+     * @p Looted is a bool.
      * @r A bool.
      */
-    public extern requiresCorrectToolForDrops();
+    public extern setHasPlayerLooted_UUID_boolean(Player, Looted);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#rotate(org.bukkit.block.structure.StructureRotation)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#setLock(java.lang.String)
      *
-     * @p Rotation is a string naming a
-     * [StructureRotation](StructureRotation.aus.md).
+     * @p Key is a string.
      */
-    public extern rotate(Rotation);
+    public extern setLock(Key);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#setCrafting(boolean)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#setLockItem(org.bukkit.inventory.ItemStack)
      *
-     * @p Crafting is a bool.
+     * @p Key is an [ItemStack](ItemStack.aus.md).
      */
-    public extern setCrafting(Crafting);
+    public extern setLockItem(Key);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#setOrientation(org.bukkit.block.Orientation)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#setLootTable(org.bukkit.loot.LootTable)
      *
-     * @p Orientation is an string naming an
-     * [Orientation](Orientation.aus.md).
+     * @p Table is a [LootTable](LootTable.aus.md).
      */
-    public extern setOrientation(Orientation);
+    public extern setLootTable(Table);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Crafter.html#setTriggered(boolean)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#setLootTable(org.bukkit.loot.LootTable,long)
+     *
+     * @p Table is a [LootTable](LootTable.aus.md).
+     * @p Seed is an int.
+     */
+    public extern setLootTable(Table, Seed);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#setMetadata(java.lang.String,org.bukkit.metadata.MetadataValue)
+     *
+     * @p MetadataKey is a string.
+     * @p NewMetadataValue is a [MetadataValue](MetadataValue.aus.md).
+     */
+    public extern setMetadata(MetadataKey, NewMetadataValue);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#setNextRefill(long)
+     *
+     * @p RefillAt is an int.
+     * @r An int.
+     */
+    public extern setNextRefill(RefillAt);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#setRawData(byte)
+     *
+     * @p Data is an int.
+     */
+    public extern setRawData(Data);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#setSeed(long)
+     *
+     * @p Seed is an int.
+     */
+    public extern setSeed(Seed);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#setSlotDisabled(int,boolean)
+     *
+     * @p Slot is an int.
+     * @p Disabled is a bool.
+     */
+    public extern setSlotDisabled(Slot, Disabled);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#setTriggered(boolean)
      *
      * @p Triggered is a bool.
      */
     public extern setTriggered(Triggered);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#setType(org.bukkit.Material)
+     *
+     * @p Type is a string naming a [Material](Material.aus.md).
+     */
+    public extern setType(Type);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#update()
+     *
+     * @r A bool.
+     */
+    public extern update();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#update(boolean)
+     *
+     * @p Force is a bool.
+     * @r A bool.
+     */
+    public extern update(Force);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#update(boolean,boolean)
+     *
+     * @p Force is a bool.
+     * @p ApplyPhysics is a bool.
+     * @r A bool.
+     */
+    public extern update(Force, ApplyPhysics);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Crafter.html#removeMetadata(java.lang.String,org.bukkit.plugin.Plugin)
+     *
+     * @p MetadataKey is a string.
+     * @p OwningPlugin is a [Plugin](Plugin.aus.md).
+     */
+    public extern removeMetadata(MetadataKey, OwningPlugin);
 }

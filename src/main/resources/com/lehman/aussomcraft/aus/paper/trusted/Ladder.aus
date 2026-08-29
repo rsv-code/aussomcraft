@@ -6,12 +6,12 @@
  */
 
 /**
- * Generated shim for org.bukkit.material.Ladder.
+ * Generated shim for org.bukkit.block.data.type.Ladder.
  *
- * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Ladder.html
+ * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html
  *
- * In Paper this is a
- * [SimpleAttachableMaterialData](SimpleAttachableMaterialData.aus.md).
+ * In Paper this is a [Directional](Directional.aus.md) and
+ * [Waterlogged](Waterlogged.aus.md).
  * Every method it inherits is declared here too, so there is
  * nothing to follow up to.
  *
@@ -21,88 +21,234 @@ extern class Ladder : com.lehman.aussomcraft.paper.gen.trusted.LadderShim {
     public extern __opEq__(A0);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Ladder.html#clone()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#clone()
      *
-     * @r A [Ladder](Ladder.aus.md).
+     * @r A [BlockData](BlockData.aus.md).
      */
     public extern clone();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Ladder.html#equals(java.lang.Object)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#copyTo(org.bukkit.block.data.BlockData)
      *
-     * @p Obj is an Object.
-     * @r A bool.
+     * @p Other is a [BlockData](BlockData.aus.md).
      */
-    public extern equals(Obj);
+    public extern copyTo(Other);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Ladder.html#getAttachedFace()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#createBlockState()
      *
-     * @r A string naming a [BlockFace](BlockFace.aus.md).
+     * @r A [BlockState](BlockState.aus.md).
      */
-    public extern getAttachedFace();
+    public extern createBlockState();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Ladder.html#getData()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#getAsString()
      *
-     * @r An int.
+     * @r A string.
      */
-    public extern getData();
+    public extern getAsString();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Ladder.html#getFacing()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#getAsString(boolean)
+     *
+     * @p HideUnspecified is a bool.
+     * @r A string.
+     */
+    public extern getAsString(HideUnspecified);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#getCollisionShape(org.bukkit.Location)
+     *
+     * @p Location is a [Location](Location.aus.md).
+     * @r A [VoxelShape](VoxelShape.aus.md).
+     */
+    public extern getCollisionShape(Location);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#getDestroySpeed(org.bukkit.inventory.ItemStack)
+     *
+     * @p ItemStack is an [ItemStack](ItemStack.aus.md).
+     * @r A double.
+     */
+    public extern getDestroySpeed(ItemStack);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#getDestroySpeed(org.bukkit.inventory.ItemStack,boolean)
+     *
+     * @p ItemStack is an [ItemStack](ItemStack.aus.md).
+     * @p ConsiderEnchants is a bool.
+     * @r A double.
+     */
+    public extern getDestroySpeed(ItemStack, ConsiderEnchants);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#getFaces()
+     *
+     * @r A list.
+     */
+    public extern getFaces();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#getFacing()
      *
      * @r A string naming a [BlockFace](BlockFace.aus.md).
      */
     public extern getFacing();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Ladder.html#getItemType()
-     *
-     * @r A string naming a [Material](Material.aus.md).
-     */
-    public extern getItemType();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Ladder.html#hashCode()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#getLightEmission()
      *
      * @r An int.
      */
-    public extern hashCode();
+    public extern getLightEmission();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Ladder.html#setData(byte)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#getMapColor()
      *
-     * @p Data is an int.
+     * @r A [Color](Color.aus.md).
      */
-    public extern setData(Data);
+    public extern getMapColor();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Ladder.html#setFacingDirection(org.bukkit.block.BlockFace)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#getMaterial()
+     *
+     * @r A string naming a [Material](Material.aus.md).
+     */
+    public extern getMaterial();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#getPistonMoveReaction()
+     *
+     * @r A string naming a
+     * [PistonMoveReaction](PistonMoveReaction.aus.md).
+     */
+    public extern getPistonMoveReaction();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#getPlacementMaterial()
+     *
+     * @r A string naming a [Material](Material.aus.md).
+     */
+    public extern getPlacementMaterial();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#getSoundGroup()
+     *
+     * @r A [SoundGroup](SoundGroup.aus.md).
+     */
+    public extern getSoundGroup();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#isFaceSturdy(org.bukkit.block.BlockFace,org.bukkit.block.BlockSupport)
      *
      * @p Face is a string naming a [BlockFace](BlockFace.aus.md).
+     * @p Support is a string naming a
+     * [BlockSupport](BlockSupport.aus.md).
+     * @r A bool.
      */
-    public extern setFacingDirection(Face);
+    public extern isFaceSturdy(Face, Support);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Ladder.html#toItemStack()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#isOccluding()
      *
-     * @r An [ItemStack](ItemStack.aus.md).
+     * @r A bool.
      */
-    public extern toItemStack();
+    public extern isOccluding();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Ladder.html#toItemStack(int)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#isPreferredTool(org.bukkit.inventory.ItemStack)
      *
-     * @p Amount is an int.
-     * @r An [ItemStack](ItemStack.aus.md).
+     * @p Tool is an [ItemStack](ItemStack.aus.md).
+     * @r A bool.
      */
-    public extern toItemStack(Amount);
+    public extern isPreferredTool(Tool);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Ladder.html#toString()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#isRandomlyTicked()
      *
-     * @r A string.
+     * @r A bool.
      */
-    public extern toString();
+    public extern isRandomlyTicked();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#isReplaceable()
+     *
+     * @r A bool.
+     */
+    public extern isReplaceable();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#isSupported(org.bukkit.block.Block)
+     *
+     * @p Block is a [Block](Block.aus.md).
+     * @r A bool.
+     */
+    public extern isSupported(Block);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#isSupported(org.bukkit.Location)
+     *
+     * @p Location is a [Location](Location.aus.md).
+     * @r A bool.
+     */
+    public extern isSupported_location(Location);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#isWaterlogged()
+     *
+     * @r A bool.
+     */
+    public extern isWaterlogged();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#matches(org.bukkit.block.data.BlockData)
+     *
+     * @p Data is a [BlockData](BlockData.aus.md).
+     * @r A bool.
+     */
+    public extern matches(Data);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#merge(org.bukkit.block.data.BlockData)
+     *
+     * @p Data is a [BlockData](BlockData.aus.md).
+     * @r A [BlockData](BlockData.aus.md).
+     */
+    public extern merge(Data);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#mirror(org.bukkit.block.structure.Mirror)
+     *
+     * @p Mirror is a string naming a [Mirror](Mirror.aus.md).
+     */
+    public extern mirror(Mirror);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#requiresCorrectToolForDrops()
+     *
+     * @r A bool.
+     */
+    public extern requiresCorrectToolForDrops();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#rotate(org.bukkit.block.structure.StructureRotation)
+     *
+     * @p Rotation is a string naming a
+     * [StructureRotation](StructureRotation.aus.md).
+     */
+    public extern rotate(Rotation);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#setFacing(org.bukkit.block.BlockFace)
+     *
+     * @p Facing is a string naming a [BlockFace](BlockFace.aus.md).
+     */
+    public extern setFacing(Facing);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#setWaterlogged(boolean)
+     *
+     * @p Waterlogged is a bool.
+     */
+    public extern setWaterlogged(Waterlogged);
 }

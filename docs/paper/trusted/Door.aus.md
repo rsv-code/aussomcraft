@@ -4,11 +4,11 @@
 
 [21:14] (extern: com.lehman.aussomcraft.paper.gen.trusted.DoorShim) **extends: object** 
 
-Generated shim for org.bukkit.material.Door.
-Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Door.html
-In Paper this is a [Directional](Directional.aus.md),
-[Openable](Openable.aus.md) and
-[MaterialData](MaterialData.aus.md).
+Generated shim for org.bukkit.block.data.type.Door.
+Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Door.html
+In Paper this is a [Bisected](Bisected.aus.md),
+[Directional](Directional.aus.md), [Openable](Openable.aus.md) and
+[Powerable](Powerable.aus.md).
 Every method it inherits is declared here too, so there is
 nothing to follow up to.
 Tier: trusted. Do not edit.
@@ -20,138 +20,273 @@ Tier: trusted. Do not edit.
 
 - **clone** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Door.html#clone()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Door.html#clone()
 
-	- **@r** `A` [Door](Door.aus.md).
-
-
-- **equals** (`Obj`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Door.html#equals(java.lang.Object)
-
-	- **@p** `Obj` is an Object.
-	- **@r** `A` bool.
+	- **@r** `A` [BlockData](BlockData.aus.md).
 
 
-- **getData** ()
+- **copyTo** (`Other`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Door.html#getData()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Door.html#copyTo(org.bukkit.block.data.BlockData)
 
-	- **@r** `An` int.
+	- **@p** `Other` is a [BlockData](BlockData.aus.md).
+
+
+- **createBlockState** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Door.html#createBlockState()
+
+	- **@r** `A` [BlockState](BlockState.aus.md).
+
+
+- **getAsString** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Door.html#getAsString()
+
+	- **@r** `A` string.
+
+
+- **getAsString** (`HideUnspecified`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Door.html#getAsString(boolean)
+
+	- **@p** `HideUnspecified` is a bool.
+	- **@r** `A` string.
+
+
+- **getCollisionShape** (`Location`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Door.html#getCollisionShape(org.bukkit.Location)
+
+	- **@p** `Location` is a [Location](Location.aus.md).
+	- **@r** `A` [VoxelShape](VoxelShape.aus.md).
+
+
+- **getDestroySpeed** (`ItemStack`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Door.html#getDestroySpeed(org.bukkit.inventory.ItemStack)
+
+	- **@p** `ItemStack` is an [ItemStack](ItemStack.aus.md).
+	- **@r** `A` double.
+
+
+- **getDestroySpeed** (`ItemStack, ConsiderEnchants`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Door.html#getDestroySpeed(org.bukkit.inventory.ItemStack,boolean)
+
+	- **@p** `ItemStack` is an [ItemStack](ItemStack.aus.md).
+	- **@p** `ConsiderEnchants` is a bool.
+	- **@r** `A` double.
+
+
+- **getFaces** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Door.html#getFaces()
+
+	- **@r** `A` list.
 
 
 - **getFacing** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Door.html#getFacing()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Door.html#getFacing()
 
 	- **@r** `A` string naming a [BlockFace](BlockFace.aus.md).
+
+
+- **getHalf** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Door.html#getHalf()
+
+	- **@r** `A` string naming a Bisected.Half.
 
 
 - **getHinge** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Door.html#getHinge()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Door.html#getHinge()
 
-	- **@r** `A` bool.
-
-
-- **getHingeCorner** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Door.html#getHingeCorner()
-
-	- **@r** `A` string naming a [BlockFace](BlockFace.aus.md).
+	- **@r** `A` string naming a Door.Hinge.
 
 
-- **getItemType** ()
+- **getLightEmission** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Door.html#getItemType()
-
-	- **@r** `A` string naming a [Material](Material.aus.md).
-
-
-- **getWoodDoorOfSpecies** (`Species`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Door.html#getWoodDoorOfSpecies(org.bukkit.TreeSpecies)
-
-	- **@p** `Species` is a string naming a [TreeSpecies](TreeSpecies.aus.md).
-	- **@r** `A` string naming a [Material](Material.aus.md).
-
-
-- **hashCode** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Door.html#hashCode()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Door.html#getLightEmission()
 
 	- **@r** `An` int.
 
 
-- **isOpen** ()
+- **getMapColor** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Door.html#isOpen()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Door.html#getMapColor()
 
-	- **@r** `A` bool.
-
-
-- **isTopHalf** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Door.html#isTopHalf()
-
-	- **@r** `A` bool.
+	- **@r** `A` [Color](Color.aus.md).
 
 
-- **setData** (`Data`)
+- **getMaterial** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Door.html#setData(byte)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Door.html#getMaterial()
 
-	- **@p** `Data` is an int.
+	- **@r** `A` string naming a [Material](Material.aus.md).
 
 
-- **setFacingDirection** (`Face`)
+- **getPistonMoveReaction** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Door.html#setFacingDirection(org.bukkit.block.BlockFace)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Door.html#getPistonMoveReaction()
+
+	- **@r** `A` string naming a [PistonMoveReaction](PistonMoveReaction.aus.md).
+
+
+- **getPlacementMaterial** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Door.html#getPlacementMaterial()
+
+	- **@r** `A` string naming a [Material](Material.aus.md).
+
+
+- **getSoundGroup** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Door.html#getSoundGroup()
+
+	- **@r** `A` [SoundGroup](SoundGroup.aus.md).
+
+
+- **isFaceSturdy** (`Face, Support`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Door.html#isFaceSturdy(org.bukkit.block.BlockFace,org.bukkit.block.BlockSupport)
 
 	- **@p** `Face` is a string naming a [BlockFace](BlockFace.aus.md).
+	- **@p** `Support` is a string naming a [BlockSupport](BlockSupport.aus.md).
+	- **@r** `A` bool.
 
 
-- **setHinge** (`IsHingeRight`)
+- **isOccluding** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Door.html#setHinge(boolean)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Door.html#isOccluding()
 
-	- **@p** `IsHingeRight` is a bool.
-
-
-- **setOpen** (`IsOpen`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Door.html#setOpen(boolean)
-
-	- **@p** `IsOpen` is a bool.
+	- **@r** `A` bool.
 
 
-- **setTopHalf** (`IsTopHalf`)
+- **isOpen** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Door.html#setTopHalf(boolean)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Door.html#isOpen()
 
-	- **@p** `IsTopHalf` is a bool.
-
-
-- **toItemStack** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Door.html#toItemStack()
-
-	- **@r** `An` [ItemStack](ItemStack.aus.md).
+	- **@r** `A` bool.
 
 
-- **toItemStack** (`Amount`)
+- **isPowered** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Door.html#toItemStack(int)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Door.html#isPowered()
 
-	- **@p** `Amount` is an int.
-	- **@r** `An` [ItemStack](ItemStack.aus.md).
+	- **@r** `A` bool.
 
 
-- **toString** ()
+- **isPreferredTool** (`Tool`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Door.html#toString()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Door.html#isPreferredTool(org.bukkit.inventory.ItemStack)
 
-	- **@r** `A` string.
+	- **@p** `Tool` is an [ItemStack](ItemStack.aus.md).
+	- **@r** `A` bool.
+
+
+- **isRandomlyTicked** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Door.html#isRandomlyTicked()
+
+	- **@r** `A` bool.
+
+
+- **isReplaceable** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Door.html#isReplaceable()
+
+	- **@r** `A` bool.
+
+
+- **isSupported** (`Block`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Door.html#isSupported(org.bukkit.block.Block)
+
+	- **@p** `Block` is a [Block](Block.aus.md).
+	- **@r** `A` bool.
+
+
+- **isSupported\_location** (`Location`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Door.html#isSupported(org.bukkit.Location)
+
+	- **@p** `Location` is a [Location](Location.aus.md).
+	- **@r** `A` bool.
+
+
+- **matches** (`Data`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Door.html#matches(org.bukkit.block.data.BlockData)
+
+	- **@p** `Data` is a [BlockData](BlockData.aus.md).
+	- **@r** `A` bool.
+
+
+- **merge** (`Data`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Door.html#merge(org.bukkit.block.data.BlockData)
+
+	- **@p** `Data` is a [BlockData](BlockData.aus.md).
+	- **@r** `A` [BlockData](BlockData.aus.md).
+
+
+- **mirror** (`Mirror`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Door.html#mirror(org.bukkit.block.structure.Mirror)
+
+	- **@p** `Mirror` is a string naming a [Mirror](Mirror.aus.md).
+
+
+- **requiresCorrectToolForDrops** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Door.html#requiresCorrectToolForDrops()
+
+	- **@r** `A` bool.
+
+
+- **rotate** (`Rotation`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Door.html#rotate(org.bukkit.block.structure.StructureRotation)
+
+	- **@p** `Rotation` is a string naming a [StructureRotation](StructureRotation.aus.md).
+
+
+- **setFacing** (`Facing`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Door.html#setFacing(org.bukkit.block.BlockFace)
+
+	- **@p** `Facing` is a string naming a [BlockFace](BlockFace.aus.md).
+
+
+- **setHalf** (`Half`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Door.html#setHalf(org.bukkit.block.data.Bisected.Half)
+
+	- **@p** `Half` is a string naming a Bisected.Half.
+
+
+- **setHinge** (`Hinge`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Door.html#setHinge(org.bukkit.block.data.type.Door.Hinge)
+
+	- **@p** `Hinge` is a string naming a Door.Hinge.
+
+
+- **setOpen** (`Open`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Door.html#setOpen(boolean)
+
+	- **@p** `Open` is a bool.
+
+
+- **setPowered** (`Powered`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Door.html#setPowered(boolean)
+
+	- **@p** `Powered` is a bool.
 
 
 

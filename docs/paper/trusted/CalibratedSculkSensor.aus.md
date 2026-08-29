@@ -2,12 +2,11 @@
 
 ## class: CalibratedSculkSensor
 
-[20:14] (extern: com.lehman.aussomcraft.paper.gen.trusted.CalibratedSculkSensorShim) **extends: object** 
+[19:14] (extern: com.lehman.aussomcraft.paper.gen.trusted.CalibratedSculkSensorShim) **extends: object** 
 
-Generated shim for org.bukkit.block.data.type.CalibratedSculkSensor.
-Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CalibratedSculkSensor.html
-In Paper this is a [Directional](Directional.aus.md) and
-[SculkSensor](SculkSensor.aus.md).
+Generated shim for org.bukkit.block.CalibratedSculkSensor.
+Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CalibratedSculkSensor.html
+In Paper this is a [SculkSensor](SculkSensor.aus.md).
 Every method it inherits is declared here too, so there is
 nothing to follow up to.
 Tier: trusted. Do not edit.
@@ -17,282 +16,260 @@ Tier: trusted. Do not edit.
 - **\_\_opEq\_\_** (`A0`)
 
 
-- **clone** ()
+- **copy** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CalibratedSculkSensor.html#clone()
-
-	- **@r** `A` [BlockData](BlockData.aus.md).
-
-
-- **copyTo** (`Other`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CalibratedSculkSensor.html#copyTo(org.bukkit.block.data.BlockData)
-
-	- **@p** `Other` is a [BlockData](BlockData.aus.md).
-
-
-- **createBlockState** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CalibratedSculkSensor.html#createBlockState()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CalibratedSculkSensor.html#copy()
 
 	- **@r** `A` [BlockState](BlockState.aus.md).
 
 
-- **getAsString** ()
+- **copy** (`Location`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CalibratedSculkSensor.html#getAsString()
-
-	- **@r** `A` string.
-
-
-- **getAsString** (`HideUnspecified`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CalibratedSculkSensor.html#getAsString(boolean)
-
-	- **@p** `HideUnspecified` is a bool.
-	- **@r** `A` string.
-
-
-- **getCollisionShape** (`Location`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CalibratedSculkSensor.html#getCollisionShape(org.bukkit.Location)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CalibratedSculkSensor.html#copy(org.bukkit.Location)
 
 	- **@p** `Location` is a [Location](Location.aus.md).
-	- **@r** `A` [VoxelShape](VoxelShape.aus.md).
+	- **@r** `A` [BlockState](BlockState.aus.md).
 
 
-- **getDestroySpeed** (`ItemStack`)
+- **getBlock** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CalibratedSculkSensor.html#getDestroySpeed(org.bukkit.inventory.ItemStack)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CalibratedSculkSensor.html#getBlock()
 
-	- **@p** `ItemStack` is an [ItemStack](ItemStack.aus.md).
-	- **@r** `A` double.
-
-
-- **getDestroySpeed** (`ItemStack, ConsiderEnchants`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CalibratedSculkSensor.html#getDestroySpeed(org.bukkit.inventory.ItemStack,boolean)
-
-	- **@p** `ItemStack` is an [ItemStack](ItemStack.aus.md).
-	- **@p** `ConsiderEnchants` is a bool.
-	- **@r** `A` double.
+	- **@r** `A` [Block](Block.aus.md).
 
 
-- **getFaces** ()
+- **getBlockData** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CalibratedSculkSensor.html#getFaces()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CalibratedSculkSensor.html#getBlockData()
+
+	- **@r** `A` [BlockData](BlockData.aus.md).
+
+
+- **getChunk** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CalibratedSculkSensor.html#getChunk()
+
+	- **@r** `A` [Chunk](Chunk.aus.md).
+
+
+- **getDrops** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CalibratedSculkSensor.html#getDrops()
 
 	- **@r** `A` list.
 
 
-- **getFacing** ()
+- **getDrops** (`Tool`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CalibratedSculkSensor.html#getFacing()
-
-	- **@r** `A` string naming a [BlockFace](BlockFace.aus.md).
-
-
-- **getLightEmission** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CalibratedSculkSensor.html#getLightEmission()
-
-	- **@r** `An` int.
-
-
-- **getMapColor** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CalibratedSculkSensor.html#getMapColor()
-
-	- **@r** `A` [Color](Color.aus.md).
-
-
-- **getMaterial** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CalibratedSculkSensor.html#getMaterial()
-
-	- **@r** `A` string naming a [Material](Material.aus.md).
-
-
-- **getMaximumPower** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CalibratedSculkSensor.html#getMaximumPower()
-
-	- **@r** `An` int.
-
-
-- **getPhase** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CalibratedSculkSensor.html#getPhase()
-
-	- **@r** `A` string naming a SculkSensor.Phase.
-
-
-- **getPistonMoveReaction** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CalibratedSculkSensor.html#getPistonMoveReaction()
-
-	- **@r** `A` string naming a [PistonMoveReaction](PistonMoveReaction.aus.md).
-
-
-- **getPlacementMaterial** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CalibratedSculkSensor.html#getPlacementMaterial()
-
-	- **@r** `A` string naming a [Material](Material.aus.md).
-
-
-- **getPower** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CalibratedSculkSensor.html#getPower()
-
-	- **@r** `An` int.
-
-
-- **getSculkSensorPhase** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CalibratedSculkSensor.html#getSculkSensorPhase()
-
-	- **@r** `A` string naming a SculkSensor.Phase.
-
-
-- **getSoundGroup** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CalibratedSculkSensor.html#getSoundGroup()
-
-	- **@r** `A` [SoundGroup](SoundGroup.aus.md).
-
-
-- **isFaceSturdy** (`Face, Support`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CalibratedSculkSensor.html#isFaceSturdy(org.bukkit.block.BlockFace,org.bukkit.block.BlockSupport)
-
-	- **@p** `Face` is a string naming a [BlockFace](BlockFace.aus.md).
-	- **@p** `Support` is a string naming a [BlockSupport](BlockSupport.aus.md).
-	- **@r** `A` bool.
-
-
-- **isOccluding** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CalibratedSculkSensor.html#isOccluding()
-
-	- **@r** `A` bool.
-
-
-- **isPreferredTool** (`Tool`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CalibratedSculkSensor.html#isPreferredTool(org.bukkit.inventory.ItemStack)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CalibratedSculkSensor.html#getDrops(org.bukkit.inventory.ItemStack)
 
 	- **@p** `Tool` is an [ItemStack](ItemStack.aus.md).
+	- **@r** `A` list.
+
+
+- **getDrops** (`Tool, Entity`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CalibratedSculkSensor.html#getDrops(org.bukkit.inventory.ItemStack,org.bukkit.entity.Entity)
+
+	- **@p** `Tool` is an [ItemStack](ItemStack.aus.md).
+	- **@p** `Entity` is an [Entity](Entity.aus.md).
+	- **@r** `A` list.
+
+
+- **getLastVibrationFrequency** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CalibratedSculkSensor.html#getLastVibrationFrequency()
+
+	- **@r** `An` int.
+
+
+- **getLightLevel** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CalibratedSculkSensor.html#getLightLevel()
+
+	- **@r** `An` int.
+
+
+- **getListenerRange** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CalibratedSculkSensor.html#getListenerRange()
+
+	- **@r** `An` int.
+
+
+- **getLocation** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CalibratedSculkSensor.html#getLocation()
+
+	- **@r** `A` [Location](Location.aus.md).
+
+
+- **getLocation** (`Loc`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CalibratedSculkSensor.html#getLocation(org.bukkit.Location)
+
+	- **@p** `Loc` is a [Location](Location.aus.md).
+	- **@r** `A` [Location](Location.aus.md).
+
+
+- **getMetadata** (`MetadataKey`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CalibratedSculkSensor.html#getMetadata(java.lang.String)
+
+	- **@p** `MetadataKey` is a string.
+	- **@r** `A` list.
+
+
+- **getPersistentDataContainer** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CalibratedSculkSensor.html#getPersistentDataContainer()
+
+	- **@r** `A` [PersistentDataContainer](PersistentDataContainer.aus.md).
+
+
+- **getRawData** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CalibratedSculkSensor.html#getRawData()
+
+	- **@r** `An` int.
+
+
+- **getType** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CalibratedSculkSensor.html#getType()
+
+	- **@r** `A` string naming a [Material](Material.aus.md).
+
+
+- **getWorld** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CalibratedSculkSensor.html#getWorld()
+
+	- **@r** `A` [World](World.aus.md).
+
+
+- **getX** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CalibratedSculkSensor.html#getX()
+
+	- **@r** `An` int.
+
+
+- **getY** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CalibratedSculkSensor.html#getY()
+
+	- **@r** `An` int.
+
+
+- **getZ** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CalibratedSculkSensor.html#getZ()
+
+	- **@r** `An` int.
+
+
+- **hasMetadata** (`MetadataKey`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CalibratedSculkSensor.html#hasMetadata(java.lang.String)
+
+	- **@p** `MetadataKey` is a string.
 	- **@r** `A` bool.
 
 
-- **isRandomlyTicked** ()
+- **isCollidable** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CalibratedSculkSensor.html#isRandomlyTicked()
-
-	- **@r** `A` bool.
-
-
-- **isReplaceable** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CalibratedSculkSensor.html#isReplaceable()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CalibratedSculkSensor.html#isCollidable()
 
 	- **@r** `A` bool.
 
 
-- **isSupported** (`Block`)
+- **isPlaced** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CalibratedSculkSensor.html#isSupported(org.bukkit.block.Block)
-
-	- **@p** `Block` is a [Block](Block.aus.md).
-	- **@r** `A` bool.
-
-
-- **isSupported\_location** (`Location`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CalibratedSculkSensor.html#isSupported(org.bukkit.Location)
-
-	- **@p** `Location` is a [Location](Location.aus.md).
-	- **@r** `A` bool.
-
-
-- **isWaterlogged** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CalibratedSculkSensor.html#isWaterlogged()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CalibratedSculkSensor.html#isPlaced()
 
 	- **@r** `A` bool.
 
 
-- **matches** (`Data`)
+- **isSnapshot** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CalibratedSculkSensor.html#matches(org.bukkit.block.data.BlockData)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CalibratedSculkSensor.html#isSnapshot()
+
+	- **@r** `A` bool.
+
+
+- **isSuffocating** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CalibratedSculkSensor.html#isSuffocating()
+
+	- **@r** `A` bool.
+
+
+- **setBlockData** (`Data`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CalibratedSculkSensor.html#setBlockData(org.bukkit.block.data.BlockData)
 
 	- **@p** `Data` is a [BlockData](BlockData.aus.md).
+
+
+- **setLastVibrationFrequency** (`LastVibrationFrequency`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CalibratedSculkSensor.html#setLastVibrationFrequency(int)
+
+	- **@p** `LastVibrationFrequency` is an int.
+
+
+- **setListenerRange** (`Range`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CalibratedSculkSensor.html#setListenerRange(int)
+
+	- **@p** `Range` is an int.
+
+
+- **setMetadata** (`MetadataKey, NewMetadataValue`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CalibratedSculkSensor.html#setMetadata(java.lang.String,org.bukkit.metadata.MetadataValue)
+
+	- **@p** `MetadataKey` is a string.
+	- **@p** `NewMetadataValue` is a [MetadataValue](MetadataValue.aus.md).
+
+
+- **setRawData** (`Data`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CalibratedSculkSensor.html#setRawData(byte)
+
+	- **@p** `Data` is an int.
+
+
+- **setType** (`Type`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CalibratedSculkSensor.html#setType(org.bukkit.Material)
+
+	- **@p** `Type` is a string naming a [Material](Material.aus.md).
+
+
+- **update** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CalibratedSculkSensor.html#update()
+
 	- **@r** `A` bool.
 
 
-- **merge** (`Data`)
+- **update** (`Force`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CalibratedSculkSensor.html#merge(org.bukkit.block.data.BlockData)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CalibratedSculkSensor.html#update(boolean)
 
-	- **@p** `Data` is a [BlockData](BlockData.aus.md).
-	- **@r** `A` [BlockData](BlockData.aus.md).
-
-
-- **mirror** (`Mirror`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CalibratedSculkSensor.html#mirror(org.bukkit.block.structure.Mirror)
-
-	- **@p** `Mirror` is a string naming a [Mirror](Mirror.aus.md).
-
-
-- **requiresCorrectToolForDrops** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CalibratedSculkSensor.html#requiresCorrectToolForDrops()
-
+	- **@p** `Force` is a bool.
 	- **@r** `A` bool.
 
 
-- **rotate** (`Rotation`)
+- **update** (`Force, ApplyPhysics`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CalibratedSculkSensor.html#rotate(org.bukkit.block.structure.StructureRotation)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CalibratedSculkSensor.html#update(boolean,boolean)
 
-	- **@p** `Rotation` is a string naming a [StructureRotation](StructureRotation.aus.md).
-
-
-- **setFacing** (`Facing`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CalibratedSculkSensor.html#setFacing(org.bukkit.block.BlockFace)
-
-	- **@p** `Facing` is a string naming a [BlockFace](BlockFace.aus.md).
-
-
-- **setPhase** (`Phase`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CalibratedSculkSensor.html#setPhase(org.bukkit.block.data.type.SculkSensor.Phase)
-
-	- **@p** `Phase` is a string naming a SculkSensor.Phase.
-
-
-- **setPower** (`Power`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CalibratedSculkSensor.html#setPower(int)
-
-	- **@p** `Power` is an int.
-
-
-- **setSculkSensorPhase** (`Phase`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CalibratedSculkSensor.html#setSculkSensorPhase(org.bukkit.block.data.type.SculkSensor.Phase)
-
-	- **@p** `Phase` is a string naming a SculkSensor.Phase.
-
-
-- **setWaterlogged** (`Waterlogged`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CalibratedSculkSensor.html#setWaterlogged(boolean)
-
-	- **@p** `Waterlogged` is a bool.
+	- **@p** `Force` is a bool.
+	- **@p** `ApplyPhysics` is a bool.
+	- **@r** `A` bool.
 
 
 

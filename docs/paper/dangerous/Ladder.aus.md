@@ -4,10 +4,10 @@
 
 [20:14] (extern: com.lehman.aussomcraft.paper.gen.dangerous.LadderShim) **extends: object** 
 
-Generated shim for org.bukkit.material.Ladder.
-Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Ladder.html
-In Paper this is a
-[SimpleAttachableMaterialData](SimpleAttachableMaterialData.aus.md).
+Generated shim for org.bukkit.block.data.type.Ladder.
+Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html
+In Paper this is a [Directional](Directional.aus.md) and
+[Waterlogged](Waterlogged.aus.md).
 Every method it inherits is declared here too, so there is
 nothing to follow up to.
 Tier: dangerous. Do not edit.
@@ -19,88 +19,231 @@ Tier: dangerous. Do not edit.
 
 - **clone** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Ladder.html#clone()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#clone()
 
-	- **@r** `A` [Ladder](Ladder.aus.md).
-
-
-- **equals** (`Obj`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Ladder.html#equals(java.lang.Object)
-
-	- **@p** `Obj` is an Object.
-	- **@r** `A` bool.
+	- **@r** `A` [BlockData](BlockData.aus.md).
 
 
-- **getAttachedFace** ()
+- **copyTo** (`Other`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Ladder.html#getAttachedFace()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#copyTo(org.bukkit.block.data.BlockData)
 
-	- **@r** `A` string naming a [BlockFace](BlockFace.aus.md).
+	- **@p** `Other` is a [BlockData](BlockData.aus.md).
 
 
-- **getData** ()
+- **createBlockState** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Ladder.html#getData()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#createBlockState()
 
-	- **@r** `An` int.
+	- **@r** `A` [BlockState](BlockState.aus.md).
+
+
+- **getAsString** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#getAsString()
+
+	- **@r** `A` string.
+
+
+- **getAsString** (`HideUnspecified`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#getAsString(boolean)
+
+	- **@p** `HideUnspecified` is a bool.
+	- **@r** `A` string.
+
+
+- **getCollisionShape** (`Location`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#getCollisionShape(org.bukkit.Location)
+
+	- **@p** `Location` is a [Location](Location.aus.md).
+	- **@r** `A` [VoxelShape](VoxelShape.aus.md).
+
+
+- **getDestroySpeed** (`ItemStack`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#getDestroySpeed(org.bukkit.inventory.ItemStack)
+
+	- **@p** `ItemStack` is an [ItemStack](ItemStack.aus.md).
+	- **@r** `A` double.
+
+
+- **getDestroySpeed** (`ItemStack, ConsiderEnchants`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#getDestroySpeed(org.bukkit.inventory.ItemStack,boolean)
+
+	- **@p** `ItemStack` is an [ItemStack](ItemStack.aus.md).
+	- **@p** `ConsiderEnchants` is a bool.
+	- **@r** `A` double.
+
+
+- **getFaces** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#getFaces()
+
+	- **@r** `A` list.
 
 
 - **getFacing** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Ladder.html#getFacing()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#getFacing()
 
 	- **@r** `A` string naming a [BlockFace](BlockFace.aus.md).
 
 
-- **getItemType** ()
+- **getLightEmission** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Ladder.html#getItemType()
-
-	- **@r** `A` string naming a [Material](Material.aus.md).
-
-
-- **hashCode** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Ladder.html#hashCode()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#getLightEmission()
 
 	- **@r** `An` int.
 
 
-- **setData** (`Data`)
+- **getMapColor** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Ladder.html#setData(byte)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#getMapColor()
 
-	- **@p** `Data` is an int.
+	- **@r** `A` [Color](Color.aus.md).
 
 
-- **setFacingDirection** (`Face`)
+- **getMaterial** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Ladder.html#setFacingDirection(org.bukkit.block.BlockFace)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#getMaterial()
+
+	- **@r** `A` string naming a [Material](Material.aus.md).
+
+
+- **getPistonMoveReaction** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#getPistonMoveReaction()
+
+	- **@r** `A` string naming a [PistonMoveReaction](PistonMoveReaction.aus.md).
+
+
+- **getPlacementMaterial** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#getPlacementMaterial()
+
+	- **@r** `A` string naming a [Material](Material.aus.md).
+
+
+- **getSoundGroup** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#getSoundGroup()
+
+	- **@r** `A` [SoundGroup](SoundGroup.aus.md).
+
+
+- **isFaceSturdy** (`Face, Support`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#isFaceSturdy(org.bukkit.block.BlockFace,org.bukkit.block.BlockSupport)
 
 	- **@p** `Face` is a string naming a [BlockFace](BlockFace.aus.md).
+	- **@p** `Support` is a string naming a [BlockSupport](BlockSupport.aus.md).
+	- **@r** `A` bool.
 
 
-- **toItemStack** ()
+- **isOccluding** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Ladder.html#toItemStack()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#isOccluding()
 
-	- **@r** `An` [ItemStack](ItemStack.aus.md).
-
-
-- **toItemStack** (`Amount`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Ladder.html#toItemStack(int)
-
-	- **@p** `Amount` is an int.
-	- **@r** `An` [ItemStack](ItemStack.aus.md).
+	- **@r** `A` bool.
 
 
-- **toString** ()
+- **isPreferredTool** (`Tool`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Ladder.html#toString()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#isPreferredTool(org.bukkit.inventory.ItemStack)
 
-	- **@r** `A` string.
+	- **@p** `Tool` is an [ItemStack](ItemStack.aus.md).
+	- **@r** `A` bool.
+
+
+- **isRandomlyTicked** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#isRandomlyTicked()
+
+	- **@r** `A` bool.
+
+
+- **isReplaceable** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#isReplaceable()
+
+	- **@r** `A` bool.
+
+
+- **isSupported** (`Block`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#isSupported(org.bukkit.block.Block)
+
+	- **@p** `Block` is a [Block](Block.aus.md).
+	- **@r** `A` bool.
+
+
+- **isSupported\_location** (`Location`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#isSupported(org.bukkit.Location)
+
+	- **@p** `Location` is a [Location](Location.aus.md).
+	- **@r** `A` bool.
+
+
+- **isWaterlogged** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#isWaterlogged()
+
+	- **@r** `A` bool.
+
+
+- **matches** (`Data`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#matches(org.bukkit.block.data.BlockData)
+
+	- **@p** `Data` is a [BlockData](BlockData.aus.md).
+	- **@r** `A` bool.
+
+
+- **merge** (`Data`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#merge(org.bukkit.block.data.BlockData)
+
+	- **@p** `Data` is a [BlockData](BlockData.aus.md).
+	- **@r** `A` [BlockData](BlockData.aus.md).
+
+
+- **mirror** (`Mirror`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#mirror(org.bukkit.block.structure.Mirror)
+
+	- **@p** `Mirror` is a string naming a [Mirror](Mirror.aus.md).
+
+
+- **requiresCorrectToolForDrops** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#requiresCorrectToolForDrops()
+
+	- **@r** `A` bool.
+
+
+- **rotate** (`Rotation`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#rotate(org.bukkit.block.structure.StructureRotation)
+
+	- **@p** `Rotation` is a string naming a [StructureRotation](StructureRotation.aus.md).
+
+
+- **setFacing** (`Facing`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#setFacing(org.bukkit.block.BlockFace)
+
+	- **@p** `Facing` is a string naming a [BlockFace](BlockFace.aus.md).
+
+
+- **setWaterlogged** (`Waterlogged`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Ladder.html#setWaterlogged(boolean)
+
+	- **@p** `Waterlogged` is a bool.
 
 
 

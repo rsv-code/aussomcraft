@@ -2,12 +2,13 @@
 
 ## class: TripwireHook
 
-[20:14] (extern: com.lehman.aussomcraft.paper.gen.dangerous.TripwireHookShim) **extends: object** 
+[21:14] (extern: com.lehman.aussomcraft.paper.gen.dangerous.TripwireHookShim) **extends: object** 
 
-Generated shim for org.bukkit.material.TripwireHook.
-Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/TripwireHook.html
-In Paper this is a [Redstone](Redstone.aus.md) and
-[SimpleAttachableMaterialData](SimpleAttachableMaterialData.aus.md).
+Generated shim for org.bukkit.block.data.type.TripwireHook.
+Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TripwireHook.html
+In Paper this is a [Attachable](Attachable.aus.md),
+[Directional](Directional.aus.md) and
+[Powerable](Powerable.aus.md).
 Every method it inherits is declared here too, so there is
 nothing to follow up to.
 Tier: dangerous. Do not edit.
@@ -19,123 +20,245 @@ Tier: dangerous. Do not edit.
 
 - **clone** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/TripwireHook.html#clone()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TripwireHook.html#clone()
 
-	- **@r** `A` [TripwireHook](TripwireHook.aus.md).
-
-
-- **equals** (`Obj`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/TripwireHook.html#equals(java.lang.Object)
-
-	- **@p** `Obj` is an Object.
-	- **@r** `A` bool.
+	- **@r** `A` [BlockData](BlockData.aus.md).
 
 
-- **getAttachedFace** ()
+- **copyTo** (`Other`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/TripwireHook.html#getAttachedFace()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TripwireHook.html#copyTo(org.bukkit.block.data.BlockData)
 
-	- **@r** `A` string naming a [BlockFace](BlockFace.aus.md).
+	- **@p** `Other` is a [BlockData](BlockData.aus.md).
 
 
-- **getData** ()
+- **createBlockState** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/TripwireHook.html#getData()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TripwireHook.html#createBlockState()
 
-	- **@r** `An` int.
+	- **@r** `A` [BlockState](BlockState.aus.md).
+
+
+- **getAsString** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TripwireHook.html#getAsString()
+
+	- **@r** `A` string.
+
+
+- **getAsString** (`HideUnspecified`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TripwireHook.html#getAsString(boolean)
+
+	- **@p** `HideUnspecified` is a bool.
+	- **@r** `A` string.
+
+
+- **getCollisionShape** (`Location`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TripwireHook.html#getCollisionShape(org.bukkit.Location)
+
+	- **@p** `Location` is a [Location](Location.aus.md).
+	- **@r** `A` [VoxelShape](VoxelShape.aus.md).
+
+
+- **getDestroySpeed** (`ItemStack`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TripwireHook.html#getDestroySpeed(org.bukkit.inventory.ItemStack)
+
+	- **@p** `ItemStack` is an [ItemStack](ItemStack.aus.md).
+	- **@r** `A` double.
+
+
+- **getDestroySpeed** (`ItemStack, ConsiderEnchants`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TripwireHook.html#getDestroySpeed(org.bukkit.inventory.ItemStack,boolean)
+
+	- **@p** `ItemStack` is an [ItemStack](ItemStack.aus.md).
+	- **@p** `ConsiderEnchants` is a bool.
+	- **@r** `A` double.
+
+
+- **getFaces** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TripwireHook.html#getFaces()
+
+	- **@r** `A` list.
 
 
 - **getFacing** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/TripwireHook.html#getFacing()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TripwireHook.html#getFacing()
 
 	- **@r** `A` string naming a [BlockFace](BlockFace.aus.md).
 
 
-- **getItemType** ()
+- **getLightEmission** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/TripwireHook.html#getItemType()
-
-	- **@r** `A` string naming a [Material](Material.aus.md).
-
-
-- **hashCode** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/TripwireHook.html#hashCode()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TripwireHook.html#getLightEmission()
 
 	- **@r** `An` int.
 
 
-- **isActivated** ()
+- **getMapColor** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/TripwireHook.html#isActivated()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TripwireHook.html#getMapColor()
+
+	- **@r** `A` [Color](Color.aus.md).
+
+
+- **getMaterial** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TripwireHook.html#getMaterial()
+
+	- **@r** `A` string naming a [Material](Material.aus.md).
+
+
+- **getPistonMoveReaction** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TripwireHook.html#getPistonMoveReaction()
+
+	- **@r** `A` string naming a [PistonMoveReaction](PistonMoveReaction.aus.md).
+
+
+- **getPlacementMaterial** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TripwireHook.html#getPlacementMaterial()
+
+	- **@r** `A` string naming a [Material](Material.aus.md).
+
+
+- **getSoundGroup** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TripwireHook.html#getSoundGroup()
+
+	- **@r** `A` [SoundGroup](SoundGroup.aus.md).
+
+
+- **isAttached** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TripwireHook.html#isAttached()
 
 	- **@r** `A` bool.
 
 
-- **isConnected** ()
+- **isFaceSturdy** (`Face, Support`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/TripwireHook.html#isConnected()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TripwireHook.html#isFaceSturdy(org.bukkit.block.BlockFace,org.bukkit.block.BlockSupport)
+
+	- **@p** `Face` is a string naming a [BlockFace](BlockFace.aus.md).
+	- **@p** `Support` is a string naming a [BlockSupport](BlockSupport.aus.md).
+	- **@r** `A` bool.
+
+
+- **isOccluding** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TripwireHook.html#isOccluding()
 
 	- **@r** `A` bool.
 
 
 - **isPowered** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/TripwireHook.html#isPowered()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TripwireHook.html#isPowered()
 
 	- **@r** `A` bool.
 
 
-- **setActivated** (`Act`)
+- **isPreferredTool** (`Tool`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/TripwireHook.html#setActivated(boolean)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TripwireHook.html#isPreferredTool(org.bukkit.inventory.ItemStack)
 
-	- **@p** `Act` is a bool.
-
-
-- **setConnected** (`Connected`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/TripwireHook.html#setConnected(boolean)
-
-	- **@p** `Connected` is a bool.
+	- **@p** `Tool` is an [ItemStack](ItemStack.aus.md).
+	- **@r** `A` bool.
 
 
-- **setData** (`Data`)
+- **isRandomlyTicked** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/TripwireHook.html#setData(byte)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TripwireHook.html#isRandomlyTicked()
 
-	- **@p** `Data` is an int.
-
-
-- **setFacingDirection** (`Face`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/TripwireHook.html#setFacingDirection(org.bukkit.block.BlockFace)
-
-	- **@p** `Face` is a string naming a [BlockFace](BlockFace.aus.md).
+	- **@r** `A` bool.
 
 
-- **toItemStack** ()
+- **isReplaceable** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/TripwireHook.html#toItemStack()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TripwireHook.html#isReplaceable()
 
-	- **@r** `An` [ItemStack](ItemStack.aus.md).
-
-
-- **toItemStack** (`Amount`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/TripwireHook.html#toItemStack(int)
-
-	- **@p** `Amount` is an int.
-	- **@r** `An` [ItemStack](ItemStack.aus.md).
+	- **@r** `A` bool.
 
 
-- **toString** ()
+- **isSupported** (`Block`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/TripwireHook.html#toString()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TripwireHook.html#isSupported(org.bukkit.block.Block)
 
-	- **@r** `A` string.
+	- **@p** `Block` is a [Block](Block.aus.md).
+	- **@r** `A` bool.
+
+
+- **isSupported\_location** (`Location`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TripwireHook.html#isSupported(org.bukkit.Location)
+
+	- **@p** `Location` is a [Location](Location.aus.md).
+	- **@r** `A` bool.
+
+
+- **matches** (`Data`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TripwireHook.html#matches(org.bukkit.block.data.BlockData)
+
+	- **@p** `Data` is a [BlockData](BlockData.aus.md).
+	- **@r** `A` bool.
+
+
+- **merge** (`Data`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TripwireHook.html#merge(org.bukkit.block.data.BlockData)
+
+	- **@p** `Data` is a [BlockData](BlockData.aus.md).
+	- **@r** `A` [BlockData](BlockData.aus.md).
+
+
+- **mirror** (`Mirror`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TripwireHook.html#mirror(org.bukkit.block.structure.Mirror)
+
+	- **@p** `Mirror` is a string naming a [Mirror](Mirror.aus.md).
+
+
+- **requiresCorrectToolForDrops** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TripwireHook.html#requiresCorrectToolForDrops()
+
+	- **@r** `A` bool.
+
+
+- **rotate** (`Rotation`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TripwireHook.html#rotate(org.bukkit.block.structure.StructureRotation)
+
+	- **@p** `Rotation` is a string naming a [StructureRotation](StructureRotation.aus.md).
+
+
+- **setAttached** (`Attached`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TripwireHook.html#setAttached(boolean)
+
+	- **@p** `Attached` is a bool.
+
+
+- **setFacing** (`Facing`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TripwireHook.html#setFacing(org.bukkit.block.BlockFace)
+
+	- **@p** `Facing` is a string naming a [BlockFace](BlockFace.aus.md).
+
+
+- **setPowered** (`Powered`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TripwireHook.html#setPowered(boolean)
+
+	- **@p** `Powered` is a bool.
 
 
 

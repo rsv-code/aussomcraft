@@ -2,12 +2,11 @@
 
 ## class: CopperGolem
 
-[20:14] (extern: com.lehman.aussomcraft.paper.gen.dangerous.CopperGolemShim) **extends: object** 
+[19:14] (extern: com.lehman.aussomcraft.paper.gen.dangerous.CopperGolemShim) **extends: object** 
 
 Generated shim for org.bukkit.entity.CopperGolem.
 Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/CopperGolem.html
-In Paper this is a [Golem](Golem.aus.md) and
-[Shearable](Shearable.aus.md).
+In Paper this is a [Golem](Golem.aus.md).
 Every method it inherits is declared here too, so there is
 nothing to follow up to.
 Tier: dangerous. Do not edit.

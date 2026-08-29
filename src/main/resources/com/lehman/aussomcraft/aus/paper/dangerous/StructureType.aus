@@ -6,9 +6,9 @@
  */
 
 /**
- * Generated shim for org.bukkit.generator.structure.StructureType.
+ * Generated shim for org.bukkit.StructureType.
  *
- * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/generator/structure/StructureType.html
+ * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/StructureType.html
  *
  * In Paper this is a [Keyed](Keyed.aus.md).
  * Every method it inherits is declared here too, so there is
@@ -20,9 +20,52 @@ extern class StructureType : com.lehman.aussomcraft.paper.gen.dangerous.Structur
     public extern __opEq__(A0);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/generator/structure/StructureType.html#getKey()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/StructureType.html#equals(java.lang.Object)
+     *
+     * @p Other is an Object.
+     * @r A bool.
+     */
+    public extern equals(Other);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/StructureType.html#getKey()
      *
      * @r A [NamespacedKey](NamespacedKey.aus.md).
      */
     public extern getKey();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/StructureType.html#getMapIcon()
+     *
+     * @r A MapCursor.Type.
+     */
+    public extern getMapIcon();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/StructureType.html#getName()
+     *
+     * @r A string.
+     */
+    public extern getName();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/StructureType.html#getStructureTypes()
+     *
+     * @r A map.
+     */
+    public extern getStructureTypes();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/StructureType.html#hashCode()
+     *
+     * @r An int.
+     */
+    public extern hashCode();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/StructureType.html#toString()
+     *
+     * @r A string.
+     */
+    public extern toString();
 }

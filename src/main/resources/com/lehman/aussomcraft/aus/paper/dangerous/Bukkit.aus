@@ -126,7 +126,7 @@ extern class Bukkit : com.lehman.aussomcraft.paper.gen.dangerous.BukkitShim {
      *
      * @p World is a [World](World.aus.md).
      * @p Location is a [Location](Location.aus.md).
-     * @p StructureType is a [StructureType](StructureType.aus.md).
+     * @p StructureType is a StructureStructureType.
      * @p MapIcon is a MapCursor.Type.
      * @r An [ItemStack](ItemStack.aus.md).
      */
@@ -149,7 +149,7 @@ extern class Bukkit : com.lehman.aussomcraft.paper.gen.dangerous.BukkitShim {
      *
      * @p World is a [World](World.aus.md).
      * @p Location is a [Location](Location.aus.md).
-     * @p StructureType is a [StructureType](StructureType.aus.md).
+     * @p StructureType is a StructureStructureType.
      * @p MapIcon is a MapCursor.Type.
      * @p Radius is an int.
      * @p FindUnexplored is a bool.
@@ -278,7 +278,7 @@ extern class Bukkit : com.lehman.aussomcraft.paper.gen.dangerous.BukkitShim {
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/Bukkit.html#createProfile(java.lang.String)
      *
      * @p Name is a string.
-     * @r A [PlayerProfile](PlayerProfile.aus.md).
+     * @r A ProfilePlayerProfile.
      */
     public extern createProfile(Name);
 
@@ -286,7 +286,7 @@ extern class Bukkit : com.lehman.aussomcraft.paper.gen.dangerous.BukkitShim {
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/Bukkit.html#createProfile(java.util.UUID)
      *
      * @p Uuid is a string.
-     * @r A [PlayerProfile](PlayerProfile.aus.md).
+     * @r A ProfilePlayerProfile.
      */
     public extern createProfile_uuid(Uuid);
 
@@ -295,7 +295,7 @@ extern class Bukkit : com.lehman.aussomcraft.paper.gen.dangerous.BukkitShim {
      *
      * @p Uuid is a string.
      * @p Name is a string.
-     * @r A [PlayerProfile](PlayerProfile.aus.md).
+     * @r A ProfilePlayerProfile.
      */
     public extern createProfile(Uuid, Name);
 
@@ -304,7 +304,7 @@ extern class Bukkit : com.lehman.aussomcraft.paper.gen.dangerous.BukkitShim {
      *
      * @p Uuid is a string.
      * @p Name is a string.
-     * @r A [PlayerProfile](PlayerProfile.aus.md).
+     * @r A ProfilePlayerProfile.
      */
     public extern createProfileExact(Uuid, Name);
 

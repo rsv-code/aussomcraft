@@ -6,12 +6,11 @@
  */
 
 /**
- * Generated shim for org.bukkit.material.Skull.
+ * Generated shim for org.bukkit.block.Skull.
  *
- * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Skull.html
+ * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html
  *
- * In Paper this is a [Directional](Directional.aus.md) and
- * [MaterialData](MaterialData.aus.md).
+ * In Paper this is a [TileState](TileState.aus.md).
  * Every method it inherits is declared here too, so there is
  * nothing to follow up to.
  *
@@ -21,81 +20,372 @@ extern class Skull : com.lehman.aussomcraft.paper.gen.dangerous.SkullShim {
     public extern __opEq__(A0);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Skull.html#clone()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#copy()
      *
-     * @r A [Skull](Skull.aus.md).
+     * @r A [BlockState](BlockState.aus.md).
      */
-    public extern clone();
+    public extern copy();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Skull.html#equals(java.lang.Object)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#copy(org.bukkit.Location)
      *
-     * @p Obj is an Object.
-     * @r A bool.
+     * @p Location is a [Location](Location.aus.md).
+     * @r A [BlockState](BlockState.aus.md).
      */
-    public extern equals(Obj);
+    public extern copy(Location);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Skull.html#getData()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#customName()
+     *
+     * @r A Component.
+     */
+    public extern customName();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#customName(net.kyori.adventure.text.Component)
+     *
+     * @p CustomName is a Component.
+     */
+    public extern customName(CustomName);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#getBlock()
+     *
+     * @r A [Block](Block.aus.md).
+     */
+    public extern getBlock();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#getBlockData()
+     *
+     * @r A [BlockData](BlockData.aus.md).
+     */
+    public extern getBlockData();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#getChunk()
+     *
+     * @r A [Chunk](Chunk.aus.md).
+     */
+    public extern getChunk();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#getDrops()
+     *
+     * @r A list.
+     */
+    public extern getDrops();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#getDrops(org.bukkit.inventory.ItemStack)
+     *
+     * @p Tool is an [ItemStack](ItemStack.aus.md).
+     * @r A list.
+     */
+    public extern getDrops(Tool);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#getDrops(org.bukkit.inventory.ItemStack,org.bukkit.entity.Entity)
+     *
+     * @p Tool is an [ItemStack](ItemStack.aus.md).
+     * @p Entity is an [Entity](Entity.aus.md).
+     * @r A list.
+     */
+    public extern getDrops(Tool, Entity);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#getLightLevel()
      *
      * @r An int.
      */
-    public extern getData();
+    public extern getLightLevel();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Skull.html#getFacing()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#getLocation()
      *
-     * @r A string naming a [BlockFace](BlockFace.aus.md).
+     * @r A [Location](Location.aus.md).
      */
-    public extern getFacing();
+    public extern getLocation();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Skull.html#getItemType()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#getLocation(org.bukkit.Location)
      *
-     * @r A string naming a [Material](Material.aus.md).
+     * @p Loc is a [Location](Location.aus.md).
+     * @r A [Location](Location.aus.md).
      */
-    public extern getItemType();
+    public extern getLocation(Loc);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Skull.html#hashCode()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#getMetadata(java.lang.String)
      *
-     * @r An int.
+     * @p MetadataKey is a string.
+     * @r A list.
      */
-    public extern hashCode();
+    public extern getMetadata(MetadataKey);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Skull.html#setData(byte)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#getNoteBlockSound()
      *
-     * @p Data is an int.
+     * @r A [NamespacedKey](NamespacedKey.aus.md).
      */
-    public extern setData(Data);
+    public extern getNoteBlockSound();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Skull.html#setFacingDirection(org.bukkit.block.BlockFace)
-     *
-     * @p Face is a string naming a [BlockFace](BlockFace.aus.md).
-     */
-    public extern setFacingDirection(Face);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Skull.html#toItemStack()
-     *
-     * @r An [ItemStack](ItemStack.aus.md).
-     */
-    public extern toItemStack();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Skull.html#toItemStack(int)
-     *
-     * @p Amount is an int.
-     * @r An [ItemStack](ItemStack.aus.md).
-     */
-    public extern toItemStack(Amount);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Skull.html#toString()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#getOwner()
      *
      * @r A string.
      */
-    public extern toString();
+    public extern getOwner();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#getOwnerProfile()
+     *
+     * @r A [PlayerProfile](PlayerProfile.aus.md).
+     */
+    public extern getOwnerProfile();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#getOwningPlayer()
+     *
+     * @r An [OfflinePlayer](OfflinePlayer.aus.md).
+     */
+    public extern getOwningPlayer();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#getPersistentDataContainer()
+     *
+     * @r A [PersistentDataContainer](PersistentDataContainer.aus.md).
+     */
+    public extern getPersistentDataContainer();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#getPlayerProfile()
+     *
+     * @r A ProfilePlayerProfile.
+     */
+    public extern getPlayerProfile();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#getProfile()
+     *
+     * @r A [ResolvableProfile](ResolvableProfile.aus.md).
+     */
+    public extern getProfile();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#getRawData()
+     *
+     * @r An int.
+     */
+    public extern getRawData();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#getRotation()
+     *
+     * @r A string naming a [BlockFace](BlockFace.aus.md).
+     */
+    public extern getRotation();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#getSkullType()
+     *
+     * @r A string naming a [SkullType](SkullType.aus.md).
+     */
+    public extern getSkullType();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#getType()
+     *
+     * @r A string naming a [Material](Material.aus.md).
+     */
+    public extern getType();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#getWorld()
+     *
+     * @r A [World](World.aus.md).
+     */
+    public extern getWorld();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#getX()
+     *
+     * @r An int.
+     */
+    public extern getX();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#getY()
+     *
+     * @r An int.
+     */
+    public extern getY();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#getZ()
+     *
+     * @r An int.
+     */
+    public extern getZ();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#hasMetadata(java.lang.String)
+     *
+     * @p MetadataKey is a string.
+     * @r A bool.
+     */
+    public extern hasMetadata(MetadataKey);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#hasOwner()
+     *
+     * @r A bool.
+     */
+    public extern hasOwner();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#isCollidable()
+     *
+     * @r A bool.
+     */
+    public extern isCollidable();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#isPlaced()
+     *
+     * @r A bool.
+     */
+    public extern isPlaced();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#isSnapshot()
+     *
+     * @r A bool.
+     */
+    public extern isSnapshot();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#isSuffocating()
+     *
+     * @r A bool.
+     */
+    public extern isSuffocating();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#setBlockData(org.bukkit.block.data.BlockData)
+     *
+     * @p Data is a [BlockData](BlockData.aus.md).
+     */
+    public extern setBlockData(Data);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#setMetadata(java.lang.String,org.bukkit.metadata.MetadataValue)
+     *
+     * @p MetadataKey is a string.
+     * @p NewMetadataValue is a [MetadataValue](MetadataValue.aus.md).
+     */
+    public extern setMetadata(MetadataKey, NewMetadataValue);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#setNoteBlockSound(org.bukkit.NamespacedKey)
+     *
+     * @p NoteBlockSound is a [NamespacedKey](NamespacedKey.aus.md).
+     */
+    public extern setNoteBlockSound(NoteBlockSound);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#setOwner(java.lang.String)
+     *
+     * @p Name is a string.
+     * @r A bool.
+     */
+    public extern setOwner(Name);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#setOwnerProfile(org.bukkit.profile.PlayerProfile)
+     *
+     * @p Profile is a [PlayerProfile](PlayerProfile.aus.md).
+     */
+    public extern setOwnerProfile(Profile);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#setOwningPlayer(org.bukkit.OfflinePlayer)
+     *
+     * @p Player is an [OfflinePlayer](OfflinePlayer.aus.md).
+     */
+    public extern setOwningPlayer(Player);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#setPlayerProfile(com.destroystokyo.paper.profile.PlayerProfile)
+     *
+     * @p Profile is a ProfilePlayerProfile.
+     */
+    public extern setPlayerProfile(Profile);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#setProfile(io.papermc.paper.datacomponent.item.ResolvableProfile)
+     *
+     * @p Profile is a [ResolvableProfile](ResolvableProfile.aus.md).
+     */
+    public extern setProfile(Profile);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#setRawData(byte)
+     *
+     * @p Data is an int.
+     */
+    public extern setRawData(Data);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#setRotation(org.bukkit.block.BlockFace)
+     *
+     * @p Rotation is a string naming a [BlockFace](BlockFace.aus.md).
+     */
+    public extern setRotation(Rotation);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#setSkullType(org.bukkit.SkullType)
+     *
+     * @p SkullType is a string naming a [SkullType](SkullType.aus.md).
+     */
+    public extern setSkullType(SkullType);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#setType(org.bukkit.Material)
+     *
+     * @p Type is a string naming a [Material](Material.aus.md).
+     */
+    public extern setType(Type);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#update()
+     *
+     * @r A bool.
+     */
+    public extern update();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#update(boolean)
+     *
+     * @p Force is a bool.
+     * @r A bool.
+     */
+    public extern update(Force);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#update(boolean,boolean)
+     *
+     * @p Force is a bool.
+     * @p ApplyPhysics is a bool.
+     * @r A bool.
+     */
+    public extern update(Force, ApplyPhysics);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Skull.html#removeMetadata(java.lang.String,org.bukkit.plugin.Plugin)
+     *
+     * @p MetadataKey is a string.
+     * @p OwningPlugin is a [Plugin](Plugin.aus.md).
+     */
+    public extern removeMetadata(MetadataKey, OwningPlugin);
 }

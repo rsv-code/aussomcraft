@@ -78,13 +78,6 @@ extern class LockableTileState : com.lehman.aussomcraft.paper.gen.trusted.Lockab
     public extern getCustomName();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/io/papermc/paper/block/LockableTileState.html#getData()
-     *
-     * @r A [MaterialData](MaterialData.aus.md).
-     */
-    public extern getData();
-
-    /**
      * Paper: https://jd.papermc.io/paper/1.21.10/io/papermc/paper/block/LockableTileState.html#getDrops()
      *
      * @r A list.
@@ -250,13 +243,6 @@ extern class LockableTileState : com.lehman.aussomcraft.paper.gen.trusted.Lockab
      * @p Name is a string.
      */
     public extern setCustomName(Name);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/io/papermc/paper/block/LockableTileState.html#setData(org.bukkit.material.MaterialData)
-     *
-     * @p Data is a [MaterialData](MaterialData.aus.md).
-     */
-    public extern setData(Data);
 
     /**
      * Paper: https://jd.papermc.io/paper/1.21.10/io/papermc/paper/block/LockableTileState.html#setLock(java.lang.String)

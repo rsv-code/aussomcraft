@@ -2,12 +2,14 @@
 
 ## class: TrapDoor
 
-[20:14] (extern: com.lehman.aussomcraft.paper.gen.trusted.TrapDoorShim) **extends: object** 
+[22:14] (extern: com.lehman.aussomcraft.paper.gen.trusted.TrapDoorShim) **extends: object** 
 
-Generated shim for org.bukkit.material.TrapDoor.
-Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/TrapDoor.html
-In Paper this is a [Openable](Openable.aus.md) and
-[SimpleAttachableMaterialData](SimpleAttachableMaterialData.aus.md).
+Generated shim for org.bukkit.block.data.type.TrapDoor.
+Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrapDoor.html
+In Paper this is a [Bisected](Bisected.aus.md),
+[Directional](Directional.aus.md), [Openable](Openable.aus.md),
+[Powerable](Powerable.aus.md) and
+[Waterlogged](Waterlogged.aus.md).
 Every method it inherits is declared here too, so there is
 nothing to follow up to.
 Tier: trusted. Do not edit.
@@ -19,116 +21,273 @@ Tier: trusted. Do not edit.
 
 - **clone** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/TrapDoor.html#clone()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrapDoor.html#clone()
 
-	- **@r** `A` [TrapDoor](TrapDoor.aus.md).
-
-
-- **equals** (`Obj`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/TrapDoor.html#equals(java.lang.Object)
-
-	- **@p** `Obj` is an Object.
-	- **@r** `A` bool.
+	- **@r** `A` [BlockData](BlockData.aus.md).
 
 
-- **getAttachedFace** ()
+- **copyTo** (`Other`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/TrapDoor.html#getAttachedFace()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrapDoor.html#copyTo(org.bukkit.block.data.BlockData)
 
-	- **@r** `A` string naming a [BlockFace](BlockFace.aus.md).
+	- **@p** `Other` is a [BlockData](BlockData.aus.md).
 
 
-- **getData** ()
+- **createBlockState** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/TrapDoor.html#getData()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrapDoor.html#createBlockState()
 
-	- **@r** `An` int.
+	- **@r** `A` [BlockState](BlockState.aus.md).
+
+
+- **getAsString** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrapDoor.html#getAsString()
+
+	- **@r** `A` string.
+
+
+- **getAsString** (`HideUnspecified`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrapDoor.html#getAsString(boolean)
+
+	- **@p** `HideUnspecified` is a bool.
+	- **@r** `A` string.
+
+
+- **getCollisionShape** (`Location`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrapDoor.html#getCollisionShape(org.bukkit.Location)
+
+	- **@p** `Location` is a [Location](Location.aus.md).
+	- **@r** `A` [VoxelShape](VoxelShape.aus.md).
+
+
+- **getDestroySpeed** (`ItemStack`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrapDoor.html#getDestroySpeed(org.bukkit.inventory.ItemStack)
+
+	- **@p** `ItemStack` is an [ItemStack](ItemStack.aus.md).
+	- **@r** `A` double.
+
+
+- **getDestroySpeed** (`ItemStack, ConsiderEnchants`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrapDoor.html#getDestroySpeed(org.bukkit.inventory.ItemStack,boolean)
+
+	- **@p** `ItemStack` is an [ItemStack](ItemStack.aus.md).
+	- **@p** `ConsiderEnchants` is a bool.
+	- **@r** `A` double.
+
+
+- **getFaces** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrapDoor.html#getFaces()
+
+	- **@r** `A` list.
 
 
 - **getFacing** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/TrapDoor.html#getFacing()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrapDoor.html#getFacing()
 
 	- **@r** `A` string naming a [BlockFace](BlockFace.aus.md).
 
 
-- **getItemType** ()
+- **getHalf** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/TrapDoor.html#getItemType()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrapDoor.html#getHalf()
 
-	- **@r** `A` string naming a [Material](Material.aus.md).
+	- **@r** `A` string naming a Bisected.Half.
 
 
-- **hashCode** ()
+- **getLightEmission** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/TrapDoor.html#hashCode()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrapDoor.html#getLightEmission()
 
 	- **@r** `An` int.
 
 
-- **isInverted** ()
+- **getMapColor** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/TrapDoor.html#isInverted()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrapDoor.html#getMapColor()
+
+	- **@r** `A` [Color](Color.aus.md).
+
+
+- **getMaterial** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrapDoor.html#getMaterial()
+
+	- **@r** `A` string naming a [Material](Material.aus.md).
+
+
+- **getPistonMoveReaction** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrapDoor.html#getPistonMoveReaction()
+
+	- **@r** `A` string naming a [PistonMoveReaction](PistonMoveReaction.aus.md).
+
+
+- **getPlacementMaterial** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrapDoor.html#getPlacementMaterial()
+
+	- **@r** `A` string naming a [Material](Material.aus.md).
+
+
+- **getSoundGroup** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrapDoor.html#getSoundGroup()
+
+	- **@r** `A` [SoundGroup](SoundGroup.aus.md).
+
+
+- **isFaceSturdy** (`Face, Support`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrapDoor.html#isFaceSturdy(org.bukkit.block.BlockFace,org.bukkit.block.BlockSupport)
+
+	- **@p** `Face` is a string naming a [BlockFace](BlockFace.aus.md).
+	- **@p** `Support` is a string naming a [BlockSupport](BlockSupport.aus.md).
+	- **@r** `A` bool.
+
+
+- **isOccluding** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrapDoor.html#isOccluding()
 
 	- **@r** `A` bool.
 
 
 - **isOpen** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/TrapDoor.html#isOpen()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrapDoor.html#isOpen()
 
 	- **@r** `A` bool.
 
 
-- **setData** (`Data`)
+- **isPowered** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/TrapDoor.html#setData(byte)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrapDoor.html#isPowered()
 
-	- **@p** `Data` is an int.
-
-
-- **setFacingDirection** (`Face`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/TrapDoor.html#setFacingDirection(org.bukkit.block.BlockFace)
-
-	- **@p** `Face` is a string naming a [BlockFace](BlockFace.aus.md).
+	- **@r** `A` bool.
 
 
-- **setInverted** (`Inv`)
+- **isPreferredTool** (`Tool`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/TrapDoor.html#setInverted(boolean)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrapDoor.html#isPreferredTool(org.bukkit.inventory.ItemStack)
 
-	- **@p** `Inv` is a bool.
-
-
-- **setOpen** (`IsOpen`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/TrapDoor.html#setOpen(boolean)
-
-	- **@p** `IsOpen` is a bool.
+	- **@p** `Tool` is an [ItemStack](ItemStack.aus.md).
+	- **@r** `A` bool.
 
 
-- **toItemStack** ()
+- **isRandomlyTicked** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/TrapDoor.html#toItemStack()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrapDoor.html#isRandomlyTicked()
 
-	- **@r** `An` [ItemStack](ItemStack.aus.md).
-
-
-- **toItemStack** (`Amount`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/TrapDoor.html#toItemStack(int)
-
-	- **@p** `Amount` is an int.
-	- **@r** `An` [ItemStack](ItemStack.aus.md).
+	- **@r** `A` bool.
 
 
-- **toString** ()
+- **isReplaceable** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/TrapDoor.html#toString()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrapDoor.html#isReplaceable()
 
-	- **@r** `A` string.
+	- **@r** `A` bool.
+
+
+- **isSupported** (`Block`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrapDoor.html#isSupported(org.bukkit.block.Block)
+
+	- **@p** `Block` is a [Block](Block.aus.md).
+	- **@r** `A` bool.
+
+
+- **isSupported\_location** (`Location`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrapDoor.html#isSupported(org.bukkit.Location)
+
+	- **@p** `Location` is a [Location](Location.aus.md).
+	- **@r** `A` bool.
+
+
+- **isWaterlogged** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrapDoor.html#isWaterlogged()
+
+	- **@r** `A` bool.
+
+
+- **matches** (`Data`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrapDoor.html#matches(org.bukkit.block.data.BlockData)
+
+	- **@p** `Data` is a [BlockData](BlockData.aus.md).
+	- **@r** `A` bool.
+
+
+- **merge** (`Data`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrapDoor.html#merge(org.bukkit.block.data.BlockData)
+
+	- **@p** `Data` is a [BlockData](BlockData.aus.md).
+	- **@r** `A` [BlockData](BlockData.aus.md).
+
+
+- **mirror** (`Mirror`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrapDoor.html#mirror(org.bukkit.block.structure.Mirror)
+
+	- **@p** `Mirror` is a string naming a [Mirror](Mirror.aus.md).
+
+
+- **requiresCorrectToolForDrops** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrapDoor.html#requiresCorrectToolForDrops()
+
+	- **@r** `A` bool.
+
+
+- **rotate** (`Rotation`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrapDoor.html#rotate(org.bukkit.block.structure.StructureRotation)
+
+	- **@p** `Rotation` is a string naming a [StructureRotation](StructureRotation.aus.md).
+
+
+- **setFacing** (`Facing`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrapDoor.html#setFacing(org.bukkit.block.BlockFace)
+
+	- **@p** `Facing` is a string naming a [BlockFace](BlockFace.aus.md).
+
+
+- **setHalf** (`Half`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrapDoor.html#setHalf(org.bukkit.block.data.Bisected.Half)
+
+	- **@p** `Half` is a string naming a Bisected.Half.
+
+
+- **setOpen** (`Open`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrapDoor.html#setOpen(boolean)
+
+	- **@p** `Open` is a bool.
+
+
+- **setPowered** (`Powered`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrapDoor.html#setPowered(boolean)
+
+	- **@p** `Powered` is a bool.
+
+
+- **setWaterlogged** (`Waterlogged`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrapDoor.html#setWaterlogged(boolean)
+
+	- **@p** `Waterlogged` is a bool.
 
 
 

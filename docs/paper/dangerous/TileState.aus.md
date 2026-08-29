@@ -53,13 +53,6 @@ Tier: dangerous. Do not edit.
 	- **@r** `A` [Chunk](Chunk.aus.md).
 
 
-- **getData** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TileState.html#getData()
-
-	- **@r** `A` [MaterialData](MaterialData.aus.md).
-
-
 - **getDrops** ()
 
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TileState.html#getDrops()
@@ -204,13 +197,6 @@ Tier: dangerous. Do not edit.
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TileState.html#setBlockData(org.bukkit.block.data.BlockData)
 
 	- **@p** `Data` is a [BlockData](BlockData.aus.md).
-
-
-- **setData** (`Data`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TileState.html#setData(org.bukkit.material.MaterialData)
-
-	- **@p** `Data` is a [MaterialData](MaterialData.aus.md).
 
 
 - **setMetadata** (`MetadataKey, NewMetadataValue`)

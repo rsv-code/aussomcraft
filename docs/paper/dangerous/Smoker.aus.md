@@ -101,13 +101,6 @@ Tier: dangerous. Do not edit.
 	- **@r** `A` string.
 
 
-- **getData** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Smoker.html#getData()
-
-	- **@r** `A` [MaterialData](MaterialData.aus.md).
-
-
 - **getDrops** ()
 
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Smoker.html#getDrops()
@@ -338,13 +331,6 @@ Tier: dangerous. Do not edit.
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Smoker.html#setCustomName(java.lang.String)
 
 	- **@p** `Name` is a string.
-
-
-- **setData** (`Data`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Smoker.html#setData(org.bukkit.material.MaterialData)
-
-	- **@p** `Data` is a [MaterialData](MaterialData.aus.md).
 
 
 - **setLock** (`Key`)

@@ -17,552 +17,802 @@ import com.lehman.aussomcraft.paper.Marshal;
 import com.lehman.aussomcraft.paper.PaperObj;
 
 /**
- * Generated shim for org.bukkit.block.data.type.BrewingStand.
+ * Generated shim for org.bukkit.block.BrewingStand.
  *
  * Tier: trusted. Holds only what this tier grants.
  */
 @SuppressWarnings({"unchecked", "rawtypes"})
 public class BrewingStandShim extends PaperObj {
 
-    public AussomType clone(Environment env, ArrayList<AussomType> args) {
+    public AussomType copy(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.block.data.type.BrewingStand self = (org.bukkit.block.data.type.BrewingStand) this.getObj();
+            org.bukkit.block.BrewingStand self = (org.bukkit.block.BrewingStand) this.getObj();
             if (self == null) {
-                return Marshal.detached("clone");
+                return Marshal.detached("copy");
             }
             if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.block.data.BlockData) self).clone());
+                return Marshal.wrap(env, ((org.bukkit.block.BlockState) self).copy());
             }
-            return Marshal.wrongArity("clone", n);
+            if (n == 1) {
+                return Marshal.wrap(env, ((org.bukkit.block.BlockState) self).copy((org.bukkit.Location) Marshal.typed(args, 0, org.bukkit.Location.class)));
+            }
+            return Marshal.wrongArity("copy", n);
         } catch (Throwable e) {
-            return Marshal.failed("clone", e);
+            return Marshal.failed("copy", e);
         }
     }
 
-    public AussomType copyTo(Environment env, ArrayList<AussomType> args) {
+    public AussomType customName(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.block.data.type.BrewingStand self = (org.bukkit.block.data.type.BrewingStand) this.getObj();
+            org.bukkit.block.BrewingStand self = (org.bukkit.block.BrewingStand) this.getObj();
             if (self == null) {
-                return Marshal.detached("copyTo");
+                return Marshal.detached("customName");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.Nameable) self).customName());
             }
             if (n == 1) {
-                ((org.bukkit.block.data.BlockData) self).copyTo((org.bukkit.block.data.BlockData) Marshal.typed(args, 0, org.bukkit.block.data.BlockData.class));
+                ((org.bukkit.Nameable) self).customName((net.kyori.adventure.text.Component) Marshal.typed(args, 0, net.kyori.adventure.text.Component.class));
                 return new AussomNull();
             }
-            return Marshal.wrongArity("copyTo", n);
+            return Marshal.wrongArity("customName", n);
         } catch (Throwable e) {
-            return Marshal.failed("copyTo", e);
+            return Marshal.failed("customName", e);
         }
     }
 
-    public AussomType createBlockState(Environment env, ArrayList<AussomType> args) {
+    public AussomType getBlock(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.block.data.type.BrewingStand self = (org.bukkit.block.data.type.BrewingStand) this.getObj();
+            org.bukkit.block.BrewingStand self = (org.bukkit.block.BrewingStand) this.getObj();
             if (self == null) {
-                return Marshal.detached("createBlockState");
+                return Marshal.detached("getBlock");
             }
             if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.block.data.BlockData) self).createBlockState());
+                return Marshal.wrap(env, ((org.bukkit.inventory.BlockInventoryHolder) self).getBlock());
             }
-            return Marshal.wrongArity("createBlockState", n);
+            return Marshal.wrongArity("getBlock", n);
         } catch (Throwable e) {
-            return Marshal.failed("createBlockState", e);
+            return Marshal.failed("getBlock", e);
         }
     }
 
-    public AussomType getAsString(Environment env, ArrayList<AussomType> args) {
+    public AussomType getBlockData(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.block.data.type.BrewingStand self = (org.bukkit.block.data.type.BrewingStand) this.getObj();
+            org.bukkit.block.BrewingStand self = (org.bukkit.block.BrewingStand) this.getObj();
             if (self == null) {
-                return Marshal.detached("getAsString");
+                return Marshal.detached("getBlockData");
             }
             if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.block.data.BlockData) self).getAsString());
+                return Marshal.wrap(env, ((org.bukkit.block.BlockState) self).getBlockData());
             }
-            if (n == 1) {
-                return Marshal.wrap(env, ((org.bukkit.block.data.BlockData) self).getAsString(Marshal.argBool(args, 0)));
-            }
-            return Marshal.wrongArity("getAsString", n);
+            return Marshal.wrongArity("getBlockData", n);
         } catch (Throwable e) {
-            return Marshal.failed("getAsString", e);
+            return Marshal.failed("getBlockData", e);
         }
     }
 
-    public AussomType getBottles(Environment env, ArrayList<AussomType> args) {
+    public AussomType getBrewingTime(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.block.data.type.BrewingStand self = (org.bukkit.block.data.type.BrewingStand) this.getObj();
+            org.bukkit.block.BrewingStand self = (org.bukkit.block.BrewingStand) this.getObj();
             if (self == null) {
-                return Marshal.detached("getBottles");
+                return Marshal.detached("getBrewingTime");
             }
             if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.block.data.type.BrewingStand) self).getBottles());
+                return Marshal.wrap(env, ((org.bukkit.block.BrewingStand) self).getBrewingTime());
             }
-            return Marshal.wrongArity("getBottles", n);
+            return Marshal.wrongArity("getBrewingTime", n);
         } catch (Throwable e) {
-            return Marshal.failed("getBottles", e);
+            return Marshal.failed("getBrewingTime", e);
         }
     }
 
-    public AussomType getCollisionShape(Environment env, ArrayList<AussomType> args) {
+    public AussomType getChunk(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.block.data.type.BrewingStand self = (org.bukkit.block.data.type.BrewingStand) this.getObj();
+            org.bukkit.block.BrewingStand self = (org.bukkit.block.BrewingStand) this.getObj();
             if (self == null) {
-                return Marshal.detached("getCollisionShape");
+                return Marshal.detached("getChunk");
             }
-            if (n == 1) {
-                return Marshal.wrap(env, ((org.bukkit.block.data.BlockData) self).getCollisionShape((org.bukkit.Location) Marshal.typed(args, 0, org.bukkit.Location.class)));
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.block.BlockState) self).getChunk());
             }
-            return Marshal.wrongArity("getCollisionShape", n);
+            return Marshal.wrongArity("getChunk", n);
         } catch (Throwable e) {
-            return Marshal.failed("getCollisionShape", e);
+            return Marshal.failed("getChunk", e);
         }
     }
 
-    public AussomType getDestroySpeed(Environment env, ArrayList<AussomType> args) {
+    public AussomType getCustomName(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.block.data.type.BrewingStand self = (org.bukkit.block.data.type.BrewingStand) this.getObj();
+            org.bukkit.block.BrewingStand self = (org.bukkit.block.BrewingStand) this.getObj();
             if (self == null) {
-                return Marshal.detached("getDestroySpeed");
+                return Marshal.detached("getCustomName");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.Nameable) self).getCustomName());
+            }
+            return Marshal.wrongArity("getCustomName", n);
+        } catch (Throwable e) {
+            return Marshal.failed("getCustomName", e);
+        }
+    }
+
+    public AussomType getDrops(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.block.BrewingStand self = (org.bukkit.block.BrewingStand) this.getObj();
+            if (self == null) {
+                return Marshal.detached("getDrops");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.block.BlockState) self).getDrops());
             }
             if (n == 1) {
-                return Marshal.wrap(env, ((org.bukkit.block.data.BlockData) self).getDestroySpeed((org.bukkit.inventory.ItemStack) Marshal.typed(args, 0, org.bukkit.inventory.ItemStack.class)));
+                return Marshal.wrap(env, ((org.bukkit.block.BlockState) self).getDrops((org.bukkit.inventory.ItemStack) Marshal.typed(args, 0, org.bukkit.inventory.ItemStack.class)));
             }
             if (n == 2) {
-                return Marshal.wrap(env, ((org.bukkit.block.data.BlockData) self).getDestroySpeed((org.bukkit.inventory.ItemStack) Marshal.typed(args, 0, org.bukkit.inventory.ItemStack.class), Marshal.argBool(args, 1)));
+                return Marshal.wrap(env, ((org.bukkit.block.BlockState) self).getDrops((org.bukkit.inventory.ItemStack) Marshal.typed(args, 0, org.bukkit.inventory.ItemStack.class), (org.bukkit.entity.Entity) Marshal.typed(args, 1, org.bukkit.entity.Entity.class)));
             }
-            return Marshal.wrongArity("getDestroySpeed", n);
+            return Marshal.wrongArity("getDrops", n);
         } catch (Throwable e) {
-            return Marshal.failed("getDestroySpeed", e);
+            return Marshal.failed("getDrops", e);
         }
     }
 
-    public AussomType getLightEmission(Environment env, ArrayList<AussomType> args) {
+    public AussomType getFuelLevel(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.block.data.type.BrewingStand self = (org.bukkit.block.data.type.BrewingStand) this.getObj();
+            org.bukkit.block.BrewingStand self = (org.bukkit.block.BrewingStand) this.getObj();
             if (self == null) {
-                return Marshal.detached("getLightEmission");
+                return Marshal.detached("getFuelLevel");
             }
             if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.block.data.BlockData) self).getLightEmission());
+                return Marshal.wrap(env, ((org.bukkit.block.BrewingStand) self).getFuelLevel());
             }
-            return Marshal.wrongArity("getLightEmission", n);
+            return Marshal.wrongArity("getFuelLevel", n);
         } catch (Throwable e) {
-            return Marshal.failed("getLightEmission", e);
+            return Marshal.failed("getFuelLevel", e);
         }
     }
 
-    public AussomType getMapColor(Environment env, ArrayList<AussomType> args) {
+    public AussomType getInventory(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.block.data.type.BrewingStand self = (org.bukkit.block.data.type.BrewingStand) this.getObj();
+            org.bukkit.block.BrewingStand self = (org.bukkit.block.BrewingStand) this.getObj();
             if (self == null) {
-                return Marshal.detached("getMapColor");
+                return Marshal.detached("getInventory");
             }
             if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.block.data.BlockData) self).getMapColor());
+                return Marshal.wrap(env, ((org.bukkit.block.BrewingStand) self).getInventory());
             }
-            return Marshal.wrongArity("getMapColor", n);
+            return Marshal.wrongArity("getInventory", n);
         } catch (Throwable e) {
-            return Marshal.failed("getMapColor", e);
+            return Marshal.failed("getInventory", e);
         }
     }
 
-    public AussomType getMaterial(Environment env, ArrayList<AussomType> args) {
+    public AussomType getLightLevel(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.block.data.type.BrewingStand self = (org.bukkit.block.data.type.BrewingStand) this.getObj();
+            org.bukkit.block.BrewingStand self = (org.bukkit.block.BrewingStand) this.getObj();
             if (self == null) {
-                return Marshal.detached("getMaterial");
+                return Marshal.detached("getLightLevel");
             }
             if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.block.data.BlockData) self).getMaterial());
+                return Marshal.wrap(env, ((org.bukkit.block.BlockState) self).getLightLevel());
             }
-            return Marshal.wrongArity("getMaterial", n);
+            return Marshal.wrongArity("getLightLevel", n);
         } catch (Throwable e) {
-            return Marshal.failed("getMaterial", e);
+            return Marshal.failed("getLightLevel", e);
         }
     }
 
-    public AussomType getMaximumBottles(Environment env, ArrayList<AussomType> args) {
+    public AussomType getLocation(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.block.data.type.BrewingStand self = (org.bukkit.block.data.type.BrewingStand) this.getObj();
+            org.bukkit.block.BrewingStand self = (org.bukkit.block.BrewingStand) this.getObj();
             if (self == null) {
-                return Marshal.detached("getMaximumBottles");
+                return Marshal.detached("getLocation");
             }
             if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.block.data.type.BrewingStand) self).getMaximumBottles());
-            }
-            return Marshal.wrongArity("getMaximumBottles", n);
-        } catch (Throwable e) {
-            return Marshal.failed("getMaximumBottles", e);
-        }
-    }
-
-    public AussomType getPistonMoveReaction(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.block.data.type.BrewingStand self = (org.bukkit.block.data.type.BrewingStand) this.getObj();
-            if (self == null) {
-                return Marshal.detached("getPistonMoveReaction");
-            }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.block.data.BlockData) self).getPistonMoveReaction());
-            }
-            return Marshal.wrongArity("getPistonMoveReaction", n);
-        } catch (Throwable e) {
-            return Marshal.failed("getPistonMoveReaction", e);
-        }
-    }
-
-    public AussomType getPlacementMaterial(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.block.data.type.BrewingStand self = (org.bukkit.block.data.type.BrewingStand) this.getObj();
-            if (self == null) {
-                return Marshal.detached("getPlacementMaterial");
-            }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.block.data.BlockData) self).getPlacementMaterial());
-            }
-            return Marshal.wrongArity("getPlacementMaterial", n);
-        } catch (Throwable e) {
-            return Marshal.failed("getPlacementMaterial", e);
-        }
-    }
-
-    public AussomType getSoundGroup(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.block.data.type.BrewingStand self = (org.bukkit.block.data.type.BrewingStand) this.getObj();
-            if (self == null) {
-                return Marshal.detached("getSoundGroup");
-            }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.block.data.BlockData) self).getSoundGroup());
-            }
-            return Marshal.wrongArity("getSoundGroup", n);
-        } catch (Throwable e) {
-            return Marshal.failed("getSoundGroup", e);
-        }
-    }
-
-    public AussomType hasBottle(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.block.data.type.BrewingStand self = (org.bukkit.block.data.type.BrewingStand) this.getObj();
-            if (self == null) {
-                return Marshal.detached("hasBottle");
+                return Marshal.wrap(env, ((org.bukkit.block.BlockState) self).getLocation());
             }
             if (n == 1) {
-                return Marshal.wrap(env, ((org.bukkit.block.data.type.BrewingStand) self).hasBottle(Marshal.argInt(args, 0)));
+                return Marshal.wrap(env, ((org.bukkit.block.BlockState) self).getLocation((org.bukkit.Location) Marshal.typed(args, 0, org.bukkit.Location.class)));
             }
-            return Marshal.wrongArity("hasBottle", n);
+            return Marshal.wrongArity("getLocation", n);
         } catch (Throwable e) {
-            return Marshal.failed("hasBottle", e);
+            return Marshal.failed("getLocation", e);
         }
     }
 
-    public AussomType isFaceSturdy(Environment env, ArrayList<AussomType> args) {
+    public AussomType getLock(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.block.data.type.BrewingStand self = (org.bukkit.block.data.type.BrewingStand) this.getObj();
+            org.bukkit.block.BrewingStand self = (org.bukkit.block.BrewingStand) this.getObj();
             if (self == null) {
-                return Marshal.detached("isFaceSturdy");
+                return Marshal.detached("getLock");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.block.Lockable) self).getLock());
+            }
+            return Marshal.wrongArity("getLock", n);
+        } catch (Throwable e) {
+            return Marshal.failed("getLock", e);
+        }
+    }
+
+    public AussomType getMetadata(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.block.BrewingStand self = (org.bukkit.block.BrewingStand) this.getObj();
+            if (self == null) {
+                return Marshal.detached("getMetadata");
+            }
+            if (n == 1) {
+                return Marshal.wrap(env, ((org.bukkit.metadata.Metadatable) self).getMetadata((java.lang.String) Marshal.typed(args, 0, java.lang.String.class)));
+            }
+            return Marshal.wrongArity("getMetadata", n);
+        } catch (Throwable e) {
+            return Marshal.failed("getMetadata", e);
+        }
+    }
+
+    public AussomType getPersistentDataContainer(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.block.BrewingStand self = (org.bukkit.block.BrewingStand) this.getObj();
+            if (self == null) {
+                return Marshal.detached("getPersistentDataContainer");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.block.TileState) self).getPersistentDataContainer());
+            }
+            return Marshal.wrongArity("getPersistentDataContainer", n);
+        } catch (Throwable e) {
+            return Marshal.failed("getPersistentDataContainer", e);
+        }
+    }
+
+    public AussomType getRawData(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.block.BrewingStand self = (org.bukkit.block.BrewingStand) this.getObj();
+            if (self == null) {
+                return Marshal.detached("getRawData");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.block.BlockState) self).getRawData());
+            }
+            return Marshal.wrongArity("getRawData", n);
+        } catch (Throwable e) {
+            return Marshal.failed("getRawData", e);
+        }
+    }
+
+    public AussomType getRecipeBrewTime(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.block.BrewingStand self = (org.bukkit.block.BrewingStand) this.getObj();
+            if (self == null) {
+                return Marshal.detached("getRecipeBrewTime");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.block.BrewingStand) self).getRecipeBrewTime());
+            }
+            return Marshal.wrongArity("getRecipeBrewTime", n);
+        } catch (Throwable e) {
+            return Marshal.failed("getRecipeBrewTime", e);
+        }
+    }
+
+    public AussomType getSnapshotInventory(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.block.BrewingStand self = (org.bukkit.block.BrewingStand) this.getObj();
+            if (self == null) {
+                return Marshal.detached("getSnapshotInventory");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.block.BrewingStand) self).getSnapshotInventory());
+            }
+            return Marshal.wrongArity("getSnapshotInventory", n);
+        } catch (Throwable e) {
+            return Marshal.failed("getSnapshotInventory", e);
+        }
+    }
+
+    public AussomType getType(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.block.BrewingStand self = (org.bukkit.block.BrewingStand) this.getObj();
+            if (self == null) {
+                return Marshal.detached("getType");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.block.BlockState) self).getType());
+            }
+            return Marshal.wrongArity("getType", n);
+        } catch (Throwable e) {
+            return Marshal.failed("getType", e);
+        }
+    }
+
+    public AussomType getWorld(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.block.BrewingStand self = (org.bukkit.block.BrewingStand) this.getObj();
+            if (self == null) {
+                return Marshal.detached("getWorld");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.block.BlockState) self).getWorld());
+            }
+            return Marshal.wrongArity("getWorld", n);
+        } catch (Throwable e) {
+            return Marshal.failed("getWorld", e);
+        }
+    }
+
+    public AussomType getX(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.block.BrewingStand self = (org.bukkit.block.BrewingStand) this.getObj();
+            if (self == null) {
+                return Marshal.detached("getX");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.block.BlockState) self).getX());
+            }
+            return Marshal.wrongArity("getX", n);
+        } catch (Throwable e) {
+            return Marshal.failed("getX", e);
+        }
+    }
+
+    public AussomType getY(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.block.BrewingStand self = (org.bukkit.block.BrewingStand) this.getObj();
+            if (self == null) {
+                return Marshal.detached("getY");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.block.BlockState) self).getY());
+            }
+            return Marshal.wrongArity("getY", n);
+        } catch (Throwable e) {
+            return Marshal.failed("getY", e);
+        }
+    }
+
+    public AussomType getZ(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.block.BrewingStand self = (org.bukkit.block.BrewingStand) this.getObj();
+            if (self == null) {
+                return Marshal.detached("getZ");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.block.BlockState) self).getZ());
+            }
+            return Marshal.wrongArity("getZ", n);
+        } catch (Throwable e) {
+            return Marshal.failed("getZ", e);
+        }
+    }
+
+    public AussomType hasMetadata(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.block.BrewingStand self = (org.bukkit.block.BrewingStand) this.getObj();
+            if (self == null) {
+                return Marshal.detached("hasMetadata");
+            }
+            if (n == 1) {
+                return Marshal.wrap(env, ((org.bukkit.metadata.Metadatable) self).hasMetadata((java.lang.String) Marshal.typed(args, 0, java.lang.String.class)));
+            }
+            return Marshal.wrongArity("hasMetadata", n);
+        } catch (Throwable e) {
+            return Marshal.failed("hasMetadata", e);
+        }
+    }
+
+    public AussomType isCollidable(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.block.BrewingStand self = (org.bukkit.block.BrewingStand) this.getObj();
+            if (self == null) {
+                return Marshal.detached("isCollidable");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.block.BlockState) self).isCollidable());
+            }
+            return Marshal.wrongArity("isCollidable", n);
+        } catch (Throwable e) {
+            return Marshal.failed("isCollidable", e);
+        }
+    }
+
+    public AussomType isLocked(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.block.BrewingStand self = (org.bukkit.block.BrewingStand) this.getObj();
+            if (self == null) {
+                return Marshal.detached("isLocked");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.block.Lockable) self).isLocked());
+            }
+            return Marshal.wrongArity("isLocked", n);
+        } catch (Throwable e) {
+            return Marshal.failed("isLocked", e);
+        }
+    }
+
+    public AussomType isPlaced(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.block.BrewingStand self = (org.bukkit.block.BrewingStand) this.getObj();
+            if (self == null) {
+                return Marshal.detached("isPlaced");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.block.BlockState) self).isPlaced());
+            }
+            return Marshal.wrongArity("isPlaced", n);
+        } catch (Throwable e) {
+            return Marshal.failed("isPlaced", e);
+        }
+    }
+
+    public AussomType isSnapshot(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.block.BrewingStand self = (org.bukkit.block.BrewingStand) this.getObj();
+            if (self == null) {
+                return Marshal.detached("isSnapshot");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.block.TileState) self).isSnapshot());
+            }
+            return Marshal.wrongArity("isSnapshot", n);
+        } catch (Throwable e) {
+            return Marshal.failed("isSnapshot", e);
+        }
+    }
+
+    public AussomType isSuffocating(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.block.BrewingStand self = (org.bukkit.block.BrewingStand) this.getObj();
+            if (self == null) {
+                return Marshal.detached("isSuffocating");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.block.BlockState) self).isSuffocating());
+            }
+            return Marshal.wrongArity("isSuffocating", n);
+        } catch (Throwable e) {
+            return Marshal.failed("isSuffocating", e);
+        }
+    }
+
+    public AussomType setBlockData(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.block.BrewingStand self = (org.bukkit.block.BrewingStand) this.getObj();
+            if (self == null) {
+                return Marshal.detached("setBlockData");
+            }
+            if (n == 1) {
+                ((org.bukkit.block.BlockState) self).setBlockData((org.bukkit.block.data.BlockData) Marshal.typed(args, 0, org.bukkit.block.data.BlockData.class));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("setBlockData", n);
+        } catch (Throwable e) {
+            return Marshal.failed("setBlockData", e);
+        }
+    }
+
+    public AussomType setBrewingTime(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.block.BrewingStand self = (org.bukkit.block.BrewingStand) this.getObj();
+            if (self == null) {
+                return Marshal.detached("setBrewingTime");
+            }
+            if (n == 1) {
+                ((org.bukkit.block.BrewingStand) self).setBrewingTime(Marshal.argInt(args, 0));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("setBrewingTime", n);
+        } catch (Throwable e) {
+            return Marshal.failed("setBrewingTime", e);
+        }
+    }
+
+    public AussomType setCustomName(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.block.BrewingStand self = (org.bukkit.block.BrewingStand) this.getObj();
+            if (self == null) {
+                return Marshal.detached("setCustomName");
+            }
+            if (n == 1) {
+                ((org.bukkit.Nameable) self).setCustomName((java.lang.String) Marshal.typed(args, 0, java.lang.String.class));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("setCustomName", n);
+        } catch (Throwable e) {
+            return Marshal.failed("setCustomName", e);
+        }
+    }
+
+    public AussomType setFuelLevel(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.block.BrewingStand self = (org.bukkit.block.BrewingStand) this.getObj();
+            if (self == null) {
+                return Marshal.detached("setFuelLevel");
+            }
+            if (n == 1) {
+                ((org.bukkit.block.BrewingStand) self).setFuelLevel(Marshal.argInt(args, 0));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("setFuelLevel", n);
+        } catch (Throwable e) {
+            return Marshal.failed("setFuelLevel", e);
+        }
+    }
+
+    public AussomType setLock(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.block.BrewingStand self = (org.bukkit.block.BrewingStand) this.getObj();
+            if (self == null) {
+                return Marshal.detached("setLock");
+            }
+            if (n == 1) {
+                ((org.bukkit.block.Lockable) self).setLock((java.lang.String) Marshal.typed(args, 0, java.lang.String.class));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("setLock", n);
+        } catch (Throwable e) {
+            return Marshal.failed("setLock", e);
+        }
+    }
+
+    public AussomType setLockItem(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.block.BrewingStand self = (org.bukkit.block.BrewingStand) this.getObj();
+            if (self == null) {
+                return Marshal.detached("setLockItem");
+            }
+            if (n == 1) {
+                ((org.bukkit.block.Lockable) self).setLockItem((org.bukkit.inventory.ItemStack) Marshal.typed(args, 0, org.bukkit.inventory.ItemStack.class));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("setLockItem", n);
+        } catch (Throwable e) {
+            return Marshal.failed("setLockItem", e);
+        }
+    }
+
+    public AussomType setMetadata(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.block.BrewingStand self = (org.bukkit.block.BrewingStand) this.getObj();
+            if (self == null) {
+                return Marshal.detached("setMetadata");
             }
             if (n == 2) {
-                return Marshal.wrap(env, ((org.bukkit.block.data.BlockData) self).isFaceSturdy((org.bukkit.block.BlockFace) Marshal.typed(args, 0, org.bukkit.block.BlockFace.class), (org.bukkit.block.BlockSupport) Marshal.typed(args, 1, org.bukkit.block.BlockSupport.class)));
-            }
-            return Marshal.wrongArity("isFaceSturdy", n);
-        } catch (Throwable e) {
-            return Marshal.failed("isFaceSturdy", e);
-        }
-    }
-
-    public AussomType isOccluding(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.block.data.type.BrewingStand self = (org.bukkit.block.data.type.BrewingStand) this.getObj();
-            if (self == null) {
-                return Marshal.detached("isOccluding");
-            }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.block.data.BlockData) self).isOccluding());
-            }
-            return Marshal.wrongArity("isOccluding", n);
-        } catch (Throwable e) {
-            return Marshal.failed("isOccluding", e);
-        }
-    }
-
-    public AussomType isPreferredTool(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.block.data.type.BrewingStand self = (org.bukkit.block.data.type.BrewingStand) this.getObj();
-            if (self == null) {
-                return Marshal.detached("isPreferredTool");
-            }
-            if (n == 1) {
-                return Marshal.wrap(env, ((org.bukkit.block.data.BlockData) self).isPreferredTool((org.bukkit.inventory.ItemStack) Marshal.typed(args, 0, org.bukkit.inventory.ItemStack.class)));
-            }
-            return Marshal.wrongArity("isPreferredTool", n);
-        } catch (Throwable e) {
-            return Marshal.failed("isPreferredTool", e);
-        }
-    }
-
-    public AussomType isRandomlyTicked(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.block.data.type.BrewingStand self = (org.bukkit.block.data.type.BrewingStand) this.getObj();
-            if (self == null) {
-                return Marshal.detached("isRandomlyTicked");
-            }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.block.data.BlockData) self).isRandomlyTicked());
-            }
-            return Marshal.wrongArity("isRandomlyTicked", n);
-        } catch (Throwable e) {
-            return Marshal.failed("isRandomlyTicked", e);
-        }
-    }
-
-    public AussomType isReplaceable(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.block.data.type.BrewingStand self = (org.bukkit.block.data.type.BrewingStand) this.getObj();
-            if (self == null) {
-                return Marshal.detached("isReplaceable");
-            }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.block.data.BlockData) self).isReplaceable());
-            }
-            return Marshal.wrongArity("isReplaceable", n);
-        } catch (Throwable e) {
-            return Marshal.failed("isReplaceable", e);
-        }
-    }
-
-    public AussomType isSupported(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.block.data.type.BrewingStand self = (org.bukkit.block.data.type.BrewingStand) this.getObj();
-            if (self == null) {
-                return Marshal.detached("isSupported");
-            }
-            if (n == 1) {
-                return Marshal.wrap(env, ((org.bukkit.block.data.BlockData) self).isSupported((org.bukkit.block.Block) Marshal.typed(args, 0, org.bukkit.block.Block.class)));
-            }
-            return Marshal.wrongArity("isSupported", n);
-        } catch (Throwable e) {
-            return Marshal.failed("isSupported", e);
-        }
-    }
-
-    public AussomType isSupported_location(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.block.data.type.BrewingStand self = (org.bukkit.block.data.type.BrewingStand) this.getObj();
-            if (self == null) {
-                return Marshal.detached("isSupported_location");
-            }
-            if (n == 1) {
-                return Marshal.wrap(env, ((org.bukkit.block.data.BlockData) self).isSupported((org.bukkit.Location) Marshal.typed(args, 0, org.bukkit.Location.class)));
-            }
-            return Marshal.wrongArity("isSupported_location", n);
-        } catch (Throwable e) {
-            return Marshal.failed("isSupported_location", e);
-        }
-    }
-
-    public AussomType matches(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.block.data.type.BrewingStand self = (org.bukkit.block.data.type.BrewingStand) this.getObj();
-            if (self == null) {
-                return Marshal.detached("matches");
-            }
-            if (n == 1) {
-                return Marshal.wrap(env, ((org.bukkit.block.data.BlockData) self).matches((org.bukkit.block.data.BlockData) Marshal.typed(args, 0, org.bukkit.block.data.BlockData.class)));
-            }
-            return Marshal.wrongArity("matches", n);
-        } catch (Throwable e) {
-            return Marshal.failed("matches", e);
-        }
-    }
-
-    public AussomType merge(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.block.data.type.BrewingStand self = (org.bukkit.block.data.type.BrewingStand) this.getObj();
-            if (self == null) {
-                return Marshal.detached("merge");
-            }
-            if (n == 1) {
-                return Marshal.wrap(env, ((org.bukkit.block.data.BlockData) self).merge((org.bukkit.block.data.BlockData) Marshal.typed(args, 0, org.bukkit.block.data.BlockData.class)));
-            }
-            return Marshal.wrongArity("merge", n);
-        } catch (Throwable e) {
-            return Marshal.failed("merge", e);
-        }
-    }
-
-    public AussomType mirror(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.block.data.type.BrewingStand self = (org.bukkit.block.data.type.BrewingStand) this.getObj();
-            if (self == null) {
-                return Marshal.detached("mirror");
-            }
-            if (n == 1) {
-                ((org.bukkit.block.data.BlockData) self).mirror((org.bukkit.block.structure.Mirror) Marshal.typed(args, 0, org.bukkit.block.structure.Mirror.class));
+                ((org.bukkit.metadata.Metadatable) self).setMetadata((java.lang.String) Marshal.typed(args, 0, java.lang.String.class), (org.bukkit.metadata.MetadataValue) Marshal.typed(args, 1, org.bukkit.metadata.MetadataValue.class));
                 return new AussomNull();
             }
-            return Marshal.wrongArity("mirror", n);
+            return Marshal.wrongArity("setMetadata", n);
         } catch (Throwable e) {
-            return Marshal.failed("mirror", e);
+            return Marshal.failed("setMetadata", e);
         }
     }
 
-    public AussomType requiresCorrectToolForDrops(Environment env, ArrayList<AussomType> args) {
+    public AussomType setRawData(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.block.data.type.BrewingStand self = (org.bukkit.block.data.type.BrewingStand) this.getObj();
+            org.bukkit.block.BrewingStand self = (org.bukkit.block.BrewingStand) this.getObj();
             if (self == null) {
-                return Marshal.detached("requiresCorrectToolForDrops");
-            }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.block.data.BlockData) self).requiresCorrectToolForDrops());
-            }
-            return Marshal.wrongArity("requiresCorrectToolForDrops", n);
-        } catch (Throwable e) {
-            return Marshal.failed("requiresCorrectToolForDrops", e);
-        }
-    }
-
-    public AussomType rotate(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.block.data.type.BrewingStand self = (org.bukkit.block.data.type.BrewingStand) this.getObj();
-            if (self == null) {
-                return Marshal.detached("rotate");
+                return Marshal.detached("setRawData");
             }
             if (n == 1) {
-                ((org.bukkit.block.data.BlockData) self).rotate((org.bukkit.block.structure.StructureRotation) Marshal.typed(args, 0, org.bukkit.block.structure.StructureRotation.class));
+                ((org.bukkit.block.BlockState) self).setRawData(Marshal.argByte(args, 0));
                 return new AussomNull();
             }
-            return Marshal.wrongArity("rotate", n);
+            return Marshal.wrongArity("setRawData", n);
         } catch (Throwable e) {
-            return Marshal.failed("rotate", e);
+            return Marshal.failed("setRawData", e);
         }
     }
 
-    public AussomType setBottle(Environment env, ArrayList<AussomType> args) {
+    public AussomType setRecipeBrewTime(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.block.data.type.BrewingStand self = (org.bukkit.block.data.type.BrewingStand) this.getObj();
+            org.bukkit.block.BrewingStand self = (org.bukkit.block.BrewingStand) this.getObj();
             if (self == null) {
-                return Marshal.detached("setBottle");
+                return Marshal.detached("setRecipeBrewTime");
+            }
+            if (n == 1) {
+                ((org.bukkit.block.BrewingStand) self).setRecipeBrewTime(Marshal.argInt(args, 0));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("setRecipeBrewTime", n);
+        } catch (Throwable e) {
+            return Marshal.failed("setRecipeBrewTime", e);
+        }
+    }
+
+    public AussomType setType(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.block.BrewingStand self = (org.bukkit.block.BrewingStand) this.getObj();
+            if (self == null) {
+                return Marshal.detached("setType");
+            }
+            if (n == 1) {
+                ((org.bukkit.block.BlockState) self).setType((org.bukkit.Material) Marshal.typed(args, 0, org.bukkit.Material.class));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("setType", n);
+        } catch (Throwable e) {
+            return Marshal.failed("setType", e);
+        }
+    }
+
+    public AussomType update(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.block.BrewingStand self = (org.bukkit.block.BrewingStand) this.getObj();
+            if (self == null) {
+                return Marshal.detached("update");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.block.BlockState) self).update());
+            }
+            if (n == 1) {
+                return Marshal.wrap(env, ((org.bukkit.block.BlockState) self).update(Marshal.argBool(args, 0)));
             }
             if (n == 2) {
-                ((org.bukkit.block.data.type.BrewingStand) self).setBottle(Marshal.argInt(args, 0), Marshal.argBool(args, 1));
-                return new AussomNull();
+                return Marshal.wrap(env, ((org.bukkit.block.BlockState) self).update(Marshal.argBool(args, 0), Marshal.argBool(args, 1)));
             }
-            return Marshal.wrongArity("setBottle", n);
+            return Marshal.wrongArity("update", n);
         } catch (Throwable e) {
-            return Marshal.failed("setBottle", e);
+            return Marshal.failed("update", e);
         }
     }
 

@@ -6,7 +6,7 @@
 
     <groupId>com.lehman</groupId>
     <artifactId>aussomcraft</artifactId>
-    <version>0.1.2</version>
+    <version>0.2.0</version>
     <name>AussomCraft</name>
 
     <properties>
@@ -260,6 +260,41 @@ or set JAVA_HOME to a JDK 25 in your shell profile.
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.5.2</version>
+            </plugin>
+
+            <!--
+                Tests that need the packaged jar rather than target/classes.
+
+                A resource include path only resolves when the resources and
+                aussom-base are in the same archive, so the tier include
+                boundary cannot be exercised before the shade has run. These
+                run at integration-test, after package, which is why they are
+                named *IT and why 'mvn test' alone does not cover them.
+            -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <version>3.5.2</version>
+                <configuration>
+                    <!--
+                        Run against the shaded jar rather than target/classes.
+                        Every Aussom module reaches an engine through a
+                        resource include path, and aussom-base resolves one
+                        by enumerating the archive it was itself loaded from.
+                        Loose in target/classes it finds nothing, so a test
+                        that runs a script has to run against the packaged
+                        artifact, which is also what the server loads.
+                    -->
+                    <classesDirectory>${project.build.directory}/${project.build.finalName}.jar</classesDirectory>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>integration-test</goal>
+                            <goal>verify</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
 
             <!--

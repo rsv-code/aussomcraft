@@ -36,14 +36,6 @@ Tier: dangerous. Do not edit.
 	- **@r** `A` string naming a [Material](Material.aus.md).
 
 
-- **fromLegacy\_MaterialData** (`Material`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/UnsafeValues.html#fromLegacy(org.bukkit.material.MaterialData)
-
-	- **@p** `Material` is a [MaterialData](MaterialData.aus.md).
-	- **@r** `A` string naming a [Material](Material.aus.md).
-
-
 - **fromLegacy** (`Material, Data`)
 
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/UnsafeValues.html#fromLegacy(org.bukkit.Material,byte)
@@ -51,15 +43,6 @@ Tier: dangerous. Do not edit.
 	- **@p** `Material` is a string naming a [Material](Material.aus.md).
 	- **@p** `Data` is an int.
 	- **@r** `A` [BlockData](BlockData.aus.md).
-
-
-- **fromLegacy\_material\_itempriority** (`Material, ItemPriority`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/UnsafeValues.html#fromLegacy(org.bukkit.material.MaterialData,boolean)
-
-	- **@p** `Material` is a [MaterialData](MaterialData.aus.md).
-	- **@p** `ItemPriority` is a bool.
-	- **@r** `A` string naming a [Material](Material.aus.md).
 
 
 - **get** (`Registry, Key`)

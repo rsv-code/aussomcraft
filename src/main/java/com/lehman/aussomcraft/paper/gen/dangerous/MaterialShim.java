@@ -406,25 +406,6 @@ public class MaterialShim extends PaperObj {
         }
     }
 
-    public AussomType getNewData(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.Material self = (org.bukkit.Material) this.getObj();
-            if (self == null) {
-                return Marshal.detached("getNewData");
-            }
-            if (n == 1) {
-                return Marshal.wrap(env, ((org.bukkit.Material) self).getNewData(Marshal.argByte(args, 0)));
-            }
-            return Marshal.wrongArity("getNewData", n);
-        } catch (Throwable e) {
-            return Marshal.failed("getNewData", e);
-        }
-    }
-
     public AussomType getSlipperiness(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {

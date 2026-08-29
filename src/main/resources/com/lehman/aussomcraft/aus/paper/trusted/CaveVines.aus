@@ -10,8 +10,7 @@
  *
  * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CaveVines.html
  *
- * In Paper this is a [Ageable](Ageable.aus.md) and
- * [CaveVinesPlant](CaveVinesPlant.aus.md).
+ * In Paper this is a [CaveVinesPlant](CaveVinesPlant.aus.md).
  * Every method it inherits is declared here too, so there is
  * nothing to follow up to.
  *

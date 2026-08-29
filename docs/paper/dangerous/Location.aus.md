@@ -108,7 +108,7 @@ Tier: dangerous. Do not edit.
 
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/Location.html#addRotation(io.papermc.paper.math.Rotation)
 
-	- **@p** `Rotation` is a [Rotation](Rotation.aus.md).
+	- **@p** `Rotation` is a MathRotation.
 	- **@r** `A` [Location](Location.aus.md).
 
 
@@ -347,7 +347,7 @@ Tier: dangerous. Do not edit.
 
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/Location.html#getRotation()
 
-	- **@r** `A` [Rotation](Rotation.aus.md).
+	- **@r** `A` MathRotation.
 
 
 - **hashCode** ()
@@ -501,7 +501,7 @@ Tier: dangerous. Do not edit.
 
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/Location.html#setRotation(io.papermc.paper.math.Rotation)
 
-	- **@p** `Rotation` is a [Rotation](Rotation.aus.md).
+	- **@p** `Rotation` is a MathRotation.
 	- **@r** `A` [Location](Location.aus.md).
 
 
@@ -590,7 +590,7 @@ Tier: dangerous. Do not edit.
 
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/Location.html#subtractRotation(io.papermc.paper.math.Rotation)
 
-	- **@p** `Rotation` is a [Rotation](Rotation.aus.md).
+	- **@p** `Rotation` is a MathRotation.
 	- **@r** `A` [Location](Location.aus.md).
 
 

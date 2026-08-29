@@ -62,13 +62,6 @@ extern class BrushableBlock : com.lehman.aussomcraft.paper.gen.trusted.Brushable
     public extern getChunk();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrushableBlock.html#getData()
-     *
-     * @r A [MaterialData](MaterialData.aus.md).
-     */
-    public extern getData();
-
-    /**
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrushableBlock.html#getDrops()
      *
      * @r A list.
@@ -241,13 +234,6 @@ extern class BrushableBlock : com.lehman.aussomcraft.paper.gen.trusted.Brushable
      * @p Data is a [BlockData](BlockData.aus.md).
      */
     public extern setBlockData(Data);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrushableBlock.html#setData(org.bukkit.material.MaterialData)
-     *
-     * @p Data is a [MaterialData](MaterialData.aus.md).
-     */
-    public extern setData(Data);
 
     /**
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrushableBlock.html#setItem(org.bukkit.inventory.ItemStack)

@@ -35,7 +35,7 @@ Tier: dangerous. Do not edit.
 
 	> Paper: https://jd.papermc.io/paper/1.21.10/io/papermc/paper/event/server/WhitelistStateUpdateEvent.html#getPlayerProfile()
 
-	- **@r** `A` [PlayerProfile](PlayerProfile.aus.md).
+	- **@r** `A` ProfilePlayerProfile.
 
 
 - **getStatus** ()

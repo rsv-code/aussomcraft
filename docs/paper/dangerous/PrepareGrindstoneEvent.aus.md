@@ -2,14 +2,10 @@
 
 ## class: PrepareGrindstoneEvent
 
-[20:14] (extern: com.lehman.aussomcraft.paper.gen.dangerous.PrepareGrindstoneEventShim) **extends: object** 
+[15:14] (extern: com.lehman.aussomcraft.paper.gen.dangerous.PrepareGrindstoneEventShim) **extends: object** 
 
 Generated shim for org.bukkit.event.inventory.PrepareGrindstoneEvent.
 Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/event/inventory/PrepareGrindstoneEvent.html
-In Paper this is a
-[PrepareGrindstoneEvent](PrepareGrindstoneEvent.aus.md).
-Every method it inherits is declared here too, so there is
-nothing to follow up to.
 Tier: dangerous. Do not edit.
 
 #### Methods

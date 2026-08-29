@@ -77,13 +77,6 @@ extern class Beacon : com.lehman.aussomcraft.paper.gen.dangerous.BeaconShim {
     public extern getCustomName();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beacon.html#getData()
-     *
-     * @r A [MaterialData](MaterialData.aus.md).
-     */
-    public extern getData();
-
-    /**
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beacon.html#getDrops()
      *
      * @r A list.
@@ -289,13 +282,6 @@ extern class Beacon : com.lehman.aussomcraft.paper.gen.dangerous.BeaconShim {
      * @p Name is a string.
      */
     public extern setCustomName(Name);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beacon.html#setData(org.bukkit.material.MaterialData)
-     *
-     * @p Data is a [MaterialData](MaterialData.aus.md).
-     */
-    public extern setData(Data);
 
     /**
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beacon.html#setEffectRange(double)

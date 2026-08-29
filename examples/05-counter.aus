@@ -2,7 +2,8 @@
  * A per player counter that survives a restart.
  *
  * Runs untrusted. The store belongs to this script and is written out when
- * the server stops.
+ * the server stops. The command is namespaced at this level, so it is
+ * /05-counter.aus:joins until the script is trusted.
  */
 
 /**

@@ -2,13 +2,11 @@
 
 ## class: CopperGolemStatue
 
-[21:14] (extern: com.lehman.aussomcraft.paper.gen.trusted.CopperGolemStatueShim) **extends: object** 
+[19:14] (extern: com.lehman.aussomcraft.paper.gen.trusted.CopperGolemStatueShim) **extends: object** 
 
-Generated shim for org.bukkit.block.data.type.CopperGolemStatue.
-Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html
-In Paper this is a [BlockData](BlockData.aus.md),
-[Directional](Directional.aus.md) and
-[Waterlogged](Waterlogged.aus.md).
+Generated shim for org.bukkit.block.CopperGolemStatue.
+Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html
+In Paper this is a [TileState](TileState.aus.md).
 Every method it inherits is declared here too, so there is
 nothing to follow up to.
 Tier: trusted. Do not edit.
@@ -18,247 +16,232 @@ Tier: trusted. Do not edit.
 - **\_\_opEq\_\_** (`A0`)
 
 
-- **clone** ()
+- **copy** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#clone()
-
-	- **@r** `A` [BlockData](BlockData.aus.md).
-
-
-- **copyTo** (`Other`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#copyTo(org.bukkit.block.data.BlockData)
-
-	- **@p** `Other` is a [BlockData](BlockData.aus.md).
-
-
-- **createBlockState** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#createBlockState()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#copy()
 
 	- **@r** `A` [BlockState](BlockState.aus.md).
 
 
-- **getAsString** ()
+- **copy** (`Location`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#getAsString()
-
-	- **@r** `A` string.
-
-
-- **getAsString** (`HideUnspecified`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#getAsString(boolean)
-
-	- **@p** `HideUnspecified` is a bool.
-	- **@r** `A` string.
-
-
-- **getCollisionShape** (`Location`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#getCollisionShape(org.bukkit.Location)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#copy(org.bukkit.Location)
 
 	- **@p** `Location` is a [Location](Location.aus.md).
-	- **@r** `A` [VoxelShape](VoxelShape.aus.md).
+	- **@r** `A` [BlockState](BlockState.aus.md).
 
 
-- **getCopperGolemPose** ()
+- **getBlock** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#getCopperGolemPose()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#getBlock()
 
-	- **@r** `A` string naming a [Pose](Pose.aus.md).
-
-
-- **getDestroySpeed** (`ItemStack`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#getDestroySpeed(org.bukkit.inventory.ItemStack)
-
-	- **@p** `ItemStack` is an [ItemStack](ItemStack.aus.md).
-	- **@r** `A` double.
+	- **@r** `A` [Block](Block.aus.md).
 
 
-- **getDestroySpeed** (`ItemStack, ConsiderEnchants`)
+- **getBlockData** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#getDestroySpeed(org.bukkit.inventory.ItemStack,boolean)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#getBlockData()
 
-	- **@p** `ItemStack` is an [ItemStack](ItemStack.aus.md).
-	- **@p** `ConsiderEnchants` is a bool.
-	- **@r** `A` double.
+	- **@r** `A` [BlockData](BlockData.aus.md).
 
 
-- **getFaces** ()
+- **getChunk** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#getFaces()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#getChunk()
+
+	- **@r** `A` [Chunk](Chunk.aus.md).
+
+
+- **getDrops** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#getDrops()
 
 	- **@r** `A` list.
 
 
-- **getFacing** ()
+- **getDrops** (`Tool`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#getFacing()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#getDrops(org.bukkit.inventory.ItemStack)
 
-	- **@r** `A` string naming a [BlockFace](BlockFace.aus.md).
+	- **@p** `Tool` is an [ItemStack](ItemStack.aus.md).
+	- **@r** `A` list.
 
 
-- **getLightEmission** ()
+- **getDrops** (`Tool, Entity`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#getLightEmission()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#getDrops(org.bukkit.inventory.ItemStack,org.bukkit.entity.Entity)
+
+	- **@p** `Tool` is an [ItemStack](ItemStack.aus.md).
+	- **@p** `Entity` is an [Entity](Entity.aus.md).
+	- **@r** `A` list.
+
+
+- **getLightLevel** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#getLightLevel()
 
 	- **@r** `An` int.
 
 
-- **getMapColor** ()
+- **getLocation** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#getMapColor()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#getLocation()
 
-	- **@r** `A` [Color](Color.aus.md).
+	- **@r** `A` [Location](Location.aus.md).
 
 
-- **getMaterial** ()
+- **getLocation** (`Loc`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#getMaterial()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#getLocation(org.bukkit.Location)
+
+	- **@p** `Loc` is a [Location](Location.aus.md).
+	- **@r** `A` [Location](Location.aus.md).
+
+
+- **getMetadata** (`MetadataKey`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#getMetadata(java.lang.String)
+
+	- **@p** `MetadataKey` is a string.
+	- **@r** `A` list.
+
+
+- **getPersistentDataContainer** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#getPersistentDataContainer()
+
+	- **@r** `A` [PersistentDataContainer](PersistentDataContainer.aus.md).
+
+
+- **getRawData** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#getRawData()
+
+	- **@r** `An` int.
+
+
+- **getType** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#getType()
 
 	- **@r** `A` string naming a [Material](Material.aus.md).
 
 
-- **getPistonMoveReaction** ()
+- **getWorld** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#getPistonMoveReaction()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#getWorld()
 
-	- **@r** `A` string naming a [PistonMoveReaction](PistonMoveReaction.aus.md).
-
-
-- **getPlacementMaterial** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#getPlacementMaterial()
-
-	- **@r** `A` string naming a [Material](Material.aus.md).
+	- **@r** `A` [World](World.aus.md).
 
 
-- **getSoundGroup** ()
+- **getX** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#getSoundGroup()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#getX()
 
-	- **@r** `A` [SoundGroup](SoundGroup.aus.md).
+	- **@r** `An` int.
 
 
-- **isFaceSturdy** (`Face, Support`)
+- **getY** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#isFaceSturdy(org.bukkit.block.BlockFace,org.bukkit.block.BlockSupport)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#getY()
 
-	- **@p** `Face` is a string naming a [BlockFace](BlockFace.aus.md).
-	- **@p** `Support` is a string naming a [BlockSupport](BlockSupport.aus.md).
+	- **@r** `An` int.
+
+
+- **getZ** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#getZ()
+
+	- **@r** `An` int.
+
+
+- **hasMetadata** (`MetadataKey`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#hasMetadata(java.lang.String)
+
+	- **@p** `MetadataKey` is a string.
 	- **@r** `A` bool.
 
 
-- **isOccluding** ()
+- **isCollidable** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#isOccluding()
-
-	- **@r** `A` bool.
-
-
-- **isPreferredTool** (`Tool`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#isPreferredTool(org.bukkit.inventory.ItemStack)
-
-	- **@p** `Tool` is an [ItemStack](ItemStack.aus.md).
-	- **@r** `A` bool.
-
-
-- **isRandomlyTicked** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#isRandomlyTicked()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#isCollidable()
 
 	- **@r** `A` bool.
 
 
-- **isReplaceable** ()
+- **isPlaced** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#isReplaceable()
-
-	- **@r** `A` bool.
-
-
-- **isSupported** (`Block`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#isSupported(org.bukkit.block.Block)
-
-	- **@p** `Block` is a [Block](Block.aus.md).
-	- **@r** `A` bool.
-
-
-- **isSupported\_location** (`Location`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#isSupported(org.bukkit.Location)
-
-	- **@p** `Location` is a [Location](Location.aus.md).
-	- **@r** `A` bool.
-
-
-- **isWaterlogged** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#isWaterlogged()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#isPlaced()
 
 	- **@r** `A` bool.
 
 
-- **matches** (`Data`)
+- **isSnapshot** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#matches(org.bukkit.block.data.BlockData)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#isSnapshot()
+
+	- **@r** `A` bool.
+
+
+- **isSuffocating** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#isSuffocating()
+
+	- **@r** `A` bool.
+
+
+- **setBlockData** (`Data`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#setBlockData(org.bukkit.block.data.BlockData)
 
 	- **@p** `Data` is a [BlockData](BlockData.aus.md).
+
+
+- **setMetadata** (`MetadataKey, NewMetadataValue`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#setMetadata(java.lang.String,org.bukkit.metadata.MetadataValue)
+
+	- **@p** `MetadataKey` is a string.
+	- **@p** `NewMetadataValue` is a [MetadataValue](MetadataValue.aus.md).
+
+
+- **setRawData** (`Data`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#setRawData(byte)
+
+	- **@p** `Data` is an int.
+
+
+- **setType** (`Type`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#setType(org.bukkit.Material)
+
+	- **@p** `Type` is a string naming a [Material](Material.aus.md).
+
+
+- **update** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#update()
+
 	- **@r** `A` bool.
 
 
-- **merge** (`Data`)
+- **update** (`Force`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#merge(org.bukkit.block.data.BlockData)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#update(boolean)
 
-	- **@p** `Data` is a [BlockData](BlockData.aus.md).
-	- **@r** `A` [BlockData](BlockData.aus.md).
-
-
-- **mirror** (`Mirror`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#mirror(org.bukkit.block.structure.Mirror)
-
-	- **@p** `Mirror` is a string naming a [Mirror](Mirror.aus.md).
-
-
-- **requiresCorrectToolForDrops** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#requiresCorrectToolForDrops()
-
+	- **@p** `Force` is a bool.
 	- **@r** `A` bool.
 
 
-- **rotate** (`Rotation`)
+- **update** (`Force, ApplyPhysics`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#rotate(org.bukkit.block.structure.StructureRotation)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#update(boolean,boolean)
 
-	- **@p** `Rotation` is a string naming a [StructureRotation](StructureRotation.aus.md).
-
-
-- **setCopperGolemPose** (`Pose`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#setCopperGolemPose(org.bukkit.block.data.type.CopperGolemStatue.Pose)
-
-	- **@p** `Pose` is a string naming a [Pose](Pose.aus.md).
-
-
-- **setFacing** (`Facing`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#setFacing(org.bukkit.block.BlockFace)
-
-	- **@p** `Facing` is a string naming a [BlockFace](BlockFace.aus.md).
-
-
-- **setWaterlogged** (`Waterlogged`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#setWaterlogged(boolean)
-
-	- **@p** `Waterlogged` is a bool.
+	- **@p** `Force` is a bool.
+	- **@p** `ApplyPhysics` is a bool.
+	- **@r** `A` bool.
 
 
 

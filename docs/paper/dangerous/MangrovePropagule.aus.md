@@ -2,13 +2,12 @@
 
 ## class: MangrovePropagule
 
-[21:14] (extern: com.lehman.aussomcraft.paper.gen.dangerous.MangrovePropaguleShim) **extends: object** 
+[20:14] (extern: com.lehman.aussomcraft.paper.gen.dangerous.MangrovePropaguleShim) **extends: object** 
 
 Generated shim for org.bukkit.block.data.type.MangrovePropagule.
 Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/MangrovePropagule.html
-In Paper this is a [Ageable](Ageable.aus.md),
-[Hangable](Hangable.aus.md), [Sapling](Sapling.aus.md) and
-[Waterlogged](Waterlogged.aus.md).
+In Paper this is a [Hangable](Hangable.aus.md),
+[Sapling](Sapling.aus.md) and [Waterlogged](Waterlogged.aus.md).
 Every method it inherits is declared here too, so there is
 nothing to follow up to.
 Tier: dangerous. Do not edit.

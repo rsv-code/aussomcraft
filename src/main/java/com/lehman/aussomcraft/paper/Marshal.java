@@ -73,6 +73,30 @@ public final class Marshal {
     }
 
     /**
+     * The Aussom class a value may be wrapped in at a tier, or null when
+     * the tier was not given that type.
+     *
+     * This is the tier check, and it is made on the Paper class rather than
+     * on a name a script could have occupied. A type the tier does not hold
+     * has no entry in its manifest, so nothing is instantiated for it and
+     * the script gets null however it has named its own classes.
+     *
+     * @param Eng is the engine, for its tier.
+     * @param Value is the Java object.
+     * @return A String with the Aussom class name, or null.
+     */
+    private static String grantedNameFor(Engine Eng, Object Value) {
+        Class<?> api = apiTypeOf(Value);
+        if (api == null) {
+            return null;
+        }
+        if (!(Eng instanceof TierAware)) {
+            return null;
+        }
+        return PaperModules.ausNameOf(((TierAware) Eng).getTierId(), api.getName());
+    }
+
+    /**
      * The Aussom shim class name for a Java object.
      *
      * Walks to the first API type the generator would have named, because
@@ -84,16 +108,37 @@ public final class Marshal {
      *         API type.
      */
     public static String shimNameOf(Object Value) {
+        Class<?> api = apiTypeOf(Value);
+        if (api == null) {
+            return null;
+        }
+        return api.getSimpleName();
+    }
+
+    /**
+     * The first Paper API type a Java object is, as a Class rather than a
+     * name.
+     *
+     * The identity matters and a simple name is not one: Paper has 53 types
+     * that share a simple name with another, so 'Ageable' names both a
+     * block's and an entity's. Everything that decides what a script may
+     * hold keys on this Class, and only the last step turns it into the
+     * Aussom name the tier's manifest records.
+     *
+     * @param Value is the Java object.
+     * @return A Class for the first API type, or null when it is not one.
+     */
+    public static Class<?> apiTypeOf(Object Value) {
         if (Value == null) {
             return null;
         }
         for (Class<?> c = Value.getClass(); c != null; c = c.getSuperclass()) {
             if (isApi(c)) {
-                return c.getSimpleName();
+                return c;
             }
             for (Class<?> i : c.getInterfaces()) {
                 if (isApi(i)) {
-                    return i.getSimpleName();
+                    return i;
                 }
             }
         }
@@ -243,10 +288,20 @@ public final class Marshal {
         if (Value == null) {
             return new AussomNull();
         }
-        // The module for this type may be registered but not yet included,
-        // because a script only parses what it touches. Include it the first
-        // time something of that type comes back, then it is defined for
-        // good.
+        // What this tier may wrap this object in, decided from the Paper
+        // class. Asked before anything is looked up by name, so a script
+        // that has defined its own class under a shim's name cannot make a
+        // withheld type arrive: the answer does not depend on what classes
+        // the engine happens to hold.
+        String granted = grantedNameFor(Eng, Value);
+        if (granted == null) {
+            return new AussomNull();
+        }
+        ShimClass = granted;
+
+        // The module may be named but not yet included, because a script
+        // only parses what it touches. Include it the first time something
+        // of that type comes back, then it is defined for good.
         if (!Eng.containsClass(ShimClass) && Eng instanceof TierAware) {
             TierAware host = (TierAware) Eng;
             PaperModules.includeType(Eng, host.getTierId(), ShimClass);

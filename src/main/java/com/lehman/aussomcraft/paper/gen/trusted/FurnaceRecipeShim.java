@@ -278,25 +278,6 @@ public class FurnaceRecipeShim extends PaperObj {
         }
     }
 
-    public AussomType setInput_MaterialData(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.inventory.FurnaceRecipe self = (org.bukkit.inventory.FurnaceRecipe) this.getObj();
-            if (self == null) {
-                return Marshal.detached("setInput_MaterialData");
-            }
-            if (n == 1) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.FurnaceRecipe) self).setInput((org.bukkit.material.MaterialData) Marshal.typed(args, 0, org.bukkit.material.MaterialData.class)));
-            }
-            return Marshal.wrongArity("setInput_MaterialData", n);
-        } catch (Throwable e) {
-            return Marshal.failed("setInput_MaterialData", e);
-        }
-    }
-
     public AussomType setInputChoice(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {

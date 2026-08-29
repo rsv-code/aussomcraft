@@ -2,13 +2,12 @@
 
 ## class: Snowman
 
-[21:14] (extern: com.lehman.aussomcraft.paper.gen.trusted.SnowmanShim) **extends: object** 
+[20:14] (extern: com.lehman.aussomcraft.paper.gen.trusted.SnowmanShim) **extends: object** 
 
 Generated shim for org.bukkit.entity.Snowman.
 Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Snowman.html
-In Paper this is a [Golem](Golem.aus.md),
-[RangedEntity](RangedEntity.aus.md) and
-[Shearable](Shearable.aus.md).
+In Paper this is a [Golem](Golem.aus.md) and
+[RangedEntity](RangedEntity.aus.md).
 Every method it inherits is declared here too, so there is
 nothing to follow up to.
 Tier: trusted. Do not edit.

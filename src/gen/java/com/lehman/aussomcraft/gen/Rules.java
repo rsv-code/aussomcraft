@@ -52,6 +52,14 @@ public final class Rules {
     /** Packages never generated, because they are not stable public API. */
     private static final String[] NEVER = {
         "net.minecraft.", "org.bukkit.craftbukkit.",
+        // The pre-1.13 material API, deprecated in Bukkit since the
+        // flattening and replaced by org.bukkit.block.data. Excluded rather
+        // than generated: 67 types nobody should call, and because a simple
+        // name is the Aussom class name, they collided with the modern types
+        // that replaced them. 26 of the 69 name collisions were this package
+        // alone, and alphabetical tie breaking handed it the bare name, so
+        // 'Bed' meant the deprecated material rather than the block.
+        "org.bukkit.material.",
     };
 
     /**

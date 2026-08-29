@@ -2,11 +2,12 @@
 
 ## class: Jukebox
 
-[19:14] (extern: com.lehman.aussomcraft.paper.gen.trusted.JukeboxShim) **extends: object** 
+[20:14] (extern: com.lehman.aussomcraft.paper.gen.trusted.JukeboxShim) **extends: object** 
 
-Generated shim for org.bukkit.block.data.type.Jukebox.
-Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Jukebox.html
-In Paper this is a [BlockData](BlockData.aus.md).
+Generated shim for org.bukkit.block.Jukebox.
+Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Jukebox.html
+In Paper this is a
+[TileStateInventoryHolder](TileStateInventoryHolder.aus.md).
 Every method it inherits is declared here too, so there is
 nothing to follow up to.
 Tier: trusted. Do not edit.
@@ -16,212 +17,308 @@ Tier: trusted. Do not edit.
 - **\_\_opEq\_\_** (`A0`)
 
 
-- **clone** ()
+- **copy** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Jukebox.html#clone()
-
-	- **@r** `A` [BlockData](BlockData.aus.md).
-
-
-- **copyTo** (`Other`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Jukebox.html#copyTo(org.bukkit.block.data.BlockData)
-
-	- **@p** `Other` is a [BlockData](BlockData.aus.md).
-
-
-- **createBlockState** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Jukebox.html#createBlockState()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Jukebox.html#copy()
 
 	- **@r** `A` [BlockState](BlockState.aus.md).
 
 
-- **getAsString** ()
+- **copy** (`Location`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Jukebox.html#getAsString()
-
-	- **@r** `A` string.
-
-
-- **getAsString** (`HideUnspecified`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Jukebox.html#getAsString(boolean)
-
-	- **@p** `HideUnspecified` is a bool.
-	- **@r** `A` string.
-
-
-- **getCollisionShape** (`Location`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Jukebox.html#getCollisionShape(org.bukkit.Location)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Jukebox.html#copy(org.bukkit.Location)
 
 	- **@p** `Location` is a [Location](Location.aus.md).
-	- **@r** `A` [VoxelShape](VoxelShape.aus.md).
+	- **@r** `A` [BlockState](BlockState.aus.md).
 
 
-- **getDestroySpeed** (`ItemStack`)
+- **eject** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Jukebox.html#getDestroySpeed(org.bukkit.inventory.ItemStack)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Jukebox.html#eject()
 
-	- **@p** `ItemStack` is an [ItemStack](ItemStack.aus.md).
-	- **@r** `A` double.
-
-
-- **getDestroySpeed** (`ItemStack, ConsiderEnchants`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Jukebox.html#getDestroySpeed(org.bukkit.inventory.ItemStack,boolean)
-
-	- **@p** `ItemStack` is an [ItemStack](ItemStack.aus.md).
-	- **@p** `ConsiderEnchants` is a bool.
-	- **@r** `A` double.
+	- **@r** `A` bool.
 
 
-- **getLightEmission** ()
+- **getBlock** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Jukebox.html#getLightEmission()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Jukebox.html#getBlock()
+
+	- **@r** `A` [Block](Block.aus.md).
+
+
+- **getBlockData** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Jukebox.html#getBlockData()
+
+	- **@r** `A` [BlockData](BlockData.aus.md).
+
+
+- **getChunk** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Jukebox.html#getChunk()
+
+	- **@r** `A` [Chunk](Chunk.aus.md).
+
+
+- **getDrops** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Jukebox.html#getDrops()
+
+	- **@r** `A` list.
+
+
+- **getDrops** (`Tool`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Jukebox.html#getDrops(org.bukkit.inventory.ItemStack)
+
+	- **@p** `Tool` is an [ItemStack](ItemStack.aus.md).
+	- **@r** `A` list.
+
+
+- **getDrops** (`Tool, Entity`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Jukebox.html#getDrops(org.bukkit.inventory.ItemStack,org.bukkit.entity.Entity)
+
+	- **@p** `Tool` is an [ItemStack](ItemStack.aus.md).
+	- **@p** `Entity` is an [Entity](Entity.aus.md).
+	- **@r** `A` list.
+
+
+- **getInventory** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Jukebox.html#getInventory()
+
+	- **@r** `A` [JukeboxInventory](JukeboxInventory.aus.md).
+
+
+- **getLightLevel** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Jukebox.html#getLightLevel()
 
 	- **@r** `An` int.
 
 
-- **getMapColor** ()
+- **getLocation** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Jukebox.html#getMapColor()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Jukebox.html#getLocation()
 
-	- **@r** `A` [Color](Color.aus.md).
+	- **@r** `A` [Location](Location.aus.md).
 
 
-- **getMaterial** ()
+- **getLocation** (`Loc`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Jukebox.html#getMaterial()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Jukebox.html#getLocation(org.bukkit.Location)
+
+	- **@p** `Loc` is a [Location](Location.aus.md).
+	- **@r** `A` [Location](Location.aus.md).
+
+
+- **getMetadata** (`MetadataKey`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Jukebox.html#getMetadata(java.lang.String)
+
+	- **@p** `MetadataKey` is a string.
+	- **@r** `A` list.
+
+
+- **getPersistentDataContainer** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Jukebox.html#getPersistentDataContainer()
+
+	- **@r** `A` [PersistentDataContainer](PersistentDataContainer.aus.md).
+
+
+- **getPlaying** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Jukebox.html#getPlaying()
 
 	- **@r** `A` string naming a [Material](Material.aus.md).
 
 
-- **getPistonMoveReaction** ()
+- **getRawData** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Jukebox.html#getPistonMoveReaction()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Jukebox.html#getRawData()
 
-	- **@r** `A` string naming a [PistonMoveReaction](PistonMoveReaction.aus.md).
+	- **@r** `An` int.
 
 
-- **getPlacementMaterial** ()
+- **getRecord** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Jukebox.html#getPlacementMaterial()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Jukebox.html#getRecord()
+
+	- **@r** `An` [ItemStack](ItemStack.aus.md).
+
+
+- **getSnapshotInventory** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Jukebox.html#getSnapshotInventory()
+
+	- **@r** `A` [JukeboxInventory](JukeboxInventory.aus.md).
+
+
+- **getType** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Jukebox.html#getType()
 
 	- **@r** `A` string naming a [Material](Material.aus.md).
 
 
-- **getSoundGroup** ()
+- **getWorld** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Jukebox.html#getSoundGroup()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Jukebox.html#getWorld()
 
-	- **@r** `A` [SoundGroup](SoundGroup.aus.md).
+	- **@r** `A` [World](World.aus.md).
+
+
+- **getX** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Jukebox.html#getX()
+
+	- **@r** `An` int.
+
+
+- **getY** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Jukebox.html#getY()
+
+	- **@r** `An` int.
+
+
+- **getZ** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Jukebox.html#getZ()
+
+	- **@r** `An` int.
+
+
+- **hasMetadata** (`MetadataKey`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Jukebox.html#hasMetadata(java.lang.String)
+
+	- **@p** `MetadataKey` is a string.
+	- **@r** `A` bool.
 
 
 - **hasRecord** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Jukebox.html#hasRecord()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Jukebox.html#hasRecord()
 
 	- **@r** `A` bool.
 
 
-- **isFaceSturdy** (`Face, Support`)
+- **isCollidable** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Jukebox.html#isFaceSturdy(org.bukkit.block.BlockFace,org.bukkit.block.BlockSupport)
-
-	- **@p** `Face` is a string naming a [BlockFace](BlockFace.aus.md).
-	- **@p** `Support` is a string naming a [BlockSupport](BlockSupport.aus.md).
-	- **@r** `A` bool.
-
-
-- **isOccluding** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Jukebox.html#isOccluding()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Jukebox.html#isCollidable()
 
 	- **@r** `A` bool.
 
 
-- **isPreferredTool** (`Tool`)
+- **isPlaced** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Jukebox.html#isPreferredTool(org.bukkit.inventory.ItemStack)
-
-	- **@p** `Tool` is an [ItemStack](ItemStack.aus.md).
-	- **@r** `A` bool.
-
-
-- **isRandomlyTicked** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Jukebox.html#isRandomlyTicked()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Jukebox.html#isPlaced()
 
 	- **@r** `A` bool.
 
 
-- **isReplaceable** ()
+- **isPlaying** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Jukebox.html#isReplaceable()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Jukebox.html#isPlaying()
 
 	- **@r** `A` bool.
 
 
-- **isSupported** (`Block`)
+- **isSnapshot** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Jukebox.html#isSupported(org.bukkit.block.Block)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Jukebox.html#isSnapshot()
 
-	- **@p** `Block` is a [Block](Block.aus.md).
 	- **@r** `A` bool.
 
 
-- **isSupported\_location** (`Location`)
+- **isSuffocating** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Jukebox.html#isSupported(org.bukkit.Location)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Jukebox.html#isSuffocating()
 
-	- **@p** `Location` is a [Location](Location.aus.md).
 	- **@r** `A` bool.
 
 
-- **matches** (`Data`)
+- **setBlockData** (`Data`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Jukebox.html#matches(org.bukkit.block.data.BlockData)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Jukebox.html#setBlockData(org.bukkit.block.data.BlockData)
 
 	- **@p** `Data` is a [BlockData](BlockData.aus.md).
+
+
+- **setMetadata** (`MetadataKey, NewMetadataValue`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Jukebox.html#setMetadata(java.lang.String,org.bukkit.metadata.MetadataValue)
+
+	- **@p** `MetadataKey` is a string.
+	- **@p** `NewMetadataValue` is a [MetadataValue](MetadataValue.aus.md).
+
+
+- **setPlaying** (`Record`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Jukebox.html#setPlaying(org.bukkit.Material)
+
+	- **@p** `Record` is a string naming a [Material](Material.aus.md).
+
+
+- **setRawData** (`Data`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Jukebox.html#setRawData(byte)
+
+	- **@p** `Data` is an int.
+
+
+- **setRecord** (`Record`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Jukebox.html#setRecord(org.bukkit.inventory.ItemStack)
+
+	- **@p** `Record` is an [ItemStack](ItemStack.aus.md).
+
+
+- **setType** (`Type`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Jukebox.html#setType(org.bukkit.Material)
+
+	- **@p** `Type` is a string naming a [Material](Material.aus.md).
+
+
+- **startPlaying** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Jukebox.html#startPlaying()
+
 	- **@r** `A` bool.
 
 
-- **merge** (`Data`)
+- **stopPlaying** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Jukebox.html#merge(org.bukkit.block.data.BlockData)
-
-	- **@p** `Data` is a [BlockData](BlockData.aus.md).
-	- **@r** `A` [BlockData](BlockData.aus.md).
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Jukebox.html#stopPlaying()
 
 
-- **mirror** (`Mirror`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Jukebox.html#mirror(org.bukkit.block.structure.Mirror)
+- **update** ()
 
-	- **@p** `Mirror` is a string naming a [Mirror](Mirror.aus.md).
-
-
-- **requiresCorrectToolForDrops** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Jukebox.html#requiresCorrectToolForDrops()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Jukebox.html#update()
 
 	- **@r** `A` bool.
 
 
-- **rotate** (`Rotation`)
+- **update** (`Force`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Jukebox.html#rotate(org.bukkit.block.structure.StructureRotation)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Jukebox.html#update(boolean)
 
-	- **@p** `Rotation` is a string naming a [StructureRotation](StructureRotation.aus.md).
+	- **@p** `Force` is a bool.
+	- **@r** `A` bool.
 
 
-- **setHasRecord** (`HasRecord`)
+- **update** (`Force, ApplyPhysics`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Jukebox.html#setHasRecord(boolean)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Jukebox.html#update(boolean,boolean)
 
-	- **@p** `HasRecord` is a bool.
+	- **@p** `Force` is a bool.
+	- **@p** `ApplyPhysics` is a bool.
+	- **@r** `A` bool.
 
 
 

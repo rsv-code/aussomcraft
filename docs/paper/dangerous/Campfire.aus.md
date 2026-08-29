@@ -2,13 +2,11 @@
 
 ## class: Campfire
 
-[21:14] (extern: com.lehman.aussomcraft.paper.gen.dangerous.CampfireShim) **extends: object** 
+[19:14] (extern: com.lehman.aussomcraft.paper.gen.dangerous.CampfireShim) **extends: object** 
 
-Generated shim for org.bukkit.block.data.type.Campfire.
-Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Campfire.html
-In Paper this is a [Directional](Directional.aus.md),
-[Lightable](Lightable.aus.md) and
-[Waterlogged](Waterlogged.aus.md).
+Generated shim for org.bukkit.block.Campfire.
+Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Campfire.html
+In Paper this is a [TileState](TileState.aus.md).
 Every method it inherits is declared here too, so there is
 nothing to follow up to.
 Tier: dangerous. Do not edit.
@@ -18,261 +16,331 @@ Tier: dangerous. Do not edit.
 - **\_\_opEq\_\_** (`A0`)
 
 
-- **clone** ()
+- **copy** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Campfire.html#clone()
-
-	- **@r** `A` [BlockData](BlockData.aus.md).
-
-
-- **copyTo** (`Other`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Campfire.html#copyTo(org.bukkit.block.data.BlockData)
-
-	- **@p** `Other` is a [BlockData](BlockData.aus.md).
-
-
-- **createBlockState** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Campfire.html#createBlockState()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Campfire.html#copy()
 
 	- **@r** `A` [BlockState](BlockState.aus.md).
 
 
-- **getAsString** ()
+- **copy** (`Location`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Campfire.html#getAsString()
-
-	- **@r** `A` string.
-
-
-- **getAsString** (`HideUnspecified`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Campfire.html#getAsString(boolean)
-
-	- **@p** `HideUnspecified` is a bool.
-	- **@r** `A` string.
-
-
-- **getCollisionShape** (`Location`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Campfire.html#getCollisionShape(org.bukkit.Location)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Campfire.html#copy(org.bukkit.Location)
 
 	- **@p** `Location` is a [Location](Location.aus.md).
-	- **@r** `A` [VoxelShape](VoxelShape.aus.md).
+	- **@r** `A` [BlockState](BlockState.aus.md).
 
 
-- **getDestroySpeed** (`ItemStack`)
+- **getBlock** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Campfire.html#getDestroySpeed(org.bukkit.inventory.ItemStack)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Campfire.html#getBlock()
 
-	- **@p** `ItemStack` is an [ItemStack](ItemStack.aus.md).
-	- **@r** `A` double.
-
-
-- **getDestroySpeed** (`ItemStack, ConsiderEnchants`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Campfire.html#getDestroySpeed(org.bukkit.inventory.ItemStack,boolean)
-
-	- **@p** `ItemStack` is an [ItemStack](ItemStack.aus.md).
-	- **@p** `ConsiderEnchants` is a bool.
-	- **@r** `A` double.
+	- **@r** `A` [Block](Block.aus.md).
 
 
-- **getFaces** ()
+- **getBlockData** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Campfire.html#getFaces()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Campfire.html#getBlockData()
+
+	- **@r** `A` [BlockData](BlockData.aus.md).
+
+
+- **getChunk** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Campfire.html#getChunk()
+
+	- **@r** `A` [Chunk](Chunk.aus.md).
+
+
+- **getCookTime** (`Index`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Campfire.html#getCookTime(int)
+
+	- **@p** `Index` is an int.
+	- **@r** `An` int.
+
+
+- **getCookTimeTotal** (`Index`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Campfire.html#getCookTimeTotal(int)
+
+	- **@p** `Index` is an int.
+	- **@r** `An` int.
+
+
+- **getDrops** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Campfire.html#getDrops()
 
 	- **@r** `A` list.
 
 
-- **getFacing** ()
+- **getDrops** (`Tool`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Campfire.html#getFacing()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Campfire.html#getDrops(org.bukkit.inventory.ItemStack)
 
-	- **@r** `A` string naming a [BlockFace](BlockFace.aus.md).
+	- **@p** `Tool` is an [ItemStack](ItemStack.aus.md).
+	- **@r** `A` list.
 
 
-- **getLightEmission** ()
+- **getDrops** (`Tool, Entity`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Campfire.html#getLightEmission()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Campfire.html#getDrops(org.bukkit.inventory.ItemStack,org.bukkit.entity.Entity)
+
+	- **@p** `Tool` is an [ItemStack](ItemStack.aus.md).
+	- **@p** `Entity` is an [Entity](Entity.aus.md).
+	- **@r** `A` list.
+
+
+- **getItem** (`Index`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Campfire.html#getItem(int)
+
+	- **@p** `Index` is an int.
+	- **@r** `An` [ItemStack](ItemStack.aus.md).
+
+
+- **getLightLevel** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Campfire.html#getLightLevel()
 
 	- **@r** `An` int.
 
 
-- **getMapColor** ()
+- **getLocation** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Campfire.html#getMapColor()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Campfire.html#getLocation()
 
-	- **@r** `A` [Color](Color.aus.md).
+	- **@r** `A` [Location](Location.aus.md).
 
 
-- **getMaterial** ()
+- **getLocation** (`Loc`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Campfire.html#getMaterial()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Campfire.html#getLocation(org.bukkit.Location)
+
+	- **@p** `Loc` is a [Location](Location.aus.md).
+	- **@r** `A` [Location](Location.aus.md).
+
+
+- **getMetadata** (`MetadataKey`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Campfire.html#getMetadata(java.lang.String)
+
+	- **@p** `MetadataKey` is a string.
+	- **@r** `A` list.
+
+
+- **getPersistentDataContainer** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Campfire.html#getPersistentDataContainer()
+
+	- **@r** `A` [PersistentDataContainer](PersistentDataContainer.aus.md).
+
+
+- **getRawData** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Campfire.html#getRawData()
+
+	- **@r** `An` int.
+
+
+- **getSize** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Campfire.html#getSize()
+
+	- **@r** `An` int.
+
+
+- **getType** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Campfire.html#getType()
 
 	- **@r** `A` string naming a [Material](Material.aus.md).
 
 
-- **getPistonMoveReaction** ()
+- **getWorld** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Campfire.html#getPistonMoveReaction()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Campfire.html#getWorld()
 
-	- **@r** `A` string naming a [PistonMoveReaction](PistonMoveReaction.aus.md).
-
-
-- **getPlacementMaterial** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Campfire.html#getPlacementMaterial()
-
-	- **@r** `A` string naming a [Material](Material.aus.md).
+	- **@r** `A` [World](World.aus.md).
 
 
-- **getSoundGroup** ()
+- **getX** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Campfire.html#getSoundGroup()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Campfire.html#getX()
 
-	- **@r** `A` [SoundGroup](SoundGroup.aus.md).
+	- **@r** `An` int.
 
 
-- **isFaceSturdy** (`Face, Support`)
+- **getY** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Campfire.html#isFaceSturdy(org.bukkit.block.BlockFace,org.bukkit.block.BlockSupport)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Campfire.html#getY()
 
-	- **@p** `Face` is a string naming a [BlockFace](BlockFace.aus.md).
-	- **@p** `Support` is a string naming a [BlockSupport](BlockSupport.aus.md).
+	- **@r** `An` int.
+
+
+- **getZ** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Campfire.html#getZ()
+
+	- **@r** `An` int.
+
+
+- **hasMetadata** (`MetadataKey`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Campfire.html#hasMetadata(java.lang.String)
+
+	- **@p** `MetadataKey` is a string.
 	- **@r** `A` bool.
 
 
-- **isLit** ()
+- **isCollidable** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Campfire.html#isLit()
-
-	- **@r** `A` bool.
-
-
-- **isOccluding** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Campfire.html#isOccluding()
-
-	- **@r** `A` bool.
-
-
-- **isPreferredTool** (`Tool`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Campfire.html#isPreferredTool(org.bukkit.inventory.ItemStack)
-
-	- **@p** `Tool` is an [ItemStack](ItemStack.aus.md).
-	- **@r** `A` bool.
-
-
-- **isRandomlyTicked** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Campfire.html#isRandomlyTicked()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Campfire.html#isCollidable()
 
 	- **@r** `A` bool.
 
 
-- **isReplaceable** ()
+- **isCookingDisabled** (`Index`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Campfire.html#isReplaceable()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Campfire.html#isCookingDisabled(int)
+
+	- **@p** `Index` is an int.
+	- **@r** `A` bool.
+
+
+- **isPlaced** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Campfire.html#isPlaced()
 
 	- **@r** `A` bool.
 
 
-- **isSignalFire** ()
+- **isSnapshot** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Campfire.html#isSignalFire()
-
-	- **@r** `A` bool.
-
-
-- **isSupported** (`Block`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Campfire.html#isSupported(org.bukkit.block.Block)
-
-	- **@p** `Block` is a [Block](Block.aus.md).
-	- **@r** `A` bool.
-
-
-- **isSupported\_location** (`Location`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Campfire.html#isSupported(org.bukkit.Location)
-
-	- **@p** `Location` is a [Location](Location.aus.md).
-	- **@r** `A` bool.
-
-
-- **isWaterlogged** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Campfire.html#isWaterlogged()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Campfire.html#isSnapshot()
 
 	- **@r** `A` bool.
 
 
-- **matches** (`Data`)
+- **isSuffocating** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Campfire.html#matches(org.bukkit.block.data.BlockData)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Campfire.html#isSuffocating()
+
+	- **@r** `A` bool.
+
+
+- **setBlockData** (`Data`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Campfire.html#setBlockData(org.bukkit.block.data.BlockData)
 
 	- **@p** `Data` is a [BlockData](BlockData.aus.md).
+
+
+- **setCookTime** (`Index, CookTime`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Campfire.html#setCookTime(int,int)
+
+	- **@p** `Index` is an int.
+	- **@p** `CookTime` is an int.
+
+
+- **setCookTimeTotal** (`Index, CookTimeTotal`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Campfire.html#setCookTimeTotal(int,int)
+
+	- **@p** `Index` is an int.
+	- **@p** `CookTimeTotal` is an int.
+
+
+- **setItem** (`Index, Item`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Campfire.html#setItem(int,org.bukkit.inventory.ItemStack)
+
+	- **@p** `Index` is an int.
+	- **@p** `Item` is an [ItemStack](ItemStack.aus.md).
+
+
+- **setMetadata** (`MetadataKey, NewMetadataValue`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Campfire.html#setMetadata(java.lang.String,org.bukkit.metadata.MetadataValue)
+
+	- **@p** `MetadataKey` is a string.
+	- **@p** `NewMetadataValue` is a [MetadataValue](MetadataValue.aus.md).
+
+
+- **setRawData** (`Data`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Campfire.html#setRawData(byte)
+
+	- **@p** `Data` is an int.
+
+
+- **setType** (`Type`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Campfire.html#setType(org.bukkit.Material)
+
+	- **@p** `Type` is a string naming a [Material](Material.aus.md).
+
+
+- **startCooking** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Campfire.html#startCooking()
+
+
+
+- **startCooking** (`Index`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Campfire.html#startCooking(int)
+
+	- **@p** `Index` is an int.
 	- **@r** `A` bool.
 
 
-- **merge** (`Data`)
+- **stopCooking** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Campfire.html#merge(org.bukkit.block.data.BlockData)
-
-	- **@p** `Data` is a [BlockData](BlockData.aus.md).
-	- **@r** `A` [BlockData](BlockData.aus.md).
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Campfire.html#stopCooking()
 
 
-- **mirror** (`Mirror`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Campfire.html#mirror(org.bukkit.block.structure.Mirror)
+- **stopCooking** (`Index`)
 
-	- **@p** `Mirror` is a string naming a [Mirror](Mirror.aus.md).
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Campfire.html#stopCooking(int)
+
+	- **@p** `Index` is an int.
+	- **@r** `A` bool.
 
 
-- **requiresCorrectToolForDrops** ()
+- **update** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Campfire.html#requiresCorrectToolForDrops()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Campfire.html#update()
 
 	- **@r** `A` bool.
 
 
-- **rotate** (`Rotation`)
+- **update** (`Force`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Campfire.html#rotate(org.bukkit.block.structure.StructureRotation)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Campfire.html#update(boolean)
 
-	- **@p** `Rotation` is a string naming a [StructureRotation](StructureRotation.aus.md).
-
-
-- **setFacing** (`Facing`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Campfire.html#setFacing(org.bukkit.block.BlockFace)
-
-	- **@p** `Facing` is a string naming a [BlockFace](BlockFace.aus.md).
+	- **@p** `Force` is a bool.
+	- **@r** `A` bool.
 
 
-- **setLit** (`Lit`)
+- **update** (`Force, ApplyPhysics`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Campfire.html#setLit(boolean)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Campfire.html#update(boolean,boolean)
 
-	- **@p** `Lit` is a bool.
-
-
-- **setSignalFire** (`SignalFire`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Campfire.html#setSignalFire(boolean)
-
-	- **@p** `SignalFire` is a bool.
+	- **@p** `Force` is a bool.
+	- **@p** `ApplyPhysics` is a bool.
+	- **@r** `A` bool.
 
 
-- **setWaterlogged** (`Waterlogged`)
+- **removeMetadata** (`MetadataKey, OwningPlugin`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Campfire.html#setWaterlogged(boolean)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Campfire.html#removeMetadata(java.lang.String,org.bukkit.plugin.Plugin)
 
-	- **@p** `Waterlogged` is a bool.
+	- **@p** `MetadataKey` is a string.
+	- **@p** `OwningPlugin` is a [Plugin](Plugin.aus.md).
 
 
 

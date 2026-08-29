@@ -6,8 +6,8 @@
 
 Generated shim for org.bukkit.entity.Sheep.
 Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Sheep.html
-In Paper this is a [Animals](Animals.aus.md),
-[Colorable](Colorable.aus.md) and [Shearable](Shearable.aus.md).
+In Paper this is a [Animals](Animals.aus.md) and
+[Shearable](Shearable.aus.md).
 Every method it inherits is declared here too, so there is
 nothing to follow up to.
 Tier: dangerous. Do not edit.

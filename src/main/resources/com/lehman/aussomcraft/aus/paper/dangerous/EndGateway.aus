@@ -63,13 +63,6 @@ extern class EndGateway : com.lehman.aussomcraft.paper.gen.dangerous.EndGatewayS
     public extern getChunk();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EndGateway.html#getData()
-     *
-     * @r A [MaterialData](MaterialData.aus.md).
-     */
-    public extern getData();
-
-    /**
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EndGateway.html#getDrops()
      *
      * @r A list.
@@ -235,13 +228,6 @@ extern class EndGateway : com.lehman.aussomcraft.paper.gen.dangerous.EndGatewayS
      * @p Data is a [BlockData](BlockData.aus.md).
      */
     public extern setBlockData(Data);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EndGateway.html#setData(org.bukkit.material.MaterialData)
-     *
-     * @p Data is a [MaterialData](MaterialData.aus.md).
-     */
-    public extern setData(Data);
 
     /**
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EndGateway.html#setExactTeleport(boolean)

@@ -442,14 +442,19 @@ public class AcraftCommand implements CommandExecutor, TabCompleter {
             return out;
         }
         if (args.length == 2) {
-            File dir = this.plugin.getScriptDir();
-            String[] files = dir.list();
-            if (files != null) {
-                for (String f : files) {
-                    if (f.endsWith(".aus") && f.startsWith(args[1])) {
+            // Through the loader, so what completes is exactly what would
+            // load. Listing the directory here meant a second definition of
+            // what counts as a script, which could disagree with the first.
+            try {
+                for (Path p : this.plugin.getLoader().discover()) {
+                    String f = p.getFileName().toString();
+                    if (f.startsWith(args[1])) {
                         out.add(f);
                     }
                 }
+            } catch (IOException unreadable) {
+                // Completion is a convenience. A directory that cannot be
+                // read is reported when a command actually runs.
             }
             return out;
         }

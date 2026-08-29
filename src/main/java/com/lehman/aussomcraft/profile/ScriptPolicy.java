@@ -97,6 +97,19 @@ public class ScriptPolicy extends SecurityManagerImpl {
     private static final long MAX_SOURCE_BYTES = 1024L * 1024L;
 
     /**
+     * The largest script the loader will read.
+     *
+     * The same at every tier. Exposed because ScriptLoader has to apply it
+     * before it knows which tier a script is, since the tier comes from a
+     * hash of the bytes it has not read yet.
+     *
+     * @return A long with the limit in bytes.
+     */
+    public static long maxSourceBytes() {
+        return MAX_SOURCE_BYTES;
+    }
+
+    /**
      * Builds the policy for one tier.
      *
      * @param Loader is the class loader the engine resolves extern classes

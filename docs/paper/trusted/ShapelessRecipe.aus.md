@@ -32,14 +32,6 @@ Tier: trusted. Do not edit.
 	- **@r** `A` [ShapelessRecipe](ShapelessRecipe.aus.md).
 
 
-- **addIngredient\_MaterialData** (`Ingredient`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/ShapelessRecipe.html#addIngredient(org.bukkit.material.MaterialData)
-
-	- **@p** `Ingredient` is a [MaterialData](MaterialData.aus.md).
-	- **@r** `A` [ShapelessRecipe](ShapelessRecipe.aus.md).
-
-
 - **addIngredient\_RecipeChoice** (`Ingredient`)
 
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/ShapelessRecipe.html#addIngredient(org.bukkit.inventory.RecipeChoice)
@@ -57,7 +49,7 @@ Tier: trusted. Do not edit.
 	- **@r** `A` [ShapelessRecipe](ShapelessRecipe.aus.md).
 
 
-- **addIngredient\_int\_ItemStack** (`Count, Item`)
+- **addIngredient\_count\_item** (`Count, Item`)
 
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/ShapelessRecipe.html#addIngredient(int,org.bukkit.inventory.ItemStack)
 
@@ -66,21 +58,12 @@ Tier: trusted. Do not edit.
 	- **@r** `A` [ShapelessRecipe](ShapelessRecipe.aus.md).
 
 
-- **addIngredient\_int\_Material** (`Count, Ingredient`)
+- **addIngredient\_count\_ingredient** (`Count, Ingredient`)
 
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/ShapelessRecipe.html#addIngredient(int,org.bukkit.Material)
 
 	- **@p** `Count` is an int.
 	- **@p** `Ingredient` is a string naming a [Material](Material.aus.md).
-	- **@r** `A` [ShapelessRecipe](ShapelessRecipe.aus.md).
-
-
-- **addIngredient\_int\_MaterialData** (`Count, Ingredient`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/ShapelessRecipe.html#addIngredient(int,org.bukkit.material.MaterialData)
-
-	- **@p** `Count` is an int.
-	- **@p** `Ingredient` is a [MaterialData](MaterialData.aus.md).
 	- **@r** `A` [ShapelessRecipe](ShapelessRecipe.aus.md).
 
 
@@ -152,14 +135,6 @@ Tier: trusted. Do not edit.
 	- **@r** `A` [ShapelessRecipe](ShapelessRecipe.aus.md).
 
 
-- **removeIngredient\_MaterialData** (`Ingredient`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/ShapelessRecipe.html#removeIngredient(org.bukkit.material.MaterialData)
-
-	- **@p** `Ingredient` is a [MaterialData](MaterialData.aus.md).
-	- **@r** `A` [ShapelessRecipe](ShapelessRecipe.aus.md).
-
-
 - **removeIngredient\_RecipeChoice** (`Ingredient`)
 
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/ShapelessRecipe.html#removeIngredient(org.bukkit.inventory.RecipeChoice)
@@ -177,7 +152,7 @@ Tier: trusted. Do not edit.
 	- **@r** `A` [ShapelessRecipe](ShapelessRecipe.aus.md).
 
 
-- **removeIngredient\_int\_ItemStack** (`Count, Item`)
+- **removeIngredient\_count\_item** (`Count, Item`)
 
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/ShapelessRecipe.html#removeIngredient(int,org.bukkit.inventory.ItemStack)
 
@@ -186,21 +161,12 @@ Tier: trusted. Do not edit.
 	- **@r** `A` [ShapelessRecipe](ShapelessRecipe.aus.md).
 
 
-- **removeIngredient\_int\_Material** (`Count, Ingredient`)
+- **removeIngredient\_count\_ingredient** (`Count, Ingredient`)
 
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/ShapelessRecipe.html#removeIngredient(int,org.bukkit.Material)
 
 	- **@p** `Count` is an int.
 	- **@p** `Ingredient` is a string naming a [Material](Material.aus.md).
-	- **@r** `A` [ShapelessRecipe](ShapelessRecipe.aus.md).
-
-
-- **removeIngredient\_int\_MaterialData** (`Count, Ingredient`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/ShapelessRecipe.html#removeIngredient(int,org.bukkit.material.MaterialData)
-
-	- **@p** `Count` is an int.
-	- **@p** `Ingredient` is a [MaterialData](MaterialData.aus.md).
 	- **@r** `A` [ShapelessRecipe](ShapelessRecipe.aus.md).
 
 

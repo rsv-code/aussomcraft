@@ -369,13 +369,6 @@ Tier: trusted. Do not edit.
 	- **@r** `A` [BlockData](BlockData.aus.md).
 
 
-- **getCarriedMaterial** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Enderman.html#getCarriedMaterial()
-
-	- **@r** `A` [MaterialData](MaterialData.aus.md).
-
-
 - **getCategory** ()
 
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Enderman.html#getCategory()
@@ -2093,13 +2086,6 @@ Tier: trusted. Do not edit.
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Enderman.html#setCarriedBlock(org.bukkit.block.data.BlockData)
 
 	- **@p** `BlockData` is a [BlockData](BlockData.aus.md).
-
-
-- **setCarriedMaterial** (`Material`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Enderman.html#setCarriedMaterial(org.bukkit.material.MaterialData)
-
-	- **@p** `Material` is a [MaterialData](MaterialData.aus.md).
 
 
 - **setCollidable** (`Collidable`)

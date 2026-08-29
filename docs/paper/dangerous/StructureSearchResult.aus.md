@@ -24,7 +24,7 @@ Tier: dangerous. Do not edit.
 
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/util/StructureSearchResult.html#getStructure()
 
-	- **@r** `A` [Structure](Structure.aus.md).
+	- **@r** `A` StructureStructure.
 
 
 

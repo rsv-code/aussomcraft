@@ -27,17 +27,15 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 import java.util.logging.Logger;
 
 import com.aussom.LoggingInt;
 import com.aussom.SecurityManagerInt;
-import com.aussom.ast.astClass;
-import com.aussom.ast.astFunctDef;
 
 import com.lehman.aussomcraft.aji.AjiGate;
 import com.lehman.aussomcraft.paper.PaperModules;
 import com.lehman.aussomcraft.profile.Profile;
+import com.lehman.aussomcraft.profile.ScriptPolicy;
 import com.lehman.aussomcraft.trust.TrustStore;
 
 /**
@@ -137,6 +135,20 @@ public class ScriptLoader {
         String hash;
         String source;
         try {
+            // Measured before the read, the way Engine.parseFile does it,
+            // so an oversized script is refused rather than pulled into
+            // memory and then rejected. The engine cannot do it here: the
+            // script is handed to parseString rather than parseFile, because
+            // the bytes that are hashed for the trust grant have to be the
+            // bytes that are parsed, and parseString does not measure what
+            // it is given.
+            long size = Files.size(ScriptPath);
+            if (size > ScriptPolicy.maxSourceBytes()) {
+                this.log.warning("Script '" + name + "' is " + size
+                    + " bytes, over the limit of " + ScriptPolicy.maxSourceBytes()
+                    + ". Not read.");
+                return null;
+            }
             byte[] bytes = Files.readAllBytes(ScriptPath);
             hash = TrustStore.hashOf(bytes);
             source = new String(bytes, StandardCharsets.UTF_8);
@@ -162,12 +174,18 @@ public class ScriptLoader {
 
         host.setLogger(new ScriptLogger(this.log, name));
 
-        // Modules are registered one at a time rather than through a shared
-        // resource include path. A shared path would make aji.aus findable
-        // on an untrusted engine, and the point is that it is not there.
-        host.addModule("craft.aus", module("craft.aus"));
-        if (profile == Profile.DANGEROUS) {
-            host.addModule("aji.aus", module("aji.aus"));
+        // Where this engine may look for Aussom source. Both paths are
+        // decided in IncludePaths so there is one place to read them.
+        //
+        // The resource path points at this tier's own directory inside the
+        // jar, so it is the tier boundary rather than a check on top of one:
+        // another tier's directory is not below it, and an include cannot
+        // climb out of it.
+        host.addResourceIncludePath(IncludePaths.paperResource(profile));
+        host.addResourceIncludePath(IncludePaths.hostResource());
+        Path cwd = IncludePaths.scriptDir(profile, ScriptPath);
+        if (cwd != null) {
+            host.addIncludePath(cwd.toString());
         }
 
         // The generated Paper API for this tier. Registering is cheap; only
@@ -188,12 +206,16 @@ public class ScriptLoader {
         }
 
         try {
-            // Both modules are included for the script rather than left to
-            // it. craft.aus is the base API, and aji.aus has to be defined on
-            // a trusted engine whether the script asked for it or not,
+            // Both are included for the script rather than left to it.
+            // craft.aus is the base API, and aji.aus has to be defined on a
+            // dangerous engine whether the script asked for it or not,
             // because the host wraps Java objects with AussomJavaObject
             // before the script ever sees them. A script may still write
             // 'include aji;' and it costs nothing: addInclude is idempotent.
+            //
+            // Both resolve through the include paths above. aji.aus sits in
+            // the dangerous tier's own directory, so no other tier has a
+            // path that reaches it.
             host.addInclude("craft.aus");
             if (profile == Profile.DANGEROUS) {
                 host.addInclude("aji.aus");
@@ -201,20 +223,6 @@ public class ScriptLoader {
             host.parseString(ScriptPath.toString(), source);
             if (host.hasParseErrors()) {
                 this.log.warning("Script '" + name + "' has parse errors and was not run.");
-                return null;
-            }
-
-            // Checked after parsing, because that is when the script's own
-            // classes exist, and before running, because main registers the
-            // handlers that would receive the hijacked shims.
-            String stolen = this.shimCollision(host, profile.getId());
-            if (stolen != null) {
-                this.log.warning("Script '" + name + "' declares a class named '"
-                    + stolen + "', which is a generated Paper shim. The host attaches"
-                    + " live server objects to shim classes by name, so this would"
-                    + " hand the script an API its tier does not grant. Not run."
-                    + " Rename the class.");
-                ctx.unregisterAll();
                 return null;
             }
 
@@ -257,55 +265,6 @@ public class ScriptLoader {
         return ctx;
     }
 
-    /**
-     * Whether the script has taken over the name of a generated shim.
-     *
-     * Shim classes live in one flat namespace under their simple name, and
-     * the host wraps a Java object by asking the engine for that name. A
-     * script parsed after the modules were installed can define its own
-     * class under the same name, and then the host itself attaches a real
-     * Player to a class the script wrote, with whatever methods the script
-     * chose to declare. That is a full tier bypass, so it is refused rather
-     * than resolved.
-     *
-     * The comparison is against the methods the tier's module declares, not
-     * against where the class came from. The interpreter does not record a
-     * class's origin, and the method set is the stronger test anyway: it
-     * fails a class carrying anything the tier did not grant, whatever route
-     * defined it.
-     *
-     * @param Eng is the parsed engine.
-     * @param Tier is the tier id, which names the module directory.
-     * @return The stolen name, or null when nothing was taken.
-     */
-    private String shimCollision(ScriptEngineHost Eng, String Tier) {
-        for (String type : PaperModules.allTypeNames()) {
-            if (!Eng.containsClass(type)) {
-                continue;
-            }
-            astClass def = Eng.getClassByName(type);
-            if (def == null) {
-                continue;
-            }
-            Set<String> granted = PaperModules.allowedMethods(Tier, type);
-            if (granted == null) {
-                // This tier has no module for the type, so nothing legitimate
-                // can have defined a class under that name.
-                return type;
-            }
-            List<astFunctDef> have = def.getAllFunctions();
-            if (have == null) {
-                continue;
-            }
-            for (astFunctDef f : have) {
-                if (!granted.contains(f.getName())) {
-                    return type;
-                }
-            }
-        }
-        return null;
-    }
-
     /** Reports allowlist entries that will never match, since a silent denial is hard to debug. */
     private void warnOnUnresolvableAllowlist(String Name, SecurityManagerInt Policy) {
         for (String miss : AjiGate.unresolvable(Policy)) {
@@ -337,26 +296,6 @@ public class ScriptLoader {
         return "";
     }
 
-    /**
-     * The Aussom source of a host module, read from this jar.
-     *
-     * @param Name is the module file name, such as craft.aus.
-     * @return A String with its source, or an empty one when it is missing.
-     */
-    private String module(String Name) {
-        String path = "/com/lehman/aussomcraft/aus/" + Name;
-        try (InputStream in = ScriptLoader.class.getResourceAsStream(path)) {
-            if (in == null) {
-                this.log.severe("Missing bundled module '" + Name + "'.");
-                return "";
-            }
-            return new String(in.readAllBytes(), StandardCharsets.UTF_8);
-        } catch (IOException e) {
-            this.log.severe("Could not read bundled module '" + Name + "': "
-                + e.getMessage());
-            return "";
-        }
-    }
 
     /**
      * Routes a script engine's output to the server log, tagged with the script

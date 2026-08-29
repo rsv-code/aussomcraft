@@ -19,6 +19,8 @@ package com.lehman.aussomcraft.host;
 import java.util.ArrayList;
 import java.util.List;
 
+import java.util.Map;
+
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -114,15 +116,35 @@ public class HostCommands {
 
         // The script name is the fallback prefix, so two scripts registering
         // the same command still both work as /script:name.
-        boolean ok = Bukkit.getCommandMap().register(prefix, cmd);
+        boolean bare = Bukkit.getCommandMap().register(prefix, cmd);
         ctx.addCommand(cmd);
-        // Recorded so an operator reading a script can see what it took.
-        String how = "";
-        if (!ok) {
-            how = " (as /" + prefix + ":" + cmdName + "; the bare name was taken)";
+
+        // Untrusted never holds a bare name.
+        //
+        // Load ordering settles a name somebody already owns. It says
+        // nothing about a free one, and a free name is a way to be handed
+        // what players type: a script can register /verify or /support on a
+        // server that has neither, tell people to use it, and read the
+        // argument. The protected list cannot enumerate every plausible
+        // name, so the tier decides instead of the name.
+        //
+        // Removed by identity rather than by key, so a name another plugin
+        // owns is never touched.
+        if (ctx.getProfile() == Profile.UNTRUSTED && bare) {
+            Map<String, Command> known = Bukkit.getCommandMap().getKnownCommands();
+            if (known.get(cmdName) == cmd) {
+                known.remove(cmdName);
+            }
+            bare = false;
         }
-        plugin.getLogger().info("'" + ctx.getName() + "' registered /" + cmdName + how);
-        return new AussomBool(ok);
+
+        // Recorded so an operator reading a script can see what it took.
+        String as = "/" + cmdName;
+        if (!bare) {
+            as = "/" + prefix + ":" + cmdName;
+        }
+        plugin.getLogger().info("'" + ctx.getName() + "' registered " + as);
+        return new AussomBool(bare);
     }
 
     /**

@@ -2,12 +2,11 @@
 
 ## class: Cocoa
 
-[20:14] (extern: com.lehman.aussomcraft.paper.gen.dangerous.CocoaShim) **extends: object** 
+[19:14] (extern: com.lehman.aussomcraft.paper.gen.dangerous.CocoaShim) **extends: object** 
 
 Generated shim for org.bukkit.block.data.type.Cocoa.
 Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Cocoa.html
-In Paper this is a [Ageable](Ageable.aus.md) and
-[Directional](Directional.aus.md).
+In Paper this is a [Directional](Directional.aus.md).
 Every method it inherits is declared here too, so there is
 nothing to follow up to.
 Tier: dangerous. Do not edit.

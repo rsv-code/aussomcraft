@@ -90,15 +90,6 @@ Tier: trusted. Do not edit.
 	- **@r** `A` [ShapedRecipe](ShapedRecipe.aus.md).
 
 
-- **setIngredient\_char\_MaterialData** (`Key, Ingredient`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/ShapedRecipe.html#setIngredient(char,org.bukkit.material.MaterialData)
-
-	- **@p** `Key` is an int.
-	- **@p** `Ingredient` is a [MaterialData](MaterialData.aus.md).
-	- **@r** `A` [ShapedRecipe](ShapedRecipe.aus.md).
-
-
 - **setIngredient\_char\_RecipeChoice** (`Key, Ingredient`)
 
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/ShapedRecipe.html#setIngredient(char,org.bukkit.inventory.RecipeChoice)

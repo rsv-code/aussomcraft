@@ -129,7 +129,7 @@ Tier: dangerous. Do not edit.
 
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/Material.html#getItemRarity()
 
-	- **@r** `An` string naming an [ItemRarity](ItemRarity.aus.md).
+	- **@r** `A` string naming an InventoryItemRarity.
 
 
 - **getItemTranslationKey** ()
@@ -175,14 +175,6 @@ Tier: dangerous. Do not edit.
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/Material.html#getMaxStackSize()
 
 	- **@r** `An` int.
-
-
-- **getNewData** (`Raw`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/Material.html#getNewData(byte)
-
-	- **@p** `Raw` is an int.
-	- **@r** `A` [MaterialData](MaterialData.aus.md).
 
 
 - **getSlipperiness** ()

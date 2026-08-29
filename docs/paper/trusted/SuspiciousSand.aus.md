@@ -58,13 +58,6 @@ Tier: trusted. Do not edit.
 	- **@r** `A` [Chunk](Chunk.aus.md).
 
 
-- **getData** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/SuspiciousSand.html#getData()
-
-	- **@r** `A` [MaterialData](MaterialData.aus.md).
-
-
 - **getDrops** ()
 
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/SuspiciousSand.html#getDrops()
@@ -237,13 +230,6 @@ Tier: trusted. Do not edit.
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/SuspiciousSand.html#setBlockData(org.bukkit.block.data.BlockData)
 
 	- **@p** `Data` is a [BlockData](BlockData.aus.md).
-
-
-- **setData** (`Data`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/SuspiciousSand.html#setData(org.bukkit.material.MaterialData)
-
-	- **@p** `Data` is a [MaterialData](MaterialData.aus.md).
 
 
 - **setItem** (`Item`)

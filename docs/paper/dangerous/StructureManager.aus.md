@@ -17,15 +17,15 @@ Tier: dangerous. Do not edit.
 
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/structure/StructureManager.html#copy(org.bukkit.structure.Structure)
 
-	- **@p** `Structure` is a [Structure](Structure.aus.md).
-	- **@r** `A` [Structure](Structure.aus.md).
+	- **@p** `Structure` is a BukkitStructureStructure.
+	- **@r** `A` BukkitStructureStructure.
 
 
 - **createStructure** ()
 
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/structure/StructureManager.html#createStructure()
 
-	- **@r** `A` [Structure](Structure.aus.md).
+	- **@r** `A` BukkitStructureStructure.
 
 
 - **deleteStructure** (`StructureKey`)
@@ -48,7 +48,7 @@ Tier: dangerous. Do not edit.
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/structure/StructureManager.html#getStructure(org.bukkit.NamespacedKey)
 
 	- **@p** `StructureKey` is a [NamespacedKey](NamespacedKey.aus.md).
-	- **@r** `A` [Structure](Structure.aus.md).
+	- **@r** `A` BukkitStructureStructure.
 
 
 - **getStructures** ()
@@ -63,7 +63,7 @@ Tier: dangerous. Do not edit.
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/structure/StructureManager.html#loadStructure(org.bukkit.NamespacedKey)
 
 	- **@p** `StructureKey` is a [NamespacedKey](NamespacedKey.aus.md).
-	- **@r** `A` [Structure](Structure.aus.md).
+	- **@r** `A` BukkitStructureStructure.
 
 
 - **loadStructure** (`StructureKey, Register`)
@@ -72,7 +72,7 @@ Tier: dangerous. Do not edit.
 
 	- **@p** `StructureKey` is a [NamespacedKey](NamespacedKey.aus.md).
 	- **@p** `Register` is a bool.
-	- **@r** `A` [Structure](Structure.aus.md).
+	- **@r** `A` BukkitStructureStructure.
 
 
 - **registerStructure** (`StructureKey, Structure`)
@@ -80,8 +80,8 @@ Tier: dangerous. Do not edit.
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/structure/StructureManager.html#registerStructure(org.bukkit.NamespacedKey,org.bukkit.structure.Structure)
 
 	- **@p** `StructureKey` is a [NamespacedKey](NamespacedKey.aus.md).
-	- **@p** `Structure` is a [Structure](Structure.aus.md).
-	- **@r** `A` [Structure](Structure.aus.md).
+	- **@p** `Structure` is a BukkitStructureStructure.
+	- **@r** `A` BukkitStructureStructure.
 
 
 - **saveStructure** (`StructureKey`)
@@ -96,7 +96,7 @@ Tier: dangerous. Do not edit.
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/structure/StructureManager.html#saveStructure(org.bukkit.NamespacedKey,org.bukkit.structure.Structure)
 
 	- **@p** `StructureKey` is a [NamespacedKey](NamespacedKey.aus.md).
-	- **@p** `Structure` is a [Structure](Structure.aus.md).
+	- **@p** `Structure` is a BukkitStructureStructure.
 
 
 - **unregisterStructure** (`StructureKey`)
@@ -104,7 +104,7 @@ Tier: dangerous. Do not edit.
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/structure/StructureManager.html#unregisterStructure(org.bukkit.NamespacedKey)
 
 	- **@p** `StructureKey` is a [NamespacedKey](NamespacedKey.aus.md).
-	- **@r** `A` [Structure](Structure.aus.md).
+	- **@r** `A` BukkitStructureStructure.
 
 
 

@@ -211,13 +211,6 @@ extern class ItemStack : com.lehman.aussomcraft.paper.gen.trusted.ItemStackShim 
     public extern equals(Obj);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/ItemStack.html#getData()
-     *
-     * @r A [MaterialData](MaterialData.aus.md).
-     */
-    public extern getData();
-
-    /**
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/ItemStack.html#getData(io.papermc.paper.datacomponent.DataComponentType.Valued)
      *
      * @p Type is a DataComponentType.Valued.
@@ -310,7 +303,7 @@ extern class ItemStack : com.lehman.aussomcraft.paper.gen.trusted.ItemStackShim 
     /**
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/ItemStack.html#getRarity()
      *
-     * @r An string naming an [ItemRarity](ItemRarity.aus.md).
+     * @r A string naming an InventoryItemRarity.
      */
     public extern getRarity();
 

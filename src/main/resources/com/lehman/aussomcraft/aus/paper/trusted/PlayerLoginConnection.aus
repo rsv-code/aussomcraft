@@ -30,14 +30,14 @@ extern class PlayerLoginConnection : com.lehman.aussomcraft.paper.gen.trusted.Pl
     /**
      * Paper: https://jd.papermc.io/paper/1.21.10/io/papermc/paper/connection/PlayerLoginConnection.html#getAuthenticatedProfile()
      *
-     * @r A [PlayerProfile](PlayerProfile.aus.md).
+     * @r A ProfilePlayerProfile.
      */
     public extern getAuthenticatedProfile();
 
     /**
      * Paper: https://jd.papermc.io/paper/1.21.10/io/papermc/paper/connection/PlayerLoginConnection.html#getUnsafeProfile()
      *
-     * @r A [PlayerProfile](PlayerProfile.aus.md).
+     * @r A ProfilePlayerProfile.
      */
     public extern getUnsafeProfile();
 

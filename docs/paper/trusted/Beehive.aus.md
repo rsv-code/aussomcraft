@@ -2,11 +2,12 @@
 
 ## class: Beehive
 
-[19:14] (extern: com.lehman.aussomcraft.paper.gen.trusted.BeehiveShim) **extends: object** 
+[20:14] (extern: com.lehman.aussomcraft.paper.gen.trusted.BeehiveShim) **extends: object** 
 
-Generated shim for org.bukkit.block.data.type.Beehive.
-Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html
-In Paper this is a [Directional](Directional.aus.md).
+Generated shim for org.bukkit.block.Beehive.
+Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html
+In Paper this is a
+[EntityBlockStorage](EntityBlockStorage.aus.md).
 Every method it inherits is declared here too, so there is
 nothing to follow up to.
 Tier: trusted. Do not edit.
@@ -16,240 +17,301 @@ Tier: trusted. Do not edit.
 - **\_\_opEq\_\_** (`A0`)
 
 
-- **clone** ()
+- **addEntity** (`Entity`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#clone()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#addEntity(org.bukkit.entity.Entity)
 
-	- **@r** `A` [BlockData](BlockData.aus.md).
-
-
-- **copyTo** (`Other`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#copyTo(org.bukkit.block.data.BlockData)
-
-	- **@p** `Other` is a [BlockData](BlockData.aus.md).
+	- **@p** `Entity` is an [Entity](Entity.aus.md).
 
 
-- **createBlockState** ()
+- **clearEntities** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#createBlockState()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#clearEntities()
+
+
+
+- **copy** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#copy()
 
 	- **@r** `A` [BlockState](BlockState.aus.md).
 
 
-- **getAsString** ()
+- **copy** (`Location`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#getAsString()
-
-	- **@r** `A` string.
-
-
-- **getAsString** (`HideUnspecified`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#getAsString(boolean)
-
-	- **@p** `HideUnspecified` is a bool.
-	- **@r** `A` string.
-
-
-- **getCollisionShape** (`Location`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#getCollisionShape(org.bukkit.Location)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#copy(org.bukkit.Location)
 
 	- **@p** `Location` is a [Location](Location.aus.md).
-	- **@r** `A` [VoxelShape](VoxelShape.aus.md).
+	- **@r** `A` [BlockState](BlockState.aus.md).
 
 
-- **getDestroySpeed** (`ItemStack`)
+- **getBlock** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#getDestroySpeed(org.bukkit.inventory.ItemStack)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#getBlock()
 
-	- **@p** `ItemStack` is an [ItemStack](ItemStack.aus.md).
-	- **@r** `A` double.
-
-
-- **getDestroySpeed** (`ItemStack, ConsiderEnchants`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#getDestroySpeed(org.bukkit.inventory.ItemStack,boolean)
-
-	- **@p** `ItemStack` is an [ItemStack](ItemStack.aus.md).
-	- **@p** `ConsiderEnchants` is a bool.
-	- **@r** `A` double.
+	- **@r** `A` [Block](Block.aus.md).
 
 
-- **getFaces** ()
+- **getBlockData** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#getFaces()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#getBlockData()
+
+	- **@r** `A` [BlockData](BlockData.aus.md).
+
+
+- **getChunk** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#getChunk()
+
+	- **@r** `A` [Chunk](Chunk.aus.md).
+
+
+- **getDrops** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#getDrops()
 
 	- **@r** `A` list.
 
 
-- **getFacing** ()
+- **getDrops** (`Tool`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#getFacing()
-
-	- **@r** `A` string naming a [BlockFace](BlockFace.aus.md).
-
-
-- **getHoneyLevel** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#getHoneyLevel()
-
-	- **@r** `An` int.
-
-
-- **getLightEmission** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#getLightEmission()
-
-	- **@r** `An` int.
-
-
-- **getMapColor** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#getMapColor()
-
-	- **@r** `A` [Color](Color.aus.md).
-
-
-- **getMaterial** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#getMaterial()
-
-	- **@r** `A` string naming a [Material](Material.aus.md).
-
-
-- **getMaximumHoneyLevel** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#getMaximumHoneyLevel()
-
-	- **@r** `An` int.
-
-
-- **getPistonMoveReaction** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#getPistonMoveReaction()
-
-	- **@r** `A` string naming a [PistonMoveReaction](PistonMoveReaction.aus.md).
-
-
-- **getPlacementMaterial** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#getPlacementMaterial()
-
-	- **@r** `A` string naming a [Material](Material.aus.md).
-
-
-- **getSoundGroup** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#getSoundGroup()
-
-	- **@r** `A` [SoundGroup](SoundGroup.aus.md).
-
-
-- **isFaceSturdy** (`Face, Support`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#isFaceSturdy(org.bukkit.block.BlockFace,org.bukkit.block.BlockSupport)
-
-	- **@p** `Face` is a string naming a [BlockFace](BlockFace.aus.md).
-	- **@p** `Support` is a string naming a [BlockSupport](BlockSupport.aus.md).
-	- **@r** `A` bool.
-
-
-- **isOccluding** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#isOccluding()
-
-	- **@r** `A` bool.
-
-
-- **isPreferredTool** (`Tool`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#isPreferredTool(org.bukkit.inventory.ItemStack)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#getDrops(org.bukkit.inventory.ItemStack)
 
 	- **@p** `Tool` is an [ItemStack](ItemStack.aus.md).
+	- **@r** `A` list.
+
+
+- **getDrops** (`Tool, Entity`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#getDrops(org.bukkit.inventory.ItemStack,org.bukkit.entity.Entity)
+
+	- **@p** `Tool` is an [ItemStack](ItemStack.aus.md).
+	- **@p** `Entity` is an [Entity](Entity.aus.md).
+	- **@r** `A` list.
+
+
+- **getEntityCount** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#getEntityCount()
+
+	- **@r** `An` int.
+
+
+- **getFlower** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#getFlower()
+
+	- **@r** `A` [Location](Location.aus.md).
+
+
+- **getLightLevel** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#getLightLevel()
+
+	- **@r** `An` int.
+
+
+- **getLocation** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#getLocation()
+
+	- **@r** `A` [Location](Location.aus.md).
+
+
+- **getLocation** (`Loc`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#getLocation(org.bukkit.Location)
+
+	- **@p** `Loc` is a [Location](Location.aus.md).
+	- **@r** `A` [Location](Location.aus.md).
+
+
+- **getMaxEntities** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#getMaxEntities()
+
+	- **@r** `An` int.
+
+
+- **getMetadata** (`MetadataKey`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#getMetadata(java.lang.String)
+
+	- **@p** `MetadataKey` is a string.
+	- **@r** `A` list.
+
+
+- **getPersistentDataContainer** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#getPersistentDataContainer()
+
+	- **@r** `A` [PersistentDataContainer](PersistentDataContainer.aus.md).
+
+
+- **getRawData** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#getRawData()
+
+	- **@r** `An` int.
+
+
+- **getType** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#getType()
+
+	- **@r** `A` string naming a [Material](Material.aus.md).
+
+
+- **getWorld** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#getWorld()
+
+	- **@r** `A` [World](World.aus.md).
+
+
+- **getX** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#getX()
+
+	- **@r** `An` int.
+
+
+- **getY** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#getY()
+
+	- **@r** `An` int.
+
+
+- **getZ** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#getZ()
+
+	- **@r** `An` int.
+
+
+- **hasMetadata** (`MetadataKey`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#hasMetadata(java.lang.String)
+
+	- **@p** `MetadataKey` is a string.
 	- **@r** `A` bool.
 
 
-- **isRandomlyTicked** ()
+- **isCollidable** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#isRandomlyTicked()
-
-	- **@r** `A` bool.
-
-
-- **isReplaceable** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#isReplaceable()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#isCollidable()
 
 	- **@r** `A` bool.
 
 
-- **isSupported** (`Block`)
+- **isFull** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#isSupported(org.bukkit.block.Block)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#isFull()
 
-	- **@p** `Block` is a [Block](Block.aus.md).
 	- **@r** `A` bool.
 
 
-- **isSupported\_location** (`Location`)
+- **isPlaced** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#isSupported(org.bukkit.Location)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#isPlaced()
+
+	- **@r** `A` bool.
+
+
+- **isSedated** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#isSedated()
+
+	- **@r** `A` bool.
+
+
+- **isSnapshot** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#isSnapshot()
+
+	- **@r** `A` bool.
+
+
+- **isSuffocating** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#isSuffocating()
+
+	- **@r** `A` bool.
+
+
+- **releaseEntities** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#releaseEntities()
+
+	- **@r** `A` list.
+
+
+- **setBlockData** (`Data`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#setBlockData(org.bukkit.block.data.BlockData)
+
+	- **@p** `Data` is a [BlockData](BlockData.aus.md).
+
+
+- **setFlower** (`Location`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#setFlower(org.bukkit.Location)
 
 	- **@p** `Location` is a [Location](Location.aus.md).
+
+
+- **setMaxEntities** (`Max`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#setMaxEntities(int)
+
+	- **@p** `Max` is an int.
+
+
+- **setMetadata** (`MetadataKey, NewMetadataValue`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#setMetadata(java.lang.String,org.bukkit.metadata.MetadataValue)
+
+	- **@p** `MetadataKey` is a string.
+	- **@p** `NewMetadataValue` is a [MetadataValue](MetadataValue.aus.md).
+
+
+- **setRawData** (`Data`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#setRawData(byte)
+
+	- **@p** `Data` is an int.
+
+
+- **setType** (`Type`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#setType(org.bukkit.Material)
+
+	- **@p** `Type` is a string naming a [Material](Material.aus.md).
+
+
+- **update** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#update()
+
 	- **@r** `A` bool.
 
 
-- **matches** (`Data`)
+- **update** (`Force`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#matches(org.bukkit.block.data.BlockData)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#update(boolean)
 
-	- **@p** `Data` is a [BlockData](BlockData.aus.md).
+	- **@p** `Force` is a bool.
 	- **@r** `A` bool.
 
 
-- **merge** (`Data`)
+- **update** (`Force, ApplyPhysics`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#merge(org.bukkit.block.data.BlockData)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#update(boolean,boolean)
 
-	- **@p** `Data` is a [BlockData](BlockData.aus.md).
-	- **@r** `A` [BlockData](BlockData.aus.md).
-
-
-- **mirror** (`Mirror`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#mirror(org.bukkit.block.structure.Mirror)
-
-	- **@p** `Mirror` is a string naming a [Mirror](Mirror.aus.md).
-
-
-- **requiresCorrectToolForDrops** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#requiresCorrectToolForDrops()
-
+	- **@p** `Force` is a bool.
+	- **@p** `ApplyPhysics` is a bool.
 	- **@r** `A` bool.
-
-
-- **rotate** (`Rotation`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#rotate(org.bukkit.block.structure.StructureRotation)
-
-	- **@p** `Rotation` is a string naming a [StructureRotation](StructureRotation.aus.md).
-
-
-- **setFacing** (`Facing`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#setFacing(org.bukkit.block.BlockFace)
-
-	- **@p** `Facing` is a string naming a [BlockFace](BlockFace.aus.md).
-
-
-- **setHoneyLevel** (`HoneyLevel`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#setHoneyLevel(int)
-
-	- **@p** `HoneyLevel` is an int.
 
 
 

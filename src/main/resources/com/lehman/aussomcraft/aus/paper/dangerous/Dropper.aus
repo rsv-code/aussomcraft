@@ -96,13 +96,6 @@ extern class Dropper : com.lehman.aussomcraft.paper.gen.dangerous.DropperShim {
     public extern getCustomName();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Dropper.html#getData()
-     *
-     * @r A [MaterialData](MaterialData.aus.md).
-     */
-    public extern getData();
-
-    /**
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Dropper.html#getDrops()
      *
      * @r A list.
@@ -370,13 +363,6 @@ extern class Dropper : com.lehman.aussomcraft.paper.gen.dangerous.DropperShim {
      * @p Name is a string.
      */
     public extern setCustomName(Name);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Dropper.html#setData(org.bukkit.material.MaterialData)
-     *
-     * @p Data is a [MaterialData](MaterialData.aus.md).
-     */
-    public extern setData(Data);
 
     /**
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Dropper.html#setHasPlayerLooted(org.bukkit.entity.Player,boolean)

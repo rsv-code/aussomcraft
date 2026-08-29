@@ -2,13 +2,11 @@
 
 ## class: Comparator
 
-[21:14] (extern: com.lehman.aussomcraft.paper.gen.dangerous.ComparatorShim) **extends: object** 
+[19:14] (extern: com.lehman.aussomcraft.paper.gen.dangerous.ComparatorShim) **extends: object** 
 
-Generated shim for org.bukkit.material.Comparator.
-Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Comparator.html
-In Paper this is a [Directional](Directional.aus.md),
-[Redstone](Redstone.aus.md) and
-[MaterialData](MaterialData.aus.md).
+Generated shim for org.bukkit.block.Comparator.
+Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html
+In Paper this is a [TileState](TileState.aus.md).
 Every method it inherits is declared here too, so there is
 nothing to follow up to.
 Tier: dangerous. Do not edit.
@@ -18,111 +16,240 @@ Tier: dangerous. Do not edit.
 - **\_\_opEq\_\_** (`A0`)
 
 
-- **clone** ()
+- **copy** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Comparator.html#clone()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#copy()
 
-	- **@r** `A` [Comparator](Comparator.aus.md).
-
-
-- **equals** (`Obj`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Comparator.html#equals(java.lang.Object)
-
-	- **@p** `Obj` is an Object.
-	- **@r** `A` bool.
+	- **@r** `A` [BlockState](BlockState.aus.md).
 
 
-- **getData** ()
+- **copy** (`Location`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Comparator.html#getData()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#copy(org.bukkit.Location)
+
+	- **@p** `Location` is a [Location](Location.aus.md).
+	- **@r** `A` [BlockState](BlockState.aus.md).
+
+
+- **getBlock** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#getBlock()
+
+	- **@r** `A` [Block](Block.aus.md).
+
+
+- **getBlockData** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#getBlockData()
+
+	- **@r** `A` [BlockData](BlockData.aus.md).
+
+
+- **getChunk** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#getChunk()
+
+	- **@r** `A` [Chunk](Chunk.aus.md).
+
+
+- **getDrops** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#getDrops()
+
+	- **@r** `A` list.
+
+
+- **getDrops** (`Tool`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#getDrops(org.bukkit.inventory.ItemStack)
+
+	- **@p** `Tool` is an [ItemStack](ItemStack.aus.md).
+	- **@r** `A` list.
+
+
+- **getDrops** (`Tool, Entity`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#getDrops(org.bukkit.inventory.ItemStack,org.bukkit.entity.Entity)
+
+	- **@p** `Tool` is an [ItemStack](ItemStack.aus.md).
+	- **@p** `Entity` is an [Entity](Entity.aus.md).
+	- **@r** `A` list.
+
+
+- **getLightLevel** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#getLightLevel()
 
 	- **@r** `An` int.
 
 
-- **getFacing** ()
+- **getLocation** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Comparator.html#getFacing()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#getLocation()
 
-	- **@r** `A` string naming a [BlockFace](BlockFace.aus.md).
+	- **@r** `A` [Location](Location.aus.md).
 
 
-- **getItemType** ()
+- **getLocation** (`Loc`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Comparator.html#getItemType()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#getLocation(org.bukkit.Location)
+
+	- **@p** `Loc` is a [Location](Location.aus.md).
+	- **@r** `A` [Location](Location.aus.md).
+
+
+- **getMetadata** (`MetadataKey`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#getMetadata(java.lang.String)
+
+	- **@p** `MetadataKey` is a string.
+	- **@r** `A` list.
+
+
+- **getPersistentDataContainer** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#getPersistentDataContainer()
+
+	- **@r** `A` [PersistentDataContainer](PersistentDataContainer.aus.md).
+
+
+- **getRawData** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#getRawData()
+
+	- **@r** `An` int.
+
+
+- **getType** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#getType()
 
 	- **@r** `A` string naming a [Material](Material.aus.md).
 
 
-- **hashCode** ()
+- **getWorld** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Comparator.html#hashCode()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#getWorld()
+
+	- **@r** `A` [World](World.aus.md).
+
+
+- **getX** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#getX()
 
 	- **@r** `An` int.
 
 
-- **isBeingPowered** ()
+- **getY** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Comparator.html#isBeingPowered()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#getY()
+
+	- **@r** `An` int.
+
+
+- **getZ** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#getZ()
+
+	- **@r** `An` int.
+
+
+- **hasMetadata** (`MetadataKey`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#hasMetadata(java.lang.String)
+
+	- **@p** `MetadataKey` is a string.
+	- **@r** `A` bool.
+
+
+- **isCollidable** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#isCollidable()
 
 	- **@r** `A` bool.
 
 
-- **isPowered** ()
+- **isPlaced** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Comparator.html#isPowered()
-
-	- **@r** `A` bool.
-
-
-- **isSubtractionMode** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Comparator.html#isSubtractionMode()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#isPlaced()
 
 	- **@r** `A` bool.
 
 
-- **setData** (`Data`)
+- **isSnapshot** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Comparator.html#setData(byte)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#isSnapshot()
+
+	- **@r** `A` bool.
+
+
+- **isSuffocating** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#isSuffocating()
+
+	- **@r** `A` bool.
+
+
+- **setBlockData** (`Data`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#setBlockData(org.bukkit.block.data.BlockData)
+
+	- **@p** `Data` is a [BlockData](BlockData.aus.md).
+
+
+- **setMetadata** (`MetadataKey, NewMetadataValue`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#setMetadata(java.lang.String,org.bukkit.metadata.MetadataValue)
+
+	- **@p** `MetadataKey` is a string.
+	- **@p** `NewMetadataValue` is a [MetadataValue](MetadataValue.aus.md).
+
+
+- **setRawData** (`Data`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#setRawData(byte)
 
 	- **@p** `Data` is an int.
 
 
-- **setFacingDirection** (`Face`)
+- **setType** (`Type`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Comparator.html#setFacingDirection(org.bukkit.block.BlockFace)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#setType(org.bukkit.Material)
 
-	- **@p** `Face` is a string naming a [BlockFace](BlockFace.aus.md).
-
-
-- **setSubtractionMode** (`IsSubtraction`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Comparator.html#setSubtractionMode(boolean)
-
-	- **@p** `IsSubtraction` is a bool.
+	- **@p** `Type` is a string naming a [Material](Material.aus.md).
 
 
-- **toItemStack** ()
+- **update** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Comparator.html#toItemStack()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#update()
 
-	- **@r** `An` [ItemStack](ItemStack.aus.md).
-
-
-- **toItemStack** (`Amount`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Comparator.html#toItemStack(int)
-
-	- **@p** `Amount` is an int.
-	- **@r** `An` [ItemStack](ItemStack.aus.md).
+	- **@r** `A` bool.
 
 
-- **toString** ()
+- **update** (`Force`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Comparator.html#toString()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#update(boolean)
 
-	- **@r** `A` string.
+	- **@p** `Force` is a bool.
+	- **@r** `A` bool.
+
+
+- **update** (`Force, ApplyPhysics`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#update(boolean,boolean)
+
+	- **@p** `Force` is a bool.
+	- **@p** `ApplyPhysics` is a bool.
+	- **@r** `A` bool.
+
+
+- **removeMetadata** (`MetadataKey, OwningPlugin`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#removeMetadata(java.lang.String,org.bukkit.plugin.Plugin)
+
+	- **@p** `MetadataKey` is a string.
+	- **@p** `OwningPlugin` is a [Plugin](Plugin.aus.md).
 
 
 

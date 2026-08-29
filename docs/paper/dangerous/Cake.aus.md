@@ -4,9 +4,9 @@
 
 [19:14] (extern: com.lehman.aussomcraft.paper.gen.dangerous.CakeShim) **extends: object** 
 
-Generated shim for org.bukkit.material.Cake.
-Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Cake.html
-In Paper this is a [MaterialData](MaterialData.aus.md).
+Generated shim for org.bukkit.block.data.type.Cake.
+Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Cake.html
+In Paper this is a [BlockData](BlockData.aus.md).
 Every method it inherits is declared here too, so there is
 nothing to follow up to.
 Tier: dangerous. Do not edit.
@@ -18,95 +18,217 @@ Tier: dangerous. Do not edit.
 
 - **clone** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Cake.html#clone()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Cake.html#clone()
 
-	- **@r** `A` [Cake](Cake.aus.md).
-
-
-- **equals** (`Obj`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Cake.html#equals(java.lang.Object)
-
-	- **@p** `Obj` is an Object.
-	- **@r** `A` bool.
+	- **@r** `A` [BlockData](BlockData.aus.md).
 
 
-- **getData** ()
+- **copyTo** (`Other`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Cake.html#getData()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Cake.html#copyTo(org.bukkit.block.data.BlockData)
+
+	- **@p** `Other` is a [BlockData](BlockData.aus.md).
+
+
+- **createBlockState** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Cake.html#createBlockState()
+
+	- **@r** `A` [BlockState](BlockState.aus.md).
+
+
+- **getAsString** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Cake.html#getAsString()
+
+	- **@r** `A` string.
+
+
+- **getAsString** (`HideUnspecified`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Cake.html#getAsString(boolean)
+
+	- **@p** `HideUnspecified` is a bool.
+	- **@r** `A` string.
+
+
+- **getBites** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Cake.html#getBites()
 
 	- **@r** `An` int.
 
 
-- **getItemType** ()
+- **getCollisionShape** (`Location`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Cake.html#getItemType()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Cake.html#getCollisionShape(org.bukkit.Location)
+
+	- **@p** `Location` is a [Location](Location.aus.md).
+	- **@r** `A` [VoxelShape](VoxelShape.aus.md).
+
+
+- **getDestroySpeed** (`ItemStack`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Cake.html#getDestroySpeed(org.bukkit.inventory.ItemStack)
+
+	- **@p** `ItemStack` is an [ItemStack](ItemStack.aus.md).
+	- **@r** `A` double.
+
+
+- **getDestroySpeed** (`ItemStack, ConsiderEnchants`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Cake.html#getDestroySpeed(org.bukkit.inventory.ItemStack,boolean)
+
+	- **@p** `ItemStack` is an [ItemStack](ItemStack.aus.md).
+	- **@p** `ConsiderEnchants` is a bool.
+	- **@r** `A` double.
+
+
+- **getLightEmission** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Cake.html#getLightEmission()
+
+	- **@r** `An` int.
+
+
+- **getMapColor** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Cake.html#getMapColor()
+
+	- **@r** `A` [Color](Color.aus.md).
+
+
+- **getMaterial** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Cake.html#getMaterial()
 
 	- **@r** `A` string naming a [Material](Material.aus.md).
 
 
-- **getSlicesEaten** ()
+- **getMaximumBites** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Cake.html#getSlicesEaten()
-
-	- **@r** `An` int.
-
-
-- **getSlicesRemaining** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Cake.html#getSlicesRemaining()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Cake.html#getMaximumBites()
 
 	- **@r** `An` int.
 
 
-- **hashCode** ()
+- **getPistonMoveReaction** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Cake.html#hashCode()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Cake.html#getPistonMoveReaction()
 
-	- **@r** `An` int.
-
-
-- **setData** (`Data`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Cake.html#setData(byte)
-
-	- **@p** `Data` is an int.
+	- **@r** `A` string naming a [PistonMoveReaction](PistonMoveReaction.aus.md).
 
 
-- **setSlicesEaten** (`N`)
+- **getPlacementMaterial** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Cake.html#setSlicesEaten(int)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Cake.html#getPlacementMaterial()
 
-	- **@p** `N` is an int.
-
-
-- **setSlicesRemaining** (`N`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Cake.html#setSlicesRemaining(int)
-
-	- **@p** `N` is an int.
+	- **@r** `A` string naming a [Material](Material.aus.md).
 
 
-- **toItemStack** ()
+- **getSoundGroup** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Cake.html#toItemStack()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Cake.html#getSoundGroup()
 
-	- **@r** `An` [ItemStack](ItemStack.aus.md).
-
-
-- **toItemStack** (`Amount`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Cake.html#toItemStack(int)
-
-	- **@p** `Amount` is an int.
-	- **@r** `An` [ItemStack](ItemStack.aus.md).
+	- **@r** `A` [SoundGroup](SoundGroup.aus.md).
 
 
-- **toString** ()
+- **isFaceSturdy** (`Face, Support`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Cake.html#toString()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Cake.html#isFaceSturdy(org.bukkit.block.BlockFace,org.bukkit.block.BlockSupport)
 
-	- **@r** `A` string.
+	- **@p** `Face` is a string naming a [BlockFace](BlockFace.aus.md).
+	- **@p** `Support` is a string naming a [BlockSupport](BlockSupport.aus.md).
+	- **@r** `A` bool.
+
+
+- **isOccluding** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Cake.html#isOccluding()
+
+	- **@r** `A` bool.
+
+
+- **isPreferredTool** (`Tool`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Cake.html#isPreferredTool(org.bukkit.inventory.ItemStack)
+
+	- **@p** `Tool` is an [ItemStack](ItemStack.aus.md).
+	- **@r** `A` bool.
+
+
+- **isRandomlyTicked** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Cake.html#isRandomlyTicked()
+
+	- **@r** `A` bool.
+
+
+- **isReplaceable** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Cake.html#isReplaceable()
+
+	- **@r** `A` bool.
+
+
+- **isSupported** (`Block`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Cake.html#isSupported(org.bukkit.block.Block)
+
+	- **@p** `Block` is a [Block](Block.aus.md).
+	- **@r** `A` bool.
+
+
+- **isSupported\_location** (`Location`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Cake.html#isSupported(org.bukkit.Location)
+
+	- **@p** `Location` is a [Location](Location.aus.md).
+	- **@r** `A` bool.
+
+
+- **matches** (`Data`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Cake.html#matches(org.bukkit.block.data.BlockData)
+
+	- **@p** `Data` is a [BlockData](BlockData.aus.md).
+	- **@r** `A` bool.
+
+
+- **merge** (`Data`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Cake.html#merge(org.bukkit.block.data.BlockData)
+
+	- **@p** `Data` is a [BlockData](BlockData.aus.md).
+	- **@r** `A` [BlockData](BlockData.aus.md).
+
+
+- **mirror** (`Mirror`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Cake.html#mirror(org.bukkit.block.structure.Mirror)
+
+	- **@p** `Mirror` is a string naming a [Mirror](Mirror.aus.md).
+
+
+- **requiresCorrectToolForDrops** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Cake.html#requiresCorrectToolForDrops()
+
+	- **@r** `A` bool.
+
+
+- **rotate** (`Rotation`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Cake.html#rotate(org.bukkit.block.structure.StructureRotation)
+
+	- **@p** `Rotation` is a string naming a [StructureRotation](StructureRotation.aus.md).
+
+
+- **setBites** (`Bites`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Cake.html#setBites(int)
+
+	- **@p** `Bites` is an int.
 
 
 

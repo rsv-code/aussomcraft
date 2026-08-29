@@ -2,12 +2,11 @@
 
 ## class: Hanging
 
-[20:14] (extern: com.lehman.aussomcraft.paper.gen.dangerous.HangingShim) **extends: object** 
+[19:14] (extern: com.lehman.aussomcraft.paper.gen.dangerous.HangingShim) **extends: object** 
 
 Generated shim for org.bukkit.entity.Hanging.
 Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Hanging.html
-In Paper this is a [Entity](Entity.aus.md) and
-[Attachable](Attachable.aus.md).
+In Paper this is a [Entity](Entity.aus.md).
 Every method it inherits is declared here too, so there is
 nothing to follow up to.
 Tier: dangerous. Do not edit.

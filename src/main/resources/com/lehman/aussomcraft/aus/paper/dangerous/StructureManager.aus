@@ -18,15 +18,15 @@ extern class StructureManager : com.lehman.aussomcraft.paper.gen.dangerous.Struc
     /**
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/structure/StructureManager.html#copy(org.bukkit.structure.Structure)
      *
-     * @p Structure is a [Structure](Structure.aus.md).
-     * @r A [Structure](Structure.aus.md).
+     * @p Structure is a BukkitStructureStructure.
+     * @r A BukkitStructureStructure.
      */
     public extern copy(Structure);
 
     /**
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/structure/StructureManager.html#createStructure()
      *
-     * @r A [Structure](Structure.aus.md).
+     * @r A BukkitStructureStructure.
      */
     public extern createStructure();
 
@@ -49,7 +49,7 @@ extern class StructureManager : com.lehman.aussomcraft.paper.gen.dangerous.Struc
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/structure/StructureManager.html#getStructure(org.bukkit.NamespacedKey)
      *
      * @p StructureKey is a [NamespacedKey](NamespacedKey.aus.md).
-     * @r A [Structure](Structure.aus.md).
+     * @r A BukkitStructureStructure.
      */
     public extern getStructure(StructureKey);
 
@@ -64,7 +64,7 @@ extern class StructureManager : com.lehman.aussomcraft.paper.gen.dangerous.Struc
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/structure/StructureManager.html#loadStructure(org.bukkit.NamespacedKey)
      *
      * @p StructureKey is a [NamespacedKey](NamespacedKey.aus.md).
-     * @r A [Structure](Structure.aus.md).
+     * @r A BukkitStructureStructure.
      */
     public extern loadStructure(StructureKey);
 
@@ -73,7 +73,7 @@ extern class StructureManager : com.lehman.aussomcraft.paper.gen.dangerous.Struc
      *
      * @p StructureKey is a [NamespacedKey](NamespacedKey.aus.md).
      * @p Register is a bool.
-     * @r A [Structure](Structure.aus.md).
+     * @r A BukkitStructureStructure.
      */
     public extern loadStructure(StructureKey, Register);
 
@@ -81,8 +81,8 @@ extern class StructureManager : com.lehman.aussomcraft.paper.gen.dangerous.Struc
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/structure/StructureManager.html#registerStructure(org.bukkit.NamespacedKey,org.bukkit.structure.Structure)
      *
      * @p StructureKey is a [NamespacedKey](NamespacedKey.aus.md).
-     * @p Structure is a [Structure](Structure.aus.md).
-     * @r A [Structure](Structure.aus.md).
+     * @p Structure is a BukkitStructureStructure.
+     * @r A BukkitStructureStructure.
      */
     public extern registerStructure(StructureKey, Structure);
 
@@ -97,7 +97,7 @@ extern class StructureManager : com.lehman.aussomcraft.paper.gen.dangerous.Struc
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/structure/StructureManager.html#saveStructure(org.bukkit.NamespacedKey,org.bukkit.structure.Structure)
      *
      * @p StructureKey is a [NamespacedKey](NamespacedKey.aus.md).
-     * @p Structure is a [Structure](Structure.aus.md).
+     * @p Structure is a BukkitStructureStructure.
      */
     public extern saveStructure(StructureKey, Structure);
 
@@ -105,7 +105,7 @@ extern class StructureManager : com.lehman.aussomcraft.paper.gen.dangerous.Struc
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/structure/StructureManager.html#unregisterStructure(org.bukkit.NamespacedKey)
      *
      * @p StructureKey is a [NamespacedKey](NamespacedKey.aus.md).
-     * @r A [Structure](Structure.aus.md).
+     * @r A BukkitStructureStructure.
      */
     public extern unregisterStructure(StructureKey);
 }

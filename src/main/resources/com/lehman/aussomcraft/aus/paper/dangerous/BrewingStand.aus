@@ -6,11 +6,11 @@
  */
 
 /**
- * Generated shim for org.bukkit.block.data.type.BrewingStand.
+ * Generated shim for org.bukkit.block.BrewingStand.
  *
- * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/BrewingStand.html
+ * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html
  *
- * In Paper this is a [BlockData](BlockData.aus.md).
+ * In Paper this is a [Container](Container.aus.md).
  * Every method it inherits is declared here too, so there is
  * nothing to follow up to.
  *
@@ -20,229 +20,350 @@ extern class BrewingStand : com.lehman.aussomcraft.paper.gen.dangerous.BrewingSt
     public extern __opEq__(A0);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/BrewingStand.html#clone()
-     *
-     * @r A [BlockData](BlockData.aus.md).
-     */
-    public extern clone();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/BrewingStand.html#copyTo(org.bukkit.block.data.BlockData)
-     *
-     * @p Other is a [BlockData](BlockData.aus.md).
-     */
-    public extern copyTo(Other);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/BrewingStand.html#createBlockState()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#copy()
      *
      * @r A [BlockState](BlockState.aus.md).
      */
-    public extern createBlockState();
+    public extern copy();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/BrewingStand.html#getAsString()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#copy(org.bukkit.Location)
+     *
+     * @p Location is a [Location](Location.aus.md).
+     * @r A [BlockState](BlockState.aus.md).
+     */
+    public extern copy(Location);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#customName()
+     *
+     * @r A Component.
+     */
+    public extern customName();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#customName(net.kyori.adventure.text.Component)
+     *
+     * @p CustomName is a Component.
+     */
+    public extern customName(CustomName);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#getBlock()
+     *
+     * @r A [Block](Block.aus.md).
+     */
+    public extern getBlock();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#getBlockData()
+     *
+     * @r A [BlockData](BlockData.aus.md).
+     */
+    public extern getBlockData();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#getBrewingTime()
+     *
+     * @r An int.
+     */
+    public extern getBrewingTime();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#getChunk()
+     *
+     * @r A [Chunk](Chunk.aus.md).
+     */
+    public extern getChunk();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#getCustomName()
      *
      * @r A string.
      */
-    public extern getAsString();
+    public extern getCustomName();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/BrewingStand.html#getAsString(boolean)
-     *
-     * @p HideUnspecified is a bool.
-     * @r A string.
-     */
-    public extern getAsString(HideUnspecified);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/BrewingStand.html#getBottles()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#getDrops()
      *
      * @r A list.
      */
-    public extern getBottles();
+    public extern getDrops();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/BrewingStand.html#getCollisionShape(org.bukkit.Location)
-     *
-     * @p Location is a [Location](Location.aus.md).
-     * @r A [VoxelShape](VoxelShape.aus.md).
-     */
-    public extern getCollisionShape(Location);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/BrewingStand.html#getDestroySpeed(org.bukkit.inventory.ItemStack)
-     *
-     * @p ItemStack is an [ItemStack](ItemStack.aus.md).
-     * @r A double.
-     */
-    public extern getDestroySpeed(ItemStack);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/BrewingStand.html#getDestroySpeed(org.bukkit.inventory.ItemStack,boolean)
-     *
-     * @p ItemStack is an [ItemStack](ItemStack.aus.md).
-     * @p ConsiderEnchants is a bool.
-     * @r A double.
-     */
-    public extern getDestroySpeed(ItemStack, ConsiderEnchants);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/BrewingStand.html#getLightEmission()
-     *
-     * @r An int.
-     */
-    public extern getLightEmission();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/BrewingStand.html#getMapColor()
-     *
-     * @r A [Color](Color.aus.md).
-     */
-    public extern getMapColor();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/BrewingStand.html#getMaterial()
-     *
-     * @r A string naming a [Material](Material.aus.md).
-     */
-    public extern getMaterial();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/BrewingStand.html#getMaximumBottles()
-     *
-     * @r An int.
-     */
-    public extern getMaximumBottles();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/BrewingStand.html#getPistonMoveReaction()
-     *
-     * @r A string naming a
-     * [PistonMoveReaction](PistonMoveReaction.aus.md).
-     */
-    public extern getPistonMoveReaction();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/BrewingStand.html#getPlacementMaterial()
-     *
-     * @r A string naming a [Material](Material.aus.md).
-     */
-    public extern getPlacementMaterial();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/BrewingStand.html#getSoundGroup()
-     *
-     * @r A [SoundGroup](SoundGroup.aus.md).
-     */
-    public extern getSoundGroup();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/BrewingStand.html#hasBottle(int)
-     *
-     * @p Bottle is an int.
-     * @r A bool.
-     */
-    public extern hasBottle(Bottle);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/BrewingStand.html#isFaceSturdy(org.bukkit.block.BlockFace,org.bukkit.block.BlockSupport)
-     *
-     * @p Face is a string naming a [BlockFace](BlockFace.aus.md).
-     * @p Support is a string naming a
-     * [BlockSupport](BlockSupport.aus.md).
-     * @r A bool.
-     */
-    public extern isFaceSturdy(Face, Support);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/BrewingStand.html#isOccluding()
-     *
-     * @r A bool.
-     */
-    public extern isOccluding();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/BrewingStand.html#isPreferredTool(org.bukkit.inventory.ItemStack)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#getDrops(org.bukkit.inventory.ItemStack)
      *
      * @p Tool is an [ItemStack](ItemStack.aus.md).
-     * @r A bool.
+     * @r A list.
      */
-    public extern isPreferredTool(Tool);
+    public extern getDrops(Tool);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/BrewingStand.html#isRandomlyTicked()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#getDrops(org.bukkit.inventory.ItemStack,org.bukkit.entity.Entity)
+     *
+     * @p Tool is an [ItemStack](ItemStack.aus.md).
+     * @p Entity is an [Entity](Entity.aus.md).
+     * @r A list.
+     */
+    public extern getDrops(Tool, Entity);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#getFuelLevel()
+     *
+     * @r An int.
+     */
+    public extern getFuelLevel();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#getInventory()
+     *
+     * @r A [BrewerInventory](BrewerInventory.aus.md).
+     */
+    public extern getInventory();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#getLightLevel()
+     *
+     * @r An int.
+     */
+    public extern getLightLevel();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#getLocation()
+     *
+     * @r A [Location](Location.aus.md).
+     */
+    public extern getLocation();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#getLocation(org.bukkit.Location)
+     *
+     * @p Loc is a [Location](Location.aus.md).
+     * @r A [Location](Location.aus.md).
+     */
+    public extern getLocation(Loc);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#getLock()
+     *
+     * @r A string.
+     */
+    public extern getLock();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#getMetadata(java.lang.String)
+     *
+     * @p MetadataKey is a string.
+     * @r A list.
+     */
+    public extern getMetadata(MetadataKey);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#getPersistentDataContainer()
+     *
+     * @r A [PersistentDataContainer](PersistentDataContainer.aus.md).
+     */
+    public extern getPersistentDataContainer();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#getRawData()
+     *
+     * @r An int.
+     */
+    public extern getRawData();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#getRecipeBrewTime()
+     *
+     * @r An int.
+     */
+    public extern getRecipeBrewTime();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#getSnapshotInventory()
+     *
+     * @r A [BrewerInventory](BrewerInventory.aus.md).
+     */
+    public extern getSnapshotInventory();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#getType()
+     *
+     * @r A string naming a [Material](Material.aus.md).
+     */
+    public extern getType();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#getWorld()
+     *
+     * @r A [World](World.aus.md).
+     */
+    public extern getWorld();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#getX()
+     *
+     * @r An int.
+     */
+    public extern getX();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#getY()
+     *
+     * @r An int.
+     */
+    public extern getY();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#getZ()
+     *
+     * @r An int.
+     */
+    public extern getZ();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#hasMetadata(java.lang.String)
+     *
+     * @p MetadataKey is a string.
+     * @r A bool.
+     */
+    public extern hasMetadata(MetadataKey);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#isCollidable()
      *
      * @r A bool.
      */
-    public extern isRandomlyTicked();
+    public extern isCollidable();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/BrewingStand.html#isReplaceable()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#isLocked()
      *
      * @r A bool.
      */
-    public extern isReplaceable();
+    public extern isLocked();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/BrewingStand.html#isSupported(org.bukkit.block.Block)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#isPlaced()
      *
-     * @p Block is a [Block](Block.aus.md).
      * @r A bool.
      */
-    public extern isSupported(Block);
+    public extern isPlaced();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/BrewingStand.html#isSupported(org.bukkit.Location)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#isSnapshot()
      *
-     * @p Location is a [Location](Location.aus.md).
      * @r A bool.
      */
-    public extern isSupported_location(Location);
+    public extern isSnapshot();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/BrewingStand.html#matches(org.bukkit.block.data.BlockData)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#isSuffocating()
+     *
+     * @r A bool.
+     */
+    public extern isSuffocating();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#setBlockData(org.bukkit.block.data.BlockData)
      *
      * @p Data is a [BlockData](BlockData.aus.md).
+     */
+    public extern setBlockData(Data);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#setBrewingTime(int)
+     *
+     * @p BrewTime is an int.
+     */
+    public extern setBrewingTime(BrewTime);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#setCustomName(java.lang.String)
+     *
+     * @p Name is a string.
+     */
+    public extern setCustomName(Name);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#setFuelLevel(int)
+     *
+     * @p Level is an int.
+     */
+    public extern setFuelLevel(Level);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#setLock(java.lang.String)
+     *
+     * @p Key is a string.
+     */
+    public extern setLock(Key);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#setLockItem(org.bukkit.inventory.ItemStack)
+     *
+     * @p Key is an [ItemStack](ItemStack.aus.md).
+     */
+    public extern setLockItem(Key);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#setMetadata(java.lang.String,org.bukkit.metadata.MetadataValue)
+     *
+     * @p MetadataKey is a string.
+     * @p NewMetadataValue is a [MetadataValue](MetadataValue.aus.md).
+     */
+    public extern setMetadata(MetadataKey, NewMetadataValue);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#setRawData(byte)
+     *
+     * @p Data is an int.
+     */
+    public extern setRawData(Data);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#setRecipeBrewTime(int)
+     *
+     * @p RecipeBrewTime is an int.
+     */
+    public extern setRecipeBrewTime(RecipeBrewTime);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#setType(org.bukkit.Material)
+     *
+     * @p Type is a string naming a [Material](Material.aus.md).
+     */
+    public extern setType(Type);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#update()
+     *
      * @r A bool.
      */
-    public extern matches(Data);
+    public extern update();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/BrewingStand.html#merge(org.bukkit.block.data.BlockData)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#update(boolean)
      *
-     * @p Data is a [BlockData](BlockData.aus.md).
-     * @r A [BlockData](BlockData.aus.md).
-     */
-    public extern merge(Data);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/BrewingStand.html#mirror(org.bukkit.block.structure.Mirror)
-     *
-     * @p Mirror is a string naming a [Mirror](Mirror.aus.md).
-     */
-    public extern mirror(Mirror);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/BrewingStand.html#requiresCorrectToolForDrops()
-     *
+     * @p Force is a bool.
      * @r A bool.
      */
-    public extern requiresCorrectToolForDrops();
+    public extern update(Force);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/BrewingStand.html#rotate(org.bukkit.block.structure.StructureRotation)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#update(boolean,boolean)
      *
-     * @p Rotation is a string naming a
-     * [StructureRotation](StructureRotation.aus.md).
+     * @p Force is a bool.
+     * @p ApplyPhysics is a bool.
+     * @r A bool.
      */
-    public extern rotate(Rotation);
+    public extern update(Force, ApplyPhysics);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/BrewingStand.html#setBottle(int,boolean)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrewingStand.html#removeMetadata(java.lang.String,org.bukkit.plugin.Plugin)
      *
-     * @p Bottle is an int.
-     * @p Has is a bool.
+     * @p MetadataKey is a string.
+     * @p OwningPlugin is a [Plugin](Plugin.aus.md).
      */
-    public extern setBottle(Bottle, Has);
+    public extern removeMetadata(MetadataKey, OwningPlugin);
 }

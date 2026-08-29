@@ -126,7 +126,7 @@ Tier: dangerous. Do not edit.
 
 	- **@p** `World` is a [World](World.aus.md).
 	- **@p** `Location` is a [Location](Location.aus.md).
-	- **@p** `StructureType` is a [StructureType](StructureType.aus.md).
+	- **@p** `StructureType` is a StructureStructureType.
 	- **@p** `MapIcon` is a MapCursor.Type.
 	- **@r** `An` [ItemStack](ItemStack.aus.md).
 
@@ -149,7 +149,7 @@ Tier: dangerous. Do not edit.
 
 	- **@p** `World` is a [World](World.aus.md).
 	- **@p** `Location` is a [Location](Location.aus.md).
-	- **@p** `StructureType` is a [StructureType](StructureType.aus.md).
+	- **@p** `StructureType` is a StructureStructureType.
 	- **@p** `MapIcon` is a MapCursor.Type.
 	- **@p** `Radius` is an int.
 	- **@p** `FindUnexplored` is a bool.
@@ -275,7 +275,7 @@ Tier: dangerous. Do not edit.
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/Bukkit.html#createProfile(java.lang.String)
 
 	- **@p** `Name` is a string.
-	- **@r** `A` [PlayerProfile](PlayerProfile.aus.md).
+	- **@r** `A` ProfilePlayerProfile.
 
 
 - **createProfile\_uuid** (`Uuid`)
@@ -283,7 +283,7 @@ Tier: dangerous. Do not edit.
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/Bukkit.html#createProfile(java.util.UUID)
 
 	- **@p** `Uuid` is a string.
-	- **@r** `A` [PlayerProfile](PlayerProfile.aus.md).
+	- **@r** `A` ProfilePlayerProfile.
 
 
 - **createProfile** (`Uuid, Name`)
@@ -292,7 +292,7 @@ Tier: dangerous. Do not edit.
 
 	- **@p** `Uuid` is a string.
 	- **@p** `Name` is a string.
-	- **@r** `A` [PlayerProfile](PlayerProfile.aus.md).
+	- **@r** `A` ProfilePlayerProfile.
 
 
 - **createProfileExact** (`Uuid, Name`)
@@ -301,7 +301,7 @@ Tier: dangerous. Do not edit.
 
 	- **@p** `Uuid` is a string.
 	- **@p** `Name` is a string.
-	- **@r** `A` [PlayerProfile](PlayerProfile.aus.md).
+	- **@r** `A` ProfilePlayerProfile.
 
 
 - **createWorld** (`Creator`)

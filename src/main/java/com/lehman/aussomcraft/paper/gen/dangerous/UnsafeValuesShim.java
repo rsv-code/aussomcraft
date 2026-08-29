@@ -85,44 +85,6 @@ public class UnsafeValuesShim extends PaperObj {
         }
     }
 
-    public AussomType fromLegacy_MaterialData(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.UnsafeValues self = (org.bukkit.UnsafeValues) this.getObj();
-            if (self == null) {
-                return Marshal.detached("fromLegacy_MaterialData");
-            }
-            if (n == 1) {
-                return Marshal.wrap(env, ((org.bukkit.UnsafeValues) self).fromLegacy((org.bukkit.material.MaterialData) Marshal.typed(args, 0, org.bukkit.material.MaterialData.class)));
-            }
-            return Marshal.wrongArity("fromLegacy_MaterialData", n);
-        } catch (Throwable e) {
-            return Marshal.failed("fromLegacy_MaterialData", e);
-        }
-    }
-
-    public AussomType fromLegacy_material_itempriority(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.UnsafeValues self = (org.bukkit.UnsafeValues) this.getObj();
-            if (self == null) {
-                return Marshal.detached("fromLegacy_material_itempriority");
-            }
-            if (n == 2) {
-                return Marshal.wrap(env, ((org.bukkit.UnsafeValues) self).fromLegacy((org.bukkit.material.MaterialData) Marshal.typed(args, 0, org.bukkit.material.MaterialData.class), Marshal.argBool(args, 1)));
-            }
-            return Marshal.wrongArity("fromLegacy_material_itempriority", n);
-        } catch (Throwable e) {
-            return Marshal.failed("fromLegacy_material_itempriority", e);
-        }
-    }
-
     public AussomType get(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {

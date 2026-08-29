@@ -1,0 +1,70 @@
+# file: InventoryPrepareGrindstoneEvent.aus
+
+## class: InventoryPrepareGrindstoneEvent
+
+[20:14] (extern: com.lehman.aussomcraft.paper.gen.trusted.InventoryPrepareGrindstoneEventShim) **extends: object** 
+
+Generated shim for com.destroystokyo.paper.event.inventory.PrepareGrindstoneEvent.
+Paper: https://jd.papermc.io/paper/1.21.10/com/destroystokyo/paper/event/inventory/PrepareGrindstoneEvent.html
+In Paper this is a
+[PrepareResultEvent](PrepareResultEvent.aus.md).
+Every method it inherits is declared here too, so there is
+nothing to follow up to.
+Tier: trusted. Do not edit.
+
+#### Methods
+
+- **\_\_opEq\_\_** (`A0`)
+
+
+- **getEventName** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/com/destroystokyo/paper/event/inventory/PrepareGrindstoneEvent.html#getEventName()
+
+	- **@r** `A` string.
+
+
+- **getInventory** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/com/destroystokyo/paper/event/inventory/PrepareGrindstoneEvent.html#getInventory()
+
+	- **@r** `A` [GrindstoneInventory](GrindstoneInventory.aus.md).
+
+
+- **getResult** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/com/destroystokyo/paper/event/inventory/PrepareGrindstoneEvent.html#getResult()
+
+	- **@r** `An` [ItemStack](ItemStack.aus.md).
+
+
+- **getView** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/com/destroystokyo/paper/event/inventory/PrepareGrindstoneEvent.html#getView()
+
+	- **@r** `An` [InventoryView](InventoryView.aus.md).
+
+
+- **getViewers** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/com/destroystokyo/paper/event/inventory/PrepareGrindstoneEvent.html#getViewers()
+
+	- **@r** `A` list.
+
+
+- **isAsynchronous** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/com/destroystokyo/paper/event/inventory/PrepareGrindstoneEvent.html#isAsynchronous()
+
+	- **@r** `A` bool.
+
+
+- **setResult** (`Result`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/com/destroystokyo/paper/event/inventory/PrepareGrindstoneEvent.html#setResult(org.bukkit.inventory.ItemStack)
+
+	- **@p** `Result` is an [ItemStack](ItemStack.aus.md).
+
+
+
+

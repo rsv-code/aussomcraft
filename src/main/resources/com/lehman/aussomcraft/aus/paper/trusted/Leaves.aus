@@ -6,11 +6,11 @@
  */
 
 /**
- * Generated shim for org.bukkit.material.Leaves.
+ * Generated shim for org.bukkit.block.data.type.Leaves.
  *
- * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Leaves.html
+ * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Leaves.html
  *
- * In Paper this is a [Wood](Wood.aus.md).
+ * In Paper this is a [Waterlogged](Waterlogged.aus.md).
  * Every method it inherits is declared here too, so there is
  * nothing to follow up to.
  *
@@ -20,109 +20,255 @@ extern class Leaves : com.lehman.aussomcraft.paper.gen.trusted.LeavesShim {
     public extern __opEq__(A0);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Leaves.html#clone()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Leaves.html#clone()
      *
-     * @r A [Leaves](Leaves.aus.md).
+     * @r A [BlockData](BlockData.aus.md).
      */
     public extern clone();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Leaves.html#equals(java.lang.Object)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Leaves.html#copyTo(org.bukkit.block.data.BlockData)
      *
-     * @p Obj is an Object.
-     * @r A bool.
+     * @p Other is a [BlockData](BlockData.aus.md).
      */
-    public extern equals(Obj);
+    public extern copyTo(Other);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Leaves.html#getData()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Leaves.html#createBlockState()
      *
-     * @r An int.
+     * @r A [BlockState](BlockState.aus.md).
      */
-    public extern getData();
+    public extern createBlockState();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Leaves.html#getItemType()
-     *
-     * @r A string naming a [Material](Material.aus.md).
-     */
-    public extern getItemType();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Leaves.html#getSpecies()
-     *
-     * @r A string naming a [TreeSpecies](TreeSpecies.aus.md).
-     */
-    public extern getSpecies();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Leaves.html#hashCode()
-     *
-     * @r An int.
-     */
-    public extern hashCode();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Leaves.html#isDecayable()
-     *
-     * @r A bool.
-     */
-    public extern isDecayable();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Leaves.html#isDecaying()
-     *
-     * @r A bool.
-     */
-    public extern isDecaying();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Leaves.html#setData(byte)
-     *
-     * @p Data is an int.
-     */
-    public extern setData(Data);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Leaves.html#setDecayable(boolean)
-     *
-     * @p IsDecayable is a bool.
-     */
-    public extern setDecayable(IsDecayable);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Leaves.html#setDecaying(boolean)
-     *
-     * @p IsDecaying is a bool.
-     */
-    public extern setDecaying(IsDecaying);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Leaves.html#setSpecies(org.bukkit.TreeSpecies)
-     *
-     * @p Species is a string naming a [TreeSpecies](TreeSpecies.aus.md).
-     */
-    public extern setSpecies(Species);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Leaves.html#toItemStack()
-     *
-     * @r An [ItemStack](ItemStack.aus.md).
-     */
-    public extern toItemStack();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Leaves.html#toItemStack(int)
-     *
-     * @p Amount is an int.
-     * @r An [ItemStack](ItemStack.aus.md).
-     */
-    public extern toItemStack(Amount);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Leaves.html#toString()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Leaves.html#getAsString()
      *
      * @r A string.
      */
-    public extern toString();
+    public extern getAsString();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Leaves.html#getAsString(boolean)
+     *
+     * @p HideUnspecified is a bool.
+     * @r A string.
+     */
+    public extern getAsString(HideUnspecified);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Leaves.html#getCollisionShape(org.bukkit.Location)
+     *
+     * @p Location is a [Location](Location.aus.md).
+     * @r A [VoxelShape](VoxelShape.aus.md).
+     */
+    public extern getCollisionShape(Location);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Leaves.html#getDestroySpeed(org.bukkit.inventory.ItemStack)
+     *
+     * @p ItemStack is an [ItemStack](ItemStack.aus.md).
+     * @r A double.
+     */
+    public extern getDestroySpeed(ItemStack);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Leaves.html#getDestroySpeed(org.bukkit.inventory.ItemStack,boolean)
+     *
+     * @p ItemStack is an [ItemStack](ItemStack.aus.md).
+     * @p ConsiderEnchants is a bool.
+     * @r A double.
+     */
+    public extern getDestroySpeed(ItemStack, ConsiderEnchants);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Leaves.html#getDistance()
+     *
+     * @r An int.
+     */
+    public extern getDistance();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Leaves.html#getLightEmission()
+     *
+     * @r An int.
+     */
+    public extern getLightEmission();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Leaves.html#getMapColor()
+     *
+     * @r A [Color](Color.aus.md).
+     */
+    public extern getMapColor();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Leaves.html#getMaterial()
+     *
+     * @r A string naming a [Material](Material.aus.md).
+     */
+    public extern getMaterial();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Leaves.html#getMaximumDistance()
+     *
+     * @r An int.
+     */
+    public extern getMaximumDistance();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Leaves.html#getMinimumDistance()
+     *
+     * @r An int.
+     */
+    public extern getMinimumDistance();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Leaves.html#getPistonMoveReaction()
+     *
+     * @r A string naming a
+     * [PistonMoveReaction](PistonMoveReaction.aus.md).
+     */
+    public extern getPistonMoveReaction();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Leaves.html#getPlacementMaterial()
+     *
+     * @r A string naming a [Material](Material.aus.md).
+     */
+    public extern getPlacementMaterial();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Leaves.html#getSoundGroup()
+     *
+     * @r A [SoundGroup](SoundGroup.aus.md).
+     */
+    public extern getSoundGroup();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Leaves.html#isFaceSturdy(org.bukkit.block.BlockFace,org.bukkit.block.BlockSupport)
+     *
+     * @p Face is a string naming a [BlockFace](BlockFace.aus.md).
+     * @p Support is a string naming a
+     * [BlockSupport](BlockSupport.aus.md).
+     * @r A bool.
+     */
+    public extern isFaceSturdy(Face, Support);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Leaves.html#isOccluding()
+     *
+     * @r A bool.
+     */
+    public extern isOccluding();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Leaves.html#isPersistent()
+     *
+     * @r A bool.
+     */
+    public extern isPersistent();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Leaves.html#isPreferredTool(org.bukkit.inventory.ItemStack)
+     *
+     * @p Tool is an [ItemStack](ItemStack.aus.md).
+     * @r A bool.
+     */
+    public extern isPreferredTool(Tool);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Leaves.html#isRandomlyTicked()
+     *
+     * @r A bool.
+     */
+    public extern isRandomlyTicked();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Leaves.html#isReplaceable()
+     *
+     * @r A bool.
+     */
+    public extern isReplaceable();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Leaves.html#isSupported(org.bukkit.block.Block)
+     *
+     * @p Block is a [Block](Block.aus.md).
+     * @r A bool.
+     */
+    public extern isSupported(Block);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Leaves.html#isSupported(org.bukkit.Location)
+     *
+     * @p Location is a [Location](Location.aus.md).
+     * @r A bool.
+     */
+    public extern isSupported_location(Location);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Leaves.html#isWaterlogged()
+     *
+     * @r A bool.
+     */
+    public extern isWaterlogged();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Leaves.html#matches(org.bukkit.block.data.BlockData)
+     *
+     * @p Data is a [BlockData](BlockData.aus.md).
+     * @r A bool.
+     */
+    public extern matches(Data);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Leaves.html#merge(org.bukkit.block.data.BlockData)
+     *
+     * @p Data is a [BlockData](BlockData.aus.md).
+     * @r A [BlockData](BlockData.aus.md).
+     */
+    public extern merge(Data);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Leaves.html#mirror(org.bukkit.block.structure.Mirror)
+     *
+     * @p Mirror is a string naming a [Mirror](Mirror.aus.md).
+     */
+    public extern mirror(Mirror);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Leaves.html#requiresCorrectToolForDrops()
+     *
+     * @r A bool.
+     */
+    public extern requiresCorrectToolForDrops();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Leaves.html#rotate(org.bukkit.block.structure.StructureRotation)
+     *
+     * @p Rotation is a string naming a
+     * [StructureRotation](StructureRotation.aus.md).
+     */
+    public extern rotate(Rotation);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Leaves.html#setDistance(int)
+     *
+     * @p Distance is an int.
+     */
+    public extern setDistance(Distance);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Leaves.html#setPersistent(boolean)
+     *
+     * @p Persistent is a bool.
+     */
+    public extern setPersistent(Persistent);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Leaves.html#setWaterlogged(boolean)
+     *
+     * @p Waterlogged is a bool.
+     */
+    public extern setWaterlogged(Waterlogged);
 }

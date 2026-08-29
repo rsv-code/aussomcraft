@@ -145,25 +145,6 @@ public class BeaconShim extends PaperObj {
         }
     }
 
-    public AussomType getData(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.block.Beacon self = (org.bukkit.block.Beacon) this.getObj();
-            if (self == null) {
-                return Marshal.detached("getData");
-            }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.block.BlockState) self).getData());
-            }
-            return Marshal.wrongArity("getData", n);
-        } catch (Throwable e) {
-            return Marshal.failed("getData", e);
-        }
-    }
-
     public AussomType getDrops(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
@@ -667,26 +648,6 @@ public class BeaconShim extends PaperObj {
             return Marshal.wrongArity("setCustomName", n);
         } catch (Throwable e) {
             return Marshal.failed("setCustomName", e);
-        }
-    }
-
-    public AussomType setData(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.block.Beacon self = (org.bukkit.block.Beacon) this.getObj();
-            if (self == null) {
-                return Marshal.detached("setData");
-            }
-            if (n == 1) {
-                ((org.bukkit.block.BlockState) self).setData((org.bukkit.material.MaterialData) Marshal.typed(args, 0, org.bukkit.material.MaterialData.class));
-                return new AussomNull();
-            }
-            return Marshal.wrongArity("setData", n);
-        } catch (Throwable e) {
-            return Marshal.failed("setData", e);
         }
     }
 

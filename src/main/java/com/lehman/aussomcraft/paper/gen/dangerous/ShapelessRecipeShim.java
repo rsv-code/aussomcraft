@@ -68,25 +68,6 @@ public class ShapelessRecipeShim extends PaperObj {
         }
     }
 
-    public AussomType addIngredient_MaterialData(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.inventory.ShapelessRecipe self = (org.bukkit.inventory.ShapelessRecipe) this.getObj();
-            if (self == null) {
-                return Marshal.detached("addIngredient_MaterialData");
-            }
-            if (n == 1) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.ShapelessRecipe) self).addIngredient((org.bukkit.material.MaterialData) Marshal.typed(args, 0, org.bukkit.material.MaterialData.class)));
-            }
-            return Marshal.wrongArity("addIngredient_MaterialData", n);
-        } catch (Throwable e) {
-            return Marshal.failed("addIngredient_MaterialData", e);
-        }
-    }
-
     public AussomType addIngredient_RecipeChoice(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
@@ -106,7 +87,7 @@ public class ShapelessRecipeShim extends PaperObj {
         }
     }
 
-    public AussomType addIngredient_int_ItemStack(Environment env, ArrayList<AussomType> args) {
+    public AussomType addIngredient_count_item(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
@@ -114,18 +95,18 @@ public class ShapelessRecipeShim extends PaperObj {
         try {
             org.bukkit.inventory.ShapelessRecipe self = (org.bukkit.inventory.ShapelessRecipe) this.getObj();
             if (self == null) {
-                return Marshal.detached("addIngredient_int_ItemStack");
+                return Marshal.detached("addIngredient_count_item");
             }
             if (n == 2) {
                 return Marshal.wrap(env, ((org.bukkit.inventory.ShapelessRecipe) self).addIngredient(Marshal.argInt(args, 0), (org.bukkit.inventory.ItemStack) Marshal.typed(args, 1, org.bukkit.inventory.ItemStack.class)));
             }
-            return Marshal.wrongArity("addIngredient_int_ItemStack", n);
+            return Marshal.wrongArity("addIngredient_count_item", n);
         } catch (Throwable e) {
-            return Marshal.failed("addIngredient_int_ItemStack", e);
+            return Marshal.failed("addIngredient_count_item", e);
         }
     }
 
-    public AussomType addIngredient_int_Material(Environment env, ArrayList<AussomType> args) {
+    public AussomType addIngredient_count_ingredient(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
@@ -133,33 +114,14 @@ public class ShapelessRecipeShim extends PaperObj {
         try {
             org.bukkit.inventory.ShapelessRecipe self = (org.bukkit.inventory.ShapelessRecipe) this.getObj();
             if (self == null) {
-                return Marshal.detached("addIngredient_int_Material");
+                return Marshal.detached("addIngredient_count_ingredient");
             }
             if (n == 2) {
                 return Marshal.wrap(env, ((org.bukkit.inventory.ShapelessRecipe) self).addIngredient(Marshal.argInt(args, 0), (org.bukkit.Material) Marshal.typed(args, 1, org.bukkit.Material.class)));
             }
-            return Marshal.wrongArity("addIngredient_int_Material", n);
+            return Marshal.wrongArity("addIngredient_count_ingredient", n);
         } catch (Throwable e) {
-            return Marshal.failed("addIngredient_int_Material", e);
-        }
-    }
-
-    public AussomType addIngredient_int_MaterialData(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.inventory.ShapelessRecipe self = (org.bukkit.inventory.ShapelessRecipe) this.getObj();
-            if (self == null) {
-                return Marshal.detached("addIngredient_int_MaterialData");
-            }
-            if (n == 2) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.ShapelessRecipe) self).addIngredient(Marshal.argInt(args, 0), (org.bukkit.material.MaterialData) Marshal.typed(args, 1, org.bukkit.material.MaterialData.class)));
-            }
-            return Marshal.wrongArity("addIngredient_int_MaterialData", n);
-        } catch (Throwable e) {
-            return Marshal.failed("addIngredient_int_MaterialData", e);
+            return Marshal.failed("addIngredient_count_ingredient", e);
         }
     }
 
@@ -321,25 +283,6 @@ public class ShapelessRecipeShim extends PaperObj {
         }
     }
 
-    public AussomType removeIngredient_MaterialData(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.inventory.ShapelessRecipe self = (org.bukkit.inventory.ShapelessRecipe) this.getObj();
-            if (self == null) {
-                return Marshal.detached("removeIngredient_MaterialData");
-            }
-            if (n == 1) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.ShapelessRecipe) self).removeIngredient((org.bukkit.material.MaterialData) Marshal.typed(args, 0, org.bukkit.material.MaterialData.class)));
-            }
-            return Marshal.wrongArity("removeIngredient_MaterialData", n);
-        } catch (Throwable e) {
-            return Marshal.failed("removeIngredient_MaterialData", e);
-        }
-    }
-
     public AussomType removeIngredient_RecipeChoice(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
@@ -359,7 +302,7 @@ public class ShapelessRecipeShim extends PaperObj {
         }
     }
 
-    public AussomType removeIngredient_int_ItemStack(Environment env, ArrayList<AussomType> args) {
+    public AussomType removeIngredient_count_item(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
@@ -367,18 +310,18 @@ public class ShapelessRecipeShim extends PaperObj {
         try {
             org.bukkit.inventory.ShapelessRecipe self = (org.bukkit.inventory.ShapelessRecipe) this.getObj();
             if (self == null) {
-                return Marshal.detached("removeIngredient_int_ItemStack");
+                return Marshal.detached("removeIngredient_count_item");
             }
             if (n == 2) {
                 return Marshal.wrap(env, ((org.bukkit.inventory.ShapelessRecipe) self).removeIngredient(Marshal.argInt(args, 0), (org.bukkit.inventory.ItemStack) Marshal.typed(args, 1, org.bukkit.inventory.ItemStack.class)));
             }
-            return Marshal.wrongArity("removeIngredient_int_ItemStack", n);
+            return Marshal.wrongArity("removeIngredient_count_item", n);
         } catch (Throwable e) {
-            return Marshal.failed("removeIngredient_int_ItemStack", e);
+            return Marshal.failed("removeIngredient_count_item", e);
         }
     }
 
-    public AussomType removeIngredient_int_Material(Environment env, ArrayList<AussomType> args) {
+    public AussomType removeIngredient_count_ingredient(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
@@ -386,33 +329,14 @@ public class ShapelessRecipeShim extends PaperObj {
         try {
             org.bukkit.inventory.ShapelessRecipe self = (org.bukkit.inventory.ShapelessRecipe) this.getObj();
             if (self == null) {
-                return Marshal.detached("removeIngredient_int_Material");
+                return Marshal.detached("removeIngredient_count_ingredient");
             }
             if (n == 2) {
                 return Marshal.wrap(env, ((org.bukkit.inventory.ShapelessRecipe) self).removeIngredient(Marshal.argInt(args, 0), (org.bukkit.Material) Marshal.typed(args, 1, org.bukkit.Material.class)));
             }
-            return Marshal.wrongArity("removeIngredient_int_Material", n);
+            return Marshal.wrongArity("removeIngredient_count_ingredient", n);
         } catch (Throwable e) {
-            return Marshal.failed("removeIngredient_int_Material", e);
-        }
-    }
-
-    public AussomType removeIngredient_int_MaterialData(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.inventory.ShapelessRecipe self = (org.bukkit.inventory.ShapelessRecipe) this.getObj();
-            if (self == null) {
-                return Marshal.detached("removeIngredient_int_MaterialData");
-            }
-            if (n == 2) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.ShapelessRecipe) self).removeIngredient(Marshal.argInt(args, 0), (org.bukkit.material.MaterialData) Marshal.typed(args, 1, org.bukkit.material.MaterialData.class)));
-            }
-            return Marshal.wrongArity("removeIngredient_int_MaterialData", n);
-        } catch (Throwable e) {
-            return Marshal.failed("removeIngredient_int_MaterialData", e);
+            return Marshal.failed("removeIngredient_count_ingredient", e);
         }
     }
 

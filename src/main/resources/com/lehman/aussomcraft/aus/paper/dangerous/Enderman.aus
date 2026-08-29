@@ -371,13 +371,6 @@ extern class Enderman : com.lehman.aussomcraft.paper.gen.dangerous.EndermanShim 
     public extern getCarriedBlock();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Enderman.html#getCarriedMaterial()
-     *
-     * @r A [MaterialData](MaterialData.aus.md).
-     */
-    public extern getCarriedMaterial();
-
-    /**
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Enderman.html#getCategory()
      *
      * @r An string naming an [EntityCategory](EntityCategory.aus.md).
@@ -2114,13 +2107,6 @@ extern class Enderman : com.lehman.aussomcraft.paper.gen.dangerous.EndermanShim 
      * @p BlockData is a [BlockData](BlockData.aus.md).
      */
     public extern setCarriedBlock(BlockData);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Enderman.html#setCarriedMaterial(org.bukkit.material.MaterialData)
-     *
-     * @p Material is a [MaterialData](MaterialData.aus.md).
-     */
-    public extern setCarriedMaterial(Material);
 
     /**
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Enderman.html#setCollidable(boolean)

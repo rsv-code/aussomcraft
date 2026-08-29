@@ -300,7 +300,7 @@ Tier: trusted. Do not edit.
 
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/SkullMeta.html#getPlayerProfile()
 
-	- **@r** `A` [PlayerProfile](PlayerProfile.aus.md).
+	- **@r** `A` ProfilePlayerProfile.
 
 
 - **getRarity** ()
@@ -834,7 +834,7 @@ Tier: trusted. Do not edit.
 
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/SkullMeta.html#setPlayerProfile(com.destroystokyo.paper.profile.PlayerProfile)
 
-	- **@p** `Profile` is a [PlayerProfile](PlayerProfile.aus.md).
+	- **@p** `Profile` is a ProfilePlayerProfile.
 
 
 - **setRarity** (`Rarity`)

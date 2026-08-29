@@ -67,9 +67,24 @@ being told no. There is simply nothing there to call.
 
 That includes reading. An untrusted script cannot see what people type as
 commands. If your server asks players for a password with something like
-`/login`, an unapproved script cannot read it, and the same goes for private
-messages and anything you type at the console. It can still read ordinary
-chat, because everyone nearby can read that anyway.
+`/login`, an unapproved script cannot read it, and the same goes for
+anything you type at the console.
+
+Chat is different, and it is worth knowing exactly how. An untrusted script
+can read chat, and it reads **all** of it: every message on the server, not
+just the ones near the player it is watching, and it sees them before a
+plugin that hides or redirects messages gets its turn. It can also ask to
+be shown messages that another plugin cancelled.
+
+That last part matters if you run a plugin that adds private channels, staff
+chat, party chat, or local chat. Many of those work by cancelling the normal
+chat message and sending their own. An untrusted script can still see the
+original.
+
+So: treat anything said in chat on your server as readable by every script
+you have installed, whatever level it runs at. If that is not acceptable,
+keep unapproved scripts off that server. Commands and the console stay
+private either way.
 
 One more thing worth knowing: when you raise a script's level, that decision
 is tied to the exact file you approved. If the file changes even slightly, it

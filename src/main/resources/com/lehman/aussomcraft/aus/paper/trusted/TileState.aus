@@ -57,13 +57,6 @@ extern class TileState : com.lehman.aussomcraft.paper.gen.trusted.TileStateShim 
     public extern getChunk();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TileState.html#getData()
-     *
-     * @r A [MaterialData](MaterialData.aus.md).
-     */
-    public extern getData();
-
-    /**
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TileState.html#getDrops()
      *
      * @r A list.
@@ -208,13 +201,6 @@ extern class TileState : com.lehman.aussomcraft.paper.gen.trusted.TileStateShim 
      * @p Data is a [BlockData](BlockData.aus.md).
      */
     public extern setBlockData(Data);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TileState.html#setData(org.bukkit.material.MaterialData)
-     *
-     * @p Data is a [MaterialData](MaterialData.aus.md).
-     */
-    public extern setData(Data);
 
     /**
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TileState.html#setMetadata(java.lang.String,org.bukkit.metadata.MetadataValue)

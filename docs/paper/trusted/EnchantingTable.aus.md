@@ -74,13 +74,6 @@ Tier: trusted. Do not edit.
 	- **@r** `A` string.
 
 
-- **getData** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EnchantingTable.html#getData()
-
-	- **@r** `A` [MaterialData](MaterialData.aus.md).
-
-
 - **getDrops** ()
 
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EnchantingTable.html#getDrops()
@@ -232,13 +225,6 @@ Tier: trusted. Do not edit.
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EnchantingTable.html#setCustomName(java.lang.String)
 
 	- **@p** `Name` is a string.
-
-
-- **setData** (`Data`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EnchantingTable.html#setData(org.bukkit.material.MaterialData)
-
-	- **@p** `Data` is a [MaterialData](MaterialData.aus.md).
 
 
 - **setMetadata** (`MetadataKey, NewMetadataValue`)

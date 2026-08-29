@@ -6,11 +6,12 @@
  */
 
 /**
- * Generated shim for org.bukkit.block.data.type.Beehive.
+ * Generated shim for org.bukkit.block.Beehive.
  *
- * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html
+ * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html
  *
- * In Paper this is a [Directional](Directional.aus.md).
+ * In Paper this is a
+ * [EntityBlockStorage](EntityBlockStorage.aus.md).
  * Every method it inherits is declared here too, so there is
  * nothing to follow up to.
  *
@@ -20,241 +21,298 @@ extern class Beehive : com.lehman.aussomcraft.paper.gen.trusted.BeehiveShim {
     public extern __opEq__(A0);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#clone()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#addEntity(org.bukkit.entity.Entity)
      *
-     * @r A [BlockData](BlockData.aus.md).
+     * @p Entity is an [Entity](Entity.aus.md).
      */
-    public extern clone();
+    public extern addEntity(Entity);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#copyTo(org.bukkit.block.data.BlockData)
-     *
-     * @p Other is a [BlockData](BlockData.aus.md).
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#clearEntities()
      */
-    public extern copyTo(Other);
+    public extern clearEntities();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#createBlockState()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#copy()
      *
      * @r A [BlockState](BlockState.aus.md).
      */
-    public extern createBlockState();
+    public extern copy();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#getAsString()
-     *
-     * @r A string.
-     */
-    public extern getAsString();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#getAsString(boolean)
-     *
-     * @p HideUnspecified is a bool.
-     * @r A string.
-     */
-    public extern getAsString(HideUnspecified);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#getCollisionShape(org.bukkit.Location)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#copy(org.bukkit.Location)
      *
      * @p Location is a [Location](Location.aus.md).
-     * @r A [VoxelShape](VoxelShape.aus.md).
+     * @r A [BlockState](BlockState.aus.md).
      */
-    public extern getCollisionShape(Location);
+    public extern copy(Location);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#getDestroySpeed(org.bukkit.inventory.ItemStack)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#getBlock()
      *
-     * @p ItemStack is an [ItemStack](ItemStack.aus.md).
-     * @r A double.
+     * @r A [Block](Block.aus.md).
      */
-    public extern getDestroySpeed(ItemStack);
+    public extern getBlock();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#getDestroySpeed(org.bukkit.inventory.ItemStack,boolean)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#getBlockData()
      *
-     * @p ItemStack is an [ItemStack](ItemStack.aus.md).
-     * @p ConsiderEnchants is a bool.
-     * @r A double.
+     * @r A [BlockData](BlockData.aus.md).
      */
-    public extern getDestroySpeed(ItemStack, ConsiderEnchants);
+    public extern getBlockData();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#getFaces()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#getChunk()
+     *
+     * @r A [Chunk](Chunk.aus.md).
+     */
+    public extern getChunk();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#getDrops()
      *
      * @r A list.
      */
-    public extern getFaces();
+    public extern getDrops();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#getFacing()
-     *
-     * @r A string naming a [BlockFace](BlockFace.aus.md).
-     */
-    public extern getFacing();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#getHoneyLevel()
-     *
-     * @r An int.
-     */
-    public extern getHoneyLevel();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#getLightEmission()
-     *
-     * @r An int.
-     */
-    public extern getLightEmission();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#getMapColor()
-     *
-     * @r A [Color](Color.aus.md).
-     */
-    public extern getMapColor();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#getMaterial()
-     *
-     * @r A string naming a [Material](Material.aus.md).
-     */
-    public extern getMaterial();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#getMaximumHoneyLevel()
-     *
-     * @r An int.
-     */
-    public extern getMaximumHoneyLevel();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#getPistonMoveReaction()
-     *
-     * @r A string naming a
-     * [PistonMoveReaction](PistonMoveReaction.aus.md).
-     */
-    public extern getPistonMoveReaction();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#getPlacementMaterial()
-     *
-     * @r A string naming a [Material](Material.aus.md).
-     */
-    public extern getPlacementMaterial();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#getSoundGroup()
-     *
-     * @r A [SoundGroup](SoundGroup.aus.md).
-     */
-    public extern getSoundGroup();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#isFaceSturdy(org.bukkit.block.BlockFace,org.bukkit.block.BlockSupport)
-     *
-     * @p Face is a string naming a [BlockFace](BlockFace.aus.md).
-     * @p Support is a string naming a
-     * [BlockSupport](BlockSupport.aus.md).
-     * @r A bool.
-     */
-    public extern isFaceSturdy(Face, Support);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#isOccluding()
-     *
-     * @r A bool.
-     */
-    public extern isOccluding();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#isPreferredTool(org.bukkit.inventory.ItemStack)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#getDrops(org.bukkit.inventory.ItemStack)
      *
      * @p Tool is an [ItemStack](ItemStack.aus.md).
-     * @r A bool.
+     * @r A list.
      */
-    public extern isPreferredTool(Tool);
+    public extern getDrops(Tool);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#isRandomlyTicked()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#getDrops(org.bukkit.inventory.ItemStack,org.bukkit.entity.Entity)
+     *
+     * @p Tool is an [ItemStack](ItemStack.aus.md).
+     * @p Entity is an [Entity](Entity.aus.md).
+     * @r A list.
+     */
+    public extern getDrops(Tool, Entity);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#getEntityCount()
+     *
+     * @r An int.
+     */
+    public extern getEntityCount();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#getFlower()
+     *
+     * @r A [Location](Location.aus.md).
+     */
+    public extern getFlower();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#getLightLevel()
+     *
+     * @r An int.
+     */
+    public extern getLightLevel();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#getLocation()
+     *
+     * @r A [Location](Location.aus.md).
+     */
+    public extern getLocation();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#getLocation(org.bukkit.Location)
+     *
+     * @p Loc is a [Location](Location.aus.md).
+     * @r A [Location](Location.aus.md).
+     */
+    public extern getLocation(Loc);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#getMaxEntities()
+     *
+     * @r An int.
+     */
+    public extern getMaxEntities();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#getMetadata(java.lang.String)
+     *
+     * @p MetadataKey is a string.
+     * @r A list.
+     */
+    public extern getMetadata(MetadataKey);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#getPersistentDataContainer()
+     *
+     * @r A [PersistentDataContainer](PersistentDataContainer.aus.md).
+     */
+    public extern getPersistentDataContainer();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#getRawData()
+     *
+     * @r An int.
+     */
+    public extern getRawData();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#getType()
+     *
+     * @r A string naming a [Material](Material.aus.md).
+     */
+    public extern getType();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#getWorld()
+     *
+     * @r A [World](World.aus.md).
+     */
+    public extern getWorld();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#getX()
+     *
+     * @r An int.
+     */
+    public extern getX();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#getY()
+     *
+     * @r An int.
+     */
+    public extern getY();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#getZ()
+     *
+     * @r An int.
+     */
+    public extern getZ();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#hasMetadata(java.lang.String)
+     *
+     * @p MetadataKey is a string.
+     * @r A bool.
+     */
+    public extern hasMetadata(MetadataKey);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#isCollidable()
      *
      * @r A bool.
      */
-    public extern isRandomlyTicked();
+    public extern isCollidable();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#isReplaceable()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#isFull()
      *
      * @r A bool.
      */
-    public extern isReplaceable();
+    public extern isFull();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#isSupported(org.bukkit.block.Block)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#isPlaced()
      *
-     * @p Block is a [Block](Block.aus.md).
      * @r A bool.
      */
-    public extern isSupported(Block);
+    public extern isPlaced();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#isSupported(org.bukkit.Location)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#isSedated()
+     *
+     * @r A bool.
+     */
+    public extern isSedated();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#isSnapshot()
+     *
+     * @r A bool.
+     */
+    public extern isSnapshot();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#isSuffocating()
+     *
+     * @r A bool.
+     */
+    public extern isSuffocating();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#releaseEntities()
+     *
+     * @r A list.
+     */
+    public extern releaseEntities();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#setBlockData(org.bukkit.block.data.BlockData)
+     *
+     * @p Data is a [BlockData](BlockData.aus.md).
+     */
+    public extern setBlockData(Data);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#setFlower(org.bukkit.Location)
      *
      * @p Location is a [Location](Location.aus.md).
+     */
+    public extern setFlower(Location);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#setMaxEntities(int)
+     *
+     * @p Max is an int.
+     */
+    public extern setMaxEntities(Max);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#setMetadata(java.lang.String,org.bukkit.metadata.MetadataValue)
+     *
+     * @p MetadataKey is a string.
+     * @p NewMetadataValue is a [MetadataValue](MetadataValue.aus.md).
+     */
+    public extern setMetadata(MetadataKey, NewMetadataValue);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#setRawData(byte)
+     *
+     * @p Data is an int.
+     */
+    public extern setRawData(Data);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#setType(org.bukkit.Material)
+     *
+     * @p Type is a string naming a [Material](Material.aus.md).
+     */
+    public extern setType(Type);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#update()
+     *
      * @r A bool.
      */
-    public extern isSupported_location(Location);
+    public extern update();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#matches(org.bukkit.block.data.BlockData)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#update(boolean)
      *
-     * @p Data is a [BlockData](BlockData.aus.md).
+     * @p Force is a bool.
      * @r A bool.
      */
-    public extern matches(Data);
+    public extern update(Force);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#merge(org.bukkit.block.data.BlockData)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Beehive.html#update(boolean,boolean)
      *
-     * @p Data is a [BlockData](BlockData.aus.md).
-     * @r A [BlockData](BlockData.aus.md).
-     */
-    public extern merge(Data);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#mirror(org.bukkit.block.structure.Mirror)
-     *
-     * @p Mirror is a string naming a [Mirror](Mirror.aus.md).
-     */
-    public extern mirror(Mirror);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#requiresCorrectToolForDrops()
-     *
+     * @p Force is a bool.
+     * @p ApplyPhysics is a bool.
      * @r A bool.
      */
-    public extern requiresCorrectToolForDrops();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#rotate(org.bukkit.block.structure.StructureRotation)
-     *
-     * @p Rotation is a string naming a
-     * [StructureRotation](StructureRotation.aus.md).
-     */
-    public extern rotate(Rotation);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#setFacing(org.bukkit.block.BlockFace)
-     *
-     * @p Facing is a string naming a [BlockFace](BlockFace.aus.md).
-     */
-    public extern setFacing(Facing);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Beehive.html#setHoneyLevel(int)
-     *
-     * @p HoneyLevel is an int.
-     */
-    public extern setHoneyLevel(HoneyLevel);
+    public extern update(Force, ApplyPhysics);
 }

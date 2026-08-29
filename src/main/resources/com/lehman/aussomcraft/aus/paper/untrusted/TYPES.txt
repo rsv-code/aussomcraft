@@ -2,26 +2,32 @@
 # Written by the generator. The runtime authorises against this
 # by exact name, so a class merely sharing a simple name with one
 # of these is not one of these.
-io.papermc.paper.event.player.AsyncChatEvent
-org.bukkit.Location
-org.bukkit.World
-org.bukkit.block.Block
-org.bukkit.entity.Entity
-org.bukkit.entity.HumanEntity
-org.bukkit.entity.LivingEntity
-org.bukkit.entity.Player
-org.bukkit.event.block.BlockBreakEvent
-org.bukkit.event.block.BlockPlaceEvent
-org.bukkit.event.entity.EntityDamageByEntityEvent
-org.bukkit.event.entity.PlayerDeathEvent
-org.bukkit.event.inventory.InventoryClickEvent
-org.bukkit.event.player.AsyncPlayerChatEvent
-org.bukkit.event.player.PlayerInteractEvent
-org.bukkit.event.player.PlayerJoinEvent
-org.bukkit.event.player.PlayerMoveEvent
-org.bukkit.event.player.PlayerQuitEvent
-org.bukkit.event.player.PlayerRespawnEvent
-org.bukkit.event.player.PlayerTeleportEvent
-org.bukkit.inventory.Inventory
-org.bukkit.inventory.ItemStack
-org.bukkit.inventory.PlayerInventory
+#
+# One line per type: the Paper class, a tab, and the Aussom class
+# it is reachable as. The two differ where Paper reuses a simple
+# name, since Aussom has no packages. Both columns come from the
+# same map the modules were named from, so the manifest cannot
+# disagree with what was written.
+io.papermc.paper.event.player.AsyncChatEvent	AsyncChatEvent
+org.bukkit.Location	Location
+org.bukkit.World	World
+org.bukkit.block.Block	Block
+org.bukkit.entity.Entity	Entity
+org.bukkit.entity.HumanEntity	HumanEntity
+org.bukkit.entity.LivingEntity	LivingEntity
+org.bukkit.entity.Player	Player
+org.bukkit.event.block.BlockBreakEvent	BlockBreakEvent
+org.bukkit.event.block.BlockPlaceEvent	BlockPlaceEvent
+org.bukkit.event.entity.EntityDamageByEntityEvent	EntityDamageByEntityEvent
+org.bukkit.event.entity.PlayerDeathEvent	PlayerDeathEvent
+org.bukkit.event.inventory.InventoryClickEvent	InventoryClickEvent
+org.bukkit.event.player.AsyncPlayerChatEvent	AsyncPlayerChatEvent
+org.bukkit.event.player.PlayerInteractEvent	PlayerInteractEvent
+org.bukkit.event.player.PlayerJoinEvent	PlayerJoinEvent
+org.bukkit.event.player.PlayerMoveEvent	PlayerMoveEvent
+org.bukkit.event.player.PlayerQuitEvent	PlayerQuitEvent
+org.bukkit.event.player.PlayerRespawnEvent	PlayerRespawnEvent
+org.bukkit.event.player.PlayerTeleportEvent	PlayerTeleportEvent
+org.bukkit.inventory.Inventory	Inventory
+org.bukkit.inventory.ItemStack	ItemStack
+org.bukkit.inventory.PlayerInventory	PlayerInventory

@@ -36,14 +36,6 @@ extern class ShapelessRecipe : com.lehman.aussomcraft.paper.gen.dangerous.Shapel
     public extern addIngredient_Material(Ingredient);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/ShapelessRecipe.html#addIngredient(org.bukkit.material.MaterialData)
-     *
-     * @p Ingredient is a [MaterialData](MaterialData.aus.md).
-     * @r A [ShapelessRecipe](ShapelessRecipe.aus.md).
-     */
-    public extern addIngredient_MaterialData(Ingredient);
-
-    /**
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/ShapelessRecipe.html#addIngredient(org.bukkit.inventory.RecipeChoice)
      *
      * @p Ingredient is a [RecipeChoice](RecipeChoice.aus.md).
@@ -67,7 +59,7 @@ extern class ShapelessRecipe : com.lehman.aussomcraft.paper.gen.dangerous.Shapel
      * @p Item is an [ItemStack](ItemStack.aus.md).
      * @r A [ShapelessRecipe](ShapelessRecipe.aus.md).
      */
-    public extern addIngredient_int_ItemStack(Count, Item);
+    public extern addIngredient_count_item(Count, Item);
 
     /**
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/ShapelessRecipe.html#addIngredient(int,org.bukkit.Material)
@@ -76,16 +68,7 @@ extern class ShapelessRecipe : com.lehman.aussomcraft.paper.gen.dangerous.Shapel
      * @p Ingredient is a string naming a [Material](Material.aus.md).
      * @r A [ShapelessRecipe](ShapelessRecipe.aus.md).
      */
-    public extern addIngredient_int_Material(Count, Ingredient);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/ShapelessRecipe.html#addIngredient(int,org.bukkit.material.MaterialData)
-     *
-     * @p Count is an int.
-     * @p Ingredient is a [MaterialData](MaterialData.aus.md).
-     * @r A [ShapelessRecipe](ShapelessRecipe.aus.md).
-     */
-    public extern addIngredient_int_MaterialData(Count, Ingredient);
+    public extern addIngredient_count_ingredient(Count, Ingredient);
 
     /**
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/ShapelessRecipe.html#addIngredient(int,org.bukkit.Material,int)
@@ -157,14 +140,6 @@ extern class ShapelessRecipe : com.lehman.aussomcraft.paper.gen.dangerous.Shapel
     public extern removeIngredient_Material(Ingredient);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/ShapelessRecipe.html#removeIngredient(org.bukkit.material.MaterialData)
-     *
-     * @p Ingredient is a [MaterialData](MaterialData.aus.md).
-     * @r A [ShapelessRecipe](ShapelessRecipe.aus.md).
-     */
-    public extern removeIngredient_MaterialData(Ingredient);
-
-    /**
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/ShapelessRecipe.html#removeIngredient(org.bukkit.inventory.RecipeChoice)
      *
      * @p Ingredient is a [RecipeChoice](RecipeChoice.aus.md).
@@ -188,7 +163,7 @@ extern class ShapelessRecipe : com.lehman.aussomcraft.paper.gen.dangerous.Shapel
      * @p Item is an [ItemStack](ItemStack.aus.md).
      * @r A [ShapelessRecipe](ShapelessRecipe.aus.md).
      */
-    public extern removeIngredient_int_ItemStack(Count, Item);
+    public extern removeIngredient_count_item(Count, Item);
 
     /**
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/ShapelessRecipe.html#removeIngredient(int,org.bukkit.Material)
@@ -197,16 +172,7 @@ extern class ShapelessRecipe : com.lehman.aussomcraft.paper.gen.dangerous.Shapel
      * @p Ingredient is a string naming a [Material](Material.aus.md).
      * @r A [ShapelessRecipe](ShapelessRecipe.aus.md).
      */
-    public extern removeIngredient_int_Material(Count, Ingredient);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/ShapelessRecipe.html#removeIngredient(int,org.bukkit.material.MaterialData)
-     *
-     * @p Count is an int.
-     * @p Ingredient is a [MaterialData](MaterialData.aus.md).
-     * @r A [ShapelessRecipe](ShapelessRecipe.aus.md).
-     */
-    public extern removeIngredient_int_MaterialData(Count, Ingredient);
+    public extern removeIngredient_count_ingredient(Count, Ingredient);
 
     /**
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/ShapelessRecipe.html#removeIngredient(int,org.bukkit.Material,int)

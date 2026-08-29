@@ -131,7 +131,7 @@ extern class Material : com.lehman.aussomcraft.paper.gen.dangerous.MaterialShim 
     /**
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/Material.html#getItemRarity()
      *
-     * @r An string naming an [ItemRarity](ItemRarity.aus.md).
+     * @r A string naming an InventoryItemRarity.
      */
     public extern getItemRarity();
 
@@ -179,14 +179,6 @@ extern class Material : com.lehman.aussomcraft.paper.gen.dangerous.MaterialShim 
      * @r An int.
      */
     public extern getMaxStackSize();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/Material.html#getNewData(byte)
-     *
-     * @p Raw is an int.
-     * @r A [MaterialData](MaterialData.aus.md).
-     */
-    public extern getNewData(Raw);
 
     /**
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/Material.html#getSlipperiness()

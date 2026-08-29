@@ -46,7 +46,7 @@ extern class ResolvableProfile : com.lehman.aussomcraft.paper.gen.dangerous.Reso
     /**
      * Paper: https://jd.papermc.io/paper/1.21.10/io/papermc/paper/datacomponent/item/ResolvableProfile.html#resolvableProfile(com.destroystokyo.paper.profile.PlayerProfile)
      *
-     * @p Profile is a [PlayerProfile](PlayerProfile.aus.md).
+     * @p Profile is a ProfilePlayerProfile.
      * @r A [ResolvableProfile](ResolvableProfile.aus.md).
      */
     public extern resolvableProfile(Profile);

@@ -41,7 +41,7 @@ Tier: dangerous. Do not edit.
 
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/advancement/Advancement.html#getDisplay()
 
-	- **@r** `An` [AdvancementDisplay](AdvancementDisplay.aus.md).
+	- **@r** `An` AdvancementAdvancementDisplay.
 
 
 - **getKey** ()

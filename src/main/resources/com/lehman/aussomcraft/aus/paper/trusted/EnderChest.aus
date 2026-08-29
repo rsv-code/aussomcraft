@@ -6,12 +6,12 @@
  */
 
 /**
- * Generated shim for org.bukkit.material.EnderChest.
+ * Generated shim for org.bukkit.block.EnderChest.
  *
- * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/EnderChest.html
+ * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EnderChest.html
  *
- * In Paper this is a
- * [DirectionalContainer](DirectionalContainer.aus.md).
+ * In Paper this is a [Lidded](Lidded.aus.md) and
+ * [TileState](TileState.aus.md).
  * Every method it inherits is declared here too, so there is
  * nothing to follow up to.
  *
@@ -21,81 +21,254 @@ extern class EnderChest : com.lehman.aussomcraft.paper.gen.trusted.EnderChestShi
     public extern __opEq__(A0);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/EnderChest.html#clone()
-     *
-     * @r An [EnderChest](EnderChest.aus.md).
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EnderChest.html#close()
      */
-    public extern clone();
+    public extern close();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/EnderChest.html#equals(java.lang.Object)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EnderChest.html#copy()
      *
-     * @p Obj is an Object.
-     * @r A bool.
+     * @r A [BlockState](BlockState.aus.md).
      */
-    public extern equals(Obj);
+    public extern copy();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/EnderChest.html#getData()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EnderChest.html#copy(org.bukkit.Location)
+     *
+     * @p Location is a [Location](Location.aus.md).
+     * @r A [BlockState](BlockState.aus.md).
+     */
+    public extern copy(Location);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EnderChest.html#getBlock()
+     *
+     * @r A [Block](Block.aus.md).
+     */
+    public extern getBlock();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EnderChest.html#getBlockData()
+     *
+     * @r A [BlockData](BlockData.aus.md).
+     */
+    public extern getBlockData();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EnderChest.html#getChunk()
+     *
+     * @r A [Chunk](Chunk.aus.md).
+     */
+    public extern getChunk();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EnderChest.html#getDrops()
+     *
+     * @r A list.
+     */
+    public extern getDrops();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EnderChest.html#getDrops(org.bukkit.inventory.ItemStack)
+     *
+     * @p Tool is an [ItemStack](ItemStack.aus.md).
+     * @r A list.
+     */
+    public extern getDrops(Tool);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EnderChest.html#getDrops(org.bukkit.inventory.ItemStack,org.bukkit.entity.Entity)
+     *
+     * @p Tool is an [ItemStack](ItemStack.aus.md).
+     * @p Entity is an [Entity](Entity.aus.md).
+     * @r A list.
+     */
+    public extern getDrops(Tool, Entity);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EnderChest.html#getLightLevel()
      *
      * @r An int.
      */
-    public extern getData();
+    public extern getLightLevel();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/EnderChest.html#getFacing()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EnderChest.html#getLocation()
      *
-     * @r A string naming a [BlockFace](BlockFace.aus.md).
+     * @r A [Location](Location.aus.md).
      */
-    public extern getFacing();
+    public extern getLocation();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/EnderChest.html#getItemType()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EnderChest.html#getLocation(org.bukkit.Location)
+     *
+     * @p Loc is a [Location](Location.aus.md).
+     * @r A [Location](Location.aus.md).
+     */
+    public extern getLocation(Loc);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EnderChest.html#getMetadata(java.lang.String)
+     *
+     * @p MetadataKey is a string.
+     * @r A list.
+     */
+    public extern getMetadata(MetadataKey);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EnderChest.html#getPersistentDataContainer()
+     *
+     * @r A [PersistentDataContainer](PersistentDataContainer.aus.md).
+     */
+    public extern getPersistentDataContainer();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EnderChest.html#getRawData()
+     *
+     * @r An int.
+     */
+    public extern getRawData();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EnderChest.html#getType()
      *
      * @r A string naming a [Material](Material.aus.md).
      */
-    public extern getItemType();
+    public extern getType();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/EnderChest.html#hashCode()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EnderChest.html#getWorld()
+     *
+     * @r A [World](World.aus.md).
+     */
+    public extern getWorld();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EnderChest.html#getX()
      *
      * @r An int.
      */
-    public extern hashCode();
+    public extern getX();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/EnderChest.html#setData(byte)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EnderChest.html#getY()
+     *
+     * @r An int.
+     */
+    public extern getY();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EnderChest.html#getZ()
+     *
+     * @r An int.
+     */
+    public extern getZ();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EnderChest.html#hasMetadata(java.lang.String)
+     *
+     * @p MetadataKey is a string.
+     * @r A bool.
+     */
+    public extern hasMetadata(MetadataKey);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EnderChest.html#isBlocked()
+     *
+     * @r A bool.
+     */
+    public extern isBlocked();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EnderChest.html#isCollidable()
+     *
+     * @r A bool.
+     */
+    public extern isCollidable();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EnderChest.html#isOpen()
+     *
+     * @r A bool.
+     */
+    public extern isOpen();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EnderChest.html#isPlaced()
+     *
+     * @r A bool.
+     */
+    public extern isPlaced();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EnderChest.html#isSnapshot()
+     *
+     * @r A bool.
+     */
+    public extern isSnapshot();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EnderChest.html#isSuffocating()
+     *
+     * @r A bool.
+     */
+    public extern isSuffocating();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EnderChest.html#open()
+     */
+    public extern open();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EnderChest.html#setBlockData(org.bukkit.block.data.BlockData)
+     *
+     * @p Data is a [BlockData](BlockData.aus.md).
+     */
+    public extern setBlockData(Data);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EnderChest.html#setMetadata(java.lang.String,org.bukkit.metadata.MetadataValue)
+     *
+     * @p MetadataKey is a string.
+     * @p NewMetadataValue is a [MetadataValue](MetadataValue.aus.md).
+     */
+    public extern setMetadata(MetadataKey, NewMetadataValue);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EnderChest.html#setRawData(byte)
      *
      * @p Data is an int.
      */
-    public extern setData(Data);
+    public extern setRawData(Data);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/EnderChest.html#setFacingDirection(org.bukkit.block.BlockFace)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EnderChest.html#setType(org.bukkit.Material)
      *
-     * @p Face is a string naming a [BlockFace](BlockFace.aus.md).
+     * @p Type is a string naming a [Material](Material.aus.md).
      */
-    public extern setFacingDirection(Face);
+    public extern setType(Type);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/EnderChest.html#toItemStack()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EnderChest.html#update()
      *
-     * @r An [ItemStack](ItemStack.aus.md).
+     * @r A bool.
      */
-    public extern toItemStack();
+    public extern update();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/EnderChest.html#toItemStack(int)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EnderChest.html#update(boolean)
      *
-     * @p Amount is an int.
-     * @r An [ItemStack](ItemStack.aus.md).
+     * @p Force is a bool.
+     * @r A bool.
      */
-    public extern toItemStack(Amount);
+    public extern update(Force);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/EnderChest.html#toString()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EnderChest.html#update(boolean,boolean)
      *
-     * @r A string.
+     * @p Force is a bool.
+     * @p ApplyPhysics is a bool.
+     * @r A bool.
      */
-    public extern toString();
+    public extern update(Force, ApplyPhysics);
 }

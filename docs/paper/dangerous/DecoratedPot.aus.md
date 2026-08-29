@@ -2,12 +2,13 @@
 
 ## class: DecoratedPot
 
-[20:14] (extern: com.lehman.aussomcraft.paper.gen.dangerous.DecoratedPotShim) **extends: object** 
+[21:14] (extern: com.lehman.aussomcraft.paper.gen.dangerous.DecoratedPotShim) **extends: object** 
 
-Generated shim for org.bukkit.block.data.type.DecoratedPot.
-Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/DecoratedPot.html
-In Paper this is a [Directional](Directional.aus.md) and
-[Waterlogged](Waterlogged.aus.md).
+Generated shim for org.bukkit.block.DecoratedPot.
+Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html
+In Paper this is a
+[TileStateInventoryHolder](TileStateInventoryHolder.aus.md) and
+[Lootable](Lootable.aus.md).
 Every method it inherits is declared here too, so there is
 nothing to follow up to.
 Tier: dangerous. Do not edit.
@@ -17,247 +18,340 @@ Tier: dangerous. Do not edit.
 - **\_\_opEq\_\_** (`A0`)
 
 
-- **clone** ()
+- **clearLootTable** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/DecoratedPot.html#clone()
-
-	- **@r** `A` [BlockData](BlockData.aus.md).
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html#clearLootTable()
 
 
-- **copyTo** (`Other`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/DecoratedPot.html#copyTo(org.bukkit.block.data.BlockData)
+- **copy** ()
 
-	- **@p** `Other` is a [BlockData](BlockData.aus.md).
-
-
-- **createBlockState** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/DecoratedPot.html#createBlockState()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html#copy()
 
 	- **@r** `A` [BlockState](BlockState.aus.md).
 
 
-- **getAsString** ()
+- **copy** (`Location`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/DecoratedPot.html#getAsString()
-
-	- **@r** `A` string.
-
-
-- **getAsString** (`HideUnspecified`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/DecoratedPot.html#getAsString(boolean)
-
-	- **@p** `HideUnspecified` is a bool.
-	- **@r** `A` string.
-
-
-- **getCollisionShape** (`Location`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/DecoratedPot.html#getCollisionShape(org.bukkit.Location)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html#copy(org.bukkit.Location)
 
 	- **@p** `Location` is a [Location](Location.aus.md).
-	- **@r** `A` [VoxelShape](VoxelShape.aus.md).
+	- **@r** `A` [BlockState](BlockState.aus.md).
 
 
-- **getDestroySpeed** (`ItemStack`)
+- **getBlock** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/DecoratedPot.html#getDestroySpeed(org.bukkit.inventory.ItemStack)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html#getBlock()
 
-	- **@p** `ItemStack` is an [ItemStack](ItemStack.aus.md).
-	- **@r** `A` double.
-
-
-- **getDestroySpeed** (`ItemStack, ConsiderEnchants`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/DecoratedPot.html#getDestroySpeed(org.bukkit.inventory.ItemStack,boolean)
-
-	- **@p** `ItemStack` is an [ItemStack](ItemStack.aus.md).
-	- **@p** `ConsiderEnchants` is a bool.
-	- **@r** `A` double.
+	- **@r** `A` [Block](Block.aus.md).
 
 
-- **getFaces** ()
+- **getBlockData** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/DecoratedPot.html#getFaces()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html#getBlockData()
+
+	- **@r** `A` [BlockData](BlockData.aus.md).
+
+
+- **getChunk** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html#getChunk()
+
+	- **@r** `A` [Chunk](Chunk.aus.md).
+
+
+- **getDrops** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html#getDrops()
 
 	- **@r** `A` list.
 
 
-- **getFacing** ()
+- **getDrops** (`Tool`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/DecoratedPot.html#getFacing()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html#getDrops(org.bukkit.inventory.ItemStack)
 
-	- **@r** `A` string naming a [BlockFace](BlockFace.aus.md).
+	- **@p** `Tool` is an [ItemStack](ItemStack.aus.md).
+	- **@r** `A` list.
 
 
-- **getLightEmission** ()
+- **getDrops** (`Tool, Entity`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/DecoratedPot.html#getLightEmission()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html#getDrops(org.bukkit.inventory.ItemStack,org.bukkit.entity.Entity)
+
+	- **@p** `Tool` is an [ItemStack](ItemStack.aus.md).
+	- **@p** `Entity` is an [Entity](Entity.aus.md).
+	- **@r** `A` list.
+
+
+- **getInventory** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html#getInventory()
+
+	- **@r** `A` [DecoratedPotInventory](DecoratedPotInventory.aus.md).
+
+
+- **getLightLevel** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html#getLightLevel()
 
 	- **@r** `An` int.
 
 
-- **getMapColor** ()
+- **getLocation** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/DecoratedPot.html#getMapColor()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html#getLocation()
 
-	- **@r** `A` [Color](Color.aus.md).
+	- **@r** `A` [Location](Location.aus.md).
 
 
-- **getMaterial** ()
+- **getLocation** (`Loc`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/DecoratedPot.html#getMaterial()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html#getLocation(org.bukkit.Location)
+
+	- **@p** `Loc` is a [Location](Location.aus.md).
+	- **@r** `A` [Location](Location.aus.md).
+
+
+- **getLootTable** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html#getLootTable()
+
+	- **@r** `A` [LootTable](LootTable.aus.md).
+
+
+- **getMetadata** (`MetadataKey`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html#getMetadata(java.lang.String)
+
+	- **@p** `MetadataKey` is a string.
+	- **@r** `A` list.
+
+
+- **getPersistentDataContainer** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html#getPersistentDataContainer()
+
+	- **@r** `A` [PersistentDataContainer](PersistentDataContainer.aus.md).
+
+
+- **getRawData** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html#getRawData()
+
+	- **@r** `An` int.
+
+
+- **getSeed** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html#getSeed()
+
+	- **@r** `An` int.
+
+
+- **getShards** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html#getShards()
+
+	- **@r** `A` list.
+
+
+- **getSherd** (`Side`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html#getSherd(org.bukkit.block.DecoratedPot.Side)
+
+	- **@p** `Side` is a string naming a [Side](Side.aus.md).
+	- **@r** `A` string naming a [Material](Material.aus.md).
+
+
+- **getSherds** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html#getSherds()
+
+	- **@r** `A` map.
+
+
+- **getSnapshotInventory** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html#getSnapshotInventory()
+
+	- **@r** `A` [DecoratedPotInventory](DecoratedPotInventory.aus.md).
+
+
+- **getType** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html#getType()
 
 	- **@r** `A` string naming a [Material](Material.aus.md).
 
 
-- **getPistonMoveReaction** ()
+- **getWorld** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/DecoratedPot.html#getPistonMoveReaction()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html#getWorld()
 
-	- **@r** `A` string naming a [PistonMoveReaction](PistonMoveReaction.aus.md).
-
-
-- **getPlacementMaterial** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/DecoratedPot.html#getPlacementMaterial()
-
-	- **@r** `A` string naming a [Material](Material.aus.md).
+	- **@r** `A` [World](World.aus.md).
 
 
-- **getSoundGroup** ()
+- **getX** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/DecoratedPot.html#getSoundGroup()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html#getX()
 
-	- **@r** `A` [SoundGroup](SoundGroup.aus.md).
-
-
-- **isCracked** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/DecoratedPot.html#isCracked()
-
-	- **@r** `A` bool.
+	- **@r** `An` int.
 
 
-- **isFaceSturdy** (`Face, Support`)
+- **getY** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/DecoratedPot.html#isFaceSturdy(org.bukkit.block.BlockFace,org.bukkit.block.BlockSupport)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html#getY()
 
-	- **@p** `Face` is a string naming a [BlockFace](BlockFace.aus.md).
-	- **@p** `Support` is a string naming a [BlockSupport](BlockSupport.aus.md).
-	- **@r** `A` bool.
+	- **@r** `An` int.
 
 
-- **isOccluding** ()
+- **getZ** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/DecoratedPot.html#isOccluding()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html#getZ()
+
+	- **@r** `An` int.
+
+
+- **hasLootTable** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html#hasLootTable()
 
 	- **@r** `A` bool.
 
 
-- **isPreferredTool** (`Tool`)
+- **hasMetadata** (`MetadataKey`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/DecoratedPot.html#isPreferredTool(org.bukkit.inventory.ItemStack)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html#hasMetadata(java.lang.String)
 
-	- **@p** `Tool` is an [ItemStack](ItemStack.aus.md).
+	- **@p** `MetadataKey` is a string.
 	- **@r** `A` bool.
 
 
-- **isRandomlyTicked** ()
+- **isCollidable** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/DecoratedPot.html#isRandomlyTicked()
-
-	- **@r** `A` bool.
-
-
-- **isReplaceable** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/DecoratedPot.html#isReplaceable()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html#isCollidable()
 
 	- **@r** `A` bool.
 
 
-- **isSupported** (`Block`)
+- **isPlaced** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/DecoratedPot.html#isSupported(org.bukkit.block.Block)
-
-	- **@p** `Block` is a [Block](Block.aus.md).
-	- **@r** `A` bool.
-
-
-- **isSupported\_location** (`Location`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/DecoratedPot.html#isSupported(org.bukkit.Location)
-
-	- **@p** `Location` is a [Location](Location.aus.md).
-	- **@r** `A` bool.
-
-
-- **isWaterlogged** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/DecoratedPot.html#isWaterlogged()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html#isPlaced()
 
 	- **@r** `A` bool.
 
 
-- **matches** (`Data`)
+- **isSnapshot** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/DecoratedPot.html#matches(org.bukkit.block.data.BlockData)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html#isSnapshot()
+
+	- **@r** `A` bool.
+
+
+- **isSuffocating** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html#isSuffocating()
+
+	- **@r** `A` bool.
+
+
+- **setBlockData** (`Data`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html#setBlockData(org.bukkit.block.data.BlockData)
 
 	- **@p** `Data` is a [BlockData](BlockData.aus.md).
+
+
+- **setLootTable** (`Table`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html#setLootTable(org.bukkit.loot.LootTable)
+
+	- **@p** `Table` is a [LootTable](LootTable.aus.md).
+
+
+- **setLootTable** (`Table, Seed`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html#setLootTable(org.bukkit.loot.LootTable,long)
+
+	- **@p** `Table` is a [LootTable](LootTable.aus.md).
+	- **@p** `Seed` is an int.
+
+
+- **setMetadata** (`MetadataKey, NewMetadataValue`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html#setMetadata(java.lang.String,org.bukkit.metadata.MetadataValue)
+
+	- **@p** `MetadataKey` is a string.
+	- **@p** `NewMetadataValue` is a [MetadataValue](MetadataValue.aus.md).
+
+
+- **setRawData** (`Data`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html#setRawData(byte)
+
+	- **@p** `Data` is an int.
+
+
+- **setSeed** (`Seed`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html#setSeed(long)
+
+	- **@p** `Seed` is an int.
+
+
+- **setSherd** (`Side, Sherd`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html#setSherd(org.bukkit.block.DecoratedPot.Side,org.bukkit.Material)
+
+	- **@p** `Side` is a string naming a [Side](Side.aus.md).
+	- **@p** `Sherd` is a string naming a [Material](Material.aus.md).
+
+
+- **setType** (`Type`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html#setType(org.bukkit.Material)
+
+	- **@p** `Type` is a string naming a [Material](Material.aus.md).
+
+
+- **startWobble** (`Style`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html#startWobble(org.bukkit.block.DecoratedPot.WobbleStyle)
+
+	- **@p** `Style` is a string naming a DecoratedPot.WobbleStyle.
+
+
+- **update** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html#update()
+
 	- **@r** `A` bool.
 
 
-- **merge** (`Data`)
+- **update** (`Force`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/DecoratedPot.html#merge(org.bukkit.block.data.BlockData)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html#update(boolean)
 
-	- **@p** `Data` is a [BlockData](BlockData.aus.md).
-	- **@r** `A` [BlockData](BlockData.aus.md).
-
-
-- **mirror** (`Mirror`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/DecoratedPot.html#mirror(org.bukkit.block.structure.Mirror)
-
-	- **@p** `Mirror` is a string naming a [Mirror](Mirror.aus.md).
-
-
-- **requiresCorrectToolForDrops** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/DecoratedPot.html#requiresCorrectToolForDrops()
-
+	- **@p** `Force` is a bool.
 	- **@r** `A` bool.
 
 
-- **rotate** (`Rotation`)
+- **update** (`Force, ApplyPhysics`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/DecoratedPot.html#rotate(org.bukkit.block.structure.StructureRotation)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html#update(boolean,boolean)
 
-	- **@p** `Rotation` is a string naming a [StructureRotation](StructureRotation.aus.md).
-
-
-- **setCracked** (`Cracked`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/DecoratedPot.html#setCracked(boolean)
-
-	- **@p** `Cracked` is a bool.
+	- **@p** `Force` is a bool.
+	- **@p** `ApplyPhysics` is a bool.
+	- **@r** `A` bool.
 
 
-- **setFacing** (`Facing`)
+- **removeMetadata** (`MetadataKey, OwningPlugin`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/DecoratedPot.html#setFacing(org.bukkit.block.BlockFace)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/DecoratedPot.html#removeMetadata(java.lang.String,org.bukkit.plugin.Plugin)
 
-	- **@p** `Facing` is a string naming a [BlockFace](BlockFace.aus.md).
-
-
-- **setWaterlogged** (`Waterlogged`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/DecoratedPot.html#setWaterlogged(boolean)
-
-	- **@p** `Waterlogged` is a bool.
+	- **@p** `MetadataKey` is a string.
+	- **@p** `OwningPlugin` is a [Plugin](Plugin.aus.md).
 
 
 

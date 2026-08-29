@@ -174,13 +174,6 @@ Tier: trusted. Do not edit.
 	- **@r** `A` [Vector](Vector.aus.md).
 
 
-- **getDisplayBlock** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/minecart/PoweredMinecart.html#getDisplayBlock()
-
-	- **@r** `A` [MaterialData](MaterialData.aus.md).
-
-
 - **getDisplayBlockData** ()
 
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/minecart/PoweredMinecart.html#getDisplayBlockData()
@@ -1049,13 +1042,6 @@ Tier: trusted. Do not edit.
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/minecart/PoweredMinecart.html#setDerailedVelocityMod(org.bukkit.util.Vector)
 
 	- **@p** `Derailed` is a [Vector](Vector.aus.md).
-
-
-- **setDisplayBlock** (`Material`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/minecart/PoweredMinecart.html#setDisplayBlock(org.bukkit.material.MaterialData)
-
-	- **@p** `Material` is a [MaterialData](MaterialData.aus.md).
 
 
 - **setDisplayBlockData** (`BlockData`)

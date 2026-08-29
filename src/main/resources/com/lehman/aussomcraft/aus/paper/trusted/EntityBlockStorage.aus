@@ -68,13 +68,6 @@ extern class EntityBlockStorage : com.lehman.aussomcraft.paper.gen.trusted.Entit
     public extern getChunk();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EntityBlockStorage.html#getData()
-     *
-     * @r A [MaterialData](MaterialData.aus.md).
-     */
-    public extern getData();
-
-    /**
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EntityBlockStorage.html#getDrops()
      *
      * @r A list.
@@ -247,13 +240,6 @@ extern class EntityBlockStorage : com.lehman.aussomcraft.paper.gen.trusted.Entit
      * @p Data is a [BlockData](BlockData.aus.md).
      */
     public extern setBlockData(Data);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EntityBlockStorage.html#setData(org.bukkit.material.MaterialData)
-     *
-     * @p Data is a [MaterialData](MaterialData.aus.md).
-     */
-    public extern setData(Data);
 
     /**
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/EntityBlockStorage.html#setMaxEntities(int)

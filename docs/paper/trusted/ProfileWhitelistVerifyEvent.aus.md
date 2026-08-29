@@ -34,7 +34,7 @@ Tier: trusted. Do not edit.
 
 	> Paper: https://jd.papermc.io/paper/1.21.10/com/destroystokyo/paper/event/profile/ProfileWhitelistVerifyEvent.html#getPlayerProfile()
 
-	- **@r** `A` [PlayerProfile](PlayerProfile.aus.md).
+	- **@r** `A` ProfilePlayerProfile.
 
 
 - **isAsynchronous** ()

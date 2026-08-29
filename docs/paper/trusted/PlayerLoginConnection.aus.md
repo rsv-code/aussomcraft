@@ -28,14 +28,14 @@ Tier: trusted. Do not edit.
 
 	> Paper: https://jd.papermc.io/paper/1.21.10/io/papermc/paper/connection/PlayerLoginConnection.html#getAuthenticatedProfile()
 
-	- **@r** `A` [PlayerProfile](PlayerProfile.aus.md).
+	- **@r** `A` ProfilePlayerProfile.
 
 
 - **getUnsafeProfile** ()
 
 	> Paper: https://jd.papermc.io/paper/1.21.10/io/papermc/paper/connection/PlayerLoginConnection.html#getUnsafeProfile()
 
-	- **@r** `A` [PlayerProfile](PlayerProfile.aus.md).
+	- **@r** `A` ProfilePlayerProfile.
 
 
 - **isConnected** ()

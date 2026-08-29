@@ -6,11 +6,11 @@
  */
 
 /**
- * Generated shim for org.bukkit.block.data.type.TrialSpawner.
+ * Generated shim for org.bukkit.block.TrialSpawner.
  *
- * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrialSpawner.html
+ * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html
  *
- * In Paper this is a [BlockData](BlockData.aus.md).
+ * In Paper this is a [TileState](TileState.aus.md).
  * Every method it inherits is declared here too, so there is
  * nothing to follow up to.
  *
@@ -20,227 +20,374 @@ extern class TrialSpawner : com.lehman.aussomcraft.paper.gen.trusted.TrialSpawne
     public extern __opEq__(A0);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrialSpawner.html#clone()
-     *
-     * @r A [BlockData](BlockData.aus.md).
-     */
-    public extern clone();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrialSpawner.html#copyTo(org.bukkit.block.data.BlockData)
-     *
-     * @p Other is a [BlockData](BlockData.aus.md).
-     */
-    public extern copyTo(Other);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrialSpawner.html#createBlockState()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#copy()
      *
      * @r A [BlockState](BlockState.aus.md).
      */
-    public extern createBlockState();
+    public extern copy();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrialSpawner.html#getAsString()
-     *
-     * @r A string.
-     */
-    public extern getAsString();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrialSpawner.html#getAsString(boolean)
-     *
-     * @p HideUnspecified is a bool.
-     * @r A string.
-     */
-    public extern getAsString(HideUnspecified);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrialSpawner.html#getCollisionShape(org.bukkit.Location)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#copy(org.bukkit.Location)
      *
      * @p Location is a [Location](Location.aus.md).
-     * @r A [VoxelShape](VoxelShape.aus.md).
+     * @r A [BlockState](BlockState.aus.md).
      */
-    public extern getCollisionShape(Location);
+    public extern copy(Location);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrialSpawner.html#getDestroySpeed(org.bukkit.inventory.ItemStack)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#getBlock()
      *
-     * @p ItemStack is an [ItemStack](ItemStack.aus.md).
-     * @r A double.
+     * @r A [Block](Block.aus.md).
      */
-    public extern getDestroySpeed(ItemStack);
+    public extern getBlock();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrialSpawner.html#getDestroySpeed(org.bukkit.inventory.ItemStack,boolean)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#getBlockData()
      *
-     * @p ItemStack is an [ItemStack](ItemStack.aus.md).
-     * @p ConsiderEnchants is a bool.
-     * @r A double.
+     * @r A [BlockData](BlockData.aus.md).
      */
-    public extern getDestroySpeed(ItemStack, ConsiderEnchants);
+    public extern getBlockData();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrialSpawner.html#getLightEmission()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#getChunk()
+     *
+     * @r A [Chunk](Chunk.aus.md).
+     */
+    public extern getChunk();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#getCooldownEnd()
      *
      * @r An int.
      */
-    public extern getLightEmission();
+    public extern getCooldownEnd();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrialSpawner.html#getMapColor()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#getCooldownLength()
      *
-     * @r A [Color](Color.aus.md).
+     * @r An int.
      */
-    public extern getMapColor();
+    public extern getCooldownLength();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrialSpawner.html#getMaterial()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#getDrops()
+     *
+     * @r A list.
+     */
+    public extern getDrops();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#getDrops(org.bukkit.inventory.ItemStack)
+     *
+     * @p Tool is an [ItemStack](ItemStack.aus.md).
+     * @r A list.
+     */
+    public extern getDrops(Tool);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#getDrops(org.bukkit.inventory.ItemStack,org.bukkit.entity.Entity)
+     *
+     * @p Tool is an [ItemStack](ItemStack.aus.md).
+     * @p Entity is an [Entity](Entity.aus.md).
+     * @r A list.
+     */
+    public extern getDrops(Tool, Entity);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#getLightLevel()
+     *
+     * @r An int.
+     */
+    public extern getLightLevel();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#getLocation()
+     *
+     * @r A [Location](Location.aus.md).
+     */
+    public extern getLocation();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#getLocation(org.bukkit.Location)
+     *
+     * @p Loc is a [Location](Location.aus.md).
+     * @r A [Location](Location.aus.md).
+     */
+    public extern getLocation(Loc);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#getMetadata(java.lang.String)
+     *
+     * @p MetadataKey is a string.
+     * @r A list.
+     */
+    public extern getMetadata(MetadataKey);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#getNextSpawnAttempt()
+     *
+     * @r An int.
+     */
+    public extern getNextSpawnAttempt();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#getNormalConfiguration()
+     *
+     * @r A
+     * [TrialSpawnerConfiguration](TrialSpawnerConfiguration.aus.md).
+     */
+    public extern getNormalConfiguration();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#getOminousConfiguration()
+     *
+     * @r A
+     * [TrialSpawnerConfiguration](TrialSpawnerConfiguration.aus.md).
+     */
+    public extern getOminousConfiguration();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#getPersistentDataContainer()
+     *
+     * @r A [PersistentDataContainer](PersistentDataContainer.aus.md).
+     */
+    public extern getPersistentDataContainer();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#getRawData()
+     *
+     * @r An int.
+     */
+    public extern getRawData();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#getRequiredPlayerRange()
+     *
+     * @r An int.
+     */
+    public extern getRequiredPlayerRange();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#getTrackedEntities()
+     *
+     * @r A list.
+     */
+    public extern getTrackedEntities();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#getTrackedPlayers()
+     *
+     * @r A list.
+     */
+    public extern getTrackedPlayers();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#getType()
      *
      * @r A string naming a [Material](Material.aus.md).
      */
-    public extern getMaterial();
+    public extern getType();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrialSpawner.html#getPistonMoveReaction()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#getWorld()
      *
-     * @r A string naming a
-     * [PistonMoveReaction](PistonMoveReaction.aus.md).
+     * @r A [World](World.aus.md).
      */
-    public extern getPistonMoveReaction();
+    public extern getWorld();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrialSpawner.html#getPlacementMaterial()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#getX()
      *
-     * @r A string naming a [Material](Material.aus.md).
+     * @r An int.
      */
-    public extern getPlacementMaterial();
+    public extern getX();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrialSpawner.html#getSoundGroup()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#getY()
      *
-     * @r A [SoundGroup](SoundGroup.aus.md).
+     * @r An int.
      */
-    public extern getSoundGroup();
+    public extern getY();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrialSpawner.html#getTrialSpawnerState()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#getZ()
      *
-     * @r A string naming a TrialSpawner.State.
+     * @r An int.
      */
-    public extern getTrialSpawnerState();
+    public extern getZ();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrialSpawner.html#isFaceSturdy(org.bukkit.block.BlockFace,org.bukkit.block.BlockSupport)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#hasMetadata(java.lang.String)
      *
-     * @p Face is a string naming a [BlockFace](BlockFace.aus.md).
-     * @p Support is a string naming a
-     * [BlockSupport](BlockSupport.aus.md).
+     * @p MetadataKey is a string.
      * @r A bool.
      */
-    public extern isFaceSturdy(Face, Support);
+    public extern hasMetadata(MetadataKey);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrialSpawner.html#isOccluding()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#isCollidable()
      *
      * @r A bool.
      */
-    public extern isOccluding();
+    public extern isCollidable();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrialSpawner.html#isOminous()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#isOminous()
      *
      * @r A bool.
      */
     public extern isOminous();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrialSpawner.html#isPreferredTool(org.bukkit.inventory.ItemStack)
-     *
-     * @p Tool is an [ItemStack](ItemStack.aus.md).
-     * @r A bool.
-     */
-    public extern isPreferredTool(Tool);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrialSpawner.html#isRandomlyTicked()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#isPlaced()
      *
      * @r A bool.
      */
-    public extern isRandomlyTicked();
+    public extern isPlaced();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrialSpawner.html#isReplaceable()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#isSnapshot()
      *
      * @r A bool.
      */
-    public extern isReplaceable();
+    public extern isSnapshot();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrialSpawner.html#isSupported(org.bukkit.block.Block)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#isSuffocating()
      *
-     * @p Block is a [Block](Block.aus.md).
      * @r A bool.
      */
-    public extern isSupported(Block);
+    public extern isSuffocating();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrialSpawner.html#isSupported(org.bukkit.Location)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#isTrackingEntity(org.bukkit.entity.Entity)
      *
-     * @p Location is a [Location](Location.aus.md).
+     * @p Entity is an [Entity](Entity.aus.md).
      * @r A bool.
      */
-    public extern isSupported_location(Location);
+    public extern isTrackingEntity(Entity);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrialSpawner.html#matches(org.bukkit.block.data.BlockData)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#isTrackingPlayer(org.bukkit.entity.Player)
+     *
+     * @p Player is a [Player](Player.aus.md).
+     * @r A bool.
+     */
+    public extern isTrackingPlayer(Player);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#setBlockData(org.bukkit.block.data.BlockData)
      *
      * @p Data is a [BlockData](BlockData.aus.md).
-     * @r A bool.
      */
-    public extern matches(Data);
+    public extern setBlockData(Data);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrialSpawner.html#merge(org.bukkit.block.data.BlockData)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#setCooldownEnd(long)
      *
-     * @p Data is a [BlockData](BlockData.aus.md).
-     * @r A [BlockData](BlockData.aus.md).
+     * @p Ticks is an int.
      */
-    public extern merge(Data);
+    public extern setCooldownEnd(Ticks);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrialSpawner.html#mirror(org.bukkit.block.structure.Mirror)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#setCooldownLength(int)
      *
-     * @p Mirror is a string naming a [Mirror](Mirror.aus.md).
+     * @p Ticks is an int.
      */
-    public extern mirror(Mirror);
+    public extern setCooldownLength(Ticks);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrialSpawner.html#requiresCorrectToolForDrops()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#setMetadata(java.lang.String,org.bukkit.metadata.MetadataValue)
      *
-     * @r A bool.
+     * @p MetadataKey is a string.
+     * @p NewMetadataValue is a [MetadataValue](MetadataValue.aus.md).
      */
-    public extern requiresCorrectToolForDrops();
+    public extern setMetadata(MetadataKey, NewMetadataValue);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrialSpawner.html#rotate(org.bukkit.block.structure.StructureRotation)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#setNextSpawnAttempt(long)
      *
-     * @p Rotation is a string naming a
-     * [StructureRotation](StructureRotation.aus.md).
+     * @p Ticks is an int.
      */
-    public extern rotate(Rotation);
+    public extern setNextSpawnAttempt(Ticks);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrialSpawner.html#setOminous(boolean)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#setOminous(boolean)
      *
      * @p Ominous is a bool.
      */
     public extern setOminous(Ominous);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/TrialSpawner.html#setTrialSpawnerState(org.bukkit.block.data.type.TrialSpawner.State)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#setRawData(byte)
      *
-     * @p State is a string naming a TrialSpawner.State.
+     * @p Data is an int.
      */
-    public extern setTrialSpawnerState(State);
+    public extern setRawData(Data);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#setRequiredPlayerRange(int)
+     *
+     * @p RequiredPlayerRange is an int.
+     */
+    public extern setRequiredPlayerRange(RequiredPlayerRange);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#setType(org.bukkit.Material)
+     *
+     * @p Type is a string naming a [Material](Material.aus.md).
+     */
+    public extern setType(Type);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#startTrackingEntity(org.bukkit.entity.Entity)
+     *
+     * @p Entity is an [Entity](Entity.aus.md).
+     */
+    public extern startTrackingEntity(Entity);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#startTrackingPlayer(org.bukkit.entity.Player)
+     *
+     * @p Player is a [Player](Player.aus.md).
+     */
+    public extern startTrackingPlayer(Player);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#stopTrackingEntity(org.bukkit.entity.Entity)
+     *
+     * @p Entity is an [Entity](Entity.aus.md).
+     */
+    public extern stopTrackingEntity(Entity);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#stopTrackingPlayer(org.bukkit.entity.Player)
+     *
+     * @p Player is a [Player](Player.aus.md).
+     */
+    public extern stopTrackingPlayer(Player);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#update()
+     *
+     * @r A bool.
+     */
+    public extern update();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#update(boolean)
+     *
+     * @p Force is a bool.
+     * @r A bool.
+     */
+    public extern update(Force);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/TrialSpawner.html#update(boolean,boolean)
+     *
+     * @p Force is a bool.
+     * @p ApplyPhysics is a bool.
+     * @r A bool.
+     */
+    public extern update(Force, ApplyPhysics);
 }

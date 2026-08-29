@@ -6,13 +6,11 @@
  */
 
 /**
- * Generated shim for org.bukkit.material.Comparator.
+ * Generated shim for org.bukkit.block.Comparator.
  *
- * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Comparator.html
+ * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html
  *
- * In Paper this is a [Directional](Directional.aus.md),
- * [Redstone](Redstone.aus.md) and
- * [MaterialData](MaterialData.aus.md).
+ * In Paper this is a [TileState](TileState.aus.md).
  * Every method it inherits is declared here too, so there is
  * nothing to follow up to.
  *
@@ -22,109 +20,230 @@ extern class Comparator : com.lehman.aussomcraft.paper.gen.trusted.ComparatorShi
     public extern __opEq__(A0);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Comparator.html#clone()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#copy()
      *
-     * @r A [Comparator](Comparator.aus.md).
+     * @r A [BlockState](BlockState.aus.md).
      */
-    public extern clone();
+    public extern copy();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Comparator.html#equals(java.lang.Object)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#copy(org.bukkit.Location)
      *
-     * @p Obj is an Object.
-     * @r A bool.
+     * @p Location is a [Location](Location.aus.md).
+     * @r A [BlockState](BlockState.aus.md).
      */
-    public extern equals(Obj);
+    public extern copy(Location);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Comparator.html#getData()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#getBlock()
+     *
+     * @r A [Block](Block.aus.md).
+     */
+    public extern getBlock();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#getBlockData()
+     *
+     * @r A [BlockData](BlockData.aus.md).
+     */
+    public extern getBlockData();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#getChunk()
+     *
+     * @r A [Chunk](Chunk.aus.md).
+     */
+    public extern getChunk();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#getDrops()
+     *
+     * @r A list.
+     */
+    public extern getDrops();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#getDrops(org.bukkit.inventory.ItemStack)
+     *
+     * @p Tool is an [ItemStack](ItemStack.aus.md).
+     * @r A list.
+     */
+    public extern getDrops(Tool);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#getDrops(org.bukkit.inventory.ItemStack,org.bukkit.entity.Entity)
+     *
+     * @p Tool is an [ItemStack](ItemStack.aus.md).
+     * @p Entity is an [Entity](Entity.aus.md).
+     * @r A list.
+     */
+    public extern getDrops(Tool, Entity);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#getLightLevel()
      *
      * @r An int.
      */
-    public extern getData();
+    public extern getLightLevel();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Comparator.html#getFacing()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#getLocation()
      *
-     * @r A string naming a [BlockFace](BlockFace.aus.md).
+     * @r A [Location](Location.aus.md).
      */
-    public extern getFacing();
+    public extern getLocation();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Comparator.html#getItemType()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#getLocation(org.bukkit.Location)
+     *
+     * @p Loc is a [Location](Location.aus.md).
+     * @r A [Location](Location.aus.md).
+     */
+    public extern getLocation(Loc);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#getMetadata(java.lang.String)
+     *
+     * @p MetadataKey is a string.
+     * @r A list.
+     */
+    public extern getMetadata(MetadataKey);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#getPersistentDataContainer()
+     *
+     * @r A [PersistentDataContainer](PersistentDataContainer.aus.md).
+     */
+    public extern getPersistentDataContainer();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#getRawData()
+     *
+     * @r An int.
+     */
+    public extern getRawData();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#getType()
      *
      * @r A string naming a [Material](Material.aus.md).
      */
-    public extern getItemType();
+    public extern getType();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Comparator.html#hashCode()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#getWorld()
+     *
+     * @r A [World](World.aus.md).
+     */
+    public extern getWorld();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#getX()
      *
      * @r An int.
      */
-    public extern hashCode();
+    public extern getX();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Comparator.html#isBeingPowered()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#getY()
+     *
+     * @r An int.
+     */
+    public extern getY();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#getZ()
+     *
+     * @r An int.
+     */
+    public extern getZ();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#hasMetadata(java.lang.String)
+     *
+     * @p MetadataKey is a string.
+     * @r A bool.
+     */
+    public extern hasMetadata(MetadataKey);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#isCollidable()
      *
      * @r A bool.
      */
-    public extern isBeingPowered();
+    public extern isCollidable();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Comparator.html#isPowered()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#isPlaced()
      *
      * @r A bool.
      */
-    public extern isPowered();
+    public extern isPlaced();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Comparator.html#isSubtractionMode()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#isSnapshot()
      *
      * @r A bool.
      */
-    public extern isSubtractionMode();
+    public extern isSnapshot();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Comparator.html#setData(byte)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#isSuffocating()
+     *
+     * @r A bool.
+     */
+    public extern isSuffocating();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#setBlockData(org.bukkit.block.data.BlockData)
+     *
+     * @p Data is a [BlockData](BlockData.aus.md).
+     */
+    public extern setBlockData(Data);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#setMetadata(java.lang.String,org.bukkit.metadata.MetadataValue)
+     *
+     * @p MetadataKey is a string.
+     * @p NewMetadataValue is a [MetadataValue](MetadataValue.aus.md).
+     */
+    public extern setMetadata(MetadataKey, NewMetadataValue);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#setRawData(byte)
      *
      * @p Data is an int.
      */
-    public extern setData(Data);
+    public extern setRawData(Data);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Comparator.html#setFacingDirection(org.bukkit.block.BlockFace)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#setType(org.bukkit.Material)
      *
-     * @p Face is a string naming a [BlockFace](BlockFace.aus.md).
+     * @p Type is a string naming a [Material](Material.aus.md).
      */
-    public extern setFacingDirection(Face);
+    public extern setType(Type);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Comparator.html#setSubtractionMode(boolean)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#update()
      *
-     * @p IsSubtraction is a bool.
+     * @r A bool.
      */
-    public extern setSubtractionMode(IsSubtraction);
+    public extern update();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Comparator.html#toItemStack()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#update(boolean)
      *
-     * @r An [ItemStack](ItemStack.aus.md).
+     * @p Force is a bool.
+     * @r A bool.
      */
-    public extern toItemStack();
+    public extern update(Force);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Comparator.html#toItemStack(int)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Comparator.html#update(boolean,boolean)
      *
-     * @p Amount is an int.
-     * @r An [ItemStack](ItemStack.aus.md).
+     * @p Force is a bool.
+     * @p ApplyPhysics is a bool.
+     * @r A bool.
      */
-    public extern toItemStack(Amount);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Comparator.html#toString()
-     *
-     * @r A string.
-     */
-    public extern toString();
+    public extern update(Force, ApplyPhysics);
 }

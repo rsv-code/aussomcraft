@@ -207,13 +207,6 @@ Tier: trusted. Do not edit.
 	- **@r** `A` bool.
 
 
-- **getData** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/ItemStack.html#getData()
-
-	- **@r** `A` [MaterialData](MaterialData.aus.md).
-
-
 - **getData** (`Type`)
 
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/ItemStack.html#getData(io.papermc.paper.datacomponent.DataComponentType.Valued)
@@ -307,7 +300,7 @@ Tier: trusted. Do not edit.
 
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/ItemStack.html#getRarity()
 
-	- **@r** `An` string naming an [ItemRarity](ItemRarity.aus.md).
+	- **@r** `A` string naming an InventoryItemRarity.
 
 
 - **getTranslationKey** ()

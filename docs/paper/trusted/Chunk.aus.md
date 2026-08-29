@@ -141,7 +141,7 @@ Tier: trusted. Do not edit.
 
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/Chunk.html#getStructures(org.bukkit.generator.structure.Structure)
 
-	- **@p** `Structure` is a [Structure](Structure.aus.md).
+	- **@p** `Structure` is a StructureStructure.
 	- **@r** `A` list.
 
 

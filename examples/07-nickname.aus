@@ -1,7 +1,9 @@
 /*
  * A command that takes an argument.
  *
- * Runs untrusted. Try /nick Bob, then /nick on its own, then /nick clear.
+ * Runs untrusted, so the command is namespaced. Try
+ * /07-nickname.aus:nick Bob, then the same with no argument, then with
+ * clear. Trust the script and it answers to /nick as well.
  */
 
 /**

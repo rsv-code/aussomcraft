@@ -66,7 +66,7 @@ Tier: dangerous. Do not edit.
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/Registry.html#getTag(io.papermc.paper.registry.tag.TagKey)
 
 	- **@p** `A0` is a [TagKey](TagKey.aus.md).
-	- **@r** `A` [Tag](Tag.aus.md).
+	- **@r** `A` TagTag.
 
 
 - **getTagValues** (`A0`)

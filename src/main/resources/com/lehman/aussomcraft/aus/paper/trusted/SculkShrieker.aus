@@ -6,11 +6,11 @@
  */
 
 /**
- * Generated shim for org.bukkit.block.data.type.SculkShrieker.
+ * Generated shim for org.bukkit.block.SculkShrieker.
  *
- * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/SculkShrieker.html
+ * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/SculkShrieker.html
  *
- * In Paper this is a [Waterlogged](Waterlogged.aus.md).
+ * In Paper this is a [TileState](TileState.aus.md).
  * Every method it inherits is declared here too, so there is
  * nothing to follow up to.
  *
@@ -20,241 +20,251 @@ extern class SculkShrieker : com.lehman.aussomcraft.paper.gen.trusted.SculkShrie
     public extern __opEq__(A0);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/SculkShrieker.html#clone()
-     *
-     * @r A [BlockData](BlockData.aus.md).
-     */
-    public extern clone();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/SculkShrieker.html#copyTo(org.bukkit.block.data.BlockData)
-     *
-     * @p Other is a [BlockData](BlockData.aus.md).
-     */
-    public extern copyTo(Other);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/SculkShrieker.html#createBlockState()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/SculkShrieker.html#copy()
      *
      * @r A [BlockState](BlockState.aus.md).
      */
-    public extern createBlockState();
+    public extern copy();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/SculkShrieker.html#getAsString()
-     *
-     * @r A string.
-     */
-    public extern getAsString();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/SculkShrieker.html#getAsString(boolean)
-     *
-     * @p HideUnspecified is a bool.
-     * @r A string.
-     */
-    public extern getAsString(HideUnspecified);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/SculkShrieker.html#getCollisionShape(org.bukkit.Location)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/SculkShrieker.html#copy(org.bukkit.Location)
      *
      * @p Location is a [Location](Location.aus.md).
-     * @r A [VoxelShape](VoxelShape.aus.md).
+     * @r A [BlockState](BlockState.aus.md).
      */
-    public extern getCollisionShape(Location);
+    public extern copy(Location);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/SculkShrieker.html#getDestroySpeed(org.bukkit.inventory.ItemStack)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/SculkShrieker.html#getBlock()
      *
-     * @p ItemStack is an [ItemStack](ItemStack.aus.md).
-     * @r A double.
+     * @r A [Block](Block.aus.md).
      */
-    public extern getDestroySpeed(ItemStack);
+    public extern getBlock();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/SculkShrieker.html#getDestroySpeed(org.bukkit.inventory.ItemStack,boolean)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/SculkShrieker.html#getBlockData()
      *
-     * @p ItemStack is an [ItemStack](ItemStack.aus.md).
-     * @p ConsiderEnchants is a bool.
-     * @r A double.
+     * @r A [BlockData](BlockData.aus.md).
      */
-    public extern getDestroySpeed(ItemStack, ConsiderEnchants);
+    public extern getBlockData();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/SculkShrieker.html#getLightEmission()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/SculkShrieker.html#getChunk()
+     *
+     * @r A [Chunk](Chunk.aus.md).
+     */
+    public extern getChunk();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/SculkShrieker.html#getDrops()
+     *
+     * @r A list.
+     */
+    public extern getDrops();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/SculkShrieker.html#getDrops(org.bukkit.inventory.ItemStack)
+     *
+     * @p Tool is an [ItemStack](ItemStack.aus.md).
+     * @r A list.
+     */
+    public extern getDrops(Tool);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/SculkShrieker.html#getDrops(org.bukkit.inventory.ItemStack,org.bukkit.entity.Entity)
+     *
+     * @p Tool is an [ItemStack](ItemStack.aus.md).
+     * @p Entity is an [Entity](Entity.aus.md).
+     * @r A list.
+     */
+    public extern getDrops(Tool, Entity);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/SculkShrieker.html#getLightLevel()
      *
      * @r An int.
      */
-    public extern getLightEmission();
+    public extern getLightLevel();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/SculkShrieker.html#getMapColor()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/SculkShrieker.html#getLocation()
      *
-     * @r A [Color](Color.aus.md).
+     * @r A [Location](Location.aus.md).
      */
-    public extern getMapColor();
+    public extern getLocation();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/SculkShrieker.html#getMaterial()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/SculkShrieker.html#getLocation(org.bukkit.Location)
+     *
+     * @p Loc is a [Location](Location.aus.md).
+     * @r A [Location](Location.aus.md).
+     */
+    public extern getLocation(Loc);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/SculkShrieker.html#getMetadata(java.lang.String)
+     *
+     * @p MetadataKey is a string.
+     * @r A list.
+     */
+    public extern getMetadata(MetadataKey);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/SculkShrieker.html#getPersistentDataContainer()
+     *
+     * @r A [PersistentDataContainer](PersistentDataContainer.aus.md).
+     */
+    public extern getPersistentDataContainer();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/SculkShrieker.html#getRawData()
+     *
+     * @r An int.
+     */
+    public extern getRawData();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/SculkShrieker.html#getType()
      *
      * @r A string naming a [Material](Material.aus.md).
      */
-    public extern getMaterial();
+    public extern getType();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/SculkShrieker.html#getPistonMoveReaction()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/SculkShrieker.html#getWarningLevel()
      *
-     * @r A string naming a
-     * [PistonMoveReaction](PistonMoveReaction.aus.md).
+     * @r An int.
      */
-    public extern getPistonMoveReaction();
+    public extern getWarningLevel();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/SculkShrieker.html#getPlacementMaterial()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/SculkShrieker.html#getWorld()
      *
-     * @r A string naming a [Material](Material.aus.md).
+     * @r A [World](World.aus.md).
      */
-    public extern getPlacementMaterial();
+    public extern getWorld();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/SculkShrieker.html#getSoundGroup()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/SculkShrieker.html#getX()
      *
-     * @r A [SoundGroup](SoundGroup.aus.md).
+     * @r An int.
      */
-    public extern getSoundGroup();
+    public extern getX();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/SculkShrieker.html#isCanSummon()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/SculkShrieker.html#getY()
+     *
+     * @r An int.
+     */
+    public extern getY();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/SculkShrieker.html#getZ()
+     *
+     * @r An int.
+     */
+    public extern getZ();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/SculkShrieker.html#hasMetadata(java.lang.String)
+     *
+     * @p MetadataKey is a string.
+     * @r A bool.
+     */
+    public extern hasMetadata(MetadataKey);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/SculkShrieker.html#isCollidable()
      *
      * @r A bool.
      */
-    public extern isCanSummon();
+    public extern isCollidable();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/SculkShrieker.html#isFaceSturdy(org.bukkit.block.BlockFace,org.bukkit.block.BlockSupport)
-     *
-     * @p Face is a string naming a [BlockFace](BlockFace.aus.md).
-     * @p Support is a string naming a
-     * [BlockSupport](BlockSupport.aus.md).
-     * @r A bool.
-     */
-    public extern isFaceSturdy(Face, Support);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/SculkShrieker.html#isOccluding()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/SculkShrieker.html#isPlaced()
      *
      * @r A bool.
      */
-    public extern isOccluding();
+    public extern isPlaced();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/SculkShrieker.html#isPreferredTool(org.bukkit.inventory.ItemStack)
-     *
-     * @p Tool is an [ItemStack](ItemStack.aus.md).
-     * @r A bool.
-     */
-    public extern isPreferredTool(Tool);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/SculkShrieker.html#isRandomlyTicked()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/SculkShrieker.html#isSnapshot()
      *
      * @r A bool.
      */
-    public extern isRandomlyTicked();
+    public extern isSnapshot();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/SculkShrieker.html#isReplaceable()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/SculkShrieker.html#isSuffocating()
      *
      * @r A bool.
      */
-    public extern isReplaceable();
+    public extern isSuffocating();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/SculkShrieker.html#isShrieking()
-     *
-     * @r A bool.
-     */
-    public extern isShrieking();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/SculkShrieker.html#isSupported(org.bukkit.block.Block)
-     *
-     * @p Block is a [Block](Block.aus.md).
-     * @r A bool.
-     */
-    public extern isSupported(Block);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/SculkShrieker.html#isSupported(org.bukkit.Location)
-     *
-     * @p Location is a [Location](Location.aus.md).
-     * @r A bool.
-     */
-    public extern isSupported_location(Location);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/SculkShrieker.html#isWaterlogged()
-     *
-     * @r A bool.
-     */
-    public extern isWaterlogged();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/SculkShrieker.html#matches(org.bukkit.block.data.BlockData)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/SculkShrieker.html#setBlockData(org.bukkit.block.data.BlockData)
      *
      * @p Data is a [BlockData](BlockData.aus.md).
+     */
+    public extern setBlockData(Data);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/SculkShrieker.html#setMetadata(java.lang.String,org.bukkit.metadata.MetadataValue)
+     *
+     * @p MetadataKey is a string.
+     * @p NewMetadataValue is a [MetadataValue](MetadataValue.aus.md).
+     */
+    public extern setMetadata(MetadataKey, NewMetadataValue);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/SculkShrieker.html#setRawData(byte)
+     *
+     * @p Data is an int.
+     */
+    public extern setRawData(Data);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/SculkShrieker.html#setType(org.bukkit.Material)
+     *
+     * @p Type is a string naming a [Material](Material.aus.md).
+     */
+    public extern setType(Type);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/SculkShrieker.html#setWarningLevel(int)
+     *
+     * @p Level is an int.
+     */
+    public extern setWarningLevel(Level);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/SculkShrieker.html#tryShriek(org.bukkit.entity.Player)
+     *
+     * @p Player is a [Player](Player.aus.md).
+     */
+    public extern tryShriek(Player);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/SculkShrieker.html#update()
+     *
      * @r A bool.
      */
-    public extern matches(Data);
+    public extern update();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/SculkShrieker.html#merge(org.bukkit.block.data.BlockData)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/SculkShrieker.html#update(boolean)
      *
-     * @p Data is a [BlockData](BlockData.aus.md).
-     * @r A [BlockData](BlockData.aus.md).
-     */
-    public extern merge(Data);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/SculkShrieker.html#mirror(org.bukkit.block.structure.Mirror)
-     *
-     * @p Mirror is a string naming a [Mirror](Mirror.aus.md).
-     */
-    public extern mirror(Mirror);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/SculkShrieker.html#requiresCorrectToolForDrops()
-     *
+     * @p Force is a bool.
      * @r A bool.
      */
-    public extern requiresCorrectToolForDrops();
+    public extern update(Force);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/SculkShrieker.html#rotate(org.bukkit.block.structure.StructureRotation)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/SculkShrieker.html#update(boolean,boolean)
      *
-     * @p Rotation is a string naming a
-     * [StructureRotation](StructureRotation.aus.md).
+     * @p Force is a bool.
+     * @p ApplyPhysics is a bool.
+     * @r A bool.
      */
-    public extern rotate(Rotation);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/SculkShrieker.html#setCanSummon(boolean)
-     *
-     * @p Can_summon is a bool.
-     */
-    public extern setCanSummon(Can_summon);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/SculkShrieker.html#setShrieking(boolean)
-     *
-     * @p Shrieking is a bool.
-     */
-    public extern setShrieking(Shrieking);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/SculkShrieker.html#setWaterlogged(boolean)
-     *
-     * @p Waterlogged is a bool.
-     */
-    public extern setWaterlogged(Waterlogged);
+    public extern update(Force, ApplyPhysics);
 }

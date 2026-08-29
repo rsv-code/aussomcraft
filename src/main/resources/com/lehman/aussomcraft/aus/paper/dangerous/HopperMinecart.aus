@@ -190,13 +190,6 @@ extern class HopperMinecart : com.lehman.aussomcraft.paper.gen.dangerous.HopperM
     public extern getDerailedVelocityMod();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/minecart/HopperMinecart.html#getDisplayBlock()
-     *
-     * @r A [MaterialData](MaterialData.aus.md).
-     */
-    public extern getDisplayBlock();
-
-    /**
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/minecart/HopperMinecart.html#getDisplayBlockData()
      *
      * @r A [BlockData](BlockData.aus.md).
@@ -1177,13 +1170,6 @@ extern class HopperMinecart : com.lehman.aussomcraft.paper.gen.dangerous.HopperM
      * @p Derailed is a [Vector](Vector.aus.md).
      */
     public extern setDerailedVelocityMod(Derailed);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/minecart/HopperMinecart.html#setDisplayBlock(org.bukkit.material.MaterialData)
-     *
-     * @p Material is a [MaterialData](MaterialData.aus.md).
-     */
-    public extern setDisplayBlock(Material);
 
     /**
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/minecart/HopperMinecart.html#setDisplayBlockData(org.bukkit.block.data.BlockData)

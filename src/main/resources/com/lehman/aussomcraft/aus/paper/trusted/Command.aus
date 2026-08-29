@@ -6,14 +6,9 @@
  */
 
 /**
- * Generated shim for org.bukkit.material.Command.
+ * Generated shim for org.bukkit.command.Command.
  *
- * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Command.html
- *
- * In Paper this is a [Redstone](Redstone.aus.md) and
- * [MaterialData](MaterialData.aus.md).
- * Every method it inherits is declared here too, so there is
- * nothing to follow up to.
+ * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/command/Command.html
  *
  * Tier: trusted. Do not edit.
  */
@@ -21,79 +16,196 @@ extern class Command : com.lehman.aussomcraft.paper.gen.trusted.CommandShim {
     public extern __opEq__(A0);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Command.html#clone()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/command/Command.html#broadcastCommandMessage(org.bukkit.command.CommandSender,net.kyori.adventure.text.Component)
      *
+     * @p Source is a [CommandSender](CommandSender.aus.md).
+     * @p Message is a Component.
+     */
+    public extern broadcastCommandMessage_CommandSender_Component(Source, Message);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/command/Command.html#broadcastCommandMessage(org.bukkit.command.CommandSender,java.lang.String)
+     *
+     * @p Source is a [CommandSender](CommandSender.aus.md).
+     * @p Message is a string.
+     */
+    public extern broadcastCommandMessage(Source, Message);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/command/Command.html#broadcastCommandMessage(org.bukkit.command.CommandSender,net.kyori.adventure.text.Component,boolean)
+     *
+     * @p Source is a [CommandSender](CommandSender.aus.md).
+     * @p Message is a Component.
+     * @p SendToSource is a bool.
+     */
+    public extern broadcastCommandMessage_CommandSender_Component_boolean(Source, Message, SendToSource);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/command/Command.html#broadcastCommandMessage(org.bukkit.command.CommandSender,java.lang.String,boolean)
+     *
+     * @p Source is a [CommandSender](CommandSender.aus.md).
+     * @p Message is a string.
+     * @p SendToSource is a bool.
+     */
+    public extern broadcastCommandMessage(Source, Message, SendToSource);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/command/Command.html#canBeOverriden()
+     *
+     * @r A bool.
+     */
+    public extern canBeOverriden();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/command/Command.html#getAliases()
+     *
+     * @r A list.
+     */
+    public extern getAliases();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/command/Command.html#getDescription()
+     *
+     * @r A string.
+     */
+    public extern getDescription();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/command/Command.html#getLabel()
+     *
+     * @r A string.
+     */
+    public extern getLabel();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/command/Command.html#getName()
+     *
+     * @r A string.
+     */
+    public extern getName();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/command/Command.html#getPermission()
+     *
+     * @r A string.
+     */
+    public extern getPermission();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/command/Command.html#getPermissionMessage()
+     *
+     * @r A string.
+     */
+    public extern getPermissionMessage();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/command/Command.html#getTimingName()
+     *
+     * @r A string.
+     */
+    public extern getTimingName();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/command/Command.html#getUsage()
+     *
+     * @r A string.
+     */
+    public extern getUsage();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/command/Command.html#isRegistered()
+     *
+     * @r A bool.
+     */
+    public extern isRegistered();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/command/Command.html#permissionMessage()
+     *
+     * @r A Component.
+     */
+    public extern permissionMessage();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/command/Command.html#permissionMessage(net.kyori.adventure.text.Component)
+     *
+     * @p PermissionMessage is a Component.
+     */
+    public extern permissionMessage(PermissionMessage);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/command/Command.html#setAliases(java.util.List)
+     *
+     * @p Aliases is a list.
      * @r A [Command](Command.aus.md).
      */
-    public extern clone();
+    public extern setAliases(Aliases);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Command.html#equals(java.lang.Object)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/command/Command.html#setDescription(java.lang.String)
      *
-     * @p Obj is an Object.
+     * @p Description is a string.
+     * @r A [Command](Command.aus.md).
+     */
+    public extern setDescription(Description);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/command/Command.html#setLabel(java.lang.String)
+     *
+     * @p Name is a string.
      * @r A bool.
      */
-    public extern equals(Obj);
+    public extern setLabel(Name);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Command.html#getData()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/command/Command.html#setName(java.lang.String)
      *
-     * @r An int.
-     */
-    public extern getData();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Command.html#getItemType()
-     *
-     * @r A string naming a [Material](Material.aus.md).
-     */
-    public extern getItemType();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Command.html#hashCode()
-     *
-     * @r An int.
-     */
-    public extern hashCode();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Command.html#isPowered()
-     *
+     * @p Name is a string.
      * @r A bool.
      */
-    public extern isPowered();
+    public extern setName(Name);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Command.html#setData(byte)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/command/Command.html#setPermission(java.lang.String)
      *
-     * @p Data is an int.
+     * @p Permission is a string.
      */
-    public extern setData(Data);
+    public extern setPermission(Permission);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Command.html#setPowered(boolean)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/command/Command.html#setPermissionMessage(java.lang.String)
      *
-     * @p Bool is a bool.
+     * @p PermissionMessage is a string.
+     * @r A [Command](Command.aus.md).
      */
-    public extern setPowered(Bool);
+    public extern setPermissionMessage(PermissionMessage);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Command.html#toItemStack()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/command/Command.html#setUsage(java.lang.String)
      *
-     * @r An [ItemStack](ItemStack.aus.md).
+     * @p Usage is a string.
+     * @r A [Command](Command.aus.md).
      */
-    public extern toItemStack();
+    public extern setUsage(Usage);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Command.html#toItemStack(int)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/command/Command.html#testPermission(org.bukkit.command.CommandSender)
      *
-     * @p Amount is an int.
-     * @r An [ItemStack](ItemStack.aus.md).
+     * @p Target is a [CommandSender](CommandSender.aus.md).
+     * @r A bool.
      */
-    public extern toItemStack(Amount);
+    public extern testPermission(Target);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Command.html#toString()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/command/Command.html#testPermissionSilent(org.bukkit.command.CommandSender)
+     *
+     * @p Target is a [CommandSender](CommandSender.aus.md).
+     * @r A bool.
+     */
+    public extern testPermissionSilent(Target);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/command/Command.html#toString()
      *
      * @r A string.
      */

@@ -6,13 +6,11 @@
  */
 
 /**
- * Generated shim for org.bukkit.block.data.type.CopperGolemStatue.
+ * Generated shim for org.bukkit.block.CopperGolemStatue.
  *
- * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html
+ * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html
  *
- * In Paper this is a [BlockData](BlockData.aus.md),
- * [Directional](Directional.aus.md) and
- * [Waterlogged](Waterlogged.aus.md).
+ * In Paper this is a [TileState](TileState.aus.md).
  * Every method it inherits is declared here too, so there is
  * nothing to follow up to.
  *
@@ -22,248 +20,230 @@ extern class CopperGolemStatue : com.lehman.aussomcraft.paper.gen.trusted.Copper
     public extern __opEq__(A0);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#clone()
-     *
-     * @r A [BlockData](BlockData.aus.md).
-     */
-    public extern clone();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#copyTo(org.bukkit.block.data.BlockData)
-     *
-     * @p Other is a [BlockData](BlockData.aus.md).
-     */
-    public extern copyTo(Other);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#createBlockState()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#copy()
      *
      * @r A [BlockState](BlockState.aus.md).
      */
-    public extern createBlockState();
+    public extern copy();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#getAsString()
-     *
-     * @r A string.
-     */
-    public extern getAsString();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#getAsString(boolean)
-     *
-     * @p HideUnspecified is a bool.
-     * @r A string.
-     */
-    public extern getAsString(HideUnspecified);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#getCollisionShape(org.bukkit.Location)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#copy(org.bukkit.Location)
      *
      * @p Location is a [Location](Location.aus.md).
-     * @r A [VoxelShape](VoxelShape.aus.md).
+     * @r A [BlockState](BlockState.aus.md).
      */
-    public extern getCollisionShape(Location);
+    public extern copy(Location);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#getCopperGolemPose()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#getBlock()
      *
-     * @r A string naming a [Pose](Pose.aus.md).
+     * @r A [Block](Block.aus.md).
      */
-    public extern getCopperGolemPose();
+    public extern getBlock();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#getDestroySpeed(org.bukkit.inventory.ItemStack)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#getBlockData()
      *
-     * @p ItemStack is an [ItemStack](ItemStack.aus.md).
-     * @r A double.
+     * @r A [BlockData](BlockData.aus.md).
      */
-    public extern getDestroySpeed(ItemStack);
+    public extern getBlockData();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#getDestroySpeed(org.bukkit.inventory.ItemStack,boolean)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#getChunk()
      *
-     * @p ItemStack is an [ItemStack](ItemStack.aus.md).
-     * @p ConsiderEnchants is a bool.
-     * @r A double.
+     * @r A [Chunk](Chunk.aus.md).
      */
-    public extern getDestroySpeed(ItemStack, ConsiderEnchants);
+    public extern getChunk();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#getFaces()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#getDrops()
      *
      * @r A list.
      */
-    public extern getFaces();
+    public extern getDrops();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#getFacing()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#getDrops(org.bukkit.inventory.ItemStack)
      *
-     * @r A string naming a [BlockFace](BlockFace.aus.md).
+     * @p Tool is an [ItemStack](ItemStack.aus.md).
+     * @r A list.
      */
-    public extern getFacing();
+    public extern getDrops(Tool);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#getLightEmission()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#getDrops(org.bukkit.inventory.ItemStack,org.bukkit.entity.Entity)
+     *
+     * @p Tool is an [ItemStack](ItemStack.aus.md).
+     * @p Entity is an [Entity](Entity.aus.md).
+     * @r A list.
+     */
+    public extern getDrops(Tool, Entity);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#getLightLevel()
      *
      * @r An int.
      */
-    public extern getLightEmission();
+    public extern getLightLevel();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#getMapColor()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#getLocation()
      *
-     * @r A [Color](Color.aus.md).
+     * @r A [Location](Location.aus.md).
      */
-    public extern getMapColor();
+    public extern getLocation();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#getMaterial()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#getLocation(org.bukkit.Location)
+     *
+     * @p Loc is a [Location](Location.aus.md).
+     * @r A [Location](Location.aus.md).
+     */
+    public extern getLocation(Loc);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#getMetadata(java.lang.String)
+     *
+     * @p MetadataKey is a string.
+     * @r A list.
+     */
+    public extern getMetadata(MetadataKey);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#getPersistentDataContainer()
+     *
+     * @r A [PersistentDataContainer](PersistentDataContainer.aus.md).
+     */
+    public extern getPersistentDataContainer();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#getRawData()
+     *
+     * @r An int.
+     */
+    public extern getRawData();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#getType()
      *
      * @r A string naming a [Material](Material.aus.md).
      */
-    public extern getMaterial();
+    public extern getType();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#getPistonMoveReaction()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#getWorld()
      *
-     * @r A string naming a
-     * [PistonMoveReaction](PistonMoveReaction.aus.md).
+     * @r A [World](World.aus.md).
      */
-    public extern getPistonMoveReaction();
+    public extern getWorld();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#getPlacementMaterial()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#getX()
      *
-     * @r A string naming a [Material](Material.aus.md).
+     * @r An int.
      */
-    public extern getPlacementMaterial();
+    public extern getX();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#getSoundGroup()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#getY()
      *
-     * @r A [SoundGroup](SoundGroup.aus.md).
+     * @r An int.
      */
-    public extern getSoundGroup();
+    public extern getY();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#isFaceSturdy(org.bukkit.block.BlockFace,org.bukkit.block.BlockSupport)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#getZ()
      *
-     * @p Face is a string naming a [BlockFace](BlockFace.aus.md).
-     * @p Support is a string naming a
-     * [BlockSupport](BlockSupport.aus.md).
+     * @r An int.
+     */
+    public extern getZ();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#hasMetadata(java.lang.String)
+     *
+     * @p MetadataKey is a string.
      * @r A bool.
      */
-    public extern isFaceSturdy(Face, Support);
+    public extern hasMetadata(MetadataKey);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#isOccluding()
-     *
-     * @r A bool.
-     */
-    public extern isOccluding();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#isPreferredTool(org.bukkit.inventory.ItemStack)
-     *
-     * @p Tool is an [ItemStack](ItemStack.aus.md).
-     * @r A bool.
-     */
-    public extern isPreferredTool(Tool);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#isRandomlyTicked()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#isCollidable()
      *
      * @r A bool.
      */
-    public extern isRandomlyTicked();
+    public extern isCollidable();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#isReplaceable()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#isPlaced()
      *
      * @r A bool.
      */
-    public extern isReplaceable();
+    public extern isPlaced();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#isSupported(org.bukkit.block.Block)
-     *
-     * @p Block is a [Block](Block.aus.md).
-     * @r A bool.
-     */
-    public extern isSupported(Block);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#isSupported(org.bukkit.Location)
-     *
-     * @p Location is a [Location](Location.aus.md).
-     * @r A bool.
-     */
-    public extern isSupported_location(Location);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#isWaterlogged()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#isSnapshot()
      *
      * @r A bool.
      */
-    public extern isWaterlogged();
+    public extern isSnapshot();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#matches(org.bukkit.block.data.BlockData)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#isSuffocating()
+     *
+     * @r A bool.
+     */
+    public extern isSuffocating();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#setBlockData(org.bukkit.block.data.BlockData)
      *
      * @p Data is a [BlockData](BlockData.aus.md).
+     */
+    public extern setBlockData(Data);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#setMetadata(java.lang.String,org.bukkit.metadata.MetadataValue)
+     *
+     * @p MetadataKey is a string.
+     * @p NewMetadataValue is a [MetadataValue](MetadataValue.aus.md).
+     */
+    public extern setMetadata(MetadataKey, NewMetadataValue);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#setRawData(byte)
+     *
+     * @p Data is an int.
+     */
+    public extern setRawData(Data);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#setType(org.bukkit.Material)
+     *
+     * @p Type is a string naming a [Material](Material.aus.md).
+     */
+    public extern setType(Type);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#update()
+     *
      * @r A bool.
      */
-    public extern matches(Data);
+    public extern update();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#merge(org.bukkit.block.data.BlockData)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#update(boolean)
      *
-     * @p Data is a [BlockData](BlockData.aus.md).
-     * @r A [BlockData](BlockData.aus.md).
-     */
-    public extern merge(Data);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#mirror(org.bukkit.block.structure.Mirror)
-     *
-     * @p Mirror is a string naming a [Mirror](Mirror.aus.md).
-     */
-    public extern mirror(Mirror);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#requiresCorrectToolForDrops()
-     *
+     * @p Force is a bool.
      * @r A bool.
      */
-    public extern requiresCorrectToolForDrops();
+    public extern update(Force);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#rotate(org.bukkit.block.structure.StructureRotation)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CopperGolemStatue.html#update(boolean,boolean)
      *
-     * @p Rotation is a string naming a
-     * [StructureRotation](StructureRotation.aus.md).
+     * @p Force is a bool.
+     * @p ApplyPhysics is a bool.
+     * @r A bool.
      */
-    public extern rotate(Rotation);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#setCopperGolemPose(org.bukkit.block.data.type.CopperGolemStatue.Pose)
-     *
-     * @p Pose is a string naming a [Pose](Pose.aus.md).
-     */
-    public extern setCopperGolemPose(Pose);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#setFacing(org.bukkit.block.BlockFace)
-     *
-     * @p Facing is a string naming a [BlockFace](BlockFace.aus.md).
-     */
-    public extern setFacing(Facing);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CopperGolemStatue.html#setWaterlogged(boolean)
-     *
-     * @p Waterlogged is a bool.
-     */
-    public extern setWaterlogged(Waterlogged);
+    public extern update(Force, ApplyPhysics);
 }

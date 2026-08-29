@@ -2,13 +2,11 @@
 
 ## class: HangingSign
 
-[21:14] (extern: com.lehman.aussomcraft.paper.gen.dangerous.HangingSignShim) **extends: object** 
+[19:14] (extern: com.lehman.aussomcraft.paper.gen.dangerous.HangingSignShim) **extends: object** 
 
-Generated shim for org.bukkit.block.data.type.HangingSign.
-Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html
-In Paper this is a [Attachable](Attachable.aus.md),
-[Rotatable](Rotatable.aus.md) and
-[Waterlogged](Waterlogged.aus.md).
+Generated shim for org.bukkit.block.HangingSign.
+Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html
+In Paper this is a [Sign](Sign.aus.md).
 Every method it inherits is declared here too, so there is
 nothing to follow up to.
 Tier: dangerous. Do not edit.
@@ -18,240 +16,397 @@ Tier: dangerous. Do not edit.
 - **\_\_opEq\_\_** (`A0`)
 
 
-- **clone** ()
+- **copy** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#clone()
-
-	- **@r** `A` [BlockData](BlockData.aus.md).
-
-
-- **copyTo** (`Other`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#copyTo(org.bukkit.block.data.BlockData)
-
-	- **@p** `Other` is a [BlockData](BlockData.aus.md).
-
-
-- **createBlockState** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#createBlockState()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#copy()
 
 	- **@r** `A` [BlockState](BlockState.aus.md).
 
 
-- **getAsString** ()
+- **copy** (`Location`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#getAsString()
-
-	- **@r** `A` string.
-
-
-- **getAsString** (`HideUnspecified`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#getAsString(boolean)
-
-	- **@p** `HideUnspecified` is a bool.
-	- **@r** `A` string.
-
-
-- **getCollisionShape** (`Location`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#getCollisionShape(org.bukkit.Location)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#copy(org.bukkit.Location)
 
 	- **@p** `Location` is a [Location](Location.aus.md).
-	- **@r** `A` [VoxelShape](VoxelShape.aus.md).
+	- **@r** `A` [BlockState](BlockState.aus.md).
 
 
-- **getDestroySpeed** (`ItemStack`)
+- **getAllowedEditor** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#getDestroySpeed(org.bukkit.inventory.ItemStack)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getAllowedEditor()
 
-	- **@p** `ItemStack` is an [ItemStack](ItemStack.aus.md).
-	- **@r** `A` double.
-
-
-- **getDestroySpeed** (`ItemStack, ConsiderEnchants`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#getDestroySpeed(org.bukkit.inventory.ItemStack,boolean)
-
-	- **@p** `ItemStack` is an [ItemStack](ItemStack.aus.md).
-	- **@p** `ConsiderEnchants` is a bool.
-	- **@r** `A` double.
+	- **@r** `A` [Player](Player.aus.md).
 
 
-- **getLightEmission** ()
+- **getAllowedEditorUniqueId** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#getLightEmission()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getAllowedEditorUniqueId()
+
+	- **@r** `A` string.
+
+
+- **getBlock** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getBlock()
+
+	- **@r** `A` [Block](Block.aus.md).
+
+
+- **getBlockData** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getBlockData()
+
+	- **@r** `A` [BlockData](BlockData.aus.md).
+
+
+- **getChunk** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getChunk()
+
+	- **@r** `A` [Chunk](Chunk.aus.md).
+
+
+- **getColor** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getColor()
+
+	- **@r** `A` string naming a [DyeColor](DyeColor.aus.md).
+
+
+- **getDrops** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getDrops()
+
+	- **@r** `A` list.
+
+
+- **getDrops** (`Tool`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getDrops(org.bukkit.inventory.ItemStack)
+
+	- **@p** `Tool` is an [ItemStack](ItemStack.aus.md).
+	- **@r** `A` list.
+
+
+- **getDrops** (`Tool, Entity`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getDrops(org.bukkit.inventory.ItemStack,org.bukkit.entity.Entity)
+
+	- **@p** `Tool` is an [ItemStack](ItemStack.aus.md).
+	- **@p** `Entity` is an [Entity](Entity.aus.md).
+	- **@r** `A` list.
+
+
+- **getInteractableSideFor** (`Entity`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getInteractableSideFor(org.bukkit.entity.Entity)
+
+	- **@p** `Entity` is an [Entity](Entity.aus.md).
+	- **@r** `A` string naming a [Side](Side.aus.md).
+
+
+- **getInteractableSideFor\_position** (`Position`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getInteractableSideFor(io.papermc.paper.math.Position)
+
+	- **@p** `Position` is a [Position](Position.aus.md).
+	- **@r** `A` string naming a [Side](Side.aus.md).
+
+
+- **getInteractableSideFor** (`X, Z`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getInteractableSideFor(double,double)
+
+	- **@p** `X` is a double.
+	- **@p** `Z` is a double.
+	- **@r** `A` string naming a [Side](Side.aus.md).
+
+
+- **getLightLevel** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getLightLevel()
 
 	- **@r** `An` int.
 
 
-- **getMapColor** ()
+- **getLine** (`Index`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#getMapColor()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getLine(int)
 
-	- **@r** `A` [Color](Color.aus.md).
+	- **@p** `Index` is an int.
+	- **@r** `A` string.
 
 
-- **getMaterial** ()
+- **getLocation** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#getMaterial()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getLocation()
+
+	- **@r** `A` [Location](Location.aus.md).
+
+
+- **getLocation** (`Loc`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getLocation(org.bukkit.Location)
+
+	- **@p** `Loc` is a [Location](Location.aus.md).
+	- **@r** `A` [Location](Location.aus.md).
+
+
+- **getMetadata** (`MetadataKey`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getMetadata(java.lang.String)
+
+	- **@p** `MetadataKey` is a string.
+	- **@r** `A` list.
+
+
+- **getPersistentDataContainer** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getPersistentDataContainer()
+
+	- **@r** `A` [PersistentDataContainer](PersistentDataContainer.aus.md).
+
+
+- **getRawData** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getRawData()
+
+	- **@r** `An` int.
+
+
+- **getSide** (`Side`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getSide(org.bukkit.block.sign.Side)
+
+	- **@p** `Side` is a string naming a [Side](Side.aus.md).
+	- **@r** `A` [SignSide](SignSide.aus.md).
+
+
+- **getTargetSide** (`Player`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getTargetSide(org.bukkit.entity.Player)
+
+	- **@p** `Player` is a [Player](Player.aus.md).
+	- **@r** `A` [SignSide](SignSide.aus.md).
+
+
+- **getType** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getType()
 
 	- **@r** `A` string naming a [Material](Material.aus.md).
 
 
-- **getPistonMoveReaction** ()
+- **getWorld** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#getPistonMoveReaction()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getWorld()
 
-	- **@r** `A` string naming a [PistonMoveReaction](PistonMoveReaction.aus.md).
-
-
-- **getPlacementMaterial** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#getPlacementMaterial()
-
-	- **@r** `A` string naming a [Material](Material.aus.md).
+	- **@r** `A` [World](World.aus.md).
 
 
-- **getRotation** ()
+- **getX** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#getRotation()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getX()
 
-	- **@r** `A` string naming a [BlockFace](BlockFace.aus.md).
-
-
-- **getSoundGroup** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#getSoundGroup()
-
-	- **@r** `A` [SoundGroup](SoundGroup.aus.md).
+	- **@r** `An` int.
 
 
-- **isAttached** ()
+- **getY** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#isAttached()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getY()
+
+	- **@r** `An` int.
+
+
+- **getZ** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getZ()
+
+	- **@r** `An` int.
+
+
+- **hasMetadata** (`MetadataKey`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#hasMetadata(java.lang.String)
+
+	- **@p** `MetadataKey` is a string.
+	- **@r** `A` bool.
+
+
+- **isCollidable** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#isCollidable()
 
 	- **@r** `A` bool.
 
 
-- **isFaceSturdy** (`Face, Support`)
+- **isEditable** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#isFaceSturdy(org.bukkit.block.BlockFace,org.bukkit.block.BlockSupport)
-
-	- **@p** `Face` is a string naming a [BlockFace](BlockFace.aus.md).
-	- **@p** `Support` is a string naming a [BlockSupport](BlockSupport.aus.md).
-	- **@r** `A` bool.
-
-
-- **isOccluding** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#isOccluding()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#isEditable()
 
 	- **@r** `A` bool.
 
 
-- **isPreferredTool** (`Tool`)
+- **isGlowingText** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#isPreferredTool(org.bukkit.inventory.ItemStack)
-
-	- **@p** `Tool` is an [ItemStack](ItemStack.aus.md).
-	- **@r** `A` bool.
-
-
-- **isRandomlyTicked** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#isRandomlyTicked()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#isGlowingText()
 
 	- **@r** `A` bool.
 
 
-- **isReplaceable** ()
+- **isPlaced** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#isReplaceable()
-
-	- **@r** `A` bool.
-
-
-- **isSupported** (`Block`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#isSupported(org.bukkit.block.Block)
-
-	- **@p** `Block` is a [Block](Block.aus.md).
-	- **@r** `A` bool.
-
-
-- **isSupported\_location** (`Location`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#isSupported(org.bukkit.Location)
-
-	- **@p** `Location` is a [Location](Location.aus.md).
-	- **@r** `A` bool.
-
-
-- **isWaterlogged** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#isWaterlogged()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#isPlaced()
 
 	- **@r** `A` bool.
 
 
-- **matches** (`Data`)
+- **isSnapshot** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#matches(org.bukkit.block.data.BlockData)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#isSnapshot()
+
+	- **@r** `A` bool.
+
+
+- **isSuffocating** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#isSuffocating()
+
+	- **@r** `A` bool.
+
+
+- **isWaxed** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#isWaxed()
+
+	- **@r** `A` bool.
+
+
+- **line** (`Index`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#line(int)
+
+	- **@p** `Index` is an int.
+	- **@r** `A` Component.
+
+
+- **line** (`Index, Line`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#line(int,net.kyori.adventure.text.Component)
+
+	- **@p** `Index` is an int.
+	- **@p** `Line` is a Component.
+
+
+- **lines** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#lines()
+
+	- **@r** `A` list.
+
+
+- **setAllowedEditorUniqueId** (`Uuid`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#setAllowedEditorUniqueId(java.util.UUID)
+
+	- **@p** `Uuid` is a string.
+
+
+- **setBlockData** (`Data`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#setBlockData(org.bukkit.block.data.BlockData)
 
 	- **@p** `Data` is a [BlockData](BlockData.aus.md).
+
+
+- **setColor** (`Color`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#setColor(org.bukkit.DyeColor)
+
+	- **@p** `Color` is a string naming a [DyeColor](DyeColor.aus.md).
+
+
+- **setEditable** (`Editable`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#setEditable(boolean)
+
+	- **@p** `Editable` is a bool.
+
+
+- **setGlowingText** (`Glowing`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#setGlowingText(boolean)
+
+	- **@p** `Glowing` is a bool.
+
+
+- **setLine** (`Index, Line`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#setLine(int,java.lang.String)
+
+	- **@p** `Index` is an int.
+	- **@p** `Line` is a string.
+
+
+- **setMetadata** (`MetadataKey, NewMetadataValue`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#setMetadata(java.lang.String,org.bukkit.metadata.MetadataValue)
+
+	- **@p** `MetadataKey` is a string.
+	- **@p** `NewMetadataValue` is a [MetadataValue](MetadataValue.aus.md).
+
+
+- **setRawData** (`Data`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#setRawData(byte)
+
+	- **@p** `Data` is an int.
+
+
+- **setType** (`Type`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#setType(org.bukkit.Material)
+
+	- **@p** `Type` is a string naming a [Material](Material.aus.md).
+
+
+- **setWaxed** (`Waxed`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#setWaxed(boolean)
+
+	- **@p** `Waxed` is a bool.
+
+
+- **update** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#update()
+
 	- **@r** `A` bool.
 
 
-- **merge** (`Data`)
+- **update** (`Force`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#merge(org.bukkit.block.data.BlockData)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#update(boolean)
 
-	- **@p** `Data` is a [BlockData](BlockData.aus.md).
-	- **@r** `A` [BlockData](BlockData.aus.md).
-
-
-- **mirror** (`Mirror`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#mirror(org.bukkit.block.structure.Mirror)
-
-	- **@p** `Mirror` is a string naming a [Mirror](Mirror.aus.md).
-
-
-- **requiresCorrectToolForDrops** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#requiresCorrectToolForDrops()
-
+	- **@p** `Force` is a bool.
 	- **@r** `A` bool.
 
 
-- **rotate** (`Rotation`)
+- **update** (`Force, ApplyPhysics`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#rotate(org.bukkit.block.structure.StructureRotation)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#update(boolean,boolean)
 
-	- **@p** `Rotation` is a string naming a [StructureRotation](StructureRotation.aus.md).
-
-
-- **setAttached** (`Attached`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#setAttached(boolean)
-
-	- **@p** `Attached` is a bool.
+	- **@p** `Force` is a bool.
+	- **@p** `ApplyPhysics` is a bool.
+	- **@r** `A` bool.
 
 
-- **setRotation** (`Rotation`)
+- **removeMetadata** (`MetadataKey, OwningPlugin`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#setRotation(org.bukkit.block.BlockFace)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#removeMetadata(java.lang.String,org.bukkit.plugin.Plugin)
 
-	- **@p** `Rotation` is a string naming a [BlockFace](BlockFace.aus.md).
-
-
-- **setWaterlogged** (`Waterlogged`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#setWaterlogged(boolean)
-
-	- **@p** `Waterlogged` is a bool.
+	- **@p** `MetadataKey` is a string.
+	- **@p** `OwningPlugin` is a [Plugin](Plugin.aus.md).
 
 
 

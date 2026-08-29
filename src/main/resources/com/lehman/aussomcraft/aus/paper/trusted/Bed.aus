@@ -6,12 +6,11 @@
  */
 
 /**
- * Generated shim for org.bukkit.material.Bed.
+ * Generated shim for org.bukkit.block.Bed.
  *
- * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Bed.html
+ * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bed.html
  *
- * In Paper this is a [Directional](Directional.aus.md) and
- * [MaterialData](MaterialData.aus.md).
+ * In Paper this is a [TileState](TileState.aus.md).
  * Every method it inherits is declared here too, so there is
  * nothing to follow up to.
  *
@@ -21,95 +20,244 @@ extern class Bed : com.lehman.aussomcraft.paper.gen.trusted.BedShim {
     public extern __opEq__(A0);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Bed.html#clone()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bed.html#copy()
      *
-     * @r A [Bed](Bed.aus.md).
+     * @r A [BlockState](BlockState.aus.md).
      */
-    public extern clone();
+    public extern copy();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Bed.html#equals(java.lang.Object)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bed.html#copy(org.bukkit.Location)
      *
-     * @p Obj is an Object.
-     * @r A bool.
+     * @p Location is a [Location](Location.aus.md).
+     * @r A [BlockState](BlockState.aus.md).
      */
-    public extern equals(Obj);
+    public extern copy(Location);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Bed.html#getData()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bed.html#getBlock()
+     *
+     * @r A [Block](Block.aus.md).
+     */
+    public extern getBlock();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bed.html#getBlockData()
+     *
+     * @r A [BlockData](BlockData.aus.md).
+     */
+    public extern getBlockData();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bed.html#getChunk()
+     *
+     * @r A [Chunk](Chunk.aus.md).
+     */
+    public extern getChunk();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bed.html#getColor()
+     *
+     * @r A string naming a [DyeColor](DyeColor.aus.md).
+     */
+    public extern getColor();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bed.html#getDrops()
+     *
+     * @r A list.
+     */
+    public extern getDrops();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bed.html#getDrops(org.bukkit.inventory.ItemStack)
+     *
+     * @p Tool is an [ItemStack](ItemStack.aus.md).
+     * @r A list.
+     */
+    public extern getDrops(Tool);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bed.html#getDrops(org.bukkit.inventory.ItemStack,org.bukkit.entity.Entity)
+     *
+     * @p Tool is an [ItemStack](ItemStack.aus.md).
+     * @p Entity is an [Entity](Entity.aus.md).
+     * @r A list.
+     */
+    public extern getDrops(Tool, Entity);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bed.html#getLightLevel()
      *
      * @r An int.
      */
-    public extern getData();
+    public extern getLightLevel();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Bed.html#getFacing()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bed.html#getLocation()
      *
-     * @r A string naming a [BlockFace](BlockFace.aus.md).
+     * @r A [Location](Location.aus.md).
      */
-    public extern getFacing();
+    public extern getLocation();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Bed.html#getItemType()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bed.html#getLocation(org.bukkit.Location)
+     *
+     * @p Loc is a [Location](Location.aus.md).
+     * @r A [Location](Location.aus.md).
+     */
+    public extern getLocation(Loc);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bed.html#getMetadata(java.lang.String)
+     *
+     * @p MetadataKey is a string.
+     * @r A list.
+     */
+    public extern getMetadata(MetadataKey);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bed.html#getPersistentDataContainer()
+     *
+     * @r A [PersistentDataContainer](PersistentDataContainer.aus.md).
+     */
+    public extern getPersistentDataContainer();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bed.html#getRawData()
+     *
+     * @r An int.
+     */
+    public extern getRawData();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bed.html#getType()
      *
      * @r A string naming a [Material](Material.aus.md).
      */
-    public extern getItemType();
+    public extern getType();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Bed.html#hashCode()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bed.html#getWorld()
+     *
+     * @r A [World](World.aus.md).
+     */
+    public extern getWorld();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bed.html#getX()
      *
      * @r An int.
      */
-    public extern hashCode();
+    public extern getX();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Bed.html#isHeadOfBed()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bed.html#getY()
+     *
+     * @r An int.
+     */
+    public extern getY();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bed.html#getZ()
+     *
+     * @r An int.
+     */
+    public extern getZ();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bed.html#hasMetadata(java.lang.String)
+     *
+     * @p MetadataKey is a string.
+     * @r A bool.
+     */
+    public extern hasMetadata(MetadataKey);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bed.html#isCollidable()
      *
      * @r A bool.
      */
-    public extern isHeadOfBed();
+    public extern isCollidable();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Bed.html#setData(byte)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bed.html#isPlaced()
+     *
+     * @r A bool.
+     */
+    public extern isPlaced();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bed.html#isSnapshot()
+     *
+     * @r A bool.
+     */
+    public extern isSnapshot();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bed.html#isSuffocating()
+     *
+     * @r A bool.
+     */
+    public extern isSuffocating();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bed.html#setBlockData(org.bukkit.block.data.BlockData)
+     *
+     * @p Data is a [BlockData](BlockData.aus.md).
+     */
+    public extern setBlockData(Data);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bed.html#setColor(org.bukkit.DyeColor)
+     *
+     * @p Color is a string naming a [DyeColor](DyeColor.aus.md).
+     */
+    public extern setColor(Color);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bed.html#setMetadata(java.lang.String,org.bukkit.metadata.MetadataValue)
+     *
+     * @p MetadataKey is a string.
+     * @p NewMetadataValue is a [MetadataValue](MetadataValue.aus.md).
+     */
+    public extern setMetadata(MetadataKey, NewMetadataValue);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bed.html#setRawData(byte)
      *
      * @p Data is an int.
      */
-    public extern setData(Data);
+    public extern setRawData(Data);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Bed.html#setFacingDirection(org.bukkit.block.BlockFace)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bed.html#setType(org.bukkit.Material)
      *
-     * @p Face is a string naming a [BlockFace](BlockFace.aus.md).
+     * @p Type is a string naming a [Material](Material.aus.md).
      */
-    public extern setFacingDirection(Face);
+    public extern setType(Type);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Bed.html#setHeadOfBed(boolean)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bed.html#update()
      *
-     * @p IsHeadOfBed is a bool.
+     * @r A bool.
      */
-    public extern setHeadOfBed(IsHeadOfBed);
+    public extern update();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Bed.html#toItemStack()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bed.html#update(boolean)
      *
-     * @r An [ItemStack](ItemStack.aus.md).
+     * @p Force is a bool.
+     * @r A bool.
      */
-    public extern toItemStack();
+    public extern update(Force);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Bed.html#toItemStack(int)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Bed.html#update(boolean,boolean)
      *
-     * @p Amount is an int.
-     * @r An [ItemStack](ItemStack.aus.md).
+     * @p Force is a bool.
+     * @p ApplyPhysics is a bool.
+     * @r A bool.
      */
-    public extern toItemStack(Amount);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Bed.html#toString()
-     *
-     * @r A string.
-     */
-    public extern toString();
+    public extern update(Force, ApplyPhysics);
 }

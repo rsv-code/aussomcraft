@@ -104,13 +104,6 @@ extern class ShulkerBox : com.lehman.aussomcraft.paper.gen.trusted.ShulkerBoxShi
     public extern getCustomName();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/ShulkerBox.html#getData()
-     *
-     * @r A [MaterialData](MaterialData.aus.md).
-     */
-    public extern getData();
-
-    /**
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/ShulkerBox.html#getDrops()
      *
      * @r A list.
@@ -390,13 +383,6 @@ extern class ShulkerBox : com.lehman.aussomcraft.paper.gen.trusted.ShulkerBoxShi
      * @p Name is a string.
      */
     public extern setCustomName(Name);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/ShulkerBox.html#setData(org.bukkit.material.MaterialData)
-     *
-     * @p Data is a [MaterialData](MaterialData.aus.md).
-     */
-    public extern setData(Data);
 
     /**
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/ShulkerBox.html#setHasPlayerLooted(org.bukkit.entity.Player,boolean)

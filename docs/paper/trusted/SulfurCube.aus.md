@@ -2,13 +2,12 @@
 
 ## class: SulfurCube
 
-[21:14] (extern: com.lehman.aussomcraft.paper.gen.trusted.SulfurCubeShim) **extends: object** 
+[20:14] (extern: com.lehman.aussomcraft.paper.gen.trusted.SulfurCubeShim) **extends: object** 
 
 Generated shim for org.bukkit.entity.SulfurCube.
 Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/SulfurCube.html
 In Paper this is a [AbstractCubeMob](AbstractCubeMob.aus.md),
-[Shearable](Shearable.aus.md), [Bucketable](Bucketable.aus.md) and
-[Ageable](Ageable.aus.md).
+[Bucketable](Bucketable.aus.md) and [Ageable](Ageable.aus.md).
 Every method it inherits is declared here too, so there is
 nothing to follow up to.
 Tier: trusted. Do not edit.

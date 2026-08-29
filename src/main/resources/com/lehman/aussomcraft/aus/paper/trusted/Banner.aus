@@ -6,12 +6,12 @@
  */
 
 /**
- * Generated shim for org.bukkit.material.Banner.
+ * Generated shim for org.bukkit.block.Banner.
  *
- * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Banner.html
+ * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Banner.html
  *
- * In Paper this is a [Attachable](Attachable.aus.md) and
- * [MaterialData](MaterialData.aus.md).
+ * In Paper this is a [TileState](TileState.aus.md) and
+ * [Nameable](Nameable.aus.md).
  * Every method it inherits is declared here too, so there is
  * nothing to follow up to.
  *
@@ -21,95 +21,324 @@ extern class Banner : com.lehman.aussomcraft.paper.gen.trusted.BannerShim {
     public extern __opEq__(A0);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Banner.html#clone()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Banner.html#addPattern(org.bukkit.block.banner.Pattern)
      *
-     * @r A [Banner](Banner.aus.md).
+     * @p Pattern is a [Pattern](Pattern.aus.md).
      */
-    public extern clone();
+    public extern addPattern(Pattern);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Banner.html#equals(java.lang.Object)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Banner.html#copy()
      *
-     * @p Obj is an Object.
-     * @r A bool.
+     * @r A [BlockState](BlockState.aus.md).
      */
-    public extern equals(Obj);
+    public extern copy();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Banner.html#getAttachedFace()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Banner.html#copy(org.bukkit.Location)
      *
-     * @r A string naming a [BlockFace](BlockFace.aus.md).
+     * @p Location is a [Location](Location.aus.md).
+     * @r A [BlockState](BlockState.aus.md).
      */
-    public extern getAttachedFace();
+    public extern copy(Location);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Banner.html#getData()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Banner.html#customName()
      *
-     * @r An int.
+     * @r A Component.
      */
-    public extern getData();
+    public extern customName();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Banner.html#getFacing()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Banner.html#customName(net.kyori.adventure.text.Component)
      *
-     * @r A string naming a [BlockFace](BlockFace.aus.md).
+     * @p CustomName is a Component.
      */
-    public extern getFacing();
+    public extern customName(CustomName);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Banner.html#getItemType()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Banner.html#getBaseColor()
      *
-     * @r A string naming a [Material](Material.aus.md).
+     * @r A string naming a [DyeColor](DyeColor.aus.md).
      */
-    public extern getItemType();
+    public extern getBaseColor();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Banner.html#hashCode()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Banner.html#getBlock()
      *
-     * @r An int.
+     * @r A [Block](Block.aus.md).
      */
-    public extern hashCode();
+    public extern getBlock();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Banner.html#isWallBanner()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Banner.html#getBlockData()
      *
-     * @r A bool.
+     * @r A [BlockData](BlockData.aus.md).
      */
-    public extern isWallBanner();
+    public extern getBlockData();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Banner.html#setData(byte)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Banner.html#getChunk()
      *
-     * @p Data is an int.
+     * @r A [Chunk](Chunk.aus.md).
      */
-    public extern setData(Data);
+    public extern getChunk();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Banner.html#setFacingDirection(org.bukkit.block.BlockFace)
-     *
-     * @p Face is a string naming a [BlockFace](BlockFace.aus.md).
-     */
-    public extern setFacingDirection(Face);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Banner.html#toItemStack()
-     *
-     * @r An [ItemStack](ItemStack.aus.md).
-     */
-    public extern toItemStack();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Banner.html#toItemStack(int)
-     *
-     * @p Amount is an int.
-     * @r An [ItemStack](ItemStack.aus.md).
-     */
-    public extern toItemStack(Amount);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Banner.html#toString()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Banner.html#getCustomName()
      *
      * @r A string.
      */
-    public extern toString();
+    public extern getCustomName();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Banner.html#getDrops()
+     *
+     * @r A list.
+     */
+    public extern getDrops();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Banner.html#getDrops(org.bukkit.inventory.ItemStack)
+     *
+     * @p Tool is an [ItemStack](ItemStack.aus.md).
+     * @r A list.
+     */
+    public extern getDrops(Tool);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Banner.html#getDrops(org.bukkit.inventory.ItemStack,org.bukkit.entity.Entity)
+     *
+     * @p Tool is an [ItemStack](ItemStack.aus.md).
+     * @p Entity is an [Entity](Entity.aus.md).
+     * @r A list.
+     */
+    public extern getDrops(Tool, Entity);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Banner.html#getLightLevel()
+     *
+     * @r An int.
+     */
+    public extern getLightLevel();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Banner.html#getLocation()
+     *
+     * @r A [Location](Location.aus.md).
+     */
+    public extern getLocation();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Banner.html#getLocation(org.bukkit.Location)
+     *
+     * @p Loc is a [Location](Location.aus.md).
+     * @r A [Location](Location.aus.md).
+     */
+    public extern getLocation(Loc);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Banner.html#getMetadata(java.lang.String)
+     *
+     * @p MetadataKey is a string.
+     * @r A list.
+     */
+    public extern getMetadata(MetadataKey);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Banner.html#getPattern(int)
+     *
+     * @p I is an int.
+     * @r A [Pattern](Pattern.aus.md).
+     */
+    public extern getPattern(I);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Banner.html#getPatterns()
+     *
+     * @r A list.
+     */
+    public extern getPatterns();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Banner.html#getPersistentDataContainer()
+     *
+     * @r A [PersistentDataContainer](PersistentDataContainer.aus.md).
+     */
+    public extern getPersistentDataContainer();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Banner.html#getRawData()
+     *
+     * @r An int.
+     */
+    public extern getRawData();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Banner.html#getType()
+     *
+     * @r A string naming a [Material](Material.aus.md).
+     */
+    public extern getType();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Banner.html#getWorld()
+     *
+     * @r A [World](World.aus.md).
+     */
+    public extern getWorld();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Banner.html#getX()
+     *
+     * @r An int.
+     */
+    public extern getX();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Banner.html#getY()
+     *
+     * @r An int.
+     */
+    public extern getY();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Banner.html#getZ()
+     *
+     * @r An int.
+     */
+    public extern getZ();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Banner.html#hasMetadata(java.lang.String)
+     *
+     * @p MetadataKey is a string.
+     * @r A bool.
+     */
+    public extern hasMetadata(MetadataKey);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Banner.html#isCollidable()
+     *
+     * @r A bool.
+     */
+    public extern isCollidable();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Banner.html#isPlaced()
+     *
+     * @r A bool.
+     */
+    public extern isPlaced();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Banner.html#isSnapshot()
+     *
+     * @r A bool.
+     */
+    public extern isSnapshot();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Banner.html#isSuffocating()
+     *
+     * @r A bool.
+     */
+    public extern isSuffocating();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Banner.html#numberOfPatterns()
+     *
+     * @r An int.
+     */
+    public extern numberOfPatterns();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Banner.html#removePattern(int)
+     *
+     * @p I is an int.
+     * @r A [Pattern](Pattern.aus.md).
+     */
+    public extern removePattern(I);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Banner.html#setBaseColor(org.bukkit.DyeColor)
+     *
+     * @p Color is a string naming a [DyeColor](DyeColor.aus.md).
+     */
+    public extern setBaseColor(Color);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Banner.html#setBlockData(org.bukkit.block.data.BlockData)
+     *
+     * @p Data is a [BlockData](BlockData.aus.md).
+     */
+    public extern setBlockData(Data);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Banner.html#setCustomName(java.lang.String)
+     *
+     * @p Name is a string.
+     */
+    public extern setCustomName(Name);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Banner.html#setMetadata(java.lang.String,org.bukkit.metadata.MetadataValue)
+     *
+     * @p MetadataKey is a string.
+     * @p NewMetadataValue is a [MetadataValue](MetadataValue.aus.md).
+     */
+    public extern setMetadata(MetadataKey, NewMetadataValue);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Banner.html#setPattern(int,org.bukkit.block.banner.Pattern)
+     *
+     * @p I is an int.
+     * @p Pattern is a [Pattern](Pattern.aus.md).
+     */
+    public extern setPattern(I, Pattern);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Banner.html#setPatterns(java.util.List)
+     *
+     * @p Patterns is a list.
+     */
+    public extern setPatterns(Patterns);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Banner.html#setRawData(byte)
+     *
+     * @p Data is an int.
+     */
+    public extern setRawData(Data);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Banner.html#setType(org.bukkit.Material)
+     *
+     * @p Type is a string naming a [Material](Material.aus.md).
+     */
+    public extern setType(Type);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Banner.html#update()
+     *
+     * @r A bool.
+     */
+    public extern update();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Banner.html#update(boolean)
+     *
+     * @p Force is a bool.
+     * @r A bool.
+     */
+    public extern update(Force);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Banner.html#update(boolean,boolean)
+     *
+     * @p Force is a bool.
+     * @p ApplyPhysics is a bool.
+     * @r A bool.
+     */
+    public extern update(Force, ApplyPhysics);
 }

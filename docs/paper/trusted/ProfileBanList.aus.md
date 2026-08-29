@@ -42,7 +42,7 @@ Tier: trusted. Do not edit.
 
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/ban/ProfileBanList.html#addBan(com.destroystokyo.paper.profile.PlayerProfile,java.lang.String,java.util.Date,java.lang.String)
 
-	- **@p** `Target` is a [PlayerProfile](PlayerProfile.aus.md).
+	- **@p** `Target` is a ProfilePlayerProfile.
 	- **@p** `Reason` is a string.
 	- **@p** `Expires` is a Date.
 	- **@p** `Source` is a string.

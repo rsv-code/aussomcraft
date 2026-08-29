@@ -6,13 +6,12 @@
  */
 
 /**
- * Generated shim for org.bukkit.material.Hopper.
+ * Generated shim for org.bukkit.block.Hopper.
  *
- * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Hopper.html
+ * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html
  *
- * In Paper this is a [Directional](Directional.aus.md),
- * [Redstone](Redstone.aus.md) and
- * [MaterialData](MaterialData.aus.md).
+ * In Paper this is a [Container](Container.aus.md) and
+ * [LootableBlockInventory](LootableBlockInventory.aus.md).
  * Every method it inherits is declared here too, so there is
  * nothing to follow up to.
  *
@@ -22,102 +21,471 @@ extern class Hopper : com.lehman.aussomcraft.paper.gen.dangerous.HopperShim {
     public extern __opEq__(A0);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Hopper.html#clone()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#canPlayerLoot(java.util.UUID)
      *
-     * @r A [Hopper](Hopper.aus.md).
-     */
-    public extern clone();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Hopper.html#equals(java.lang.Object)
-     *
-     * @p Obj is an Object.
+     * @p Player is a string.
      * @r A bool.
      */
-    public extern equals(Obj);
+    public extern canPlayerLoot(Player);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Hopper.html#getData()
-     *
-     * @r An int.
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#clearLootTable()
      */
-    public extern getData();
+    public extern clearLootTable();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Hopper.html#getFacing()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#copy()
      *
-     * @r A string naming a [BlockFace](BlockFace.aus.md).
+     * @r A [BlockState](BlockState.aus.md).
      */
-    public extern getFacing();
+    public extern copy();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Hopper.html#getItemType()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#copy(org.bukkit.Location)
      *
-     * @r A string naming a [Material](Material.aus.md).
+     * @p Location is a [Location](Location.aus.md).
+     * @r A [BlockState](BlockState.aus.md).
      */
-    public extern getItemType();
+    public extern copy(Location);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Hopper.html#hashCode()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#customName()
      *
-     * @r An int.
+     * @r A Component.
      */
-    public extern hashCode();
+    public extern customName();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Hopper.html#isActive()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#customName(net.kyori.adventure.text.Component)
      *
-     * @r A bool.
+     * @p CustomName is a Component.
      */
-    public extern isActive();
+    public extern customName(CustomName);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Hopper.html#isPowered()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#getBlock()
      *
-     * @r A bool.
+     * @r A [Block](Block.aus.md).
      */
-    public extern isPowered();
+    public extern getBlock();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Hopper.html#setActive(boolean)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#getBlockData()
      *
-     * @p IsActive is a bool.
+     * @r A [BlockData](BlockData.aus.md).
      */
-    public extern setActive(IsActive);
+    public extern getBlockData();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Hopper.html#setData(byte)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#getChunk()
      *
-     * @p Data is an int.
+     * @r A [Chunk](Chunk.aus.md).
      */
-    public extern setData(Data);
+    public extern getChunk();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Hopper.html#setFacingDirection(org.bukkit.block.BlockFace)
-     *
-     * @p Face is a string naming a [BlockFace](BlockFace.aus.md).
-     */
-    public extern setFacingDirection(Face);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Hopper.html#toItemStack()
-     *
-     * @r An [ItemStack](ItemStack.aus.md).
-     */
-    public extern toItemStack();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Hopper.html#toItemStack(int)
-     *
-     * @p Amount is an int.
-     * @r An [ItemStack](ItemStack.aus.md).
-     */
-    public extern toItemStack(Amount);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Hopper.html#toString()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#getCustomName()
      *
      * @r A string.
      */
-    public extern toString();
+    public extern getCustomName();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#getDrops()
+     *
+     * @r A list.
+     */
+    public extern getDrops();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#getDrops(org.bukkit.inventory.ItemStack)
+     *
+     * @p Tool is an [ItemStack](ItemStack.aus.md).
+     * @r A list.
+     */
+    public extern getDrops(Tool);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#getDrops(org.bukkit.inventory.ItemStack,org.bukkit.entity.Entity)
+     *
+     * @p Tool is an [ItemStack](ItemStack.aus.md).
+     * @p Entity is an [Entity](Entity.aus.md).
+     * @r A list.
+     */
+    public extern getDrops(Tool, Entity);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#getInventory()
+     *
+     * @r An [Inventory](Inventory.aus.md).
+     */
+    public extern getInventory();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#getLastFilled()
+     *
+     * @r An int.
+     */
+    public extern getLastFilled();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#getLastLooted(org.bukkit.entity.Player)
+     *
+     * @p Player is a [Player](Player.aus.md).
+     * @r An int.
+     */
+    public extern getLastLooted(Player);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#getLastLooted(java.util.UUID)
+     *
+     * @p Player is a string.
+     * @r An int.
+     */
+    public extern getLastLooted_UUID(Player);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#getLightLevel()
+     *
+     * @r An int.
+     */
+    public extern getLightLevel();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#getLocation()
+     *
+     * @r A [Location](Location.aus.md).
+     */
+    public extern getLocation();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#getLocation(org.bukkit.Location)
+     *
+     * @p Loc is a [Location](Location.aus.md).
+     * @r A [Location](Location.aus.md).
+     */
+    public extern getLocation(Loc);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#getLock()
+     *
+     * @r A string.
+     */
+    public extern getLock();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#getLootTable()
+     *
+     * @r A [LootTable](LootTable.aus.md).
+     */
+    public extern getLootTable();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#getMetadata(java.lang.String)
+     *
+     * @p MetadataKey is a string.
+     * @r A list.
+     */
+    public extern getMetadata(MetadataKey);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#getNextRefill()
+     *
+     * @r An int.
+     */
+    public extern getNextRefill();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#getPersistentDataContainer()
+     *
+     * @r A [PersistentDataContainer](PersistentDataContainer.aus.md).
+     */
+    public extern getPersistentDataContainer();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#getRawData()
+     *
+     * @r An int.
+     */
+    public extern getRawData();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#getSeed()
+     *
+     * @r An int.
+     */
+    public extern getSeed();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#getSnapshotInventory()
+     *
+     * @r An [Inventory](Inventory.aus.md).
+     */
+    public extern getSnapshotInventory();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#getTransferCooldown()
+     *
+     * @r An int.
+     */
+    public extern getTransferCooldown();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#getType()
+     *
+     * @r A string naming a [Material](Material.aus.md).
+     */
+    public extern getType();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#getWorld()
+     *
+     * @r A [World](World.aus.md).
+     */
+    public extern getWorld();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#getX()
+     *
+     * @r An int.
+     */
+    public extern getX();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#getY()
+     *
+     * @r An int.
+     */
+    public extern getY();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#getZ()
+     *
+     * @r An int.
+     */
+    public extern getZ();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#hasBeenFilled()
+     *
+     * @r A bool.
+     */
+    public extern hasBeenFilled();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#hasLootTable()
+     *
+     * @r A bool.
+     */
+    public extern hasLootTable();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#hasMetadata(java.lang.String)
+     *
+     * @p MetadataKey is a string.
+     * @r A bool.
+     */
+    public extern hasMetadata(MetadataKey);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#hasPendingRefill()
+     *
+     * @r A bool.
+     */
+    public extern hasPendingRefill();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#hasPlayerLooted(org.bukkit.entity.Player)
+     *
+     * @p Player is a [Player](Player.aus.md).
+     * @r A bool.
+     */
+    public extern hasPlayerLooted(Player);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#hasPlayerLooted(java.util.UUID)
+     *
+     * @p Player is a string.
+     * @r A bool.
+     */
+    public extern hasPlayerLooted_UUID(Player);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#isCollidable()
+     *
+     * @r A bool.
+     */
+    public extern isCollidable();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#isLocked()
+     *
+     * @r A bool.
+     */
+    public extern isLocked();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#isPlaced()
+     *
+     * @r A bool.
+     */
+    public extern isPlaced();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#isRefillEnabled()
+     *
+     * @r A bool.
+     */
+    public extern isRefillEnabled();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#isSnapshot()
+     *
+     * @r A bool.
+     */
+    public extern isSnapshot();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#isSuffocating()
+     *
+     * @r A bool.
+     */
+    public extern isSuffocating();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#setBlockData(org.bukkit.block.data.BlockData)
+     *
+     * @p Data is a [BlockData](BlockData.aus.md).
+     */
+    public extern setBlockData(Data);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#setCustomName(java.lang.String)
+     *
+     * @p Name is a string.
+     */
+    public extern setCustomName(Name);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#setHasPlayerLooted(org.bukkit.entity.Player,boolean)
+     *
+     * @p Player is a [Player](Player.aus.md).
+     * @p Looted is a bool.
+     * @r A bool.
+     */
+    public extern setHasPlayerLooted(Player, Looted);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#setHasPlayerLooted(java.util.UUID,boolean)
+     *
+     * @p Player is a string.
+     * @p Looted is a bool.
+     * @r A bool.
+     */
+    public extern setHasPlayerLooted_UUID_boolean(Player, Looted);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#setLock(java.lang.String)
+     *
+     * @p Key is a string.
+     */
+    public extern setLock(Key);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#setLockItem(org.bukkit.inventory.ItemStack)
+     *
+     * @p Key is an [ItemStack](ItemStack.aus.md).
+     */
+    public extern setLockItem(Key);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#setLootTable(org.bukkit.loot.LootTable)
+     *
+     * @p Table is a [LootTable](LootTable.aus.md).
+     */
+    public extern setLootTable(Table);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#setLootTable(org.bukkit.loot.LootTable,long)
+     *
+     * @p Table is a [LootTable](LootTable.aus.md).
+     * @p Seed is an int.
+     */
+    public extern setLootTable(Table, Seed);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#setMetadata(java.lang.String,org.bukkit.metadata.MetadataValue)
+     *
+     * @p MetadataKey is a string.
+     * @p NewMetadataValue is a [MetadataValue](MetadataValue.aus.md).
+     */
+    public extern setMetadata(MetadataKey, NewMetadataValue);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#setNextRefill(long)
+     *
+     * @p RefillAt is an int.
+     * @r An int.
+     */
+    public extern setNextRefill(RefillAt);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#setRawData(byte)
+     *
+     * @p Data is an int.
+     */
+    public extern setRawData(Data);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#setSeed(long)
+     *
+     * @p Seed is an int.
+     */
+    public extern setSeed(Seed);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#setTransferCooldown(int)
+     *
+     * @p Cooldown is an int.
+     */
+    public extern setTransferCooldown(Cooldown);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#setType(org.bukkit.Material)
+     *
+     * @p Type is a string naming a [Material](Material.aus.md).
+     */
+    public extern setType(Type);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#update()
+     *
+     * @r A bool.
+     */
+    public extern update();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#update(boolean)
+     *
+     * @p Force is a bool.
+     * @r A bool.
+     */
+    public extern update(Force);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#update(boolean,boolean)
+     *
+     * @p Force is a bool.
+     * @p ApplyPhysics is a bool.
+     * @r A bool.
+     */
+    public extern update(Force, ApplyPhysics);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Hopper.html#removeMetadata(java.lang.String,org.bukkit.plugin.Plugin)
+     *
+     * @p MetadataKey is a string.
+     * @p OwningPlugin is a [Plugin](Plugin.aus.md).
+     */
+    public extern removeMetadata(MetadataKey, OwningPlugin);
 }

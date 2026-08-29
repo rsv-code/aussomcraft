@@ -1135,7 +1135,7 @@ Tier: trusted. Do not edit.
 
 	- **@p** `X` is an int.
 	- **@p** `Z` is an int.
-	- **@p** `Structure` is a [Structure](Structure.aus.md).
+	- **@p** `Structure` is a StructureStructure.
 	- **@r** `A` list.
 
 
@@ -1366,7 +1366,7 @@ Tier: trusted. Do not edit.
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/World.html#hasStructureAt(io.papermc.paper.math.Position,org.bukkit.generator.structure.Structure)
 
 	- **@p** `Position` is a [Position](Position.aus.md).
-	- **@p** `Structure` is a [Structure](Structure.aus.md).
+	- **@p** `Structure` is a StructureStructure.
 	- **@r** `A` bool.
 
 
@@ -1613,7 +1613,7 @@ Tier: trusted. Do not edit.
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/World.html#locateNearestStructure(org.bukkit.Location,org.bukkit.generator.structure.Structure,int,boolean)
 
 	- **@p** `Origin` is a [Location](Location.aus.md).
-	- **@p** `Structure` is a [Structure](Structure.aus.md).
+	- **@p** `Structure` is a StructureStructure.
 	- **@p** `Radius` is an int.
 	- **@p** `FindUnexplored` is a bool.
 	- **@r** `A` [StructureSearchResult](StructureSearchResult.aus.md).
@@ -1635,7 +1635,7 @@ Tier: trusted. Do not edit.
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/World.html#locateNearestStructure(org.bukkit.Location,org.bukkit.generator.structure.StructureType,int,boolean)
 
 	- **@p** `Origin` is a [Location](Location.aus.md).
-	- **@p** `StructureType` is a [StructureType](StructureType.aus.md).
+	- **@p** `StructureType` is a StructureStructureType.
 	- **@p** `Radius` is an int.
 	- **@p** `FindUnexplored` is a bool.
 	- **@r** `A` [StructureSearchResult](StructureSearchResult.aus.md).
@@ -2400,15 +2400,6 @@ Tier: trusted. Do not edit.
 
 	- **@p** `Location` is a [Location](Location.aus.md).
 	- **@p** `Data` is a [BlockData](BlockData.aus.md).
-	- **@r** `A` [FallingBlock](FallingBlock.aus.md).
-
-
-- **spawnFallingBlock\_Location\_MaterialData** (`Location, Data`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/World.html#spawnFallingBlock(org.bukkit.Location,org.bukkit.material.MaterialData)
-
-	- **@p** `Location` is a [Location](Location.aus.md).
-	- **@p** `Data` is a [MaterialData](MaterialData.aus.md).
 	- **@r** `A` [FallingBlock](FallingBlock.aus.md).
 
 

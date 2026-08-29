@@ -6,12 +6,11 @@
  */
 
 /**
- * Generated shim for org.bukkit.structure.Structure.
+ * Generated shim for org.bukkit.block.Structure.
  *
- * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/structure/Structure.html
+ * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html
  *
- * In Paper this is a
- * [PersistentDataHolder](PersistentDataHolder.aus.md).
+ * In Paper this is a [TileState](TileState.aus.md).
  * Every method it inherits is declared here too, so there is
  * nothing to follow up to.
  *
@@ -21,62 +20,429 @@ extern class Structure : com.lehman.aussomcraft.paper.gen.dangerous.StructureShi
     public extern __opEq__(A0);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/structure/Structure.html#fill(org.bukkit.Location,org.bukkit.util.BlockVector,boolean)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#copy()
      *
-     * @p Origin is a [Location](Location.aus.md).
-     * @p Size is a [BlockVector](BlockVector.aus.md).
-     * @p IncludeEntities is a bool.
+     * @r A [BlockState](BlockState.aus.md).
      */
-    public extern fill(Origin, Size, IncludeEntities);
+    public extern copy();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/structure/Structure.html#fill(org.bukkit.Location,org.bukkit.Location,boolean)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#copy(org.bukkit.Location)
      *
-     * @p Corner1 is a [Location](Location.aus.md).
-     * @p Corner2 is a [Location](Location.aus.md).
-     * @p IncludeEntities is a bool.
+     * @p Location is a [Location](Location.aus.md).
+     * @r A [BlockState](BlockState.aus.md).
      */
-    public extern fill_corner1_corner2_includeentities(Corner1, Corner2, IncludeEntities);
+    public extern copy(Location);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/structure/Structure.html#getEntities()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#getAuthor()
+     *
+     * @r A string.
+     */
+    public extern getAuthor();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#getBlock()
+     *
+     * @r A [Block](Block.aus.md).
+     */
+    public extern getBlock();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#getBlockData()
+     *
+     * @r A [BlockData](BlockData.aus.md).
+     */
+    public extern getBlockData();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#getChunk()
+     *
+     * @r A [Chunk](Chunk.aus.md).
+     */
+    public extern getChunk();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#getDrops()
      *
      * @r A list.
      */
-    public extern getEntities();
+    public extern getDrops();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/structure/Structure.html#getEntityCount()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#getDrops(org.bukkit.inventory.ItemStack)
      *
-     * @r An int.
-     */
-    public extern getEntityCount();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/structure/Structure.html#getPaletteCount()
-     *
-     * @r An int.
-     */
-    public extern getPaletteCount();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/structure/Structure.html#getPalettes()
-     *
+     * @p Tool is an [ItemStack](ItemStack.aus.md).
      * @r A list.
      */
-    public extern getPalettes();
+    public extern getDrops(Tool);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/structure/Structure.html#getPersistentDataContainer()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#getDrops(org.bukkit.inventory.ItemStack,org.bukkit.entity.Entity)
+     *
+     * @p Tool is an [ItemStack](ItemStack.aus.md).
+     * @p Entity is an [Entity](Entity.aus.md).
+     * @r A list.
+     */
+    public extern getDrops(Tool, Entity);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#getIntegrity()
+     *
+     * @r A double.
+     */
+    public extern getIntegrity();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#getLightLevel()
+     *
+     * @r An int.
+     */
+    public extern getLightLevel();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#getLocation()
+     *
+     * @r A [Location](Location.aus.md).
+     */
+    public extern getLocation();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#getLocation(org.bukkit.Location)
+     *
+     * @p Loc is a [Location](Location.aus.md).
+     * @r A [Location](Location.aus.md).
+     */
+    public extern getLocation(Loc);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#getMetadata()
+     *
+     * @r A string.
+     */
+    public extern getMetadata();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#getMetadata(java.lang.String)
+     *
+     * @p MetadataKey is a string.
+     * @r A list.
+     */
+    public extern getMetadata(MetadataKey);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#getMirror()
+     *
+     * @r A string naming a [Mirror](Mirror.aus.md).
+     */
+    public extern getMirror();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#getPersistentDataContainer()
      *
      * @r A [PersistentDataContainer](PersistentDataContainer.aus.md).
      */
     public extern getPersistentDataContainer();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/structure/Structure.html#getSize()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#getRawData()
+     *
+     * @r An int.
+     */
+    public extern getRawData();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#getRelativePosition()
      *
      * @r A [BlockVector](BlockVector.aus.md).
      */
-    public extern getSize();
+    public extern getRelativePosition();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#getRotation()
+     *
+     * @r A string naming a
+     * [StructureRotation](StructureRotation.aus.md).
+     */
+    public extern getRotation();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#getSeed()
+     *
+     * @r An int.
+     */
+    public extern getSeed();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#getStructureName()
+     *
+     * @r A string.
+     */
+    public extern getStructureName();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#getStructureSize()
+     *
+     * @r A [BlockVector](BlockVector.aus.md).
+     */
+    public extern getStructureSize();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#getType()
+     *
+     * @r A string naming a [Material](Material.aus.md).
+     */
+    public extern getType();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#getUsageMode()
+     *
+     * @r An string naming an [UsageMode](UsageMode.aus.md).
+     */
+    public extern getUsageMode();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#getWorld()
+     *
+     * @r A [World](World.aus.md).
+     */
+    public extern getWorld();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#getX()
+     *
+     * @r An int.
+     */
+    public extern getX();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#getY()
+     *
+     * @r An int.
+     */
+    public extern getY();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#getZ()
+     *
+     * @r An int.
+     */
+    public extern getZ();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#hasMetadata(java.lang.String)
+     *
+     * @p MetadataKey is a string.
+     * @r A bool.
+     */
+    public extern hasMetadata(MetadataKey);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#isBoundingBoxVisible()
+     *
+     * @r A bool.
+     */
+    public extern isBoundingBoxVisible();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#isCollidable()
+     *
+     * @r A bool.
+     */
+    public extern isCollidable();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#isIgnoreEntities()
+     *
+     * @r A bool.
+     */
+    public extern isIgnoreEntities();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#isPlaced()
+     *
+     * @r A bool.
+     */
+    public extern isPlaced();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#isShowAir()
+     *
+     * @r A bool.
+     */
+    public extern isShowAir();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#isSnapshot()
+     *
+     * @r A bool.
+     */
+    public extern isSnapshot();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#isSuffocating()
+     *
+     * @r A bool.
+     */
+    public extern isSuffocating();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#setAuthor(org.bukkit.entity.LivingEntity)
+     *
+     * @p LivingEntity is a [LivingEntity](LivingEntity.aus.md).
+     */
+    public extern setAuthor_livingentity(LivingEntity);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#setAuthor(java.lang.String)
+     *
+     * @p Author is a string.
+     */
+    public extern setAuthor(Author);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#setBlockData(org.bukkit.block.data.BlockData)
+     *
+     * @p Data is a [BlockData](BlockData.aus.md).
+     */
+    public extern setBlockData(Data);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#setBoundingBoxVisible(boolean)
+     *
+     * @p ShowBoundingBox is a bool.
+     */
+    public extern setBoundingBoxVisible(ShowBoundingBox);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#setIgnoreEntities(boolean)
+     *
+     * @p IgnoreEntities is a bool.
+     */
+    public extern setIgnoreEntities(IgnoreEntities);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#setIntegrity(float)
+     *
+     * @p Integrity is a double.
+     */
+    public extern setIntegrity(Integrity);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#setMetadata(java.lang.String)
+     *
+     * @p Metadata is a string.
+     */
+    public extern setMetadata(Metadata);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#setMetadata(java.lang.String,org.bukkit.metadata.MetadataValue)
+     *
+     * @p MetadataKey is a string.
+     * @p NewMetadataValue is a [MetadataValue](MetadataValue.aus.md).
+     */
+    public extern setMetadata(MetadataKey, NewMetadataValue);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#setMirror(org.bukkit.block.structure.Mirror)
+     *
+     * @p Mirror is a string naming a [Mirror](Mirror.aus.md).
+     */
+    public extern setMirror(Mirror);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#setRawData(byte)
+     *
+     * @p Data is an int.
+     */
+    public extern setRawData(Data);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#setRelativePosition(org.bukkit.util.BlockVector)
+     *
+     * @p Vector is a [BlockVector](BlockVector.aus.md).
+     */
+    public extern setRelativePosition(Vector);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#setRotation(org.bukkit.block.structure.StructureRotation)
+     *
+     * @p Rotation is a string naming a
+     * [StructureRotation](StructureRotation.aus.md).
+     */
+    public extern setRotation(Rotation);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#setSeed(long)
+     *
+     * @p Seed is an int.
+     */
+    public extern setSeed(Seed);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#setShowAir(boolean)
+     *
+     * @p ShowAir is a bool.
+     */
+    public extern setShowAir(ShowAir);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#setStructureName(java.lang.String)
+     *
+     * @p Name is a string.
+     */
+    public extern setStructureName(Name);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#setStructureSize(org.bukkit.util.BlockVector)
+     *
+     * @p Vector is a [BlockVector](BlockVector.aus.md).
+     */
+    public extern setStructureSize(Vector);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#setType(org.bukkit.Material)
+     *
+     * @p Type is a string naming a [Material](Material.aus.md).
+     */
+    public extern setType(Type);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#setUsageMode(org.bukkit.block.structure.UsageMode)
+     *
+     * @p Mode is an string naming an [UsageMode](UsageMode.aus.md).
+     */
+    public extern setUsageMode(Mode);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#update()
+     *
+     * @r A bool.
+     */
+    public extern update();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#update(boolean)
+     *
+     * @p Force is a bool.
+     * @r A bool.
+     */
+    public extern update(Force);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#update(boolean,boolean)
+     *
+     * @p Force is a bool.
+     * @p ApplyPhysics is a bool.
+     * @r A bool.
+     */
+    public extern update(Force, ApplyPhysics);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Structure.html#removeMetadata(java.lang.String,org.bukkit.plugin.Plugin)
+     *
+     * @p MetadataKey is a string.
+     * @p OwningPlugin is a [Plugin](Plugin.aus.md).
+     */
+    public extern removeMetadata(MetadataKey, OwningPlugin);
 }

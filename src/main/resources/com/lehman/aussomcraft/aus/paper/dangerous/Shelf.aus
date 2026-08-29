@@ -6,14 +6,12 @@
  */
 
 /**
- * Generated shim for org.bukkit.block.data.type.Shelf.
+ * Generated shim for org.bukkit.block.Shelf.
  *
- * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Shelf.html
+ * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Shelf.html
  *
- * In Paper this is a [Directional](Directional.aus.md),
- * [SideChaining](SideChaining.aus.md),
- * [Waterlogged](Waterlogged.aus.md) and
- * [Powerable](Powerable.aus.md).
+ * In Paper this is a
+ * [TileStateInventoryHolder](TileStateInventoryHolder.aus.md).
  * Every method it inherits is declared here too, so there is
  * nothing to follow up to.
  *
@@ -23,262 +21,252 @@ extern class Shelf : com.lehman.aussomcraft.paper.gen.dangerous.ShelfShim {
     public extern __opEq__(A0);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Shelf.html#clone()
-     *
-     * @r A [BlockData](BlockData.aus.md).
-     */
-    public extern clone();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Shelf.html#copyTo(org.bukkit.block.data.BlockData)
-     *
-     * @p Other is a [BlockData](BlockData.aus.md).
-     */
-    public extern copyTo(Other);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Shelf.html#createBlockState()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Shelf.html#copy()
      *
      * @r A [BlockState](BlockState.aus.md).
      */
-    public extern createBlockState();
+    public extern copy();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Shelf.html#getAsString()
-     *
-     * @r A string.
-     */
-    public extern getAsString();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Shelf.html#getAsString(boolean)
-     *
-     * @p HideUnspecified is a bool.
-     * @r A string.
-     */
-    public extern getAsString(HideUnspecified);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Shelf.html#getCollisionShape(org.bukkit.Location)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Shelf.html#copy(org.bukkit.Location)
      *
      * @p Location is a [Location](Location.aus.md).
-     * @r A [VoxelShape](VoxelShape.aus.md).
+     * @r A [BlockState](BlockState.aus.md).
      */
-    public extern getCollisionShape(Location);
+    public extern copy(Location);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Shelf.html#getDestroySpeed(org.bukkit.inventory.ItemStack)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Shelf.html#getBlock()
      *
-     * @p ItemStack is an [ItemStack](ItemStack.aus.md).
-     * @r A double.
+     * @r A [Block](Block.aus.md).
      */
-    public extern getDestroySpeed(ItemStack);
+    public extern getBlock();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Shelf.html#getDestroySpeed(org.bukkit.inventory.ItemStack,boolean)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Shelf.html#getBlockData()
      *
-     * @p ItemStack is an [ItemStack](ItemStack.aus.md).
-     * @p ConsiderEnchants is a bool.
-     * @r A double.
+     * @r A [BlockData](BlockData.aus.md).
      */
-    public extern getDestroySpeed(ItemStack, ConsiderEnchants);
+    public extern getBlockData();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Shelf.html#getFaces()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Shelf.html#getChunk()
+     *
+     * @r A [Chunk](Chunk.aus.md).
+     */
+    public extern getChunk();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Shelf.html#getDrops()
      *
      * @r A list.
      */
-    public extern getFaces();
+    public extern getDrops();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Shelf.html#getFacing()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Shelf.html#getDrops(org.bukkit.inventory.ItemStack)
      *
-     * @r A string naming a [BlockFace](BlockFace.aus.md).
+     * @p Tool is an [ItemStack](ItemStack.aus.md).
+     * @r A list.
      */
-    public extern getFacing();
+    public extern getDrops(Tool);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Shelf.html#getLightEmission()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Shelf.html#getDrops(org.bukkit.inventory.ItemStack,org.bukkit.entity.Entity)
+     *
+     * @p Tool is an [ItemStack](ItemStack.aus.md).
+     * @p Entity is an [Entity](Entity.aus.md).
+     * @r A list.
+     */
+    public extern getDrops(Tool, Entity);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Shelf.html#getInventory()
+     *
+     * @r A [ShelfInventory](ShelfInventory.aus.md).
+     */
+    public extern getInventory();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Shelf.html#getLightLevel()
      *
      * @r An int.
      */
-    public extern getLightEmission();
+    public extern getLightLevel();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Shelf.html#getMapColor()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Shelf.html#getLocation()
      *
-     * @r A [Color](Color.aus.md).
+     * @r A [Location](Location.aus.md).
      */
-    public extern getMapColor();
+    public extern getLocation();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Shelf.html#getMaterial()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Shelf.html#getLocation(org.bukkit.Location)
+     *
+     * @p Loc is a [Location](Location.aus.md).
+     * @r A [Location](Location.aus.md).
+     */
+    public extern getLocation(Loc);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Shelf.html#getMetadata(java.lang.String)
+     *
+     * @p MetadataKey is a string.
+     * @r A list.
+     */
+    public extern getMetadata(MetadataKey);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Shelf.html#getPersistentDataContainer()
+     *
+     * @r A [PersistentDataContainer](PersistentDataContainer.aus.md).
+     */
+    public extern getPersistentDataContainer();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Shelf.html#getRawData()
+     *
+     * @r An int.
+     */
+    public extern getRawData();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Shelf.html#getSnapshotInventory()
+     *
+     * @r A [ShelfInventory](ShelfInventory.aus.md).
+     */
+    public extern getSnapshotInventory();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Shelf.html#getType()
      *
      * @r A string naming a [Material](Material.aus.md).
      */
-    public extern getMaterial();
+    public extern getType();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Shelf.html#getPistonMoveReaction()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Shelf.html#getWorld()
      *
-     * @r A string naming a
-     * [PistonMoveReaction](PistonMoveReaction.aus.md).
+     * @r A [World](World.aus.md).
      */
-    public extern getPistonMoveReaction();
+    public extern getWorld();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Shelf.html#getPlacementMaterial()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Shelf.html#getX()
      *
-     * @r A string naming a [Material](Material.aus.md).
+     * @r An int.
      */
-    public extern getPlacementMaterial();
+    public extern getX();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Shelf.html#getSideChain()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Shelf.html#getY()
      *
-     * @r A string naming a SideChaining.ChainPart.
+     * @r An int.
      */
-    public extern getSideChain();
+    public extern getY();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Shelf.html#getSoundGroup()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Shelf.html#getZ()
      *
-     * @r A [SoundGroup](SoundGroup.aus.md).
+     * @r An int.
      */
-    public extern getSoundGroup();
+    public extern getZ();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Shelf.html#isFaceSturdy(org.bukkit.block.BlockFace,org.bukkit.block.BlockSupport)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Shelf.html#hasMetadata(java.lang.String)
      *
-     * @p Face is a string naming a [BlockFace](BlockFace.aus.md).
-     * @p Support is a string naming a
-     * [BlockSupport](BlockSupport.aus.md).
+     * @p MetadataKey is a string.
      * @r A bool.
      */
-    public extern isFaceSturdy(Face, Support);
+    public extern hasMetadata(MetadataKey);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Shelf.html#isOccluding()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Shelf.html#isCollidable()
      *
      * @r A bool.
      */
-    public extern isOccluding();
+    public extern isCollidable();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Shelf.html#isPowered()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Shelf.html#isPlaced()
      *
      * @r A bool.
      */
-    public extern isPowered();
+    public extern isPlaced();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Shelf.html#isPreferredTool(org.bukkit.inventory.ItemStack)
-     *
-     * @p Tool is an [ItemStack](ItemStack.aus.md).
-     * @r A bool.
-     */
-    public extern isPreferredTool(Tool);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Shelf.html#isRandomlyTicked()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Shelf.html#isSnapshot()
      *
      * @r A bool.
      */
-    public extern isRandomlyTicked();
+    public extern isSnapshot();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Shelf.html#isReplaceable()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Shelf.html#isSuffocating()
      *
      * @r A bool.
      */
-    public extern isReplaceable();
+    public extern isSuffocating();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Shelf.html#isSupported(org.bukkit.block.Block)
-     *
-     * @p Block is a [Block](Block.aus.md).
-     * @r A bool.
-     */
-    public extern isSupported(Block);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Shelf.html#isSupported(org.bukkit.Location)
-     *
-     * @p Location is a [Location](Location.aus.md).
-     * @r A bool.
-     */
-    public extern isSupported_location(Location);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Shelf.html#isWaterlogged()
-     *
-     * @r A bool.
-     */
-    public extern isWaterlogged();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Shelf.html#matches(org.bukkit.block.data.BlockData)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Shelf.html#setBlockData(org.bukkit.block.data.BlockData)
      *
      * @p Data is a [BlockData](BlockData.aus.md).
+     */
+    public extern setBlockData(Data);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Shelf.html#setMetadata(java.lang.String,org.bukkit.metadata.MetadataValue)
+     *
+     * @p MetadataKey is a string.
+     * @p NewMetadataValue is a [MetadataValue](MetadataValue.aus.md).
+     */
+    public extern setMetadata(MetadataKey, NewMetadataValue);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Shelf.html#setRawData(byte)
+     *
+     * @p Data is an int.
+     */
+    public extern setRawData(Data);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Shelf.html#setType(org.bukkit.Material)
+     *
+     * @p Type is a string naming a [Material](Material.aus.md).
+     */
+    public extern setType(Type);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Shelf.html#update()
+     *
      * @r A bool.
      */
-    public extern matches(Data);
+    public extern update();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Shelf.html#merge(org.bukkit.block.data.BlockData)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Shelf.html#update(boolean)
      *
-     * @p Data is a [BlockData](BlockData.aus.md).
-     * @r A [BlockData](BlockData.aus.md).
-     */
-    public extern merge(Data);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Shelf.html#mirror(org.bukkit.block.structure.Mirror)
-     *
-     * @p Mirror is a string naming a [Mirror](Mirror.aus.md).
-     */
-    public extern mirror(Mirror);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Shelf.html#requiresCorrectToolForDrops()
-     *
+     * @p Force is a bool.
      * @r A bool.
      */
-    public extern requiresCorrectToolForDrops();
+    public extern update(Force);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Shelf.html#rotate(org.bukkit.block.structure.StructureRotation)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Shelf.html#update(boolean,boolean)
      *
-     * @p Rotation is a string naming a
-     * [StructureRotation](StructureRotation.aus.md).
+     * @p Force is a bool.
+     * @p ApplyPhysics is a bool.
+     * @r A bool.
      */
-    public extern rotate(Rotation);
+    public extern update(Force, ApplyPhysics);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Shelf.html#setFacing(org.bukkit.block.BlockFace)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Shelf.html#removeMetadata(java.lang.String,org.bukkit.plugin.Plugin)
      *
-     * @p Facing is a string naming a [BlockFace](BlockFace.aus.md).
+     * @p MetadataKey is a string.
+     * @p OwningPlugin is a [Plugin](Plugin.aus.md).
      */
-    public extern setFacing(Facing);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Shelf.html#setPowered(boolean)
-     *
-     * @p Powered is a bool.
-     */
-    public extern setPowered(Powered);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Shelf.html#setSideChain(org.bukkit.block.data.SideChaining.ChainPart)
-     *
-     * @p Part is a string naming a SideChaining.ChainPart.
-     */
-    public extern setSideChain(Part);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Shelf.html#setWaterlogged(boolean)
-     *
-     * @p Waterlogged is a bool.
-     */
-    public extern setWaterlogged(Waterlogged);
+    public extern removeMetadata(MetadataKey, OwningPlugin);
 }

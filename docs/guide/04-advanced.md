@@ -30,8 +30,13 @@ line and understood.
 Two things. First, parts of the server that the lower levels hold back:
 
 ```
-include paper.dangerous.Bukkit;
+include Bukkit;
 ```
+
+This is the one place the `include` line is not optional. Everywhere else a
+type arrives on its own when the server hands you one. `Bukkit` is the
+server itself, so nothing ever hands it to you, and naming it is the only
+way to get it.
 
 Second, a tool called **AJI**, which reaches any Java code on the server. That
 includes other plugins:
@@ -159,9 +164,17 @@ then the type name. `Player.aus.md` lists everything you can ask a player.
 This is what the levels are really for.
 
 When you get a script from a forum, a friend, or a download, put it in your
-scripts folder and run `acraft load <file>`. It runs at **untrusted**. It can watch and it can
-talk, and it cannot do anything else. You can leave it that way indefinitely
-and it cannot hurt you.
+scripts folder and run `acraft load <file>`. It runs at **untrusted**. It can
+watch and it can talk, and it cannot do anything else. It cannot change your
+world, reach your files, or touch the server.
+
+Two things it can do are worth knowing before you leave one running. It can
+read every chat message on the server, including messages a plugin later
+hides or redirects, so anything private said in chat is not private from it.
+And it can send a message to everyone, as often as it likes.
+
+Neither can damage your server, but both are visible to your players, so a
+script you did not read is still a script you are letting speak.
 
 If it needs more, it will say so in the console. Before you approve it:
 

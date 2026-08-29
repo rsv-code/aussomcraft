@@ -16,7 +16,11 @@ described in 4.6 and work down the table.
 | 2. MockBukkit | a test dependency | event registration and firing, commands and whether they survive a reload, scheduler, store, load and unload, the tier a script ends up at | every build |
 | 3. Paper server | a real server, a client | the class loader, setAccessible, per-tick cost, the demo | before a release |
 
-Layers 1 and 2 are `mvn test`. Layer 3 is a server you start by hand.
+Layers 1 and 2 are `mvn verify`. Layer 3 is a server you start by hand.
+
+`mvn test` runs only part of layers 1 and 2. Anything that runs a script
+needs the packaged jar, for the reason in 2b below, so those are integration
+tests that run after `package`. `mvn package` builds the jar without them.
 
 ---
 
@@ -25,7 +29,7 @@ Layers 1 and 2 are `mvn test`. Layer 3 is a server you start by hand.
 ```
   aussomcraft/
     src/main/java ......... the plugin
-    src/test/java ......... layers 1 and 2          mvn test
+    src/test/java ......... layers 1 and 2          mvn verify
     examples/*.aus ........ the scripts under test
     target/AussomCraft-0.1.1.jar
          |
@@ -50,6 +54,34 @@ Layers 1 and 2 are `mvn test`. Layer 3 is a server you start by hand.
 Everything for layer 3 lives in `testserver/`, which is gitignored.
 
 ---
+
+## 2b. Tests that need the packaged jar
+
+Most tests run under surefire against `target/classes`. A few cannot.
+
+A resource include path is resolved by aussom-base, which decides between
+reading a jar and reading a directory by asking where aussom-base itself
+was loaded from. Under surefire aussom-base is a Maven jar while this
+project's resources are loose in `target/classes`, so it enumerates the
+aussom-base jar and finds none of them. Inside the shaded plugin jar both
+live in the same archive and the lookup succeeds, which is what the server
+actually does.
+
+So every test that runs a script is an `*IT` under failsafe, which is
+configured to run against the packaged jar rather than `target/classes`.
+`mvn test` does not run them; `mvn verify` does.
+
+The split is sharp and worth knowing: a name ending in `Test` never runs
+Aussom code, and one ending in `IT` does. A green `mvn test` says nothing
+about the script path.
+
+`TierIncludeIT` goes one step further and runs its checks in a JVM of its
+own, because it has to compare tiers built from the same jar.
+
+Its shape matters. Every case asserts a positive and a negative together,
+and a fourth test fails if nothing resolved anywhere. Without that, a run
+where the resource path silently stops working would leave every case
+refused and every negative-only assertion green.
 
 ## 3. Why layer 3 exists
 
@@ -84,7 +116,7 @@ client.
 
 ```bash
 cd ~/git/github/aussomcraft
-mvn clean package
+mvn clean verify
 ```
 
 ### 4.2 Get the Paper server
@@ -163,17 +195,17 @@ Run in order. Console unless the row says in game.
 | 1 | start the server | each script logs `loaded untrusted (sha256 ...)` |
 | 2 | `acraft list` | every script listed, all untrusted |
 | 3 | join the server | `01-join-leave.aus` broadcasts your name |
-| 4 | in game `/where` | your world and coordinates |
+| 4 | in game `/02-command.aus:where` | your world and coordinates |
 | 5 | `acraft load demo-op.aus --as untrusted` | refused, and the log says why |
 | 6 | `acraft trust 06-trusted-worldinfo.aus dangerous` | reports it is now dangerous |
 | 7 | in game `/worldinfo` | world name, time and player counts |
 | 8 | `acraft load demo-op.aus --as dangerous`, then rejoin | it greets you, and `attacker` is quietly opped |
 | 9 | edit a granted script, `acraft reload` | it drops back to untrusted |
-| 10 | `acraft reload`, then in game `/where` again | still answers, from `02-command.aus` |
-| 11 | in game `/joins`, then disconnect and rejoin | `05-counter.aus` greets you with one visit more than `/joins` reported |
-| 12 | `acraft reload`, rejoin, `/joins` | the count kept going up across the reload |
-| 13 | `stop` the server, start it, rejoin, `/joins` | the count survived the restart |
-| 14 | in game `/nick`, then `/nick Sir Robin`, then `/nick` | `07-nickname.aus` answers with no argument, keeps both words, then reads it back |
+| 10 | `acraft reload`, then `/02-command.aus:where` again | still answers, from `02-command.aus` |
+| 11 | in game `/05-counter.aus:joins`, then disconnect and rejoin | `05-counter.aus` greets you with one visit more than the command reported |
+| 12 | `acraft reload`, rejoin, `/05-counter.aus:joins` | the count kept going up across the reload |
+| 13 | `stop` the server, start it, rejoin, `/05-counter.aus:joins` | the count survived the restart |
+| 14 | in game `/07-nickname.aus:nick`, then the same with `Sir Robin`, then again with nothing | `07-nickname.aus` answers with no argument, keeps both words, then reads it back |
 | 15 | copy a new `.aus` into `scripts/` while the server runs, `acraft list` | it is not there; then `acraft load <file>` picks it up |
 | 16 | `acraft unload 03-announcer.aus` then wait | the announcer stops |
 | 17 | in creative, place and break a diamond ore | `04-block-break.aus` messages you |
@@ -201,13 +233,13 @@ layer 2, but it failed silently for a long time, and silence is what makes it
 worth a manual look.
 
 Checks 11 to 13 are the store. The count in `05-counter.aus` goes up when a
-player joins, not when `/joins` is run, so each of these needs a rejoin to
+player joins, not when the command is run, so each of these needs a rejoin to
 move it. 12 shows the store surviving a reload and 13 shows it surviving a
 restart, which is the only way to see `store.yml` actually written and read
 back.
 
 Check 14 is the argument path, which nothing else here touches. The bare
-`/nick` is the case worth watching: reading `Args[0]` without first checking
+`nick` is the case worth watching: reading `Args[0]` without first checking
 `#Args` throws, and the throw is caught and logged against the script, so
 from in game the command simply does nothing.
 

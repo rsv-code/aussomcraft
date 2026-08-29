@@ -4,9 +4,9 @@
 
 [19:14] (extern: com.lehman.aussomcraft.paper.gen.dangerous.DamageableShim) **extends: object** 
 
-Generated shim for org.bukkit.inventory.meta.Damageable.
-Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html
-In Paper this is a [ItemMeta](ItemMeta.aus.md).
+Generated shim for org.bukkit.entity.Damageable.
+Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html
+In Paper this is a [Entity](Entity.aus.md).
 Every method it inherits is declared here too, so there is
 nothing to follow up to.
 Tier: dangerous. Do not edit.
@@ -16,850 +16,1369 @@ Tier: dangerous. Do not edit.
 - **\_\_opEq\_\_** (`A0`)
 
 
-- **addAttributeModifier** (`Attribute, Modifier`)
+- **addPassenger** (`Passenger`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#addAttributeModifier(org.bukkit.attribute.Attribute,org.bukkit.attribute.AttributeModifier)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#addPassenger(org.bukkit.entity.Entity)
 
-	- **@p** `Attribute` is an [Attribute](Attribute.aus.md).
-	- **@p** `Modifier` is an [AttributeModifier](AttributeModifier.aus.md).
+	- **@p** `Passenger` is an [Entity](Entity.aus.md).
 	- **@r** `A` bool.
 
 
-- **addEnchant** (`Enchant, Level, IgnoreLevelRestriction`)
+- **addScoreboardTag** (`Tag`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#addEnchant(org.bukkit.enchantments.Enchantment,int,boolean)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#addScoreboardTag(java.lang.String)
 
-	- **@p** `Enchant` is an [Enchantment](Enchantment.aus.md).
-	- **@p** `Level` is an int.
-	- **@p** `IgnoreLevelRestriction` is a bool.
+	- **@p** `Tag` is a string.
 	- **@r** `A` bool.
 
 
-- **clone** ()
+- **broadcastHurtAnimation** (`Players`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#clone()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#broadcastHurtAnimation(java.util.Collection)
 
-	- **@r** `A` [Damageable](Damageable.aus.md).
+	- **@p** `Players` is a list.
+
+
+- **clearResourcePacks** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#clearResourcePacks()
+
+
+
+- **clearTitle** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#clearTitle()
+
+
+
+- **closeDialog** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#closeDialog()
+
+
+
+- **collidesAt** (`Location`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#collidesAt(org.bukkit.Location)
+
+	- **@p** `Location` is a [Location](Location.aus.md).
+	- **@r** `A` bool.
+
+
+- **copy** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#copy()
+
+	- **@r** `An` [Entity](Entity.aus.md).
+
+
+- **copy** (`To`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#copy(org.bukkit.Location)
+
+	- **@p** `To` is a [Location](Location.aus.md).
+	- **@r** `An` [Entity](Entity.aus.md).
+
+
+- **createSnapshot** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#createSnapshot()
+
+	- **@r** `An` [EntitySnapshot](EntitySnapshot.aus.md).
 
 
 - **customName** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#customName()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#customName()
 
 	- **@r** `A` Component.
 
 
 - **customName** (`CustomName`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#customName(net.kyori.adventure.text.Component)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#customName(net.kyori.adventure.text.Component)
 
 	- **@p** `CustomName` is a Component.
 
 
-- **displayName** ()
+- **damage** (`Amount`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#displayName()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#damage(double)
 
-	- **@r** `A` Component.
-
-
-- **displayName** (`DisplayName`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#displayName(net.kyori.adventure.text.Component)
-
-	- **@p** `DisplayName` is a Component.
+	- **@p** `Amount` is a double.
 
 
-- **getAsComponentString** ()
+- **damage** (`Amount, DamageSource`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#getAsComponentString()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#damage(double,org.bukkit.damage.DamageSource)
 
-	- **@r** `A` string.
+	- **@p** `Amount` is a double.
+	- **@p** `DamageSource` is a [DamageSource](DamageSource.aus.md).
+
+
+- **damage\_amount\_source** (`Amount, Source`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#damage(double,org.bukkit.entity.Entity)
+
+	- **@p** `Amount` is a double.
+	- **@p** `Source` is an [Entity](Entity.aus.md).
+
+
+- **eject** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#eject()
+
+	- **@r** `A` bool.
+
+
+- **fromMobSpawner** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#fromMobSpawner()
+
+	- **@r** `A` bool.
+
+
+- **getAbsorptionAmount** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getAbsorptionAmount()
+
+	- **@r** `A` double.
 
 
 - **getAsString** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#getAsString()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getAsString()
 
 	- **@r** `A` string.
 
 
-- **getAttributeModifiers** (`Attribute`)
+- **getBoundingBox** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#getAttributeModifiers(org.bukkit.attribute.Attribute)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getBoundingBox()
 
-	- **@p** `Attribute` is an [Attribute](Attribute.aus.md).
-	- **@r** `A` list.
-
-
-- **getCanDestroy** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#getCanDestroy()
-
-	- **@r** `A` list.
+	- **@r** `A` [BoundingBox](BoundingBox.aus.md).
 
 
-- **getCanPlaceOn** ()
+- **getChunk** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#getCanPlaceOn()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getChunk()
 
-	- **@r** `A` list.
-
-
-- **getCustomModelData** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#getCustomModelData()
-
-	- **@r** `An` int.
+	- **@r** `A` [Chunk](Chunk.aus.md).
 
 
-- **getCustomModelDataComponent** ()
+- **getCustomName** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#getCustomModelDataComponent()
-
-	- **@r** `A` [CustomModelDataComponent](CustomModelDataComponent.aus.md).
-
-
-- **getCustomTagContainer** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#getCustomTagContainer()
-
-	- **@r** `A` [CustomItemTagContainer](CustomItemTagContainer.aus.md).
-
-
-- **getDamage** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#getDamage()
-
-	- **@r** `An` int.
-
-
-- **getDamageResistant** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#getDamageResistant()
-
-	- **@r** `A` [Tag](Tag.aus.md).
-
-
-- **getDamageResistantTypes** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#getDamageResistantTypes()
-
-	- **@r** `A` [RegistryKeySet](RegistryKeySet.aus.md).
-
-
-- **getDestroyableKeys** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#getDestroyableKeys()
-
-	- **@r** `A` list.
-
-
-- **getDisplayName** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#getDisplayName()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getCustomName()
 
 	- **@r** `A` string.
 
 
-- **getEnchantLevel** (`Enchant`)
+- **getData** (`Type`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#getEnchantLevel(org.bukkit.enchantments.Enchantment)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getData(io.papermc.paper.datacomponent.DataComponentType.Valued)
 
-	- **@p** `Enchant` is an [Enchantment](Enchantment.aus.md).
-	- **@r** `An` int.
-
-
-- **getEnchantable** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#getEnchantable()
-
-	- **@r** `An` int.
+	- **@p** `Type` is a DataComponentType.Valued.
+	- **@r** `An` Object.
 
 
-- **getEnchantmentGlintOverride** ()
+- **getDataOrDefault** (`Type, Fallback`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#getEnchantmentGlintOverride()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getDataOrDefault(io.papermc.paper.datacomponent.DataComponentType.Valued,java.lang.Object)
 
-	- **@r** `A` bool.
-
-
-- **getEnchants** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#getEnchants()
-
-	- **@r** `A` map.
+	- **@p** `Type` is a DataComponentType.Valued.
+	- **@p** `Fallback` is an Object.
+	- **@r** `An` Object.
 
 
-- **getEquippable** ()
+- **getEffectivePermissions** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#getEquippable()
-
-	- **@r** `An` [EquippableComponent](EquippableComponent.aus.md).
-
-
-- **getFood** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#getFood()
-
-	- **@r** `A` [FoodComponent](FoodComponent.aus.md).
-
-
-- **getItemFlags** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#getItemFlags()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getEffectivePermissions()
 
 	- **@r** `A` list.
 
 
-- **getItemModel** ()
+- **getEntityId** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#getItemModel()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getEntityId()
 
-	- **@r** `A` [NamespacedKey](NamespacedKey.aus.md).
+	- **@r** `An` int.
 
 
-- **getItemName** ()
+- **getEntitySpawnReason** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#getItemName()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getEntitySpawnReason()
+
+	- **@r** `A` string naming a CreatureSpawnEvent.SpawnReason.
+
+
+- **getFacing** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getFacing()
+
+	- **@r** `A` string naming a [BlockFace](BlockFace.aus.md).
+
+
+- **getFallDistance** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getFallDistance()
+
+	- **@r** `A` double.
+
+
+- **getFireTicks** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getFireTicks()
+
+	- **@r** `An` int.
+
+
+- **getFreezeTicks** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getFreezeTicks()
+
+	- **@r** `An` int.
+
+
+- **getHealth** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getHealth()
+
+	- **@r** `A` double.
+
+
+- **getHeight** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getHeight()
+
+	- **@r** `A` double.
+
+
+- **getLastDamageCause** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getLastDamageCause()
+
+	- **@r** `An` [EntityDamageEvent](EntityDamageEvent.aus.md).
+
+
+- **getLocation** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getLocation()
+
+	- **@r** `A` [Location](Location.aus.md).
+
+
+- **getLocation** (`Loc`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getLocation(org.bukkit.Location)
+
+	- **@p** `Loc` is a [Location](Location.aus.md).
+	- **@r** `A` [Location](Location.aus.md).
+
+
+- **getMaxFireTicks** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getMaxFireTicks()
+
+	- **@r** `An` int.
+
+
+- **getMaxFreezeTicks** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getMaxFreezeTicks()
+
+	- **@r** `An` int.
+
+
+- **getMaxHealth** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getMaxHealth()
+
+	- **@r** `A` double.
+
+
+- **getMetadata** (`MetadataKey`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getMetadata(java.lang.String)
+
+	- **@p** `MetadataKey` is a string.
+	- **@r** `A` list.
+
+
+- **getName** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getName()
 
 	- **@r** `A` string.
 
 
-- **getJukeboxPlayable** ()
+- **getNearbyEntities** (`X, Y, Z`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#getJukeboxPlayable()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getNearbyEntities(double,double,double)
 
-	- **@r** `A` [JukeboxPlayableComponent](JukeboxPlayableComponent.aus.md).
-
-
-- **getLocalizedName** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#getLocalizedName()
-
-	- **@r** `A` string.
-
-
-- **getLore** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#getLore()
-
+	- **@p** `X` is a double.
+	- **@p** `Y` is a double.
+	- **@p** `Z` is a double.
 	- **@r** `A` list.
 
 
-- **getLoreComponents** ()
+- **getOrigin** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#getLoreComponents()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getOrigin()
+
+	- **@r** `A` [Location](Location.aus.md).
+
+
+- **getPassenger** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getPassenger()
+
+	- **@r** `An` [Entity](Entity.aus.md).
+
+
+- **getPassengers** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getPassengers()
 
 	- **@r** `A` list.
-
-
-- **getMaxDamage** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#getMaxDamage()
-
-	- **@r** `An` int.
-
-
-- **getMaxStackSize** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#getMaxStackSize()
-
-	- **@r** `An` int.
 
 
 - **getPersistentDataContainer** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#getPersistentDataContainer()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getPersistentDataContainer()
 
 	- **@r** `A` [PersistentDataContainer](PersistentDataContainer.aus.md).
 
 
-- **getPlaceableKeys** ()
+- **getPickItemStack** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#getPlaceableKeys()
-
-	- **@r** `A` list.
-
-
-- **getRarity** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#getRarity()
-
-	- **@r** `An` string naming an [ItemRarity](ItemRarity.aus.md).
-
-
-- **getTool** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#getTool()
-
-	- **@r** `A` [ToolComponent](ToolComponent.aus.md).
-
-
-- **getTooltipStyle** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#getTooltipStyle()
-
-	- **@r** `A` [NamespacedKey](NamespacedKey.aus.md).
-
-
-- **getUseCooldown** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#getUseCooldown()
-
-	- **@r** `An` [UseCooldownComponent](UseCooldownComponent.aus.md).
-
-
-- **getUseRemainder** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#getUseRemainder()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getPickItemStack()
 
 	- **@r** `An` [ItemStack](ItemStack.aus.md).
 
 
-- **hasAttributeModifiers** ()
+- **getPistonMoveReaction** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#hasAttributeModifiers()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getPistonMoveReaction()
 
-	- **@r** `A` bool.
+	- **@r** `A` string naming a [PistonMoveReaction](PistonMoveReaction.aus.md).
 
 
-- **hasConflictingEnchant** (`Enchant`)
+- **getPitch** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#hasConflictingEnchant(org.bukkit.enchantments.Enchantment)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getPitch()
 
-	- **@p** `Enchant` is an [Enchantment](Enchantment.aus.md).
-	- **@r** `A` bool.
+	- **@r** `A` double.
 
 
-- **hasCustomModelData** ()
+- **getPortalCooldown** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#hasCustomModelData()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getPortalCooldown()
 
-	- **@r** `A` bool.
+	- **@r** `An` int.
 
 
-- **hasCustomModelDataComponent** ()
+- **getPose** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#hasCustomModelDataComponent()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getPose()
 
-	- **@r** `A` bool.
+	- **@r** `A` string naming a [Pose](Pose.aus.md).
 
 
-- **hasCustomName** ()
+- **getRemovalReason** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#hasCustomName()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getRemovalReason()
 
-	- **@r** `A` bool.
+	- **@r** `A` string naming a [RemovalReason](RemovalReason.aus.md).
 
 
-- **hasDamage** ()
+- **getRemoveEventCause** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#hasDamage()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getRemoveEventCause()
 
-	- **@r** `A` bool.
+	- **@r** `A` string naming an EntityRemoveEvent.Cause.
 
 
-- **hasDamageResistant** ()
+- **getScoreboardEntryName** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#hasDamageResistant()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getScoreboardEntryName()
 
-	- **@r** `A` bool.
+	- **@r** `A` string.
 
 
-- **hasDamageValue** ()
+- **getScoreboardTags** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#hasDamageValue()
-
-	- **@r** `A` bool.
-
-
-- **hasDestroyableKeys** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#hasDestroyableKeys()
-
-	- **@r** `A` bool.
-
-
-- **hasDisplayName** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#hasDisplayName()
-
-	- **@r** `A` bool.
-
-
-- **hasEnchant** (`Enchant`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#hasEnchant(org.bukkit.enchantments.Enchantment)
-
-	- **@p** `Enchant` is an [Enchantment](Enchantment.aus.md).
-	- **@r** `A` bool.
-
-
-- **hasEnchantable** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#hasEnchantable()
-
-	- **@r** `A` bool.
-
-
-- **hasEnchantmentGlintOverride** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#hasEnchantmentGlintOverride()
-
-	- **@r** `A` bool.
-
-
-- **hasEnchants** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#hasEnchants()
-
-	- **@r** `A` bool.
-
-
-- **hasEquippable** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#hasEquippable()
-
-	- **@r** `A` bool.
-
-
-- **hasFood** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#hasFood()
-
-	- **@r** `A` bool.
-
-
-- **hasItemFlag** (`Flag`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#hasItemFlag(org.bukkit.inventory.ItemFlag)
-
-	- **@p** `Flag` is an string naming an [ItemFlag](ItemFlag.aus.md).
-	- **@r** `A` bool.
-
-
-- **hasItemModel** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#hasItemModel()
-
-	- **@r** `A` bool.
-
-
-- **hasItemName** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#hasItemName()
-
-	- **@r** `A` bool.
-
-
-- **hasJukeboxPlayable** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#hasJukeboxPlayable()
-
-	- **@r** `A` bool.
-
-
-- **hasLocalizedName** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#hasLocalizedName()
-
-	- **@r** `A` bool.
-
-
-- **hasLore** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#hasLore()
-
-	- **@r** `A` bool.
-
-
-- **hasMaxDamage** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#hasMaxDamage()
-
-	- **@r** `A` bool.
-
-
-- **hasMaxStackSize** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#hasMaxStackSize()
-
-	- **@r** `A` bool.
-
-
-- **hasPlaceableKeys** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#hasPlaceableKeys()
-
-	- **@r** `A` bool.
-
-
-- **hasRarity** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#hasRarity()
-
-	- **@r** `A` bool.
-
-
-- **hasTool** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#hasTool()
-
-	- **@r** `A` bool.
-
-
-- **hasTooltipStyle** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#hasTooltipStyle()
-
-	- **@r** `A` bool.
-
-
-- **hasUseCooldown** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#hasUseCooldown()
-
-	- **@r** `A` bool.
-
-
-- **hasUseRemainder** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#hasUseRemainder()
-
-	- **@r** `A` bool.
-
-
-- **isFireResistant** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#isFireResistant()
-
-	- **@r** `A` bool.
-
-
-- **isGlider** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#isGlider()
-
-	- **@r** `A` bool.
-
-
-- **isHideTooltip** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#isHideTooltip()
-
-	- **@r** `A` bool.
-
-
-- **isUnbreakable** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#isUnbreakable()
-
-	- **@r** `A` bool.
-
-
-- **itemName** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#itemName()
-
-	- **@r** `A` Component.
-
-
-- **itemName** (`Name`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#itemName(net.kyori.adventure.text.Component)
-
-	- **@p** `Name` is a Component.
-
-
-- **lore** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#lore()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getScoreboardTags()
 
 	- **@r** `A` list.
 
 
-- **lore** (`Lore`)
+- **getSoundCategory** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#lore(java.util.List)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getSoundCategory()
 
-	- **@p** `Lore` is a list.
+	- **@r** `A` string naming a [SoundCategory](SoundCategory.aus.md).
 
 
-- **removeAttributeModifier** (`Attribute`)
+- **getSpawnCategory** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#removeAttributeModifier(org.bukkit.attribute.Attribute)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getSpawnCategory()
 
-	- **@p** `Attribute` is an [Attribute](Attribute.aus.md).
+	- **@r** `A` string naming a [SpawnCategory](SpawnCategory.aus.md).
+
+
+- **getSwimHighSpeedSplashSound** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getSwimHighSpeedSplashSound()
+
+	- **@r** `A` [Sound](Sound.aus.md).
+
+
+- **getSwimSound** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getSwimSound()
+
+	- **@r** `A` [Sound](Sound.aus.md).
+
+
+- **getSwimSplashSound** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getSwimSplashSound()
+
+	- **@r** `A` [Sound](Sound.aus.md).
+
+
+- **getTicksLived** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getTicksLived()
+
+	- **@r** `An` int.
+
+
+- **getTrackedBy** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getTrackedBy()
+
+	- **@r** `A` list.
+
+
+- **getTrackedPlayers** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getTrackedPlayers()
+
+	- **@r** `A` list.
+
+
+- **getType** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getType()
+
+	- **@r** `An` string naming an [EntityType](EntityType.aus.md).
+
+
+- **getUniqueId** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getUniqueId()
+
+	- **@r** `A` string.
+
+
+- **getVehicle** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getVehicle()
+
+	- **@r** `An` [Entity](Entity.aus.md).
+
+
+- **getVelocity** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getVelocity()
+
+	- **@r** `A` [Vector](Vector.aus.md).
+
+
+- **getWidth** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getWidth()
+
+	- **@r** `A` double.
+
+
+- **getWorld** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getWorld()
+
+	- **@r** `A` [World](World.aus.md).
+
+
+- **getX** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getX()
+
+	- **@r** `A` double.
+
+
+- **getY** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getY()
+
+	- **@r** `A` double.
+
+
+- **getYaw** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getYaw()
+
+	- **@r** `A` double.
+
+
+- **getZ** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getZ()
+
+	- **@r** `A` double.
+
+
+- **hasData** (`Type`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#hasData(io.papermc.paper.datacomponent.DataComponentType)
+
+	- **@p** `Type` is a [DataComponentType](DataComponentType.aus.md).
 	- **@r** `A` bool.
 
 
-- **removeAttributeModifier\_slot** (`Slot`)
+- **hasFixedPose** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#removeAttributeModifier(org.bukkit.inventory.EquipmentSlot)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#hasFixedPose()
 
-	- **@p** `Slot` is an string naming an [EquipmentSlot](EquipmentSlot.aus.md).
 	- **@r** `A` bool.
 
 
-- **removeAttributeModifier** (`Attribute, Modifier`)
+- **hasGravity** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#removeAttributeModifier(org.bukkit.attribute.Attribute,org.bukkit.attribute.AttributeModifier)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#hasGravity()
 
-	- **@p** `Attribute` is an [Attribute](Attribute.aus.md).
-	- **@p** `Modifier` is an [AttributeModifier](AttributeModifier.aus.md).
 	- **@r** `A` bool.
 
 
-- **removeEnchant** (`Enchant`)
+- **hasMetadata** (`MetadataKey`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#removeEnchant(org.bukkit.enchantments.Enchantment)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#hasMetadata(java.lang.String)
 
-	- **@p** `Enchant` is an [Enchantment](Enchantment.aus.md).
+	- **@p** `MetadataKey` is a string.
 	- **@r** `A` bool.
 
 
-- **removeEnchantments** ()
+- **hasNoPhysics** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#removeEnchantments()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#hasNoPhysics()
 
-
-
-- **resetDamage** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#resetDamage()
+	- **@r** `A` bool.
 
 
+- **hasPermission\_perm** (`Perm`)
 
-- **serialize** ()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#hasPermission(org.bukkit.permissions.Permission)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#serialize()
-
-	- **@r** `A` map.
-
-
-- **setCanDestroy** (`CanDestroy`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#setCanDestroy(java.util.Set)
-
-	- **@p** `CanDestroy` is a list.
+	- **@p** `Perm` is a [Permission](Permission.aus.md).
+	- **@r** `A` bool.
 
 
-- **setCanPlaceOn** (`CanPlaceOn`)
+- **hasPermission** (`Name`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#setCanPlaceOn(java.util.Set)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#hasPermission(java.lang.String)
 
-	- **@p** `CanPlaceOn` is a list.
-
-
-- **setCustomModelData** (`Data`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#setCustomModelData(java.lang.Integer)
-
-	- **@p** `Data` is an int.
+	- **@p** `Name` is a string.
+	- **@r** `A` bool.
 
 
-- **setCustomModelDataComponent** (`CustomModelData`)
+- **heal** (`Amount`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#setCustomModelDataComponent(org.bukkit.inventory.meta.components.CustomModelDataComponent)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#heal(double)
 
-	- **@p** `CustomModelData` is a [CustomModelDataComponent](CustomModelDataComponent.aus.md).
-
-
-- **setDamage** (`Damage`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#setDamage(int)
-
-	- **@p** `Damage` is an int.
+	- **@p** `Amount` is a double.
 
 
-- **setDamageResistant** (`Tag`)
+- **heal** (`Amount, Reason`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#setDamageResistant(org.bukkit.Tag)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#heal(double,org.bukkit.event.entity.EntityRegainHealthEvent.RegainReason)
 
-	- **@p** `Tag` is a [Tag](Tag.aus.md).
-
-
-- **setDamageResistantTypes** (`Types`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#setDamageResistantTypes(io.papermc.paper.registry.set.RegistryKeySet)
-
-	- **@p** `Types` is a [RegistryKeySet](RegistryKeySet.aus.md).
+	- **@p** `Amount` is a double.
+	- **@p** `Reason` is a string naming an EntityRegainHealthEvent.RegainReason.
 
 
-- **setDestroyableKeys** (`CanDestroy`)
+- **isCustomNameVisible** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#setDestroyableKeys(java.util.Collection)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#isCustomNameVisible()
 
-	- **@p** `CanDestroy` is a list.
+	- **@r** `A` bool.
 
 
-- **setDisplayName** (`Name`)
+- **isDead** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#setDisplayName(java.lang.String)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#isDead()
+
+	- **@r** `A` bool.
+
+
+- **isEmpty** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#isEmpty()
+
+	- **@r** `A` bool.
+
+
+- **isFreezeTickingLocked** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#isFreezeTickingLocked()
+
+	- **@r** `A` bool.
+
+
+- **isFrozen** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#isFrozen()
+
+	- **@r** `A` bool.
+
+
+- **isGlowing** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#isGlowing()
+
+	- **@r** `A` bool.
+
+
+- **isInBubbleColumn** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#isInBubbleColumn()
+
+	- **@r** `A` bool.
+
+
+- **isInLava** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#isInLava()
+
+	- **@r** `A` bool.
+
+
+- **isInPowderedSnow** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#isInPowderedSnow()
+
+	- **@r** `A` bool.
+
+
+- **isInRain** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#isInRain()
+
+	- **@r** `A` bool.
+
+
+- **isInWater** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#isInWater()
+
+	- **@r** `A` bool.
+
+
+- **isInWaterOrBubbleColumn** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#isInWaterOrBubbleColumn()
+
+	- **@r** `A` bool.
+
+
+- **isInWaterOrRain** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#isInWaterOrRain()
+
+	- **@r** `A` bool.
+
+
+- **isInWaterOrRainOrBubbleColumn** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#isInWaterOrRainOrBubbleColumn()
+
+	- **@r** `A` bool.
+
+
+- **isInWorld** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#isInWorld()
+
+	- **@r** `A` bool.
+
+
+- **isInsideVehicle** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#isInsideVehicle()
+
+	- **@r** `A` bool.
+
+
+- **isInvisible** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#isInvisible()
+
+	- **@r** `A` bool.
+
+
+- **isInvulnerable** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#isInvulnerable()
+
+	- **@r** `A` bool.
+
+
+- **isOnGround** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#isOnGround()
+
+	- **@r** `A` bool.
+
+
+- **isOp** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#isOp()
+
+	- **@r** `A` bool.
+
+
+- **isPermissionSet\_perm** (`Perm`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#isPermissionSet(org.bukkit.permissions.Permission)
+
+	- **@p** `Perm` is a [Permission](Permission.aus.md).
+	- **@r** `A` bool.
+
+
+- **isPermissionSet** (`Name`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#isPermissionSet(java.lang.String)
+
+	- **@p** `Name` is a string.
+	- **@r** `A` bool.
+
+
+- **isPersistent** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#isPersistent()
+
+	- **@r** `A` bool.
+
+
+- **isSilent** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#isSilent()
+
+	- **@r** `A` bool.
+
+
+- **isSneaking** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#isSneaking()
+
+	- **@r** `A` bool.
+
+
+- **isTicking** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#isTicking()
+
+	- **@r** `A` bool.
+
+
+- **isTrackedBy** (`Player`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#isTrackedBy(org.bukkit.entity.Player)
+
+	- **@p** `Player` is a [Player](Player.aus.md).
+	- **@r** `A` bool.
+
+
+- **isUnderWater** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#isUnderWater()
+
+	- **@r** `A` bool.
+
+
+- **isValid** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#isValid()
+
+	- **@r** `A` bool.
+
+
+- **isVisibleByDefault** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#isVisibleByDefault()
+
+	- **@r** `A` bool.
+
+
+- **isVisualFire** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#isVisualFire()
+
+	- **@r** `A` bool.
+
+
+- **kill** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#kill()
+
+
+
+- **kill** (`DamageSource`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#kill(org.bukkit.damage.DamageSource)
+
+	- **@p** `DamageSource` is a [DamageSource](DamageSource.aus.md).
+
+
+- **leaveVehicle** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#leaveVehicle()
+
+	- **@r** `A` bool.
+
+
+- **lockFreezeTicks** (`Locked`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#lockFreezeTicks(boolean)
+
+	- **@p** `Locked` is a bool.
+
+
+- **lookAt** (`Position, EntityAnchor`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#lookAt(io.papermc.paper.math.Position,io.papermc.paper.entity.LookAnchor)
+
+	- **@p** `Position` is a [Position](Position.aus.md).
+	- **@p** `EntityAnchor` is a string naming a [LookAnchor](LookAnchor.aus.md).
+
+
+- **lookAt** (`X, Y, Z, EntityAnchor`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#lookAt(double,double,double,io.papermc.paper.entity.LookAnchor)
+
+	- **@p** `X` is a double.
+	- **@p** `Y` is a double.
+	- **@p** `Z` is a double.
+	- **@p** `EntityAnchor` is a string naming a [LookAnchor](LookAnchor.aus.md).
+
+
+- **name** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#name()
+
+	- **@r** `A` Component.
+
+
+- **playEffect** (`Effect`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#playEffect(org.bukkit.EntityEffect)
+
+	- **@p** `Effect` is an string naming an [EntityEffect](EntityEffect.aus.md).
+
+
+- **recalculatePermissions** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#recalculatePermissions()
+
+
+
+- **remove** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#remove()
+
+
+
+- **removePassenger** (`Passenger`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#removePassenger(org.bukkit.entity.Entity)
+
+	- **@p** `Passenger` is an [Entity](Entity.aus.md).
+	- **@r** `A` bool.
+
+
+- **removeResourcePacks** (`A0`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#removeResourcePacks(java.lang.Iterable)
+
+	- **@p** `A0` is an Iterable.
+
+
+- **removeScoreboardTag** (`Tag`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#removeScoreboardTag(java.lang.String)
+
+	- **@p** `Tag` is a string.
+	- **@r** `A` bool.
+
+
+- **resetMaxHealth** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#resetMaxHealth()
+
+
+
+- **resetTitle** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#resetTitle()
+
+
+
+- **sendActionBar** (`A0`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#sendActionBar(net.kyori.adventure.text.Component)
+
+	- **@p** `A0` is a Component.
+
+
+- **sendActionBar\_ComponentLike** (`A0`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#sendActionBar(net.kyori.adventure.text.ComponentLike)
+
+	- **@p** `A0` is a ComponentLike.
+
+
+- **sendMessage\_Component** (`Message`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#sendMessage(net.kyori.adventure.text.Component)
+
+	- **@p** `Message` is a Component.
+
+
+- **sendMessage\_ComponentLike** (`A0`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#sendMessage(net.kyori.adventure.text.ComponentLike)
+
+	- **@p** `A0` is a ComponentLike.
+
+
+- **sendMessage** (`Message`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#sendMessage(java.lang.String)
+
+	- **@p** `Message` is a string.
+
+
+- **sendMessage** (`Sender, Message`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#sendMessage(java.util.UUID,java.lang.String)
+
+	- **@p** `Sender` is a string.
+	- **@p** `Message` is a string.
+
+
+- **sendPlainMessage** (`Message`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#sendPlainMessage(java.lang.String)
+
+	- **@p** `Message` is a string.
+
+
+- **sendPlayerListFooter** (`A0`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#sendPlayerListFooter(net.kyori.adventure.text.Component)
+
+	- **@p** `A0` is a Component.
+
+
+- **sendPlayerListFooter\_ComponentLike** (`A0`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#sendPlayerListFooter(net.kyori.adventure.text.ComponentLike)
+
+	- **@p** `A0` is a ComponentLike.
+
+
+- **sendPlayerListHeader** (`A0`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#sendPlayerListHeader(net.kyori.adventure.text.Component)
+
+	- **@p** `A0` is a Component.
+
+
+- **sendPlayerListHeader\_ComponentLike** (`A0`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#sendPlayerListHeader(net.kyori.adventure.text.ComponentLike)
+
+	- **@p** `A0` is a ComponentLike.
+
+
+- **sendPlayerListHeaderAndFooter** (`A0, A1`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#sendPlayerListHeaderAndFooter(net.kyori.adventure.text.Component,net.kyori.adventure.text.Component)
+
+	- **@p** `A0` is a Component.
+	- **@p** `A1` is a Component.
+
+
+- **sendPlayerListHeaderAndFooter\_ComponentLike\_ComponentLike** (`A0, A1`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#sendPlayerListHeaderAndFooter(net.kyori.adventure.text.ComponentLike,net.kyori.adventure.text.ComponentLike)
+
+	- **@p** `A0` is a ComponentLike.
+	- **@p** `A1` is a ComponentLike.
+
+
+- **sendRichMessage** (`Message`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#sendRichMessage(java.lang.String)
+
+	- **@p** `Message` is a string.
+
+
+- **setAbsorptionAmount** (`Amount`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#setAbsorptionAmount(double)
+
+	- **@p** `Amount` is a double.
+
+
+- **setCustomName** (`Name`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#setCustomName(java.lang.String)
 
 	- **@p** `Name` is a string.
 
 
-- **setEnchantable** (`Enchantable`)
+- **setCustomNameVisible** (`Flag`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#setEnchantable(java.lang.Integer)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#setCustomNameVisible(boolean)
 
-	- **@p** `Enchantable` is an int.
-
-
-- **setEnchantmentGlintOverride** (`Override`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#setEnchantmentGlintOverride(java.lang.Boolean)
-
-	- **@p** `Override` is a bool.
+	- **@p** `Flag` is a bool.
 
 
-- **setEquippable** (`Equippable`)
+- **setFallDistance** (`Distance`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#setEquippable(org.bukkit.inventory.meta.components.EquippableComponent)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#setFallDistance(float)
 
-	- **@p** `Equippable` is an [EquippableComponent](EquippableComponent.aus.md).
-
-
-- **setFireResistant** (`FireResistant`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#setFireResistant(boolean)
-
-	- **@p** `FireResistant` is a bool.
+	- **@p** `Distance` is a double.
 
 
-- **setFood** (`Food`)
+- **setFireTicks** (`Ticks`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#setFood(org.bukkit.inventory.meta.components.FoodComponent)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#setFireTicks(int)
 
-	- **@p** `Food` is a [FoodComponent](FoodComponent.aus.md).
-
-
-- **setGlider** (`Glider`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#setGlider(boolean)
-
-	- **@p** `Glider` is a bool.
+	- **@p** `Ticks` is an int.
 
 
-- **setHideTooltip** (`HideTooltip`)
+- **setFreezeTicks** (`Ticks`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#setHideTooltip(boolean)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#setFreezeTicks(int)
 
-	- **@p** `HideTooltip` is a bool.
-
-
-- **setItemModel** (`ItemModel`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#setItemModel(org.bukkit.NamespacedKey)
-
-	- **@p** `ItemModel` is a [NamespacedKey](NamespacedKey.aus.md).
+	- **@p** `Ticks` is an int.
 
 
-- **setItemName** (`Name`)
+- **setGlowing** (`Flag`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#setItemName(java.lang.String)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#setGlowing(boolean)
 
+	- **@p** `Flag` is a bool.
+
+
+- **setGravity** (`Gravity`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#setGravity(boolean)
+
+	- **@p** `Gravity` is a bool.
+
+
+- **setHealth** (`Health`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#setHealth(double)
+
+	- **@p** `Health` is a double.
+
+
+- **setInvisible** (`Invisible`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#setInvisible(boolean)
+
+	- **@p** `Invisible` is a bool.
+
+
+- **setInvulnerable** (`Flag`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#setInvulnerable(boolean)
+
+	- **@p** `Flag` is a bool.
+
+
+- **setLastDamageCause** (`Event`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#setLastDamageCause(org.bukkit.event.entity.EntityDamageEvent)
+
+	- **@p** `Event` is an [EntityDamageEvent](EntityDamageEvent.aus.md).
+
+
+- **setMaxHealth** (`Health`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#setMaxHealth(double)
+
+	- **@p** `Health` is a double.
+
+
+- **setMetadata** (`MetadataKey, NewMetadataValue`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#setMetadata(java.lang.String,org.bukkit.metadata.MetadataValue)
+
+	- **@p** `MetadataKey` is a string.
+	- **@p** `NewMetadataValue` is a [MetadataValue](MetadataValue.aus.md).
+
+
+- **setNoPhysics** (`NoPhysics`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#setNoPhysics(boolean)
+
+	- **@p** `NoPhysics` is a bool.
+
+
+- **setPassenger** (`Passenger`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#setPassenger(org.bukkit.entity.Entity)
+
+	- **@p** `Passenger` is an [Entity](Entity.aus.md).
+	- **@r** `A` bool.
+
+
+- **setPersistent** (`Persistent`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#setPersistent(boolean)
+
+	- **@p** `Persistent` is a bool.
+
+
+- **setPortalCooldown** (`Cooldown`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#setPortalCooldown(int)
+
+	- **@p** `Cooldown` is an int.
+
+
+- **setPose** (`Pose`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#setPose(org.bukkit.entity.Pose)
+
+	- **@p** `Pose` is a string naming a [Pose](Pose.aus.md).
+
+
+- **setPose** (`Pose, Fixed`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#setPose(org.bukkit.entity.Pose,boolean)
+
+	- **@p** `Pose` is a string naming a [Pose](Pose.aus.md).
+	- **@p** `Fixed` is a bool.
+
+
+- **setRotation\_Angle\_Angle** (`Yaw, Pitch`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#setRotation(io.papermc.paper.math.Angle,io.papermc.paper.math.Angle)
+
+	- **@p** `Yaw` is an [Angle](Angle.aus.md).
+	- **@p** `Pitch` is an [Angle](Angle.aus.md).
+
+
+- **setRotation** (`Yaw, Pitch`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#setRotation(float,float)
+
+	- **@p** `Yaw` is a double.
+	- **@p** `Pitch` is a double.
+
+
+- **setSilent** (`Flag`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#setSilent(boolean)
+
+	- **@p** `Flag` is a bool.
+
+
+- **setSneaking** (`Sneak`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#setSneaking(boolean)
+
+	- **@p** `Sneak` is a bool.
+
+
+- **setTicksLived** (`Value`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#setTicksLived(int)
+
+	- **@p** `Value` is an int.
+
+
+- **setVelocity** (`Velocity`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#setVelocity(org.bukkit.util.Vector)
+
+	- **@p** `Velocity` is a [Vector](Vector.aus.md).
+
+
+- **setVisibleByDefault** (`Visible`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#setVisibleByDefault(boolean)
+
+	- **@p** `Visible` is a bool.
+
+
+- **setVisualFire** (`Fire`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#setVisualFire(boolean)
+
+	- **@p** `Fire` is a bool.
+
+
+- **spawnAt** (`Location`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#spawnAt(org.bukkit.Location)
+
+	- **@p** `Location` is a [Location](Location.aus.md).
+	- **@r** `A` bool.
+
+
+- **spawnAt** (`Location, Reason`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#spawnAt(org.bukkit.Location,org.bukkit.event.entity.CreatureSpawnEvent.SpawnReason)
+
+	- **@p** `Location` is a [Location](Location.aus.md).
+	- **@p** `Reason` is a string naming a CreatureSpawnEvent.SpawnReason.
+	- **@r** `A` bool.
+
+
+- **spigot** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#spigot()
+
+	- **@r** `An` Entity.Spigot.
+
+
+- **teamDisplayName** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#teamDisplayName()
+
+	- **@r** `A` Component.
+
+
+- **teleport** (`Destination`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#teleport(org.bukkit.entity.Entity)
+
+	- **@p** `Destination` is an [Entity](Entity.aus.md).
+	- **@r** `A` bool.
+
+
+- **teleport\_location** (`Location`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#teleport(org.bukkit.Location)
+
+	- **@p** `Location` is a [Location](Location.aus.md).
+	- **@r** `A` bool.
+
+
+- **teleport** (`Destination, Cause`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#teleport(org.bukkit.entity.Entity,org.bukkit.event.player.PlayerTeleportEvent.TeleportCause)
+
+	- **@p** `Destination` is an [Entity](Entity.aus.md).
+	- **@p** `Cause` is a string naming a PlayerTeleportEvent.TeleportCause.
+	- **@r** `A` bool.
+
+
+- **teleport\_location\_cause** (`Location, Cause`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#teleport(org.bukkit.Location,org.bukkit.event.player.PlayerTeleportEvent.TeleportCause)
+
+	- **@p** `Location` is a [Location](Location.aus.md).
+	- **@p** `Cause` is a string naming a PlayerTeleportEvent.TeleportCause.
+	- **@r** `A` bool.
+
+
+- **wouldCollideUsing** (`BoundingBox`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#wouldCollideUsing(org.bukkit.util.BoundingBox)
+
+	- **@p** `BoundingBox` is a [BoundingBox](BoundingBox.aus.md).
+	- **@r** `A` bool.
+
+
+- **addAttachment** (`Plugin`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#addAttachment(org.bukkit.plugin.Plugin)
+
+	- **@p** `Plugin` is a [Plugin](Plugin.aus.md).
+	- **@r** `A` [PermissionAttachment](PermissionAttachment.aus.md).
+
+
+- **addAttachment** (`Plugin, Ticks`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#addAttachment(org.bukkit.plugin.Plugin,int)
+
+	- **@p** `Plugin` is a [Plugin](Plugin.aus.md).
+	- **@p** `Ticks` is an int.
+	- **@r** `A` [PermissionAttachment](PermissionAttachment.aus.md).
+
+
+- **addAttachment** (`Plugin, Name, Value`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#addAttachment(org.bukkit.plugin.Plugin,java.lang.String,boolean)
+
+	- **@p** `Plugin` is a [Plugin](Plugin.aus.md).
 	- **@p** `Name` is a string.
+	- **@p** `Value` is a bool.
+	- **@r** `A` [PermissionAttachment](PermissionAttachment.aus.md).
 
 
-- **setJukeboxPlayable** (`JukeboxPlayable`)
+- **addAttachment** (`Plugin, Name, Value, Ticks`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#setJukeboxPlayable(org.bukkit.inventory.meta.components.JukeboxPlayableComponent)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#addAttachment(org.bukkit.plugin.Plugin,java.lang.String,boolean,int)
 
-	- **@p** `JukeboxPlayable` is a [JukeboxPlayableComponent](JukeboxPlayableComponent.aus.md).
-
-
-- **setLocalizedName** (`Name`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#setLocalizedName(java.lang.String)
-
+	- **@p** `Plugin` is a [Plugin](Plugin.aus.md).
 	- **@p** `Name` is a string.
+	- **@p** `Value` is a bool.
+	- **@p** `Ticks` is an int.
+	- **@r** `A` [PermissionAttachment](PermissionAttachment.aus.md).
 
 
-- **setLore** (`Lore`)
+- **getScheduler** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#setLore(java.util.List)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getScheduler()
 
-	- **@p** `Lore` is a list.
-
-
-- **setLoreComponents** (`Lore`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#setLoreComponents(java.util.List)
-
-	- **@p** `Lore` is a list.
+	- **@r** `An` EntityScheduler.
 
 
-- **setMaxDamage** (`MaxDamage`)
+- **getServer** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#setMaxDamage(java.lang.Integer)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#getServer()
 
-	- **@p** `MaxDamage` is an int.
-
-
-- **setMaxStackSize** (`Max`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#setMaxStackSize(java.lang.Integer)
-
-	- **@p** `Max` is an int.
+	- **@r** `A` [Server](Server.aus.md).
 
 
-- **setPlaceableKeys** (`CanPlaceOn`)
+- **removeAttachment** (`Attachment`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#setPlaceableKeys(java.util.Collection)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#removeAttachment(org.bukkit.permissions.PermissionAttachment)
 
-	- **@p** `CanPlaceOn` is a list.
-
-
-- **setRarity** (`Rarity`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#setRarity(org.bukkit.inventory.ItemRarity)
-
-	- **@p** `Rarity` is an string naming an [ItemRarity](ItemRarity.aus.md).
+	- **@p** `Attachment` is a [PermissionAttachment](PermissionAttachment.aus.md).
 
 
-- **setTool** (`Tool`)
+- **removeMetadata** (`MetadataKey, OwningPlugin`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#setTool(org.bukkit.inventory.meta.components.ToolComponent)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#removeMetadata(java.lang.String,org.bukkit.plugin.Plugin)
 
-	- **@p** `Tool` is a [ToolComponent](ToolComponent.aus.md).
-
-
-- **setTooltipStyle** (`TooltipStyle`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#setTooltipStyle(org.bukkit.NamespacedKey)
-
-	- **@p** `TooltipStyle` is a [NamespacedKey](NamespacedKey.aus.md).
+	- **@p** `MetadataKey` is a string.
+	- **@p** `OwningPlugin` is a [Plugin](Plugin.aus.md).
 
 
-- **setUnbreakable** (`Unbreakable`)
+- **setOp** (`Value`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#setUnbreakable(boolean)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Damageable.html#setOp(boolean)
 
-	- **@p** `Unbreakable` is a bool.
-
-
-- **setUseCooldown** (`Cooldown`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#setUseCooldown(org.bukkit.inventory.meta.components.UseCooldownComponent)
-
-	- **@p** `Cooldown` is an [UseCooldownComponent](UseCooldownComponent.aus.md).
-
-
-- **setUseRemainder** (`Remainder`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#setUseRemainder(org.bukkit.inventory.ItemStack)
-
-	- **@p** `Remainder` is an [ItemStack](ItemStack.aus.md).
-
-
-- **setVersion** (`Version`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/Damageable.html#setVersion(int)
-
-	- **@p** `Version` is an int.
+	- **@p** `Value` is a bool.
 
 
 

@@ -6,11 +6,11 @@
  */
 
 /**
- * Generated shim for org.bukkit.block.data.type.Vault.
+ * Generated shim for org.bukkit.block.Vault.
  *
- * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Vault.html
+ * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html
  *
- * In Paper this is a [Directional](Directional.aus.md).
+ * In Paper this is a [TileState](TileState.aus.md).
  * Every method it inherits is declared here too, so there is
  * nothing to follow up to.
  *
@@ -20,262 +20,374 @@ extern class Vault : com.lehman.aussomcraft.paper.gen.trusted.VaultShim {
     public extern __opEq__(A0);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Vault.html#clone()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#addRewardedPlayer(java.util.UUID)
      *
-     * @r A [BlockData](BlockData.aus.md).
+     * @p PlayerUUID is a string.
+     * @r A bool.
      */
-    public extern clone();
+    public extern addRewardedPlayer(PlayerUUID);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Vault.html#copyTo(org.bukkit.block.data.BlockData)
-     *
-     * @p Other is a [BlockData](BlockData.aus.md).
-     */
-    public extern copyTo(Other);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Vault.html#createBlockState()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#copy()
      *
      * @r A [BlockState](BlockState.aus.md).
      */
-    public extern createBlockState();
+    public extern copy();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Vault.html#getAsString()
-     *
-     * @r A string.
-     */
-    public extern getAsString();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Vault.html#getAsString(boolean)
-     *
-     * @p HideUnspecified is a bool.
-     * @r A string.
-     */
-    public extern getAsString(HideUnspecified);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Vault.html#getCollisionShape(org.bukkit.Location)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#copy(org.bukkit.Location)
      *
      * @p Location is a [Location](Location.aus.md).
-     * @r A [VoxelShape](VoxelShape.aus.md).
+     * @r A [BlockState](BlockState.aus.md).
      */
-    public extern getCollisionShape(Location);
+    public extern copy(Location);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Vault.html#getDestroySpeed(org.bukkit.inventory.ItemStack)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#getActivationRange()
      *
-     * @p ItemStack is an [ItemStack](ItemStack.aus.md).
      * @r A double.
      */
-    public extern getDestroySpeed(ItemStack);
+    public extern getActivationRange();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Vault.html#getDestroySpeed(org.bukkit.inventory.ItemStack,boolean)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#getBlock()
      *
-     * @p ItemStack is an [ItemStack](ItemStack.aus.md).
-     * @p ConsiderEnchants is a bool.
-     * @r A double.
+     * @r A [Block](Block.aus.md).
      */
-    public extern getDestroySpeed(ItemStack, ConsiderEnchants);
+    public extern getBlock();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Vault.html#getFaces()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#getBlockData()
+     *
+     * @r A [BlockData](BlockData.aus.md).
+     */
+    public extern getBlockData();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#getChunk()
+     *
+     * @r A [Chunk](Chunk.aus.md).
+     */
+    public extern getChunk();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#getConnectedPlayers()
      *
      * @r A list.
      */
-    public extern getFaces();
+    public extern getConnectedPlayers();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Vault.html#getFacing()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#getDeactivationRange()
      *
-     * @r A string naming a [BlockFace](BlockFace.aus.md).
+     * @r A double.
      */
-    public extern getFacing();
+    public extern getDeactivationRange();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Vault.html#getLightEmission()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#getDisplayedItem()
+     *
+     * @r An [ItemStack](ItemStack.aus.md).
+     */
+    public extern getDisplayedItem();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#getDisplayedLootTable()
+     *
+     * @r A [LootTable](LootTable.aus.md).
+     */
+    public extern getDisplayedLootTable();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#getDrops()
+     *
+     * @r A list.
+     */
+    public extern getDrops();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#getDrops(org.bukkit.inventory.ItemStack)
+     *
+     * @p Tool is an [ItemStack](ItemStack.aus.md).
+     * @r A list.
+     */
+    public extern getDrops(Tool);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#getDrops(org.bukkit.inventory.ItemStack,org.bukkit.entity.Entity)
+     *
+     * @p Tool is an [ItemStack](ItemStack.aus.md).
+     * @p Entity is an [Entity](Entity.aus.md).
+     * @r A list.
+     */
+    public extern getDrops(Tool, Entity);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#getKeyItem()
+     *
+     * @r An [ItemStack](ItemStack.aus.md).
+     */
+    public extern getKeyItem();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#getLightLevel()
      *
      * @r An int.
      */
-    public extern getLightEmission();
+    public extern getLightLevel();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Vault.html#getMapColor()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#getLocation()
      *
-     * @r A [Color](Color.aus.md).
+     * @r A [Location](Location.aus.md).
      */
-    public extern getMapColor();
+    public extern getLocation();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Vault.html#getMaterial()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#getLocation(org.bukkit.Location)
+     *
+     * @p Loc is a [Location](Location.aus.md).
+     * @r A [Location](Location.aus.md).
+     */
+    public extern getLocation(Loc);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#getLootTable()
+     *
+     * @r A [LootTable](LootTable.aus.md).
+     */
+    public extern getLootTable();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#getMetadata(java.lang.String)
+     *
+     * @p MetadataKey is a string.
+     * @r A list.
+     */
+    public extern getMetadata(MetadataKey);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#getNextStateUpdateTime()
+     *
+     * @r An int.
+     */
+    public extern getNextStateUpdateTime();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#getPersistentDataContainer()
+     *
+     * @r A [PersistentDataContainer](PersistentDataContainer.aus.md).
+     */
+    public extern getPersistentDataContainer();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#getRawData()
+     *
+     * @r An int.
+     */
+    public extern getRawData();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#getRewardedPlayers()
+     *
+     * @r A list.
+     */
+    public extern getRewardedPlayers();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#getType()
      *
      * @r A string naming a [Material](Material.aus.md).
      */
-    public extern getMaterial();
+    public extern getType();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Vault.html#getPistonMoveReaction()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#getWorld()
      *
-     * @r A string naming a
-     * [PistonMoveReaction](PistonMoveReaction.aus.md).
+     * @r A [World](World.aus.md).
      */
-    public extern getPistonMoveReaction();
+    public extern getWorld();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Vault.html#getPlacementMaterial()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#getX()
      *
-     * @r A string naming a [Material](Material.aus.md).
+     * @r An int.
      */
-    public extern getPlacementMaterial();
+    public extern getX();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Vault.html#getSoundGroup()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#getY()
      *
-     * @r A [SoundGroup](SoundGroup.aus.md).
+     * @r An int.
      */
-    public extern getSoundGroup();
+    public extern getY();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Vault.html#getTrialSpawnerState()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#getZ()
      *
-     * @r A string naming a Vault.State.
+     * @r An int.
      */
-    public extern getTrialSpawnerState();
+    public extern getZ();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Vault.html#getVaultState()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#hasConnectedPlayer(java.util.UUID)
      *
-     * @r A string naming a Vault.State.
-     */
-    public extern getVaultState();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Vault.html#isFaceSturdy(org.bukkit.block.BlockFace,org.bukkit.block.BlockSupport)
-     *
-     * @p Face is a string naming a [BlockFace](BlockFace.aus.md).
-     * @p Support is a string naming a
-     * [BlockSupport](BlockSupport.aus.md).
+     * @p PlayerUUID is a string.
      * @r A bool.
      */
-    public extern isFaceSturdy(Face, Support);
+    public extern hasConnectedPlayer(PlayerUUID);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Vault.html#isOccluding()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#hasMetadata(java.lang.String)
      *
+     * @p MetadataKey is a string.
      * @r A bool.
      */
-    public extern isOccluding();
+    public extern hasMetadata(MetadataKey);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Vault.html#isOminous()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#hasRewardedPlayer(java.util.UUID)
      *
+     * @p PlayerUUID is a string.
      * @r A bool.
      */
-    public extern isOminous();
+    public extern hasRewardedPlayer(PlayerUUID);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Vault.html#isPreferredTool(org.bukkit.inventory.ItemStack)
-     *
-     * @p Tool is an [ItemStack](ItemStack.aus.md).
-     * @r A bool.
-     */
-    public extern isPreferredTool(Tool);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Vault.html#isRandomlyTicked()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#isCollidable()
      *
      * @r A bool.
      */
-    public extern isRandomlyTicked();
+    public extern isCollidable();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Vault.html#isReplaceable()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#isPlaced()
      *
      * @r A bool.
      */
-    public extern isReplaceable();
+    public extern isPlaced();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Vault.html#isSupported(org.bukkit.block.Block)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#isSnapshot()
      *
-     * @p Block is a [Block](Block.aus.md).
      * @r A bool.
      */
-    public extern isSupported(Block);
+    public extern isSnapshot();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Vault.html#isSupported(org.bukkit.Location)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#isSuffocating()
      *
-     * @p Location is a [Location](Location.aus.md).
      * @r A bool.
      */
-    public extern isSupported_location(Location);
+    public extern isSuffocating();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Vault.html#matches(org.bukkit.block.data.BlockData)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#removeRewardedPlayer(java.util.UUID)
+     *
+     * @p PlayerUUID is a string.
+     * @r A bool.
+     */
+    public extern removeRewardedPlayer(PlayerUUID);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#setActivationRange(double)
+     *
+     * @p ActivationRange is a double.
+     */
+    public extern setActivationRange(ActivationRange);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#setBlockData(org.bukkit.block.data.BlockData)
      *
      * @p Data is a [BlockData](BlockData.aus.md).
+     */
+    public extern setBlockData(Data);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#setDeactivationRange(double)
+     *
+     * @p DeactivationRange is a double.
+     */
+    public extern setDeactivationRange(DeactivationRange);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#setDisplayedItem(org.bukkit.inventory.ItemStack)
+     *
+     * @p DisplayedItem is an [ItemStack](ItemStack.aus.md).
+     */
+    public extern setDisplayedItem(DisplayedItem);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#setDisplayedLootTable(org.bukkit.loot.LootTable)
+     *
+     * @p LootTable is a [LootTable](LootTable.aus.md).
+     */
+    public extern setDisplayedLootTable(LootTable);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#setKeyItem(org.bukkit.inventory.ItemStack)
+     *
+     * @p Key is an [ItemStack](ItemStack.aus.md).
+     */
+    public extern setKeyItem(Key);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#setLootTable(org.bukkit.loot.LootTable)
+     *
+     * @p LootTable is a [LootTable](LootTable.aus.md).
+     */
+    public extern setLootTable(LootTable);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#setMetadata(java.lang.String,org.bukkit.metadata.MetadataValue)
+     *
+     * @p MetadataKey is a string.
+     * @p NewMetadataValue is a [MetadataValue](MetadataValue.aus.md).
+     */
+    public extern setMetadata(MetadataKey, NewMetadataValue);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#setNextStateUpdateTime(long)
+     *
+     * @p NextStateUpdateTime is an int.
+     */
+    public extern setNextStateUpdateTime(NextStateUpdateTime);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#setRawData(byte)
+     *
+     * @p Data is an int.
+     */
+    public extern setRawData(Data);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#setType(org.bukkit.Material)
+     *
+     * @p Type is a string naming a [Material](Material.aus.md).
+     */
+    public extern setType(Type);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#update()
+     *
      * @r A bool.
      */
-    public extern matches(Data);
+    public extern update();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Vault.html#merge(org.bukkit.block.data.BlockData)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#update(boolean)
      *
-     * @p Data is a [BlockData](BlockData.aus.md).
-     * @r A [BlockData](BlockData.aus.md).
-     */
-    public extern merge(Data);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Vault.html#mirror(org.bukkit.block.structure.Mirror)
-     *
-     * @p Mirror is a string naming a [Mirror](Mirror.aus.md).
-     */
-    public extern mirror(Mirror);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Vault.html#requiresCorrectToolForDrops()
-     *
+     * @p Force is a bool.
      * @r A bool.
      */
-    public extern requiresCorrectToolForDrops();
+    public extern update(Force);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Vault.html#rotate(org.bukkit.block.structure.StructureRotation)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Vault.html#update(boolean,boolean)
      *
-     * @p Rotation is a string naming a
-     * [StructureRotation](StructureRotation.aus.md).
+     * @p Force is a bool.
+     * @p ApplyPhysics is a bool.
+     * @r A bool.
      */
-    public extern rotate(Rotation);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Vault.html#setFacing(org.bukkit.block.BlockFace)
-     *
-     * @p Facing is a string naming a [BlockFace](BlockFace.aus.md).
-     */
-    public extern setFacing(Facing);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Vault.html#setOminous(boolean)
-     *
-     * @p Ominous is a bool.
-     */
-    public extern setOminous(Ominous);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Vault.html#setTrialSpawnerState(org.bukkit.block.data.type.Vault.State)
-     *
-     * @p State is a string naming a Vault.State.
-     */
-    public extern setTrialSpawnerState(State);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Vault.html#setVaultState(org.bukkit.block.data.type.Vault.State)
-     *
-     * @p State is a string naming a Vault.State.
-     */
-    public extern setVaultState(State);
+    public extern update(Force, ApplyPhysics);
 }

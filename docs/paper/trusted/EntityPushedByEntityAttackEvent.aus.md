@@ -2,14 +2,10 @@
 
 ## class: EntityPushedByEntityAttackEvent
 
-[20:14] (extern: com.lehman.aussomcraft.paper.gen.trusted.EntityPushedByEntityAttackEventShim) **extends: object** 
+[15:14] (extern: com.lehman.aussomcraft.paper.gen.trusted.EntityPushedByEntityAttackEventShim) **extends: object** 
 
 Generated shim for io.papermc.paper.event.entity.EntityPushedByEntityAttackEvent.
 Paper: https://jd.papermc.io/paper/1.21.10/io/papermc/paper/event/entity/EntityPushedByEntityAttackEvent.html
-In Paper this is a
-[EntityKnockbackEvent](EntityKnockbackEvent.aus.md).
-Every method it inherits is declared here too, so there is
-nothing to follow up to.
 Tier: trusted. Do not edit.
 
 #### Methods

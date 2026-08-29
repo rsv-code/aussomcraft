@@ -6,13 +6,12 @@
  */
 
 /**
- * Generated shim for org.bukkit.material.Gate.
+ * Generated shim for org.bukkit.block.data.type.Gate.
  *
- * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Gate.html
+ * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Gate.html
  *
  * In Paper this is a [Directional](Directional.aus.md),
- * [Openable](Openable.aus.md) and
- * [MaterialData](MaterialData.aus.md).
+ * [Openable](Openable.aus.md) and [Powerable](Powerable.aus.md).
  * Every method it inherits is declared here too, so there is
  * nothing to follow up to.
  *
@@ -22,95 +21,262 @@ extern class Gate : com.lehman.aussomcraft.paper.gen.dangerous.GateShim {
     public extern __opEq__(A0);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Gate.html#clone()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Gate.html#clone()
      *
-     * @r A [Gate](Gate.aus.md).
+     * @r A [BlockData](BlockData.aus.md).
      */
     public extern clone();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Gate.html#equals(java.lang.Object)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Gate.html#copyTo(org.bukkit.block.data.BlockData)
      *
-     * @p Obj is an Object.
-     * @r A bool.
+     * @p Other is a [BlockData](BlockData.aus.md).
      */
-    public extern equals(Obj);
+    public extern copyTo(Other);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Gate.html#getData()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Gate.html#createBlockState()
      *
-     * @r An int.
+     * @r A [BlockState](BlockState.aus.md).
      */
-    public extern getData();
+    public extern createBlockState();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Gate.html#getFacing()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Gate.html#getAsString()
+     *
+     * @r A string.
+     */
+    public extern getAsString();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Gate.html#getAsString(boolean)
+     *
+     * @p HideUnspecified is a bool.
+     * @r A string.
+     */
+    public extern getAsString(HideUnspecified);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Gate.html#getCollisionShape(org.bukkit.Location)
+     *
+     * @p Location is a [Location](Location.aus.md).
+     * @r A [VoxelShape](VoxelShape.aus.md).
+     */
+    public extern getCollisionShape(Location);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Gate.html#getDestroySpeed(org.bukkit.inventory.ItemStack)
+     *
+     * @p ItemStack is an [ItemStack](ItemStack.aus.md).
+     * @r A double.
+     */
+    public extern getDestroySpeed(ItemStack);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Gate.html#getDestroySpeed(org.bukkit.inventory.ItemStack,boolean)
+     *
+     * @p ItemStack is an [ItemStack](ItemStack.aus.md).
+     * @p ConsiderEnchants is a bool.
+     * @r A double.
+     */
+    public extern getDestroySpeed(ItemStack, ConsiderEnchants);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Gate.html#getFaces()
+     *
+     * @r A list.
+     */
+    public extern getFaces();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Gate.html#getFacing()
      *
      * @r A string naming a [BlockFace](BlockFace.aus.md).
      */
     public extern getFacing();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Gate.html#getItemType()
-     *
-     * @r A string naming a [Material](Material.aus.md).
-     */
-    public extern getItemType();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Gate.html#hashCode()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Gate.html#getLightEmission()
      *
      * @r An int.
      */
-    public extern hashCode();
+    public extern getLightEmission();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Gate.html#isOpen()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Gate.html#getMapColor()
+     *
+     * @r A [Color](Color.aus.md).
+     */
+    public extern getMapColor();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Gate.html#getMaterial()
+     *
+     * @r A string naming a [Material](Material.aus.md).
+     */
+    public extern getMaterial();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Gate.html#getPistonMoveReaction()
+     *
+     * @r A string naming a
+     * [PistonMoveReaction](PistonMoveReaction.aus.md).
+     */
+    public extern getPistonMoveReaction();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Gate.html#getPlacementMaterial()
+     *
+     * @r A string naming a [Material](Material.aus.md).
+     */
+    public extern getPlacementMaterial();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Gate.html#getSoundGroup()
+     *
+     * @r A [SoundGroup](SoundGroup.aus.md).
+     */
+    public extern getSoundGroup();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Gate.html#isFaceSturdy(org.bukkit.block.BlockFace,org.bukkit.block.BlockSupport)
+     *
+     * @p Face is a string naming a [BlockFace](BlockFace.aus.md).
+     * @p Support is a string naming a
+     * [BlockSupport](BlockSupport.aus.md).
+     * @r A bool.
+     */
+    public extern isFaceSturdy(Face, Support);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Gate.html#isInWall()
+     *
+     * @r A bool.
+     */
+    public extern isInWall();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Gate.html#isOccluding()
+     *
+     * @r A bool.
+     */
+    public extern isOccluding();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Gate.html#isOpen()
      *
      * @r A bool.
      */
     public extern isOpen();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Gate.html#setData(byte)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Gate.html#isPowered()
      *
-     * @p Data is an int.
+     * @r A bool.
      */
-    public extern setData(Data);
+    public extern isPowered();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Gate.html#setFacingDirection(org.bukkit.block.BlockFace)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Gate.html#isPreferredTool(org.bukkit.inventory.ItemStack)
      *
-     * @p Face is a string naming a [BlockFace](BlockFace.aus.md).
+     * @p Tool is an [ItemStack](ItemStack.aus.md).
+     * @r A bool.
      */
-    public extern setFacingDirection(Face);
+    public extern isPreferredTool(Tool);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Gate.html#setOpen(boolean)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Gate.html#isRandomlyTicked()
      *
-     * @p IsOpen is a bool.
+     * @r A bool.
      */
-    public extern setOpen(IsOpen);
+    public extern isRandomlyTicked();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Gate.html#toItemStack()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Gate.html#isReplaceable()
      *
-     * @r An [ItemStack](ItemStack.aus.md).
+     * @r A bool.
      */
-    public extern toItemStack();
+    public extern isReplaceable();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Gate.html#toItemStack(int)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Gate.html#isSupported(org.bukkit.block.Block)
      *
-     * @p Amount is an int.
-     * @r An [ItemStack](ItemStack.aus.md).
+     * @p Block is a [Block](Block.aus.md).
+     * @r A bool.
      */
-    public extern toItemStack(Amount);
+    public extern isSupported(Block);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Gate.html#toString()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Gate.html#isSupported(org.bukkit.Location)
      *
-     * @r A string.
+     * @p Location is a [Location](Location.aus.md).
+     * @r A bool.
      */
-    public extern toString();
+    public extern isSupported_location(Location);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Gate.html#matches(org.bukkit.block.data.BlockData)
+     *
+     * @p Data is a [BlockData](BlockData.aus.md).
+     * @r A bool.
+     */
+    public extern matches(Data);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Gate.html#merge(org.bukkit.block.data.BlockData)
+     *
+     * @p Data is a [BlockData](BlockData.aus.md).
+     * @r A [BlockData](BlockData.aus.md).
+     */
+    public extern merge(Data);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Gate.html#mirror(org.bukkit.block.structure.Mirror)
+     *
+     * @p Mirror is a string naming a [Mirror](Mirror.aus.md).
+     */
+    public extern mirror(Mirror);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Gate.html#requiresCorrectToolForDrops()
+     *
+     * @r A bool.
+     */
+    public extern requiresCorrectToolForDrops();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Gate.html#rotate(org.bukkit.block.structure.StructureRotation)
+     *
+     * @p Rotation is a string naming a
+     * [StructureRotation](StructureRotation.aus.md).
+     */
+    public extern rotate(Rotation);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Gate.html#setFacing(org.bukkit.block.BlockFace)
+     *
+     * @p Facing is a string naming a [BlockFace](BlockFace.aus.md).
+     */
+    public extern setFacing(Facing);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Gate.html#setInWall(boolean)
+     *
+     * @p InWall is a bool.
+     */
+    public extern setInWall(InWall);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Gate.html#setOpen(boolean)
+     *
+     * @p Open is a bool.
+     */
+    public extern setOpen(Open);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Gate.html#setPowered(boolean)
+     *
+     * @p Powered is a bool.
+     */
+    public extern setPowered(Powered);
 }

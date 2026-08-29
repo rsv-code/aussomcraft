@@ -17,67 +17,188 @@ import com.lehman.aussomcraft.paper.Marshal;
 import com.lehman.aussomcraft.paper.PaperObj;
 
 /**
- * Generated shim for org.bukkit.inventory.meta.Damageable.
+ * Generated shim for org.bukkit.entity.Damageable.
  *
  * Tier: trusted. Holds only what this tier grants.
  */
 @SuppressWarnings({"unchecked", "rawtypes"})
 public class DamageableShim extends PaperObj {
 
-    public AussomType addAttributeModifier(Environment env, ArrayList<AussomType> args) {
+    public AussomType addPassenger(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("addAttributeModifier");
+                return Marshal.detached("addPassenger");
             }
-            if (n == 2) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).addAttributeModifier((org.bukkit.attribute.Attribute) Marshal.typed(args, 0, org.bukkit.attribute.Attribute.class), (org.bukkit.attribute.AttributeModifier) Marshal.typed(args, 1, org.bukkit.attribute.AttributeModifier.class)));
+            if (n == 1) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).addPassenger((org.bukkit.entity.Entity) Marshal.typed(args, 0, org.bukkit.entity.Entity.class)));
             }
-            return Marshal.wrongArity("addAttributeModifier", n);
+            return Marshal.wrongArity("addPassenger", n);
         } catch (Throwable e) {
-            return Marshal.failed("addAttributeModifier", e);
+            return Marshal.failed("addPassenger", e);
         }
     }
 
-    public AussomType addEnchant(Environment env, ArrayList<AussomType> args) {
+    public AussomType addScoreboardTag(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("addEnchant");
+                return Marshal.detached("addScoreboardTag");
             }
-            if (n == 3) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).addEnchant((org.bukkit.enchantments.Enchantment) Marshal.typed(args, 0, org.bukkit.enchantments.Enchantment.class), Marshal.argInt(args, 1), Marshal.argBool(args, 2)));
+            if (n == 1) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).addScoreboardTag((java.lang.String) Marshal.typed(args, 0, java.lang.String.class)));
             }
-            return Marshal.wrongArity("addEnchant", n);
+            return Marshal.wrongArity("addScoreboardTag", n);
         } catch (Throwable e) {
-            return Marshal.failed("addEnchant", e);
+            return Marshal.failed("addScoreboardTag", e);
         }
     }
 
-    public AussomType clone(Environment env, ArrayList<AussomType> args) {
+    public AussomType broadcastHurtAnimation(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("clone");
+                return Marshal.detached("broadcastHurtAnimation");
+            }
+            if (n == 1) {
+                ((org.bukkit.entity.Entity) self).broadcastHurtAnimation((java.util.Collection) Marshal.typed(args, 0, java.util.Collection.class));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("broadcastHurtAnimation", n);
+        } catch (Throwable e) {
+            return Marshal.failed("broadcastHurtAnimation", e);
+        }
+    }
+
+    public AussomType clearResourcePacks(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("clearResourcePacks");
             }
             if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.Damageable) self).clone());
+                ((net.kyori.adventure.audience.Audience) self).clearResourcePacks();
+                return new AussomNull();
             }
-            return Marshal.wrongArity("clone", n);
+            return Marshal.wrongArity("clearResourcePacks", n);
         } catch (Throwable e) {
-            return Marshal.failed("clone", e);
+            return Marshal.failed("clearResourcePacks", e);
+        }
+    }
+
+    public AussomType clearTitle(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("clearTitle");
+            }
+            if (n == 0) {
+                ((net.kyori.adventure.audience.Audience) self).clearTitle();
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("clearTitle", n);
+        } catch (Throwable e) {
+            return Marshal.failed("clearTitle", e);
+        }
+    }
+
+    public AussomType closeDialog(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("closeDialog");
+            }
+            if (n == 0) {
+                ((net.kyori.adventure.audience.Audience) self).closeDialog();
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("closeDialog", n);
+        } catch (Throwable e) {
+            return Marshal.failed("closeDialog", e);
+        }
+    }
+
+    public AussomType collidesAt(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("collidesAt");
+            }
+            if (n == 1) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).collidesAt((org.bukkit.Location) Marshal.typed(args, 0, org.bukkit.Location.class)));
+            }
+            return Marshal.wrongArity("collidesAt", n);
+        } catch (Throwable e) {
+            return Marshal.failed("collidesAt", e);
+        }
+    }
+
+    public AussomType copy(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("copy");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).copy());
+            }
+            if (n == 1) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).copy((org.bukkit.Location) Marshal.typed(args, 0, org.bukkit.Location.class)));
+            }
+            return Marshal.wrongArity("copy", n);
+        } catch (Throwable e) {
+            return Marshal.failed("copy", e);
+        }
+    }
+
+    public AussomType createSnapshot(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("createSnapshot");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).createSnapshot());
+            }
+            return Marshal.wrongArity("createSnapshot", n);
+        } catch (Throwable e) {
+            return Marshal.failed("createSnapshot", e);
         }
     }
 
@@ -87,15 +208,15 @@ public class DamageableShim extends PaperObj {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
                 return Marshal.detached("customName");
             }
             if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).customName());
+                return Marshal.wrap(env, ((org.bukkit.Nameable) self).customName());
             }
             if (n == 1) {
-                ((org.bukkit.inventory.meta.ItemMeta) self).customName((net.kyori.adventure.text.Component) Marshal.typed(args, 0, net.kyori.adventure.text.Component.class));
+                ((org.bukkit.Nameable) self).customName((net.kyori.adventure.text.Component) Marshal.typed(args, 0, net.kyori.adventure.text.Component.class));
                 return new AussomNull();
             }
             return Marshal.wrongArity("customName", n);
@@ -104,45 +225,104 @@ public class DamageableShim extends PaperObj {
         }
     }
 
-    public AussomType displayName(Environment env, ArrayList<AussomType> args) {
+    public AussomType damage(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("displayName");
-            }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).displayName());
+                return Marshal.detached("damage");
             }
             if (n == 1) {
-                ((org.bukkit.inventory.meta.ItemMeta) self).displayName((net.kyori.adventure.text.Component) Marshal.typed(args, 0, net.kyori.adventure.text.Component.class));
+                ((org.bukkit.entity.Damageable) self).damage(Marshal.argDouble(args, 0));
                 return new AussomNull();
             }
-            return Marshal.wrongArity("displayName", n);
+            if (n == 2) {
+                ((org.bukkit.entity.Damageable) self).damage(Marshal.argDouble(args, 0), (org.bukkit.damage.DamageSource) Marshal.typed(args, 1, org.bukkit.damage.DamageSource.class));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("damage", n);
         } catch (Throwable e) {
-            return Marshal.failed("displayName", e);
+            return Marshal.failed("damage", e);
         }
     }
 
-    public AussomType getAsComponentString(Environment env, ArrayList<AussomType> args) {
+    public AussomType damage_amount_source(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("getAsComponentString");
+                return Marshal.detached("damage_amount_source");
+            }
+            if (n == 2) {
+                ((org.bukkit.entity.Damageable) self).damage(Marshal.argDouble(args, 0), (org.bukkit.entity.Entity) Marshal.typed(args, 1, org.bukkit.entity.Entity.class));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("damage_amount_source", n);
+        } catch (Throwable e) {
+            return Marshal.failed("damage_amount_source", e);
+        }
+    }
+
+    public AussomType eject(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("eject");
             }
             if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).getAsComponentString());
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).eject());
             }
-            return Marshal.wrongArity("getAsComponentString", n);
+            return Marshal.wrongArity("eject", n);
         } catch (Throwable e) {
-            return Marshal.failed("getAsComponentString", e);
+            return Marshal.failed("eject", e);
+        }
+    }
+
+    public AussomType fromMobSpawner(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("fromMobSpawner");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).fromMobSpawner());
+            }
+            return Marshal.wrongArity("fromMobSpawner", n);
+        } catch (Throwable e) {
+            return Marshal.failed("fromMobSpawner", e);
+        }
+    }
+
+    public AussomType getAbsorptionAmount(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("getAbsorptionAmount");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Damageable) self).getAbsorptionAmount());
+            }
+            return Marshal.wrongArity("getAbsorptionAmount", n);
+        } catch (Throwable e) {
+            return Marshal.failed("getAbsorptionAmount", e);
         }
     }
 
@@ -152,12 +332,12 @@ public class DamageableShim extends PaperObj {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
                 return Marshal.detached("getAsString");
             }
             if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).getAsString());
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).getAsString());
             }
             return Marshal.wrongArity("getAsString", n);
         } catch (Throwable e) {
@@ -165,497 +345,481 @@ public class DamageableShim extends PaperObj {
         }
     }
 
-    public AussomType getAttributeModifiers(Environment env, ArrayList<AussomType> args) {
+    public AussomType getBoundingBox(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("getAttributeModifiers");
+                return Marshal.detached("getBoundingBox");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).getBoundingBox());
+            }
+            return Marshal.wrongArity("getBoundingBox", n);
+        } catch (Throwable e) {
+            return Marshal.failed("getBoundingBox", e);
+        }
+    }
+
+    public AussomType getChunk(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("getChunk");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).getChunk());
+            }
+            return Marshal.wrongArity("getChunk", n);
+        } catch (Throwable e) {
+            return Marshal.failed("getChunk", e);
+        }
+    }
+
+    public AussomType getCustomName(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("getCustomName");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.Nameable) self).getCustomName());
+            }
+            return Marshal.wrongArity("getCustomName", n);
+        } catch (Throwable e) {
+            return Marshal.failed("getCustomName", e);
+        }
+    }
+
+    public AussomType getData(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("getData");
             }
             if (n == 1) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).getAttributeModifiers((org.bukkit.attribute.Attribute) Marshal.typed(args, 0, org.bukkit.attribute.Attribute.class)));
+                return Marshal.wrap(env, ((io.papermc.paper.datacomponent.DataComponentView) self).getData((io.papermc.paper.datacomponent.DataComponentType.Valued) Marshal.typed(args, 0, io.papermc.paper.datacomponent.DataComponentType.Valued.class)));
             }
-            return Marshal.wrongArity("getAttributeModifiers", n);
+            return Marshal.wrongArity("getData", n);
         } catch (Throwable e) {
-            return Marshal.failed("getAttributeModifiers", e);
+            return Marshal.failed("getData", e);
         }
     }
 
-    public AussomType getCanDestroy(Environment env, ArrayList<AussomType> args) {
+    public AussomType getDataOrDefault(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("getCanDestroy");
+                return Marshal.detached("getDataOrDefault");
+            }
+            if (n == 2) {
+                return Marshal.wrap(env, ((io.papermc.paper.datacomponent.DataComponentView) self).getDataOrDefault((io.papermc.paper.datacomponent.DataComponentType.Valued) Marshal.typed(args, 0, io.papermc.paper.datacomponent.DataComponentType.Valued.class), (java.lang.Object) Marshal.typed(args, 1, java.lang.Object.class)));
+            }
+            return Marshal.wrongArity("getDataOrDefault", n);
+        } catch (Throwable e) {
+            return Marshal.failed("getDataOrDefault", e);
+        }
+    }
+
+    public AussomType getEffectivePermissions(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("getEffectivePermissions");
             }
             if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).getCanDestroy());
+                return Marshal.wrap(env, ((org.bukkit.permissions.Permissible) self).getEffectivePermissions());
             }
-            return Marshal.wrongArity("getCanDestroy", n);
+            return Marshal.wrongArity("getEffectivePermissions", n);
         } catch (Throwable e) {
-            return Marshal.failed("getCanDestroy", e);
+            return Marshal.failed("getEffectivePermissions", e);
         }
     }
 
-    public AussomType getCanPlaceOn(Environment env, ArrayList<AussomType> args) {
+    public AussomType getEntityId(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("getCanPlaceOn");
+                return Marshal.detached("getEntityId");
             }
             if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).getCanPlaceOn());
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).getEntityId());
             }
-            return Marshal.wrongArity("getCanPlaceOn", n);
+            return Marshal.wrongArity("getEntityId", n);
         } catch (Throwable e) {
-            return Marshal.failed("getCanPlaceOn", e);
+            return Marshal.failed("getEntityId", e);
         }
     }
 
-    public AussomType getCustomModelData(Environment env, ArrayList<AussomType> args) {
+    public AussomType getEntitySpawnReason(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("getCustomModelData");
+                return Marshal.detached("getEntitySpawnReason");
             }
             if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).getCustomModelData());
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).getEntitySpawnReason());
             }
-            return Marshal.wrongArity("getCustomModelData", n);
+            return Marshal.wrongArity("getEntitySpawnReason", n);
         } catch (Throwable e) {
-            return Marshal.failed("getCustomModelData", e);
+            return Marshal.failed("getEntitySpawnReason", e);
         }
     }
 
-    public AussomType getCustomModelDataComponent(Environment env, ArrayList<AussomType> args) {
+    public AussomType getFacing(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("getCustomModelDataComponent");
+                return Marshal.detached("getFacing");
             }
             if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).getCustomModelDataComponent());
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).getFacing());
             }
-            return Marshal.wrongArity("getCustomModelDataComponent", n);
+            return Marshal.wrongArity("getFacing", n);
         } catch (Throwable e) {
-            return Marshal.failed("getCustomModelDataComponent", e);
+            return Marshal.failed("getFacing", e);
         }
     }
 
-    public AussomType getCustomTagContainer(Environment env, ArrayList<AussomType> args) {
+    public AussomType getFallDistance(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("getCustomTagContainer");
+                return Marshal.detached("getFallDistance");
             }
             if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).getCustomTagContainer());
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).getFallDistance());
             }
-            return Marshal.wrongArity("getCustomTagContainer", n);
+            return Marshal.wrongArity("getFallDistance", n);
         } catch (Throwable e) {
-            return Marshal.failed("getCustomTagContainer", e);
+            return Marshal.failed("getFallDistance", e);
         }
     }
 
-    public AussomType getDamage(Environment env, ArrayList<AussomType> args) {
+    public AussomType getFireTicks(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("getDamage");
+                return Marshal.detached("getFireTicks");
             }
             if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.Damageable) self).getDamage());
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).getFireTicks());
             }
-            return Marshal.wrongArity("getDamage", n);
+            return Marshal.wrongArity("getFireTicks", n);
         } catch (Throwable e) {
-            return Marshal.failed("getDamage", e);
+            return Marshal.failed("getFireTicks", e);
         }
     }
 
-    public AussomType getDamageResistant(Environment env, ArrayList<AussomType> args) {
+    public AussomType getFreezeTicks(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("getDamageResistant");
+                return Marshal.detached("getFreezeTicks");
             }
             if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).getDamageResistant());
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).getFreezeTicks());
             }
-            return Marshal.wrongArity("getDamageResistant", n);
+            return Marshal.wrongArity("getFreezeTicks", n);
         } catch (Throwable e) {
-            return Marshal.failed("getDamageResistant", e);
+            return Marshal.failed("getFreezeTicks", e);
         }
     }
 
-    public AussomType getDamageResistantTypes(Environment env, ArrayList<AussomType> args) {
+    public AussomType getHealth(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("getDamageResistantTypes");
+                return Marshal.detached("getHealth");
             }
             if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).getDamageResistantTypes());
+                return Marshal.wrap(env, ((org.bukkit.entity.Damageable) self).getHealth());
             }
-            return Marshal.wrongArity("getDamageResistantTypes", n);
+            return Marshal.wrongArity("getHealth", n);
         } catch (Throwable e) {
-            return Marshal.failed("getDamageResistantTypes", e);
+            return Marshal.failed("getHealth", e);
         }
     }
 
-    public AussomType getDestroyableKeys(Environment env, ArrayList<AussomType> args) {
+    public AussomType getHeight(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("getDestroyableKeys");
+                return Marshal.detached("getHeight");
             }
             if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).getDestroyableKeys());
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).getHeight());
             }
-            return Marshal.wrongArity("getDestroyableKeys", n);
+            return Marshal.wrongArity("getHeight", n);
         } catch (Throwable e) {
-            return Marshal.failed("getDestroyableKeys", e);
+            return Marshal.failed("getHeight", e);
         }
     }
 
-    public AussomType getDisplayName(Environment env, ArrayList<AussomType> args) {
+    public AussomType getLastDamageCause(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("getDisplayName");
+                return Marshal.detached("getLastDamageCause");
             }
             if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).getDisplayName());
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).getLastDamageCause());
             }
-            return Marshal.wrongArity("getDisplayName", n);
+            return Marshal.wrongArity("getLastDamageCause", n);
         } catch (Throwable e) {
-            return Marshal.failed("getDisplayName", e);
+            return Marshal.failed("getLastDamageCause", e);
         }
     }
 
-    public AussomType getEnchantLevel(Environment env, ArrayList<AussomType> args) {
+    public AussomType getLocation(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("getEnchantLevel");
+                return Marshal.detached("getLocation");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).getLocation());
             }
             if (n == 1) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).getEnchantLevel((org.bukkit.enchantments.Enchantment) Marshal.typed(args, 0, org.bukkit.enchantments.Enchantment.class)));
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).getLocation((org.bukkit.Location) Marshal.typed(args, 0, org.bukkit.Location.class)));
             }
-            return Marshal.wrongArity("getEnchantLevel", n);
+            return Marshal.wrongArity("getLocation", n);
         } catch (Throwable e) {
-            return Marshal.failed("getEnchantLevel", e);
+            return Marshal.failed("getLocation", e);
         }
     }
 
-    public AussomType getEnchantable(Environment env, ArrayList<AussomType> args) {
+    public AussomType getMaxFireTicks(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("getEnchantable");
+                return Marshal.detached("getMaxFireTicks");
             }
             if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).getEnchantable());
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).getMaxFireTicks());
             }
-            return Marshal.wrongArity("getEnchantable", n);
+            return Marshal.wrongArity("getMaxFireTicks", n);
         } catch (Throwable e) {
-            return Marshal.failed("getEnchantable", e);
+            return Marshal.failed("getMaxFireTicks", e);
         }
     }
 
-    public AussomType getEnchantmentGlintOverride(Environment env, ArrayList<AussomType> args) {
+    public AussomType getMaxFreezeTicks(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("getEnchantmentGlintOverride");
+                return Marshal.detached("getMaxFreezeTicks");
             }
             if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).getEnchantmentGlintOverride());
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).getMaxFreezeTicks());
             }
-            return Marshal.wrongArity("getEnchantmentGlintOverride", n);
+            return Marshal.wrongArity("getMaxFreezeTicks", n);
         } catch (Throwable e) {
-            return Marshal.failed("getEnchantmentGlintOverride", e);
+            return Marshal.failed("getMaxFreezeTicks", e);
         }
     }
 
-    public AussomType getEnchants(Environment env, ArrayList<AussomType> args) {
+    public AussomType getMaxHealth(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("getEnchants");
+                return Marshal.detached("getMaxHealth");
             }
             if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).getEnchants());
+                return Marshal.wrap(env, ((org.bukkit.entity.Damageable) self).getMaxHealth());
             }
-            return Marshal.wrongArity("getEnchants", n);
+            return Marshal.wrongArity("getMaxHealth", n);
         } catch (Throwable e) {
-            return Marshal.failed("getEnchants", e);
+            return Marshal.failed("getMaxHealth", e);
         }
     }
 
-    public AussomType getEquippable(Environment env, ArrayList<AussomType> args) {
+    public AussomType getMetadata(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("getEquippable");
+                return Marshal.detached("getMetadata");
             }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).getEquippable());
+            if (n == 1) {
+                return Marshal.wrap(env, ((org.bukkit.metadata.Metadatable) self).getMetadata((java.lang.String) Marshal.typed(args, 0, java.lang.String.class)));
             }
-            return Marshal.wrongArity("getEquippable", n);
+            return Marshal.wrongArity("getMetadata", n);
         } catch (Throwable e) {
-            return Marshal.failed("getEquippable", e);
+            return Marshal.failed("getMetadata", e);
         }
     }
 
-    public AussomType getFood(Environment env, ArrayList<AussomType> args) {
+    public AussomType getName(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("getFood");
+                return Marshal.detached("getName");
             }
             if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).getFood());
+                return Marshal.wrap(env, ((org.bukkit.command.CommandSender) self).getName());
             }
-            return Marshal.wrongArity("getFood", n);
+            return Marshal.wrongArity("getName", n);
         } catch (Throwable e) {
-            return Marshal.failed("getFood", e);
+            return Marshal.failed("getName", e);
         }
     }
 
-    public AussomType getItemFlags(Environment env, ArrayList<AussomType> args) {
+    public AussomType getNearbyEntities(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("getItemFlags");
+                return Marshal.detached("getNearbyEntities");
             }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).getItemFlags());
+            if (n == 3) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).getNearbyEntities(Marshal.argDouble(args, 0), Marshal.argDouble(args, 1), Marshal.argDouble(args, 2)));
             }
-            return Marshal.wrongArity("getItemFlags", n);
+            return Marshal.wrongArity("getNearbyEntities", n);
         } catch (Throwable e) {
-            return Marshal.failed("getItemFlags", e);
+            return Marshal.failed("getNearbyEntities", e);
         }
     }
 
-    public AussomType getItemModel(Environment env, ArrayList<AussomType> args) {
+    public AussomType getOrigin(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("getItemModel");
+                return Marshal.detached("getOrigin");
             }
             if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).getItemModel());
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).getOrigin());
             }
-            return Marshal.wrongArity("getItemModel", n);
+            return Marshal.wrongArity("getOrigin", n);
         } catch (Throwable e) {
-            return Marshal.failed("getItemModel", e);
+            return Marshal.failed("getOrigin", e);
         }
     }
 
-    public AussomType getItemName(Environment env, ArrayList<AussomType> args) {
+    public AussomType getPassenger(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("getItemName");
+                return Marshal.detached("getPassenger");
             }
             if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).getItemName());
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).getPassenger());
             }
-            return Marshal.wrongArity("getItemName", n);
+            return Marshal.wrongArity("getPassenger", n);
         } catch (Throwable e) {
-            return Marshal.failed("getItemName", e);
+            return Marshal.failed("getPassenger", e);
         }
     }
 
-    public AussomType getJukeboxPlayable(Environment env, ArrayList<AussomType> args) {
+    public AussomType getPassengers(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("getJukeboxPlayable");
+                return Marshal.detached("getPassengers");
             }
             if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).getJukeboxPlayable());
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).getPassengers());
             }
-            return Marshal.wrongArity("getJukeboxPlayable", n);
+            return Marshal.wrongArity("getPassengers", n);
         } catch (Throwable e) {
-            return Marshal.failed("getJukeboxPlayable", e);
-        }
-    }
-
-    public AussomType getLocalizedName(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
-            if (self == null) {
-                return Marshal.detached("getLocalizedName");
-            }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).getLocalizedName());
-            }
-            return Marshal.wrongArity("getLocalizedName", n);
-        } catch (Throwable e) {
-            return Marshal.failed("getLocalizedName", e);
-        }
-    }
-
-    public AussomType getLore(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
-            if (self == null) {
-                return Marshal.detached("getLore");
-            }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).getLore());
-            }
-            return Marshal.wrongArity("getLore", n);
-        } catch (Throwable e) {
-            return Marshal.failed("getLore", e);
-        }
-    }
-
-    public AussomType getLoreComponents(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
-            if (self == null) {
-                return Marshal.detached("getLoreComponents");
-            }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).getLoreComponents());
-            }
-            return Marshal.wrongArity("getLoreComponents", n);
-        } catch (Throwable e) {
-            return Marshal.failed("getLoreComponents", e);
-        }
-    }
-
-    public AussomType getMaxDamage(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
-            if (self == null) {
-                return Marshal.detached("getMaxDamage");
-            }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.Damageable) self).getMaxDamage());
-            }
-            return Marshal.wrongArity("getMaxDamage", n);
-        } catch (Throwable e) {
-            return Marshal.failed("getMaxDamage", e);
-        }
-    }
-
-    public AussomType getMaxStackSize(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
-            if (self == null) {
-                return Marshal.detached("getMaxStackSize");
-            }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).getMaxStackSize());
-            }
-            return Marshal.wrongArity("getMaxStackSize", n);
-        } catch (Throwable e) {
-            return Marshal.failed("getMaxStackSize", e);
+            return Marshal.failed("getPassengers", e);
         }
     }
 
@@ -665,7 +829,7 @@ public class DamageableShim extends PaperObj {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
                 return Marshal.detached("getPersistentDataContainer");
             }
@@ -678,1568 +842,2434 @@ public class DamageableShim extends PaperObj {
         }
     }
 
-    public AussomType getPlaceableKeys(Environment env, ArrayList<AussomType> args) {
+    public AussomType getPickItemStack(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("getPlaceableKeys");
+                return Marshal.detached("getPickItemStack");
             }
             if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).getPlaceableKeys());
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).getPickItemStack());
             }
-            return Marshal.wrongArity("getPlaceableKeys", n);
+            return Marshal.wrongArity("getPickItemStack", n);
         } catch (Throwable e) {
-            return Marshal.failed("getPlaceableKeys", e);
+            return Marshal.failed("getPickItemStack", e);
         }
     }
 
-    public AussomType getRarity(Environment env, ArrayList<AussomType> args) {
+    public AussomType getPistonMoveReaction(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("getRarity");
+                return Marshal.detached("getPistonMoveReaction");
             }
             if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).getRarity());
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).getPistonMoveReaction());
             }
-            return Marshal.wrongArity("getRarity", n);
+            return Marshal.wrongArity("getPistonMoveReaction", n);
         } catch (Throwable e) {
-            return Marshal.failed("getRarity", e);
+            return Marshal.failed("getPistonMoveReaction", e);
         }
     }
 
-    public AussomType getTool(Environment env, ArrayList<AussomType> args) {
+    public AussomType getPitch(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("getTool");
+                return Marshal.detached("getPitch");
             }
             if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).getTool());
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).getPitch());
             }
-            return Marshal.wrongArity("getTool", n);
+            return Marshal.wrongArity("getPitch", n);
         } catch (Throwable e) {
-            return Marshal.failed("getTool", e);
+            return Marshal.failed("getPitch", e);
         }
     }
 
-    public AussomType getTooltipStyle(Environment env, ArrayList<AussomType> args) {
+    public AussomType getPortalCooldown(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("getTooltipStyle");
+                return Marshal.detached("getPortalCooldown");
             }
             if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).getTooltipStyle());
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).getPortalCooldown());
             }
-            return Marshal.wrongArity("getTooltipStyle", n);
+            return Marshal.wrongArity("getPortalCooldown", n);
         } catch (Throwable e) {
-            return Marshal.failed("getTooltipStyle", e);
+            return Marshal.failed("getPortalCooldown", e);
         }
     }
 
-    public AussomType getUseCooldown(Environment env, ArrayList<AussomType> args) {
+    public AussomType getPose(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("getUseCooldown");
+                return Marshal.detached("getPose");
             }
             if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).getUseCooldown());
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).getPose());
             }
-            return Marshal.wrongArity("getUseCooldown", n);
+            return Marshal.wrongArity("getPose", n);
         } catch (Throwable e) {
-            return Marshal.failed("getUseCooldown", e);
+            return Marshal.failed("getPose", e);
         }
     }
 
-    public AussomType getUseRemainder(Environment env, ArrayList<AussomType> args) {
+    public AussomType getRemovalReason(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("getUseRemainder");
+                return Marshal.detached("getRemovalReason");
             }
             if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).getUseRemainder());
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).getRemovalReason());
             }
-            return Marshal.wrongArity("getUseRemainder", n);
+            return Marshal.wrongArity("getRemovalReason", n);
         } catch (Throwable e) {
-            return Marshal.failed("getUseRemainder", e);
+            return Marshal.failed("getRemovalReason", e);
         }
     }
 
-    public AussomType hasAttributeModifiers(Environment env, ArrayList<AussomType> args) {
+    public AussomType getRemoveEventCause(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("hasAttributeModifiers");
+                return Marshal.detached("getRemoveEventCause");
             }
             if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).hasAttributeModifiers());
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).getRemoveEventCause());
             }
-            return Marshal.wrongArity("hasAttributeModifiers", n);
+            return Marshal.wrongArity("getRemoveEventCause", n);
         } catch (Throwable e) {
-            return Marshal.failed("hasAttributeModifiers", e);
+            return Marshal.failed("getRemoveEventCause", e);
         }
     }
 
-    public AussomType hasConflictingEnchant(Environment env, ArrayList<AussomType> args) {
+    public AussomType getScoreboardEntryName(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("hasConflictingEnchant");
+                return Marshal.detached("getScoreboardEntryName");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).getScoreboardEntryName());
+            }
+            return Marshal.wrongArity("getScoreboardEntryName", n);
+        } catch (Throwable e) {
+            return Marshal.failed("getScoreboardEntryName", e);
+        }
+    }
+
+    public AussomType getScoreboardTags(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("getScoreboardTags");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).getScoreboardTags());
+            }
+            return Marshal.wrongArity("getScoreboardTags", n);
+        } catch (Throwable e) {
+            return Marshal.failed("getScoreboardTags", e);
+        }
+    }
+
+    public AussomType getSoundCategory(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("getSoundCategory");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).getSoundCategory());
+            }
+            return Marshal.wrongArity("getSoundCategory", n);
+        } catch (Throwable e) {
+            return Marshal.failed("getSoundCategory", e);
+        }
+    }
+
+    public AussomType getSpawnCategory(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("getSpawnCategory");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).getSpawnCategory());
+            }
+            return Marshal.wrongArity("getSpawnCategory", n);
+        } catch (Throwable e) {
+            return Marshal.failed("getSpawnCategory", e);
+        }
+    }
+
+    public AussomType getSwimHighSpeedSplashSound(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("getSwimHighSpeedSplashSound");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).getSwimHighSpeedSplashSound());
+            }
+            return Marshal.wrongArity("getSwimHighSpeedSplashSound", n);
+        } catch (Throwable e) {
+            return Marshal.failed("getSwimHighSpeedSplashSound", e);
+        }
+    }
+
+    public AussomType getSwimSound(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("getSwimSound");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).getSwimSound());
+            }
+            return Marshal.wrongArity("getSwimSound", n);
+        } catch (Throwable e) {
+            return Marshal.failed("getSwimSound", e);
+        }
+    }
+
+    public AussomType getSwimSplashSound(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("getSwimSplashSound");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).getSwimSplashSound());
+            }
+            return Marshal.wrongArity("getSwimSplashSound", n);
+        } catch (Throwable e) {
+            return Marshal.failed("getSwimSplashSound", e);
+        }
+    }
+
+    public AussomType getTicksLived(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("getTicksLived");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).getTicksLived());
+            }
+            return Marshal.wrongArity("getTicksLived", n);
+        } catch (Throwable e) {
+            return Marshal.failed("getTicksLived", e);
+        }
+    }
+
+    public AussomType getTrackedBy(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("getTrackedBy");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).getTrackedBy());
+            }
+            return Marshal.wrongArity("getTrackedBy", n);
+        } catch (Throwable e) {
+            return Marshal.failed("getTrackedBy", e);
+        }
+    }
+
+    public AussomType getTrackedPlayers(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("getTrackedPlayers");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).getTrackedPlayers());
+            }
+            return Marshal.wrongArity("getTrackedPlayers", n);
+        } catch (Throwable e) {
+            return Marshal.failed("getTrackedPlayers", e);
+        }
+    }
+
+    public AussomType getType(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("getType");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).getType());
+            }
+            return Marshal.wrongArity("getType", n);
+        } catch (Throwable e) {
+            return Marshal.failed("getType", e);
+        }
+    }
+
+    public AussomType getUniqueId(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("getUniqueId");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).getUniqueId());
+            }
+            return Marshal.wrongArity("getUniqueId", n);
+        } catch (Throwable e) {
+            return Marshal.failed("getUniqueId", e);
+        }
+    }
+
+    public AussomType getVehicle(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("getVehicle");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).getVehicle());
+            }
+            return Marshal.wrongArity("getVehicle", n);
+        } catch (Throwable e) {
+            return Marshal.failed("getVehicle", e);
+        }
+    }
+
+    public AussomType getVelocity(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("getVelocity");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).getVelocity());
+            }
+            return Marshal.wrongArity("getVelocity", n);
+        } catch (Throwable e) {
+            return Marshal.failed("getVelocity", e);
+        }
+    }
+
+    public AussomType getWidth(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("getWidth");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).getWidth());
+            }
+            return Marshal.wrongArity("getWidth", n);
+        } catch (Throwable e) {
+            return Marshal.failed("getWidth", e);
+        }
+    }
+
+    public AussomType getWorld(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("getWorld");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).getWorld());
+            }
+            return Marshal.wrongArity("getWorld", n);
+        } catch (Throwable e) {
+            return Marshal.failed("getWorld", e);
+        }
+    }
+
+    public AussomType getX(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("getX");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).getX());
+            }
+            return Marshal.wrongArity("getX", n);
+        } catch (Throwable e) {
+            return Marshal.failed("getX", e);
+        }
+    }
+
+    public AussomType getY(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("getY");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).getY());
+            }
+            return Marshal.wrongArity("getY", n);
+        } catch (Throwable e) {
+            return Marshal.failed("getY", e);
+        }
+    }
+
+    public AussomType getYaw(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("getYaw");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).getYaw());
+            }
+            return Marshal.wrongArity("getYaw", n);
+        } catch (Throwable e) {
+            return Marshal.failed("getYaw", e);
+        }
+    }
+
+    public AussomType getZ(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("getZ");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).getZ());
+            }
+            return Marshal.wrongArity("getZ", n);
+        } catch (Throwable e) {
+            return Marshal.failed("getZ", e);
+        }
+    }
+
+    public AussomType hasData(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("hasData");
             }
             if (n == 1) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).hasConflictingEnchant((org.bukkit.enchantments.Enchantment) Marshal.typed(args, 0, org.bukkit.enchantments.Enchantment.class)));
+                return Marshal.wrap(env, ((io.papermc.paper.datacomponent.DataComponentView) self).hasData((io.papermc.paper.datacomponent.DataComponentType) Marshal.typed(args, 0, io.papermc.paper.datacomponent.DataComponentType.class)));
             }
-            return Marshal.wrongArity("hasConflictingEnchant", n);
+            return Marshal.wrongArity("hasData", n);
         } catch (Throwable e) {
-            return Marshal.failed("hasConflictingEnchant", e);
+            return Marshal.failed("hasData", e);
         }
     }
 
-    public AussomType hasCustomModelData(Environment env, ArrayList<AussomType> args) {
+    public AussomType hasFixedPose(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("hasCustomModelData");
+                return Marshal.detached("hasFixedPose");
             }
             if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).hasCustomModelData());
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).hasFixedPose());
             }
-            return Marshal.wrongArity("hasCustomModelData", n);
+            return Marshal.wrongArity("hasFixedPose", n);
         } catch (Throwable e) {
-            return Marshal.failed("hasCustomModelData", e);
+            return Marshal.failed("hasFixedPose", e);
         }
     }
 
-    public AussomType hasCustomModelDataComponent(Environment env, ArrayList<AussomType> args) {
+    public AussomType hasGravity(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("hasCustomModelDataComponent");
+                return Marshal.detached("hasGravity");
             }
             if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).hasCustomModelDataComponent());
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).hasGravity());
             }
-            return Marshal.wrongArity("hasCustomModelDataComponent", n);
+            return Marshal.wrongArity("hasGravity", n);
         } catch (Throwable e) {
-            return Marshal.failed("hasCustomModelDataComponent", e);
+            return Marshal.failed("hasGravity", e);
         }
     }
 
-    public AussomType hasCustomName(Environment env, ArrayList<AussomType> args) {
+    public AussomType hasMetadata(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("hasCustomName");
-            }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).hasCustomName());
-            }
-            return Marshal.wrongArity("hasCustomName", n);
-        } catch (Throwable e) {
-            return Marshal.failed("hasCustomName", e);
-        }
-    }
-
-    public AussomType hasDamage(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
-            if (self == null) {
-                return Marshal.detached("hasDamage");
-            }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.Damageable) self).hasDamage());
-            }
-            return Marshal.wrongArity("hasDamage", n);
-        } catch (Throwable e) {
-            return Marshal.failed("hasDamage", e);
-        }
-    }
-
-    public AussomType hasDamageResistant(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
-            if (self == null) {
-                return Marshal.detached("hasDamageResistant");
-            }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).hasDamageResistant());
-            }
-            return Marshal.wrongArity("hasDamageResistant", n);
-        } catch (Throwable e) {
-            return Marshal.failed("hasDamageResistant", e);
-        }
-    }
-
-    public AussomType hasDamageValue(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
-            if (self == null) {
-                return Marshal.detached("hasDamageValue");
-            }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.Damageable) self).hasDamageValue());
-            }
-            return Marshal.wrongArity("hasDamageValue", n);
-        } catch (Throwable e) {
-            return Marshal.failed("hasDamageValue", e);
-        }
-    }
-
-    public AussomType hasDestroyableKeys(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
-            if (self == null) {
-                return Marshal.detached("hasDestroyableKeys");
-            }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).hasDestroyableKeys());
-            }
-            return Marshal.wrongArity("hasDestroyableKeys", n);
-        } catch (Throwable e) {
-            return Marshal.failed("hasDestroyableKeys", e);
-        }
-    }
-
-    public AussomType hasDisplayName(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
-            if (self == null) {
-                return Marshal.detached("hasDisplayName");
-            }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).hasDisplayName());
-            }
-            return Marshal.wrongArity("hasDisplayName", n);
-        } catch (Throwable e) {
-            return Marshal.failed("hasDisplayName", e);
-        }
-    }
-
-    public AussomType hasEnchant(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
-            if (self == null) {
-                return Marshal.detached("hasEnchant");
+                return Marshal.detached("hasMetadata");
             }
             if (n == 1) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).hasEnchant((org.bukkit.enchantments.Enchantment) Marshal.typed(args, 0, org.bukkit.enchantments.Enchantment.class)));
+                return Marshal.wrap(env, ((org.bukkit.metadata.Metadatable) self).hasMetadata((java.lang.String) Marshal.typed(args, 0, java.lang.String.class)));
             }
-            return Marshal.wrongArity("hasEnchant", n);
+            return Marshal.wrongArity("hasMetadata", n);
         } catch (Throwable e) {
-            return Marshal.failed("hasEnchant", e);
+            return Marshal.failed("hasMetadata", e);
         }
     }
 
-    public AussomType hasEnchantable(Environment env, ArrayList<AussomType> args) {
+    public AussomType hasNoPhysics(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("hasEnchantable");
+                return Marshal.detached("hasNoPhysics");
             }
             if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).hasEnchantable());
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).hasNoPhysics());
             }
-            return Marshal.wrongArity("hasEnchantable", n);
+            return Marshal.wrongArity("hasNoPhysics", n);
         } catch (Throwable e) {
-            return Marshal.failed("hasEnchantable", e);
+            return Marshal.failed("hasNoPhysics", e);
         }
     }
 
-    public AussomType hasEnchantmentGlintOverride(Environment env, ArrayList<AussomType> args) {
+    public AussomType hasPermission(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("hasEnchantmentGlintOverride");
-            }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).hasEnchantmentGlintOverride());
-            }
-            return Marshal.wrongArity("hasEnchantmentGlintOverride", n);
-        } catch (Throwable e) {
-            return Marshal.failed("hasEnchantmentGlintOverride", e);
-        }
-    }
-
-    public AussomType hasEnchants(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
-            if (self == null) {
-                return Marshal.detached("hasEnchants");
-            }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).hasEnchants());
-            }
-            return Marshal.wrongArity("hasEnchants", n);
-        } catch (Throwable e) {
-            return Marshal.failed("hasEnchants", e);
-        }
-    }
-
-    public AussomType hasEquippable(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
-            if (self == null) {
-                return Marshal.detached("hasEquippable");
-            }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).hasEquippable());
-            }
-            return Marshal.wrongArity("hasEquippable", n);
-        } catch (Throwable e) {
-            return Marshal.failed("hasEquippable", e);
-        }
-    }
-
-    public AussomType hasFood(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
-            if (self == null) {
-                return Marshal.detached("hasFood");
-            }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).hasFood());
-            }
-            return Marshal.wrongArity("hasFood", n);
-        } catch (Throwable e) {
-            return Marshal.failed("hasFood", e);
-        }
-    }
-
-    public AussomType hasItemFlag(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
-            if (self == null) {
-                return Marshal.detached("hasItemFlag");
+                return Marshal.detached("hasPermission");
             }
             if (n == 1) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).hasItemFlag((org.bukkit.inventory.ItemFlag) Marshal.typed(args, 0, org.bukkit.inventory.ItemFlag.class)));
+                return Marshal.wrap(env, ((org.bukkit.permissions.Permissible) self).hasPermission((java.lang.String) Marshal.typed(args, 0, java.lang.String.class)));
             }
-            return Marshal.wrongArity("hasItemFlag", n);
+            return Marshal.wrongArity("hasPermission", n);
         } catch (Throwable e) {
-            return Marshal.failed("hasItemFlag", e);
+            return Marshal.failed("hasPermission", e);
         }
     }
 
-    public AussomType hasItemModel(Environment env, ArrayList<AussomType> args) {
+    public AussomType heal(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("hasItemModel");
-            }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).hasItemModel());
-            }
-            return Marshal.wrongArity("hasItemModel", n);
-        } catch (Throwable e) {
-            return Marshal.failed("hasItemModel", e);
-        }
-    }
-
-    public AussomType hasItemName(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
-            if (self == null) {
-                return Marshal.detached("hasItemName");
-            }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).hasItemName());
-            }
-            return Marshal.wrongArity("hasItemName", n);
-        } catch (Throwable e) {
-            return Marshal.failed("hasItemName", e);
-        }
-    }
-
-    public AussomType hasJukeboxPlayable(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
-            if (self == null) {
-                return Marshal.detached("hasJukeboxPlayable");
-            }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).hasJukeboxPlayable());
-            }
-            return Marshal.wrongArity("hasJukeboxPlayable", n);
-        } catch (Throwable e) {
-            return Marshal.failed("hasJukeboxPlayable", e);
-        }
-    }
-
-    public AussomType hasLocalizedName(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
-            if (self == null) {
-                return Marshal.detached("hasLocalizedName");
-            }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).hasLocalizedName());
-            }
-            return Marshal.wrongArity("hasLocalizedName", n);
-        } catch (Throwable e) {
-            return Marshal.failed("hasLocalizedName", e);
-        }
-    }
-
-    public AussomType hasLore(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
-            if (self == null) {
-                return Marshal.detached("hasLore");
-            }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).hasLore());
-            }
-            return Marshal.wrongArity("hasLore", n);
-        } catch (Throwable e) {
-            return Marshal.failed("hasLore", e);
-        }
-    }
-
-    public AussomType hasMaxDamage(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
-            if (self == null) {
-                return Marshal.detached("hasMaxDamage");
-            }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.Damageable) self).hasMaxDamage());
-            }
-            return Marshal.wrongArity("hasMaxDamage", n);
-        } catch (Throwable e) {
-            return Marshal.failed("hasMaxDamage", e);
-        }
-    }
-
-    public AussomType hasMaxStackSize(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
-            if (self == null) {
-                return Marshal.detached("hasMaxStackSize");
-            }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).hasMaxStackSize());
-            }
-            return Marshal.wrongArity("hasMaxStackSize", n);
-        } catch (Throwable e) {
-            return Marshal.failed("hasMaxStackSize", e);
-        }
-    }
-
-    public AussomType hasPlaceableKeys(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
-            if (self == null) {
-                return Marshal.detached("hasPlaceableKeys");
-            }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).hasPlaceableKeys());
-            }
-            return Marshal.wrongArity("hasPlaceableKeys", n);
-        } catch (Throwable e) {
-            return Marshal.failed("hasPlaceableKeys", e);
-        }
-    }
-
-    public AussomType hasRarity(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
-            if (self == null) {
-                return Marshal.detached("hasRarity");
-            }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).hasRarity());
-            }
-            return Marshal.wrongArity("hasRarity", n);
-        } catch (Throwable e) {
-            return Marshal.failed("hasRarity", e);
-        }
-    }
-
-    public AussomType hasTool(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
-            if (self == null) {
-                return Marshal.detached("hasTool");
-            }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).hasTool());
-            }
-            return Marshal.wrongArity("hasTool", n);
-        } catch (Throwable e) {
-            return Marshal.failed("hasTool", e);
-        }
-    }
-
-    public AussomType hasTooltipStyle(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
-            if (self == null) {
-                return Marshal.detached("hasTooltipStyle");
-            }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).hasTooltipStyle());
-            }
-            return Marshal.wrongArity("hasTooltipStyle", n);
-        } catch (Throwable e) {
-            return Marshal.failed("hasTooltipStyle", e);
-        }
-    }
-
-    public AussomType hasUseCooldown(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
-            if (self == null) {
-                return Marshal.detached("hasUseCooldown");
-            }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).hasUseCooldown());
-            }
-            return Marshal.wrongArity("hasUseCooldown", n);
-        } catch (Throwable e) {
-            return Marshal.failed("hasUseCooldown", e);
-        }
-    }
-
-    public AussomType hasUseRemainder(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
-            if (self == null) {
-                return Marshal.detached("hasUseRemainder");
-            }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).hasUseRemainder());
-            }
-            return Marshal.wrongArity("hasUseRemainder", n);
-        } catch (Throwable e) {
-            return Marshal.failed("hasUseRemainder", e);
-        }
-    }
-
-    public AussomType isFireResistant(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
-            if (self == null) {
-                return Marshal.detached("isFireResistant");
-            }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).isFireResistant());
-            }
-            return Marshal.wrongArity("isFireResistant", n);
-        } catch (Throwable e) {
-            return Marshal.failed("isFireResistant", e);
-        }
-    }
-
-    public AussomType isGlider(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
-            if (self == null) {
-                return Marshal.detached("isGlider");
-            }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).isGlider());
-            }
-            return Marshal.wrongArity("isGlider", n);
-        } catch (Throwable e) {
-            return Marshal.failed("isGlider", e);
-        }
-    }
-
-    public AussomType isHideTooltip(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
-            if (self == null) {
-                return Marshal.detached("isHideTooltip");
-            }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).isHideTooltip());
-            }
-            return Marshal.wrongArity("isHideTooltip", n);
-        } catch (Throwable e) {
-            return Marshal.failed("isHideTooltip", e);
-        }
-    }
-
-    public AussomType isUnbreakable(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
-            if (self == null) {
-                return Marshal.detached("isUnbreakable");
-            }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).isUnbreakable());
-            }
-            return Marshal.wrongArity("isUnbreakable", n);
-        } catch (Throwable e) {
-            return Marshal.failed("isUnbreakable", e);
-        }
-    }
-
-    public AussomType itemName(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
-            if (self == null) {
-                return Marshal.detached("itemName");
-            }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).itemName());
+                return Marshal.detached("heal");
             }
             if (n == 1) {
-                ((org.bukkit.inventory.meta.ItemMeta) self).itemName((net.kyori.adventure.text.Component) Marshal.typed(args, 0, net.kyori.adventure.text.Component.class));
+                ((org.bukkit.entity.Damageable) self).heal(Marshal.argDouble(args, 0));
                 return new AussomNull();
-            }
-            return Marshal.wrongArity("itemName", n);
-        } catch (Throwable e) {
-            return Marshal.failed("itemName", e);
-        }
-    }
-
-    public AussomType lore(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
-            if (self == null) {
-                return Marshal.detached("lore");
-            }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).lore());
-            }
-            if (n == 1) {
-                ((org.bukkit.inventory.meta.ItemMeta) self).lore((java.util.List) Marshal.typed(args, 0, java.util.List.class));
-                return new AussomNull();
-            }
-            return Marshal.wrongArity("lore", n);
-        } catch (Throwable e) {
-            return Marshal.failed("lore", e);
-        }
-    }
-
-    public AussomType removeAttributeModifier(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
-            if (self == null) {
-                return Marshal.detached("removeAttributeModifier");
-            }
-            if (n == 1) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).removeAttributeModifier((org.bukkit.attribute.Attribute) Marshal.typed(args, 0, org.bukkit.attribute.Attribute.class)));
             }
             if (n == 2) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).removeAttributeModifier((org.bukkit.attribute.Attribute) Marshal.typed(args, 0, org.bukkit.attribute.Attribute.class), (org.bukkit.attribute.AttributeModifier) Marshal.typed(args, 1, org.bukkit.attribute.AttributeModifier.class)));
+                ((org.bukkit.entity.Damageable) self).heal(Marshal.argDouble(args, 0), (org.bukkit.event.entity.EntityRegainHealthEvent.RegainReason) Marshal.typed(args, 1, org.bukkit.event.entity.EntityRegainHealthEvent.RegainReason.class));
+                return new AussomNull();
             }
-            return Marshal.wrongArity("removeAttributeModifier", n);
+            return Marshal.wrongArity("heal", n);
         } catch (Throwable e) {
-            return Marshal.failed("removeAttributeModifier", e);
+            return Marshal.failed("heal", e);
         }
     }
 
-    public AussomType removeAttributeModifier_slot(Environment env, ArrayList<AussomType> args) {
+    public AussomType isCustomNameVisible(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("removeAttributeModifier_slot");
-            }
-            if (n == 1) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).removeAttributeModifier((org.bukkit.inventory.EquipmentSlot) Marshal.typed(args, 0, org.bukkit.inventory.EquipmentSlot.class)));
-            }
-            return Marshal.wrongArity("removeAttributeModifier_slot", n);
-        } catch (Throwable e) {
-            return Marshal.failed("removeAttributeModifier_slot", e);
-        }
-    }
-
-    public AussomType removeEnchant(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
-            if (self == null) {
-                return Marshal.detached("removeEnchant");
-            }
-            if (n == 1) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.meta.ItemMeta) self).removeEnchant((org.bukkit.enchantments.Enchantment) Marshal.typed(args, 0, org.bukkit.enchantments.Enchantment.class)));
-            }
-            return Marshal.wrongArity("removeEnchant", n);
-        } catch (Throwable e) {
-            return Marshal.failed("removeEnchant", e);
-        }
-    }
-
-    public AussomType removeEnchantments(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
-            if (self == null) {
-                return Marshal.detached("removeEnchantments");
+                return Marshal.detached("isCustomNameVisible");
             }
             if (n == 0) {
-                ((org.bukkit.inventory.meta.ItemMeta) self).removeEnchantments();
-                return new AussomNull();
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).isCustomNameVisible());
             }
-            return Marshal.wrongArity("removeEnchantments", n);
+            return Marshal.wrongArity("isCustomNameVisible", n);
         } catch (Throwable e) {
-            return Marshal.failed("removeEnchantments", e);
+            return Marshal.failed("isCustomNameVisible", e);
         }
     }
 
-    public AussomType resetDamage(Environment env, ArrayList<AussomType> args) {
+    public AussomType isDead(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("resetDamage");
+                return Marshal.detached("isDead");
             }
             if (n == 0) {
-                ((org.bukkit.inventory.meta.Damageable) self).resetDamage();
-                return new AussomNull();
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).isDead());
             }
-            return Marshal.wrongArity("resetDamage", n);
+            return Marshal.wrongArity("isDead", n);
         } catch (Throwable e) {
-            return Marshal.failed("resetDamage", e);
+            return Marshal.failed("isDead", e);
         }
     }
 
-    public AussomType serialize(Environment env, ArrayList<AussomType> args) {
+    public AussomType isEmpty(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("serialize");
+                return Marshal.detached("isEmpty");
             }
             if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.configuration.serialization.ConfigurationSerializable) self).serialize());
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).isEmpty());
             }
-            return Marshal.wrongArity("serialize", n);
+            return Marshal.wrongArity("isEmpty", n);
         } catch (Throwable e) {
-            return Marshal.failed("serialize", e);
+            return Marshal.failed("isEmpty", e);
         }
     }
 
-    public AussomType setCanDestroy(Environment env, ArrayList<AussomType> args) {
+    public AussomType isFreezeTickingLocked(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("setCanDestroy");
+                return Marshal.detached("isFreezeTickingLocked");
             }
-            if (n == 1) {
-                ((org.bukkit.inventory.meta.ItemMeta) self).setCanDestroy((java.util.Set) Marshal.typed(args, 0, java.util.Set.class));
-                return new AussomNull();
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).isFreezeTickingLocked());
             }
-            return Marshal.wrongArity("setCanDestroy", n);
+            return Marshal.wrongArity("isFreezeTickingLocked", n);
         } catch (Throwable e) {
-            return Marshal.failed("setCanDestroy", e);
+            return Marshal.failed("isFreezeTickingLocked", e);
         }
     }
 
-    public AussomType setCanPlaceOn(Environment env, ArrayList<AussomType> args) {
+    public AussomType isFrozen(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("setCanPlaceOn");
+                return Marshal.detached("isFrozen");
             }
-            if (n == 1) {
-                ((org.bukkit.inventory.meta.ItemMeta) self).setCanPlaceOn((java.util.Set) Marshal.typed(args, 0, java.util.Set.class));
-                return new AussomNull();
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).isFrozen());
             }
-            return Marshal.wrongArity("setCanPlaceOn", n);
+            return Marshal.wrongArity("isFrozen", n);
         } catch (Throwable e) {
-            return Marshal.failed("setCanPlaceOn", e);
+            return Marshal.failed("isFrozen", e);
         }
     }
 
-    public AussomType setCustomModelData(Environment env, ArrayList<AussomType> args) {
+    public AussomType isGlowing(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("setCustomModelData");
+                return Marshal.detached("isGlowing");
             }
-            if (n == 1) {
-                ((org.bukkit.inventory.meta.ItemMeta) self).setCustomModelData((java.lang.Integer) Marshal.typed(args, 0, java.lang.Integer.class));
-                return new AussomNull();
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).isGlowing());
             }
-            return Marshal.wrongArity("setCustomModelData", n);
+            return Marshal.wrongArity("isGlowing", n);
         } catch (Throwable e) {
-            return Marshal.failed("setCustomModelData", e);
+            return Marshal.failed("isGlowing", e);
         }
     }
 
-    public AussomType setCustomModelDataComponent(Environment env, ArrayList<AussomType> args) {
+    public AussomType isInBubbleColumn(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("setCustomModelDataComponent");
+                return Marshal.detached("isInBubbleColumn");
             }
-            if (n == 1) {
-                ((org.bukkit.inventory.meta.ItemMeta) self).setCustomModelDataComponent((org.bukkit.inventory.meta.components.CustomModelDataComponent) Marshal.typed(args, 0, org.bukkit.inventory.meta.components.CustomModelDataComponent.class));
-                return new AussomNull();
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).isInBubbleColumn());
             }
-            return Marshal.wrongArity("setCustomModelDataComponent", n);
+            return Marshal.wrongArity("isInBubbleColumn", n);
         } catch (Throwable e) {
-            return Marshal.failed("setCustomModelDataComponent", e);
+            return Marshal.failed("isInBubbleColumn", e);
         }
     }
 
-    public AussomType setDamage(Environment env, ArrayList<AussomType> args) {
+    public AussomType isInLava(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("setDamage");
+                return Marshal.detached("isInLava");
             }
-            if (n == 1) {
-                ((org.bukkit.inventory.meta.Damageable) self).setDamage(Marshal.argInt(args, 0));
-                return new AussomNull();
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).isInLava());
             }
-            return Marshal.wrongArity("setDamage", n);
+            return Marshal.wrongArity("isInLava", n);
         } catch (Throwable e) {
-            return Marshal.failed("setDamage", e);
+            return Marshal.failed("isInLava", e);
         }
     }
 
-    public AussomType setDamageResistant(Environment env, ArrayList<AussomType> args) {
+    public AussomType isInPowderedSnow(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("setDamageResistant");
+                return Marshal.detached("isInPowderedSnow");
             }
-            if (n == 1) {
-                ((org.bukkit.inventory.meta.ItemMeta) self).setDamageResistant((org.bukkit.Tag) Marshal.typed(args, 0, org.bukkit.Tag.class));
-                return new AussomNull();
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).isInPowderedSnow());
             }
-            return Marshal.wrongArity("setDamageResistant", n);
+            return Marshal.wrongArity("isInPowderedSnow", n);
         } catch (Throwable e) {
-            return Marshal.failed("setDamageResistant", e);
+            return Marshal.failed("isInPowderedSnow", e);
         }
     }
 
-    public AussomType setDamageResistantTypes(Environment env, ArrayList<AussomType> args) {
+    public AussomType isInRain(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("setDamageResistantTypes");
+                return Marshal.detached("isInRain");
             }
-            if (n == 1) {
-                ((org.bukkit.inventory.meta.ItemMeta) self).setDamageResistantTypes((io.papermc.paper.registry.set.RegistryKeySet) Marshal.typed(args, 0, io.papermc.paper.registry.set.RegistryKeySet.class));
-                return new AussomNull();
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).isInRain());
             }
-            return Marshal.wrongArity("setDamageResistantTypes", n);
+            return Marshal.wrongArity("isInRain", n);
         } catch (Throwable e) {
-            return Marshal.failed("setDamageResistantTypes", e);
+            return Marshal.failed("isInRain", e);
         }
     }
 
-    public AussomType setDestroyableKeys(Environment env, ArrayList<AussomType> args) {
+    public AussomType isInWater(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("setDestroyableKeys");
+                return Marshal.detached("isInWater");
             }
-            if (n == 1) {
-                ((org.bukkit.inventory.meta.ItemMeta) self).setDestroyableKeys((java.util.Collection) Marshal.typed(args, 0, java.util.Collection.class));
-                return new AussomNull();
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).isInWater());
             }
-            return Marshal.wrongArity("setDestroyableKeys", n);
+            return Marshal.wrongArity("isInWater", n);
         } catch (Throwable e) {
-            return Marshal.failed("setDestroyableKeys", e);
+            return Marshal.failed("isInWater", e);
         }
     }
 
-    public AussomType setDisplayName(Environment env, ArrayList<AussomType> args) {
+    public AussomType isInWaterOrBubbleColumn(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("setDisplayName");
+                return Marshal.detached("isInWaterOrBubbleColumn");
             }
-            if (n == 1) {
-                ((org.bukkit.inventory.meta.ItemMeta) self).setDisplayName((java.lang.String) Marshal.typed(args, 0, java.lang.String.class));
-                return new AussomNull();
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).isInWaterOrBubbleColumn());
             }
-            return Marshal.wrongArity("setDisplayName", n);
+            return Marshal.wrongArity("isInWaterOrBubbleColumn", n);
         } catch (Throwable e) {
-            return Marshal.failed("setDisplayName", e);
+            return Marshal.failed("isInWaterOrBubbleColumn", e);
         }
     }
 
-    public AussomType setEnchantable(Environment env, ArrayList<AussomType> args) {
+    public AussomType isInWaterOrRain(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("setEnchantable");
+                return Marshal.detached("isInWaterOrRain");
             }
-            if (n == 1) {
-                ((org.bukkit.inventory.meta.ItemMeta) self).setEnchantable((java.lang.Integer) Marshal.typed(args, 0, java.lang.Integer.class));
-                return new AussomNull();
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).isInWaterOrRain());
             }
-            return Marshal.wrongArity("setEnchantable", n);
+            return Marshal.wrongArity("isInWaterOrRain", n);
         } catch (Throwable e) {
-            return Marshal.failed("setEnchantable", e);
+            return Marshal.failed("isInWaterOrRain", e);
         }
     }
 
-    public AussomType setEnchantmentGlintOverride(Environment env, ArrayList<AussomType> args) {
+    public AussomType isInWaterOrRainOrBubbleColumn(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("setEnchantmentGlintOverride");
+                return Marshal.detached("isInWaterOrRainOrBubbleColumn");
             }
-            if (n == 1) {
-                ((org.bukkit.inventory.meta.ItemMeta) self).setEnchantmentGlintOverride((java.lang.Boolean) Marshal.typed(args, 0, java.lang.Boolean.class));
-                return new AussomNull();
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).isInWaterOrRainOrBubbleColumn());
             }
-            return Marshal.wrongArity("setEnchantmentGlintOverride", n);
+            return Marshal.wrongArity("isInWaterOrRainOrBubbleColumn", n);
         } catch (Throwable e) {
-            return Marshal.failed("setEnchantmentGlintOverride", e);
+            return Marshal.failed("isInWaterOrRainOrBubbleColumn", e);
         }
     }
 
-    public AussomType setEquippable(Environment env, ArrayList<AussomType> args) {
+    public AussomType isInWorld(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("setEquippable");
+                return Marshal.detached("isInWorld");
             }
-            if (n == 1) {
-                ((org.bukkit.inventory.meta.ItemMeta) self).setEquippable((org.bukkit.inventory.meta.components.EquippableComponent) Marshal.typed(args, 0, org.bukkit.inventory.meta.components.EquippableComponent.class));
-                return new AussomNull();
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).isInWorld());
             }
-            return Marshal.wrongArity("setEquippable", n);
+            return Marshal.wrongArity("isInWorld", n);
         } catch (Throwable e) {
-            return Marshal.failed("setEquippable", e);
+            return Marshal.failed("isInWorld", e);
         }
     }
 
-    public AussomType setFireResistant(Environment env, ArrayList<AussomType> args) {
+    public AussomType isInsideVehicle(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("setFireResistant");
+                return Marshal.detached("isInsideVehicle");
             }
-            if (n == 1) {
-                ((org.bukkit.inventory.meta.ItemMeta) self).setFireResistant(Marshal.argBool(args, 0));
-                return new AussomNull();
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).isInsideVehicle());
             }
-            return Marshal.wrongArity("setFireResistant", n);
+            return Marshal.wrongArity("isInsideVehicle", n);
         } catch (Throwable e) {
-            return Marshal.failed("setFireResistant", e);
+            return Marshal.failed("isInsideVehicle", e);
         }
     }
 
-    public AussomType setFood(Environment env, ArrayList<AussomType> args) {
+    public AussomType isInvisible(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("setFood");
+                return Marshal.detached("isInvisible");
             }
-            if (n == 1) {
-                ((org.bukkit.inventory.meta.ItemMeta) self).setFood((org.bukkit.inventory.meta.components.FoodComponent) Marshal.typed(args, 0, org.bukkit.inventory.meta.components.FoodComponent.class));
-                return new AussomNull();
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).isInvisible());
             }
-            return Marshal.wrongArity("setFood", n);
+            return Marshal.wrongArity("isInvisible", n);
         } catch (Throwable e) {
-            return Marshal.failed("setFood", e);
+            return Marshal.failed("isInvisible", e);
         }
     }
 
-    public AussomType setGlider(Environment env, ArrayList<AussomType> args) {
+    public AussomType isInvulnerable(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("setGlider");
+                return Marshal.detached("isInvulnerable");
             }
-            if (n == 1) {
-                ((org.bukkit.inventory.meta.ItemMeta) self).setGlider(Marshal.argBool(args, 0));
-                return new AussomNull();
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).isInvulnerable());
             }
-            return Marshal.wrongArity("setGlider", n);
+            return Marshal.wrongArity("isInvulnerable", n);
         } catch (Throwable e) {
-            return Marshal.failed("setGlider", e);
+            return Marshal.failed("isInvulnerable", e);
         }
     }
 
-    public AussomType setHideTooltip(Environment env, ArrayList<AussomType> args) {
+    public AussomType isOnGround(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("setHideTooltip");
+                return Marshal.detached("isOnGround");
             }
-            if (n == 1) {
-                ((org.bukkit.inventory.meta.ItemMeta) self).setHideTooltip(Marshal.argBool(args, 0));
-                return new AussomNull();
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).isOnGround());
             }
-            return Marshal.wrongArity("setHideTooltip", n);
+            return Marshal.wrongArity("isOnGround", n);
         } catch (Throwable e) {
-            return Marshal.failed("setHideTooltip", e);
+            return Marshal.failed("isOnGround", e);
         }
     }
 
-    public AussomType setItemModel(Environment env, ArrayList<AussomType> args) {
+    public AussomType isOp(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("setItemModel");
+                return Marshal.detached("isOp");
             }
-            if (n == 1) {
-                ((org.bukkit.inventory.meta.ItemMeta) self).setItemModel((org.bukkit.NamespacedKey) Marshal.typed(args, 0, org.bukkit.NamespacedKey.class));
-                return new AussomNull();
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.permissions.ServerOperator) self).isOp());
             }
-            return Marshal.wrongArity("setItemModel", n);
+            return Marshal.wrongArity("isOp", n);
         } catch (Throwable e) {
-            return Marshal.failed("setItemModel", e);
+            return Marshal.failed("isOp", e);
         }
     }
 
-    public AussomType setItemName(Environment env, ArrayList<AussomType> args) {
+    public AussomType isPermissionSet(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("setItemName");
+                return Marshal.detached("isPermissionSet");
             }
             if (n == 1) {
-                ((org.bukkit.inventory.meta.ItemMeta) self).setItemName((java.lang.String) Marshal.typed(args, 0, java.lang.String.class));
-                return new AussomNull();
+                return Marshal.wrap(env, ((org.bukkit.permissions.Permissible) self).isPermissionSet((java.lang.String) Marshal.typed(args, 0, java.lang.String.class)));
             }
-            return Marshal.wrongArity("setItemName", n);
+            return Marshal.wrongArity("isPermissionSet", n);
         } catch (Throwable e) {
-            return Marshal.failed("setItemName", e);
+            return Marshal.failed("isPermissionSet", e);
         }
     }
 
-    public AussomType setJukeboxPlayable(Environment env, ArrayList<AussomType> args) {
+    public AussomType isPersistent(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("setJukeboxPlayable");
+                return Marshal.detached("isPersistent");
             }
-            if (n == 1) {
-                ((org.bukkit.inventory.meta.ItemMeta) self).setJukeboxPlayable((org.bukkit.inventory.meta.components.JukeboxPlayableComponent) Marshal.typed(args, 0, org.bukkit.inventory.meta.components.JukeboxPlayableComponent.class));
-                return new AussomNull();
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).isPersistent());
             }
-            return Marshal.wrongArity("setJukeboxPlayable", n);
+            return Marshal.wrongArity("isPersistent", n);
         } catch (Throwable e) {
-            return Marshal.failed("setJukeboxPlayable", e);
+            return Marshal.failed("isPersistent", e);
         }
     }
 
-    public AussomType setLocalizedName(Environment env, ArrayList<AussomType> args) {
+    public AussomType isSilent(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("setLocalizedName");
+                return Marshal.detached("isSilent");
             }
-            if (n == 1) {
-                ((org.bukkit.inventory.meta.ItemMeta) self).setLocalizedName((java.lang.String) Marshal.typed(args, 0, java.lang.String.class));
-                return new AussomNull();
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).isSilent());
             }
-            return Marshal.wrongArity("setLocalizedName", n);
+            return Marshal.wrongArity("isSilent", n);
         } catch (Throwable e) {
-            return Marshal.failed("setLocalizedName", e);
+            return Marshal.failed("isSilent", e);
         }
     }
 
-    public AussomType setLore(Environment env, ArrayList<AussomType> args) {
+    public AussomType isSneaking(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("setLore");
+                return Marshal.detached("isSneaking");
             }
-            if (n == 1) {
-                ((org.bukkit.inventory.meta.ItemMeta) self).setLore((java.util.List) Marshal.typed(args, 0, java.util.List.class));
-                return new AussomNull();
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).isSneaking());
             }
-            return Marshal.wrongArity("setLore", n);
+            return Marshal.wrongArity("isSneaking", n);
         } catch (Throwable e) {
-            return Marshal.failed("setLore", e);
+            return Marshal.failed("isSneaking", e);
         }
     }
 
-    public AussomType setLoreComponents(Environment env, ArrayList<AussomType> args) {
+    public AussomType isTicking(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("setLoreComponents");
+                return Marshal.detached("isTicking");
             }
-            if (n == 1) {
-                ((org.bukkit.inventory.meta.ItemMeta) self).setLoreComponents((java.util.List) Marshal.typed(args, 0, java.util.List.class));
-                return new AussomNull();
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).isTicking());
             }
-            return Marshal.wrongArity("setLoreComponents", n);
+            return Marshal.wrongArity("isTicking", n);
         } catch (Throwable e) {
-            return Marshal.failed("setLoreComponents", e);
+            return Marshal.failed("isTicking", e);
         }
     }
 
-    public AussomType setMaxDamage(Environment env, ArrayList<AussomType> args) {
+    public AussomType isTrackedBy(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("setMaxDamage");
+                return Marshal.detached("isTrackedBy");
             }
             if (n == 1) {
-                ((org.bukkit.inventory.meta.Damageable) self).setMaxDamage((java.lang.Integer) Marshal.typed(args, 0, java.lang.Integer.class));
-                return new AussomNull();
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).isTrackedBy((org.bukkit.entity.Player) Marshal.typed(args, 0, org.bukkit.entity.Player.class)));
             }
-            return Marshal.wrongArity("setMaxDamage", n);
+            return Marshal.wrongArity("isTrackedBy", n);
         } catch (Throwable e) {
-            return Marshal.failed("setMaxDamage", e);
+            return Marshal.failed("isTrackedBy", e);
         }
     }
 
-    public AussomType setMaxStackSize(Environment env, ArrayList<AussomType> args) {
+    public AussomType isUnderWater(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("setMaxStackSize");
+                return Marshal.detached("isUnderWater");
             }
-            if (n == 1) {
-                ((org.bukkit.inventory.meta.ItemMeta) self).setMaxStackSize((java.lang.Integer) Marshal.typed(args, 0, java.lang.Integer.class));
-                return new AussomNull();
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).isUnderWater());
             }
-            return Marshal.wrongArity("setMaxStackSize", n);
+            return Marshal.wrongArity("isUnderWater", n);
         } catch (Throwable e) {
-            return Marshal.failed("setMaxStackSize", e);
+            return Marshal.failed("isUnderWater", e);
         }
     }
 
-    public AussomType setPlaceableKeys(Environment env, ArrayList<AussomType> args) {
+    public AussomType isValid(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("setPlaceableKeys");
+                return Marshal.detached("isValid");
             }
-            if (n == 1) {
-                ((org.bukkit.inventory.meta.ItemMeta) self).setPlaceableKeys((java.util.Collection) Marshal.typed(args, 0, java.util.Collection.class));
-                return new AussomNull();
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).isValid());
             }
-            return Marshal.wrongArity("setPlaceableKeys", n);
+            return Marshal.wrongArity("isValid", n);
         } catch (Throwable e) {
-            return Marshal.failed("setPlaceableKeys", e);
+            return Marshal.failed("isValid", e);
         }
     }
 
-    public AussomType setRarity(Environment env, ArrayList<AussomType> args) {
+    public AussomType isVisibleByDefault(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("setRarity");
+                return Marshal.detached("isVisibleByDefault");
             }
-            if (n == 1) {
-                ((org.bukkit.inventory.meta.ItemMeta) self).setRarity((org.bukkit.inventory.ItemRarity) Marshal.typed(args, 0, org.bukkit.inventory.ItemRarity.class));
-                return new AussomNull();
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).isVisibleByDefault());
             }
-            return Marshal.wrongArity("setRarity", n);
+            return Marshal.wrongArity("isVisibleByDefault", n);
         } catch (Throwable e) {
-            return Marshal.failed("setRarity", e);
+            return Marshal.failed("isVisibleByDefault", e);
         }
     }
 
-    public AussomType setTool(Environment env, ArrayList<AussomType> args) {
+    public AussomType isVisualFire(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("setTool");
+                return Marshal.detached("isVisualFire");
             }
-            if (n == 1) {
-                ((org.bukkit.inventory.meta.ItemMeta) self).setTool((org.bukkit.inventory.meta.components.ToolComponent) Marshal.typed(args, 0, org.bukkit.inventory.meta.components.ToolComponent.class));
-                return new AussomNull();
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).isVisualFire());
             }
-            return Marshal.wrongArity("setTool", n);
+            return Marshal.wrongArity("isVisualFire", n);
         } catch (Throwable e) {
-            return Marshal.failed("setTool", e);
+            return Marshal.failed("isVisualFire", e);
         }
     }
 
-    public AussomType setTooltipStyle(Environment env, ArrayList<AussomType> args) {
+    public AussomType kill(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("setTooltipStyle");
+                return Marshal.detached("kill");
             }
-            if (n == 1) {
-                ((org.bukkit.inventory.meta.ItemMeta) self).setTooltipStyle((org.bukkit.NamespacedKey) Marshal.typed(args, 0, org.bukkit.NamespacedKey.class));
+            if (n == 0) {
+                ((org.bukkit.entity.Damageable) self).kill();
                 return new AussomNull();
             }
-            return Marshal.wrongArity("setTooltipStyle", n);
+            if (n == 1) {
+                ((org.bukkit.entity.Damageable) self).kill((org.bukkit.damage.DamageSource) Marshal.typed(args, 0, org.bukkit.damage.DamageSource.class));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("kill", n);
         } catch (Throwable e) {
-            return Marshal.failed("setTooltipStyle", e);
+            return Marshal.failed("kill", e);
         }
     }
 
-    public AussomType setUnbreakable(Environment env, ArrayList<AussomType> args) {
+    public AussomType leaveVehicle(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("setUnbreakable");
+                return Marshal.detached("leaveVehicle");
             }
-            if (n == 1) {
-                ((org.bukkit.inventory.meta.ItemMeta) self).setUnbreakable(Marshal.argBool(args, 0));
-                return new AussomNull();
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).leaveVehicle());
             }
-            return Marshal.wrongArity("setUnbreakable", n);
+            return Marshal.wrongArity("leaveVehicle", n);
         } catch (Throwable e) {
-            return Marshal.failed("setUnbreakable", e);
+            return Marshal.failed("leaveVehicle", e);
         }
     }
 
-    public AussomType setUseCooldown(Environment env, ArrayList<AussomType> args) {
+    public AussomType lockFreezeTicks(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("setUseCooldown");
+                return Marshal.detached("lockFreezeTicks");
             }
             if (n == 1) {
-                ((org.bukkit.inventory.meta.ItemMeta) self).setUseCooldown((org.bukkit.inventory.meta.components.UseCooldownComponent) Marshal.typed(args, 0, org.bukkit.inventory.meta.components.UseCooldownComponent.class));
+                ((org.bukkit.entity.Entity) self).lockFreezeTicks(Marshal.argBool(args, 0));
                 return new AussomNull();
             }
-            return Marshal.wrongArity("setUseCooldown", n);
+            return Marshal.wrongArity("lockFreezeTicks", n);
         } catch (Throwable e) {
-            return Marshal.failed("setUseCooldown", e);
+            return Marshal.failed("lockFreezeTicks", e);
         }
     }
 
-    public AussomType setUseRemainder(Environment env, ArrayList<AussomType> args) {
+    public AussomType lookAt(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("setUseRemainder");
+                return Marshal.detached("lookAt");
             }
-            if (n == 1) {
-                ((org.bukkit.inventory.meta.ItemMeta) self).setUseRemainder((org.bukkit.inventory.ItemStack) Marshal.typed(args, 0, org.bukkit.inventory.ItemStack.class));
+            if (n == 2) {
+                ((org.bukkit.entity.Entity) self).lookAt((io.papermc.paper.math.Position) Marshal.typed(args, 0, io.papermc.paper.math.Position.class), (io.papermc.paper.entity.LookAnchor) Marshal.typed(args, 1, io.papermc.paper.entity.LookAnchor.class));
                 return new AussomNull();
             }
-            return Marshal.wrongArity("setUseRemainder", n);
+            if (n == 4) {
+                ((org.bukkit.entity.Entity) self).lookAt(Marshal.argDouble(args, 0), Marshal.argDouble(args, 1), Marshal.argDouble(args, 2), (io.papermc.paper.entity.LookAnchor) Marshal.typed(args, 3, io.papermc.paper.entity.LookAnchor.class));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("lookAt", n);
         } catch (Throwable e) {
-            return Marshal.failed("setUseRemainder", e);
+            return Marshal.failed("lookAt", e);
         }
     }
 
-    public AussomType setVersion(Environment env, ArrayList<AussomType> args) {
+    public AussomType name(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
             n = args.size();
         }
         try {
-            org.bukkit.inventory.meta.Damageable self = (org.bukkit.inventory.meta.Damageable) this.getObj();
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
             if (self == null) {
-                return Marshal.detached("setVersion");
+                return Marshal.detached("name");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.command.CommandSender) self).name());
+            }
+            return Marshal.wrongArity("name", n);
+        } catch (Throwable e) {
+            return Marshal.failed("name", e);
+        }
+    }
+
+    public AussomType playEffect(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("playEffect");
             }
             if (n == 1) {
-                ((org.bukkit.inventory.meta.ItemMeta) self).setVersion(Marshal.argInt(args, 0));
+                ((org.bukkit.entity.Entity) self).playEffect((org.bukkit.EntityEffect) Marshal.typed(args, 0, org.bukkit.EntityEffect.class));
                 return new AussomNull();
             }
-            return Marshal.wrongArity("setVersion", n);
+            return Marshal.wrongArity("playEffect", n);
         } catch (Throwable e) {
-            return Marshal.failed("setVersion", e);
+            return Marshal.failed("playEffect", e);
+        }
+    }
+
+    public AussomType recalculatePermissions(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("recalculatePermissions");
+            }
+            if (n == 0) {
+                ((org.bukkit.permissions.Permissible) self).recalculatePermissions();
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("recalculatePermissions", n);
+        } catch (Throwable e) {
+            return Marshal.failed("recalculatePermissions", e);
+        }
+    }
+
+    public AussomType remove(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("remove");
+            }
+            if (n == 0) {
+                ((org.bukkit.entity.Entity) self).remove();
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("remove", n);
+        } catch (Throwable e) {
+            return Marshal.failed("remove", e);
+        }
+    }
+
+    public AussomType removePassenger(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("removePassenger");
+            }
+            if (n == 1) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).removePassenger((org.bukkit.entity.Entity) Marshal.typed(args, 0, org.bukkit.entity.Entity.class)));
+            }
+            return Marshal.wrongArity("removePassenger", n);
+        } catch (Throwable e) {
+            return Marshal.failed("removePassenger", e);
+        }
+    }
+
+    public AussomType removeResourcePacks(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("removeResourcePacks");
+            }
+            if (n == 1) {
+                ((net.kyori.adventure.audience.Audience) self).removeResourcePacks((java.lang.Iterable) Marshal.typed(args, 0, java.lang.Iterable.class));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("removeResourcePacks", n);
+        } catch (Throwable e) {
+            return Marshal.failed("removeResourcePacks", e);
+        }
+    }
+
+    public AussomType removeScoreboardTag(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("removeScoreboardTag");
+            }
+            if (n == 1) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).removeScoreboardTag((java.lang.String) Marshal.typed(args, 0, java.lang.String.class)));
+            }
+            return Marshal.wrongArity("removeScoreboardTag", n);
+        } catch (Throwable e) {
+            return Marshal.failed("removeScoreboardTag", e);
+        }
+    }
+
+    public AussomType resetMaxHealth(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("resetMaxHealth");
+            }
+            if (n == 0) {
+                ((org.bukkit.entity.Damageable) self).resetMaxHealth();
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("resetMaxHealth", n);
+        } catch (Throwable e) {
+            return Marshal.failed("resetMaxHealth", e);
+        }
+    }
+
+    public AussomType resetTitle(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("resetTitle");
+            }
+            if (n == 0) {
+                ((net.kyori.adventure.audience.Audience) self).resetTitle();
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("resetTitle", n);
+        } catch (Throwable e) {
+            return Marshal.failed("resetTitle", e);
+        }
+    }
+
+    public AussomType sendActionBar(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("sendActionBar");
+            }
+            if (n == 1) {
+                ((net.kyori.adventure.audience.Audience) self).sendActionBar((net.kyori.adventure.text.Component) Marshal.typed(args, 0, net.kyori.adventure.text.Component.class));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("sendActionBar", n);
+        } catch (Throwable e) {
+            return Marshal.failed("sendActionBar", e);
+        }
+    }
+
+    public AussomType sendActionBar_ComponentLike(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("sendActionBar_ComponentLike");
+            }
+            if (n == 1) {
+                ((net.kyori.adventure.audience.Audience) self).sendActionBar((net.kyori.adventure.text.ComponentLike) Marshal.typed(args, 0, net.kyori.adventure.text.ComponentLike.class));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("sendActionBar_ComponentLike", n);
+        } catch (Throwable e) {
+            return Marshal.failed("sendActionBar_ComponentLike", e);
+        }
+    }
+
+    public AussomType sendMessage_Component(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("sendMessage_Component");
+            }
+            if (n == 1) {
+                ((org.bukkit.command.CommandSender) self).sendMessage((net.kyori.adventure.text.Component) Marshal.typed(args, 0, net.kyori.adventure.text.Component.class));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("sendMessage_Component", n);
+        } catch (Throwable e) {
+            return Marshal.failed("sendMessage_Component", e);
+        }
+    }
+
+    public AussomType sendMessage_ComponentLike(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("sendMessage_ComponentLike");
+            }
+            if (n == 1) {
+                ((net.kyori.adventure.audience.Audience) self).sendMessage((net.kyori.adventure.text.ComponentLike) Marshal.typed(args, 0, net.kyori.adventure.text.ComponentLike.class));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("sendMessage_ComponentLike", n);
+        } catch (Throwable e) {
+            return Marshal.failed("sendMessage_ComponentLike", e);
+        }
+    }
+
+    public AussomType sendMessage(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("sendMessage");
+            }
+            if (n == 1) {
+                ((org.bukkit.command.CommandSender) self).sendMessage((java.lang.String) Marshal.typed(args, 0, java.lang.String.class));
+                return new AussomNull();
+            }
+            if (n == 2) {
+                ((org.bukkit.command.CommandSender) self).sendMessage((java.util.UUID) Marshal.typed(args, 0, java.util.UUID.class), (java.lang.String) Marshal.typed(args, 1, java.lang.String.class));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("sendMessage", n);
+        } catch (Throwable e) {
+            return Marshal.failed("sendMessage", e);
+        }
+    }
+
+    public AussomType sendPlainMessage(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("sendPlainMessage");
+            }
+            if (n == 1) {
+                ((org.bukkit.command.CommandSender) self).sendPlainMessage((java.lang.String) Marshal.typed(args, 0, java.lang.String.class));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("sendPlainMessage", n);
+        } catch (Throwable e) {
+            return Marshal.failed("sendPlainMessage", e);
+        }
+    }
+
+    public AussomType sendPlayerListFooter(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("sendPlayerListFooter");
+            }
+            if (n == 1) {
+                ((net.kyori.adventure.audience.Audience) self).sendPlayerListFooter((net.kyori.adventure.text.Component) Marshal.typed(args, 0, net.kyori.adventure.text.Component.class));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("sendPlayerListFooter", n);
+        } catch (Throwable e) {
+            return Marshal.failed("sendPlayerListFooter", e);
+        }
+    }
+
+    public AussomType sendPlayerListFooter_ComponentLike(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("sendPlayerListFooter_ComponentLike");
+            }
+            if (n == 1) {
+                ((net.kyori.adventure.audience.Audience) self).sendPlayerListFooter((net.kyori.adventure.text.ComponentLike) Marshal.typed(args, 0, net.kyori.adventure.text.ComponentLike.class));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("sendPlayerListFooter_ComponentLike", n);
+        } catch (Throwable e) {
+            return Marshal.failed("sendPlayerListFooter_ComponentLike", e);
+        }
+    }
+
+    public AussomType sendPlayerListHeader(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("sendPlayerListHeader");
+            }
+            if (n == 1) {
+                ((net.kyori.adventure.audience.Audience) self).sendPlayerListHeader((net.kyori.adventure.text.Component) Marshal.typed(args, 0, net.kyori.adventure.text.Component.class));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("sendPlayerListHeader", n);
+        } catch (Throwable e) {
+            return Marshal.failed("sendPlayerListHeader", e);
+        }
+    }
+
+    public AussomType sendPlayerListHeader_ComponentLike(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("sendPlayerListHeader_ComponentLike");
+            }
+            if (n == 1) {
+                ((net.kyori.adventure.audience.Audience) self).sendPlayerListHeader((net.kyori.adventure.text.ComponentLike) Marshal.typed(args, 0, net.kyori.adventure.text.ComponentLike.class));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("sendPlayerListHeader_ComponentLike", n);
+        } catch (Throwable e) {
+            return Marshal.failed("sendPlayerListHeader_ComponentLike", e);
+        }
+    }
+
+    public AussomType sendPlayerListHeaderAndFooter(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("sendPlayerListHeaderAndFooter");
+            }
+            if (n == 2) {
+                ((net.kyori.adventure.audience.Audience) self).sendPlayerListHeaderAndFooter((net.kyori.adventure.text.Component) Marshal.typed(args, 0, net.kyori.adventure.text.Component.class), (net.kyori.adventure.text.Component) Marshal.typed(args, 1, net.kyori.adventure.text.Component.class));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("sendPlayerListHeaderAndFooter", n);
+        } catch (Throwable e) {
+            return Marshal.failed("sendPlayerListHeaderAndFooter", e);
+        }
+    }
+
+    public AussomType sendPlayerListHeaderAndFooter_ComponentLike_ComponentLike(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("sendPlayerListHeaderAndFooter_ComponentLike_ComponentLike");
+            }
+            if (n == 2) {
+                ((net.kyori.adventure.audience.Audience) self).sendPlayerListHeaderAndFooter((net.kyori.adventure.text.ComponentLike) Marshal.typed(args, 0, net.kyori.adventure.text.ComponentLike.class), (net.kyori.adventure.text.ComponentLike) Marshal.typed(args, 1, net.kyori.adventure.text.ComponentLike.class));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("sendPlayerListHeaderAndFooter_ComponentLike_ComponentLike", n);
+        } catch (Throwable e) {
+            return Marshal.failed("sendPlayerListHeaderAndFooter_ComponentLike_ComponentLike", e);
+        }
+    }
+
+    public AussomType sendRichMessage(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("sendRichMessage");
+            }
+            if (n == 1) {
+                ((org.bukkit.command.CommandSender) self).sendRichMessage((java.lang.String) Marshal.typed(args, 0, java.lang.String.class));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("sendRichMessage", n);
+        } catch (Throwable e) {
+            return Marshal.failed("sendRichMessage", e);
+        }
+    }
+
+    public AussomType setAbsorptionAmount(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("setAbsorptionAmount");
+            }
+            if (n == 1) {
+                ((org.bukkit.entity.Damageable) self).setAbsorptionAmount(Marshal.argDouble(args, 0));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("setAbsorptionAmount", n);
+        } catch (Throwable e) {
+            return Marshal.failed("setAbsorptionAmount", e);
+        }
+    }
+
+    public AussomType setCustomName(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("setCustomName");
+            }
+            if (n == 1) {
+                ((org.bukkit.Nameable) self).setCustomName((java.lang.String) Marshal.typed(args, 0, java.lang.String.class));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("setCustomName", n);
+        } catch (Throwable e) {
+            return Marshal.failed("setCustomName", e);
+        }
+    }
+
+    public AussomType setCustomNameVisible(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("setCustomNameVisible");
+            }
+            if (n == 1) {
+                ((org.bukkit.entity.Entity) self).setCustomNameVisible(Marshal.argBool(args, 0));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("setCustomNameVisible", n);
+        } catch (Throwable e) {
+            return Marshal.failed("setCustomNameVisible", e);
+        }
+    }
+
+    public AussomType setFallDistance(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("setFallDistance");
+            }
+            if (n == 1) {
+                ((org.bukkit.entity.Entity) self).setFallDistance(Marshal.argFloat(args, 0));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("setFallDistance", n);
+        } catch (Throwable e) {
+            return Marshal.failed("setFallDistance", e);
+        }
+    }
+
+    public AussomType setFireTicks(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("setFireTicks");
+            }
+            if (n == 1) {
+                ((org.bukkit.entity.Entity) self).setFireTicks(Marshal.argInt(args, 0));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("setFireTicks", n);
+        } catch (Throwable e) {
+            return Marshal.failed("setFireTicks", e);
+        }
+    }
+
+    public AussomType setFreezeTicks(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("setFreezeTicks");
+            }
+            if (n == 1) {
+                ((org.bukkit.entity.Entity) self).setFreezeTicks(Marshal.argInt(args, 0));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("setFreezeTicks", n);
+        } catch (Throwable e) {
+            return Marshal.failed("setFreezeTicks", e);
+        }
+    }
+
+    public AussomType setGlowing(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("setGlowing");
+            }
+            if (n == 1) {
+                ((org.bukkit.entity.Entity) self).setGlowing(Marshal.argBool(args, 0));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("setGlowing", n);
+        } catch (Throwable e) {
+            return Marshal.failed("setGlowing", e);
+        }
+    }
+
+    public AussomType setGravity(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("setGravity");
+            }
+            if (n == 1) {
+                ((org.bukkit.entity.Entity) self).setGravity(Marshal.argBool(args, 0));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("setGravity", n);
+        } catch (Throwable e) {
+            return Marshal.failed("setGravity", e);
+        }
+    }
+
+    public AussomType setHealth(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("setHealth");
+            }
+            if (n == 1) {
+                ((org.bukkit.entity.Damageable) self).setHealth(Marshal.argDouble(args, 0));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("setHealth", n);
+        } catch (Throwable e) {
+            return Marshal.failed("setHealth", e);
+        }
+    }
+
+    public AussomType setInvisible(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("setInvisible");
+            }
+            if (n == 1) {
+                ((org.bukkit.entity.Entity) self).setInvisible(Marshal.argBool(args, 0));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("setInvisible", n);
+        } catch (Throwable e) {
+            return Marshal.failed("setInvisible", e);
+        }
+    }
+
+    public AussomType setInvulnerable(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("setInvulnerable");
+            }
+            if (n == 1) {
+                ((org.bukkit.entity.Entity) self).setInvulnerable(Marshal.argBool(args, 0));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("setInvulnerable", n);
+        } catch (Throwable e) {
+            return Marshal.failed("setInvulnerable", e);
+        }
+    }
+
+    public AussomType setLastDamageCause(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("setLastDamageCause");
+            }
+            if (n == 1) {
+                ((org.bukkit.entity.Entity) self).setLastDamageCause((org.bukkit.event.entity.EntityDamageEvent) Marshal.typed(args, 0, org.bukkit.event.entity.EntityDamageEvent.class));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("setLastDamageCause", n);
+        } catch (Throwable e) {
+            return Marshal.failed("setLastDamageCause", e);
+        }
+    }
+
+    public AussomType setMaxHealth(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("setMaxHealth");
+            }
+            if (n == 1) {
+                ((org.bukkit.entity.Damageable) self).setMaxHealth(Marshal.argDouble(args, 0));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("setMaxHealth", n);
+        } catch (Throwable e) {
+            return Marshal.failed("setMaxHealth", e);
+        }
+    }
+
+    public AussomType setMetadata(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("setMetadata");
+            }
+            if (n == 2) {
+                ((org.bukkit.metadata.Metadatable) self).setMetadata((java.lang.String) Marshal.typed(args, 0, java.lang.String.class), (org.bukkit.metadata.MetadataValue) Marshal.typed(args, 1, org.bukkit.metadata.MetadataValue.class));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("setMetadata", n);
+        } catch (Throwable e) {
+            return Marshal.failed("setMetadata", e);
+        }
+    }
+
+    public AussomType setNoPhysics(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("setNoPhysics");
+            }
+            if (n == 1) {
+                ((org.bukkit.entity.Entity) self).setNoPhysics(Marshal.argBool(args, 0));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("setNoPhysics", n);
+        } catch (Throwable e) {
+            return Marshal.failed("setNoPhysics", e);
+        }
+    }
+
+    public AussomType setPassenger(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("setPassenger");
+            }
+            if (n == 1) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).setPassenger((org.bukkit.entity.Entity) Marshal.typed(args, 0, org.bukkit.entity.Entity.class)));
+            }
+            return Marshal.wrongArity("setPassenger", n);
+        } catch (Throwable e) {
+            return Marshal.failed("setPassenger", e);
+        }
+    }
+
+    public AussomType setPersistent(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("setPersistent");
+            }
+            if (n == 1) {
+                ((org.bukkit.entity.Entity) self).setPersistent(Marshal.argBool(args, 0));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("setPersistent", n);
+        } catch (Throwable e) {
+            return Marshal.failed("setPersistent", e);
+        }
+    }
+
+    public AussomType setPortalCooldown(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("setPortalCooldown");
+            }
+            if (n == 1) {
+                ((org.bukkit.entity.Entity) self).setPortalCooldown(Marshal.argInt(args, 0));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("setPortalCooldown", n);
+        } catch (Throwable e) {
+            return Marshal.failed("setPortalCooldown", e);
+        }
+    }
+
+    public AussomType setPose(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("setPose");
+            }
+            if (n == 1) {
+                ((org.bukkit.entity.Entity) self).setPose((org.bukkit.entity.Pose) Marshal.typed(args, 0, org.bukkit.entity.Pose.class));
+                return new AussomNull();
+            }
+            if (n == 2) {
+                ((org.bukkit.entity.Entity) self).setPose((org.bukkit.entity.Pose) Marshal.typed(args, 0, org.bukkit.entity.Pose.class), Marshal.argBool(args, 1));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("setPose", n);
+        } catch (Throwable e) {
+            return Marshal.failed("setPose", e);
+        }
+    }
+
+    public AussomType setRotation_Angle_Angle(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("setRotation_Angle_Angle");
+            }
+            if (n == 2) {
+                ((org.bukkit.entity.Entity) self).setRotation((io.papermc.paper.math.Angle) Marshal.typed(args, 0, io.papermc.paper.math.Angle.class), (io.papermc.paper.math.Angle) Marshal.typed(args, 1, io.papermc.paper.math.Angle.class));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("setRotation_Angle_Angle", n);
+        } catch (Throwable e) {
+            return Marshal.failed("setRotation_Angle_Angle", e);
+        }
+    }
+
+    public AussomType setRotation(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("setRotation");
+            }
+            if (n == 2) {
+                ((org.bukkit.entity.Entity) self).setRotation(Marshal.argFloat(args, 0), Marshal.argFloat(args, 1));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("setRotation", n);
+        } catch (Throwable e) {
+            return Marshal.failed("setRotation", e);
+        }
+    }
+
+    public AussomType setSilent(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("setSilent");
+            }
+            if (n == 1) {
+                ((org.bukkit.entity.Entity) self).setSilent(Marshal.argBool(args, 0));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("setSilent", n);
+        } catch (Throwable e) {
+            return Marshal.failed("setSilent", e);
+        }
+    }
+
+    public AussomType setSneaking(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("setSneaking");
+            }
+            if (n == 1) {
+                ((org.bukkit.entity.Entity) self).setSneaking(Marshal.argBool(args, 0));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("setSneaking", n);
+        } catch (Throwable e) {
+            return Marshal.failed("setSneaking", e);
+        }
+    }
+
+    public AussomType setTicksLived(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("setTicksLived");
+            }
+            if (n == 1) {
+                ((org.bukkit.entity.Entity) self).setTicksLived(Marshal.argInt(args, 0));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("setTicksLived", n);
+        } catch (Throwable e) {
+            return Marshal.failed("setTicksLived", e);
+        }
+    }
+
+    public AussomType setVelocity(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("setVelocity");
+            }
+            if (n == 1) {
+                ((org.bukkit.entity.Entity) self).setVelocity((org.bukkit.util.Vector) Marshal.typed(args, 0, org.bukkit.util.Vector.class));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("setVelocity", n);
+        } catch (Throwable e) {
+            return Marshal.failed("setVelocity", e);
+        }
+    }
+
+    public AussomType setVisibleByDefault(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("setVisibleByDefault");
+            }
+            if (n == 1) {
+                ((org.bukkit.entity.Entity) self).setVisibleByDefault(Marshal.argBool(args, 0));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("setVisibleByDefault", n);
+        } catch (Throwable e) {
+            return Marshal.failed("setVisibleByDefault", e);
+        }
+    }
+
+    public AussomType setVisualFire(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("setVisualFire");
+            }
+            if (n == 1) {
+                ((org.bukkit.entity.Entity) self).setVisualFire(Marshal.argBool(args, 0));
+                return new AussomNull();
+            }
+            return Marshal.wrongArity("setVisualFire", n);
+        } catch (Throwable e) {
+            return Marshal.failed("setVisualFire", e);
+        }
+    }
+
+    public AussomType spawnAt(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("spawnAt");
+            }
+            if (n == 1) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).spawnAt((org.bukkit.Location) Marshal.typed(args, 0, org.bukkit.Location.class)));
+            }
+            if (n == 2) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).spawnAt((org.bukkit.Location) Marshal.typed(args, 0, org.bukkit.Location.class), (org.bukkit.event.entity.CreatureSpawnEvent.SpawnReason) Marshal.typed(args, 1, org.bukkit.event.entity.CreatureSpawnEvent.SpawnReason.class)));
+            }
+            return Marshal.wrongArity("spawnAt", n);
+        } catch (Throwable e) {
+            return Marshal.failed("spawnAt", e);
+        }
+    }
+
+    public AussomType spigot(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("spigot");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).spigot());
+            }
+            return Marshal.wrongArity("spigot", n);
+        } catch (Throwable e) {
+            return Marshal.failed("spigot", e);
+        }
+    }
+
+    public AussomType teamDisplayName(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("teamDisplayName");
+            }
+            if (n == 0) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).teamDisplayName());
+            }
+            return Marshal.wrongArity("teamDisplayName", n);
+        } catch (Throwable e) {
+            return Marshal.failed("teamDisplayName", e);
+        }
+    }
+
+    public AussomType teleport(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("teleport");
+            }
+            if (n == 1) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).teleport((org.bukkit.entity.Entity) Marshal.typed(args, 0, org.bukkit.entity.Entity.class)));
+            }
+            if (n == 2) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).teleport((org.bukkit.entity.Entity) Marshal.typed(args, 0, org.bukkit.entity.Entity.class), (org.bukkit.event.player.PlayerTeleportEvent.TeleportCause) Marshal.typed(args, 1, org.bukkit.event.player.PlayerTeleportEvent.TeleportCause.class)));
+            }
+            return Marshal.wrongArity("teleport", n);
+        } catch (Throwable e) {
+            return Marshal.failed("teleport", e);
+        }
+    }
+
+    public AussomType teleport_location(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("teleport_location");
+            }
+            if (n == 1) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).teleport((org.bukkit.Location) Marshal.typed(args, 0, org.bukkit.Location.class)));
+            }
+            return Marshal.wrongArity("teleport_location", n);
+        } catch (Throwable e) {
+            return Marshal.failed("teleport_location", e);
+        }
+    }
+
+    public AussomType teleport_location_cause(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("teleport_location_cause");
+            }
+            if (n == 2) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).teleport((org.bukkit.Location) Marshal.typed(args, 0, org.bukkit.Location.class), (org.bukkit.event.player.PlayerTeleportEvent.TeleportCause) Marshal.typed(args, 1, org.bukkit.event.player.PlayerTeleportEvent.TeleportCause.class)));
+            }
+            return Marshal.wrongArity("teleport_location_cause", n);
+        } catch (Throwable e) {
+            return Marshal.failed("teleport_location_cause", e);
+        }
+    }
+
+    public AussomType wouldCollideUsing(Environment env, ArrayList<AussomType> args) {
+        int n = 0;
+        if (args != null) {
+            n = args.size();
+        }
+        try {
+            org.bukkit.entity.Damageable self = (org.bukkit.entity.Damageable) this.getObj();
+            if (self == null) {
+                return Marshal.detached("wouldCollideUsing");
+            }
+            if (n == 1) {
+                return Marshal.wrap(env, ((org.bukkit.entity.Entity) self).wouldCollideUsing((org.bukkit.util.BoundingBox) Marshal.typed(args, 0, org.bukkit.util.BoundingBox.class)));
+            }
+            return Marshal.wrongArity("wouldCollideUsing", n);
+        } catch (Throwable e) {
+            return Marshal.failed("wouldCollideUsing", e);
         }
     }
 

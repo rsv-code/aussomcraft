@@ -489,9 +489,6 @@ public class ItemStackShim extends PaperObj {
             if (self == null) {
                 return Marshal.detached("getData");
             }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.inventory.ItemStack) self).getData());
-            }
             if (n == 1) {
                 return Marshal.wrap(env, ((org.bukkit.inventory.ItemStack) self).getData((io.papermc.paper.datacomponent.DataComponentType.Valued) Marshal.typed(args, 0, io.papermc.paper.datacomponent.DataComponentType.Valued.class)));
             }

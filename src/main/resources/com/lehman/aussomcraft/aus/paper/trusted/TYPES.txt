@@ -2,1555 +2,1494 @@
 # Written by the generator. The runtime authorises against this
 # by exact name, so a class merely sharing a simple name with one
 # of these is not one of these.
-com.destroystokyo.paper.MaterialSetTag
-com.destroystokyo.paper.Namespaced
-com.destroystokyo.paper.NamespacedTag
-com.destroystokyo.paper.ParticleBuilder
-com.destroystokyo.paper.SkinParts
-com.destroystokyo.paper.Title
-com.destroystokyo.paper.block.BlockSoundGroup
-com.destroystokyo.paper.block.TargetBlockInfo
-com.destroystokyo.paper.brigadier.BukkitBrigadierCommand
-com.destroystokyo.paper.brigadier.BukkitBrigadierCommandSource
-com.destroystokyo.paper.entity.Pathfinder
-com.destroystokyo.paper.entity.RangedEntity
-com.destroystokyo.paper.entity.TargetEntityInfo
-com.destroystokyo.paper.entity.ai.Goal
-com.destroystokyo.paper.entity.ai.GoalKey
-com.destroystokyo.paper.entity.ai.GoalType
-com.destroystokyo.paper.entity.ai.MobGoals
-com.destroystokyo.paper.entity.ai.VanillaGoal
-com.destroystokyo.paper.entity.villager.Reputation
-com.destroystokyo.paper.entity.villager.ReputationType
-com.destroystokyo.paper.event.block.AnvilDamagedEvent
-com.destroystokyo.paper.event.block.BeaconEffectEvent
-com.destroystokyo.paper.event.block.BlockDestroyEvent
-com.destroystokyo.paper.event.block.TNTPrimeEvent
-com.destroystokyo.paper.event.brigadier.AsyncPlayerSendCommandsEvent
-com.destroystokyo.paper.event.brigadier.AsyncPlayerSendSuggestionsEvent
-com.destroystokyo.paper.event.brigadier.CommandRegisteredEvent
-com.destroystokyo.paper.event.entity.CreeperIgniteEvent
-com.destroystokyo.paper.event.entity.EnderDragonFireballHitEvent
-com.destroystokyo.paper.event.entity.EnderDragonFlameEvent
-com.destroystokyo.paper.event.entity.EnderDragonShootFireballEvent
-com.destroystokyo.paper.event.entity.EndermanAttackPlayerEvent
-com.destroystokyo.paper.event.entity.EndermanEscapeEvent
-com.destroystokyo.paper.event.entity.EntityAddToWorldEvent
-com.destroystokyo.paper.event.entity.EntityJumpEvent
-com.destroystokyo.paper.event.entity.EntityKnockbackByEntityEvent
-com.destroystokyo.paper.event.entity.EntityPathfindEvent
-com.destroystokyo.paper.event.entity.EntityRemoveFromWorldEvent
-com.destroystokyo.paper.event.entity.EntityTeleportEndGatewayEvent
-com.destroystokyo.paper.event.entity.EntityZapEvent
-com.destroystokyo.paper.event.entity.ExperienceOrbMergeEvent
-com.destroystokyo.paper.event.entity.PhantomPreSpawnEvent
-com.destroystokyo.paper.event.entity.PlayerNaturallySpawnCreaturesEvent
-com.destroystokyo.paper.event.entity.PreCreatureSpawnEvent
-com.destroystokyo.paper.event.entity.PreSpawnerSpawnEvent
-com.destroystokyo.paper.event.entity.ProjectileCollideEvent
-com.destroystokyo.paper.event.entity.SkeletonHorseTrapEvent
-com.destroystokyo.paper.event.entity.SlimeChangeDirectionEvent
-com.destroystokyo.paper.event.entity.SlimePathfindEvent
-com.destroystokyo.paper.event.entity.SlimeSwimEvent
-com.destroystokyo.paper.event.entity.SlimeTargetLivingEntityEvent
-com.destroystokyo.paper.event.entity.SlimeWanderEvent
-com.destroystokyo.paper.event.entity.ThrownEggHatchEvent
-com.destroystokyo.paper.event.entity.TurtleGoHomeEvent
-com.destroystokyo.paper.event.entity.TurtleLayEggEvent
-com.destroystokyo.paper.event.entity.TurtleStartDiggingEvent
-com.destroystokyo.paper.event.entity.WitchConsumePotionEvent
-com.destroystokyo.paper.event.entity.WitchReadyPotionEvent
-com.destroystokyo.paper.event.entity.WitchThrowPotionEvent
-com.destroystokyo.paper.event.inventory.PrepareGrindstoneEvent
-com.destroystokyo.paper.event.inventory.PrepareResultEvent
-com.destroystokyo.paper.event.player.IllegalPacketEvent
-com.destroystokyo.paper.event.player.PlayerAdvancementCriterionGrantEvent
-com.destroystokyo.paper.event.player.PlayerArmorChangeEvent
-com.destroystokyo.paper.event.player.PlayerAttackEntityCooldownResetEvent
-com.destroystokyo.paper.event.player.PlayerClientOptionsChangeEvent
-com.destroystokyo.paper.event.player.PlayerConnectionCloseEvent
-com.destroystokyo.paper.event.player.PlayerElytraBoostEvent
-com.destroystokyo.paper.event.player.PlayerHandshakeEvent
-com.destroystokyo.paper.event.player.PlayerJumpEvent
-com.destroystokyo.paper.event.player.PlayerLaunchProjectileEvent
-com.destroystokyo.paper.event.player.PlayerPickupExperienceEvent
-com.destroystokyo.paper.event.player.PlayerPostRespawnEvent
-com.destroystokyo.paper.event.player.PlayerReadyArrowEvent
-com.destroystokyo.paper.event.player.PlayerRecipeBookClickEvent
-com.destroystokyo.paper.event.player.PlayerSetSpawnEvent
-com.destroystokyo.paper.event.player.PlayerStartSpectatingEntityEvent
-com.destroystokyo.paper.event.player.PlayerStopSpectatingEntityEvent
-com.destroystokyo.paper.event.player.PlayerTeleportEndGatewayEvent
-com.destroystokyo.paper.event.player.PlayerUseUnknownEntityEvent
-com.destroystokyo.paper.event.profile.FillProfileEvent
-com.destroystokyo.paper.event.profile.LookupProfileEvent
-com.destroystokyo.paper.event.profile.PreFillProfileEvent
-com.destroystokyo.paper.event.profile.PreLookupProfileEvent
-com.destroystokyo.paper.event.profile.ProfileWhitelistVerifyEvent
-com.destroystokyo.paper.event.server.AsyncTabCompleteEvent
-com.destroystokyo.paper.event.server.GS4QueryEvent
-com.destroystokyo.paper.event.server.PaperServerListPingEvent
-com.destroystokyo.paper.event.server.ServerExceptionEvent
-com.destroystokyo.paper.event.server.ServerTickEndEvent
-com.destroystokyo.paper.event.server.ServerTickStartEvent
-com.destroystokyo.paper.event.server.WhitelistToggleEvent
-com.destroystokyo.paper.exception.ServerCommandException
-com.destroystokyo.paper.exception.ServerEventException
-com.destroystokyo.paper.exception.ServerException
-com.destroystokyo.paper.exception.ServerInternalException
-com.destroystokyo.paper.exception.ServerPluginEnableDisableException
-com.destroystokyo.paper.exception.ServerPluginException
-com.destroystokyo.paper.exception.ServerPluginMessageException
-com.destroystokyo.paper.exception.ServerSchedulerException
-com.destroystokyo.paper.exception.ServerTabCompleteException
-com.destroystokyo.paper.inventory.meta.ArmorStandMeta
-com.destroystokyo.paper.loottable.LootableBlockInventory
-com.destroystokyo.paper.loottable.LootableEntityInventory
-com.destroystokyo.paper.loottable.LootableInventory
-com.destroystokyo.paper.loottable.LootableInventoryReplenishEvent
-com.destroystokyo.paper.network.NetworkClient
-com.destroystokyo.paper.network.StatusClient
-com.destroystokyo.paper.profile.PlayerProfile
-com.destroystokyo.paper.profile.ProfileProperty
-com.destroystokyo.paper.util.VersionFetcher
-com.destroystokyo.paper.utils.PaperPluginLogger
-io.papermc.paper.InternalAPIBridge
-io.papermc.paper.ServerBuildInfo
-io.papermc.paper.advancement.AdvancementDisplay
-io.papermc.paper.annotation.DoNotUse
-io.papermc.paper.annotation.GeneratedClass
-io.papermc.paper.annotation.MinecraftVersionDependent
-io.papermc.paper.block.BlockPredicate
-io.papermc.paper.block.LockableTileState
-io.papermc.paper.block.MovingPiston
-io.papermc.paper.block.TileStateInventoryHolder
-io.papermc.paper.block.bed.BedEnterAction
-io.papermc.paper.block.bed.BedEnterProblem
-io.papermc.paper.block.bed.BedRuleResult
-io.papermc.paper.block.fluid.FluidData
-io.papermc.paper.block.fluid.type.FallingFluidData
-io.papermc.paper.block.fluid.type.FlowingFluidData
-io.papermc.paper.chat.ChatRenderer
-io.papermc.paper.command.CommandBlockHolder
-io.papermc.paper.command.brigadier.BasicCommand
-io.papermc.paper.command.brigadier.CommandRegistrationFlag
-io.papermc.paper.command.brigadier.CommandSourceStack
-io.papermc.paper.command.brigadier.Commands
-io.papermc.paper.command.brigadier.MessageComponentSerializer
-io.papermc.paper.command.brigadier.argument.AxisSet
-io.papermc.paper.command.brigadier.argument.CustomArgumentType
-io.papermc.paper.command.brigadier.argument.SignedMessageResolver
-io.papermc.paper.command.brigadier.argument.position.ColumnBlockPosition
-io.papermc.paper.command.brigadier.argument.position.ColumnFinePosition
-io.papermc.paper.command.brigadier.argument.predicate.BlockInWorldPredicate
-io.papermc.paper.command.brigadier.argument.predicate.ItemStackPredicate
-io.papermc.paper.command.brigadier.argument.resolvers.AngleResolver
-io.papermc.paper.command.brigadier.argument.resolvers.ArgumentResolver
-io.papermc.paper.command.brigadier.argument.resolvers.BlockPositionResolver
-io.papermc.paper.command.brigadier.argument.resolvers.ColumnBlockPositionResolver
-io.papermc.paper.command.brigadier.argument.resolvers.ColumnFinePositionResolver
-io.papermc.paper.command.brigadier.argument.resolvers.FinePositionResolver
-io.papermc.paper.command.brigadier.argument.resolvers.PlayerProfileListResolver
-io.papermc.paper.command.brigadier.argument.resolvers.RotationResolver
-io.papermc.paper.command.brigadier.argument.resolvers.selector.EntitySelectorArgumentResolver
-io.papermc.paper.command.brigadier.argument.resolvers.selector.PlayerSelectorArgumentResolver
-io.papermc.paper.command.brigadier.argument.resolvers.selector.SelectorArgumentResolver
-io.papermc.paper.configuration.ServerConfiguration
-io.papermc.paper.connection.PlayerCommonConnection
-io.papermc.paper.connection.PlayerConfigurationConnection
-io.papermc.paper.connection.PlayerConnection
-io.papermc.paper.connection.PlayerGameConnection
-io.papermc.paper.connection.PlayerLoginConnection
-io.papermc.paper.connection.ReadablePlayerCookieConnection
-io.papermc.paper.connection.WritablePlayerCookieConnection
-io.papermc.paper.datacomponent.BuildableDataComponent
-io.papermc.paper.datacomponent.DataComponentBuilder
-io.papermc.paper.datacomponent.DataComponentHolder
-io.papermc.paper.datacomponent.DataComponentType
-io.papermc.paper.datacomponent.DataComponentView
-io.papermc.paper.datacomponent.item.AttackRange
-io.papermc.paper.datacomponent.item.BannerPatternLayers
-io.papermc.paper.datacomponent.item.BlockItemDataProperties
-io.papermc.paper.datacomponent.item.BlocksAttacks
-io.papermc.paper.datacomponent.item.BundleContents
-io.papermc.paper.datacomponent.item.ChargedProjectiles
-io.papermc.paper.datacomponent.item.Consumable
-io.papermc.paper.datacomponent.item.CustomModelData
-io.papermc.paper.datacomponent.item.DamageResistant
-io.papermc.paper.datacomponent.item.DeathProtection
-io.papermc.paper.datacomponent.item.DyedItemColor
-io.papermc.paper.datacomponent.item.Enchantable
-io.papermc.paper.datacomponent.item.Equippable
-io.papermc.paper.datacomponent.item.Fireworks
-io.papermc.paper.datacomponent.item.FoodProperties
-io.papermc.paper.datacomponent.item.ItemAdventurePredicate
-io.papermc.paper.datacomponent.item.ItemArmorTrim
-io.papermc.paper.datacomponent.item.ItemAttributeModifiers
-io.papermc.paper.datacomponent.item.ItemContainerContents
-io.papermc.paper.datacomponent.item.ItemEnchantments
-io.papermc.paper.datacomponent.item.ItemLore
-io.papermc.paper.datacomponent.item.JukeboxPlayable
-io.papermc.paper.datacomponent.item.KineticWeapon
-io.papermc.paper.datacomponent.item.LodestoneTracker
-io.papermc.paper.datacomponent.item.MapDecorations
-io.papermc.paper.datacomponent.item.MapId
-io.papermc.paper.datacomponent.item.MapItemColor
-io.papermc.paper.datacomponent.item.OminousBottleAmplifier
-io.papermc.paper.datacomponent.item.PiercingWeapon
-io.papermc.paper.datacomponent.item.PotDecorations
-io.papermc.paper.datacomponent.item.PotionContents
-io.papermc.paper.datacomponent.item.Repairable
-io.papermc.paper.datacomponent.item.ResolvableProfile
-io.papermc.paper.datacomponent.item.SeededContainerLoot
-io.papermc.paper.datacomponent.item.SulfurCubeContent
-io.papermc.paper.datacomponent.item.SuspiciousStewEffects
-io.papermc.paper.datacomponent.item.SwingAnimation
-io.papermc.paper.datacomponent.item.Tool
-io.papermc.paper.datacomponent.item.TooltipDisplay
-io.papermc.paper.datacomponent.item.UseCooldown
-io.papermc.paper.datacomponent.item.UseEffects
-io.papermc.paper.datacomponent.item.UseRemainder
-io.papermc.paper.datacomponent.item.Weapon
-io.papermc.paper.datacomponent.item.WritableBookContent
-io.papermc.paper.datacomponent.item.WrittenBookContent
-io.papermc.paper.datacomponent.item.attribute.AttributeModifierDisplay
-io.papermc.paper.datacomponent.item.blocksattacks.DamageReduction
-io.papermc.paper.datacomponent.item.blocksattacks.ItemDamageFunction
-io.papermc.paper.datacomponent.item.consumable.ConsumeEffect
-io.papermc.paper.datacomponent.item.consumable.ItemUseAnimation
-io.papermc.paper.datapack.Datapack
-io.papermc.paper.datapack.DatapackManager
-io.papermc.paper.datapack.DatapackRegistrar
-io.papermc.paper.datapack.DiscoveredDatapack
-io.papermc.paper.dialog.Dialog
-io.papermc.paper.dialog.DialogResponseView
-io.papermc.paper.enchantments.EnchantmentRarity
-io.papermc.paper.entity.Bucketable
-io.papermc.paper.entity.CollarColorable
-io.papermc.paper.entity.EntitySerializationFlag
-io.papermc.paper.entity.Leashable
-io.papermc.paper.entity.LookAnchor
-io.papermc.paper.entity.PlayerGiveResult
-io.papermc.paper.entity.RemovalReason
-io.papermc.paper.entity.SchoolableFish
-io.papermc.paper.entity.Shearable
-io.papermc.paper.entity.poi.PoiSearchResult
-io.papermc.paper.entity.poi.PoiType
-io.papermc.paper.event.block.BeaconActivatedEvent
-io.papermc.paper.event.block.BeaconDeactivatedEvent
-io.papermc.paper.event.block.BellRevealRaiderEvent
-io.papermc.paper.event.block.BellRingEvent
-io.papermc.paper.event.block.BlockBreakBlockEvent
-io.papermc.paper.event.block.BlockBreakProgressUpdateEvent
-io.papermc.paper.event.block.BlockFailedDispenseEvent
-io.papermc.paper.event.block.BlockLockCheckEvent
-io.papermc.paper.event.block.BlockPreDispenseEvent
-io.papermc.paper.event.block.CompostItemEvent
-io.papermc.paper.event.block.DragonEggFormEvent
-io.papermc.paper.event.block.PlayerShearBlockEvent
-io.papermc.paper.event.block.TargetHitEvent
-io.papermc.paper.event.block.VaultChangeStateEvent
-io.papermc.paper.event.connection.PlayerConnectionValidateLoginEvent
-io.papermc.paper.event.connection.configuration.AsyncPlayerConnectionConfigureEvent
-io.papermc.paper.event.connection.configuration.PlayerCodeOfConductSendEvent
-io.papermc.paper.event.connection.configuration.PlayerConnectionInitialConfigureEvent
-io.papermc.paper.event.connection.configuration.PlayerConnectionReconfigureEvent
-io.papermc.paper.event.entity.ElderGuardianAppearanceEvent
-io.papermc.paper.event.entity.EntityAttemptSmashAttackEvent
-io.papermc.paper.event.entity.EntityAttemptSpinAttackEvent
-io.papermc.paper.event.entity.EntityCollideWithEntityEvent
-io.papermc.paper.event.entity.EntityCompostItemEvent
-io.papermc.paper.event.entity.EntityConstructEvent
-io.papermc.paper.event.entity.EntityDamageItemEvent
-io.papermc.paper.event.entity.EntityDyeEvent
-io.papermc.paper.event.entity.EntityEffectTickEvent
-io.papermc.paper.event.entity.EntityEquipmentChangedEvent
-io.papermc.paper.event.entity.EntityFertilizeEggEvent
-io.papermc.paper.event.entity.EntityIgniteEvent
-io.papermc.paper.event.entity.EntityInsideBlockEvent
-io.papermc.paper.event.entity.EntityKnockbackEvent
-io.papermc.paper.event.entity.EntityLoadCrossbowEvent
-io.papermc.paper.event.entity.EntityLungeEvent
-io.papermc.paper.event.entity.EntityMoveEvent
-io.papermc.paper.event.entity.EntityPortalReadyEvent
-io.papermc.paper.event.entity.EntityPushedByEntityAttackEvent
-io.papermc.paper.event.entity.EntityToggleSitEvent
-io.papermc.paper.event.entity.FishHookStateChangeEvent
-io.papermc.paper.event.entity.ItemTransportingEntityValidateTargetEvent
-io.papermc.paper.event.entity.PufferFishStateChangeEvent
-io.papermc.paper.event.entity.ShulkerDuplicateEvent
-io.papermc.paper.event.entity.SulfurCubeSwallowItemEvent
-io.papermc.paper.event.entity.TameableDeathMessageEvent
-io.papermc.paper.event.entity.WardenAngerChangeEvent
-io.papermc.paper.event.entity.WaterBottleSplashEvent
-io.papermc.paper.event.inventory.ItemCraftedEvent
-io.papermc.paper.event.packet.ClientTickEndEvent
-io.papermc.paper.event.packet.PlayerChunkLoadEvent
-io.papermc.paper.event.packet.PlayerChunkUnloadEvent
-io.papermc.paper.event.packet.UncheckedSignChangeEvent
-io.papermc.paper.event.player.AbstractChatEvent
-io.papermc.paper.event.player.AbstractRespawnEvent
-io.papermc.paper.event.player.AsyncChatCommandDecorateEvent
-io.papermc.paper.event.player.AsyncChatDecorateEvent
-io.papermc.paper.event.player.AsyncChatEvent
-io.papermc.paper.event.player.AsyncPlayerSpawnLocationEvent
-io.papermc.paper.event.player.CartographyItemEvent
-io.papermc.paper.event.player.ChatEvent
-io.papermc.paper.event.player.PlayerArmSwingEvent
-io.papermc.paper.event.player.PlayerBedFailEnterEvent
-io.papermc.paper.event.player.PlayerChangeBeaconEffectEvent
-io.papermc.paper.event.player.PlayerClientLoadedWorldEvent
-io.papermc.paper.event.player.PlayerCustomClickEvent
-io.papermc.paper.event.player.PlayerDeepSleepEvent
-io.papermc.paper.event.player.PlayerFailMoveEvent
-io.papermc.paper.event.player.PlayerFlowerPotManipulateEvent
-io.papermc.paper.event.player.PlayerInsertLecternBookEvent
-io.papermc.paper.event.player.PlayerInventorySlotChangeEvent
-io.papermc.paper.event.player.PlayerItemCooldownEvent
-io.papermc.paper.event.player.PlayerItemFrameChangeEvent
-io.papermc.paper.event.player.PlayerItemGroupCooldownEvent
-io.papermc.paper.event.player.PlayerLecternPageChangeEvent
-io.papermc.paper.event.player.PlayerLoomPatternSelectEvent
-io.papermc.paper.event.player.PlayerMapFilledEvent
-io.papermc.paper.event.player.PlayerNameEntityEvent
-io.papermc.paper.event.player.PlayerOpenSignEvent
-io.papermc.paper.event.player.PlayerPickBlockEvent
-io.papermc.paper.event.player.PlayerPickEntityEvent
-io.papermc.paper.event.player.PlayerPickItemEvent
-io.papermc.paper.event.player.PlayerPurchaseEvent
-io.papermc.paper.event.player.PlayerServerFullCheckEvent
-io.papermc.paper.event.player.PlayerShieldDisableEvent
-io.papermc.paper.event.player.PlayerStonecutterRecipeSelectEvent
-io.papermc.paper.event.player.PlayerStopUsingItemEvent
-io.papermc.paper.event.player.PlayerSwapWithEquipmentSlotEvent
-io.papermc.paper.event.player.PlayerToggleEntityAgeLockEvent
-io.papermc.paper.event.player.PlayerTrackEntityEvent
-io.papermc.paper.event.player.PlayerTradeEvent
-io.papermc.paper.event.player.PlayerUntrackEntityEvent
-io.papermc.paper.event.player.PrePlayerAttackEntityEvent
-io.papermc.paper.event.server.AsyncServerDataFixerRemoveBlockEntityEvent
-io.papermc.paper.event.server.ServerResourcesReloadedEvent
-io.papermc.paper.event.server.WhitelistStateUpdateEvent
-io.papermc.paper.event.world.StructuresLocateEvent
-io.papermc.paper.event.world.WorldDifficultyChangeEvent
-io.papermc.paper.event.world.WorldGameRuleChangeEvent
-io.papermc.paper.event.world.border.WorldBorderBoundsChangeEvent
-io.papermc.paper.event.world.border.WorldBorderBoundsChangeFinishEvent
-io.papermc.paper.event.world.border.WorldBorderCenterChangeEvent
-io.papermc.paper.event.world.border.WorldBorderEvent
-io.papermc.paper.inventory.ItemRarity
-io.papermc.paper.inventory.tooltip.TooltipContext
-io.papermc.paper.item.MapPostProcessing
-io.papermc.paper.math.Angle
-io.papermc.paper.math.BlockPosition
-io.papermc.paper.math.FinePosition
-io.papermc.paper.math.Position
-io.papermc.paper.math.Rotation
-io.papermc.paper.math.Rotations
-io.papermc.paper.persistence.PersistentDataContainerView
-io.papermc.paper.persistence.PersistentDataViewHolder
-io.papermc.paper.potion.PotionMix
-io.papermc.paper.potion.SuspiciousEffectEntry
-io.papermc.paper.raytracing.BlockCollisionMode
-io.papermc.paper.raytracing.PositionedRayTraceConfigurationBuilder
-io.papermc.paper.raytracing.RayTraceTarget
-io.papermc.paper.registry.Reference
-io.papermc.paper.registry.RegistryAccess
-io.papermc.paper.registry.RegistryBuilderFactory
-io.papermc.paper.registry.RegistryKey
-io.papermc.paper.registry.TypedKey
-io.papermc.paper.registry.data.BannerPatternRegistryEntry
-io.papermc.paper.registry.data.CatTypeRegistryEntry
-io.papermc.paper.registry.data.ChickenVariantRegistryEntry
-io.papermc.paper.registry.data.CowVariantRegistryEntry
-io.papermc.paper.registry.data.DamageTypeRegistryEntry
-io.papermc.paper.registry.data.EnchantmentRegistryEntry
-io.papermc.paper.registry.data.FrogVariantRegistryEntry
-io.papermc.paper.registry.data.GameEventRegistryEntry
-io.papermc.paper.registry.data.InlinedRegistryBuilderProvider
-io.papermc.paper.registry.data.InstrumentRegistryEntry
-io.papermc.paper.registry.data.JukeboxSongRegistryEntry
-io.papermc.paper.registry.data.PaintingVariantRegistryEntry
-io.papermc.paper.registry.data.PigVariantRegistryEntry
-io.papermc.paper.registry.data.SoundEventRegistryEntry
-io.papermc.paper.registry.data.SulfurCubeArchetypeRegistryEntry
-io.papermc.paper.registry.data.TrimMaterialRegistryEntry
-io.papermc.paper.registry.data.TrimPatternRegistryEntry
-io.papermc.paper.registry.data.WolfVariantRegistryEntry
-io.papermc.paper.registry.data.ZombieNautilusVariantRegistryEntry
-io.papermc.paper.registry.data.client.ClientTextureAsset
-io.papermc.paper.registry.data.dialog.ActionButton
-io.papermc.paper.registry.data.dialog.DialogBase
-io.papermc.paper.registry.data.dialog.DialogInstancesProvider
-io.papermc.paper.registry.data.dialog.DialogRegistryEntry
-io.papermc.paper.registry.data.dialog.action.DialogAction
-io.papermc.paper.registry.data.dialog.body.DialogBody
-io.papermc.paper.registry.data.dialog.body.ItemDialogBody
-io.papermc.paper.registry.data.dialog.body.PlainMessageDialogBody
-io.papermc.paper.registry.data.dialog.input.BooleanDialogInput
-io.papermc.paper.registry.data.dialog.input.DialogInput
-io.papermc.paper.registry.data.dialog.input.NumberRangeDialogInput
-io.papermc.paper.registry.data.dialog.input.SingleOptionDialogInput
-io.papermc.paper.registry.data.dialog.input.TextDialogInput
-io.papermc.paper.registry.data.dialog.type.ConfirmationType
-io.papermc.paper.registry.data.dialog.type.DialogListType
-io.papermc.paper.registry.data.dialog.type.DialogType
-io.papermc.paper.registry.data.dialog.type.MultiActionType
-io.papermc.paper.registry.data.dialog.type.NoticeType
-io.papermc.paper.registry.data.dialog.type.ServerLinksType
-io.papermc.paper.registry.event.RegistryComposeEvent
-io.papermc.paper.registry.event.RegistryEntryAddEvent
-io.papermc.paper.registry.event.RegistryEvent
-io.papermc.paper.registry.event.RegistryEventProvider
-io.papermc.paper.registry.event.type.RegistryEntryAddConfiguration
-io.papermc.paper.registry.event.type.RegistryEntryAddEventType
-io.papermc.paper.registry.set.RegistryKeySet
-io.papermc.paper.registry.set.RegistrySet
-io.papermc.paper.registry.set.RegistryValueSet
-io.papermc.paper.registry.set.RegistryValueSetBuilder
-io.papermc.paper.registry.tag.Tag
-io.papermc.paper.registry.tag.TagKey
-io.papermc.paper.scoreboard.numbers.FixedFormat
-io.papermc.paper.scoreboard.numbers.NumberFormat
-io.papermc.paper.tag.BaseTag
-io.papermc.paper.tag.EntitySetTag
-io.papermc.paper.tag.PostFlattenTagRegistrar
-io.papermc.paper.tag.PreFlattenTagRegistrar
-io.papermc.paper.tag.TagEntry
-io.papermc.paper.text.Filtered
-io.papermc.paper.text.PaperComponents
-io.papermc.paper.threadedregions.RegionizedServerInitEvent
-io.papermc.paper.threadedregions.scheduler.ScheduledTask
-io.papermc.paper.util.BoundChecker
-io.papermc.paper.util.Tick
-io.papermc.paper.util.TransformingRandomAccessList
-io.papermc.paper.world.MoonPhase
-io.papermc.paper.world.WeatheringCopperState
-io.papermc.paper.world.damagesource.CombatEntry
-io.papermc.paper.world.damagesource.CombatTracker
-io.papermc.paper.world.damagesource.FallLocationType
-io.papermc.paper.world.flag.FeatureDependant
-io.papermc.paper.world.flag.FeatureFlagSetHolder
-org.bukkit.Art
-org.bukkit.Axis
-org.bukkit.BanEntry
-org.bukkit.BanList
-org.bukkit.BlockChangeDelegate
-org.bukkit.ChatColor
-org.bukkit.Chunk
-org.bukkit.ChunkSnapshot
-org.bukkit.CoalType
-org.bukkit.Color
-org.bukkit.CropState
-org.bukkit.Difficulty
-org.bukkit.DyeColor
-org.bukkit.Effect
-org.bukkit.EntityEffect
-org.bukkit.ExplosionResult
-org.bukkit.FeatureFlag
-org.bukkit.FireworkEffect
-org.bukkit.Fluid
-org.bukkit.FluidCollisionMode
-org.bukkit.GameEvent
-org.bukkit.GameMode
-org.bukkit.GameRule
-org.bukkit.GrassSpecies
-org.bukkit.HeightMap
-org.bukkit.Input
-org.bukkit.Instrument
-org.bukkit.JukeboxSong
-org.bukkit.Keyed
-org.bukkit.Location
-org.bukkit.Material
-org.bukkit.MinecraftExperimental
-org.bukkit.MusicInstrument
-org.bukkit.Nameable
-org.bukkit.NamespacedKey
-org.bukkit.NetherWartsState
-org.bukkit.Note
-org.bukkit.OfflinePlayer
-org.bukkit.Particle
-org.bukkit.PortalType
-org.bukkit.Raid
-org.bukkit.RegionAccessor
-org.bukkit.Registry
-org.bukkit.Rotation
-org.bukkit.SandstoneType
-org.bukkit.ServerLinks
-org.bukkit.SkullType
-org.bukkit.Sound
-org.bukkit.SoundCategory
-org.bukkit.SoundGroup
-org.bukkit.Statistic
-org.bukkit.StructureType
-org.bukkit.Tag
-org.bukkit.Translatable
-org.bukkit.TreeSpecies
-org.bukkit.TreeType
-org.bukkit.UndefinedNullability
-org.bukkit.Utility
-org.bukkit.Vibration
-org.bukkit.Warning
-org.bukkit.WeatherType
-org.bukkit.World
-org.bukkit.WorldBorder
-org.bukkit.WorldCreator
-org.bukkit.WorldType
-org.bukkit.advancement.Advancement
-org.bukkit.advancement.AdvancementDisplay
-org.bukkit.advancement.AdvancementDisplayType
-org.bukkit.advancement.AdvancementProgress
-org.bukkit.advancement.AdvancementRequirement
-org.bukkit.advancement.AdvancementRequirements
-org.bukkit.attribute.Attributable
-org.bukkit.attribute.Attribute
-org.bukkit.attribute.AttributeInstance
-org.bukkit.attribute.AttributeModifier
-org.bukkit.ban.IpBanList
-org.bukkit.ban.ProfileBanList
-org.bukkit.block.Banner
-org.bukkit.block.Barrel
-org.bukkit.block.Beacon
-org.bukkit.block.Bed
-org.bukkit.block.Beehive
-org.bukkit.block.Bell
-org.bukkit.block.Biome
-org.bukkit.block.BlastFurnace
-org.bukkit.block.Block
-org.bukkit.block.BlockFace
-org.bukkit.block.BlockState
-org.bukkit.block.BlockSupport
-org.bukkit.block.BlockType
-org.bukkit.block.BrewingStand
-org.bukkit.block.BrushableBlock
-org.bukkit.block.CalibratedSculkSensor
-org.bukkit.block.Campfire
-org.bukkit.block.Chest
-org.bukkit.block.ChiseledBookshelf
-org.bukkit.block.CommandBlock
-org.bukkit.block.Comparator
-org.bukkit.block.Conduit
-org.bukkit.block.Container
-org.bukkit.block.CopperGolemStatue
-org.bukkit.block.Crafter
-org.bukkit.block.CreakingHeart
-org.bukkit.block.CreatureSpawner
-org.bukkit.block.DaylightDetector
-org.bukkit.block.DecoratedPot
-org.bukkit.block.Dispenser
-org.bukkit.block.DoubleChest
-org.bukkit.block.Dropper
-org.bukkit.block.EnchantingTable
-org.bukkit.block.EndGateway
-org.bukkit.block.EnderChest
-org.bukkit.block.EntityBlockStorage
-org.bukkit.block.Furnace
-org.bukkit.block.HangingSign
-org.bukkit.block.Hopper
-org.bukkit.block.Jigsaw
-org.bukkit.block.Jukebox
-org.bukkit.block.Lectern
-org.bukkit.block.Lidded
-org.bukkit.block.Lockable
-org.bukkit.block.Orientation
-org.bukkit.block.PistonMoveReaction
-org.bukkit.block.PotentSulfur
-org.bukkit.block.SculkCatalyst
-org.bukkit.block.SculkSensor
-org.bukkit.block.SculkShrieker
-org.bukkit.block.Shelf
-org.bukkit.block.ShulkerBox
-org.bukkit.block.Sign
-org.bukkit.block.Skull
-org.bukkit.block.Smoker
-org.bukkit.block.Structure
-org.bukkit.block.SuspiciousSand
-org.bukkit.block.TestBlock
-org.bukkit.block.TestInstanceBlock
-org.bukkit.block.TileState
-org.bukkit.block.TrialSpawner
-org.bukkit.block.Vault
-org.bukkit.block.banner.Pattern
-org.bukkit.block.banner.PatternType
-org.bukkit.block.data.Ageable
-org.bukkit.block.data.AnaloguePowerable
-org.bukkit.block.data.Attachable
-org.bukkit.block.data.Bisected
-org.bukkit.block.data.BlockData
-org.bukkit.block.data.Brushable
-org.bukkit.block.data.Directional
-org.bukkit.block.data.FaceAttachable
-org.bukkit.block.data.Hangable
-org.bukkit.block.data.Hatchable
-org.bukkit.block.data.Levelled
-org.bukkit.block.data.Lightable
-org.bukkit.block.data.MultipleFacing
-org.bukkit.block.data.Openable
-org.bukkit.block.data.Orientable
-org.bukkit.block.data.Powerable
-org.bukkit.block.data.Rail
-org.bukkit.block.data.Rotatable
-org.bukkit.block.data.Segmentable
-org.bukkit.block.data.SideChaining
-org.bukkit.block.data.Snowable
-org.bukkit.block.data.Waterlogged
-org.bukkit.block.data.type.AmethystCluster
-org.bukkit.block.data.type.Bamboo
-org.bukkit.block.data.type.Barrel
-org.bukkit.block.data.type.Bed
-org.bukkit.block.data.type.Beehive
-org.bukkit.block.data.type.Bell
-org.bukkit.block.data.type.BigDripleaf
-org.bukkit.block.data.type.BrewingStand
-org.bukkit.block.data.type.BubbleColumn
-org.bukkit.block.data.type.Cake
-org.bukkit.block.data.type.CalibratedSculkSensor
-org.bukkit.block.data.type.Campfire
-org.bukkit.block.data.type.Candle
-org.bukkit.block.data.type.CaveVines
-org.bukkit.block.data.type.CaveVinesPlant
-org.bukkit.block.data.type.Chain
-org.bukkit.block.data.type.Chest
-org.bukkit.block.data.type.ChiseledBookshelf
-org.bukkit.block.data.type.Cocoa
-org.bukkit.block.data.type.CommandBlock
-org.bukkit.block.data.type.Comparator
-org.bukkit.block.data.type.CopperBulb
-org.bukkit.block.data.type.CopperGolemStatue
-org.bukkit.block.data.type.CoralWallFan
-org.bukkit.block.data.type.Crafter
-org.bukkit.block.data.type.CreakingHeart
-org.bukkit.block.data.type.DaylightDetector
-org.bukkit.block.data.type.DecoratedPot
-org.bukkit.block.data.type.Dispenser
-org.bukkit.block.data.type.Door
-org.bukkit.block.data.type.DriedGhast
-org.bukkit.block.data.type.Dripleaf
-org.bukkit.block.data.type.EndPortalFrame
-org.bukkit.block.data.type.EnderChest
-org.bukkit.block.data.type.Farmland
-org.bukkit.block.data.type.Fence
-org.bukkit.block.data.type.Fire
-org.bukkit.block.data.type.FlowerBed
-org.bukkit.block.data.type.Furnace
-org.bukkit.block.data.type.Gate
-org.bukkit.block.data.type.GlassPane
-org.bukkit.block.data.type.GlowLichen
-org.bukkit.block.data.type.Grindstone
-org.bukkit.block.data.type.HangingMoss
-org.bukkit.block.data.type.HangingSign
-org.bukkit.block.data.type.Hopper
-org.bukkit.block.data.type.Jigsaw
-org.bukkit.block.data.type.Jukebox
-org.bukkit.block.data.type.Ladder
-org.bukkit.block.data.type.Lantern
-org.bukkit.block.data.type.LeafLitter
-org.bukkit.block.data.type.Leaves
-org.bukkit.block.data.type.Lectern
-org.bukkit.block.data.type.Light
-org.bukkit.block.data.type.LightningRod
-org.bukkit.block.data.type.MangrovePropagule
-org.bukkit.block.data.type.MossyCarpet
-org.bukkit.block.data.type.NoteBlock
-org.bukkit.block.data.type.Observer
-org.bukkit.block.data.type.PinkPetals
-org.bukkit.block.data.type.Piston
-org.bukkit.block.data.type.PistonHead
-org.bukkit.block.data.type.PitcherCrop
-org.bukkit.block.data.type.PointedDripstone
-org.bukkit.block.data.type.PotentSulfur
-org.bukkit.block.data.type.RedstoneRail
-org.bukkit.block.data.type.RedstoneWallTorch
-org.bukkit.block.data.type.RedstoneWire
-org.bukkit.block.data.type.Repeater
-org.bukkit.block.data.type.ResinClump
-org.bukkit.block.data.type.RespawnAnchor
-org.bukkit.block.data.type.Sapling
-org.bukkit.block.data.type.Scaffolding
-org.bukkit.block.data.type.SculkCatalyst
-org.bukkit.block.data.type.SculkSensor
-org.bukkit.block.data.type.SculkShrieker
-org.bukkit.block.data.type.SculkVein
-org.bukkit.block.data.type.SeaPickle
-org.bukkit.block.data.type.Shelf
-org.bukkit.block.data.type.Sign
-org.bukkit.block.data.type.Skull
-org.bukkit.block.data.type.Slab
-org.bukkit.block.data.type.SmallDripleaf
-org.bukkit.block.data.type.Snow
-org.bukkit.block.data.type.Speleothem
-org.bukkit.block.data.type.Stairs
-org.bukkit.block.data.type.StructureBlock
-org.bukkit.block.data.type.Switch
-org.bukkit.block.data.type.TNT
-org.bukkit.block.data.type.TechnicalPiston
-org.bukkit.block.data.type.TestBlock
-org.bukkit.block.data.type.TrapDoor
-org.bukkit.block.data.type.TrialSpawner
-org.bukkit.block.data.type.Tripwire
-org.bukkit.block.data.type.TripwireHook
-org.bukkit.block.data.type.TurtleEgg
-org.bukkit.block.data.type.Vault
-org.bukkit.block.data.type.Wall
-org.bukkit.block.data.type.WallHangingSign
-org.bukkit.block.data.type.WallSign
-org.bukkit.block.data.type.WallSkull
-org.bukkit.block.sign.Side
-org.bukkit.block.sign.SignSide
-org.bukkit.block.spawner.SpawnRule
-org.bukkit.block.spawner.SpawnerEntry
-org.bukkit.block.structure.Mirror
-org.bukkit.block.structure.StructureRotation
-org.bukkit.block.structure.UsageMode
-org.bukkit.boss.BarColor
-org.bukkit.boss.BarFlag
-org.bukkit.boss.BarStyle
-org.bukkit.boss.BossBar
-org.bukkit.boss.DragonBattle
-org.bukkit.boss.KeyedBossBar
-org.bukkit.command.BlockCommandSender
-org.bukkit.command.BufferedCommandSender
-org.bukkit.command.Command
-org.bukkit.command.CommandException
-org.bukkit.command.CommandSender
-org.bukkit.command.FormattedCommandAlias
-org.bukkit.command.MessageCommandSender
-org.bukkit.command.MultipleCommandAlias
-org.bukkit.command.ProxiedCommandSender
-org.bukkit.command.RemoteConsoleCommandSender
-org.bukkit.configuration.Configuration
-org.bukkit.configuration.ConfigurationOptions
-org.bukkit.configuration.ConfigurationSection
-org.bukkit.configuration.InvalidConfigurationException
-org.bukkit.configuration.MemoryConfiguration
-org.bukkit.configuration.MemoryConfigurationOptions
-org.bukkit.configuration.MemorySection
-org.bukkit.configuration.file.FileConfiguration
-org.bukkit.configuration.file.FileConfigurationOptions
-org.bukkit.configuration.file.YamlConfiguration
-org.bukkit.configuration.file.YamlConfigurationOptions
-org.bukkit.configuration.file.YamlConstructor
-org.bukkit.configuration.file.YamlRepresenter
-org.bukkit.configuration.serialization.ConfigurationSerializable
-org.bukkit.configuration.serialization.DelegateDeserialization
-org.bukkit.configuration.serialization.SerializableAs
-org.bukkit.conversations.BooleanPrompt
-org.bukkit.conversations.Conversable
-org.bukkit.conversations.Conversation
-org.bukkit.conversations.ConversationAbandonedEvent
-org.bukkit.conversations.ConversationAbandonedListener
-org.bukkit.conversations.ConversationCanceller
-org.bukkit.conversations.ConversationContext
-org.bukkit.conversations.ConversationFactory
-org.bukkit.conversations.ConversationPrefix
-org.bukkit.conversations.ExactMatchConversationCanceller
-org.bukkit.conversations.FixedSetPrompt
-org.bukkit.conversations.InactivityConversationCanceller
-org.bukkit.conversations.ManuallyAbandonedConversationCanceller
-org.bukkit.conversations.MessagePrompt
-org.bukkit.conversations.NullConversationPrefix
-org.bukkit.conversations.NumericPrompt
-org.bukkit.conversations.PlayerNamePrompt
-org.bukkit.conversations.PluginNameConversationPrefix
-org.bukkit.conversations.Prompt
-org.bukkit.conversations.RegexPrompt
-org.bukkit.conversations.StringPrompt
-org.bukkit.conversations.ValidatingPrompt
-org.bukkit.damage.DamageEffect
-org.bukkit.damage.DamageScaling
-org.bukkit.damage.DamageSource
-org.bukkit.damage.DamageType
-org.bukkit.damage.DeathMessageType
-org.bukkit.enchantments.Enchantment
-org.bukkit.enchantments.EnchantmentOffer
-org.bukkit.enchantments.EnchantmentTarget
-org.bukkit.enchantments.EnchantmentWrapper
-org.bukkit.entity.AbstractArrow
-org.bukkit.entity.AbstractCow
-org.bukkit.entity.AbstractCubeMob
-org.bukkit.entity.AbstractHorse
-org.bukkit.entity.AbstractNautilus
-org.bukkit.entity.AbstractSkeleton
-org.bukkit.entity.AbstractVillager
-org.bukkit.entity.AbstractWindCharge
-org.bukkit.entity.Ageable
-org.bukkit.entity.Allay
-org.bukkit.entity.Ambient
-org.bukkit.entity.AnimalTamer
-org.bukkit.entity.Animals
-org.bukkit.entity.AreaEffectCloud
-org.bukkit.entity.Armadillo
-org.bukkit.entity.ArmorStand
-org.bukkit.entity.Arrow
-org.bukkit.entity.Axolotl
-org.bukkit.entity.Bat
-org.bukkit.entity.Bee
-org.bukkit.entity.Blaze
-org.bukkit.entity.BlockDisplay
-org.bukkit.entity.Boat
-org.bukkit.entity.Bogged
-org.bukkit.entity.Boss
-org.bukkit.entity.Breedable
-org.bukkit.entity.Breeze
-org.bukkit.entity.BreezeWindCharge
-org.bukkit.entity.Camel
-org.bukkit.entity.CamelHusk
-org.bukkit.entity.Cat
-org.bukkit.entity.CaveSpider
-org.bukkit.entity.ChestBoat
-org.bukkit.entity.ChestedHorse
-org.bukkit.entity.Chicken
-org.bukkit.entity.Cod
-org.bukkit.entity.ComplexEntityPart
-org.bukkit.entity.ComplexLivingEntity
-org.bukkit.entity.CopperGolem
-org.bukkit.entity.Cow
-org.bukkit.entity.Creaking
-org.bukkit.entity.Creature
-org.bukkit.entity.Creeper
-org.bukkit.entity.Damageable
-org.bukkit.entity.Display
-org.bukkit.entity.Dolphin
-org.bukkit.entity.Donkey
-org.bukkit.entity.DragonFireball
-org.bukkit.entity.Drowned
-org.bukkit.entity.Egg
-org.bukkit.entity.ElderGuardian
-org.bukkit.entity.EnderCrystal
-org.bukkit.entity.EnderDragon
-org.bukkit.entity.EnderDragonPart
-org.bukkit.entity.EnderPearl
-org.bukkit.entity.EnderSignal
-org.bukkit.entity.Enderman
-org.bukkit.entity.Endermite
-org.bukkit.entity.Enemy
-org.bukkit.entity.Entity
-org.bukkit.entity.EntityCategory
-org.bukkit.entity.EntityFactory
-org.bukkit.entity.EntitySnapshot
-org.bukkit.entity.EntityType
-org.bukkit.entity.Evoker
-org.bukkit.entity.EvokerFangs
-org.bukkit.entity.ExperienceOrb
-org.bukkit.entity.Explosive
-org.bukkit.entity.FallingBlock
-org.bukkit.entity.Fireball
-org.bukkit.entity.Firework
-org.bukkit.entity.Fish
-org.bukkit.entity.FishHook
-org.bukkit.entity.Flying
-org.bukkit.entity.Fox
-org.bukkit.entity.Frog
-org.bukkit.entity.Ghast
-org.bukkit.entity.Giant
-org.bukkit.entity.GlowItemFrame
-org.bukkit.entity.GlowSquid
-org.bukkit.entity.Goat
-org.bukkit.entity.Golem
-org.bukkit.entity.Guardian
-org.bukkit.entity.Hanging
-org.bukkit.entity.HappyGhast
-org.bukkit.entity.Hoglin
-org.bukkit.entity.Horse
-org.bukkit.entity.HumanEntity
-org.bukkit.entity.Husk
-org.bukkit.entity.Illager
-org.bukkit.entity.Illusioner
-org.bukkit.entity.Interaction
-org.bukkit.entity.IronGolem
-org.bukkit.entity.Item
-org.bukkit.entity.ItemDisplay
-org.bukkit.entity.ItemFrame
-org.bukkit.entity.LargeFireball
-org.bukkit.entity.LeashHitch
-org.bukkit.entity.LightningStrike
-org.bukkit.entity.LingeringPotion
-org.bukkit.entity.LivingEntity
-org.bukkit.entity.Llama
-org.bukkit.entity.LlamaSpit
-org.bukkit.entity.MagmaCube
-org.bukkit.entity.Mannequin
-org.bukkit.entity.Marker
-org.bukkit.entity.Minecart
-org.bukkit.entity.Mob
-org.bukkit.entity.Monster
-org.bukkit.entity.Mule
-org.bukkit.entity.MushroomCow
-org.bukkit.entity.NPC
-org.bukkit.entity.Nautilus
-org.bukkit.entity.Ocelot
-org.bukkit.entity.OminousItemSpawner
-org.bukkit.entity.Painting
-org.bukkit.entity.Panda
-org.bukkit.entity.Parched
-org.bukkit.entity.Parrot
-org.bukkit.entity.Phantom
-org.bukkit.entity.Pig
-org.bukkit.entity.PigZombie
-org.bukkit.entity.Piglin
-org.bukkit.entity.PiglinAbstract
-org.bukkit.entity.PiglinBrute
-org.bukkit.entity.Pillager
-org.bukkit.entity.Player
-org.bukkit.entity.PolarBear
-org.bukkit.entity.Pose
-org.bukkit.entity.Projectile
-org.bukkit.entity.PufferFish
-org.bukkit.entity.Rabbit
-org.bukkit.entity.Raider
-org.bukkit.entity.Ravager
-org.bukkit.entity.Salmon
-org.bukkit.entity.Shearable
-org.bukkit.entity.Sheep
-org.bukkit.entity.Shulker
-org.bukkit.entity.ShulkerBullet
-org.bukkit.entity.Silverfish
-org.bukkit.entity.Sittable
-org.bukkit.entity.SizedFireball
-org.bukkit.entity.Skeleton
-org.bukkit.entity.SkeletonHorse
-org.bukkit.entity.Slime
-org.bukkit.entity.SmallFireball
-org.bukkit.entity.Sniffer
-org.bukkit.entity.Snowball
-org.bukkit.entity.Snowman
-org.bukkit.entity.SpawnCategory
-org.bukkit.entity.SpectralArrow
-org.bukkit.entity.Spellcaster
-org.bukkit.entity.Spider
-org.bukkit.entity.SplashPotion
-org.bukkit.entity.Squid
-org.bukkit.entity.Steerable
-org.bukkit.entity.Stray
-org.bukkit.entity.Strider
-org.bukkit.entity.SulfurCube
-org.bukkit.entity.TNTPrimed
-org.bukkit.entity.Tadpole
-org.bukkit.entity.Tameable
-org.bukkit.entity.TextDisplay
-org.bukkit.entity.ThrowableProjectile
-org.bukkit.entity.ThrownExpBottle
-org.bukkit.entity.ThrownPotion
-org.bukkit.entity.TippedArrow
-org.bukkit.entity.TraderLlama
-org.bukkit.entity.Trident
-org.bukkit.entity.TropicalFish
-org.bukkit.entity.Turtle
-org.bukkit.entity.Vehicle
-org.bukkit.entity.Vex
-org.bukkit.entity.Villager
-org.bukkit.entity.Vindicator
-org.bukkit.entity.WanderingTrader
-org.bukkit.entity.Warden
-org.bukkit.entity.WaterMob
-org.bukkit.entity.WindCharge
-org.bukkit.entity.Witch
-org.bukkit.entity.Wither
-org.bukkit.entity.WitherSkeleton
-org.bukkit.entity.WitherSkull
-org.bukkit.entity.Wolf
-org.bukkit.entity.Zoglin
-org.bukkit.entity.Zombie
-org.bukkit.entity.ZombieHorse
-org.bukkit.entity.ZombieNautilus
-org.bukkit.entity.ZombieVillager
-org.bukkit.entity.boat.AcaciaBoat
-org.bukkit.entity.boat.AcaciaChestBoat
-org.bukkit.entity.boat.BambooChestRaft
-org.bukkit.entity.boat.BambooRaft
-org.bukkit.entity.boat.BirchBoat
-org.bukkit.entity.boat.BirchChestBoat
-org.bukkit.entity.boat.CherryBoat
-org.bukkit.entity.boat.CherryChestBoat
-org.bukkit.entity.boat.DarkOakBoat
-org.bukkit.entity.boat.DarkOakChestBoat
-org.bukkit.entity.boat.JungleBoat
-org.bukkit.entity.boat.JungleChestBoat
-org.bukkit.entity.boat.MangroveBoat
-org.bukkit.entity.boat.MangroveChestBoat
-org.bukkit.entity.boat.OakBoat
-org.bukkit.entity.boat.OakChestBoat
-org.bukkit.entity.boat.PaleOakBoat
-org.bukkit.entity.boat.PaleOakChestBoat
-org.bukkit.entity.boat.SpruceBoat
-org.bukkit.entity.boat.SpruceChestBoat
-org.bukkit.entity.memory.MemoryKey
-org.bukkit.entity.minecart.CommandMinecart
-org.bukkit.entity.minecart.ExplosiveMinecart
-org.bukkit.entity.minecart.HopperMinecart
-org.bukkit.entity.minecart.PoweredMinecart
-org.bukkit.entity.minecart.RideableMinecart
-org.bukkit.entity.minecart.SpawnerMinecart
-org.bukkit.entity.minecart.StorageMinecart
-org.bukkit.event.Cancellable
-org.bukkit.event.Event
-org.bukkit.event.EventException
-org.bukkit.event.EventHandler
-org.bukkit.event.EventPriority
-org.bukkit.event.block.Action
-org.bukkit.event.block.BellResonateEvent
-org.bukkit.event.block.BellRingEvent
-org.bukkit.event.block.BlockBreakEvent
-org.bukkit.event.block.BlockBurnEvent
-org.bukkit.event.block.BlockCanBuildEvent
-org.bukkit.event.block.BlockCookEvent
-org.bukkit.event.block.BlockDamageAbortEvent
-org.bukkit.event.block.BlockDamageEvent
-org.bukkit.event.block.BlockDispenseArmorEvent
-org.bukkit.event.block.BlockDispenseEvent
-org.bukkit.event.block.BlockDispenseLootEvent
-org.bukkit.event.block.BlockDropItemEvent
-org.bukkit.event.block.BlockEvent
-org.bukkit.event.block.BlockExpEvent
-org.bukkit.event.block.BlockExplodeEvent
-org.bukkit.event.block.BlockFadeEvent
-org.bukkit.event.block.BlockFertilizeEvent
-org.bukkit.event.block.BlockFormEvent
-org.bukkit.event.block.BlockFromToEvent
-org.bukkit.event.block.BlockGrowEvent
-org.bukkit.event.block.BlockIgniteEvent
-org.bukkit.event.block.BlockMultiPlaceEvent
-org.bukkit.event.block.BlockPhysicsEvent
-org.bukkit.event.block.BlockPistonEvent
-org.bukkit.event.block.BlockPistonExtendEvent
-org.bukkit.event.block.BlockPistonRetractEvent
-org.bukkit.event.block.BlockPlaceEvent
-org.bukkit.event.block.BlockReceiveGameEvent
-org.bukkit.event.block.BlockRedstoneEvent
-org.bukkit.event.block.BlockShearEntityEvent
-org.bukkit.event.block.BlockSpreadEvent
-org.bukkit.event.block.BrewingStartEvent
-org.bukkit.event.block.CampfireStartEvent
-org.bukkit.event.block.CauldronLevelChangeEvent
-org.bukkit.event.block.CrafterCraftEvent
-org.bukkit.event.block.EntityBlockFormEvent
-org.bukkit.event.block.FluidLevelChangeEvent
-org.bukkit.event.block.InventoryBlockStartEvent
-org.bukkit.event.block.LeavesDecayEvent
-org.bukkit.event.block.MoistureChangeEvent
-org.bukkit.event.block.NotePlayEvent
-org.bukkit.event.block.SculkBloomEvent
-org.bukkit.event.block.SignChangeEvent
-org.bukkit.event.block.SpongeAbsorbEvent
-org.bukkit.event.block.TNTPrimeEvent
-org.bukkit.event.block.VaultDisplayItemEvent
-org.bukkit.event.command.UnknownCommandEvent
-org.bukkit.event.enchantment.EnchantItemEvent
-org.bukkit.event.enchantment.PrepareItemEnchantEvent
-org.bukkit.event.entity.AreaEffectCloudApplyEvent
-org.bukkit.event.entity.ArrowBodyCountChangeEvent
-org.bukkit.event.entity.BatToggleSleepEvent
-org.bukkit.event.entity.CreatureSpawnEvent
-org.bukkit.event.entity.CreeperPowerEvent
-org.bukkit.event.entity.EnderDragonChangePhaseEvent
-org.bukkit.event.entity.EntityAirChangeEvent
-org.bukkit.event.entity.EntityBreakDoorEvent
-org.bukkit.event.entity.EntityBreedEvent
-org.bukkit.event.entity.EntityChangeBlockEvent
-org.bukkit.event.entity.EntityCombustByBlockEvent
-org.bukkit.event.entity.EntityCombustByEntityEvent
-org.bukkit.event.entity.EntityCombustEvent
-org.bukkit.event.entity.EntityCreatePortalEvent
-org.bukkit.event.entity.EntityDamageByBlockEvent
-org.bukkit.event.entity.EntityDamageByEntityEvent
-org.bukkit.event.entity.EntityDamageEvent
-org.bukkit.event.entity.EntityDeathEvent
-org.bukkit.event.entity.EntityDismountEvent
-org.bukkit.event.entity.EntityDropItemEvent
-org.bukkit.event.entity.EntityEnterBlockEvent
-org.bukkit.event.entity.EntityEnterLoveModeEvent
-org.bukkit.event.entity.EntityEvent
-org.bukkit.event.entity.EntityExhaustionEvent
-org.bukkit.event.entity.EntityExplodeEvent
-org.bukkit.event.entity.EntityInteractEvent
-org.bukkit.event.entity.EntityKnockbackByEntityEvent
-org.bukkit.event.entity.EntityKnockbackEvent
-org.bukkit.event.entity.EntityMountEvent
-org.bukkit.event.entity.EntityPickupItemEvent
-org.bukkit.event.entity.EntityPlaceEvent
-org.bukkit.event.entity.EntityPortalEnterEvent
-org.bukkit.event.entity.EntityPortalEvent
-org.bukkit.event.entity.EntityPortalExitEvent
-org.bukkit.event.entity.EntityPoseChangeEvent
-org.bukkit.event.entity.EntityPotionEffectEvent
-org.bukkit.event.entity.EntityRegainHealthEvent
-org.bukkit.event.entity.EntityRemoveEvent
-org.bukkit.event.entity.EntityResurrectEvent
-org.bukkit.event.entity.EntityShootBowEvent
-org.bukkit.event.entity.EntitySpawnEvent
-org.bukkit.event.entity.EntitySpellCastEvent
-org.bukkit.event.entity.EntityTameEvent
-org.bukkit.event.entity.EntityTargetEvent
-org.bukkit.event.entity.EntityTargetLivingEntityEvent
-org.bukkit.event.entity.EntityTeleportEvent
-org.bukkit.event.entity.EntityToggleGlideEvent
-org.bukkit.event.entity.EntityToggleSwimEvent
-org.bukkit.event.entity.EntityTransformEvent
-org.bukkit.event.entity.EntityUnleashEvent
-org.bukkit.event.entity.ExpBottleEvent
-org.bukkit.event.entity.ExplosionPrimeEvent
-org.bukkit.event.entity.FireworkExplodeEvent
-org.bukkit.event.entity.FoodLevelChangeEvent
-org.bukkit.event.entity.HorseJumpEvent
-org.bukkit.event.entity.ItemDespawnEvent
-org.bukkit.event.entity.ItemMergeEvent
-org.bukkit.event.entity.ItemSpawnEvent
-org.bukkit.event.entity.LingeringPotionSplashEvent
-org.bukkit.event.entity.PigZapEvent
-org.bukkit.event.entity.PigZombieAngerEvent
-org.bukkit.event.entity.PiglinBarterEvent
-org.bukkit.event.entity.PlayerDeathEvent
-org.bukkit.event.entity.PlayerLeashEntityEvent
-org.bukkit.event.entity.PotionSplashEvent
-org.bukkit.event.entity.ProjectileHitEvent
-org.bukkit.event.entity.ProjectileLaunchEvent
-org.bukkit.event.entity.SheepDyeWoolEvent
-org.bukkit.event.entity.SheepRegrowWoolEvent
-org.bukkit.event.entity.SlimeSplitEvent
-org.bukkit.event.entity.SpawnerSpawnEvent
-org.bukkit.event.entity.StriderTemperatureChangeEvent
-org.bukkit.event.entity.TrialSpawnerSpawnEvent
-org.bukkit.event.entity.VillagerAcquireTradeEvent
-org.bukkit.event.entity.VillagerCareerChangeEvent
-org.bukkit.event.entity.VillagerReplenishTradeEvent
-org.bukkit.event.hanging.HangingBreakByEntityEvent
-org.bukkit.event.hanging.HangingBreakEvent
-org.bukkit.event.hanging.HangingEvent
-org.bukkit.event.hanging.HangingPlaceEvent
-org.bukkit.event.inventory.BrewEvent
-org.bukkit.event.inventory.BrewingStandFuelEvent
-org.bukkit.event.inventory.ClickType
-org.bukkit.event.inventory.CraftItemEvent
-org.bukkit.event.inventory.DragType
-org.bukkit.event.inventory.FurnaceBurnEvent
-org.bukkit.event.inventory.FurnaceExtractEvent
-org.bukkit.event.inventory.FurnaceSmeltEvent
-org.bukkit.event.inventory.FurnaceStartSmeltEvent
-org.bukkit.event.inventory.HopperInventorySearchEvent
-org.bukkit.event.inventory.InventoryAction
-org.bukkit.event.inventory.InventoryClickEvent
-org.bukkit.event.inventory.InventoryCloseEvent
-org.bukkit.event.inventory.InventoryCreativeEvent
-org.bukkit.event.inventory.InventoryDragEvent
-org.bukkit.event.inventory.InventoryEvent
-org.bukkit.event.inventory.InventoryInteractEvent
-org.bukkit.event.inventory.InventoryMoveItemEvent
-org.bukkit.event.inventory.InventoryOpenEvent
-org.bukkit.event.inventory.InventoryPickupItemEvent
-org.bukkit.event.inventory.InventoryType
-org.bukkit.event.inventory.PrepareAnvilEvent
-org.bukkit.event.inventory.PrepareGrindstoneEvent
-org.bukkit.event.inventory.PrepareInventoryResultEvent
-org.bukkit.event.inventory.PrepareItemCraftEvent
-org.bukkit.event.inventory.PrepareSmithingEvent
-org.bukkit.event.inventory.SmithItemEvent
-org.bukkit.event.inventory.TradeSelectEvent
-org.bukkit.event.player.AsyncPlayerChatEvent
-org.bukkit.event.player.AsyncPlayerChatPreviewEvent
-org.bukkit.event.player.AsyncPlayerPreLoginEvent
-org.bukkit.event.player.PlayerAdvancementDoneEvent
-org.bukkit.event.player.PlayerAnimationEvent
-org.bukkit.event.player.PlayerAnimationType
-org.bukkit.event.player.PlayerArmorStandManipulateEvent
-org.bukkit.event.player.PlayerAttemptPickupItemEvent
-org.bukkit.event.player.PlayerBedEnterEvent
-org.bukkit.event.player.PlayerBedLeaveEvent
-org.bukkit.event.player.PlayerBucketEmptyEvent
-org.bukkit.event.player.PlayerBucketEntityEvent
-org.bukkit.event.player.PlayerBucketEvent
-org.bukkit.event.player.PlayerBucketFillEvent
-org.bukkit.event.player.PlayerBucketFishEvent
-org.bukkit.event.player.PlayerChangedMainHandEvent
-org.bukkit.event.player.PlayerChangedWorldEvent
-org.bukkit.event.player.PlayerChannelEvent
-org.bukkit.event.player.PlayerChatEvent
-org.bukkit.event.player.PlayerChatTabCompleteEvent
-org.bukkit.event.player.PlayerCommandSendEvent
-org.bukkit.event.player.PlayerDropItemEvent
-org.bukkit.event.player.PlayerEditBookEvent
-org.bukkit.event.player.PlayerEggThrowEvent
-org.bukkit.event.player.PlayerEvent
-org.bukkit.event.player.PlayerExpChangeEvent
-org.bukkit.event.player.PlayerExpCooldownChangeEvent
-org.bukkit.event.player.PlayerFishEvent
-org.bukkit.event.player.PlayerGameModeChangeEvent
-org.bukkit.event.player.PlayerHarvestBlockEvent
-org.bukkit.event.player.PlayerHideEntityEvent
-org.bukkit.event.player.PlayerInputEvent
-org.bukkit.event.player.PlayerInteractAtEntityEvent
-org.bukkit.event.player.PlayerInteractEntityEvent
-org.bukkit.event.player.PlayerInteractEvent
-org.bukkit.event.player.PlayerItemBreakEvent
-org.bukkit.event.player.PlayerItemConsumeEvent
-org.bukkit.event.player.PlayerItemDamageEvent
-org.bukkit.event.player.PlayerItemHeldEvent
-org.bukkit.event.player.PlayerItemMendEvent
-org.bukkit.event.player.PlayerJoinEvent
-org.bukkit.event.player.PlayerKickEvent
-org.bukkit.event.player.PlayerLevelChangeEvent
-org.bukkit.event.player.PlayerLinksSendEvent
-org.bukkit.event.player.PlayerLocaleChangeEvent
-org.bukkit.event.player.PlayerLoginEvent
-org.bukkit.event.player.PlayerMoveEvent
-org.bukkit.event.player.PlayerPickupArrowEvent
-org.bukkit.event.player.PlayerPickupItemEvent
-org.bukkit.event.player.PlayerPortalEvent
-org.bukkit.event.player.PlayerPreLoginEvent
-org.bukkit.event.player.PlayerQuitEvent
-org.bukkit.event.player.PlayerRecipeBookClickEvent
-org.bukkit.event.player.PlayerRecipeBookSettingsChangeEvent
-org.bukkit.event.player.PlayerRecipeDiscoverEvent
-org.bukkit.event.player.PlayerRegisterChannelEvent
-org.bukkit.event.player.PlayerResourcePackStatusEvent
-org.bukkit.event.player.PlayerRespawnEvent
-org.bukkit.event.player.PlayerRiptideEvent
-org.bukkit.event.player.PlayerShearEntityEvent
-org.bukkit.event.player.PlayerShowEntityEvent
-org.bukkit.event.player.PlayerSignOpenEvent
-org.bukkit.event.player.PlayerSpawnChangeEvent
-org.bukkit.event.player.PlayerStatisticIncrementEvent
-org.bukkit.event.player.PlayerSwapHandItemsEvent
-org.bukkit.event.player.PlayerTakeLecternBookEvent
-org.bukkit.event.player.PlayerTeleportEvent
-org.bukkit.event.player.PlayerToggleFlightEvent
-org.bukkit.event.player.PlayerToggleSneakEvent
-org.bukkit.event.player.PlayerToggleSprintEvent
-org.bukkit.event.player.PlayerUnleashEntityEvent
-org.bukkit.event.player.PlayerUnregisterChannelEvent
-org.bukkit.event.player.PlayerVelocityEvent
-org.bukkit.event.raid.RaidEvent
-org.bukkit.event.raid.RaidFinishEvent
-org.bukkit.event.raid.RaidSpawnWaveEvent
-org.bukkit.event.raid.RaidStopEvent
-org.bukkit.event.raid.RaidTriggerEvent
-org.bukkit.event.server.BroadcastMessageEvent
-org.bukkit.event.server.MapInitializeEvent
-org.bukkit.event.server.PluginDisableEvent
-org.bukkit.event.server.PluginEnableEvent
-org.bukkit.event.server.PluginEvent
-org.bukkit.event.server.ServerEvent
-org.bukkit.event.server.ServerListPingEvent
-org.bukkit.event.server.ServerLoadEvent
-org.bukkit.event.server.ServiceEvent
-org.bukkit.event.server.ServiceRegisterEvent
-org.bukkit.event.server.ServiceUnregisterEvent
-org.bukkit.event.server.TabCompleteEvent
-org.bukkit.event.vehicle.VehicleBlockCollisionEvent
-org.bukkit.event.vehicle.VehicleCollisionEvent
-org.bukkit.event.vehicle.VehicleCreateEvent
-org.bukkit.event.vehicle.VehicleDamageEvent
-org.bukkit.event.vehicle.VehicleDestroyEvent
-org.bukkit.event.vehicle.VehicleEnterEvent
-org.bukkit.event.vehicle.VehicleEntityCollisionEvent
-org.bukkit.event.vehicle.VehicleEvent
-org.bukkit.event.vehicle.VehicleExitEvent
-org.bukkit.event.vehicle.VehicleMoveEvent
-org.bukkit.event.vehicle.VehicleUpdateEvent
-org.bukkit.event.weather.LightningStrikeEvent
-org.bukkit.event.weather.ThunderChangeEvent
-org.bukkit.event.weather.WeatherChangeEvent
-org.bukkit.event.weather.WeatherEvent
-org.bukkit.event.world.AsyncStructureGenerateEvent
-org.bukkit.event.world.AsyncStructureSpawnEvent
-org.bukkit.event.world.ChunkEvent
-org.bukkit.event.world.ChunkLoadEvent
-org.bukkit.event.world.ChunkPopulateEvent
-org.bukkit.event.world.ChunkUnloadEvent
-org.bukkit.event.world.ClockTimeSkipEvent
-org.bukkit.event.world.EntitiesLoadEvent
-org.bukkit.event.world.EntitiesUnloadEvent
-org.bukkit.event.world.GenericGameEvent
-org.bukkit.event.world.LootGenerateEvent
-org.bukkit.event.world.PortalCreateEvent
-org.bukkit.event.world.SpawnChangeEvent
-org.bukkit.event.world.StructureGrowEvent
-org.bukkit.event.world.TimeSkipEvent
-org.bukkit.event.world.WorldEvent
-org.bukkit.event.world.WorldInitEvent
-org.bukkit.event.world.WorldLoadEvent
-org.bukkit.event.world.WorldSaveEvent
-org.bukkit.event.world.WorldUnloadEvent
-org.bukkit.generator.BiomeParameterPoint
-org.bukkit.generator.BiomeProvider
-org.bukkit.generator.ChunkGenerator
-org.bukkit.generator.LimitedRegion
-org.bukkit.generator.WorldInfo
-org.bukkit.generator.structure.GeneratedStructure
-org.bukkit.generator.structure.Structure
-org.bukkit.generator.structure.StructurePiece
-org.bukkit.generator.structure.StructureType
-org.bukkit.help.GenericCommandHelpTopic
-org.bukkit.help.HelpMap
-org.bukkit.help.HelpTopic
-org.bukkit.help.HelpTopicComparator
-org.bukkit.help.HelpTopicFactory
-org.bukkit.help.IndexHelpTopic
-org.bukkit.inventory.AbstractHorseInventory
-org.bukkit.inventory.AnvilInventory
-org.bukkit.inventory.ArmoredHorseInventory
-org.bukkit.inventory.ArmoredMountInventory
-org.bukkit.inventory.ArmoredSaddledMountInventory
-org.bukkit.inventory.BeaconInventory
-org.bukkit.inventory.BlastingRecipe
-org.bukkit.inventory.BlockInventoryHolder
-org.bukkit.inventory.BrewerInventory
-org.bukkit.inventory.CampfireRecipe
-org.bukkit.inventory.CartographyInventory
-org.bukkit.inventory.ChiseledBookshelfInventory
-org.bukkit.inventory.ComplexRecipe
-org.bukkit.inventory.CookingRecipe
-org.bukkit.inventory.CrafterInventory
-org.bukkit.inventory.CraftingInventory
-org.bukkit.inventory.CraftingRecipe
-org.bukkit.inventory.CreativeCategory
-org.bukkit.inventory.DecoratedPotInventory
-org.bukkit.inventory.DoubleChestInventory
-org.bukkit.inventory.EnchantingInventory
-org.bukkit.inventory.EntityEquipment
-org.bukkit.inventory.EquipmentSlot
-org.bukkit.inventory.EquipmentSlotGroup
-org.bukkit.inventory.FurnaceInventory
-org.bukkit.inventory.FurnaceRecipe
-org.bukkit.inventory.GrindstoneInventory
-org.bukkit.inventory.HorseInventory
-org.bukkit.inventory.Inventory
-org.bukkit.inventory.InventoryHolder
-org.bukkit.inventory.InventoryView
-org.bukkit.inventory.ItemCraftResult
-org.bukkit.inventory.ItemFactory
-org.bukkit.inventory.ItemFlag
-org.bukkit.inventory.ItemRarity
-org.bukkit.inventory.ItemStack
-org.bukkit.inventory.ItemType
-org.bukkit.inventory.JukeboxInventory
-org.bukkit.inventory.LecternInventory
-org.bukkit.inventory.LlamaInventory
-org.bukkit.inventory.LoomInventory
-org.bukkit.inventory.MainHand
-org.bukkit.inventory.MenuType
-org.bukkit.inventory.Merchant
-org.bukkit.inventory.MerchantInventory
-org.bukkit.inventory.MerchantRecipe
-org.bukkit.inventory.MountInventory
-org.bukkit.inventory.PlayerInventory
-org.bukkit.inventory.Recipe
-org.bukkit.inventory.RecipeChoice
-org.bukkit.inventory.SaddledHorseInventory
-org.bukkit.inventory.SaddledMountInventory
-org.bukkit.inventory.ShapedRecipe
-org.bukkit.inventory.ShapelessRecipe
-org.bukkit.inventory.ShelfInventory
-org.bukkit.inventory.SmithingInventory
-org.bukkit.inventory.SmithingRecipe
-org.bukkit.inventory.SmithingTransformRecipe
-org.bukkit.inventory.SmithingTrimRecipe
-org.bukkit.inventory.SmokingRecipe
-org.bukkit.inventory.StonecutterInventory
-org.bukkit.inventory.StonecuttingRecipe
-org.bukkit.inventory.TransmuteRecipe
-org.bukkit.inventory.meta.ArmorMeta
-org.bukkit.inventory.meta.AxolotlBucketMeta
-org.bukkit.inventory.meta.BannerMeta
-org.bukkit.inventory.meta.BlockDataMeta
-org.bukkit.inventory.meta.BlockStateMeta
-org.bukkit.inventory.meta.BookMeta
-org.bukkit.inventory.meta.BundleMeta
-org.bukkit.inventory.meta.ColorableArmorMeta
-org.bukkit.inventory.meta.CompassMeta
-org.bukkit.inventory.meta.CrossbowMeta
-org.bukkit.inventory.meta.Damageable
-org.bukkit.inventory.meta.EnchantmentStorageMeta
-org.bukkit.inventory.meta.FireworkEffectMeta
-org.bukkit.inventory.meta.FireworkMeta
-org.bukkit.inventory.meta.ItemMeta
-org.bukkit.inventory.meta.KnowledgeBookMeta
-org.bukkit.inventory.meta.LeatherArmorMeta
-org.bukkit.inventory.meta.MapMeta
-org.bukkit.inventory.meta.MusicInstrumentMeta
-org.bukkit.inventory.meta.OminousBottleMeta
-org.bukkit.inventory.meta.PotionMeta
-org.bukkit.inventory.meta.Repairable
-org.bukkit.inventory.meta.ShieldMeta
-org.bukkit.inventory.meta.SkullMeta
-org.bukkit.inventory.meta.SpawnEggMeta
-org.bukkit.inventory.meta.SuspiciousStewMeta
-org.bukkit.inventory.meta.TropicalFishBucketMeta
-org.bukkit.inventory.meta.WritableBookMeta
-org.bukkit.inventory.meta.components.CustomModelDataComponent
-org.bukkit.inventory.meta.components.EquippableComponent
-org.bukkit.inventory.meta.components.FoodComponent
-org.bukkit.inventory.meta.components.JukeboxPlayableComponent
-org.bukkit.inventory.meta.components.ToolComponent
-org.bukkit.inventory.meta.components.UseCooldownComponent
-org.bukkit.inventory.meta.tags.CustomItemTagContainer
-org.bukkit.inventory.meta.tags.ItemTagAdapterContext
-org.bukkit.inventory.meta.tags.ItemTagType
-org.bukkit.inventory.meta.trim.ArmorTrim
-org.bukkit.inventory.meta.trim.TrimMaterial
-org.bukkit.inventory.meta.trim.TrimPattern
-org.bukkit.inventory.recipe.CookingBookCategory
-org.bukkit.inventory.recipe.CraftingBookCategory
-org.bukkit.inventory.view.AnvilView
-org.bukkit.inventory.view.BeaconView
-org.bukkit.inventory.view.BrewingStandView
-org.bukkit.inventory.view.CrafterView
-org.bukkit.inventory.view.EnchantmentView
-org.bukkit.inventory.view.FurnaceView
-org.bukkit.inventory.view.LecternView
-org.bukkit.inventory.view.LoomView
-org.bukkit.inventory.view.MerchantView
-org.bukkit.inventory.view.StonecutterView
-org.bukkit.inventory.view.builder.InventoryViewBuilder
-org.bukkit.inventory.view.builder.LocationInventoryViewBuilder
-org.bukkit.inventory.view.builder.MerchantInventoryViewBuilder
-org.bukkit.loot.LootContext
-org.bukkit.loot.LootTable
-org.bukkit.loot.LootTables
-org.bukkit.loot.Lootable
-org.bukkit.map.MapCanvas
-org.bukkit.map.MapCursor
-org.bukkit.map.MapCursorCollection
-org.bukkit.map.MapFont
-org.bukkit.map.MapPalette
-org.bukkit.map.MapRenderer
-org.bukkit.map.MapView
-org.bukkit.map.MinecraftFont
-org.bukkit.material.Attachable
-org.bukkit.material.Banner
-org.bukkit.material.Bed
-org.bukkit.material.Button
-org.bukkit.material.Cake
-org.bukkit.material.Cauldron
-org.bukkit.material.Chest
-org.bukkit.material.Coal
-org.bukkit.material.CocoaPlant
-org.bukkit.material.Colorable
-org.bukkit.material.Command
-org.bukkit.material.Comparator
-org.bukkit.material.Crops
-org.bukkit.material.DetectorRail
-org.bukkit.material.Diode
-org.bukkit.material.Directional
-org.bukkit.material.DirectionalContainer
-org.bukkit.material.Dispenser
-org.bukkit.material.Door
-org.bukkit.material.Dye
-org.bukkit.material.EnderChest
-org.bukkit.material.ExtendedRails
-org.bukkit.material.FlowerPot
-org.bukkit.material.Furnace
-org.bukkit.material.FurnaceAndDispenser
-org.bukkit.material.Gate
-org.bukkit.material.Hopper
-org.bukkit.material.Ladder
-org.bukkit.material.Leaves
-org.bukkit.material.Lever
-org.bukkit.material.LongGrass
-org.bukkit.material.MaterialData
-org.bukkit.material.MonsterEggs
-org.bukkit.material.Mushroom
-org.bukkit.material.NetherWarts
-org.bukkit.material.Observer
-org.bukkit.material.Openable
-org.bukkit.material.PistonBaseMaterial
-org.bukkit.material.PistonExtensionMaterial
-org.bukkit.material.PoweredRail
-org.bukkit.material.PressurePlate
-org.bukkit.material.PressureSensor
-org.bukkit.material.Pumpkin
-org.bukkit.material.Rails
-org.bukkit.material.Redstone
-org.bukkit.material.RedstoneTorch
-org.bukkit.material.RedstoneWire
-org.bukkit.material.Sandstone
-org.bukkit.material.Sapling
-org.bukkit.material.Sign
-org.bukkit.material.SimpleAttachableMaterialData
-org.bukkit.material.Skull
-org.bukkit.material.SmoothBrick
-org.bukkit.material.SpawnEgg
-org.bukkit.material.Stairs
-org.bukkit.material.Step
-org.bukkit.material.TexturedMaterial
-org.bukkit.material.Torch
-org.bukkit.material.TrapDoor
-org.bukkit.material.Tree
-org.bukkit.material.Tripwire
-org.bukkit.material.TripwireHook
-org.bukkit.material.Vine
-org.bukkit.material.Wood
-org.bukkit.material.WoodenStep
-org.bukkit.material.Wool
-org.bukkit.material.types.MushroomBlockTexture
-org.bukkit.metadata.FixedMetadataValue
-org.bukkit.metadata.LazyMetadataValue
-org.bukkit.metadata.MetadataConversionException
-org.bukkit.metadata.MetadataEvaluationException
-org.bukkit.metadata.MetadataStore
-org.bukkit.metadata.MetadataStoreBase
-org.bukkit.metadata.MetadataValue
-org.bukkit.metadata.MetadataValueAdapter
-org.bukkit.metadata.Metadatable
-org.bukkit.packs.ResourcePack
-org.bukkit.permissions.Permissible
-org.bukkit.permissions.PermissionAttachmentInfo
-org.bukkit.permissions.PermissionDefault
-org.bukkit.permissions.ServerOperator
-org.bukkit.persistence.ListPersistentDataType
-org.bukkit.persistence.ListPersistentDataTypeProvider
-org.bukkit.persistence.PersistentDataAdapterContext
-org.bukkit.persistence.PersistentDataContainer
-org.bukkit.persistence.PersistentDataHolder
-org.bukkit.persistence.PersistentDataType
-org.bukkit.potion.PotionBrewer
-org.bukkit.potion.PotionData
-org.bukkit.potion.PotionEffect
-org.bukkit.potion.PotionEffectType
-org.bukkit.potion.PotionEffectTypeCategory
-org.bukkit.potion.PotionEffectTypeWrapper
-org.bukkit.potion.PotionType
-org.bukkit.profile.PlayerProfile
-org.bukkit.profile.PlayerTextures
-org.bukkit.projectiles.BlockProjectileSource
-org.bukkit.scheduler.BukkitWorker
-org.bukkit.scoreboard.Criteria
-org.bukkit.scoreboard.DisplaySlot
-org.bukkit.scoreboard.NameTagVisibility
-org.bukkit.scoreboard.Objective
-org.bukkit.scoreboard.RenderType
-org.bukkit.scoreboard.Score
-org.bukkit.scoreboard.Scoreboard
-org.bukkit.scoreboard.ScoreboardManager
-org.bukkit.scoreboard.Team
-org.bukkit.spawner.BaseSpawner
-org.bukkit.spawner.Spawner
-org.bukkit.spawner.TrialSpawnerConfiguration
-org.bukkit.structure.Palette
-org.bukkit.structure.Structure
-org.bukkit.structure.StructureManager
-org.bukkit.util.BiomeSearchResult
-org.bukkit.util.BlockIterator
-org.bukkit.util.BlockTransformer
-org.bukkit.util.BlockVector
-org.bukkit.util.BoundingBox
-org.bukkit.util.CachedServerIcon
-org.bukkit.util.ChatPaginator
-org.bukkit.util.Consumer
-org.bukkit.util.EntityTransformer
-org.bukkit.util.EulerAngle
-org.bukkit.util.NumberConversions
-org.bukkit.util.OldEnum
-org.bukkit.util.RayTraceResult
-org.bukkit.util.StringUtil
-org.bukkit.util.StructureSearchResult
-org.bukkit.util.Transformation
-org.bukkit.util.Vector
-org.bukkit.util.VoxelShape
-org.bukkit.util.io.BukkitObjectInputStream
-org.bukkit.util.io.BukkitObjectOutputStream
-org.bukkit.util.noise.NoiseGenerator
-org.bukkit.util.noise.OctaveGenerator
-org.bukkit.util.noise.PerlinNoiseGenerator
-org.bukkit.util.noise.PerlinOctaveGenerator
-org.bukkit.util.noise.SimplexNoiseGenerator
-org.bukkit.util.noise.SimplexOctaveGenerator
+#
+# One line per type: the Paper class, a tab, and the Aussom class
+# it is reachable as. The two differ where Paper reuses a simple
+# name, since Aussom has no packages. Both columns come from the
+# same map the modules were named from, so the manifest cannot
+# disagree with what was written.
+com.destroystokyo.paper.MaterialSetTag	MaterialSetTag
+com.destroystokyo.paper.Namespaced	Namespaced
+com.destroystokyo.paper.NamespacedTag	NamespacedTag
+com.destroystokyo.paper.ParticleBuilder	ParticleBuilder
+com.destroystokyo.paper.SkinParts	SkinParts
+com.destroystokyo.paper.Title	Title
+com.destroystokyo.paper.block.BlockSoundGroup	BlockSoundGroup
+com.destroystokyo.paper.block.TargetBlockInfo	TargetBlockInfo
+com.destroystokyo.paper.brigadier.BukkitBrigadierCommand	BukkitBrigadierCommand
+com.destroystokyo.paper.brigadier.BukkitBrigadierCommandSource	BukkitBrigadierCommandSource
+com.destroystokyo.paper.entity.Pathfinder	Pathfinder
+com.destroystokyo.paper.entity.RangedEntity	RangedEntity
+com.destroystokyo.paper.entity.TargetEntityInfo	TargetEntityInfo
+com.destroystokyo.paper.entity.ai.Goal	Goal
+com.destroystokyo.paper.entity.ai.GoalKey	GoalKey
+com.destroystokyo.paper.entity.ai.GoalType	GoalType
+com.destroystokyo.paper.entity.ai.MobGoals	MobGoals
+com.destroystokyo.paper.entity.ai.VanillaGoal	VanillaGoal
+com.destroystokyo.paper.entity.villager.Reputation	Reputation
+com.destroystokyo.paper.entity.villager.ReputationType	ReputationType
+com.destroystokyo.paper.event.block.AnvilDamagedEvent	AnvilDamagedEvent
+com.destroystokyo.paper.event.block.BeaconEffectEvent	BeaconEffectEvent
+com.destroystokyo.paper.event.block.BlockDestroyEvent	BlockDestroyEvent
+com.destroystokyo.paper.event.block.TNTPrimeEvent	BlockTNTPrimeEvent
+com.destroystokyo.paper.event.brigadier.AsyncPlayerSendCommandsEvent	AsyncPlayerSendCommandsEvent
+com.destroystokyo.paper.event.brigadier.AsyncPlayerSendSuggestionsEvent	AsyncPlayerSendSuggestionsEvent
+com.destroystokyo.paper.event.brigadier.CommandRegisteredEvent	CommandRegisteredEvent
+com.destroystokyo.paper.event.entity.CreeperIgniteEvent	CreeperIgniteEvent
+com.destroystokyo.paper.event.entity.EnderDragonFireballHitEvent	EnderDragonFireballHitEvent
+com.destroystokyo.paper.event.entity.EnderDragonFlameEvent	EnderDragonFlameEvent
+com.destroystokyo.paper.event.entity.EnderDragonShootFireballEvent	EnderDragonShootFireballEvent
+com.destroystokyo.paper.event.entity.EndermanAttackPlayerEvent	EndermanAttackPlayerEvent
+com.destroystokyo.paper.event.entity.EndermanEscapeEvent	EndermanEscapeEvent
+com.destroystokyo.paper.event.entity.EntityAddToWorldEvent	EntityAddToWorldEvent
+com.destroystokyo.paper.event.entity.EntityJumpEvent	EntityJumpEvent
+com.destroystokyo.paper.event.entity.EntityKnockbackByEntityEvent	EntityEntityKnockbackByEntityEvent
+com.destroystokyo.paper.event.entity.EntityPathfindEvent	EntityPathfindEvent
+com.destroystokyo.paper.event.entity.EntityRemoveFromWorldEvent	EntityRemoveFromWorldEvent
+com.destroystokyo.paper.event.entity.EntityTeleportEndGatewayEvent	EntityTeleportEndGatewayEvent
+com.destroystokyo.paper.event.entity.EntityZapEvent	EntityZapEvent
+com.destroystokyo.paper.event.entity.ExperienceOrbMergeEvent	ExperienceOrbMergeEvent
+com.destroystokyo.paper.event.entity.PhantomPreSpawnEvent	PhantomPreSpawnEvent
+com.destroystokyo.paper.event.entity.PlayerNaturallySpawnCreaturesEvent	PlayerNaturallySpawnCreaturesEvent
+com.destroystokyo.paper.event.entity.PreCreatureSpawnEvent	PreCreatureSpawnEvent
+com.destroystokyo.paper.event.entity.PreSpawnerSpawnEvent	PreSpawnerSpawnEvent
+com.destroystokyo.paper.event.entity.ProjectileCollideEvent	ProjectileCollideEvent
+com.destroystokyo.paper.event.entity.SkeletonHorseTrapEvent	SkeletonHorseTrapEvent
+com.destroystokyo.paper.event.entity.SlimeChangeDirectionEvent	SlimeChangeDirectionEvent
+com.destroystokyo.paper.event.entity.SlimePathfindEvent	SlimePathfindEvent
+com.destroystokyo.paper.event.entity.SlimeSwimEvent	SlimeSwimEvent
+com.destroystokyo.paper.event.entity.SlimeTargetLivingEntityEvent	SlimeTargetLivingEntityEvent
+com.destroystokyo.paper.event.entity.SlimeWanderEvent	SlimeWanderEvent
+com.destroystokyo.paper.event.entity.ThrownEggHatchEvent	ThrownEggHatchEvent
+com.destroystokyo.paper.event.entity.TurtleGoHomeEvent	TurtleGoHomeEvent
+com.destroystokyo.paper.event.entity.TurtleLayEggEvent	TurtleLayEggEvent
+com.destroystokyo.paper.event.entity.TurtleStartDiggingEvent	TurtleStartDiggingEvent
+com.destroystokyo.paper.event.entity.WitchConsumePotionEvent	WitchConsumePotionEvent
+com.destroystokyo.paper.event.entity.WitchReadyPotionEvent	WitchReadyPotionEvent
+com.destroystokyo.paper.event.entity.WitchThrowPotionEvent	WitchThrowPotionEvent
+com.destroystokyo.paper.event.inventory.PrepareGrindstoneEvent	InventoryPrepareGrindstoneEvent
+com.destroystokyo.paper.event.inventory.PrepareResultEvent	PrepareResultEvent
+com.destroystokyo.paper.event.player.IllegalPacketEvent	IllegalPacketEvent
+com.destroystokyo.paper.event.player.PlayerAdvancementCriterionGrantEvent	PlayerAdvancementCriterionGrantEvent
+com.destroystokyo.paper.event.player.PlayerArmorChangeEvent	PlayerArmorChangeEvent
+com.destroystokyo.paper.event.player.PlayerAttackEntityCooldownResetEvent	PlayerAttackEntityCooldownResetEvent
+com.destroystokyo.paper.event.player.PlayerClientOptionsChangeEvent	PlayerClientOptionsChangeEvent
+com.destroystokyo.paper.event.player.PlayerConnectionCloseEvent	PlayerConnectionCloseEvent
+com.destroystokyo.paper.event.player.PlayerElytraBoostEvent	PlayerElytraBoostEvent
+com.destroystokyo.paper.event.player.PlayerHandshakeEvent	PlayerHandshakeEvent
+com.destroystokyo.paper.event.player.PlayerJumpEvent	PlayerJumpEvent
+com.destroystokyo.paper.event.player.PlayerLaunchProjectileEvent	PlayerLaunchProjectileEvent
+com.destroystokyo.paper.event.player.PlayerPickupExperienceEvent	PlayerPickupExperienceEvent
+com.destroystokyo.paper.event.player.PlayerPostRespawnEvent	PlayerPostRespawnEvent
+com.destroystokyo.paper.event.player.PlayerReadyArrowEvent	PlayerReadyArrowEvent
+com.destroystokyo.paper.event.player.PlayerRecipeBookClickEvent	PlayerPlayerRecipeBookClickEvent
+com.destroystokyo.paper.event.player.PlayerSetSpawnEvent	PlayerSetSpawnEvent
+com.destroystokyo.paper.event.player.PlayerStartSpectatingEntityEvent	PlayerStartSpectatingEntityEvent
+com.destroystokyo.paper.event.player.PlayerStopSpectatingEntityEvent	PlayerStopSpectatingEntityEvent
+com.destroystokyo.paper.event.player.PlayerTeleportEndGatewayEvent	PlayerTeleportEndGatewayEvent
+com.destroystokyo.paper.event.player.PlayerUseUnknownEntityEvent	PlayerUseUnknownEntityEvent
+com.destroystokyo.paper.event.profile.FillProfileEvent	FillProfileEvent
+com.destroystokyo.paper.event.profile.LookupProfileEvent	LookupProfileEvent
+com.destroystokyo.paper.event.profile.PreFillProfileEvent	PreFillProfileEvent
+com.destroystokyo.paper.event.profile.PreLookupProfileEvent	PreLookupProfileEvent
+com.destroystokyo.paper.event.profile.ProfileWhitelistVerifyEvent	ProfileWhitelistVerifyEvent
+com.destroystokyo.paper.event.server.AsyncTabCompleteEvent	AsyncTabCompleteEvent
+com.destroystokyo.paper.event.server.GS4QueryEvent	GS4QueryEvent
+com.destroystokyo.paper.event.server.PaperServerListPingEvent	PaperServerListPingEvent
+com.destroystokyo.paper.event.server.ServerExceptionEvent	ServerExceptionEvent
+com.destroystokyo.paper.event.server.ServerTickEndEvent	ServerTickEndEvent
+com.destroystokyo.paper.event.server.ServerTickStartEvent	ServerTickStartEvent
+com.destroystokyo.paper.event.server.WhitelistToggleEvent	WhitelistToggleEvent
+com.destroystokyo.paper.exception.ServerCommandException	ServerCommandException
+com.destroystokyo.paper.exception.ServerEventException	ServerEventException
+com.destroystokyo.paper.exception.ServerException	ServerException
+com.destroystokyo.paper.exception.ServerInternalException	ServerInternalException
+com.destroystokyo.paper.exception.ServerPluginEnableDisableException	ServerPluginEnableDisableException
+com.destroystokyo.paper.exception.ServerPluginException	ServerPluginException
+com.destroystokyo.paper.exception.ServerPluginMessageException	ServerPluginMessageException
+com.destroystokyo.paper.exception.ServerSchedulerException	ServerSchedulerException
+com.destroystokyo.paper.exception.ServerTabCompleteException	ServerTabCompleteException
+com.destroystokyo.paper.inventory.meta.ArmorStandMeta	ArmorStandMeta
+com.destroystokyo.paper.loottable.LootableBlockInventory	LootableBlockInventory
+com.destroystokyo.paper.loottable.LootableEntityInventory	LootableEntityInventory
+com.destroystokyo.paper.loottable.LootableInventory	LootableInventory
+com.destroystokyo.paper.loottable.LootableInventoryReplenishEvent	LootableInventoryReplenishEvent
+com.destroystokyo.paper.network.NetworkClient	NetworkClient
+com.destroystokyo.paper.network.StatusClient	StatusClient
+com.destroystokyo.paper.profile.PlayerProfile	ProfilePlayerProfile
+com.destroystokyo.paper.profile.ProfileProperty	ProfileProperty
+com.destroystokyo.paper.util.VersionFetcher	VersionFetcher
+com.destroystokyo.paper.utils.PaperPluginLogger	PaperPluginLogger
+io.papermc.paper.InternalAPIBridge	InternalAPIBridge
+io.papermc.paper.ServerBuildInfo	ServerBuildInfo
+io.papermc.paper.advancement.AdvancementDisplay	AdvancementAdvancementDisplay
+io.papermc.paper.annotation.DoNotUse	DoNotUse
+io.papermc.paper.annotation.GeneratedClass	GeneratedClass
+io.papermc.paper.annotation.MinecraftVersionDependent	MinecraftVersionDependent
+io.papermc.paper.block.BlockPredicate	BlockPredicate
+io.papermc.paper.block.LockableTileState	LockableTileState
+io.papermc.paper.block.MovingPiston	MovingPiston
+io.papermc.paper.block.TileStateInventoryHolder	TileStateInventoryHolder
+io.papermc.paper.block.bed.BedEnterAction	BedEnterAction
+io.papermc.paper.block.bed.BedEnterProblem	BedEnterProblem
+io.papermc.paper.block.bed.BedRuleResult	BedRuleResult
+io.papermc.paper.block.fluid.FluidData	FluidData
+io.papermc.paper.block.fluid.type.FallingFluidData	FallingFluidData
+io.papermc.paper.block.fluid.type.FlowingFluidData	FlowingFluidData
+io.papermc.paper.chat.ChatRenderer	ChatRenderer
+io.papermc.paper.command.CommandBlockHolder	CommandBlockHolder
+io.papermc.paper.command.brigadier.BasicCommand	BasicCommand
+io.papermc.paper.command.brigadier.CommandRegistrationFlag	CommandRegistrationFlag
+io.papermc.paper.command.brigadier.CommandSourceStack	CommandSourceStack
+io.papermc.paper.command.brigadier.Commands	Commands
+io.papermc.paper.command.brigadier.MessageComponentSerializer	MessageComponentSerializer
+io.papermc.paper.command.brigadier.argument.AxisSet	AxisSet
+io.papermc.paper.command.brigadier.argument.CustomArgumentType	CustomArgumentType
+io.papermc.paper.command.brigadier.argument.SignedMessageResolver	SignedMessageResolver
+io.papermc.paper.command.brigadier.argument.position.ColumnBlockPosition	ColumnBlockPosition
+io.papermc.paper.command.brigadier.argument.position.ColumnFinePosition	ColumnFinePosition
+io.papermc.paper.command.brigadier.argument.predicate.BlockInWorldPredicate	BlockInWorldPredicate
+io.papermc.paper.command.brigadier.argument.predicate.ItemStackPredicate	ItemStackPredicate
+io.papermc.paper.command.brigadier.argument.resolvers.AngleResolver	AngleResolver
+io.papermc.paper.command.brigadier.argument.resolvers.ArgumentResolver	ArgumentResolver
+io.papermc.paper.command.brigadier.argument.resolvers.BlockPositionResolver	BlockPositionResolver
+io.papermc.paper.command.brigadier.argument.resolvers.ColumnBlockPositionResolver	ColumnBlockPositionResolver
+io.papermc.paper.command.brigadier.argument.resolvers.ColumnFinePositionResolver	ColumnFinePositionResolver
+io.papermc.paper.command.brigadier.argument.resolvers.FinePositionResolver	FinePositionResolver
+io.papermc.paper.command.brigadier.argument.resolvers.PlayerProfileListResolver	PlayerProfileListResolver
+io.papermc.paper.command.brigadier.argument.resolvers.RotationResolver	RotationResolver
+io.papermc.paper.command.brigadier.argument.resolvers.selector.EntitySelectorArgumentResolver	EntitySelectorArgumentResolver
+io.papermc.paper.command.brigadier.argument.resolvers.selector.PlayerSelectorArgumentResolver	PlayerSelectorArgumentResolver
+io.papermc.paper.command.brigadier.argument.resolvers.selector.SelectorArgumentResolver	SelectorArgumentResolver
+io.papermc.paper.configuration.ServerConfiguration	ServerConfiguration
+io.papermc.paper.connection.PlayerCommonConnection	PlayerCommonConnection
+io.papermc.paper.connection.PlayerConfigurationConnection	PlayerConfigurationConnection
+io.papermc.paper.connection.PlayerConnection	PlayerConnection
+io.papermc.paper.connection.PlayerGameConnection	PlayerGameConnection
+io.papermc.paper.connection.PlayerLoginConnection	PlayerLoginConnection
+io.papermc.paper.connection.ReadablePlayerCookieConnection	ReadablePlayerCookieConnection
+io.papermc.paper.connection.WritablePlayerCookieConnection	WritablePlayerCookieConnection
+io.papermc.paper.datacomponent.BuildableDataComponent	BuildableDataComponent
+io.papermc.paper.datacomponent.DataComponentBuilder	DataComponentBuilder
+io.papermc.paper.datacomponent.DataComponentHolder	DataComponentHolder
+io.papermc.paper.datacomponent.DataComponentType	DataComponentType
+io.papermc.paper.datacomponent.DataComponentView	DataComponentView
+io.papermc.paper.datacomponent.item.AttackRange	AttackRange
+io.papermc.paper.datacomponent.item.BannerPatternLayers	BannerPatternLayers
+io.papermc.paper.datacomponent.item.BlockItemDataProperties	BlockItemDataProperties
+io.papermc.paper.datacomponent.item.BlocksAttacks	BlocksAttacks
+io.papermc.paper.datacomponent.item.BundleContents	BundleContents
+io.papermc.paper.datacomponent.item.ChargedProjectiles	ChargedProjectiles
+io.papermc.paper.datacomponent.item.Consumable	Consumable
+io.papermc.paper.datacomponent.item.CustomModelData	CustomModelData
+io.papermc.paper.datacomponent.item.DamageResistant	DamageResistant
+io.papermc.paper.datacomponent.item.DeathProtection	DeathProtection
+io.papermc.paper.datacomponent.item.DyedItemColor	DyedItemColor
+io.papermc.paper.datacomponent.item.Enchantable	Enchantable
+io.papermc.paper.datacomponent.item.Equippable	Equippable
+io.papermc.paper.datacomponent.item.Fireworks	Fireworks
+io.papermc.paper.datacomponent.item.FoodProperties	FoodProperties
+io.papermc.paper.datacomponent.item.ItemAdventurePredicate	ItemAdventurePredicate
+io.papermc.paper.datacomponent.item.ItemArmorTrim	ItemArmorTrim
+io.papermc.paper.datacomponent.item.ItemAttributeModifiers	ItemAttributeModifiers
+io.papermc.paper.datacomponent.item.ItemContainerContents	ItemContainerContents
+io.papermc.paper.datacomponent.item.ItemEnchantments	ItemEnchantments
+io.papermc.paper.datacomponent.item.ItemLore	ItemLore
+io.papermc.paper.datacomponent.item.JukeboxPlayable	JukeboxPlayable
+io.papermc.paper.datacomponent.item.KineticWeapon	KineticWeapon
+io.papermc.paper.datacomponent.item.LodestoneTracker	LodestoneTracker
+io.papermc.paper.datacomponent.item.MapDecorations	MapDecorations
+io.papermc.paper.datacomponent.item.MapId	MapId
+io.papermc.paper.datacomponent.item.MapItemColor	MapItemColor
+io.papermc.paper.datacomponent.item.OminousBottleAmplifier	OminousBottleAmplifier
+io.papermc.paper.datacomponent.item.PiercingWeapon	PiercingWeapon
+io.papermc.paper.datacomponent.item.PotDecorations	PotDecorations
+io.papermc.paper.datacomponent.item.PotionContents	PotionContents
+io.papermc.paper.datacomponent.item.Repairable	ItemRepairable
+io.papermc.paper.datacomponent.item.ResolvableProfile	ResolvableProfile
+io.papermc.paper.datacomponent.item.SeededContainerLoot	SeededContainerLoot
+io.papermc.paper.datacomponent.item.SulfurCubeContent	SulfurCubeContent
+io.papermc.paper.datacomponent.item.SuspiciousStewEffects	SuspiciousStewEffects
+io.papermc.paper.datacomponent.item.SwingAnimation	SwingAnimation
+io.papermc.paper.datacomponent.item.Tool	Tool
+io.papermc.paper.datacomponent.item.TooltipDisplay	TooltipDisplay
+io.papermc.paper.datacomponent.item.UseCooldown	UseCooldown
+io.papermc.paper.datacomponent.item.UseEffects	UseEffects
+io.papermc.paper.datacomponent.item.UseRemainder	UseRemainder
+io.papermc.paper.datacomponent.item.Weapon	Weapon
+io.papermc.paper.datacomponent.item.WritableBookContent	WritableBookContent
+io.papermc.paper.datacomponent.item.WrittenBookContent	WrittenBookContent
+io.papermc.paper.datacomponent.item.attribute.AttributeModifierDisplay	AttributeModifierDisplay
+io.papermc.paper.datacomponent.item.blocksattacks.DamageReduction	DamageReduction
+io.papermc.paper.datacomponent.item.blocksattacks.ItemDamageFunction	ItemDamageFunction
+io.papermc.paper.datacomponent.item.consumable.ConsumeEffect	ConsumeEffect
+io.papermc.paper.datacomponent.item.consumable.ItemUseAnimation	ItemUseAnimation
+io.papermc.paper.datapack.Datapack	Datapack
+io.papermc.paper.datapack.DatapackManager	DatapackManager
+io.papermc.paper.datapack.DatapackRegistrar	DatapackRegistrar
+io.papermc.paper.datapack.DiscoveredDatapack	DiscoveredDatapack
+io.papermc.paper.dialog.Dialog	Dialog
+io.papermc.paper.dialog.DialogResponseView	DialogResponseView
+io.papermc.paper.enchantments.EnchantmentRarity	EnchantmentRarity
+io.papermc.paper.entity.Bucketable	Bucketable
+io.papermc.paper.entity.CollarColorable	CollarColorable
+io.papermc.paper.entity.EntitySerializationFlag	EntitySerializationFlag
+io.papermc.paper.entity.Leashable	Leashable
+io.papermc.paper.entity.LookAnchor	LookAnchor
+io.papermc.paper.entity.PlayerGiveResult	PlayerGiveResult
+io.papermc.paper.entity.RemovalReason	RemovalReason
+io.papermc.paper.entity.SchoolableFish	SchoolableFish
+io.papermc.paper.entity.Shearable	EntityShearable
+io.papermc.paper.entity.poi.PoiSearchResult	PoiSearchResult
+io.papermc.paper.entity.poi.PoiType	PoiType
+io.papermc.paper.event.block.BeaconActivatedEvent	BeaconActivatedEvent
+io.papermc.paper.event.block.BeaconDeactivatedEvent	BeaconDeactivatedEvent
+io.papermc.paper.event.block.BellRevealRaiderEvent	BellRevealRaiderEvent
+io.papermc.paper.event.block.BellRingEvent	BlockBellRingEvent
+io.papermc.paper.event.block.BlockBreakBlockEvent	BlockBreakBlockEvent
+io.papermc.paper.event.block.BlockBreakProgressUpdateEvent	BlockBreakProgressUpdateEvent
+io.papermc.paper.event.block.BlockFailedDispenseEvent	BlockFailedDispenseEvent
+io.papermc.paper.event.block.BlockLockCheckEvent	BlockLockCheckEvent
+io.papermc.paper.event.block.BlockPreDispenseEvent	BlockPreDispenseEvent
+io.papermc.paper.event.block.CompostItemEvent	CompostItemEvent
+io.papermc.paper.event.block.DragonEggFormEvent	DragonEggFormEvent
+io.papermc.paper.event.block.PlayerShearBlockEvent	PlayerShearBlockEvent
+io.papermc.paper.event.block.TargetHitEvent	TargetHitEvent
+io.papermc.paper.event.block.VaultChangeStateEvent	VaultChangeStateEvent
+io.papermc.paper.event.connection.PlayerConnectionValidateLoginEvent	PlayerConnectionValidateLoginEvent
+io.papermc.paper.event.connection.configuration.AsyncPlayerConnectionConfigureEvent	AsyncPlayerConnectionConfigureEvent
+io.papermc.paper.event.connection.configuration.PlayerCodeOfConductSendEvent	PlayerCodeOfConductSendEvent
+io.papermc.paper.event.connection.configuration.PlayerConnectionInitialConfigureEvent	PlayerConnectionInitialConfigureEvent
+io.papermc.paper.event.connection.configuration.PlayerConnectionReconfigureEvent	PlayerConnectionReconfigureEvent
+io.papermc.paper.event.entity.ElderGuardianAppearanceEvent	ElderGuardianAppearanceEvent
+io.papermc.paper.event.entity.EntityAttemptSmashAttackEvent	EntityAttemptSmashAttackEvent
+io.papermc.paper.event.entity.EntityAttemptSpinAttackEvent	EntityAttemptSpinAttackEvent
+io.papermc.paper.event.entity.EntityCollideWithEntityEvent	EntityCollideWithEntityEvent
+io.papermc.paper.event.entity.EntityCompostItemEvent	EntityCompostItemEvent
+io.papermc.paper.event.entity.EntityConstructEvent	EntityConstructEvent
+io.papermc.paper.event.entity.EntityDamageItemEvent	EntityDamageItemEvent
+io.papermc.paper.event.entity.EntityDyeEvent	EntityDyeEvent
+io.papermc.paper.event.entity.EntityEffectTickEvent	EntityEffectTickEvent
+io.papermc.paper.event.entity.EntityEquipmentChangedEvent	EntityEquipmentChangedEvent
+io.papermc.paper.event.entity.EntityFertilizeEggEvent	EntityFertilizeEggEvent
+io.papermc.paper.event.entity.EntityIgniteEvent	EntityIgniteEvent
+io.papermc.paper.event.entity.EntityInsideBlockEvent	EntityInsideBlockEvent
+io.papermc.paper.event.entity.EntityKnockbackEvent	EntityEntityKnockbackEvent
+io.papermc.paper.event.entity.EntityLoadCrossbowEvent	EntityLoadCrossbowEvent
+io.papermc.paper.event.entity.EntityLungeEvent	EntityLungeEvent
+io.papermc.paper.event.entity.EntityMoveEvent	EntityMoveEvent
+io.papermc.paper.event.entity.EntityPortalReadyEvent	EntityPortalReadyEvent
+io.papermc.paper.event.entity.EntityPushedByEntityAttackEvent	EntityPushedByEntityAttackEvent
+io.papermc.paper.event.entity.EntityToggleSitEvent	EntityToggleSitEvent
+io.papermc.paper.event.entity.FishHookStateChangeEvent	FishHookStateChangeEvent
+io.papermc.paper.event.entity.ItemTransportingEntityValidateTargetEvent	ItemTransportingEntityValidateTargetEvent
+io.papermc.paper.event.entity.PufferFishStateChangeEvent	PufferFishStateChangeEvent
+io.papermc.paper.event.entity.ShulkerDuplicateEvent	ShulkerDuplicateEvent
+io.papermc.paper.event.entity.SulfurCubeSwallowItemEvent	SulfurCubeSwallowItemEvent
+io.papermc.paper.event.entity.TameableDeathMessageEvent	TameableDeathMessageEvent
+io.papermc.paper.event.entity.WardenAngerChangeEvent	WardenAngerChangeEvent
+io.papermc.paper.event.entity.WaterBottleSplashEvent	WaterBottleSplashEvent
+io.papermc.paper.event.inventory.ItemCraftedEvent	ItemCraftedEvent
+io.papermc.paper.event.packet.ClientTickEndEvent	ClientTickEndEvent
+io.papermc.paper.event.packet.PlayerChunkLoadEvent	PlayerChunkLoadEvent
+io.papermc.paper.event.packet.PlayerChunkUnloadEvent	PlayerChunkUnloadEvent
+io.papermc.paper.event.packet.UncheckedSignChangeEvent	UncheckedSignChangeEvent
+io.papermc.paper.event.player.AbstractChatEvent	AbstractChatEvent
+io.papermc.paper.event.player.AbstractRespawnEvent	AbstractRespawnEvent
+io.papermc.paper.event.player.AsyncChatCommandDecorateEvent	AsyncChatCommandDecorateEvent
+io.papermc.paper.event.player.AsyncChatDecorateEvent	AsyncChatDecorateEvent
+io.papermc.paper.event.player.AsyncChatEvent	AsyncChatEvent
+io.papermc.paper.event.player.AsyncPlayerSpawnLocationEvent	AsyncPlayerSpawnLocationEvent
+io.papermc.paper.event.player.CartographyItemEvent	CartographyItemEvent
+io.papermc.paper.event.player.ChatEvent	ChatEvent
+io.papermc.paper.event.player.PlayerArmSwingEvent	PlayerArmSwingEvent
+io.papermc.paper.event.player.PlayerBedFailEnterEvent	PlayerBedFailEnterEvent
+io.papermc.paper.event.player.PlayerChangeBeaconEffectEvent	PlayerChangeBeaconEffectEvent
+io.papermc.paper.event.player.PlayerClientLoadedWorldEvent	PlayerClientLoadedWorldEvent
+io.papermc.paper.event.player.PlayerCustomClickEvent	PlayerCustomClickEvent
+io.papermc.paper.event.player.PlayerDeepSleepEvent	PlayerDeepSleepEvent
+io.papermc.paper.event.player.PlayerFailMoveEvent	PlayerFailMoveEvent
+io.papermc.paper.event.player.PlayerFlowerPotManipulateEvent	PlayerFlowerPotManipulateEvent
+io.papermc.paper.event.player.PlayerInsertLecternBookEvent	PlayerInsertLecternBookEvent
+io.papermc.paper.event.player.PlayerInventorySlotChangeEvent	PlayerInventorySlotChangeEvent
+io.papermc.paper.event.player.PlayerItemCooldownEvent	PlayerItemCooldownEvent
+io.papermc.paper.event.player.PlayerItemFrameChangeEvent	PlayerItemFrameChangeEvent
+io.papermc.paper.event.player.PlayerItemGroupCooldownEvent	PlayerItemGroupCooldownEvent
+io.papermc.paper.event.player.PlayerLecternPageChangeEvent	PlayerLecternPageChangeEvent
+io.papermc.paper.event.player.PlayerLoomPatternSelectEvent	PlayerLoomPatternSelectEvent
+io.papermc.paper.event.player.PlayerMapFilledEvent	PlayerMapFilledEvent
+io.papermc.paper.event.player.PlayerNameEntityEvent	PlayerNameEntityEvent
+io.papermc.paper.event.player.PlayerOpenSignEvent	PlayerOpenSignEvent
+io.papermc.paper.event.player.PlayerPickBlockEvent	PlayerPickBlockEvent
+io.papermc.paper.event.player.PlayerPickEntityEvent	PlayerPickEntityEvent
+io.papermc.paper.event.player.PlayerPickItemEvent	PlayerPickItemEvent
+io.papermc.paper.event.player.PlayerPurchaseEvent	PlayerPurchaseEvent
+io.papermc.paper.event.player.PlayerServerFullCheckEvent	PlayerServerFullCheckEvent
+io.papermc.paper.event.player.PlayerShieldDisableEvent	PlayerShieldDisableEvent
+io.papermc.paper.event.player.PlayerStonecutterRecipeSelectEvent	PlayerStonecutterRecipeSelectEvent
+io.papermc.paper.event.player.PlayerStopUsingItemEvent	PlayerStopUsingItemEvent
+io.papermc.paper.event.player.PlayerSwapWithEquipmentSlotEvent	PlayerSwapWithEquipmentSlotEvent
+io.papermc.paper.event.player.PlayerToggleEntityAgeLockEvent	PlayerToggleEntityAgeLockEvent
+io.papermc.paper.event.player.PlayerTrackEntityEvent	PlayerTrackEntityEvent
+io.papermc.paper.event.player.PlayerTradeEvent	PlayerTradeEvent
+io.papermc.paper.event.player.PlayerUntrackEntityEvent	PlayerUntrackEntityEvent
+io.papermc.paper.event.player.PrePlayerAttackEntityEvent	PrePlayerAttackEntityEvent
+io.papermc.paper.event.server.AsyncServerDataFixerRemoveBlockEntityEvent	AsyncServerDataFixerRemoveBlockEntityEvent
+io.papermc.paper.event.server.ServerResourcesReloadedEvent	ServerResourcesReloadedEvent
+io.papermc.paper.event.server.WhitelistStateUpdateEvent	WhitelistStateUpdateEvent
+io.papermc.paper.event.world.StructuresLocateEvent	StructuresLocateEvent
+io.papermc.paper.event.world.WorldDifficultyChangeEvent	WorldDifficultyChangeEvent
+io.papermc.paper.event.world.WorldGameRuleChangeEvent	WorldGameRuleChangeEvent
+io.papermc.paper.event.world.border.WorldBorderBoundsChangeEvent	WorldBorderBoundsChangeEvent
+io.papermc.paper.event.world.border.WorldBorderBoundsChangeFinishEvent	WorldBorderBoundsChangeFinishEvent
+io.papermc.paper.event.world.border.WorldBorderCenterChangeEvent	WorldBorderCenterChangeEvent
+io.papermc.paper.event.world.border.WorldBorderEvent	WorldBorderEvent
+io.papermc.paper.inventory.ItemRarity	InventoryItemRarity
+io.papermc.paper.inventory.tooltip.TooltipContext	TooltipContext
+io.papermc.paper.item.MapPostProcessing	MapPostProcessing
+io.papermc.paper.math.Angle	Angle
+io.papermc.paper.math.BlockPosition	BlockPosition
+io.papermc.paper.math.FinePosition	FinePosition
+io.papermc.paper.math.Position	Position
+io.papermc.paper.math.Rotation	MathRotation
+io.papermc.paper.math.Rotations	Rotations
+io.papermc.paper.persistence.PersistentDataContainerView	PersistentDataContainerView
+io.papermc.paper.persistence.PersistentDataViewHolder	PersistentDataViewHolder
+io.papermc.paper.potion.PotionMix	PotionMix
+io.papermc.paper.potion.SuspiciousEffectEntry	SuspiciousEffectEntry
+io.papermc.paper.raytracing.BlockCollisionMode	BlockCollisionMode
+io.papermc.paper.raytracing.PositionedRayTraceConfigurationBuilder	PositionedRayTraceConfigurationBuilder
+io.papermc.paper.raytracing.RayTraceTarget	RayTraceTarget
+io.papermc.paper.registry.Reference	Reference
+io.papermc.paper.registry.RegistryAccess	RegistryAccess
+io.papermc.paper.registry.RegistryBuilderFactory	RegistryBuilderFactory
+io.papermc.paper.registry.RegistryKey	RegistryKey
+io.papermc.paper.registry.TypedKey	TypedKey
+io.papermc.paper.registry.data.BannerPatternRegistryEntry	BannerPatternRegistryEntry
+io.papermc.paper.registry.data.CatTypeRegistryEntry	CatTypeRegistryEntry
+io.papermc.paper.registry.data.ChickenVariantRegistryEntry	ChickenVariantRegistryEntry
+io.papermc.paper.registry.data.CowVariantRegistryEntry	CowVariantRegistryEntry
+io.papermc.paper.registry.data.DamageTypeRegistryEntry	DamageTypeRegistryEntry
+io.papermc.paper.registry.data.EnchantmentRegistryEntry	EnchantmentRegistryEntry
+io.papermc.paper.registry.data.FrogVariantRegistryEntry	FrogVariantRegistryEntry
+io.papermc.paper.registry.data.GameEventRegistryEntry	GameEventRegistryEntry
+io.papermc.paper.registry.data.InlinedRegistryBuilderProvider	InlinedRegistryBuilderProvider
+io.papermc.paper.registry.data.InstrumentRegistryEntry	InstrumentRegistryEntry
+io.papermc.paper.registry.data.JukeboxSongRegistryEntry	JukeboxSongRegistryEntry
+io.papermc.paper.registry.data.PaintingVariantRegistryEntry	PaintingVariantRegistryEntry
+io.papermc.paper.registry.data.PigVariantRegistryEntry	PigVariantRegistryEntry
+io.papermc.paper.registry.data.SoundEventRegistryEntry	SoundEventRegistryEntry
+io.papermc.paper.registry.data.SulfurCubeArchetypeRegistryEntry	SulfurCubeArchetypeRegistryEntry
+io.papermc.paper.registry.data.TrimMaterialRegistryEntry	TrimMaterialRegistryEntry
+io.papermc.paper.registry.data.TrimPatternRegistryEntry	TrimPatternRegistryEntry
+io.papermc.paper.registry.data.WolfVariantRegistryEntry	WolfVariantRegistryEntry
+io.papermc.paper.registry.data.ZombieNautilusVariantRegistryEntry	ZombieNautilusVariantRegistryEntry
+io.papermc.paper.registry.data.client.ClientTextureAsset	ClientTextureAsset
+io.papermc.paper.registry.data.dialog.ActionButton	ActionButton
+io.papermc.paper.registry.data.dialog.DialogBase	DialogBase
+io.papermc.paper.registry.data.dialog.DialogInstancesProvider	DialogInstancesProvider
+io.papermc.paper.registry.data.dialog.DialogRegistryEntry	DialogRegistryEntry
+io.papermc.paper.registry.data.dialog.action.DialogAction	DialogAction
+io.papermc.paper.registry.data.dialog.body.DialogBody	DialogBody
+io.papermc.paper.registry.data.dialog.body.ItemDialogBody	ItemDialogBody
+io.papermc.paper.registry.data.dialog.body.PlainMessageDialogBody	PlainMessageDialogBody
+io.papermc.paper.registry.data.dialog.input.BooleanDialogInput	BooleanDialogInput
+io.papermc.paper.registry.data.dialog.input.DialogInput	DialogInput
+io.papermc.paper.registry.data.dialog.input.NumberRangeDialogInput	NumberRangeDialogInput
+io.papermc.paper.registry.data.dialog.input.SingleOptionDialogInput	SingleOptionDialogInput
+io.papermc.paper.registry.data.dialog.input.TextDialogInput	TextDialogInput
+io.papermc.paper.registry.data.dialog.type.ConfirmationType	ConfirmationType
+io.papermc.paper.registry.data.dialog.type.DialogListType	DialogListType
+io.papermc.paper.registry.data.dialog.type.DialogType	DialogType
+io.papermc.paper.registry.data.dialog.type.MultiActionType	MultiActionType
+io.papermc.paper.registry.data.dialog.type.NoticeType	NoticeType
+io.papermc.paper.registry.data.dialog.type.ServerLinksType	ServerLinksType
+io.papermc.paper.registry.event.RegistryComposeEvent	RegistryComposeEvent
+io.papermc.paper.registry.event.RegistryEntryAddEvent	RegistryEntryAddEvent
+io.papermc.paper.registry.event.RegistryEvent	RegistryEvent
+io.papermc.paper.registry.event.RegistryEventProvider	RegistryEventProvider
+io.papermc.paper.registry.event.type.RegistryEntryAddConfiguration	RegistryEntryAddConfiguration
+io.papermc.paper.registry.event.type.RegistryEntryAddEventType	RegistryEntryAddEventType
+io.papermc.paper.registry.set.RegistryKeySet	RegistryKeySet
+io.papermc.paper.registry.set.RegistrySet	RegistrySet
+io.papermc.paper.registry.set.RegistryValueSet	RegistryValueSet
+io.papermc.paper.registry.set.RegistryValueSetBuilder	RegistryValueSetBuilder
+io.papermc.paper.registry.tag.Tag	TagTag
+io.papermc.paper.registry.tag.TagKey	TagKey
+io.papermc.paper.scoreboard.numbers.FixedFormat	FixedFormat
+io.papermc.paper.scoreboard.numbers.NumberFormat	NumberFormat
+io.papermc.paper.tag.BaseTag	BaseTag
+io.papermc.paper.tag.EntitySetTag	EntitySetTag
+io.papermc.paper.tag.PostFlattenTagRegistrar	PostFlattenTagRegistrar
+io.papermc.paper.tag.PreFlattenTagRegistrar	PreFlattenTagRegistrar
+io.papermc.paper.tag.TagEntry	TagEntry
+io.papermc.paper.text.Filtered	Filtered
+io.papermc.paper.text.PaperComponents	PaperComponents
+io.papermc.paper.threadedregions.RegionizedServerInitEvent	RegionizedServerInitEvent
+io.papermc.paper.threadedregions.scheduler.ScheduledTask	ScheduledTask
+io.papermc.paper.util.BoundChecker	BoundChecker
+io.papermc.paper.util.Tick	Tick
+io.papermc.paper.util.TransformingRandomAccessList	TransformingRandomAccessList
+io.papermc.paper.world.MoonPhase	MoonPhase
+io.papermc.paper.world.WeatheringCopperState	WeatheringCopperState
+io.papermc.paper.world.damagesource.CombatEntry	CombatEntry
+io.papermc.paper.world.damagesource.CombatTracker	CombatTracker
+io.papermc.paper.world.damagesource.FallLocationType	FallLocationType
+io.papermc.paper.world.flag.FeatureDependant	FeatureDependant
+io.papermc.paper.world.flag.FeatureFlagSetHolder	FeatureFlagSetHolder
+org.bukkit.Art	Art
+org.bukkit.Axis	Axis
+org.bukkit.BanEntry	BanEntry
+org.bukkit.BanList	BanList
+org.bukkit.BlockChangeDelegate	BlockChangeDelegate
+org.bukkit.ChatColor	ChatColor
+org.bukkit.Chunk	Chunk
+org.bukkit.ChunkSnapshot	ChunkSnapshot
+org.bukkit.CoalType	CoalType
+org.bukkit.Color	Color
+org.bukkit.CropState	CropState
+org.bukkit.Difficulty	Difficulty
+org.bukkit.DyeColor	DyeColor
+org.bukkit.Effect	Effect
+org.bukkit.EntityEffect	EntityEffect
+org.bukkit.ExplosionResult	ExplosionResult
+org.bukkit.FeatureFlag	FeatureFlag
+org.bukkit.FireworkEffect	FireworkEffect
+org.bukkit.Fluid	Fluid
+org.bukkit.FluidCollisionMode	FluidCollisionMode
+org.bukkit.GameEvent	GameEvent
+org.bukkit.GameMode	GameMode
+org.bukkit.GameRule	GameRule
+org.bukkit.GrassSpecies	GrassSpecies
+org.bukkit.HeightMap	HeightMap
+org.bukkit.Input	Input
+org.bukkit.Instrument	Instrument
+org.bukkit.JukeboxSong	JukeboxSong
+org.bukkit.Keyed	Keyed
+org.bukkit.Location	Location
+org.bukkit.Material	Material
+org.bukkit.MinecraftExperimental	MinecraftExperimental
+org.bukkit.MusicInstrument	MusicInstrument
+org.bukkit.Nameable	Nameable
+org.bukkit.NamespacedKey	NamespacedKey
+org.bukkit.NetherWartsState	NetherWartsState
+org.bukkit.Note	Note
+org.bukkit.OfflinePlayer	OfflinePlayer
+org.bukkit.Particle	Particle
+org.bukkit.PortalType	PortalType
+org.bukkit.Raid	Raid
+org.bukkit.RegionAccessor	RegionAccessor
+org.bukkit.Registry	Registry
+org.bukkit.Rotation	Rotation
+org.bukkit.SandstoneType	SandstoneType
+org.bukkit.ServerLinks	ServerLinks
+org.bukkit.SkullType	SkullType
+org.bukkit.Sound	Sound
+org.bukkit.SoundCategory	SoundCategory
+org.bukkit.SoundGroup	SoundGroup
+org.bukkit.Statistic	Statistic
+org.bukkit.StructureType	StructureType
+org.bukkit.Tag	Tag
+org.bukkit.Translatable	Translatable
+org.bukkit.TreeSpecies	TreeSpecies
+org.bukkit.TreeType	TreeType
+org.bukkit.UndefinedNullability	UndefinedNullability
+org.bukkit.Utility	Utility
+org.bukkit.Vibration	Vibration
+org.bukkit.Warning	Warning
+org.bukkit.WeatherType	WeatherType
+org.bukkit.World	World
+org.bukkit.WorldBorder	WorldBorder
+org.bukkit.WorldCreator	WorldCreator
+org.bukkit.WorldType	WorldType
+org.bukkit.advancement.Advancement	Advancement
+org.bukkit.advancement.AdvancementDisplay	AdvancementDisplay
+org.bukkit.advancement.AdvancementDisplayType	AdvancementDisplayType
+org.bukkit.advancement.AdvancementProgress	AdvancementProgress
+org.bukkit.advancement.AdvancementRequirement	AdvancementRequirement
+org.bukkit.advancement.AdvancementRequirements	AdvancementRequirements
+org.bukkit.attribute.Attributable	Attributable
+org.bukkit.attribute.Attribute	Attribute
+org.bukkit.attribute.AttributeInstance	AttributeInstance
+org.bukkit.attribute.AttributeModifier	AttributeModifier
+org.bukkit.ban.IpBanList	IpBanList
+org.bukkit.ban.ProfileBanList	ProfileBanList
+org.bukkit.block.Banner	Banner
+org.bukkit.block.Barrel	Barrel
+org.bukkit.block.Beacon	Beacon
+org.bukkit.block.Bed	Bed
+org.bukkit.block.Beehive	Beehive
+org.bukkit.block.Bell	Bell
+org.bukkit.block.Biome	Biome
+org.bukkit.block.BlastFurnace	BlastFurnace
+org.bukkit.block.Block	Block
+org.bukkit.block.BlockFace	BlockFace
+org.bukkit.block.BlockState	BlockState
+org.bukkit.block.BlockSupport	BlockSupport
+org.bukkit.block.BlockType	BlockType
+org.bukkit.block.BrewingStand	BrewingStand
+org.bukkit.block.BrushableBlock	BrushableBlock
+org.bukkit.block.CalibratedSculkSensor	CalibratedSculkSensor
+org.bukkit.block.Campfire	Campfire
+org.bukkit.block.Chest	Chest
+org.bukkit.block.ChiseledBookshelf	ChiseledBookshelf
+org.bukkit.block.CommandBlock	CommandBlock
+org.bukkit.block.Comparator	Comparator
+org.bukkit.block.Conduit	Conduit
+org.bukkit.block.Container	Container
+org.bukkit.block.CopperGolemStatue	CopperGolemStatue
+org.bukkit.block.Crafter	Crafter
+org.bukkit.block.CreakingHeart	CreakingHeart
+org.bukkit.block.CreatureSpawner	CreatureSpawner
+org.bukkit.block.DaylightDetector	DaylightDetector
+org.bukkit.block.DecoratedPot	DecoratedPot
+org.bukkit.block.Dispenser	Dispenser
+org.bukkit.block.DoubleChest	DoubleChest
+org.bukkit.block.Dropper	Dropper
+org.bukkit.block.EnchantingTable	EnchantingTable
+org.bukkit.block.EndGateway	EndGateway
+org.bukkit.block.EnderChest	EnderChest
+org.bukkit.block.EntityBlockStorage	EntityBlockStorage
+org.bukkit.block.Furnace	Furnace
+org.bukkit.block.HangingSign	HangingSign
+org.bukkit.block.Hopper	Hopper
+org.bukkit.block.Jigsaw	Jigsaw
+org.bukkit.block.Jukebox	Jukebox
+org.bukkit.block.Lectern	Lectern
+org.bukkit.block.Lidded	Lidded
+org.bukkit.block.Lockable	Lockable
+org.bukkit.block.Orientation	Orientation
+org.bukkit.block.PistonMoveReaction	PistonMoveReaction
+org.bukkit.block.PotentSulfur	PotentSulfur
+org.bukkit.block.SculkCatalyst	SculkCatalyst
+org.bukkit.block.SculkSensor	SculkSensor
+org.bukkit.block.SculkShrieker	SculkShrieker
+org.bukkit.block.Shelf	Shelf
+org.bukkit.block.ShulkerBox	ShulkerBox
+org.bukkit.block.Sign	Sign
+org.bukkit.block.Skull	Skull
+org.bukkit.block.Smoker	Smoker
+org.bukkit.block.Structure	Structure
+org.bukkit.block.SuspiciousSand	SuspiciousSand
+org.bukkit.block.TestBlock	TestBlock
+org.bukkit.block.TestInstanceBlock	TestInstanceBlock
+org.bukkit.block.TileState	TileState
+org.bukkit.block.TrialSpawner	TrialSpawner
+org.bukkit.block.Vault	Vault
+org.bukkit.block.banner.Pattern	Pattern
+org.bukkit.block.banner.PatternType	PatternType
+org.bukkit.block.data.Ageable	DataAgeable
+org.bukkit.block.data.AnaloguePowerable	AnaloguePowerable
+org.bukkit.block.data.Attachable	Attachable
+org.bukkit.block.data.Bisected	Bisected
+org.bukkit.block.data.BlockData	BlockData
+org.bukkit.block.data.Brushable	Brushable
+org.bukkit.block.data.Directional	Directional
+org.bukkit.block.data.FaceAttachable	FaceAttachable
+org.bukkit.block.data.Hangable	Hangable
+org.bukkit.block.data.Hatchable	Hatchable
+org.bukkit.block.data.Levelled	Levelled
+org.bukkit.block.data.Lightable	Lightable
+org.bukkit.block.data.MultipleFacing	MultipleFacing
+org.bukkit.block.data.Openable	Openable
+org.bukkit.block.data.Orientable	Orientable
+org.bukkit.block.data.Powerable	Powerable
+org.bukkit.block.data.Rail	Rail
+org.bukkit.block.data.Rotatable	Rotatable
+org.bukkit.block.data.Segmentable	Segmentable
+org.bukkit.block.data.SideChaining	SideChaining
+org.bukkit.block.data.Snowable	Snowable
+org.bukkit.block.data.Waterlogged	Waterlogged
+org.bukkit.block.data.type.AmethystCluster	AmethystCluster
+org.bukkit.block.data.type.Bamboo	Bamboo
+org.bukkit.block.data.type.Barrel	TypeBarrel
+org.bukkit.block.data.type.Bed	TypeBed
+org.bukkit.block.data.type.Beehive	TypeBeehive
+org.bukkit.block.data.type.Bell	TypeBell
+org.bukkit.block.data.type.BigDripleaf	BigDripleaf
+org.bukkit.block.data.type.BrewingStand	TypeBrewingStand
+org.bukkit.block.data.type.BubbleColumn	BubbleColumn
+org.bukkit.block.data.type.Cake	Cake
+org.bukkit.block.data.type.CalibratedSculkSensor	TypeCalibratedSculkSensor
+org.bukkit.block.data.type.Campfire	TypeCampfire
+org.bukkit.block.data.type.Candle	Candle
+org.bukkit.block.data.type.CaveVines	CaveVines
+org.bukkit.block.data.type.CaveVinesPlant	CaveVinesPlant
+org.bukkit.block.data.type.Chain	Chain
+org.bukkit.block.data.type.Chest	TypeChest
+org.bukkit.block.data.type.ChiseledBookshelf	TypeChiseledBookshelf
+org.bukkit.block.data.type.Cocoa	Cocoa
+org.bukkit.block.data.type.CommandBlock	TypeCommandBlock
+org.bukkit.block.data.type.Comparator	TypeComparator
+org.bukkit.block.data.type.CopperBulb	CopperBulb
+org.bukkit.block.data.type.CopperGolemStatue	TypeCopperGolemStatue
+org.bukkit.block.data.type.CoralWallFan	CoralWallFan
+org.bukkit.block.data.type.Crafter	TypeCrafter
+org.bukkit.block.data.type.CreakingHeart	TypeCreakingHeart
+org.bukkit.block.data.type.DaylightDetector	TypeDaylightDetector
+org.bukkit.block.data.type.DecoratedPot	TypeDecoratedPot
+org.bukkit.block.data.type.Dispenser	TypeDispenser
+org.bukkit.block.data.type.Door	Door
+org.bukkit.block.data.type.DriedGhast	DriedGhast
+org.bukkit.block.data.type.Dripleaf	Dripleaf
+org.bukkit.block.data.type.EndPortalFrame	EndPortalFrame
+org.bukkit.block.data.type.EnderChest	TypeEnderChest
+org.bukkit.block.data.type.Farmland	Farmland
+org.bukkit.block.data.type.Fence	Fence
+org.bukkit.block.data.type.Fire	Fire
+org.bukkit.block.data.type.FlowerBed	FlowerBed
+org.bukkit.block.data.type.Furnace	TypeFurnace
+org.bukkit.block.data.type.Gate	Gate
+org.bukkit.block.data.type.GlassPane	GlassPane
+org.bukkit.block.data.type.GlowLichen	GlowLichen
+org.bukkit.block.data.type.Grindstone	Grindstone
+org.bukkit.block.data.type.HangingMoss	HangingMoss
+org.bukkit.block.data.type.HangingSign	TypeHangingSign
+org.bukkit.block.data.type.Hopper	TypeHopper
+org.bukkit.block.data.type.Jigsaw	TypeJigsaw
+org.bukkit.block.data.type.Jukebox	TypeJukebox
+org.bukkit.block.data.type.Ladder	Ladder
+org.bukkit.block.data.type.Lantern	Lantern
+org.bukkit.block.data.type.LeafLitter	LeafLitter
+org.bukkit.block.data.type.Leaves	Leaves
+org.bukkit.block.data.type.Lectern	TypeLectern
+org.bukkit.block.data.type.Light	Light
+org.bukkit.block.data.type.LightningRod	LightningRod
+org.bukkit.block.data.type.MangrovePropagule	MangrovePropagule
+org.bukkit.block.data.type.MossyCarpet	MossyCarpet
+org.bukkit.block.data.type.NoteBlock	NoteBlock
+org.bukkit.block.data.type.Observer	Observer
+org.bukkit.block.data.type.PinkPetals	PinkPetals
+org.bukkit.block.data.type.Piston	Piston
+org.bukkit.block.data.type.PistonHead	PistonHead
+org.bukkit.block.data.type.PitcherCrop	PitcherCrop
+org.bukkit.block.data.type.PointedDripstone	PointedDripstone
+org.bukkit.block.data.type.PotentSulfur	TypePotentSulfur
+org.bukkit.block.data.type.RedstoneRail	RedstoneRail
+org.bukkit.block.data.type.RedstoneWallTorch	RedstoneWallTorch
+org.bukkit.block.data.type.RedstoneWire	RedstoneWire
+org.bukkit.block.data.type.Repeater	Repeater
+org.bukkit.block.data.type.ResinClump	ResinClump
+org.bukkit.block.data.type.RespawnAnchor	RespawnAnchor
+org.bukkit.block.data.type.Sapling	Sapling
+org.bukkit.block.data.type.Scaffolding	Scaffolding
+org.bukkit.block.data.type.SculkCatalyst	TypeSculkCatalyst
+org.bukkit.block.data.type.SculkSensor	TypeSculkSensor
+org.bukkit.block.data.type.SculkShrieker	TypeSculkShrieker
+org.bukkit.block.data.type.SculkVein	SculkVein
+org.bukkit.block.data.type.SeaPickle	SeaPickle
+org.bukkit.block.data.type.Shelf	TypeShelf
+org.bukkit.block.data.type.Sign	TypeSign
+org.bukkit.block.data.type.Skull	TypeSkull
+org.bukkit.block.data.type.Slab	Slab
+org.bukkit.block.data.type.SmallDripleaf	SmallDripleaf
+org.bukkit.block.data.type.Snow	Snow
+org.bukkit.block.data.type.Speleothem	Speleothem
+org.bukkit.block.data.type.Stairs	Stairs
+org.bukkit.block.data.type.StructureBlock	StructureBlock
+org.bukkit.block.data.type.Switch	Switch
+org.bukkit.block.data.type.TNT	TNT
+org.bukkit.block.data.type.TechnicalPiston	TechnicalPiston
+org.bukkit.block.data.type.TestBlock	TypeTestBlock
+org.bukkit.block.data.type.TrapDoor	TrapDoor
+org.bukkit.block.data.type.TrialSpawner	TypeTrialSpawner
+org.bukkit.block.data.type.Tripwire	Tripwire
+org.bukkit.block.data.type.TripwireHook	TripwireHook
+org.bukkit.block.data.type.TurtleEgg	TurtleEgg
+org.bukkit.block.data.type.Vault	TypeVault
+org.bukkit.block.data.type.Wall	Wall
+org.bukkit.block.data.type.WallHangingSign	WallHangingSign
+org.bukkit.block.data.type.WallSign	WallSign
+org.bukkit.block.data.type.WallSkull	WallSkull
+org.bukkit.block.sign.Side	Side
+org.bukkit.block.sign.SignSide	SignSide
+org.bukkit.block.spawner.SpawnRule	SpawnRule
+org.bukkit.block.spawner.SpawnerEntry	SpawnerEntry
+org.bukkit.block.structure.Mirror	Mirror
+org.bukkit.block.structure.StructureRotation	StructureRotation
+org.bukkit.block.structure.UsageMode	UsageMode
+org.bukkit.boss.BarColor	BarColor
+org.bukkit.boss.BarFlag	BarFlag
+org.bukkit.boss.BarStyle	BarStyle
+org.bukkit.boss.BossBar	BossBar
+org.bukkit.boss.DragonBattle	DragonBattle
+org.bukkit.boss.KeyedBossBar	KeyedBossBar
+org.bukkit.command.BlockCommandSender	BlockCommandSender
+org.bukkit.command.BufferedCommandSender	BufferedCommandSender
+org.bukkit.command.Command	Command
+org.bukkit.command.CommandException	CommandException
+org.bukkit.command.CommandSender	CommandSender
+org.bukkit.command.FormattedCommandAlias	FormattedCommandAlias
+org.bukkit.command.MessageCommandSender	MessageCommandSender
+org.bukkit.command.MultipleCommandAlias	MultipleCommandAlias
+org.bukkit.command.ProxiedCommandSender	ProxiedCommandSender
+org.bukkit.command.RemoteConsoleCommandSender	RemoteConsoleCommandSender
+org.bukkit.configuration.Configuration	Configuration
+org.bukkit.configuration.ConfigurationOptions	ConfigurationOptions
+org.bukkit.configuration.ConfigurationSection	ConfigurationSection
+org.bukkit.configuration.InvalidConfigurationException	InvalidConfigurationException
+org.bukkit.configuration.MemoryConfiguration	MemoryConfiguration
+org.bukkit.configuration.MemoryConfigurationOptions	MemoryConfigurationOptions
+org.bukkit.configuration.MemorySection	MemorySection
+org.bukkit.configuration.file.FileConfiguration	FileConfiguration
+org.bukkit.configuration.file.FileConfigurationOptions	FileConfigurationOptions
+org.bukkit.configuration.file.YamlConfiguration	YamlConfiguration
+org.bukkit.configuration.file.YamlConfigurationOptions	YamlConfigurationOptions
+org.bukkit.configuration.file.YamlConstructor	YamlConstructor
+org.bukkit.configuration.file.YamlRepresenter	YamlRepresenter
+org.bukkit.configuration.serialization.ConfigurationSerializable	ConfigurationSerializable
+org.bukkit.configuration.serialization.DelegateDeserialization	DelegateDeserialization
+org.bukkit.configuration.serialization.SerializableAs	SerializableAs
+org.bukkit.conversations.BooleanPrompt	BooleanPrompt
+org.bukkit.conversations.Conversable	Conversable
+org.bukkit.conversations.Conversation	Conversation
+org.bukkit.conversations.ConversationAbandonedEvent	ConversationAbandonedEvent
+org.bukkit.conversations.ConversationAbandonedListener	ConversationAbandonedListener
+org.bukkit.conversations.ConversationCanceller	ConversationCanceller
+org.bukkit.conversations.ConversationContext	ConversationContext
+org.bukkit.conversations.ConversationFactory	ConversationFactory
+org.bukkit.conversations.ConversationPrefix	ConversationPrefix
+org.bukkit.conversations.ExactMatchConversationCanceller	ExactMatchConversationCanceller
+org.bukkit.conversations.FixedSetPrompt	FixedSetPrompt
+org.bukkit.conversations.InactivityConversationCanceller	InactivityConversationCanceller
+org.bukkit.conversations.ManuallyAbandonedConversationCanceller	ManuallyAbandonedConversationCanceller
+org.bukkit.conversations.MessagePrompt	MessagePrompt
+org.bukkit.conversations.NullConversationPrefix	NullConversationPrefix
+org.bukkit.conversations.NumericPrompt	NumericPrompt
+org.bukkit.conversations.PlayerNamePrompt	PlayerNamePrompt
+org.bukkit.conversations.PluginNameConversationPrefix	PluginNameConversationPrefix
+org.bukkit.conversations.Prompt	Prompt
+org.bukkit.conversations.RegexPrompt	RegexPrompt
+org.bukkit.conversations.StringPrompt	StringPrompt
+org.bukkit.conversations.ValidatingPrompt	ValidatingPrompt
+org.bukkit.damage.DamageEffect	DamageEffect
+org.bukkit.damage.DamageScaling	DamageScaling
+org.bukkit.damage.DamageSource	DamageSource
+org.bukkit.damage.DamageType	DamageType
+org.bukkit.damage.DeathMessageType	DeathMessageType
+org.bukkit.enchantments.Enchantment	Enchantment
+org.bukkit.enchantments.EnchantmentOffer	EnchantmentOffer
+org.bukkit.enchantments.EnchantmentTarget	EnchantmentTarget
+org.bukkit.enchantments.EnchantmentWrapper	EnchantmentWrapper
+org.bukkit.entity.AbstractArrow	AbstractArrow
+org.bukkit.entity.AbstractCow	AbstractCow
+org.bukkit.entity.AbstractCubeMob	AbstractCubeMob
+org.bukkit.entity.AbstractHorse	AbstractHorse
+org.bukkit.entity.AbstractNautilus	AbstractNautilus
+org.bukkit.entity.AbstractSkeleton	AbstractSkeleton
+org.bukkit.entity.AbstractVillager	AbstractVillager
+org.bukkit.entity.AbstractWindCharge	AbstractWindCharge
+org.bukkit.entity.Ageable	Ageable
+org.bukkit.entity.Allay	Allay
+org.bukkit.entity.Ambient	Ambient
+org.bukkit.entity.AnimalTamer	AnimalTamer
+org.bukkit.entity.Animals	Animals
+org.bukkit.entity.AreaEffectCloud	AreaEffectCloud
+org.bukkit.entity.Armadillo	Armadillo
+org.bukkit.entity.ArmorStand	ArmorStand
+org.bukkit.entity.Arrow	Arrow
+org.bukkit.entity.Axolotl	Axolotl
+org.bukkit.entity.Bat	Bat
+org.bukkit.entity.Bee	Bee
+org.bukkit.entity.Blaze	Blaze
+org.bukkit.entity.BlockDisplay	BlockDisplay
+org.bukkit.entity.Boat	Boat
+org.bukkit.entity.Bogged	Bogged
+org.bukkit.entity.Boss	Boss
+org.bukkit.entity.Breedable	Breedable
+org.bukkit.entity.Breeze	Breeze
+org.bukkit.entity.BreezeWindCharge	BreezeWindCharge
+org.bukkit.entity.Camel	Camel
+org.bukkit.entity.CamelHusk	CamelHusk
+org.bukkit.entity.Cat	Cat
+org.bukkit.entity.CaveSpider	CaveSpider
+org.bukkit.entity.ChestBoat	ChestBoat
+org.bukkit.entity.ChestedHorse	ChestedHorse
+org.bukkit.entity.Chicken	Chicken
+org.bukkit.entity.Cod	Cod
+org.bukkit.entity.ComplexEntityPart	ComplexEntityPart
+org.bukkit.entity.ComplexLivingEntity	ComplexLivingEntity
+org.bukkit.entity.CopperGolem	CopperGolem
+org.bukkit.entity.Cow	Cow
+org.bukkit.entity.Creaking	Creaking
+org.bukkit.entity.Creature	Creature
+org.bukkit.entity.Creeper	Creeper
+org.bukkit.entity.Damageable	Damageable
+org.bukkit.entity.Display	Display
+org.bukkit.entity.Dolphin	Dolphin
+org.bukkit.entity.Donkey	Donkey
+org.bukkit.entity.DragonFireball	DragonFireball
+org.bukkit.entity.Drowned	Drowned
+org.bukkit.entity.Egg	Egg
+org.bukkit.entity.ElderGuardian	ElderGuardian
+org.bukkit.entity.EnderCrystal	EnderCrystal
+org.bukkit.entity.EnderDragon	EnderDragon
+org.bukkit.entity.EnderDragonPart	EnderDragonPart
+org.bukkit.entity.EnderPearl	EnderPearl
+org.bukkit.entity.EnderSignal	EnderSignal
+org.bukkit.entity.Enderman	Enderman
+org.bukkit.entity.Endermite	Endermite
+org.bukkit.entity.Enemy	Enemy
+org.bukkit.entity.Entity	Entity
+org.bukkit.entity.EntityCategory	EntityCategory
+org.bukkit.entity.EntityFactory	EntityFactory
+org.bukkit.entity.EntitySnapshot	EntitySnapshot
+org.bukkit.entity.EntityType	EntityType
+org.bukkit.entity.Evoker	Evoker
+org.bukkit.entity.EvokerFangs	EvokerFangs
+org.bukkit.entity.ExperienceOrb	ExperienceOrb
+org.bukkit.entity.Explosive	Explosive
+org.bukkit.entity.FallingBlock	FallingBlock
+org.bukkit.entity.Fireball	Fireball
+org.bukkit.entity.Firework	Firework
+org.bukkit.entity.Fish	Fish
+org.bukkit.entity.FishHook	FishHook
+org.bukkit.entity.Flying	Flying
+org.bukkit.entity.Fox	Fox
+org.bukkit.entity.Frog	Frog
+org.bukkit.entity.Ghast	Ghast
+org.bukkit.entity.Giant	Giant
+org.bukkit.entity.GlowItemFrame	GlowItemFrame
+org.bukkit.entity.GlowSquid	GlowSquid
+org.bukkit.entity.Goat	Goat
+org.bukkit.entity.Golem	Golem
+org.bukkit.entity.Guardian	Guardian
+org.bukkit.entity.Hanging	Hanging
+org.bukkit.entity.HappyGhast	HappyGhast
+org.bukkit.entity.Hoglin	Hoglin
+org.bukkit.entity.Horse	Horse
+org.bukkit.entity.HumanEntity	HumanEntity
+org.bukkit.entity.Husk	Husk
+org.bukkit.entity.Illager	Illager
+org.bukkit.entity.Illusioner	Illusioner
+org.bukkit.entity.Interaction	Interaction
+org.bukkit.entity.IronGolem	IronGolem
+org.bukkit.entity.Item	Item
+org.bukkit.entity.ItemDisplay	ItemDisplay
+org.bukkit.entity.ItemFrame	ItemFrame
+org.bukkit.entity.LargeFireball	LargeFireball
+org.bukkit.entity.LeashHitch	LeashHitch
+org.bukkit.entity.LightningStrike	LightningStrike
+org.bukkit.entity.LingeringPotion	LingeringPotion
+org.bukkit.entity.LivingEntity	LivingEntity
+org.bukkit.entity.Llama	Llama
+org.bukkit.entity.LlamaSpit	LlamaSpit
+org.bukkit.entity.MagmaCube	MagmaCube
+org.bukkit.entity.Mannequin	Mannequin
+org.bukkit.entity.Marker	Marker
+org.bukkit.entity.Minecart	Minecart
+org.bukkit.entity.Mob	Mob
+org.bukkit.entity.Monster	Monster
+org.bukkit.entity.Mule	Mule
+org.bukkit.entity.MushroomCow	MushroomCow
+org.bukkit.entity.NPC	NPC
+org.bukkit.entity.Nautilus	Nautilus
+org.bukkit.entity.Ocelot	Ocelot
+org.bukkit.entity.OminousItemSpawner	OminousItemSpawner
+org.bukkit.entity.Painting	Painting
+org.bukkit.entity.Panda	Panda
+org.bukkit.entity.Parched	Parched
+org.bukkit.entity.Parrot	Parrot
+org.bukkit.entity.Phantom	Phantom
+org.bukkit.entity.Pig	Pig
+org.bukkit.entity.PigZombie	PigZombie
+org.bukkit.entity.Piglin	Piglin
+org.bukkit.entity.PiglinAbstract	PiglinAbstract
+org.bukkit.entity.PiglinBrute	PiglinBrute
+org.bukkit.entity.Pillager	Pillager
+org.bukkit.entity.Player	Player
+org.bukkit.entity.PolarBear	PolarBear
+org.bukkit.entity.Pose	Pose
+org.bukkit.entity.Projectile	Projectile
+org.bukkit.entity.PufferFish	PufferFish
+org.bukkit.entity.Rabbit	Rabbit
+org.bukkit.entity.Raider	Raider
+org.bukkit.entity.Ravager	Ravager
+org.bukkit.entity.Salmon	Salmon
+org.bukkit.entity.Shearable	Shearable
+org.bukkit.entity.Sheep	Sheep
+org.bukkit.entity.Shulker	Shulker
+org.bukkit.entity.ShulkerBullet	ShulkerBullet
+org.bukkit.entity.Silverfish	Silverfish
+org.bukkit.entity.Sittable	Sittable
+org.bukkit.entity.SizedFireball	SizedFireball
+org.bukkit.entity.Skeleton	Skeleton
+org.bukkit.entity.SkeletonHorse	SkeletonHorse
+org.bukkit.entity.Slime	Slime
+org.bukkit.entity.SmallFireball	SmallFireball
+org.bukkit.entity.Sniffer	Sniffer
+org.bukkit.entity.Snowball	Snowball
+org.bukkit.entity.Snowman	Snowman
+org.bukkit.entity.SpawnCategory	SpawnCategory
+org.bukkit.entity.SpectralArrow	SpectralArrow
+org.bukkit.entity.Spellcaster	Spellcaster
+org.bukkit.entity.Spider	Spider
+org.bukkit.entity.SplashPotion	SplashPotion
+org.bukkit.entity.Squid	Squid
+org.bukkit.entity.Steerable	Steerable
+org.bukkit.entity.Stray	Stray
+org.bukkit.entity.Strider	Strider
+org.bukkit.entity.SulfurCube	SulfurCube
+org.bukkit.entity.TNTPrimed	TNTPrimed
+org.bukkit.entity.Tadpole	Tadpole
+org.bukkit.entity.Tameable	Tameable
+org.bukkit.entity.TextDisplay	TextDisplay
+org.bukkit.entity.ThrowableProjectile	ThrowableProjectile
+org.bukkit.entity.ThrownExpBottle	ThrownExpBottle
+org.bukkit.entity.ThrownPotion	ThrownPotion
+org.bukkit.entity.TippedArrow	TippedArrow
+org.bukkit.entity.TraderLlama	TraderLlama
+org.bukkit.entity.Trident	Trident
+org.bukkit.entity.TropicalFish	TropicalFish
+org.bukkit.entity.Turtle	Turtle
+org.bukkit.entity.Vehicle	Vehicle
+org.bukkit.entity.Vex	Vex
+org.bukkit.entity.Villager	Villager
+org.bukkit.entity.Vindicator	Vindicator
+org.bukkit.entity.WanderingTrader	WanderingTrader
+org.bukkit.entity.Warden	Warden
+org.bukkit.entity.WaterMob	WaterMob
+org.bukkit.entity.WindCharge	WindCharge
+org.bukkit.entity.Witch	Witch
+org.bukkit.entity.Wither	Wither
+org.bukkit.entity.WitherSkeleton	WitherSkeleton
+org.bukkit.entity.WitherSkull	WitherSkull
+org.bukkit.entity.Wolf	Wolf
+org.bukkit.entity.Zoglin	Zoglin
+org.bukkit.entity.Zombie	Zombie
+org.bukkit.entity.ZombieHorse	ZombieHorse
+org.bukkit.entity.ZombieNautilus	ZombieNautilus
+org.bukkit.entity.ZombieVillager	ZombieVillager
+org.bukkit.entity.boat.AcaciaBoat	AcaciaBoat
+org.bukkit.entity.boat.AcaciaChestBoat	AcaciaChestBoat
+org.bukkit.entity.boat.BambooChestRaft	BambooChestRaft
+org.bukkit.entity.boat.BambooRaft	BambooRaft
+org.bukkit.entity.boat.BirchBoat	BirchBoat
+org.bukkit.entity.boat.BirchChestBoat	BirchChestBoat
+org.bukkit.entity.boat.CherryBoat	CherryBoat
+org.bukkit.entity.boat.CherryChestBoat	CherryChestBoat
+org.bukkit.entity.boat.DarkOakBoat	DarkOakBoat
+org.bukkit.entity.boat.DarkOakChestBoat	DarkOakChestBoat
+org.bukkit.entity.boat.JungleBoat	JungleBoat
+org.bukkit.entity.boat.JungleChestBoat	JungleChestBoat
+org.bukkit.entity.boat.MangroveBoat	MangroveBoat
+org.bukkit.entity.boat.MangroveChestBoat	MangroveChestBoat
+org.bukkit.entity.boat.OakBoat	OakBoat
+org.bukkit.entity.boat.OakChestBoat	OakChestBoat
+org.bukkit.entity.boat.PaleOakBoat	PaleOakBoat
+org.bukkit.entity.boat.PaleOakChestBoat	PaleOakChestBoat
+org.bukkit.entity.boat.SpruceBoat	SpruceBoat
+org.bukkit.entity.boat.SpruceChestBoat	SpruceChestBoat
+org.bukkit.entity.memory.MemoryKey	MemoryKey
+org.bukkit.entity.minecart.CommandMinecart	CommandMinecart
+org.bukkit.entity.minecart.ExplosiveMinecart	ExplosiveMinecart
+org.bukkit.entity.minecart.HopperMinecart	HopperMinecart
+org.bukkit.entity.minecart.PoweredMinecart	PoweredMinecart
+org.bukkit.entity.minecart.RideableMinecart	RideableMinecart
+org.bukkit.entity.minecart.SpawnerMinecart	SpawnerMinecart
+org.bukkit.entity.minecart.StorageMinecart	StorageMinecart
+org.bukkit.event.Cancellable	Cancellable
+org.bukkit.event.Event	Event
+org.bukkit.event.EventException	EventException
+org.bukkit.event.EventHandler	EventHandler
+org.bukkit.event.EventPriority	EventPriority
+org.bukkit.event.block.Action	Action
+org.bukkit.event.block.BellResonateEvent	BellResonateEvent
+org.bukkit.event.block.BellRingEvent	BellRingEvent
+org.bukkit.event.block.BlockBreakEvent	BlockBreakEvent
+org.bukkit.event.block.BlockBurnEvent	BlockBurnEvent
+org.bukkit.event.block.BlockCanBuildEvent	BlockCanBuildEvent
+org.bukkit.event.block.BlockCookEvent	BlockCookEvent
+org.bukkit.event.block.BlockDamageAbortEvent	BlockDamageAbortEvent
+org.bukkit.event.block.BlockDamageEvent	BlockDamageEvent
+org.bukkit.event.block.BlockDispenseArmorEvent	BlockDispenseArmorEvent
+org.bukkit.event.block.BlockDispenseEvent	BlockDispenseEvent
+org.bukkit.event.block.BlockDispenseLootEvent	BlockDispenseLootEvent
+org.bukkit.event.block.BlockDropItemEvent	BlockDropItemEvent
+org.bukkit.event.block.BlockEvent	BlockEvent
+org.bukkit.event.block.BlockExpEvent	BlockExpEvent
+org.bukkit.event.block.BlockExplodeEvent	BlockExplodeEvent
+org.bukkit.event.block.BlockFadeEvent	BlockFadeEvent
+org.bukkit.event.block.BlockFertilizeEvent	BlockFertilizeEvent
+org.bukkit.event.block.BlockFormEvent	BlockFormEvent
+org.bukkit.event.block.BlockFromToEvent	BlockFromToEvent
+org.bukkit.event.block.BlockGrowEvent	BlockGrowEvent
+org.bukkit.event.block.BlockIgniteEvent	BlockIgniteEvent
+org.bukkit.event.block.BlockMultiPlaceEvent	BlockMultiPlaceEvent
+org.bukkit.event.block.BlockPhysicsEvent	BlockPhysicsEvent
+org.bukkit.event.block.BlockPistonEvent	BlockPistonEvent
+org.bukkit.event.block.BlockPistonExtendEvent	BlockPistonExtendEvent
+org.bukkit.event.block.BlockPistonRetractEvent	BlockPistonRetractEvent
+org.bukkit.event.block.BlockPlaceEvent	BlockPlaceEvent
+org.bukkit.event.block.BlockReceiveGameEvent	BlockReceiveGameEvent
+org.bukkit.event.block.BlockRedstoneEvent	BlockRedstoneEvent
+org.bukkit.event.block.BlockShearEntityEvent	BlockShearEntityEvent
+org.bukkit.event.block.BlockSpreadEvent	BlockSpreadEvent
+org.bukkit.event.block.BrewingStartEvent	BrewingStartEvent
+org.bukkit.event.block.CampfireStartEvent	CampfireStartEvent
+org.bukkit.event.block.CauldronLevelChangeEvent	CauldronLevelChangeEvent
+org.bukkit.event.block.CrafterCraftEvent	CrafterCraftEvent
+org.bukkit.event.block.EntityBlockFormEvent	EntityBlockFormEvent
+org.bukkit.event.block.FluidLevelChangeEvent	FluidLevelChangeEvent
+org.bukkit.event.block.InventoryBlockStartEvent	InventoryBlockStartEvent
+org.bukkit.event.block.LeavesDecayEvent	LeavesDecayEvent
+org.bukkit.event.block.MoistureChangeEvent	MoistureChangeEvent
+org.bukkit.event.block.NotePlayEvent	NotePlayEvent
+org.bukkit.event.block.SculkBloomEvent	SculkBloomEvent
+org.bukkit.event.block.SignChangeEvent	SignChangeEvent
+org.bukkit.event.block.SpongeAbsorbEvent	SpongeAbsorbEvent
+org.bukkit.event.block.TNTPrimeEvent	TNTPrimeEvent
+org.bukkit.event.block.VaultDisplayItemEvent	VaultDisplayItemEvent
+org.bukkit.event.command.UnknownCommandEvent	UnknownCommandEvent
+org.bukkit.event.enchantment.EnchantItemEvent	EnchantItemEvent
+org.bukkit.event.enchantment.PrepareItemEnchantEvent	PrepareItemEnchantEvent
+org.bukkit.event.entity.AreaEffectCloudApplyEvent	AreaEffectCloudApplyEvent
+org.bukkit.event.entity.ArrowBodyCountChangeEvent	ArrowBodyCountChangeEvent
+org.bukkit.event.entity.BatToggleSleepEvent	BatToggleSleepEvent
+org.bukkit.event.entity.CreatureSpawnEvent	CreatureSpawnEvent
+org.bukkit.event.entity.CreeperPowerEvent	CreeperPowerEvent
+org.bukkit.event.entity.EnderDragonChangePhaseEvent	EnderDragonChangePhaseEvent
+org.bukkit.event.entity.EntityAirChangeEvent	EntityAirChangeEvent
+org.bukkit.event.entity.EntityBreakDoorEvent	EntityBreakDoorEvent
+org.bukkit.event.entity.EntityBreedEvent	EntityBreedEvent
+org.bukkit.event.entity.EntityChangeBlockEvent	EntityChangeBlockEvent
+org.bukkit.event.entity.EntityCombustByBlockEvent	EntityCombustByBlockEvent
+org.bukkit.event.entity.EntityCombustByEntityEvent	EntityCombustByEntityEvent
+org.bukkit.event.entity.EntityCombustEvent	EntityCombustEvent
+org.bukkit.event.entity.EntityCreatePortalEvent	EntityCreatePortalEvent
+org.bukkit.event.entity.EntityDamageByBlockEvent	EntityDamageByBlockEvent
+org.bukkit.event.entity.EntityDamageByEntityEvent	EntityDamageByEntityEvent
+org.bukkit.event.entity.EntityDamageEvent	EntityDamageEvent
+org.bukkit.event.entity.EntityDeathEvent	EntityDeathEvent
+org.bukkit.event.entity.EntityDismountEvent	EntityDismountEvent
+org.bukkit.event.entity.EntityDropItemEvent	EntityDropItemEvent
+org.bukkit.event.entity.EntityEnterBlockEvent	EntityEnterBlockEvent
+org.bukkit.event.entity.EntityEnterLoveModeEvent	EntityEnterLoveModeEvent
+org.bukkit.event.entity.EntityEvent	EntityEvent
+org.bukkit.event.entity.EntityExhaustionEvent	EntityExhaustionEvent
+org.bukkit.event.entity.EntityExplodeEvent	EntityExplodeEvent
+org.bukkit.event.entity.EntityInteractEvent	EntityInteractEvent
+org.bukkit.event.entity.EntityKnockbackByEntityEvent	EntityKnockbackByEntityEvent
+org.bukkit.event.entity.EntityKnockbackEvent	EntityKnockbackEvent
+org.bukkit.event.entity.EntityMountEvent	EntityMountEvent
+org.bukkit.event.entity.EntityPickupItemEvent	EntityPickupItemEvent
+org.bukkit.event.entity.EntityPlaceEvent	EntityPlaceEvent
+org.bukkit.event.entity.EntityPortalEnterEvent	EntityPortalEnterEvent
+org.bukkit.event.entity.EntityPortalEvent	EntityPortalEvent
+org.bukkit.event.entity.EntityPortalExitEvent	EntityPortalExitEvent
+org.bukkit.event.entity.EntityPoseChangeEvent	EntityPoseChangeEvent
+org.bukkit.event.entity.EntityPotionEffectEvent	EntityPotionEffectEvent
+org.bukkit.event.entity.EntityRegainHealthEvent	EntityRegainHealthEvent
+org.bukkit.event.entity.EntityRemoveEvent	EntityRemoveEvent
+org.bukkit.event.entity.EntityResurrectEvent	EntityResurrectEvent
+org.bukkit.event.entity.EntityShootBowEvent	EntityShootBowEvent
+org.bukkit.event.entity.EntitySpawnEvent	EntitySpawnEvent
+org.bukkit.event.entity.EntitySpellCastEvent	EntitySpellCastEvent
+org.bukkit.event.entity.EntityTameEvent	EntityTameEvent
+org.bukkit.event.entity.EntityTargetEvent	EntityTargetEvent
+org.bukkit.event.entity.EntityTargetLivingEntityEvent	EntityTargetLivingEntityEvent
+org.bukkit.event.entity.EntityTeleportEvent	EntityTeleportEvent
+org.bukkit.event.entity.EntityToggleGlideEvent	EntityToggleGlideEvent
+org.bukkit.event.entity.EntityToggleSwimEvent	EntityToggleSwimEvent
+org.bukkit.event.entity.EntityTransformEvent	EntityTransformEvent
+org.bukkit.event.entity.EntityUnleashEvent	EntityUnleashEvent
+org.bukkit.event.entity.ExpBottleEvent	ExpBottleEvent
+org.bukkit.event.entity.ExplosionPrimeEvent	ExplosionPrimeEvent
+org.bukkit.event.entity.FireworkExplodeEvent	FireworkExplodeEvent
+org.bukkit.event.entity.FoodLevelChangeEvent	FoodLevelChangeEvent
+org.bukkit.event.entity.HorseJumpEvent	HorseJumpEvent
+org.bukkit.event.entity.ItemDespawnEvent	ItemDespawnEvent
+org.bukkit.event.entity.ItemMergeEvent	ItemMergeEvent
+org.bukkit.event.entity.ItemSpawnEvent	ItemSpawnEvent
+org.bukkit.event.entity.LingeringPotionSplashEvent	LingeringPotionSplashEvent
+org.bukkit.event.entity.PigZapEvent	PigZapEvent
+org.bukkit.event.entity.PigZombieAngerEvent	PigZombieAngerEvent
+org.bukkit.event.entity.PiglinBarterEvent	PiglinBarterEvent
+org.bukkit.event.entity.PlayerDeathEvent	PlayerDeathEvent
+org.bukkit.event.entity.PlayerLeashEntityEvent	PlayerLeashEntityEvent
+org.bukkit.event.entity.PotionSplashEvent	PotionSplashEvent
+org.bukkit.event.entity.ProjectileHitEvent	ProjectileHitEvent
+org.bukkit.event.entity.ProjectileLaunchEvent	ProjectileLaunchEvent
+org.bukkit.event.entity.SheepDyeWoolEvent	SheepDyeWoolEvent
+org.bukkit.event.entity.SheepRegrowWoolEvent	SheepRegrowWoolEvent
+org.bukkit.event.entity.SlimeSplitEvent	SlimeSplitEvent
+org.bukkit.event.entity.SpawnerSpawnEvent	SpawnerSpawnEvent
+org.bukkit.event.entity.StriderTemperatureChangeEvent	StriderTemperatureChangeEvent
+org.bukkit.event.entity.TrialSpawnerSpawnEvent	TrialSpawnerSpawnEvent
+org.bukkit.event.entity.VillagerAcquireTradeEvent	VillagerAcquireTradeEvent
+org.bukkit.event.entity.VillagerCareerChangeEvent	VillagerCareerChangeEvent
+org.bukkit.event.entity.VillagerReplenishTradeEvent	VillagerReplenishTradeEvent
+org.bukkit.event.hanging.HangingBreakByEntityEvent	HangingBreakByEntityEvent
+org.bukkit.event.hanging.HangingBreakEvent	HangingBreakEvent
+org.bukkit.event.hanging.HangingEvent	HangingEvent
+org.bukkit.event.hanging.HangingPlaceEvent	HangingPlaceEvent
+org.bukkit.event.inventory.BrewEvent	BrewEvent
+org.bukkit.event.inventory.BrewingStandFuelEvent	BrewingStandFuelEvent
+org.bukkit.event.inventory.ClickType	ClickType
+org.bukkit.event.inventory.CraftItemEvent	CraftItemEvent
+org.bukkit.event.inventory.DragType	DragType
+org.bukkit.event.inventory.FurnaceBurnEvent	FurnaceBurnEvent
+org.bukkit.event.inventory.FurnaceExtractEvent	FurnaceExtractEvent
+org.bukkit.event.inventory.FurnaceSmeltEvent	FurnaceSmeltEvent
+org.bukkit.event.inventory.FurnaceStartSmeltEvent	FurnaceStartSmeltEvent
+org.bukkit.event.inventory.HopperInventorySearchEvent	HopperInventorySearchEvent
+org.bukkit.event.inventory.InventoryAction	InventoryAction
+org.bukkit.event.inventory.InventoryClickEvent	InventoryClickEvent
+org.bukkit.event.inventory.InventoryCloseEvent	InventoryCloseEvent
+org.bukkit.event.inventory.InventoryCreativeEvent	InventoryCreativeEvent
+org.bukkit.event.inventory.InventoryDragEvent	InventoryDragEvent
+org.bukkit.event.inventory.InventoryEvent	InventoryEvent
+org.bukkit.event.inventory.InventoryInteractEvent	InventoryInteractEvent
+org.bukkit.event.inventory.InventoryMoveItemEvent	InventoryMoveItemEvent
+org.bukkit.event.inventory.InventoryOpenEvent	InventoryOpenEvent
+org.bukkit.event.inventory.InventoryPickupItemEvent	InventoryPickupItemEvent
+org.bukkit.event.inventory.InventoryType	InventoryType
+org.bukkit.event.inventory.PrepareAnvilEvent	PrepareAnvilEvent
+org.bukkit.event.inventory.PrepareGrindstoneEvent	PrepareGrindstoneEvent
+org.bukkit.event.inventory.PrepareInventoryResultEvent	PrepareInventoryResultEvent
+org.bukkit.event.inventory.PrepareItemCraftEvent	PrepareItemCraftEvent
+org.bukkit.event.inventory.PrepareSmithingEvent	PrepareSmithingEvent
+org.bukkit.event.inventory.SmithItemEvent	SmithItemEvent
+org.bukkit.event.inventory.TradeSelectEvent	TradeSelectEvent
+org.bukkit.event.player.AsyncPlayerChatEvent	AsyncPlayerChatEvent
+org.bukkit.event.player.AsyncPlayerChatPreviewEvent	AsyncPlayerChatPreviewEvent
+org.bukkit.event.player.AsyncPlayerPreLoginEvent	AsyncPlayerPreLoginEvent
+org.bukkit.event.player.PlayerAdvancementDoneEvent	PlayerAdvancementDoneEvent
+org.bukkit.event.player.PlayerAnimationEvent	PlayerAnimationEvent
+org.bukkit.event.player.PlayerAnimationType	PlayerAnimationType
+org.bukkit.event.player.PlayerArmorStandManipulateEvent	PlayerArmorStandManipulateEvent
+org.bukkit.event.player.PlayerAttemptPickupItemEvent	PlayerAttemptPickupItemEvent
+org.bukkit.event.player.PlayerBedEnterEvent	PlayerBedEnterEvent
+org.bukkit.event.player.PlayerBedLeaveEvent	PlayerBedLeaveEvent
+org.bukkit.event.player.PlayerBucketEmptyEvent	PlayerBucketEmptyEvent
+org.bukkit.event.player.PlayerBucketEntityEvent	PlayerBucketEntityEvent
+org.bukkit.event.player.PlayerBucketEvent	PlayerBucketEvent
+org.bukkit.event.player.PlayerBucketFillEvent	PlayerBucketFillEvent
+org.bukkit.event.player.PlayerBucketFishEvent	PlayerBucketFishEvent
+org.bukkit.event.player.PlayerChangedMainHandEvent	PlayerChangedMainHandEvent
+org.bukkit.event.player.PlayerChangedWorldEvent	PlayerChangedWorldEvent
+org.bukkit.event.player.PlayerChannelEvent	PlayerChannelEvent
+org.bukkit.event.player.PlayerChatEvent	PlayerChatEvent
+org.bukkit.event.player.PlayerChatTabCompleteEvent	PlayerChatTabCompleteEvent
+org.bukkit.event.player.PlayerCommandSendEvent	PlayerCommandSendEvent
+org.bukkit.event.player.PlayerDropItemEvent	PlayerDropItemEvent
+org.bukkit.event.player.PlayerEditBookEvent	PlayerEditBookEvent
+org.bukkit.event.player.PlayerEggThrowEvent	PlayerEggThrowEvent
+org.bukkit.event.player.PlayerEvent	PlayerEvent
+org.bukkit.event.player.PlayerExpChangeEvent	PlayerExpChangeEvent
+org.bukkit.event.player.PlayerExpCooldownChangeEvent	PlayerExpCooldownChangeEvent
+org.bukkit.event.player.PlayerFishEvent	PlayerFishEvent
+org.bukkit.event.player.PlayerGameModeChangeEvent	PlayerGameModeChangeEvent
+org.bukkit.event.player.PlayerHarvestBlockEvent	PlayerHarvestBlockEvent
+org.bukkit.event.player.PlayerHideEntityEvent	PlayerHideEntityEvent
+org.bukkit.event.player.PlayerInputEvent	PlayerInputEvent
+org.bukkit.event.player.PlayerInteractAtEntityEvent	PlayerInteractAtEntityEvent
+org.bukkit.event.player.PlayerInteractEntityEvent	PlayerInteractEntityEvent
+org.bukkit.event.player.PlayerInteractEvent	PlayerInteractEvent
+org.bukkit.event.player.PlayerItemBreakEvent	PlayerItemBreakEvent
+org.bukkit.event.player.PlayerItemConsumeEvent	PlayerItemConsumeEvent
+org.bukkit.event.player.PlayerItemDamageEvent	PlayerItemDamageEvent
+org.bukkit.event.player.PlayerItemHeldEvent	PlayerItemHeldEvent
+org.bukkit.event.player.PlayerItemMendEvent	PlayerItemMendEvent
+org.bukkit.event.player.PlayerJoinEvent	PlayerJoinEvent
+org.bukkit.event.player.PlayerKickEvent	PlayerKickEvent
+org.bukkit.event.player.PlayerLevelChangeEvent	PlayerLevelChangeEvent
+org.bukkit.event.player.PlayerLinksSendEvent	PlayerLinksSendEvent
+org.bukkit.event.player.PlayerLocaleChangeEvent	PlayerLocaleChangeEvent
+org.bukkit.event.player.PlayerLoginEvent	PlayerLoginEvent
+org.bukkit.event.player.PlayerMoveEvent	PlayerMoveEvent
+org.bukkit.event.player.PlayerPickupArrowEvent	PlayerPickupArrowEvent
+org.bukkit.event.player.PlayerPickupItemEvent	PlayerPickupItemEvent
+org.bukkit.event.player.PlayerPortalEvent	PlayerPortalEvent
+org.bukkit.event.player.PlayerPreLoginEvent	PlayerPreLoginEvent
+org.bukkit.event.player.PlayerQuitEvent	PlayerQuitEvent
+org.bukkit.event.player.PlayerRecipeBookClickEvent	PlayerRecipeBookClickEvent
+org.bukkit.event.player.PlayerRecipeBookSettingsChangeEvent	PlayerRecipeBookSettingsChangeEvent
+org.bukkit.event.player.PlayerRecipeDiscoverEvent	PlayerRecipeDiscoverEvent
+org.bukkit.event.player.PlayerRegisterChannelEvent	PlayerRegisterChannelEvent
+org.bukkit.event.player.PlayerResourcePackStatusEvent	PlayerResourcePackStatusEvent
+org.bukkit.event.player.PlayerRespawnEvent	PlayerRespawnEvent
+org.bukkit.event.player.PlayerRiptideEvent	PlayerRiptideEvent
+org.bukkit.event.player.PlayerShearEntityEvent	PlayerShearEntityEvent
+org.bukkit.event.player.PlayerShowEntityEvent	PlayerShowEntityEvent
+org.bukkit.event.player.PlayerSignOpenEvent	PlayerSignOpenEvent
+org.bukkit.event.player.PlayerSpawnChangeEvent	PlayerSpawnChangeEvent
+org.bukkit.event.player.PlayerStatisticIncrementEvent	PlayerStatisticIncrementEvent
+org.bukkit.event.player.PlayerSwapHandItemsEvent	PlayerSwapHandItemsEvent
+org.bukkit.event.player.PlayerTakeLecternBookEvent	PlayerTakeLecternBookEvent
+org.bukkit.event.player.PlayerTeleportEvent	PlayerTeleportEvent
+org.bukkit.event.player.PlayerToggleFlightEvent	PlayerToggleFlightEvent
+org.bukkit.event.player.PlayerToggleSneakEvent	PlayerToggleSneakEvent
+org.bukkit.event.player.PlayerToggleSprintEvent	PlayerToggleSprintEvent
+org.bukkit.event.player.PlayerUnleashEntityEvent	PlayerUnleashEntityEvent
+org.bukkit.event.player.PlayerUnregisterChannelEvent	PlayerUnregisterChannelEvent
+org.bukkit.event.player.PlayerVelocityEvent	PlayerVelocityEvent
+org.bukkit.event.raid.RaidEvent	RaidEvent
+org.bukkit.event.raid.RaidFinishEvent	RaidFinishEvent
+org.bukkit.event.raid.RaidSpawnWaveEvent	RaidSpawnWaveEvent
+org.bukkit.event.raid.RaidStopEvent	RaidStopEvent
+org.bukkit.event.raid.RaidTriggerEvent	RaidTriggerEvent
+org.bukkit.event.server.BroadcastMessageEvent	BroadcastMessageEvent
+org.bukkit.event.server.MapInitializeEvent	MapInitializeEvent
+org.bukkit.event.server.PluginDisableEvent	PluginDisableEvent
+org.bukkit.event.server.PluginEnableEvent	PluginEnableEvent
+org.bukkit.event.server.PluginEvent	PluginEvent
+org.bukkit.event.server.ServerEvent	ServerEvent
+org.bukkit.event.server.ServerListPingEvent	ServerListPingEvent
+org.bukkit.event.server.ServerLoadEvent	ServerLoadEvent
+org.bukkit.event.server.ServiceEvent	ServiceEvent
+org.bukkit.event.server.ServiceRegisterEvent	ServiceRegisterEvent
+org.bukkit.event.server.ServiceUnregisterEvent	ServiceUnregisterEvent
+org.bukkit.event.server.TabCompleteEvent	TabCompleteEvent
+org.bukkit.event.vehicle.VehicleBlockCollisionEvent	VehicleBlockCollisionEvent
+org.bukkit.event.vehicle.VehicleCollisionEvent	VehicleCollisionEvent
+org.bukkit.event.vehicle.VehicleCreateEvent	VehicleCreateEvent
+org.bukkit.event.vehicle.VehicleDamageEvent	VehicleDamageEvent
+org.bukkit.event.vehicle.VehicleDestroyEvent	VehicleDestroyEvent
+org.bukkit.event.vehicle.VehicleEnterEvent	VehicleEnterEvent
+org.bukkit.event.vehicle.VehicleEntityCollisionEvent	VehicleEntityCollisionEvent
+org.bukkit.event.vehicle.VehicleEvent	VehicleEvent
+org.bukkit.event.vehicle.VehicleExitEvent	VehicleExitEvent
+org.bukkit.event.vehicle.VehicleMoveEvent	VehicleMoveEvent
+org.bukkit.event.vehicle.VehicleUpdateEvent	VehicleUpdateEvent
+org.bukkit.event.weather.LightningStrikeEvent	LightningStrikeEvent
+org.bukkit.event.weather.ThunderChangeEvent	ThunderChangeEvent
+org.bukkit.event.weather.WeatherChangeEvent	WeatherChangeEvent
+org.bukkit.event.weather.WeatherEvent	WeatherEvent
+org.bukkit.event.world.AsyncStructureGenerateEvent	AsyncStructureGenerateEvent
+org.bukkit.event.world.AsyncStructureSpawnEvent	AsyncStructureSpawnEvent
+org.bukkit.event.world.ChunkEvent	ChunkEvent
+org.bukkit.event.world.ChunkLoadEvent	ChunkLoadEvent
+org.bukkit.event.world.ChunkPopulateEvent	ChunkPopulateEvent
+org.bukkit.event.world.ChunkUnloadEvent	ChunkUnloadEvent
+org.bukkit.event.world.ClockTimeSkipEvent	ClockTimeSkipEvent
+org.bukkit.event.world.EntitiesLoadEvent	EntitiesLoadEvent
+org.bukkit.event.world.EntitiesUnloadEvent	EntitiesUnloadEvent
+org.bukkit.event.world.GenericGameEvent	GenericGameEvent
+org.bukkit.event.world.LootGenerateEvent	LootGenerateEvent
+org.bukkit.event.world.PortalCreateEvent	PortalCreateEvent
+org.bukkit.event.world.SpawnChangeEvent	SpawnChangeEvent
+org.bukkit.event.world.StructureGrowEvent	StructureGrowEvent
+org.bukkit.event.world.TimeSkipEvent	TimeSkipEvent
+org.bukkit.event.world.WorldEvent	WorldEvent
+org.bukkit.event.world.WorldInitEvent	WorldInitEvent
+org.bukkit.event.world.WorldLoadEvent	WorldLoadEvent
+org.bukkit.event.world.WorldSaveEvent	WorldSaveEvent
+org.bukkit.event.world.WorldUnloadEvent	WorldUnloadEvent
+org.bukkit.generator.BiomeParameterPoint	BiomeParameterPoint
+org.bukkit.generator.BiomeProvider	BiomeProvider
+org.bukkit.generator.ChunkGenerator	ChunkGenerator
+org.bukkit.generator.LimitedRegion	LimitedRegion
+org.bukkit.generator.WorldInfo	WorldInfo
+org.bukkit.generator.structure.GeneratedStructure	GeneratedStructure
+org.bukkit.generator.structure.Structure	StructureStructure
+org.bukkit.generator.structure.StructurePiece	StructurePiece
+org.bukkit.generator.structure.StructureType	StructureStructureType
+org.bukkit.help.GenericCommandHelpTopic	GenericCommandHelpTopic
+org.bukkit.help.HelpMap	HelpMap
+org.bukkit.help.HelpTopic	HelpTopic
+org.bukkit.help.HelpTopicComparator	HelpTopicComparator
+org.bukkit.help.HelpTopicFactory	HelpTopicFactory
+org.bukkit.help.IndexHelpTopic	IndexHelpTopic
+org.bukkit.inventory.AbstractHorseInventory	AbstractHorseInventory
+org.bukkit.inventory.AnvilInventory	AnvilInventory
+org.bukkit.inventory.ArmoredHorseInventory	ArmoredHorseInventory
+org.bukkit.inventory.ArmoredMountInventory	ArmoredMountInventory
+org.bukkit.inventory.ArmoredSaddledMountInventory	ArmoredSaddledMountInventory
+org.bukkit.inventory.BeaconInventory	BeaconInventory
+org.bukkit.inventory.BlastingRecipe	BlastingRecipe
+org.bukkit.inventory.BlockInventoryHolder	BlockInventoryHolder
+org.bukkit.inventory.BrewerInventory	BrewerInventory
+org.bukkit.inventory.CampfireRecipe	CampfireRecipe
+org.bukkit.inventory.CartographyInventory	CartographyInventory
+org.bukkit.inventory.ChiseledBookshelfInventory	ChiseledBookshelfInventory
+org.bukkit.inventory.ComplexRecipe	ComplexRecipe
+org.bukkit.inventory.CookingRecipe	CookingRecipe
+org.bukkit.inventory.CrafterInventory	CrafterInventory
+org.bukkit.inventory.CraftingInventory	CraftingInventory
+org.bukkit.inventory.CraftingRecipe	CraftingRecipe
+org.bukkit.inventory.CreativeCategory	CreativeCategory
+org.bukkit.inventory.DecoratedPotInventory	DecoratedPotInventory
+org.bukkit.inventory.DoubleChestInventory	DoubleChestInventory
+org.bukkit.inventory.EnchantingInventory	EnchantingInventory
+org.bukkit.inventory.EntityEquipment	EntityEquipment
+org.bukkit.inventory.EquipmentSlot	EquipmentSlot
+org.bukkit.inventory.EquipmentSlotGroup	EquipmentSlotGroup
+org.bukkit.inventory.FurnaceInventory	FurnaceInventory
+org.bukkit.inventory.FurnaceRecipe	FurnaceRecipe
+org.bukkit.inventory.GrindstoneInventory	GrindstoneInventory
+org.bukkit.inventory.HorseInventory	HorseInventory
+org.bukkit.inventory.Inventory	Inventory
+org.bukkit.inventory.InventoryHolder	InventoryHolder
+org.bukkit.inventory.InventoryView	InventoryView
+org.bukkit.inventory.ItemCraftResult	ItemCraftResult
+org.bukkit.inventory.ItemFactory	ItemFactory
+org.bukkit.inventory.ItemFlag	ItemFlag
+org.bukkit.inventory.ItemRarity	ItemRarity
+org.bukkit.inventory.ItemStack	ItemStack
+org.bukkit.inventory.ItemType	ItemType
+org.bukkit.inventory.JukeboxInventory	JukeboxInventory
+org.bukkit.inventory.LecternInventory	LecternInventory
+org.bukkit.inventory.LlamaInventory	LlamaInventory
+org.bukkit.inventory.LoomInventory	LoomInventory
+org.bukkit.inventory.MainHand	MainHand
+org.bukkit.inventory.MenuType	MenuType
+org.bukkit.inventory.Merchant	Merchant
+org.bukkit.inventory.MerchantInventory	MerchantInventory
+org.bukkit.inventory.MerchantRecipe	MerchantRecipe
+org.bukkit.inventory.MountInventory	MountInventory
+org.bukkit.inventory.PlayerInventory	PlayerInventory
+org.bukkit.inventory.Recipe	Recipe
+org.bukkit.inventory.RecipeChoice	RecipeChoice
+org.bukkit.inventory.SaddledHorseInventory	SaddledHorseInventory
+org.bukkit.inventory.SaddledMountInventory	SaddledMountInventory
+org.bukkit.inventory.ShapedRecipe	ShapedRecipe
+org.bukkit.inventory.ShapelessRecipe	ShapelessRecipe
+org.bukkit.inventory.ShelfInventory	ShelfInventory
+org.bukkit.inventory.SmithingInventory	SmithingInventory
+org.bukkit.inventory.SmithingRecipe	SmithingRecipe
+org.bukkit.inventory.SmithingTransformRecipe	SmithingTransformRecipe
+org.bukkit.inventory.SmithingTrimRecipe	SmithingTrimRecipe
+org.bukkit.inventory.SmokingRecipe	SmokingRecipe
+org.bukkit.inventory.StonecutterInventory	StonecutterInventory
+org.bukkit.inventory.StonecuttingRecipe	StonecuttingRecipe
+org.bukkit.inventory.TransmuteRecipe	TransmuteRecipe
+org.bukkit.inventory.meta.ArmorMeta	ArmorMeta
+org.bukkit.inventory.meta.AxolotlBucketMeta	AxolotlBucketMeta
+org.bukkit.inventory.meta.BannerMeta	BannerMeta
+org.bukkit.inventory.meta.BlockDataMeta	BlockDataMeta
+org.bukkit.inventory.meta.BlockStateMeta	BlockStateMeta
+org.bukkit.inventory.meta.BookMeta	BookMeta
+org.bukkit.inventory.meta.BundleMeta	BundleMeta
+org.bukkit.inventory.meta.ColorableArmorMeta	ColorableArmorMeta
+org.bukkit.inventory.meta.CompassMeta	CompassMeta
+org.bukkit.inventory.meta.CrossbowMeta	CrossbowMeta
+org.bukkit.inventory.meta.Damageable	MetaDamageable
+org.bukkit.inventory.meta.EnchantmentStorageMeta	EnchantmentStorageMeta
+org.bukkit.inventory.meta.FireworkEffectMeta	FireworkEffectMeta
+org.bukkit.inventory.meta.FireworkMeta	FireworkMeta
+org.bukkit.inventory.meta.ItemMeta	ItemMeta
+org.bukkit.inventory.meta.KnowledgeBookMeta	KnowledgeBookMeta
+org.bukkit.inventory.meta.LeatherArmorMeta	LeatherArmorMeta
+org.bukkit.inventory.meta.MapMeta	MapMeta
+org.bukkit.inventory.meta.MusicInstrumentMeta	MusicInstrumentMeta
+org.bukkit.inventory.meta.OminousBottleMeta	OminousBottleMeta
+org.bukkit.inventory.meta.PotionMeta	PotionMeta
+org.bukkit.inventory.meta.Repairable	Repairable
+org.bukkit.inventory.meta.ShieldMeta	ShieldMeta
+org.bukkit.inventory.meta.SkullMeta	SkullMeta
+org.bukkit.inventory.meta.SpawnEggMeta	SpawnEggMeta
+org.bukkit.inventory.meta.SuspiciousStewMeta	SuspiciousStewMeta
+org.bukkit.inventory.meta.TropicalFishBucketMeta	TropicalFishBucketMeta
+org.bukkit.inventory.meta.WritableBookMeta	WritableBookMeta
+org.bukkit.inventory.meta.components.CustomModelDataComponent	CustomModelDataComponent
+org.bukkit.inventory.meta.components.EquippableComponent	EquippableComponent
+org.bukkit.inventory.meta.components.FoodComponent	FoodComponent
+org.bukkit.inventory.meta.components.JukeboxPlayableComponent	JukeboxPlayableComponent
+org.bukkit.inventory.meta.components.ToolComponent	ToolComponent
+org.bukkit.inventory.meta.components.UseCooldownComponent	UseCooldownComponent
+org.bukkit.inventory.meta.tags.CustomItemTagContainer	CustomItemTagContainer
+org.bukkit.inventory.meta.tags.ItemTagAdapterContext	ItemTagAdapterContext
+org.bukkit.inventory.meta.tags.ItemTagType	ItemTagType
+org.bukkit.inventory.meta.trim.ArmorTrim	ArmorTrim
+org.bukkit.inventory.meta.trim.TrimMaterial	TrimMaterial
+org.bukkit.inventory.meta.trim.TrimPattern	TrimPattern
+org.bukkit.inventory.recipe.CookingBookCategory	CookingBookCategory
+org.bukkit.inventory.recipe.CraftingBookCategory	CraftingBookCategory
+org.bukkit.inventory.view.AnvilView	AnvilView
+org.bukkit.inventory.view.BeaconView	BeaconView
+org.bukkit.inventory.view.BrewingStandView	BrewingStandView
+org.bukkit.inventory.view.CrafterView	CrafterView
+org.bukkit.inventory.view.EnchantmentView	EnchantmentView
+org.bukkit.inventory.view.FurnaceView	FurnaceView
+org.bukkit.inventory.view.LecternView	LecternView
+org.bukkit.inventory.view.LoomView	LoomView
+org.bukkit.inventory.view.MerchantView	MerchantView
+org.bukkit.inventory.view.StonecutterView	StonecutterView
+org.bukkit.inventory.view.builder.InventoryViewBuilder	InventoryViewBuilder
+org.bukkit.inventory.view.builder.LocationInventoryViewBuilder	LocationInventoryViewBuilder
+org.bukkit.inventory.view.builder.MerchantInventoryViewBuilder	MerchantInventoryViewBuilder
+org.bukkit.loot.LootContext	LootContext
+org.bukkit.loot.LootTable	LootTable
+org.bukkit.loot.LootTables	LootTables
+org.bukkit.loot.Lootable	Lootable
+org.bukkit.map.MapCanvas	MapCanvas
+org.bukkit.map.MapCursor	MapCursor
+org.bukkit.map.MapCursorCollection	MapCursorCollection
+org.bukkit.map.MapFont	MapFont
+org.bukkit.map.MapPalette	MapPalette
+org.bukkit.map.MapRenderer	MapRenderer
+org.bukkit.map.MapView	MapView
+org.bukkit.map.MinecraftFont	MinecraftFont
+org.bukkit.metadata.FixedMetadataValue	FixedMetadataValue
+org.bukkit.metadata.LazyMetadataValue	LazyMetadataValue
+org.bukkit.metadata.MetadataConversionException	MetadataConversionException
+org.bukkit.metadata.MetadataEvaluationException	MetadataEvaluationException
+org.bukkit.metadata.MetadataStore	MetadataStore
+org.bukkit.metadata.MetadataStoreBase	MetadataStoreBase
+org.bukkit.metadata.MetadataValue	MetadataValue
+org.bukkit.metadata.MetadataValueAdapter	MetadataValueAdapter
+org.bukkit.metadata.Metadatable	Metadatable
+org.bukkit.packs.ResourcePack	ResourcePack
+org.bukkit.permissions.Permissible	Permissible
+org.bukkit.permissions.PermissionAttachmentInfo	PermissionAttachmentInfo
+org.bukkit.permissions.PermissionDefault	PermissionDefault
+org.bukkit.permissions.ServerOperator	ServerOperator
+org.bukkit.persistence.ListPersistentDataType	ListPersistentDataType
+org.bukkit.persistence.ListPersistentDataTypeProvider	ListPersistentDataTypeProvider
+org.bukkit.persistence.PersistentDataAdapterContext	PersistentDataAdapterContext
+org.bukkit.persistence.PersistentDataContainer	PersistentDataContainer
+org.bukkit.persistence.PersistentDataHolder	PersistentDataHolder
+org.bukkit.persistence.PersistentDataType	PersistentDataType
+org.bukkit.potion.PotionBrewer	PotionBrewer
+org.bukkit.potion.PotionData	PotionData
+org.bukkit.potion.PotionEffect	PotionEffect
+org.bukkit.potion.PotionEffectType	PotionEffectType
+org.bukkit.potion.PotionEffectTypeCategory	PotionEffectTypeCategory
+org.bukkit.potion.PotionEffectTypeWrapper	PotionEffectTypeWrapper
+org.bukkit.potion.PotionType	PotionType
+org.bukkit.profile.PlayerProfile	PlayerProfile
+org.bukkit.profile.PlayerTextures	PlayerTextures
+org.bukkit.projectiles.BlockProjectileSource	BlockProjectileSource
+org.bukkit.scheduler.BukkitWorker	BukkitWorker
+org.bukkit.scoreboard.Criteria	Criteria
+org.bukkit.scoreboard.DisplaySlot	DisplaySlot
+org.bukkit.scoreboard.NameTagVisibility	NameTagVisibility
+org.bukkit.scoreboard.Objective	Objective
+org.bukkit.scoreboard.RenderType	RenderType
+org.bukkit.scoreboard.Score	Score
+org.bukkit.scoreboard.Scoreboard	Scoreboard
+org.bukkit.scoreboard.ScoreboardManager	ScoreboardManager
+org.bukkit.scoreboard.Team	Team
+org.bukkit.spawner.BaseSpawner	BaseSpawner
+org.bukkit.spawner.Spawner	Spawner
+org.bukkit.spawner.TrialSpawnerConfiguration	TrialSpawnerConfiguration
+org.bukkit.structure.Palette	Palette
+org.bukkit.structure.Structure	BukkitStructureStructure
+org.bukkit.structure.StructureManager	StructureManager
+org.bukkit.util.BiomeSearchResult	BiomeSearchResult
+org.bukkit.util.BlockIterator	BlockIterator
+org.bukkit.util.BlockTransformer	BlockTransformer
+org.bukkit.util.BlockVector	BlockVector
+org.bukkit.util.BoundingBox	BoundingBox
+org.bukkit.util.CachedServerIcon	CachedServerIcon
+org.bukkit.util.ChatPaginator	ChatPaginator
+org.bukkit.util.Consumer	Consumer
+org.bukkit.util.EntityTransformer	EntityTransformer
+org.bukkit.util.EulerAngle	EulerAngle
+org.bukkit.util.NumberConversions	NumberConversions
+org.bukkit.util.OldEnum	OldEnum
+org.bukkit.util.RayTraceResult	RayTraceResult
+org.bukkit.util.StringUtil	StringUtil
+org.bukkit.util.StructureSearchResult	StructureSearchResult
+org.bukkit.util.Transformation	Transformation
+org.bukkit.util.Vector	Vector
+org.bukkit.util.VoxelShape	VoxelShape
+org.bukkit.util.io.BukkitObjectInputStream	BukkitObjectInputStream
+org.bukkit.util.io.BukkitObjectOutputStream	BukkitObjectOutputStream
+org.bukkit.util.noise.NoiseGenerator	NoiseGenerator
+org.bukkit.util.noise.OctaveGenerator	OctaveGenerator
+org.bukkit.util.noise.PerlinNoiseGenerator	PerlinNoiseGenerator
+org.bukkit.util.noise.PerlinOctaveGenerator	PerlinOctaveGenerator
+org.bukkit.util.noise.SimplexNoiseGenerator	SimplexNoiseGenerator
+org.bukkit.util.noise.SimplexOctaveGenerator	SimplexOctaveGenerator

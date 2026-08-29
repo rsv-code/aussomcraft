@@ -1858,7 +1858,7 @@ Tier: dangerous. Do not edit.
 
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Player.html#getPlayerProfile()
 
-	- **@r** `A` [PlayerProfile](PlayerProfile.aus.md).
+	- **@r** `A` ProfilePlayerProfile.
 
 
 - **getPlayerTime** ()
@@ -4519,7 +4519,7 @@ Tier: dangerous. Do not edit.
 
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Player.html#setPlayerProfile(com.destroystokyo.paper.profile.PlayerProfile)
 
-	- **@p** `Profile` is a [PlayerProfile](PlayerProfile.aus.md).
+	- **@p** `Profile` is a ProfilePlayerProfile.
 
 
 - **setPlayerTime** (`Time, TickTime`)

@@ -4,9 +4,9 @@
 
 [19:14] (extern: com.lehman.aussomcraft.paper.gen.dangerous.SaplingShim) **extends: object** 
 
-Generated shim for org.bukkit.material.Sapling.
-Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Sapling.html
-In Paper this is a [Wood](Wood.aus.md).
+Generated shim for org.bukkit.block.data.type.Sapling.
+Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Sapling.html
+In Paper this is a [BlockData](BlockData.aus.md).
 Every method it inherits is declared here too, so there is
 nothing to follow up to.
 Tier: dangerous. Do not edit.
@@ -18,95 +18,217 @@ Tier: dangerous. Do not edit.
 
 - **clone** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Sapling.html#clone()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Sapling.html#clone()
 
-	- **@r** `A` [Sapling](Sapling.aus.md).
-
-
-- **equals** (`Obj`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Sapling.html#equals(java.lang.Object)
-
-	- **@p** `Obj` is an Object.
-	- **@r** `A` bool.
+	- **@r** `A` [BlockData](BlockData.aus.md).
 
 
-- **getData** ()
+- **copyTo** (`Other`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Sapling.html#getData()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Sapling.html#copyTo(org.bukkit.block.data.BlockData)
+
+	- **@p** `Other` is a [BlockData](BlockData.aus.md).
+
+
+- **createBlockState** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Sapling.html#createBlockState()
+
+	- **@r** `A` [BlockState](BlockState.aus.md).
+
+
+- **getAsString** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Sapling.html#getAsString()
+
+	- **@r** `A` string.
+
+
+- **getAsString** (`HideUnspecified`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Sapling.html#getAsString(boolean)
+
+	- **@p** `HideUnspecified` is a bool.
+	- **@r** `A` string.
+
+
+- **getCollisionShape** (`Location`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Sapling.html#getCollisionShape(org.bukkit.Location)
+
+	- **@p** `Location` is a [Location](Location.aus.md).
+	- **@r** `A` [VoxelShape](VoxelShape.aus.md).
+
+
+- **getDestroySpeed** (`ItemStack`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Sapling.html#getDestroySpeed(org.bukkit.inventory.ItemStack)
+
+	- **@p** `ItemStack` is an [ItemStack](ItemStack.aus.md).
+	- **@r** `A` double.
+
+
+- **getDestroySpeed** (`ItemStack, ConsiderEnchants`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Sapling.html#getDestroySpeed(org.bukkit.inventory.ItemStack,boolean)
+
+	- **@p** `ItemStack` is an [ItemStack](ItemStack.aus.md).
+	- **@p** `ConsiderEnchants` is a bool.
+	- **@r** `A` double.
+
+
+- **getLightEmission** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Sapling.html#getLightEmission()
 
 	- **@r** `An` int.
 
 
-- **getItemType** ()
+- **getMapColor** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Sapling.html#getItemType()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Sapling.html#getMapColor()
+
+	- **@r** `A` [Color](Color.aus.md).
+
+
+- **getMaterial** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Sapling.html#getMaterial()
 
 	- **@r** `A` string naming a [Material](Material.aus.md).
 
 
-- **getSpecies** ()
+- **getMaximumStage** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Sapling.html#getSpecies()
-
-	- **@r** `A` string naming a [TreeSpecies](TreeSpecies.aus.md).
-
-
-- **hashCode** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Sapling.html#hashCode()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Sapling.html#getMaximumStage()
 
 	- **@r** `An` int.
 
 
-- **isInstantGrowable** ()
+- **getPistonMoveReaction** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Sapling.html#isInstantGrowable()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Sapling.html#getPistonMoveReaction()
+
+	- **@r** `A` string naming a [PistonMoveReaction](PistonMoveReaction.aus.md).
+
+
+- **getPlacementMaterial** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Sapling.html#getPlacementMaterial()
+
+	- **@r** `A` string naming a [Material](Material.aus.md).
+
+
+- **getSoundGroup** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Sapling.html#getSoundGroup()
+
+	- **@r** `A` [SoundGroup](SoundGroup.aus.md).
+
+
+- **getStage** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Sapling.html#getStage()
+
+	- **@r** `An` int.
+
+
+- **isFaceSturdy** (`Face, Support`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Sapling.html#isFaceSturdy(org.bukkit.block.BlockFace,org.bukkit.block.BlockSupport)
+
+	- **@p** `Face` is a string naming a [BlockFace](BlockFace.aus.md).
+	- **@p** `Support` is a string naming a [BlockSupport](BlockSupport.aus.md).
+	- **@r** `A` bool.
+
+
+- **isOccluding** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Sapling.html#isOccluding()
 
 	- **@r** `A` bool.
 
 
-- **setData** (`Data`)
+- **isPreferredTool** (`Tool`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Sapling.html#setData(byte)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Sapling.html#isPreferredTool(org.bukkit.inventory.ItemStack)
 
-	- **@p** `Data` is an int.
-
-
-- **setIsInstantGrowable** (`IsInstantGrowable`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Sapling.html#setIsInstantGrowable(boolean)
-
-	- **@p** `IsInstantGrowable` is a bool.
+	- **@p** `Tool` is an [ItemStack](ItemStack.aus.md).
+	- **@r** `A` bool.
 
 
-- **setSpecies** (`Species`)
+- **isRandomlyTicked** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Sapling.html#setSpecies(org.bukkit.TreeSpecies)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Sapling.html#isRandomlyTicked()
 
-	- **@p** `Species` is a string naming a [TreeSpecies](TreeSpecies.aus.md).
-
-
-- **toItemStack** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Sapling.html#toItemStack()
-
-	- **@r** `An` [ItemStack](ItemStack.aus.md).
+	- **@r** `A` bool.
 
 
-- **toItemStack** (`Amount`)
+- **isReplaceable** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Sapling.html#toItemStack(int)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Sapling.html#isReplaceable()
 
-	- **@p** `Amount` is an int.
-	- **@r** `An` [ItemStack](ItemStack.aus.md).
+	- **@r** `A` bool.
 
 
-- **toString** ()
+- **isSupported** (`Block`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Sapling.html#toString()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Sapling.html#isSupported(org.bukkit.block.Block)
 
-	- **@r** `A` string.
+	- **@p** `Block` is a [Block](Block.aus.md).
+	- **@r** `A` bool.
+
+
+- **isSupported\_location** (`Location`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Sapling.html#isSupported(org.bukkit.Location)
+
+	- **@p** `Location` is a [Location](Location.aus.md).
+	- **@r** `A` bool.
+
+
+- **matches** (`Data`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Sapling.html#matches(org.bukkit.block.data.BlockData)
+
+	- **@p** `Data` is a [BlockData](BlockData.aus.md).
+	- **@r** `A` bool.
+
+
+- **merge** (`Data`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Sapling.html#merge(org.bukkit.block.data.BlockData)
+
+	- **@p** `Data` is a [BlockData](BlockData.aus.md).
+	- **@r** `A` [BlockData](BlockData.aus.md).
+
+
+- **mirror** (`Mirror`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Sapling.html#mirror(org.bukkit.block.structure.Mirror)
+
+	- **@p** `Mirror` is a string naming a [Mirror](Mirror.aus.md).
+
+
+- **requiresCorrectToolForDrops** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Sapling.html#requiresCorrectToolForDrops()
+
+	- **@r** `A` bool.
+
+
+- **rotate** (`Rotation`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Sapling.html#rotate(org.bukkit.block.structure.StructureRotation)
+
+	- **@p** `Rotation` is a string naming a [StructureRotation](StructureRotation.aus.md).
+
+
+- **setStage** (`Stage`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Sapling.html#setStage(int)
+
+	- **@p** `Stage` is an int.
 
 
 

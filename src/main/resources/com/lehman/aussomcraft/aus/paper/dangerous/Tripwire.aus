@@ -6,11 +6,13 @@
  */
 
 /**
- * Generated shim for org.bukkit.material.Tripwire.
+ * Generated shim for org.bukkit.block.data.type.Tripwire.
  *
- * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Tripwire.html
+ * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Tripwire.html
  *
- * In Paper this is a [MaterialData](MaterialData.aus.md).
+ * In Paper this is a [Attachable](Attachable.aus.md),
+ * [MultipleFacing](MultipleFacing.aus.md) and
+ * [Powerable](Powerable.aus.md).
  * Every method it inherits is declared here too, so there is
  * nothing to follow up to.
  *
@@ -20,95 +22,271 @@ extern class Tripwire : com.lehman.aussomcraft.paper.gen.dangerous.TripwireShim 
     public extern __opEq__(A0);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Tripwire.html#clone()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Tripwire.html#clone()
      *
-     * @r A [Tripwire](Tripwire.aus.md).
+     * @r A [BlockData](BlockData.aus.md).
      */
     public extern clone();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Tripwire.html#equals(java.lang.Object)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Tripwire.html#copyTo(org.bukkit.block.data.BlockData)
      *
-     * @p Obj is an Object.
-     * @r A bool.
+     * @p Other is a [BlockData](BlockData.aus.md).
      */
-    public extern equals(Obj);
+    public extern copyTo(Other);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Tripwire.html#getData()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Tripwire.html#createBlockState()
      *
-     * @r An int.
+     * @r A [BlockState](BlockState.aus.md).
      */
-    public extern getData();
+    public extern createBlockState();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Tripwire.html#getItemType()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Tripwire.html#getAllowedFaces()
      *
-     * @r A string naming a [Material](Material.aus.md).
+     * @r A list.
      */
-    public extern getItemType();
+    public extern getAllowedFaces();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Tripwire.html#hashCode()
-     *
-     * @r An int.
-     */
-    public extern hashCode();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Tripwire.html#isActivated()
-     *
-     * @r A bool.
-     */
-    public extern isActivated();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Tripwire.html#isObjectTriggering()
-     *
-     * @r A bool.
-     */
-    public extern isObjectTriggering();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Tripwire.html#setActivated(boolean)
-     *
-     * @p Act is a bool.
-     */
-    public extern setActivated(Act);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Tripwire.html#setData(byte)
-     *
-     * @p Data is an int.
-     */
-    public extern setData(Data);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Tripwire.html#setObjectTriggering(boolean)
-     *
-     * @p Trig is a bool.
-     */
-    public extern setObjectTriggering(Trig);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Tripwire.html#toItemStack()
-     *
-     * @r An [ItemStack](ItemStack.aus.md).
-     */
-    public extern toItemStack();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Tripwire.html#toItemStack(int)
-     *
-     * @p Amount is an int.
-     * @r An [ItemStack](ItemStack.aus.md).
-     */
-    public extern toItemStack(Amount);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/material/Tripwire.html#toString()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Tripwire.html#getAsString()
      *
      * @r A string.
      */
-    public extern toString();
+    public extern getAsString();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Tripwire.html#getAsString(boolean)
+     *
+     * @p HideUnspecified is a bool.
+     * @r A string.
+     */
+    public extern getAsString(HideUnspecified);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Tripwire.html#getCollisionShape(org.bukkit.Location)
+     *
+     * @p Location is a [Location](Location.aus.md).
+     * @r A [VoxelShape](VoxelShape.aus.md).
+     */
+    public extern getCollisionShape(Location);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Tripwire.html#getDestroySpeed(org.bukkit.inventory.ItemStack)
+     *
+     * @p ItemStack is an [ItemStack](ItemStack.aus.md).
+     * @r A double.
+     */
+    public extern getDestroySpeed(ItemStack);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Tripwire.html#getDestroySpeed(org.bukkit.inventory.ItemStack,boolean)
+     *
+     * @p ItemStack is an [ItemStack](ItemStack.aus.md).
+     * @p ConsiderEnchants is a bool.
+     * @r A double.
+     */
+    public extern getDestroySpeed(ItemStack, ConsiderEnchants);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Tripwire.html#getFaces()
+     *
+     * @r A list.
+     */
+    public extern getFaces();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Tripwire.html#getLightEmission()
+     *
+     * @r An int.
+     */
+    public extern getLightEmission();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Tripwire.html#getMapColor()
+     *
+     * @r A [Color](Color.aus.md).
+     */
+    public extern getMapColor();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Tripwire.html#getMaterial()
+     *
+     * @r A string naming a [Material](Material.aus.md).
+     */
+    public extern getMaterial();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Tripwire.html#getPistonMoveReaction()
+     *
+     * @r A string naming a
+     * [PistonMoveReaction](PistonMoveReaction.aus.md).
+     */
+    public extern getPistonMoveReaction();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Tripwire.html#getPlacementMaterial()
+     *
+     * @r A string naming a [Material](Material.aus.md).
+     */
+    public extern getPlacementMaterial();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Tripwire.html#getSoundGroup()
+     *
+     * @r A [SoundGroup](SoundGroup.aus.md).
+     */
+    public extern getSoundGroup();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Tripwire.html#hasFace(org.bukkit.block.BlockFace)
+     *
+     * @p Face is a string naming a [BlockFace](BlockFace.aus.md).
+     * @r A bool.
+     */
+    public extern hasFace(Face);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Tripwire.html#isAttached()
+     *
+     * @r A bool.
+     */
+    public extern isAttached();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Tripwire.html#isDisarmed()
+     *
+     * @r A bool.
+     */
+    public extern isDisarmed();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Tripwire.html#isFaceSturdy(org.bukkit.block.BlockFace,org.bukkit.block.BlockSupport)
+     *
+     * @p Face is a string naming a [BlockFace](BlockFace.aus.md).
+     * @p Support is a string naming a
+     * [BlockSupport](BlockSupport.aus.md).
+     * @r A bool.
+     */
+    public extern isFaceSturdy(Face, Support);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Tripwire.html#isOccluding()
+     *
+     * @r A bool.
+     */
+    public extern isOccluding();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Tripwire.html#isPowered()
+     *
+     * @r A bool.
+     */
+    public extern isPowered();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Tripwire.html#isPreferredTool(org.bukkit.inventory.ItemStack)
+     *
+     * @p Tool is an [ItemStack](ItemStack.aus.md).
+     * @r A bool.
+     */
+    public extern isPreferredTool(Tool);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Tripwire.html#isRandomlyTicked()
+     *
+     * @r A bool.
+     */
+    public extern isRandomlyTicked();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Tripwire.html#isReplaceable()
+     *
+     * @r A bool.
+     */
+    public extern isReplaceable();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Tripwire.html#isSupported(org.bukkit.block.Block)
+     *
+     * @p Block is a [Block](Block.aus.md).
+     * @r A bool.
+     */
+    public extern isSupported(Block);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Tripwire.html#isSupported(org.bukkit.Location)
+     *
+     * @p Location is a [Location](Location.aus.md).
+     * @r A bool.
+     */
+    public extern isSupported_location(Location);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Tripwire.html#matches(org.bukkit.block.data.BlockData)
+     *
+     * @p Data is a [BlockData](BlockData.aus.md).
+     * @r A bool.
+     */
+    public extern matches(Data);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Tripwire.html#merge(org.bukkit.block.data.BlockData)
+     *
+     * @p Data is a [BlockData](BlockData.aus.md).
+     * @r A [BlockData](BlockData.aus.md).
+     */
+    public extern merge(Data);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Tripwire.html#mirror(org.bukkit.block.structure.Mirror)
+     *
+     * @p Mirror is a string naming a [Mirror](Mirror.aus.md).
+     */
+    public extern mirror(Mirror);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Tripwire.html#requiresCorrectToolForDrops()
+     *
+     * @r A bool.
+     */
+    public extern requiresCorrectToolForDrops();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Tripwire.html#rotate(org.bukkit.block.structure.StructureRotation)
+     *
+     * @p Rotation is a string naming a
+     * [StructureRotation](StructureRotation.aus.md).
+     */
+    public extern rotate(Rotation);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Tripwire.html#setAttached(boolean)
+     *
+     * @p Attached is a bool.
+     */
+    public extern setAttached(Attached);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Tripwire.html#setDisarmed(boolean)
+     *
+     * @p Disarmed is a bool.
+     */
+    public extern setDisarmed(Disarmed);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Tripwire.html#setFace(org.bukkit.block.BlockFace,boolean)
+     *
+     * @p Face is a string naming a [BlockFace](BlockFace.aus.md).
+     * @p Has is a bool.
+     */
+    public extern setFace(Face, Has);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Tripwire.html#setPowered(boolean)
+     *
+     * @p Powered is a bool.
+     */
+    public extern setPowered(Powered);
 }

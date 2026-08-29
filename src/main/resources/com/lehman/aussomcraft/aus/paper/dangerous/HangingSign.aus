@@ -6,13 +6,11 @@
  */
 
 /**
- * Generated shim for org.bukkit.block.data.type.HangingSign.
+ * Generated shim for org.bukkit.block.HangingSign.
  *
- * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html
+ * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html
  *
- * In Paper this is a [Attachable](Attachable.aus.md),
- * [Rotatable](Rotatable.aus.md) and
- * [Waterlogged](Waterlogged.aus.md).
+ * In Paper this is a [Sign](Sign.aus.md).
  * Every method it inherits is declared here too, so there is
  * nothing to follow up to.
  *
@@ -22,241 +20,395 @@ extern class HangingSign : com.lehman.aussomcraft.paper.gen.dangerous.HangingSig
     public extern __opEq__(A0);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#clone()
-     *
-     * @r A [BlockData](BlockData.aus.md).
-     */
-    public extern clone();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#copyTo(org.bukkit.block.data.BlockData)
-     *
-     * @p Other is a [BlockData](BlockData.aus.md).
-     */
-    public extern copyTo(Other);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#createBlockState()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#copy()
      *
      * @r A [BlockState](BlockState.aus.md).
      */
-    public extern createBlockState();
+    public extern copy();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#getAsString()
-     *
-     * @r A string.
-     */
-    public extern getAsString();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#getAsString(boolean)
-     *
-     * @p HideUnspecified is a bool.
-     * @r A string.
-     */
-    public extern getAsString(HideUnspecified);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#getCollisionShape(org.bukkit.Location)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#copy(org.bukkit.Location)
      *
      * @p Location is a [Location](Location.aus.md).
-     * @r A [VoxelShape](VoxelShape.aus.md).
+     * @r A [BlockState](BlockState.aus.md).
      */
-    public extern getCollisionShape(Location);
+    public extern copy(Location);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#getDestroySpeed(org.bukkit.inventory.ItemStack)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getAllowedEditor()
      *
-     * @p ItemStack is an [ItemStack](ItemStack.aus.md).
-     * @r A double.
+     * @r A [Player](Player.aus.md).
      */
-    public extern getDestroySpeed(ItemStack);
+    public extern getAllowedEditor();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#getDestroySpeed(org.bukkit.inventory.ItemStack,boolean)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getAllowedEditorUniqueId()
      *
-     * @p ItemStack is an [ItemStack](ItemStack.aus.md).
-     * @p ConsiderEnchants is a bool.
-     * @r A double.
+     * @r A string.
      */
-    public extern getDestroySpeed(ItemStack, ConsiderEnchants);
+    public extern getAllowedEditorUniqueId();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#getLightEmission()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getBlock()
+     *
+     * @r A [Block](Block.aus.md).
+     */
+    public extern getBlock();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getBlockData()
+     *
+     * @r A [BlockData](BlockData.aus.md).
+     */
+    public extern getBlockData();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getChunk()
+     *
+     * @r A [Chunk](Chunk.aus.md).
+     */
+    public extern getChunk();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getColor()
+     *
+     * @r A string naming a [DyeColor](DyeColor.aus.md).
+     */
+    public extern getColor();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getDrops()
+     *
+     * @r A list.
+     */
+    public extern getDrops();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getDrops(org.bukkit.inventory.ItemStack)
+     *
+     * @p Tool is an [ItemStack](ItemStack.aus.md).
+     * @r A list.
+     */
+    public extern getDrops(Tool);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getDrops(org.bukkit.inventory.ItemStack,org.bukkit.entity.Entity)
+     *
+     * @p Tool is an [ItemStack](ItemStack.aus.md).
+     * @p Entity is an [Entity](Entity.aus.md).
+     * @r A list.
+     */
+    public extern getDrops(Tool, Entity);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getInteractableSideFor(org.bukkit.entity.Entity)
+     *
+     * @p Entity is an [Entity](Entity.aus.md).
+     * @r A string naming a [Side](Side.aus.md).
+     */
+    public extern getInteractableSideFor(Entity);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getInteractableSideFor(io.papermc.paper.math.Position)
+     *
+     * @p Position is a [Position](Position.aus.md).
+     * @r A string naming a [Side](Side.aus.md).
+     */
+    public extern getInteractableSideFor_position(Position);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getInteractableSideFor(double,double)
+     *
+     * @p X is a double.
+     * @p Z is a double.
+     * @r A string naming a [Side](Side.aus.md).
+     */
+    public extern getInteractableSideFor(X, Z);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getLightLevel()
      *
      * @r An int.
      */
-    public extern getLightEmission();
+    public extern getLightLevel();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#getMapColor()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getLine(int)
      *
-     * @r A [Color](Color.aus.md).
+     * @p Index is an int.
+     * @r A string.
      */
-    public extern getMapColor();
+    public extern getLine(Index);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#getMaterial()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getLocation()
+     *
+     * @r A [Location](Location.aus.md).
+     */
+    public extern getLocation();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getLocation(org.bukkit.Location)
+     *
+     * @p Loc is a [Location](Location.aus.md).
+     * @r A [Location](Location.aus.md).
+     */
+    public extern getLocation(Loc);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getMetadata(java.lang.String)
+     *
+     * @p MetadataKey is a string.
+     * @r A list.
+     */
+    public extern getMetadata(MetadataKey);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getPersistentDataContainer()
+     *
+     * @r A [PersistentDataContainer](PersistentDataContainer.aus.md).
+     */
+    public extern getPersistentDataContainer();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getRawData()
+     *
+     * @r An int.
+     */
+    public extern getRawData();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getSide(org.bukkit.block.sign.Side)
+     *
+     * @p Side is a string naming a [Side](Side.aus.md).
+     * @r A [SignSide](SignSide.aus.md).
+     */
+    public extern getSide(Side);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getTargetSide(org.bukkit.entity.Player)
+     *
+     * @p Player is a [Player](Player.aus.md).
+     * @r A [SignSide](SignSide.aus.md).
+     */
+    public extern getTargetSide(Player);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getType()
      *
      * @r A string naming a [Material](Material.aus.md).
      */
-    public extern getMaterial();
+    public extern getType();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#getPistonMoveReaction()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getWorld()
      *
-     * @r A string naming a
-     * [PistonMoveReaction](PistonMoveReaction.aus.md).
+     * @r A [World](World.aus.md).
      */
-    public extern getPistonMoveReaction();
+    public extern getWorld();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#getPlacementMaterial()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getX()
      *
-     * @r A string naming a [Material](Material.aus.md).
+     * @r An int.
      */
-    public extern getPlacementMaterial();
+    public extern getX();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#getRotation()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getY()
      *
-     * @r A string naming a [BlockFace](BlockFace.aus.md).
+     * @r An int.
      */
-    public extern getRotation();
+    public extern getY();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#getSoundGroup()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#getZ()
      *
-     * @r A [SoundGroup](SoundGroup.aus.md).
+     * @r An int.
      */
-    public extern getSoundGroup();
+    public extern getZ();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#isAttached()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#hasMetadata(java.lang.String)
+     *
+     * @p MetadataKey is a string.
+     * @r A bool.
+     */
+    public extern hasMetadata(MetadataKey);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#isCollidable()
      *
      * @r A bool.
      */
-    public extern isAttached();
+    public extern isCollidable();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#isFaceSturdy(org.bukkit.block.BlockFace,org.bukkit.block.BlockSupport)
-     *
-     * @p Face is a string naming a [BlockFace](BlockFace.aus.md).
-     * @p Support is a string naming a
-     * [BlockSupport](BlockSupport.aus.md).
-     * @r A bool.
-     */
-    public extern isFaceSturdy(Face, Support);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#isOccluding()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#isEditable()
      *
      * @r A bool.
      */
-    public extern isOccluding();
+    public extern isEditable();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#isPreferredTool(org.bukkit.inventory.ItemStack)
-     *
-     * @p Tool is an [ItemStack](ItemStack.aus.md).
-     * @r A bool.
-     */
-    public extern isPreferredTool(Tool);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#isRandomlyTicked()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#isGlowingText()
      *
      * @r A bool.
      */
-    public extern isRandomlyTicked();
+    public extern isGlowingText();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#isReplaceable()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#isPlaced()
      *
      * @r A bool.
      */
-    public extern isReplaceable();
+    public extern isPlaced();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#isSupported(org.bukkit.block.Block)
-     *
-     * @p Block is a [Block](Block.aus.md).
-     * @r A bool.
-     */
-    public extern isSupported(Block);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#isSupported(org.bukkit.Location)
-     *
-     * @p Location is a [Location](Location.aus.md).
-     * @r A bool.
-     */
-    public extern isSupported_location(Location);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#isWaterlogged()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#isSnapshot()
      *
      * @r A bool.
      */
-    public extern isWaterlogged();
+    public extern isSnapshot();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#matches(org.bukkit.block.data.BlockData)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#isSuffocating()
+     *
+     * @r A bool.
+     */
+    public extern isSuffocating();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#isWaxed()
+     *
+     * @r A bool.
+     */
+    public extern isWaxed();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#line(int)
+     *
+     * @p Index is an int.
+     * @r A Component.
+     */
+    public extern line(Index);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#line(int,net.kyori.adventure.text.Component)
+     *
+     * @p Index is an int.
+     * @p Line is a Component.
+     */
+    public extern line(Index, Line);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#lines()
+     *
+     * @r A list.
+     */
+    public extern lines();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#setAllowedEditorUniqueId(java.util.UUID)
+     *
+     * @p Uuid is a string.
+     */
+    public extern setAllowedEditorUniqueId(Uuid);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#setBlockData(org.bukkit.block.data.BlockData)
      *
      * @p Data is a [BlockData](BlockData.aus.md).
+     */
+    public extern setBlockData(Data);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#setColor(org.bukkit.DyeColor)
+     *
+     * @p Color is a string naming a [DyeColor](DyeColor.aus.md).
+     */
+    public extern setColor(Color);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#setEditable(boolean)
+     *
+     * @p Editable is a bool.
+     */
+    public extern setEditable(Editable);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#setGlowingText(boolean)
+     *
+     * @p Glowing is a bool.
+     */
+    public extern setGlowingText(Glowing);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#setLine(int,java.lang.String)
+     *
+     * @p Index is an int.
+     * @p Line is a string.
+     */
+    public extern setLine(Index, Line);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#setMetadata(java.lang.String,org.bukkit.metadata.MetadataValue)
+     *
+     * @p MetadataKey is a string.
+     * @p NewMetadataValue is a [MetadataValue](MetadataValue.aus.md).
+     */
+    public extern setMetadata(MetadataKey, NewMetadataValue);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#setRawData(byte)
+     *
+     * @p Data is an int.
+     */
+    public extern setRawData(Data);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#setType(org.bukkit.Material)
+     *
+     * @p Type is a string naming a [Material](Material.aus.md).
+     */
+    public extern setType(Type);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#setWaxed(boolean)
+     *
+     * @p Waxed is a bool.
+     */
+    public extern setWaxed(Waxed);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#update()
+     *
      * @r A bool.
      */
-    public extern matches(Data);
+    public extern update();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#merge(org.bukkit.block.data.BlockData)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#update(boolean)
      *
-     * @p Data is a [BlockData](BlockData.aus.md).
-     * @r A [BlockData](BlockData.aus.md).
-     */
-    public extern merge(Data);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#mirror(org.bukkit.block.structure.Mirror)
-     *
-     * @p Mirror is a string naming a [Mirror](Mirror.aus.md).
-     */
-    public extern mirror(Mirror);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#requiresCorrectToolForDrops()
-     *
+     * @p Force is a bool.
      * @r A bool.
      */
-    public extern requiresCorrectToolForDrops();
+    public extern update(Force);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#rotate(org.bukkit.block.structure.StructureRotation)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#update(boolean,boolean)
      *
-     * @p Rotation is a string naming a
-     * [StructureRotation](StructureRotation.aus.md).
+     * @p Force is a bool.
+     * @p ApplyPhysics is a bool.
+     * @r A bool.
      */
-    public extern rotate(Rotation);
+    public extern update(Force, ApplyPhysics);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#setAttached(boolean)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/HangingSign.html#removeMetadata(java.lang.String,org.bukkit.plugin.Plugin)
      *
-     * @p Attached is a bool.
+     * @p MetadataKey is a string.
+     * @p OwningPlugin is a [Plugin](Plugin.aus.md).
      */
-    public extern setAttached(Attached);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#setRotation(org.bukkit.block.BlockFace)
-     *
-     * @p Rotation is a string naming a [BlockFace](BlockFace.aus.md).
-     */
-    public extern setRotation(Rotation);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/HangingSign.html#setWaterlogged(boolean)
-     *
-     * @p Waterlogged is a bool.
-     */
-    public extern setWaterlogged(Waterlogged);
+    public extern removeMetadata(MetadataKey, OwningPlugin);
 }

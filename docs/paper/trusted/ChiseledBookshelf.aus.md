@@ -2,11 +2,12 @@
 
 ## class: ChiseledBookshelf
 
-[19:14] (extern: com.lehman.aussomcraft.paper.gen.trusted.ChiseledBookshelfShim) **extends: object** 
+[20:14] (extern: com.lehman.aussomcraft.paper.gen.trusted.ChiseledBookshelfShim) **extends: object** 
 
-Generated shim for org.bukkit.block.data.type.ChiseledBookshelf.
-Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/ChiseledBookshelf.html
-In Paper this is a [Directional](Directional.aus.md).
+Generated shim for org.bukkit.block.ChiseledBookshelf.
+Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/ChiseledBookshelf.html
+In Paper this is a
+[TileStateInventoryHolder](TileStateInventoryHolder.aus.md).
 Every method it inherits is declared here too, so there is
 nothing to follow up to.
 Tier: trusted. Do not edit.
@@ -16,249 +17,268 @@ Tier: trusted. Do not edit.
 - **\_\_opEq\_\_** (`A0`)
 
 
-- **clone** ()
+- **copy** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/ChiseledBookshelf.html#clone()
-
-	- **@r** `A` [BlockData](BlockData.aus.md).
-
-
-- **copyTo** (`Other`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/ChiseledBookshelf.html#copyTo(org.bukkit.block.data.BlockData)
-
-	- **@p** `Other` is a [BlockData](BlockData.aus.md).
-
-
-- **createBlockState** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/ChiseledBookshelf.html#createBlockState()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/ChiseledBookshelf.html#copy()
 
 	- **@r** `A` [BlockState](BlockState.aus.md).
 
 
-- **getAsString** ()
+- **copy** (`Location`)
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/ChiseledBookshelf.html#getAsString()
-
-	- **@r** `A` string.
-
-
-- **getAsString** (`HideUnspecified`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/ChiseledBookshelf.html#getAsString(boolean)
-
-	- **@p** `HideUnspecified` is a bool.
-	- **@r** `A` string.
-
-
-- **getCollisionShape** (`Location`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/ChiseledBookshelf.html#getCollisionShape(org.bukkit.Location)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/ChiseledBookshelf.html#copy(org.bukkit.Location)
 
 	- **@p** `Location` is a [Location](Location.aus.md).
-	- **@r** `A` [VoxelShape](VoxelShape.aus.md).
+	- **@r** `A` [BlockState](BlockState.aus.md).
 
 
-- **getDestroySpeed** (`ItemStack`)
+- **getBlock** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/ChiseledBookshelf.html#getDestroySpeed(org.bukkit.inventory.ItemStack)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/ChiseledBookshelf.html#getBlock()
 
-	- **@p** `ItemStack` is an [ItemStack](ItemStack.aus.md).
-	- **@r** `A` double.
+	- **@r** `A` [Block](Block.aus.md).
 
 
-- **getDestroySpeed** (`ItemStack, ConsiderEnchants`)
+- **getBlockData** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/ChiseledBookshelf.html#getDestroySpeed(org.bukkit.inventory.ItemStack,boolean)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/ChiseledBookshelf.html#getBlockData()
 
-	- **@p** `ItemStack` is an [ItemStack](ItemStack.aus.md).
-	- **@p** `ConsiderEnchants` is a bool.
-	- **@r** `A` double.
-
-
-- **getFaces** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/ChiseledBookshelf.html#getFaces()
-
-	- **@r** `A` list.
-
-
-- **getFacing** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/ChiseledBookshelf.html#getFacing()
-
-	- **@r** `A` string naming a [BlockFace](BlockFace.aus.md).
-
-
-- **getLightEmission** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/ChiseledBookshelf.html#getLightEmission()
-
-	- **@r** `An` int.
-
-
-- **getMapColor** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/ChiseledBookshelf.html#getMapColor()
-
-	- **@r** `A` [Color](Color.aus.md).
-
-
-- **getMaterial** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/ChiseledBookshelf.html#getMaterial()
-
-	- **@r** `A` string naming a [Material](Material.aus.md).
-
-
-- **getMaximumOccupiedSlots** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/ChiseledBookshelf.html#getMaximumOccupiedSlots()
-
-	- **@r** `An` int.
-
-
-- **getOccupiedSlots** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/ChiseledBookshelf.html#getOccupiedSlots()
-
-	- **@r** `A` list.
-
-
-- **getPistonMoveReaction** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/ChiseledBookshelf.html#getPistonMoveReaction()
-
-	- **@r** `A` string naming a [PistonMoveReaction](PistonMoveReaction.aus.md).
-
-
-- **getPlacementMaterial** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/ChiseledBookshelf.html#getPlacementMaterial()
-
-	- **@r** `A` string naming a [Material](Material.aus.md).
-
-
-- **getSoundGroup** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/ChiseledBookshelf.html#getSoundGroup()
-
-	- **@r** `A` [SoundGroup](SoundGroup.aus.md).
-
-
-- **isFaceSturdy** (`Face, Support`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/ChiseledBookshelf.html#isFaceSturdy(org.bukkit.block.BlockFace,org.bukkit.block.BlockSupport)
-
-	- **@p** `Face` is a string naming a [BlockFace](BlockFace.aus.md).
-	- **@p** `Support` is a string naming a [BlockSupport](BlockSupport.aus.md).
-	- **@r** `A` bool.
-
-
-- **isOccluding** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/ChiseledBookshelf.html#isOccluding()
-
-	- **@r** `A` bool.
-
-
-- **isPreferredTool** (`Tool`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/ChiseledBookshelf.html#isPreferredTool(org.bukkit.inventory.ItemStack)
-
-	- **@p** `Tool` is an [ItemStack](ItemStack.aus.md).
-	- **@r** `A` bool.
-
-
-- **isRandomlyTicked** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/ChiseledBookshelf.html#isRandomlyTicked()
-
-	- **@r** `A` bool.
-
-
-- **isReplaceable** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/ChiseledBookshelf.html#isReplaceable()
-
-	- **@r** `A` bool.
-
-
-- **isSlotOccupied** (`Slot`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/ChiseledBookshelf.html#isSlotOccupied(int)
-
-	- **@p** `Slot` is an int.
-	- **@r** `A` bool.
-
-
-- **isSupported** (`Block`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/ChiseledBookshelf.html#isSupported(org.bukkit.block.Block)
-
-	- **@p** `Block` is a [Block](Block.aus.md).
-	- **@r** `A` bool.
-
-
-- **isSupported\_location** (`Location`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/ChiseledBookshelf.html#isSupported(org.bukkit.Location)
-
-	- **@p** `Location` is a [Location](Location.aus.md).
-	- **@r** `A` bool.
-
-
-- **matches** (`Data`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/ChiseledBookshelf.html#matches(org.bukkit.block.data.BlockData)
-
-	- **@p** `Data` is a [BlockData](BlockData.aus.md).
-	- **@r** `A` bool.
-
-
-- **merge** (`Data`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/ChiseledBookshelf.html#merge(org.bukkit.block.data.BlockData)
-
-	- **@p** `Data` is a [BlockData](BlockData.aus.md).
 	- **@r** `A` [BlockData](BlockData.aus.md).
 
 
-- **mirror** (`Mirror`)
+- **getChunk** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/ChiseledBookshelf.html#mirror(org.bukkit.block.structure.Mirror)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/ChiseledBookshelf.html#getChunk()
 
-	- **@p** `Mirror` is a string naming a [Mirror](Mirror.aus.md).
+	- **@r** `A` [Chunk](Chunk.aus.md).
 
 
-- **requiresCorrectToolForDrops** ()
+- **getDrops** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/ChiseledBookshelf.html#requiresCorrectToolForDrops()
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/ChiseledBookshelf.html#getDrops()
+
+	- **@r** `A` list.
+
+
+- **getDrops** (`Tool`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/ChiseledBookshelf.html#getDrops(org.bukkit.inventory.ItemStack)
+
+	- **@p** `Tool` is an [ItemStack](ItemStack.aus.md).
+	- **@r** `A` list.
+
+
+- **getDrops** (`Tool, Entity`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/ChiseledBookshelf.html#getDrops(org.bukkit.inventory.ItemStack,org.bukkit.entity.Entity)
+
+	- **@p** `Tool` is an [ItemStack](ItemStack.aus.md).
+	- **@p** `Entity` is an [Entity](Entity.aus.md).
+	- **@r** `A` list.
+
+
+- **getInventory** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/ChiseledBookshelf.html#getInventory()
+
+	- **@r** `A` [ChiseledBookshelfInventory](ChiseledBookshelfInventory.aus.md).
+
+
+- **getLastInteractedSlot** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/ChiseledBookshelf.html#getLastInteractedSlot()
+
+	- **@r** `An` int.
+
+
+- **getLightLevel** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/ChiseledBookshelf.html#getLightLevel()
+
+	- **@r** `An` int.
+
+
+- **getLocation** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/ChiseledBookshelf.html#getLocation()
+
+	- **@r** `A` [Location](Location.aus.md).
+
+
+- **getLocation** (`Loc`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/ChiseledBookshelf.html#getLocation(org.bukkit.Location)
+
+	- **@p** `Loc` is a [Location](Location.aus.md).
+	- **@r** `A` [Location](Location.aus.md).
+
+
+- **getMetadata** (`MetadataKey`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/ChiseledBookshelf.html#getMetadata(java.lang.String)
+
+	- **@p** `MetadataKey` is a string.
+	- **@r** `A` list.
+
+
+- **getPersistentDataContainer** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/ChiseledBookshelf.html#getPersistentDataContainer()
+
+	- **@r** `A` [PersistentDataContainer](PersistentDataContainer.aus.md).
+
+
+- **getRawData** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/ChiseledBookshelf.html#getRawData()
+
+	- **@r** `An` int.
+
+
+- **getSlot** (`Position`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/ChiseledBookshelf.html#getSlot(org.bukkit.util.Vector)
+
+	- **@p** `Position` is a [Vector](Vector.aus.md).
+	- **@r** `An` int.
+
+
+- **getSnapshotInventory** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/ChiseledBookshelf.html#getSnapshotInventory()
+
+	- **@r** `A` [ChiseledBookshelfInventory](ChiseledBookshelfInventory.aus.md).
+
+
+- **getType** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/ChiseledBookshelf.html#getType()
+
+	- **@r** `A` string naming a [Material](Material.aus.md).
+
+
+- **getWorld** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/ChiseledBookshelf.html#getWorld()
+
+	- **@r** `A` [World](World.aus.md).
+
+
+- **getX** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/ChiseledBookshelf.html#getX()
+
+	- **@r** `An` int.
+
+
+- **getY** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/ChiseledBookshelf.html#getY()
+
+	- **@r** `An` int.
+
+
+- **getZ** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/ChiseledBookshelf.html#getZ()
+
+	- **@r** `An` int.
+
+
+- **hasMetadata** (`MetadataKey`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/ChiseledBookshelf.html#hasMetadata(java.lang.String)
+
+	- **@p** `MetadataKey` is a string.
+	- **@r** `A` bool.
+
+
+- **isCollidable** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/ChiseledBookshelf.html#isCollidable()
 
 	- **@r** `A` bool.
 
 
-- **rotate** (`Rotation`)
+- **isPlaced** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/ChiseledBookshelf.html#rotate(org.bukkit.block.structure.StructureRotation)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/ChiseledBookshelf.html#isPlaced()
 
-	- **@p** `Rotation` is a string naming a [StructureRotation](StructureRotation.aus.md).
-
-
-- **setFacing** (`Facing`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/ChiseledBookshelf.html#setFacing(org.bukkit.block.BlockFace)
-
-	- **@p** `Facing` is a string naming a [BlockFace](BlockFace.aus.md).
+	- **@r** `A` bool.
 
 
-- **setSlotOccupied** (`Slot, Occupied`)
+- **isSnapshot** ()
 
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/ChiseledBookshelf.html#setSlotOccupied(int,boolean)
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/ChiseledBookshelf.html#isSnapshot()
 
-	- **@p** `Slot` is an int.
-	- **@p** `Occupied` is a bool.
+	- **@r** `A` bool.
+
+
+- **isSuffocating** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/ChiseledBookshelf.html#isSuffocating()
+
+	- **@r** `A` bool.
+
+
+- **setBlockData** (`Data`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/ChiseledBookshelf.html#setBlockData(org.bukkit.block.data.BlockData)
+
+	- **@p** `Data` is a [BlockData](BlockData.aus.md).
+
+
+- **setLastInteractedSlot** (`LastInteractedSlot`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/ChiseledBookshelf.html#setLastInteractedSlot(int)
+
+	- **@p** `LastInteractedSlot` is an int.
+
+
+- **setMetadata** (`MetadataKey, NewMetadataValue`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/ChiseledBookshelf.html#setMetadata(java.lang.String,org.bukkit.metadata.MetadataValue)
+
+	- **@p** `MetadataKey` is a string.
+	- **@p** `NewMetadataValue` is a [MetadataValue](MetadataValue.aus.md).
+
+
+- **setRawData** (`Data`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/ChiseledBookshelf.html#setRawData(byte)
+
+	- **@p** `Data` is an int.
+
+
+- **setType** (`Type`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/ChiseledBookshelf.html#setType(org.bukkit.Material)
+
+	- **@p** `Type` is a string naming a [Material](Material.aus.md).
+
+
+- **update** ()
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/ChiseledBookshelf.html#update()
+
+	- **@r** `A` bool.
+
+
+- **update** (`Force`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/ChiseledBookshelf.html#update(boolean)
+
+	- **@p** `Force` is a bool.
+	- **@r** `A` bool.
+
+
+- **update** (`Force, ApplyPhysics`)
+
+	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/ChiseledBookshelf.html#update(boolean,boolean)
+
+	- **@p** `Force` is a bool.
+	- **@p** `ApplyPhysics` is a bool.
+	- **@r** `A` bool.
 
 
 

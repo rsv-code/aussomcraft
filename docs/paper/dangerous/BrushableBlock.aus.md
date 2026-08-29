@@ -59,13 +59,6 @@ Tier: dangerous. Do not edit.
 	- **@r** `A` [Chunk](Chunk.aus.md).
 
 
-- **getData** ()
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrushableBlock.html#getData()
-
-	- **@r** `A` [MaterialData](MaterialData.aus.md).
-
-
 - **getDrops** ()
 
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrushableBlock.html#getDrops()
@@ -238,13 +231,6 @@ Tier: dangerous. Do not edit.
 	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrushableBlock.html#setBlockData(org.bukkit.block.data.BlockData)
 
 	- **@p** `Data` is a [BlockData](BlockData.aus.md).
-
-
-- **setData** (`Data`)
-
-	> Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BrushableBlock.html#setData(org.bukkit.material.MaterialData)
-
-	- **@p** `Data` is a [MaterialData](MaterialData.aus.md).
 
 
 - **setItem** (`Item`)

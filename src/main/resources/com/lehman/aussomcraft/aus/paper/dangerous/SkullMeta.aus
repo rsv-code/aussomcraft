@@ -302,7 +302,7 @@ extern class SkullMeta : com.lehman.aussomcraft.paper.gen.dangerous.SkullMetaShi
     /**
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/SkullMeta.html#getPlayerProfile()
      *
-     * @r A [PlayerProfile](PlayerProfile.aus.md).
+     * @r A ProfilePlayerProfile.
      */
     public extern getPlayerProfile();
 
@@ -839,7 +839,7 @@ extern class SkullMeta : com.lehman.aussomcraft.paper.gen.dangerous.SkullMetaShi
     /**
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/meta/SkullMeta.html#setPlayerProfile(com.destroystokyo.paper.profile.PlayerProfile)
      *
-     * @p Profile is a [PlayerProfile](PlayerProfile.aus.md).
+     * @p Profile is a ProfilePlayerProfile.
      */
     public extern setPlayerProfile(Profile);
 

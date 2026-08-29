@@ -78,13 +78,6 @@ extern class Container : com.lehman.aussomcraft.paper.gen.trusted.ContainerShim 
     public extern getCustomName();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Container.html#getData()
-     *
-     * @r A [MaterialData](MaterialData.aus.md).
-     */
-    public extern getData();
-
-    /**
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Container.html#getDrops()
      *
      * @r A list.
@@ -264,13 +257,6 @@ extern class Container : com.lehman.aussomcraft.paper.gen.trusted.ContainerShim 
      * @p Name is a string.
      */
     public extern setCustomName(Name);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Container.html#setData(org.bukkit.material.MaterialData)
-     *
-     * @p Data is a [MaterialData](MaterialData.aus.md).
-     */
-    public extern setData(Data);
 
     /**
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Container.html#setLock(java.lang.String)

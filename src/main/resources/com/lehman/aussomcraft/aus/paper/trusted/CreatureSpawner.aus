@@ -80,13 +80,6 @@ extern class CreatureSpawner : com.lehman.aussomcraft.paper.gen.trusted.Creature
     public extern getCreatureTypeName();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CreatureSpawner.html#getData()
-     *
-     * @r A [MaterialData](MaterialData.aus.md).
-     */
-    public extern getData();
-
-    /**
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CreatureSpawner.html#getDelay()
      *
      * @r An int.
@@ -320,13 +313,6 @@ extern class CreatureSpawner : com.lehman.aussomcraft.paper.gen.trusted.Creature
      * @p CreatureType is a string.
      */
     public extern setCreatureTypeByName(CreatureType);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CreatureSpawner.html#setData(org.bukkit.material.MaterialData)
-     *
-     * @p Data is a [MaterialData](MaterialData.aus.md).
-     */
-    public extern setData(Data);
 
     /**
      * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CreatureSpawner.html#setDelay(int)

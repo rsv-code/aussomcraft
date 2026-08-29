@@ -57,13 +57,6 @@ extern class TileStateInventoryHolder : com.lehman.aussomcraft.paper.gen.trusted
     public extern getChunk();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/io/papermc/paper/block/TileStateInventoryHolder.html#getData()
-     *
-     * @r A [MaterialData](MaterialData.aus.md).
-     */
-    public extern getData();
-
-    /**
      * Paper: https://jd.papermc.io/paper/1.21.10/io/papermc/paper/block/TileStateInventoryHolder.html#getDrops()
      *
      * @r A list.
@@ -222,13 +215,6 @@ extern class TileStateInventoryHolder : com.lehman.aussomcraft.paper.gen.trusted
      * @p Data is a [BlockData](BlockData.aus.md).
      */
     public extern setBlockData(Data);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/io/papermc/paper/block/TileStateInventoryHolder.html#setData(org.bukkit.material.MaterialData)
-     *
-     * @p Data is a [MaterialData](MaterialData.aus.md).
-     */
-    public extern setData(Data);
 
     /**
      * Paper: https://jd.papermc.io/paper/1.21.10/io/papermc/paper/block/TileStateInventoryHolder.html#setMetadata(java.lang.String,org.bukkit.metadata.MetadataValue)

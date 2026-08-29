@@ -890,25 +890,6 @@ public class EndermanShim extends PaperObj {
         }
     }
 
-    public AussomType getCarriedMaterial(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.entity.Enderman self = (org.bukkit.entity.Enderman) this.getObj();
-            if (self == null) {
-                return Marshal.detached("getCarriedMaterial");
-            }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.entity.Enderman) self).getCarriedMaterial());
-            }
-            return Marshal.wrongArity("getCarriedMaterial", n);
-        } catch (Throwable e) {
-            return Marshal.failed("getCarriedMaterial", e);
-        }
-    }
-
     public AussomType getCategory(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
@@ -5104,26 +5085,6 @@ public class EndermanShim extends PaperObj {
             return Marshal.wrongArity("setCarriedBlock", n);
         } catch (Throwable e) {
             return Marshal.failed("setCarriedBlock", e);
-        }
-    }
-
-    public AussomType setCarriedMaterial(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.entity.Enderman self = (org.bukkit.entity.Enderman) this.getObj();
-            if (self == null) {
-                return Marshal.detached("setCarriedMaterial");
-            }
-            if (n == 1) {
-                ((org.bukkit.entity.Enderman) self).setCarriedMaterial((org.bukkit.material.MaterialData) Marshal.typed(args, 0, org.bukkit.material.MaterialData.class));
-                return new AussomNull();
-            }
-            return Marshal.wrongArity("setCarriedMaterial", n);
-        } catch (Throwable e) {
-            return Marshal.failed("setCarriedMaterial", e);
         }
     }
 

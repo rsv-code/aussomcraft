@@ -6,11 +6,11 @@
  */
 
 /**
- * Generated shim for org.bukkit.block.data.type.CreakingHeart.
+ * Generated shim for org.bukkit.block.CreakingHeart.
  *
- * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CreakingHeart.html
+ * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CreakingHeart.html
  *
- * In Paper this is a [Orientable](Orientable.aus.md).
+ * In Paper this is a [TileState](TileState.aus.md).
  * Every method it inherits is declared here too, so there is
  * nothing to follow up to.
  *
@@ -20,262 +20,266 @@ extern class CreakingHeart : com.lehman.aussomcraft.paper.gen.dangerous.Creaking
     public extern __opEq__(A0);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CreakingHeart.html#clone()
-     *
-     * @r A [BlockData](BlockData.aus.md).
-     */
-    public extern clone();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CreakingHeart.html#copyTo(org.bukkit.block.data.BlockData)
-     *
-     * @p Other is a [BlockData](BlockData.aus.md).
-     */
-    public extern copyTo(Other);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CreakingHeart.html#createBlockState()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CreakingHeart.html#copy()
      *
      * @r A [BlockState](BlockState.aus.md).
      */
-    public extern createBlockState();
+    public extern copy();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CreakingHeart.html#getAsString()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CreakingHeart.html#copy(org.bukkit.Location)
      *
-     * @r A string.
+     * @p Location is a [Location](Location.aus.md).
+     * @r A [BlockState](BlockState.aus.md).
      */
-    public extern getAsString();
+    public extern copy(Location);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CreakingHeart.html#getAsString(boolean)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CreakingHeart.html#getBlock()
      *
-     * @p HideUnspecified is a bool.
-     * @r A string.
+     * @r A [Block](Block.aus.md).
      */
-    public extern getAsString(HideUnspecified);
+    public extern getBlock();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CreakingHeart.html#getAxes()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CreakingHeart.html#getBlockData()
+     *
+     * @r A [BlockData](BlockData.aus.md).
+     */
+    public extern getBlockData();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CreakingHeart.html#getChunk()
+     *
+     * @r A [Chunk](Chunk.aus.md).
+     */
+    public extern getChunk();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CreakingHeart.html#getCreaking()
+     *
+     * @r A [Creaking](Creaking.aus.md).
+     */
+    public extern getCreaking();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CreakingHeart.html#getDrops()
      *
      * @r A list.
      */
-    public extern getAxes();
+    public extern getDrops();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CreakingHeart.html#getAxis()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CreakingHeart.html#getDrops(org.bukkit.inventory.ItemStack)
      *
-     * @r An string naming an [Axis](Axis.aus.md).
+     * @p Tool is an [ItemStack](ItemStack.aus.md).
+     * @r A list.
      */
-    public extern getAxis();
+    public extern getDrops(Tool);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CreakingHeart.html#getCollisionShape(org.bukkit.Location)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CreakingHeart.html#getDrops(org.bukkit.inventory.ItemStack,org.bukkit.entity.Entity)
      *
-     * @p Location is a [Location](Location.aus.md).
-     * @r A [VoxelShape](VoxelShape.aus.md).
+     * @p Tool is an [ItemStack](ItemStack.aus.md).
+     * @p Entity is an [Entity](Entity.aus.md).
+     * @r A list.
      */
-    public extern getCollisionShape(Location);
+    public extern getDrops(Tool, Entity);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CreakingHeart.html#getCreakingHeartState()
-     *
-     * @r A string naming a CreakingHeart.State.
-     */
-    public extern getCreakingHeartState();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CreakingHeart.html#getDestroySpeed(org.bukkit.inventory.ItemStack)
-     *
-     * @p ItemStack is an [ItemStack](ItemStack.aus.md).
-     * @r A double.
-     */
-    public extern getDestroySpeed(ItemStack);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CreakingHeart.html#getDestroySpeed(org.bukkit.inventory.ItemStack,boolean)
-     *
-     * @p ItemStack is an [ItemStack](ItemStack.aus.md).
-     * @p ConsiderEnchants is a bool.
-     * @r A double.
-     */
-    public extern getDestroySpeed(ItemStack, ConsiderEnchants);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CreakingHeart.html#getLightEmission()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CreakingHeart.html#getLightLevel()
      *
      * @r An int.
      */
-    public extern getLightEmission();
+    public extern getLightLevel();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CreakingHeart.html#getMapColor()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CreakingHeart.html#getLocation()
      *
-     * @r A [Color](Color.aus.md).
+     * @r A [Location](Location.aus.md).
      */
-    public extern getMapColor();
+    public extern getLocation();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CreakingHeart.html#getMaterial()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CreakingHeart.html#getLocation(org.bukkit.Location)
+     *
+     * @p Loc is a [Location](Location.aus.md).
+     * @r A [Location](Location.aus.md).
+     */
+    public extern getLocation(Loc);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CreakingHeart.html#getMetadata(java.lang.String)
+     *
+     * @p MetadataKey is a string.
+     * @r A list.
+     */
+    public extern getMetadata(MetadataKey);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CreakingHeart.html#getPersistentDataContainer()
+     *
+     * @r A [PersistentDataContainer](PersistentDataContainer.aus.md).
+     */
+    public extern getPersistentDataContainer();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CreakingHeart.html#getRawData()
+     *
+     * @r An int.
+     */
+    public extern getRawData();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CreakingHeart.html#getType()
      *
      * @r A string naming a [Material](Material.aus.md).
      */
-    public extern getMaterial();
+    public extern getType();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CreakingHeart.html#getPistonMoveReaction()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CreakingHeart.html#getWorld()
      *
-     * @r A string naming a
-     * [PistonMoveReaction](PistonMoveReaction.aus.md).
+     * @r A [World](World.aus.md).
      */
-    public extern getPistonMoveReaction();
+    public extern getWorld();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CreakingHeart.html#getPlacementMaterial()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CreakingHeart.html#getX()
      *
-     * @r A string naming a [Material](Material.aus.md).
+     * @r An int.
      */
-    public extern getPlacementMaterial();
+    public extern getX();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CreakingHeart.html#getSoundGroup()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CreakingHeart.html#getY()
      *
-     * @r A [SoundGroup](SoundGroup.aus.md).
+     * @r An int.
      */
-    public extern getSoundGroup();
+    public extern getY();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CreakingHeart.html#isActive()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CreakingHeart.html#getZ()
+     *
+     * @r An int.
+     */
+    public extern getZ();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CreakingHeart.html#hasMetadata(java.lang.String)
+     *
+     * @p MetadataKey is a string.
+     * @r A bool.
+     */
+    public extern hasMetadata(MetadataKey);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CreakingHeart.html#isCollidable()
      *
      * @r A bool.
      */
-    public extern isActive();
+    public extern isCollidable();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CreakingHeart.html#isFaceSturdy(org.bukkit.block.BlockFace,org.bukkit.block.BlockSupport)
-     *
-     * @p Face is a string naming a [BlockFace](BlockFace.aus.md).
-     * @p Support is a string naming a
-     * [BlockSupport](BlockSupport.aus.md).
-     * @r A bool.
-     */
-    public extern isFaceSturdy(Face, Support);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CreakingHeart.html#isNatural()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CreakingHeart.html#isPlaced()
      *
      * @r A bool.
      */
-    public extern isNatural();
+    public extern isPlaced();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CreakingHeart.html#isOccluding()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CreakingHeart.html#isSnapshot()
      *
      * @r A bool.
      */
-    public extern isOccluding();
+    public extern isSnapshot();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CreakingHeart.html#isPreferredTool(org.bukkit.inventory.ItemStack)
-     *
-     * @p Tool is an [ItemStack](ItemStack.aus.md).
-     * @r A bool.
-     */
-    public extern isPreferredTool(Tool);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CreakingHeart.html#isRandomlyTicked()
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CreakingHeart.html#isSuffocating()
      *
      * @r A bool.
      */
-    public extern isRandomlyTicked();
+    public extern isSuffocating();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CreakingHeart.html#isReplaceable()
-     *
-     * @r A bool.
-     */
-    public extern isReplaceable();
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CreakingHeart.html#isSupported(org.bukkit.block.Block)
-     *
-     * @p Block is a [Block](Block.aus.md).
-     * @r A bool.
-     */
-    public extern isSupported(Block);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CreakingHeart.html#isSupported(org.bukkit.Location)
-     *
-     * @p Location is a [Location](Location.aus.md).
-     * @r A bool.
-     */
-    public extern isSupported_location(Location);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CreakingHeart.html#matches(org.bukkit.block.data.BlockData)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CreakingHeart.html#setBlockData(org.bukkit.block.data.BlockData)
      *
      * @p Data is a [BlockData](BlockData.aus.md).
+     */
+    public extern setBlockData(Data);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CreakingHeart.html#setCreaking(org.bukkit.entity.Creaking)
+     *
+     * @p Creaking is a [Creaking](Creaking.aus.md).
+     */
+    public extern setCreaking(Creaking);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CreakingHeart.html#setMetadata(java.lang.String,org.bukkit.metadata.MetadataValue)
+     *
+     * @p MetadataKey is a string.
+     * @p NewMetadataValue is a [MetadataValue](MetadataValue.aus.md).
+     */
+    public extern setMetadata(MetadataKey, NewMetadataValue);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CreakingHeart.html#setRawData(byte)
+     *
+     * @p Data is an int.
+     */
+    public extern setRawData(Data);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CreakingHeart.html#setType(org.bukkit.Material)
+     *
+     * @p Type is a string naming a [Material](Material.aus.md).
+     */
+    public extern setType(Type);
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CreakingHeart.html#spawnCreaking()
+     *
+     * @r A [Creaking](Creaking.aus.md).
+     */
+    public extern spawnCreaking();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CreakingHeart.html#spreadResin()
+     *
+     * @r A [Location](Location.aus.md).
+     */
+    public extern spreadResin();
+
+    /**
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CreakingHeart.html#update()
+     *
      * @r A bool.
      */
-    public extern matches(Data);
+    public extern update();
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CreakingHeart.html#merge(org.bukkit.block.data.BlockData)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CreakingHeart.html#update(boolean)
      *
-     * @p Data is a [BlockData](BlockData.aus.md).
-     * @r A [BlockData](BlockData.aus.md).
-     */
-    public extern merge(Data);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CreakingHeart.html#mirror(org.bukkit.block.structure.Mirror)
-     *
-     * @p Mirror is a string naming a [Mirror](Mirror.aus.md).
-     */
-    public extern mirror(Mirror);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CreakingHeart.html#requiresCorrectToolForDrops()
-     *
+     * @p Force is a bool.
      * @r A bool.
      */
-    public extern requiresCorrectToolForDrops();
+    public extern update(Force);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CreakingHeart.html#rotate(org.bukkit.block.structure.StructureRotation)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CreakingHeart.html#update(boolean,boolean)
      *
-     * @p Rotation is a string naming a
-     * [StructureRotation](StructureRotation.aus.md).
+     * @p Force is a bool.
+     * @p ApplyPhysics is a bool.
+     * @r A bool.
      */
-    public extern rotate(Rotation);
+    public extern update(Force, ApplyPhysics);
 
     /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CreakingHeart.html#setActive(boolean)
+     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/CreakingHeart.html#removeMetadata(java.lang.String,org.bukkit.plugin.Plugin)
      *
-     * @p Active is a bool.
+     * @p MetadataKey is a string.
+     * @p OwningPlugin is a [Plugin](Plugin.aus.md).
      */
-    public extern setActive(Active);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CreakingHeart.html#setAxis(org.bukkit.Axis)
-     *
-     * @p Axis is an string naming an [Axis](Axis.aus.md).
-     */
-    public extern setAxis(Axis);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CreakingHeart.html#setCreakingHeartState(org.bukkit.block.data.type.CreakingHeart.State)
-     *
-     * @p State is a string naming a CreakingHeart.State.
-     */
-    public extern setCreakingHeartState(State);
-
-    /**
-     * Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/CreakingHeart.html#setNatural(boolean)
-     *
-     * @p Natural is a bool.
-     */
-    public extern setNatural(Natural);
+    public extern removeMetadata(MetadataKey, OwningPlugin);
 }

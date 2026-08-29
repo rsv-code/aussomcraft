@@ -23,28 +23,31 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.jar.JarEntry;
-import java.util.jar.JarFile;
 
 import com.aussom.Engine;
 
 /**
  * The generated Paper modules, read from the jar and registered per engine.
  *
- * A tier is a directory of modules. Registering a tier's modules is what
- * gives a script that tier's API, and a module a tier does not have simply
- * cannot be included.
+ * A tier is a directory of modules inside the jar, and the engine reaches
+ * it through the resource include path IncludePaths names for that tier.
+ * Nothing is registered up front: a module is read the first time something
+ * asks for it, so the cost scales with what a script touches rather than
+ * with the size of the API.
  *
- * Modules are registered, not included. An engine parses only what a script
- * asks for with 'include paper.trusted.Player;', plus the small core the
- * loader includes for it, so the cost scales with what a script touches
- * rather than with the size of the API.
+ * The tier prefix lives in the include path, not in the script. A script
+ * writes 'include Chunk;' and gets its own tier's Chunk, which is why the
+ * same file runs unchanged at any tier. It also means a script has no way
+ * to name another tier: the other directories are not below its root, and
+ * an include cannot climb out of one.
+ *
+ * The exception is CORE below, included for every script whether it asks or
+ * not, the same way lang.aus and craft.aus are.
  *
  * @author Austin Lehman
  */
@@ -96,60 +99,169 @@ public final class PaperModules {
         return known.contains(ClassName);
     }
 
-    /** Reads one tier's manifest. Unreadable yields empty, which grants nothing. */
+    /**
+     * The Aussom class each Paper type is reachable as, by tier. Read from
+     * the same manifest as EXACT, so a type is granted and named together
+     * or not at all.
+     */
+    private static final Map<String, Map<String, String>> AS_NAMED =
+        new ConcurrentHashMap<String, Map<String, String>>();
+
+    /**
+     * The Aussom class names a tier provides.
+     *
+     * Taken from the tier's manifest, which is the same list grantsClass and
+     * ausNameOf answer from, so nothing can report a type the manifest does
+     * not carry. This used to scan the tier's directory, which reported
+     * whatever happened to be filed there: moving aji.aus into the dangerous
+     * directory made 'aji' appear as a Paper type at that tier.
+     *
+     * @param Tier is the tier id.
+     * @return An unmodifiable List of Aussom class names.
+     */
+    public static List<String> names(String Tier) {
+        Map<String, String> named = AS_NAMED.get(Tier);
+        if (named == null) {
+            readManifest(Tier);
+            named = AS_NAMED.get(Tier);
+        }
+        if (named == null) {
+            return Collections.emptyList();
+        }
+        return Collections.unmodifiableList(new ArrayList<String>(named.values()));
+    }
+
+    /**
+     * The Aussom class name a Paper type is reachable as at a tier.
+     *
+     * Asked by binary name, so two Paper types sharing a simple name are
+     * told apart. A type this tier does not have returns null, which is the
+     * answer that stops it being marshalled.
+     *
+     * @param Tier is the tier id.
+     * @param ClassName is the fully qualified Paper class name.
+     * @return A String with the Aussom class name, or null.
+     */
+    public static String ausNameOf(String Tier, String ClassName) {
+        if (Tier == null || ClassName == null) {
+            return null;
+        }
+        Map<String, String> named = AS_NAMED.get(Tier);
+        if (named == null) {
+            readManifest(Tier);
+            named = AS_NAMED.get(Tier);
+        }
+        if (named == null) {
+            return null;
+        }
+        return named.get(ClassName);
+    }
+
+    /**
+     * Reads one tier's manifest. Unreadable yields empty, which grants
+     * nothing.
+     *
+     * Each line is a Paper class, a tab, and the Aussom class it is
+     * reachable as. A line with no tab is read as a type named after its
+     * own simple name, so an older manifest still loads.
+     */
     private static Set<String> readManifest(String Tier) {
         Set<String> out = new HashSet<String>();
+        Map<String, String> named = new HashMap<String, String>();
         String path = "/" + ROOT + Tier + "/TYPES.txt";
         try (InputStream in = PaperModules.class.getResourceAsStream(path)) {
             if (in == null) {
+                AS_NAMED.put(Tier, named);
                 return out;
             }
             for (String line : new String(in.readAllBytes(),
                     StandardCharsets.UTF_8).split("\n")) {
                 String t = line.trim();
-                if (!t.isEmpty() && !t.startsWith("#")) {
-                    out.add(t);
+                if (t.isEmpty() || t.startsWith("#")) {
+                    continue;
                 }
+                int tab = t.indexOf('\t');
+                String binary = t;
+                String as = null;
+                if (tab > 0) {
+                    binary = t.substring(0, tab).trim();
+                    as = t.substring(tab + 1).trim();
+                }
+                if (as == null || as.isEmpty()) {
+                    as = binary.substring(binary.lastIndexOf('.') + 1);
+                }
+                out.add(binary);
+                named.put(binary, as);
             }
         } catch (IOException e) {
+            AS_NAMED.put(Tier, new HashMap<String, String>());
             return new HashSet<String>();
         }
+        AS_NAMED.put(Tier, named);
         return out;
     }
 
-    /** Module names by tier, discovered once per JVM. */
-    private static final Map<String, List<String>> BY_TIER =
-        new ConcurrentHashMap<String, List<String>>();
 
     private PaperModules() { }
 
     /**
-     * Registers every module of a tier on an engine, and includes the core
-     * types.
+     * The types every script gets without asking.
      *
-     * @param Eng is the engine to register on.
+     * Exposed so a test can seed exactly these on an engine it builds by
+     * hand. A resource include path does not resolve from target/classes,
+     * for the reason docs/guide/aussomcraft-testing.md records, so a test
+     * that needs the core types available has to register them itself.
+     *
+     * @return A String array of simple type names.
+     */
+    public static String[] coreTypes() {
+        return CORE.clone();
+    }
+
+
+    /**
+     * Includes the core types every script gets without asking.
+     *
+     * Nothing else is touched. The rest of the tier is reached on demand
+     * through the resource include path, so the engine must already have
+     * that path set. ScriptLoader adds it before calling this.
+     *
+     * @param Eng is the engine to include on.
      * @param Tier is the tier id, for example "trusted".
-     * @return An int with how many modules were registered.
-     * @throws Exception when a core module cannot be included.
+     * @return An int with how many core modules were included.
+     * @throws Exception when a core module cannot be included, which means
+     *         the tier's include path is missing or wrong.
      */
     public static int install(Engine Eng, String Tier) throws Exception {
         int n = 0;
-        for (String type : names(Tier)) {
-            String src = read(Tier, type);
-            if (src == null) {
-                continue;
-            }
-            // 'include paper.trusted.Player;' resolves to this path.
-            Eng.addModule("paper/" + Tier + "/" + type + ".aus", src);
-            n++;
-        }
         for (String type : CORE) {
-            String mod = "paper/" + Tier + "/" + type + ".aus";
-            if (names(Tier).contains(type)) {
-                Eng.addInclude(mod);
+            if (define(Eng, Tier, type)) {
+                n++;
             }
         }
         return n;
+    }
+
+    /**
+     * Defines one module on an engine.
+     *
+     * Resolved by the engine through the tier's resource include path, so
+     * the tier prefix stays out of the name and the interpreter's own
+     * lookup does the work. Nothing is read here: a module reaching an
+     * engine any other way would be one the engine never checked.
+     *
+     * @param Eng is the engine.
+     * @param Tier is the tier id.
+     * @param Type is the simple type name.
+     * @return A boolean with true when the class is now defined.
+     */
+    private static boolean define(Engine Eng, String Tier, String Type) {
+        try {
+            Eng.addInclude(Type + ".aus");
+        } catch (Exception e) {
+            return false;
+        }
+        return true;
     }
 
     /**
@@ -172,9 +284,7 @@ public final class PaperModules {
         if (!names(Tier).contains(Type)) {
             return false;
         }
-        try {
-            Eng.addInclude("paper/" + Tier + "/" + Type + ".aus");
-        } catch (Exception e) {
+        if (!define(Eng, Tier, Type)) {
             return false;
         }
         return Eng.containsClass(Type);
@@ -183,136 +293,10 @@ public final class PaperModules {
     /** The tier ids, lowest first. */
     private static final String[] TIERS = { "untrusted", "trusted", "dangerous" };
 
-    /**
-     * Every type name any tier provides.
-     *
-     * The collision check needs the union rather than one tier's list. A
-     * script's own class called ServerTickManager collides even on a tier
-     * that has no such module, because the host picks a shim class by the
-     * Java type's simple name and does not consult the tier first.
-     *
-     * @return An unmodifiable List of every generated type name.
-     */
-    public static List<String> allTypeNames() {
-        List<String> out = new ArrayList<String>();
-        for (String tier : TIERS) {
-            for (String n : names(tier)) {
-                if (!out.contains(n)) {
-                    out.add(n);
-                }
-            }
-        }
-        return Collections.unmodifiableList(out);
-    }
 
-    /**
-     * The type names a tier provides.
-     *
-     * @param Tier is the tier id.
-     * @return An unmodifiable List of type names.
-     */
-    public static List<String> names(String Tier) {
-        List<String> hit = BY_TIER.get(Tier);
-        if (hit != null) {
-            return hit;
-        }
-        List<String> found = discover(Tier);
-        // An empty answer is never cached. discover falls back to empty on
-        // any failure, and caching that would turn one transient problem
-        // into a permanently empty tier: every shim would then come back
-        // null with nothing to say why.
-        if (!found.isEmpty()) {
-            BY_TIER.put(Tier, found);
-        }
-        return found;
-    }
 
-    /** Matches a declaration in a generated module. The format is ours. */
-    private static final Pattern DECL = Pattern.compile("public\\s+extern\\s+(\\w+)\\s*\\(");
 
-    /** Declared method names by "tier/Type", parsed once. */
-    private static final Map<String, Set<String>> METHODS =
-        new ConcurrentHashMap<String, Set<String>>();
 
-    /**
-     * The method names a tier's module for a type declares.
-     *
-     * This is the tier's grant for that type, written where the generator
-     * wrote it, so it is the thing to compare a live class against.
-     *
-     * @param Tier is the tier id.
-     * @param Type is the simple type name.
-     * @return A Set of method names, or null when this tier has no such
-     *         module and therefore grants nothing at all.
-     */
-    public static Set<String> allowedMethods(String Tier, String Type) {
-        String key = Tier + "/" + Type;
-        Set<String> hit = METHODS.get(key);
-        if (hit != null) {
-            return hit;
-        }
-        String src = read(Tier, Type);
-        if (src == null) {
-            return null;
-        }
-        Set<String> out = new HashSet<String>();
-        Matcher m = DECL.matcher(src);
-        while (m.find()) {
-            out.add(m.group(1));
-        }
-        METHODS.put(key, out);
-        return out;
-    }
 
-    private static String read(String Tier, String Type) {
-        String path = "/" + ROOT + Tier + "/" + Type + ".aus";
-        try (InputStream in = PaperModules.class.getResourceAsStream(path)) {
-            if (in == null) {
-                return null;
-            }
-            return new String(in.readAllBytes(), StandardCharsets.UTF_8);
-        } catch (IOException e) {
-            return null;
-        }
-    }
 
-    /**
-     * Lists a tier's modules. Reads the jar directly, because a classpath
-     * directory cannot be listed through getResource alone.
-     */
-    private static List<String> discover(String Tier) {
-        List<String> out = new ArrayList<String>();
-        String dir = ROOT + Tier + "/";
-        try {
-            URL self = PaperModules.class.getProtectionDomain()
-                .getCodeSource().getLocation();
-            java.io.File f = new java.io.File(self.toURI());
-            if (f.isDirectory()) {
-                java.io.File d = new java.io.File(f, dir);
-                String[] kids = d.list();
-                if (kids != null) {
-                    for (String k : kids) {
-                        if (k.endsWith(".aus")) {
-                            out.add(k.substring(0, k.length() - 4));
-                        }
-                    }
-                }
-            } else {
-                try (JarFile jar = new JarFile(f)) {
-                    java.util.Enumeration<JarEntry> en = jar.entries();
-                    while (en.hasMoreElements()) {
-                        String n = en.nextElement().getName();
-                        if (n.startsWith(dir) && n.endsWith(".aus")
-                                && n.indexOf('/', dir.length()) < 0) {
-                            out.add(n.substring(dir.length(), n.length() - 4));
-                        }
-                    }
-                }
-            }
-        } catch (Exception e) {
-            return Collections.emptyList();
-        }
-        Collections.sort(out);
-        return Collections.unmodifiableList(out);
-    }
 }

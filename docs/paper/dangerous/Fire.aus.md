@@ -2,12 +2,11 @@
 
 ## class: Fire
 
-[20:14] (extern: com.lehman.aussomcraft.paper.gen.dangerous.FireShim) **extends: object** 
+[19:14] (extern: com.lehman.aussomcraft.paper.gen.dangerous.FireShim) **extends: object** 
 
 Generated shim for org.bukkit.block.data.type.Fire.
 Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/data/type/Fire.html
-In Paper this is a [Ageable](Ageable.aus.md) and
-[MultipleFacing](MultipleFacing.aus.md).
+In Paper this is a [MultipleFacing](MultipleFacing.aus.md).
 Every method it inherits is declared here too, so there is
 nothing to follow up to.
 Tier: dangerous. Do not edit.

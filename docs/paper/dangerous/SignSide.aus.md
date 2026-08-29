@@ -2,13 +2,10 @@
 
 ## class: SignSide
 
-[19:14] (extern: com.lehman.aussomcraft.paper.gen.dangerous.SignSideShim) **extends: object** 
+[15:14] (extern: com.lehman.aussomcraft.paper.gen.dangerous.SignSideShim) **extends: object** 
 
 Generated shim for org.bukkit.block.sign.SignSide.
 Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/block/sign/SignSide.html
-In Paper this is a [Colorable](Colorable.aus.md).
-Every method it inherits is declared here too, so there is
-nothing to follow up to.
 Tier: dangerous. Do not edit.
 
 #### Methods

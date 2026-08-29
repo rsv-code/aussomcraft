@@ -6,8 +6,8 @@
 
 Generated shim for org.bukkit.entity.Shulker.
 Paper: https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Shulker.html
-In Paper this is a [Golem](Golem.aus.md),
-[Colorable](Colorable.aus.md) and [Enemy](Enemy.aus.md).
+In Paper this is a [Golem](Golem.aus.md) and
+[Enemy](Enemy.aus.md).
 Every method it inherits is declared here too, so there is
 nothing to follow up to.
 Tier: dangerous. Do not edit.

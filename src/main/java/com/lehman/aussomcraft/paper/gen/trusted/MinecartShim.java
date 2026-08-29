@@ -415,25 +415,6 @@ public class MinecartShim extends PaperObj {
         }
     }
 
-    public AussomType getDisplayBlock(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.entity.Minecart self = (org.bukkit.entity.Minecart) this.getObj();
-            if (self == null) {
-                return Marshal.detached("getDisplayBlock");
-            }
-            if (n == 0) {
-                return Marshal.wrap(env, ((org.bukkit.entity.Minecart) self).getDisplayBlock());
-            }
-            return Marshal.wrongArity("getDisplayBlock", n);
-        } catch (Throwable e) {
-            return Marshal.failed("getDisplayBlock", e);
-        }
-    }
-
     public AussomType getDisplayBlockData(Environment env, ArrayList<AussomType> args) {
         int n = 0;
         if (args != null) {
@@ -2670,26 +2651,6 @@ public class MinecartShim extends PaperObj {
             return Marshal.wrongArity("setDerailedVelocityMod", n);
         } catch (Throwable e) {
             return Marshal.failed("setDerailedVelocityMod", e);
-        }
-    }
-
-    public AussomType setDisplayBlock(Environment env, ArrayList<AussomType> args) {
-        int n = 0;
-        if (args != null) {
-            n = args.size();
-        }
-        try {
-            org.bukkit.entity.Minecart self = (org.bukkit.entity.Minecart) this.getObj();
-            if (self == null) {
-                return Marshal.detached("setDisplayBlock");
-            }
-            if (n == 1) {
-                ((org.bukkit.entity.Minecart) self).setDisplayBlock((org.bukkit.material.MaterialData) Marshal.typed(args, 0, org.bukkit.material.MaterialData.class));
-                return new AussomNull();
-            }
-            return Marshal.wrongArity("setDisplayBlock", n);
-        } catch (Throwable e) {
-            return Marshal.failed("setDisplayBlock", e);
         }
     }
 

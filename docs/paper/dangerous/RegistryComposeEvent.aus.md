@@ -21,7 +21,7 @@ Tier: dangerous. Do not edit.
 	> Paper: https://jd.papermc.io/paper/1.21.10/io/papermc/paper/registry/event/RegistryComposeEvent.html#getOrCreateTag(io.papermc.paper.registry.tag.TagKey)
 
 	- **@p** `TagKey` is a [TagKey](TagKey.aus.md).
-	- **@r** `A` [Tag](Tag.aus.md).
+	- **@r** `A` TagTag.
 
 
 - **registry** ()
