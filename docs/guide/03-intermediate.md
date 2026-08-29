@@ -21,29 +21,18 @@ class Main {
 }
 ```
 
-Reload, then type `/hello.aus:hello` in the game.
+Reload, then type `/hello` in the game.
 
-That prefix is your script's file name, and an untrusted script always gets
-it. Type `/hello` on its own and nothing happens.
-
-The reason is what a plain `/hello` would let a script you have not read do.
-It could register a name your server does not have, `/verify` or `/support`
-or `/login`, tell your players to use it, and read whatever they type after
-it. A short list of names is refused outright and anything a plugin already
-owns stays with that plugin, but neither of those can cover a name nobody
-happens to have taken yet. So an unapproved script does not get plain names
-at all.
-
-Trust the script and it gets the plain name. `/acraft trust hello.aus`, then
-reload, and `/hello` works. That is the same decision you make about
-everything else at that level: you have read it, so it can do what it says.
-
-The console prints the name a script actually got, so you never have to
-guess.
+Two names are taken already and you cannot use them. Anything a plugin on
+your server has registered stays with that plugin, and a short list of names
+that usually carry a password or a private message, `login` and `msg` among
+them, is refused outright. The console tells you if you hit either. Both are
+there so a script you have not read cannot answer a command your players
+type out of habit.
 
 Your function gets two things. `Sender` is whoever typed the command.
 `Args` is a list of anything they typed after it. If someone types
-`/hello.aus:hello there friend`, then `Args` holds `there` and `friend`.
+`/hello there friend`, then `Args` holds `there` and `friend`.
 
 Using the extra words:
 

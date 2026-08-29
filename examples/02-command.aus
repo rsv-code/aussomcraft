@@ -1,8 +1,7 @@
 /*
  * A custom command.
  *
- * Runs untrusted, so the command is namespaced: try /02-command.aus:where
- * in game. Trust the script and it answers to /where as well.
+ * Runs untrusted. Try /where in game.
  */
 
 /**

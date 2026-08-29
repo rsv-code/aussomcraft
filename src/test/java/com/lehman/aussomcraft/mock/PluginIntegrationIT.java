@@ -136,7 +136,7 @@ public class PluginIntegrationIT {
           + "}\n");
 
         PlayerMock player = this.server.addPlayer("Alex");
-        this.server.dispatchCommand(player, "cmd:ping");
+        this.server.dispatchCommand(player, "ping");
         ScriptContext ctx = this.plugin.getScripts().get("cmd.aus");
         assertEquals(Boolean.TRUE, ctx.getStore().get("ran"),
             "the command handler must have run");
@@ -231,18 +231,18 @@ public class PluginIntegrationIT {
           + "}\n");
 
         PlayerMock player = this.server.addPlayer("Steve");
-        this.server.dispatchCommand(player, "cmdreload:pingx");
+        this.server.dispatchCommand(player, "pingx");
         assertEquals(1L, ((Number) this.plugin.getScripts().get("cmdreload.aus")
             .getStore().get("hits")).longValue(), "the command must answer once loaded");
 
         this.plugin.reloadScripts();
-        this.server.dispatchCommand(player, "cmdreload:pingx");
+        this.server.dispatchCommand(player, "pingx");
         assertEquals(2L, ((Number) this.plugin.getScripts().get("cmdreload.aus")
             .getStore().get("hits")).longValue(),
             "a reloaded script must still answer its bare command name");
 
         this.plugin.reloadScripts();
-        this.server.dispatchCommand(player, "cmdreload:pingx");
+        this.server.dispatchCommand(player, "pingx");
         assertEquals(3L, ((Number) this.plugin.getScripts().get("cmdreload.aus")
             .getStore().get("hits")).longValue(),
             "a second reload must not break the command either");
@@ -287,7 +287,7 @@ public class PluginIntegrationIT {
           + "  public main() { cmd.register(\"mapx\", ::onX); return 0; }\n"
           + "  public onX(Sender, Args) { }\n"
           + "}\n");
-        assertNotNull(org.bukkit.Bukkit.getCommandMap().getCommand("mapcheck:mapx"),
+        assertNotNull(org.bukkit.Bukkit.getCommandMap().getCommand("mapx"),
             "the command should be in the map once registered");
 
         this.plugin.getScripts().get("mapcheck.aus").unregisterAll();
@@ -392,22 +392,22 @@ public class PluginIntegrationIT {
         player.nextMessage();
 
         // No argument. The guard is what keeps this from throwing.
-        this.server.dispatchCommand(player, "07-nickname:nick");
+        this.server.dispatchCommand(player, "nick");
         assertTrue(String.valueOf(player.nextMessage()).contains("no nickname"),
             "a command with no arguments must answer, not fail silently");
 
         // Several arguments, kept whole.
-        this.server.dispatchCommand(player, "07-nickname:nick Sir Robin");
+        this.server.dispatchCommand(player, "nick Sir Robin");
         assertEquals("Your nickname is now Sir Robin.", player.nextMessage(),
             "every argument should arrive, not just the first");
 
-        this.server.dispatchCommand(player, "07-nickname:nick");
+        this.server.dispatchCommand(player, "nick");
         assertEquals("Your nickname is Sir Robin.", player.nextMessage());
 
         // The first argument read as a keyword.
-        this.server.dispatchCommand(player, "07-nickname:nick clear");
+        this.server.dispatchCommand(player, "nick clear");
         assertEquals("Nickname cleared.", player.nextMessage());
-        this.server.dispatchCommand(player, "07-nickname:nick");
+        this.server.dispatchCommand(player, "nick");
         assertTrue(String.valueOf(player.nextMessage()).contains("no nickname"));
     }
 
@@ -535,7 +535,7 @@ public class PluginIntegrationIT {
           + "}\n");
 
         PlayerMock player = this.server.addPlayer("Keeper");
-        this.server.dispatchCommand(player, "keeper:remember");
+        this.server.dispatchCommand(player, "remember");
         assertEquals("yes", this.plugin.getScripts().get("keeper.aus").getStore().get("kept"));
 
         // A reload writes the stores out and reads them back, which is the

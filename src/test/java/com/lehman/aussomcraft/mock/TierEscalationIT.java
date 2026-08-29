@@ -569,53 +569,19 @@ public class TierEscalationIT {
 
     /** An ordinary name still works bare, which is what the guide teaches. */
     @Test
-    public void anUntrustedCommandIsNamespacedAndNotBare() throws Exception {
+    public void aScriptStillGetsAnOrdinaryCommandName() throws Exception {
         ScriptContext ctx = load("mine.aus",
             "class Main {\n"
           + "  public main() { cmd.register(\"somethingordinary\", ::go); return 0; }\n"
           + "  public go(Sender, Args) { store.set(\"ran\", true); return 0; }\n"
           + "}\n");
         assertNotNull(ctx);
-
-        assertNull(Bukkit.getCommandMap().getCommand("somethingordinary"),
-            "an untrusted script must not hold a bare name, even a free one."
-            + " Load ordering settles names somebody already owns and says"
-            + " nothing about a free one, and a free name is a way to be"
-            + " handed what players type.");
-
-        assertNotNull(Bukkit.getCommandMap().getCommand("mine:somethingordinary"),
-            "but it must still get the namespaced form, or it has no command"
-            + " at all and the refusal above proves nothing.");
-
+        assertNotNull(Bukkit.getCommandMap().getCommand("somethingordinary"),
+            "an ordinary name should be registered bare.");
         this.server.getConsoleSender().getServer().dispatchCommand(
-            this.server.getConsoleSender(), "mine:somethingordinary");
+            this.server.getConsoleSender(), "somethingordinary");
         assertEquals(Boolean.TRUE, ctx.getStore().get("ran"),
-            "and running the namespaced form should reach the script.");
-    }
-
-    /**
-     * Trusted keeps the bare name. A script somebody has read is allowed to
-     * provide the commands it says it does, and this is the paired positive
-     * for the refusal above: the tier decides, not the name.
-     */
-    @Test
-    public void aTrustedCommandStillGetsTheBareName() throws Exception {
-        File dir = this.plugin.getScriptDir();
-        dir.mkdirs();
-        String body =
-            "class Main {\n"
-          + "  public main() { cmd.register(\"trustedordinary\", ::go); return 0; }\n"
-          + "  public go(Sender, Args) { store.set(\"ran\", true); return 0; }\n"
-          + "}\n";
-        Path p = dir.toPath().resolve("yours.aus");
-        Files.write(p, body.getBytes(StandardCharsets.UTF_8));
-        this.plugin.getTrustStore().grant(TrustStore.hashOf(p), Profile.TRUSTED,
-            "yours.aus", "test");
-        this.plugin.reloadScripts();
-
-        assertNotNull(this.plugin.getScripts().get("yours.aus"), "it must load");
-        assertNotNull(Bukkit.getCommandMap().getCommand("trustedordinary"),
-            "a trusted script keeps the bare name");
+            "and running it should reach the script.");
     }
 
     /**

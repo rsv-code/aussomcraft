@@ -195,17 +195,17 @@ Run in order. Console unless the row says in game.
 | 1 | start the server | each script logs `loaded untrusted (sha256 ...)` |
 | 2 | `acraft list` | every script listed, all untrusted |
 | 3 | join the server | `01-join-leave.aus` broadcasts your name |
-| 4 | in game `/02-command.aus:where` | your world and coordinates |
+| 4 | in game `/where` | your world and coordinates |
 | 5 | `acraft load demo-op.aus --as untrusted` | refused, and the log says why |
 | 6 | `acraft trust 06-trusted-worldinfo.aus dangerous` | reports it is now dangerous |
 | 7 | in game `/worldinfo` | world name, time and player counts |
 | 8 | `acraft load demo-op.aus --as dangerous`, then rejoin | it greets you, and `attacker` is quietly opped |
 | 9 | edit a granted script, `acraft reload` | it drops back to untrusted |
-| 10 | `acraft reload`, then `/02-command.aus:where` again | still answers, from `02-command.aus` |
-| 11 | in game `/05-counter.aus:joins`, then disconnect and rejoin | `05-counter.aus` greets you with one visit more than the command reported |
-| 12 | `acraft reload`, rejoin, `/05-counter.aus:joins` | the count kept going up across the reload |
-| 13 | `stop` the server, start it, rejoin, `/05-counter.aus:joins` | the count survived the restart |
-| 14 | in game `/07-nickname.aus:nick`, then the same with `Sir Robin`, then again with nothing | `07-nickname.aus` answers with no argument, keeps both words, then reads it back |
+| 10 | `acraft reload`, then in game `/where` again | still answers, from `02-command.aus` |
+| 11 | in game `/joins`, then disconnect and rejoin | `05-counter.aus` greets you with one visit more than `/joins` reported |
+| 12 | `acraft reload`, rejoin, `/joins` | the count kept going up across the reload |
+| 13 | `stop` the server, start it, rejoin, `/joins` | the count survived the restart |
+| 14 | in game `/nick`, then `/nick Sir Robin`, then `/nick` | `07-nickname.aus` answers with no argument, keeps both words, then reads it back |
 | 15 | copy a new `.aus` into `scripts/` while the server runs, `acraft list` | it is not there; then `acraft load <file>` picks it up |
 | 16 | `acraft unload 03-announcer.aus` then wait | the announcer stops |
 | 17 | in creative, place and break a diamond ore | `04-block-break.aus` messages you |
@@ -233,13 +233,13 @@ layer 2, but it failed silently for a long time, and silence is what makes it
 worth a manual look.
 
 Checks 11 to 13 are the store. The count in `05-counter.aus` goes up when a
-player joins, not when the command is run, so each of these needs a rejoin to
+player joins, not when `/joins` is run, so each of these needs a rejoin to
 move it. 12 shows the store surviving a reload and 13 shows it surviving a
 restart, which is the only way to see `store.yml` actually written and read
 back.
 
 Check 14 is the argument path, which nothing else here touches. The bare
-`nick` is the case worth watching: reading `Args[0]` without first checking
+`/nick` is the case worth watching: reading `Args[0]` without first checking
 `#Args` throws, and the throw is caught and logged against the script, so
 from in game the command simply does nothing.
 
